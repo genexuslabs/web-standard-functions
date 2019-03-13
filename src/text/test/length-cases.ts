@@ -1,9 +1,7 @@
 // length test cases
-type TCases = Array <[string, number]>;
-export const testCases: TCases = [
+export const testCases: Array<[string, number]> = [
   ["texto", 5],
-  ["😀texto",6],
-  [" 😀texto",7],
-  ["Peñarol Campeón del Siglo !!!",29]
-] ;
-
+  ["😀texto", 6],
+  [" 😀texto", 7],
+  ["Peñarol Campeón del Siglo !!!", 29]
+];
