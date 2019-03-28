@@ -1674,73 +1674,10 @@ export class Numeric {
 export class Character {
   
   /**
-   * @param position
-   * @return any
-   */
-  charAt(position: number): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @param substr
-   * @return any
-   */
-  contains(substr: any): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @param substr
-   * @return any
-   */
-  endsWith(substr: any): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @param substr
-   * @param startPosition
-   * @return number
-   */
-  indexOf(substr: any, startPosition: number): number {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @return any
-   */
-  isEmpty(): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
    * @param regularExpression
    * @return any
    */
   isMatch(regularExpression: any): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @param substr
-   * @param startPosition
-   * @return number
-   */
-  lastIndexOf(substr: any, startPosition: number): number {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @return number
-   */
-  length(): number {
     notImplemented();
     return null;
   }
@@ -1812,15 +1749,6 @@ export class Character {
   }
   
   /**
-   * @param substr
-   * @return any
-   */
-  startsWith(substr: any): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
    * @param startPosition
    * @param length
    * @return any
@@ -1859,22 +1787,6 @@ export class Character {
    * @return any
    */
   trim(): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @return any
-   */
-  trimEnd(): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @return any
-   */
-  trimStart(): any {
     notImplemented();
     return null;
   }

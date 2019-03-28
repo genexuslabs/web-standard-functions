@@ -1,4 +1,4 @@
-import { charAt } from "../charat";
+import { charAt } from "../charAt";
 import { testCases } from "./charat-cases";
 
 describe("char at operation", () => {

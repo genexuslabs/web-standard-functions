@@ -1,6 +1,13 @@
 import { length } from "../text/length";
 
-export const lastIndexOf = (
+/**
+ * Return position for last pattern occurence. Search is done backguard
+ * @param {string} target
+ * @param {string} pattern
+ * @param {number} from
+ * @return number
+ */
+ export const lastIndexOf = (
   target: string,
   pattern: string,
   from: number

@@ -8,12 +8,56 @@
         "Core": {
 			"members": {
 				"LTrim": {
-					"path": "@genexus/web-standard-functions/dist/lib-esm/text/ltrim",
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
 					"name": "ltrim"
 				},
 				"RTrim": {
-					"path": "@genexus/web-standard-functions/dist/lib-esm/text/rtrim",
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
 					"name": "rtrim"
+				}
+			}
+        },
+        "Character": {
+			"members": {
+				"TrimStart": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+					"name": "lTrim"
+				},
+				"TrimEnd": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+					"name": "rTrim"
+				},
+				"CharAt": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
+					"name": "charAt"
+				},
+				"Contains": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
+					"name": "contains"
+				},
+				"Length": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+					"name": "length"
+				},
+				"IndexOf": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+					"name": "indexOf"
+				},
+				"LastIndexOf": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+					"name": "lastIndexOf"
+				},
+				"IsEmpty": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+					"name": "isEmpty"
+                },
+				"StartsWith": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+					"name": "startsWith"
+                },
+				"EndsWith": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+					"name": "endsWith"
 				}
 			}
         }

@@ -1,4 +1,4 @@
-import { lastIndexOf } from "../lastindexof";
+import { lastIndexOf } from "../lastIndexOf";
 import { testCases } from "./lastindexof-cases";
 
 describe("lastIndexOf operation", () => {

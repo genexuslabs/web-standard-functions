@@ -1,4 +1,4 @@
-import { endsWith } from "../endswith";
+import { endsWith } from "../endsWith";
 import { testCases } from "./endswith-cases";
 
 describe("endswith operation", () => {

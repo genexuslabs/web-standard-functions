@@ -1,4 +1,4 @@
-import { startsWith } from "../startswith";
+import { startsWith } from "../startsWith";
 import { testCases } from "./startswith-cases";
 
 describe("startswith operation", () => {

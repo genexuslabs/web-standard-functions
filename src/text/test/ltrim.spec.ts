@@ -1,4 +1,4 @@
-import { ltrim } from "../ltrim";
+import { ltrim } from "../lTrim";
 import { testCases } from "./ltrim-cases";
 
 describe("ltrim operation", () => {
