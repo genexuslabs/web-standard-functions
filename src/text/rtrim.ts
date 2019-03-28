@@ -1,5 +1,11 @@
 const regExp = / +$/g;
 
-export const rtrim = (s: string): string => {
+/**
+ * Trim trailing spaces only
+ * @param {string} value
+ * @return string
+ */
+
+ export const rTrim = (s: string): string => {
   return s.replace(regExp, "");
 };

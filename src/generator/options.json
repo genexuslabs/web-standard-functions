@@ -1,0 +1,60 @@
+{
+    "metadataFilePath": "../../src/generator/metadata.json",
+    "notImplementedOutputFilePath": "../../src/generator/out/not_implemented.ts",
+    "angularMappingsOutputFilePath": "../../src/generator/out/angular_metadata.json",
+
+
+    "implemented": {
+        "Core": {
+			"members": {
+				"LTrim": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/ltrim",
+					"name": "ltrim"
+				},
+				"RTrim": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/rtrim",
+					"name": "rtrim"
+				}
+			}
+        }
+    },
+    
+    "disambiguated": {
+        "Core": {
+            "Null": "isNullValue"
+        },
+        "TextSearch": {
+            "Add": "textSearchadd",
+            "Delete": "textSearchdelete",
+            "Find": "textSearchfind",
+            "Update": "textSearchupdate"
+        },
+        "GeneXus.Client.ClientStorage": {
+            "Set": "setValue"
+        },
+        "GeneXus.Common.Analytics": {
+            "SetUserId": "setAnalyticsUserId"
+        },
+        "GeneXus.Common.Log": {
+            "Error": "logError"
+        },
+        "GeneXus.SD.Actions": {
+            "Delete": "deleteAction"
+        },
+        "GeneXus.SD.Media.PhotoLibrary": {
+            "Save": "savePhoto"
+        },
+        "MAPISession": {
+            "MarkAsRead": "mapiMarkAsRead"
+        },
+        "WApiApplicationData": {
+            "Value": "valueAtIndex"
+        }
+    },
+
+    "ignored": {
+        "Core": [
+            "Default"
+        ]
+    }
+}
