@@ -58,6 +58,18 @@
 				"EndsWith": {
 					"path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
 					"name": "endsWith"
+				},
+				"IsMatch": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
+					"name": "isMatch"
+				},
+				"Matches": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
+					"name": "matches"
+				},
+				"RemoveDiacritics": {
+					"path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
+					"name": "removeDiacritics"
 				}
 			}
         }

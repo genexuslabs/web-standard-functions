@@ -14,6 +14,5 @@ import { length } from "./length";
   from: number
 ): number => {
   if (from < 1 || from > length(target)) return 0;
-  console.log( from, from - 1);
   return target.indexOf(pattern, from - 1) + 1;
 };

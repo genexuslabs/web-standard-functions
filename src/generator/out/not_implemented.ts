@@ -1674,32 +1674,6 @@ export class Numeric {
 export class Character {
   
   /**
-   * @param regularExpression
-   * @return any
-   */
-  isMatch(regularExpression: any): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @param regularExpression
-   * @return any
-   */
-  matches(regularExpression: any): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @return any
-   */
-  removeDiacritics(): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
    * @param substr
    * @param replaceString
    * @return any

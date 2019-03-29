@@ -56,7 +56,8 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
-    "bignumber.js": "^7.2.1"
+    "bignumber.js": "^7.2.1",
+    "jdu": "^1.0.0"
   },
   "jest": {
     "transform": {
