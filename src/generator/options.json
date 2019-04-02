@@ -71,6 +71,18 @@
 					"path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
 					"name": "removeDiacritics"
 				}
+			},
+			"Boolean": {
+				"members": {
+					"IsEmpty": {
+						"path": "@genexus/web-standard-functions/dist/lib-esm/bool/isEmpty",
+						"name": "isEmpty"
+					},
+					"FromString": {
+						"path": "@genexus/web-standard-functions/dist/lib-esm/bool/fromString",
+						"name": "fromString"
+					}
+				}
 			}
         }
     },
