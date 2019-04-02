@@ -1,5 +1,5 @@
 /**
- * Search string for leading pattern 
+ * Search string for leading pattern
  * @param {string} target
  * @param {string} pattern
  * @return Boolean

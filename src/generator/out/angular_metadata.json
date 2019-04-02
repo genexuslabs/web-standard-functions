@@ -1,1 +1,2526 @@
-{"modules":[{"name":"Core","generatesClass":false,"externalName":"Core","methods":[{"name":"AddMth","externalName":"addMth"},{"name":"AddYr","externalName":"addYr"},{"name":"Age","externalName":"age"},{"name":"Asc","externalName":"asc"},{"name":"Ask","externalName":"ask"},{"name":"Average","externalName":"average"},{"name":"BrowserID","externalName":"browserID"},{"name":"BrowserVersion","externalName":"browserVersion"},{"name":"ByteCount","externalName":"byteCount"},{"name":"CDoW","externalName":"cDoW"},{"name":"Chr","externalName":"chr"},{"name":"CMonth","externalName":"cMonth"},{"name":"Cols","externalName":"cols"},{"name":"Compare","externalName":"compare"},{"name":"Concat","externalName":"concat"},{"name":"Count","externalName":"count"},{"name":"CtoD","externalName":"ctoD"},{"name":"CtoT","externalName":"ctoT"},{"name":"Day","externalName":"day"},{"name":"Decrypt64","externalName":"decrypt64"},{"name":"DFRClose","externalName":"dFRClose"},{"name":"DFRGDate","externalName":"dFRGDate"},{"name":"DFRGNum","externalName":"dFRGNum"},{"name":"DFRGTxt","externalName":"dFRGTxt"},{"name":"DFRNext","externalName":"dFRNext"},{"name":"DFROpen","externalName":"dFROpen"},{"name":"DFWClose","externalName":"dFWClose"},{"name":"DFWNext","externalName":"dFWNext"},{"name":"DFWOpen","externalName":"dFWOpen"},{"name":"DFWPDate","externalName":"dFWPDate"},{"name":"DFWPNum","externalName":"dFWPNum"},{"name":"DFWPTxt","externalName":"dFWPTxt"},{"name":"DoW","externalName":"doW"},{"name":"DtoC","externalName":"dtoC"},{"name":"Encrypt64","externalName":"encrypt64"},{"name":"EoM","externalName":"eoM"},{"name":"Exists","externalName":"exists"},{"name":"FileExist","externalName":"fileExist"},{"name":"Find","externalName":"find"},{"name":"Format","externalName":"format"},{"name":"FromBase64","externalName":"fromBase64"},{"name":"GetCookie","externalName":"getCookie"},{"name":"GetDataStore","externalName":"getDataStore"},{"name":"GetEncryptionKey","externalName":"getEncryptionKey"},{"name":"GetLanguage","externalName":"getLanguage"},{"name":"GetLocation","externalName":"getLocation"},{"name":"GetMessageText","externalName":"getMessageText"},{"name":"GetSOAPErr","externalName":"getSOAPErr"},{"name":"GetSOAPErrMsg","externalName":"getSOAPErrMsg"},{"name":"GetTheme","externalName":"getTheme"},{"name":"GXGetMLi","externalName":"gXGetMLi"},{"name":"GXMLines","externalName":"gXMLines"},{"name":"Hour","externalName":"hour"},{"name":"HTMLClean","externalName":"hTMLClean"},{"name":"UrlEncode","externalName":"urlEncode"},{"name":"iif","externalName":"iif"},{"name":"Int","externalName":"int"},{"name":"IsNull","externalName":"isNull"},{"name":"Len","externalName":"len"},{"name":"Link","externalName":"link"},{"name":"LoadBitmap","externalName":"loadBitmap"},{"name":"Lower","externalName":"lower"},{"name":"LTrim","externalName":"lTrim","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/lTrim"},{"name":"Max","externalName":"max"},{"name":"Min","externalName":"min"},{"name":"Minute","externalName":"minute"},{"name":"Mod","externalName":"mod"},{"name":"Month","externalName":"month"},{"name":"NewLine","externalName":"newLine"},{"name":"Now","externalName":"now"},{"name":"isNullValue","externalName":"isNullValue"},{"name":"NullValue","externalName":"nullValue"},{"name":"OpenDocument","externalName":"openDocument"},{"name":"PadL","externalName":"padL"},{"name":"PadR","externalName":"padR"},{"name":"PathToUrl","externalName":"pathToUrl"},{"name":"PrintDocument","externalName":"printDocument"},{"name":"Random","externalName":"random"},{"name":"ReadRegKey","externalName":"readRegKey"},{"name":"RemoteAddr","externalName":"remoteAddr"},{"name":"ReturnOnClick","externalName":"returnOnClick"},{"name":"RGB","externalName":"rGB"},{"name":"Round","externalName":"round"},{"name":"RoundToEven","externalName":"roundToEven"},{"name":"Rows","externalName":"rows"},{"name":"RSeed","externalName":"rSeed"},{"name":"RTrim","externalName":"rTrim","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/rTrim"},{"name":"Second","externalName":"second"},{"name":"ServerDate","externalName":"serverDate"},{"name":"ServerNow","externalName":"serverNow"},{"name":"ServerTime","externalName":"serverTime"},{"name":"SetCookie","externalName":"setCookie"},{"name":"SetLanguage","externalName":"setLanguage"},{"name":"SetTheme","externalName":"setTheme"},{"name":"SetUserId","externalName":"setUserId"},{"name":"SetWrkSt","externalName":"setWrkSt"},{"name":"Shell","externalName":"shell"},{"name":"Sleep","externalName":"sleep"},{"name":"Space","externalName":"space"},{"name":"Str","externalName":"str"},{"name":"StrReplace","externalName":"strReplace"},{"name":"StrSearch","externalName":"strSearch"},{"name":"StrSearchRev","externalName":"strSearchRev"},{"name":"SubStr","externalName":"subStr"},{"name":"Sum","externalName":"sum"},{"name":"SysDate","externalName":"sysDate"},{"name":"SysTime","externalName":"sysTime"},{"name":"TAdd","externalName":"tAdd"},{"name":"TDiff","externalName":"tDiff"},{"name":"Time","externalName":"time"},{"name":"ToBase64","externalName":"toBase64"},{"name":"Today","externalName":"today"},{"name":"ToFormattedString","externalName":"toFormattedString"},{"name":"Trim","externalName":"trim"},{"name":"Trunc","externalName":"trunc"},{"name":"TtoC","externalName":"ttoC"},{"name":"UDP","externalName":"uDP"},{"name":"Upper","externalName":"upper"},{"name":"UserCls","externalName":"userCls"},{"name":"UserID","externalName":"userID"},{"name":"Val","externalName":"val"},{"name":"WriteRegKey","externalName":"writeRegKey"},{"name":"WrkSt","externalName":"wrkSt"},{"name":"XSLTApply","externalName":"xSLTApply"},{"name":"XToD","externalName":"xToD"},{"name":"Year","externalName":"year"},{"name":"YMDHMStoT","externalName":"yMDHMStoT"},{"name":"YMDtoD","externalName":"yMDtoD"},{"name":"Set","externalName":"set"},{"name":"UDF","externalName":"uDF"},{"name":"Confirmed","externalName":"confirmed"},{"name":"Cursor","externalName":"cursor"},{"name":"DeleteFile","externalName":"deleteFile"},{"name":"SetEnvProperty","externalName":"setEnvProperty"},{"name":"Error_handler","externalName":"errorhandler"},{"name":"NoLoad","externalName":"noLoad"},{"name":"NoRead","externalName":"noRead"},{"name":"Output_file","externalName":"outputfile"},{"name":"Printer","externalName":"printer"},{"name":"XFile","externalName":"xFile"},{"name":"XIndex","externalName":"xIndex"},{"name":"XLocation","externalName":"xLocation"},{"name":"XUse","externalName":"xUse"},{"name":"NoPrompt","externalName":"noPrompt"},{"name":"Order","externalName":"order"},{"name":"Confirm","externalName":"confirm"},{"name":"Msg","externalName":"msg"},{"name":"Level","externalName":"level"},{"name":"Modified","externalName":"modified"},{"name":"Old","externalName":"old"},{"name":"Previous","externalName":"previous"},{"name":"Accept","externalName":"accept"},{"name":"Add","externalName":"add"},{"name":"AllowNulls","externalName":"allowNulls"},{"name":"Call","externalName":"call"},{"name":"Default_mode","externalName":"defaultmode"},{"name":"Equal","externalName":"equal"},{"name":"Error","externalName":"error"},{"name":"NoAccept","externalName":"noAccept"},{"name":"NoConfirm","externalName":"noConfirm"},{"name":"RefMsg","externalName":"refMsg"},{"name":"Serial","externalName":"serial"},{"name":"Submit","externalName":"submit"},{"name":"Subtract","externalName":"subtract"},{"name":"Update","externalName":"update"},{"name":"Hidden","externalName":"hidden"},{"name":"Workfile_lines","externalName":"workfilelines"},{"name":"XOrder","externalName":"xOrder"},{"name":"Calculate","externalName":"calculate"},{"name":"Search","externalName":"search"}]},{"name":"Numeric","generatesClass":true,"externalName":"Numeric","methods":[{"name":"Integer","externalName":"integer"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"FromString","externalName":"fromString"},{"name":"Round","externalName":"round"},{"name":"RoundToEven","externalName":"roundToEven"},{"name":"ToString","externalName":"toString"},{"name":"Truncate","externalName":"truncate"}]},{"name":"Character","generatesClass":true,"externalName":"Character","methods":[{"name":"CharAt","externalName":"charAt","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/charAt"},{"name":"Contains","externalName":"contains","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/contains"},{"name":"EndsWith","externalName":"endsWith","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/endsWith"},{"name":"IndexOf","externalName":"indexOf","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/indexOf"},{"name":"IsEmpty","externalName":"isEmpty","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/isEmpty"},{"name":"IsMatch","externalName":"isMatch","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/isMatch"},{"name":"LastIndexOf","externalName":"lastIndexOf","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf"},{"name":"Length","externalName":"length","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/length"},{"name":"Matches","externalName":"matches","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/matches"},{"name":"RemoveDiacritics","externalName":"removeDiacritics","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics"},{"name":"Replace","externalName":"replace"},{"name":"ReplaceRegEx","externalName":"replaceRegEx"},{"name":"PadLeft","externalName":"padLeft"},{"name":"PadRight","externalName":"padRight"},{"name":"SplitRegEx","externalName":"splitRegEx"},{"name":"StartsWith","externalName":"startsWith","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf"},{"name":"Substring","externalName":"substr"},{"name":"ToLower","externalName":"toLower"},{"name":"ToNumeric","externalName":"toNumeric"},{"name":"ToUpper","externalName":"toUpper"},{"name":"Trim","externalName":"trim"},{"name":"TrimEnd","externalName":"trimEnd","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/rTrim"},{"name":"TrimStart","externalName":"trimStart","externalModuleName":"@genexus/web-standard-functions/dist/lib-esm/text/lTrim"},{"name":"FromString","externalName":"fromString"},{"name":"ToString","externalName":"toString"},{"name":"XSLTApply","externalName":"xSLTApply"},{"name":"HTMLClean","externalName":"hTMLClean"}]},{"name":"Date","generatesClass":true,"externalName":"Date","methods":[{"name":"AddDays","externalName":"addDays"},{"name":"AddMonths","externalName":"addMonths"},{"name":"AddYears","externalName":"addYears"},{"name":"Age","externalName":"age"},{"name":"Day","externalName":"day"},{"name":"DayOfWeek","externalName":"dayOfWeek"},{"name":"DayOfWeekName","externalName":"dayOfWeekName"},{"name":"EndOfMonth","externalName":"endOfMonth"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"Month","externalName":"month"},{"name":"MonthName","externalName":"monthName"},{"name":"Year","externalName":"year"},{"name":"ToDate","externalName":"toDate"},{"name":"FromString","externalName":"fromString"},{"name":"Set","externalName":"set"},{"name":"ToString","externalName":"toString"},{"name":"New","externalName":"new"}]},{"name":"Image","generatesClass":true,"externalName":"Image","methods":[{"name":"IsEmpty","externalName":"isEmpty"}]},{"name":"LongVarchar","generatesClass":true,"externalName":"LongVarchar","methods":[{"name":"CharAt","externalName":"charAt"},{"name":"Contains","externalName":"contains"},{"name":"EndsWith","externalName":"endsWith"},{"name":"IndexOf","externalName":"indexOf"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"IsMatch","externalName":"isMatch"},{"name":"LastIndexOf","externalName":"lastIndexOf"},{"name":"Length","externalName":"length"},{"name":"Matches","externalName":"matches"},{"name":"Replace","externalName":"replace"},{"name":"ReplaceRegEx","externalName":"replaceRegEx"},{"name":"PadLeft","externalName":"padLeft"},{"name":"PadRight","externalName":"padRight"},{"name":"SplitRegEx","externalName":"splitRegEx"},{"name":"StartsWith","externalName":"startsWith"},{"name":"Substring","externalName":"substr"},{"name":"ToLower","externalName":"toLower"},{"name":"ToNumeric","externalName":"toNumeric"},{"name":"ToUpper","externalName":"toUpper"},{"name":"Trim","externalName":"trim"},{"name":"TrimEnd","externalName":"trimEnd"},{"name":"TrimStart","externalName":"trimStart"},{"name":"FromString","externalName":"fromString"},{"name":"ToString","externalName":"toString"},{"name":"XSLTApply","externalName":"xSLTApply"},{"name":"HTMLClean","externalName":"hTMLClean"}]},{"name":"DateTime","generatesClass":true,"externalName":"DateTime","methods":[{"name":"AddMilliseconds","externalName":"addMilliseconds"},{"name":"AddSeconds","externalName":"addSeconds"},{"name":"AddMinutes","externalName":"addMinutes"},{"name":"AddHours","externalName":"addHours"},{"name":"AddDays","externalName":"addDays"},{"name":"AddMonths","externalName":"addMonths"},{"name":"AddYears","externalName":"addYears"},{"name":"Age","externalName":"age"},{"name":"Day","externalName":"day"},{"name":"DayOfWeek","externalName":"dayOfWeek"},{"name":"DayOfWeekName","externalName":"dayOfWeekName"},{"name":"EndOfMonth","externalName":"endOfMonth"},{"name":"Hour","externalName":"hour"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"Minute","externalName":"minute"},{"name":"Month","externalName":"month"},{"name":"MonthName","externalName":"monthName"},{"name":"Second","externalName":"second"},{"name":"Millisecond","externalName":"millisecond"},{"name":"Difference","externalName":"difference"},{"name":"Year","externalName":"year"},{"name":"ToDate","externalName":"toDate"},{"name":"ToUniversalTime","externalName":"toUniversalTime"},{"name":"FromTimeZone","externalName":"fromTimeZone"},{"name":"FromString","externalName":"fromString"},{"name":"Set","externalName":"set"},{"name":"ToString","externalName":"toString"},{"name":"New","externalName":"new"},{"name":"Now","externalName":"now"},{"name":"Time","externalName":"time"},{"name":"GetTimeZone","externalName":"getTimeZone"},{"name":"CurrentOffset","externalName":"currentOffset"},{"name":"SetTimeZone","externalName":"setTimeZone"}]},{"name":"Varchar","generatesClass":true,"externalName":"Varchar","methods":[{"name":"CharAt","externalName":"charAt"},{"name":"Contains","externalName":"contains"},{"name":"EndsWith","externalName":"endsWith"},{"name":"IndexOf","externalName":"indexOf"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"IsMatch","externalName":"isMatch"},{"name":"LastIndexOf","externalName":"lastIndexOf"},{"name":"Length","externalName":"length"},{"name":"Matches","externalName":"matches"},{"name":"Replace","externalName":"replace"},{"name":"ReplaceRegEx","externalName":"replaceRegEx"},{"name":"PadLeft","externalName":"padLeft"},{"name":"PadRight","externalName":"padRight"},{"name":"StartsWith","externalName":"startsWith"},{"name":"Substring","externalName":"substr"},{"name":"SplitRegEx","externalName":"splitRegEx"},{"name":"ToLower","externalName":"toLower"},{"name":"ToNumeric","externalName":"toNumeric"},{"name":"ToUpper","externalName":"toUpper"},{"name":"Trim","externalName":"trim"},{"name":"TrimEnd","externalName":"trimEnd"},{"name":"TrimStart","externalName":"trimStart"},{"name":"FromString","externalName":"fromString"},{"name":"ToString","externalName":"toString"},{"name":"XSLTApply","externalName":"xSLTApply"},{"name":"HTMLClean","externalName":"hTMLClean"}]},{"name":"Binary","generatesClass":true,"externalName":"Binary","methods":[{"name":"IsEmpty","externalName":"isEmpty"},{"name":"FromString","externalName":"fromString"},{"name":"ToString","externalName":"toString"},{"name":"ToBase64String","externalName":"toBase64String"},{"name":"FromBase64String","externalName":"fromBase64String"}]},{"name":"Boolean","generatesClass":true,"externalName":"Boolean","methods":[{"name":"IsEmpty","externalName":"isEmpty"},{"name":"FromString","externalName":"fromString"},{"name":"ToString","externalName":"toString"}]},{"name":"MailMessage","generatesClass":true,"externalName":"MailMessage","methods":[{"name":"Clear","externalName":"clear"},{"name":"GetHeader","externalName":"getHeader"},{"name":"AddHeader","externalName":"addHeader"}]},{"name":"XMLWriter","generatesClass":true,"externalName":"XMLWriter","methods":[{"name":"Open","externalName":"open"},{"name":"OpenToString","externalName":"openToString"},{"name":"Close","externalName":"close"},{"name":"OpenRequest","externalName":"openRequest"},{"name":"OpenResponse","externalName":"openResponse"},{"name":"WriteElement","externalName":"writeElement"},{"name":"WriteStartElement","externalName":"writeStartElement"},{"name":"WriteEndElement","externalName":"writeEndElement"},{"name":"WriteAttribute","externalName":"writeAttribute"},{"name":"WriteText","externalName":"writeText"},{"name":"WriteRawText","externalName":"writeRawText"},{"name":"WriteComment","externalName":"writeComment"},{"name":"WriteEntityReference","externalName":"writeEntityReference"},{"name":"WriteCData","externalName":"writeCData"},{"name":"WriteProcessingInstruction","externalName":"writeProcessingInstruction"},{"name":"WriteStartDocument","externalName":"writeStartDocument"},{"name":"WriteDocType","externalName":"writeDocType"},{"name":"WriteDocTypeSystem","externalName":"writeDocTypeSystem"},{"name":"WriteDocTypePublic","externalName":"writeDocTypePublic"},{"name":"WriteNSStartElement","externalName":"writeNSStartElement"},{"name":"WriteNSElement","externalName":"writeNSElement"}]},{"name":"XMLReader","generatesClass":true,"externalName":"XMLReader","methods":[{"name":"Open","externalName":"open"},{"name":"OpenFromString","externalName":"openFromString"},{"name":"Read","externalName":"read"},{"name":"OpenRequest","externalName":"openRequest"},{"name":"OpenResponse","externalName":"openResponse"},{"name":"ReadType","externalName":"readType"},{"name":"GetAttributeByName","externalName":"getAttributeByName"},{"name":"GetAttributeByIndex","externalName":"getAttributeByIndex"},{"name":"ExistsAttribute","externalName":"existsAttribute"},{"name":"Close","externalName":"close"},{"name":"Skip","externalName":"skip"},{"name":"ReadRawXML","externalName":"readRawXML"},{"name":"GetAttributeName","externalName":"getAttributeName"},{"name":"GetAttributePrefix","externalName":"getAttributePrefix"},{"name":"GetAttributeLocalName","externalName":"getAttributeLocalName"},{"name":"GetAttributeURI","externalName":"getAttributeURI"},{"name":"GetAttEntityValueByIndex","externalName":"getAttEntityValueByIndex"},{"name":"GetAttEntityValueByName","externalName":"getAttEntityValueByName"},{"name":"GetAttEntityNotationByIndex","externalName":"getAttEntityNotationByIndex"},{"name":"GetAttEntityNotationByName","externalName":"getAttEntityNotationByName"},{"name":"SetDocEncoding","externalName":"setDocEncoding"},{"name":"SetNodeEncoding","externalName":"setNodeEncoding"},{"name":"AddSchema","externalName":"addSchema"}]},{"name":"HttpClient","generatesClass":true,"externalName":"HttpClient","methods":[{"name":"AddAuthentication","externalName":"addAuthentication"},{"name":"AddProxyAuthentication","externalName":"addProxyAuthentication"},{"name":"AddFile","externalName":"addFile"},{"name":"AddHeader","externalName":"addHeader"},{"name":"AddString","externalName":"addString"},{"name":"AddVariable","externalName":"addVariable"},{"name":"Execute","externalName":"execute"},{"name":"GetHeader","externalName":"getHeader"},{"name":"ToFile","externalName":"toFile"},{"name":"ToString","externalName":"toString"}]},{"name":"HttpResponse","generatesClass":true,"externalName":"HttpResponse","methods":[{"name":"AddHeader","externalName":"addHeader"},{"name":"AddString","externalName":"addString"},{"name":"AddFile","externalName":"addFile"},{"name":"SetCookie","externalName":"setCookie"}]},{"name":"HttpRequest","generatesClass":true,"externalName":"HttpRequest","methods":[{"name":"ToString","externalName":"toString"},{"name":"ToFile","externalName":"toFile"},{"name":"GetHeader","externalName":"getHeader"},{"name":"GetVariable","externalName":"getVariable"}]},{"name":"StringCollection","generatesClass":true,"externalName":"StringCollection","methods":[{"name":"Clear","externalName":"clear"},{"name":"Add","externalName":"add"},{"name":"Item","externalName":"item"}]},{"name":"MailRecipient","generatesClass":true,"externalName":"MailRecipient","methods":[]},{"name":"RecipientCollection","generatesClass":true,"externalName":"RecipientCollection","methods":[{"name":"Clear","externalName":"clear"},{"name":"New","externalName":"new"},{"name":"Add","externalName":"add"},{"name":"Item","externalName":"item"}]},{"name":"SMTPSession","generatesClass":true,"externalName":"SMTPSession","methods":[{"name":"Login","externalName":"login"},{"name":"Logout","externalName":"logout"},{"name":"Send","externalName":"send"}]},{"name":"POP3Session","generatesClass":true,"externalName":"POP3Session","methods":[{"name":"Login","externalName":"login"},{"name":"Logout","externalName":"logout"},{"name":"Delete","externalName":"delete"},{"name":"MarkAsRead","externalName":"markAsRead"},{"name":"Receive","externalName":"receive"},{"name":"GetNextUID","externalName":"getNextUID"},{"name":"Skip","externalName":"skip"}]},{"name":"OutlookSession","generatesClass":true,"externalName":"OutlookSession","methods":[{"name":"ChangeFolder","externalName":"changeFolder"},{"name":"Delete","externalName":"delete"},{"name":"MarkAsRead","externalName":"markAsRead"},{"name":"Receive","externalName":"receive"},{"name":"Send","externalName":"send"}]},{"name":"MAPISession","generatesClass":true,"externalName":"MAPISession","methods":[{"name":"Login","externalName":"login"},{"name":"Logout","externalName":"logout"},{"name":"ChangeFolder","externalName":"changeFolder"},{"name":"Delete","externalName":"delete"},{"name":"mapiMarkAsRead","externalName":"mapiMarkAsRead"},{"name":"Receive","externalName":"receive"},{"name":"Send","externalName":"send"}]},{"name":"WordDocument","generatesClass":true,"externalName":"WordDocument","methods":[{"name":"Open","externalName":"open"},{"name":"Close","externalName":"close"},{"name":"Unbind","externalName":"unbind"},{"name":"Save","externalName":"save"},{"name":"SaveAs","externalName":"saveAs"},{"name":"Show","externalName":"show"},{"name":"Hide","externalName":"hide"},{"name":"Append","externalName":"append"},{"name":"Print","externalName":"print"},{"name":"Replace","externalName":"replace"},{"name":"SpellCheck","externalName":"spellCheck"},{"name":"RunMacro","externalName":"runMacro"}]},{"name":"ExcelDocument","generatesClass":true,"externalName":"ExcelDocument","methods":[{"name":"Open","externalName":"open"},{"name":"Close","externalName":"close"},{"name":"Unbind","externalName":"unbind"},{"name":"Save","externalName":"save"},{"name":"Show","externalName":"show"},{"name":"Hide","externalName":"hide"},{"name":"Clear","externalName":"clear"},{"name":"Print","externalName":"print"},{"name":"SelectSheet","externalName":"selectSheet"},{"name":"RenameSheet","externalName":"renameSheet"},{"name":"RunMacro","externalName":"runMacro"},{"name":"Cells","externalName":"cells"}]},{"name":"WebSession","generatesClass":true,"externalName":"WebSession","methods":[{"name":"Clear","externalName":"clear"},{"name":"Destroy","externalName":"destroy"},{"name":"Get","externalName":"get"},{"name":"Remove","externalName":"remove"},{"name":"Set","externalName":"set"}]},{"name":"WebWrapper","generatesClass":true,"externalName":"WebWrapper","methods":[{"name":"GetResponse","externalName":"getResponse"}]},{"name":"Variant","generatesClass":false,"externalName":"Variant","methods":[]},{"name":"ExcelCells","generatesClass":true,"externalName":"ExcelCells","methods":[]},{"name":"DBConnection","generatesClass":true,"externalName":"DBConnection","methods":[{"name":"Connect","externalName":"connect"},{"name":"Disconnect","externalName":"disconnect"}]},{"name":"Location","generatesClass":true,"externalName":"Location","methods":[]},{"name":"WApiCalendar","generatesClass":true,"externalName":"WApiCalendar","methods":[{"name":"isHoliday","externalName":"isHoliday"},{"name":"isWeekend","externalName":"isWeekend"},{"name":"isWorkday","externalName":"isWorkday"},{"name":"FirstWorkdayInMonth","externalName":"firstWorkdayInMonth"},{"name":"LastWorkdayInMonth","externalName":"lastWorkdayInMonth"},{"name":"NextWorkday","externalName":"nextWorkday"},{"name":"Workday","externalName":"workday"},{"name":"Worktime","externalName":"worktime"},{"name":"WorkdayDuration","externalName":"workdayDuration"},{"name":"WorkdaysBetweenDates","externalName":"workdaysBetweenDates"}]},{"name":"RegExMatch","generatesClass":true,"externalName":"RegExMatch","methods":[]},{"name":"RegExMatchCollection","generatesClass":false,"externalName":"RegExMatchCollection","methods":[]},{"name":"ContentInfo","generatesClass":true,"externalName":"ContentInfo","methods":[]},{"name":"Blob","generatesClass":false,"externalName":"Blob","methods":[]},{"name":"SearchResult","generatesClass":true,"externalName":"SearchResult","methods":[{"name":"Items","externalName":"items"}]},{"name":"SearchResultCollection","generatesClass":true,"externalName":"SearchResultCollection","methods":[{"name":"Item","externalName":"item"}]},{"name":"SearchResultItem","generatesClass":true,"externalName":"SearchResultItem","methods":[]},{"name":"WApiEvent","generatesClass":true,"externalName":"WApiEvent","methods":[]},{"name":"Collection","generatesClass":true,"externalName":"Collection","methods":[{"name":"Add","externalName":"add"},{"name":"Clear","externalName":"clear"},{"name":"Item","externalName":"item"},{"name":"Remove","externalName":"remove"},{"name":"IndexOf","externalName":"indexOf"},{"name":"ToXml","externalName":"toXml"},{"name":"FromXml","externalName":"fromXml"},{"name":"FromXmlFile","externalName":"fromXmlFile"},{"name":"ToJson","externalName":"toJson"},{"name":"FromJson","externalName":"fromJson"},{"name":"FromJsonFile","externalName":"fromJsonFile"},{"name":"Clone","externalName":"clone"},{"name":"Sort","externalName":"sort"}]},{"name":"BusinessComponentCollection","generatesClass":true,"externalName":"BusinessComponentCollection","methods":[{"name":"GetByKey","externalName":"getByKey"},{"name":"RemoveByKey","externalName":"removeByKey"},{"name":"Update","externalName":"update"},{"name":"Insert","externalName":"insert"},{"name":"InsertOrUpdate","externalName":"insertOrUpdate"},{"name":"Delete","externalName":"delete"}]},{"name":"BusinessComponentLinesCollection","generatesClass":true,"externalName":"BusinessComponentLinesCollection","methods":[{"name":"GetByKey","externalName":"getByKey"},{"name":"RemoveByKey","externalName":"removeByKey"}]},{"name":"GUID","generatesClass":true,"externalName":"GUID","methods":[{"name":"IsEmpty","externalName":"isEmpty"},{"name":"FromString","externalName":"fromString"},{"name":"ToString","externalName":"toString"},{"name":"Empty","externalName":"empty"},{"name":"FromString","externalName":"fromString"},{"name":"NewGuid","externalName":"newGuid"},{"name":"IsMatch","externalName":"isMatch"}]},{"name":"Meta_collection","generatesClass":true,"externalName":"Metacollection","methods":[{"name":"AddItem","externalName":"addItem"},{"name":"RemoveItem","externalName":"removeItem"},{"name":"Clear","externalName":"clear"},{"name":"Value","externalName":"value"},{"name":"Text","externalName":"text"}]},{"name":"HTMLBODY","generatesClass":true,"externalName":"HTMLBODY","methods":[]},{"name":"WApiStateChangeEvent","generatesClass":true,"externalName":"WApiStateChangeEvent","methods":[]},{"name":"WApiDataChangeEvent","generatesClass":true,"externalName":"WApiDataChangeEvent","methods":[]},{"name":"WApiServer","generatesClass":true,"externalName":"WApiServer","methods":[{"name":"Connect","externalName":"connect"},{"name":"Disconnect","externalName":"disconnect"},{"name":"ListProcessDefinitions","externalName":"listProcessDefinitions"},{"name":"ListActivities","externalName":"listActivities"},{"name":"ListProcessInstances","externalName":"listProcessInstances"},{"name":"ListWorkitems","externalName":"listWorkitems"},{"name":"GetProcessDefinitionById","externalName":"getProcessDefinitionById"},{"name":"GetActivityById","externalName":"getActivityById"},{"name":"GetProcessInstanceById","externalName":"getProcessInstanceById"},{"name":"GetWorkitemById","externalName":"getWorkitemById"},{"name":"GetProcessDefinitionByName","externalName":"getProcessDefinitionByName"},{"name":"GetActivityByName","externalName":"getActivityByName"},{"name":"GetProcessInstanceBySubject","externalName":"getProcessInstanceBySubject"},{"name":"GetOrganizationalModel","externalName":"getOrganizationalModel"},{"name":"GetEventRepository","externalName":"getEventRepository"},{"name":"GetDocumentRepository","externalName":"getDocumentRepository"},{"name":"ListProcessDefinitionsOrderBy","externalName":"listProcessDefinitionsOrderBy"},{"name":"ListActivitiesOrderBy","externalName":"listActivitiesOrderBy"},{"name":"ListProcessInstancesOrderBy","externalName":"listProcessInstancesOrderBy"},{"name":"ListWorkitemsOrderBy","externalName":"listWorkitemsOrderBy"},{"name":"ListCalendars","externalName":"listCalendars"}]},{"name":"WApiFilter","generatesClass":true,"externalName":"WApiFilter","methods":[{"name":"Clear","externalName":"clear"}]},{"name":"WApiError","generatesClass":true,"externalName":"WApiError","methods":[]},{"name":"WApiProcessDefinition","generatesClass":true,"externalName":"WApiProcessDefinition","methods":[{"name":"CreateInstance","externalName":"createInstance"},{"name":"GetActivityById","externalName":"getActivityById"},{"name":"GetActivityByName","externalName":"getActivityByName"},{"name":"ChangeState","externalName":"changeState"},{"name":"Enable","externalName":"enable"},{"name":"Disable","externalName":"disable"}]},{"name":"WApiActivity","generatesClass":true,"externalName":"WApiActivity","methods":[]},{"name":"WApiWorkitem","generatesClass":true,"externalName":"WApiWorkitem","methods":[{"name":"Complete","externalName":"complete"},{"name":"Assign","externalName":"assign"},{"name":"Reassign","externalName":"reassign"},{"name":"ChangeState","externalName":"changeState"},{"name":"SelectSuccessiveOptionalActivity","externalName":"selectSuccessiveOptionalActivity"},{"name":"PostConditionFailed","externalName":"postConditionFailed"},{"name":"Delegate","externalName":"delegate"},{"name":"DelegateToRole","externalName":"delegateToRole"},{"name":"Skip","externalName":"skip"},{"name":"Undo","externalName":"undo"}]},{"name":"WApiProcessInstance","generatesClass":true,"externalName":"WApiProcessInstance","methods":[{"name":"Start","externalName":"start"},{"name":"StartFrom","externalName":"startFrom"},{"name":"Suspend","externalName":"suspend"},{"name":"Reactivate","externalName":"reactivate"},{"name":"Resume","externalName":"resume"},{"name":"Abort","externalName":"abort"},{"name":"ChangeState","externalName":"changeState"},{"name":"AddRestriction","externalName":"addRestriction"},{"name":"RemoveRestriction","externalName":"removeRestriction"},{"name":"GetApplicationDataByName","externalName":"getApplicationDataByName"},{"name":"PreassignWorkitem","externalName":"preassignWorkitem"},{"name":"GetWorkitemByActivity","externalName":"getWorkitemByActivity"},{"name":"CreateWorkitem","externalName":"createWorkitem"}]},{"name":"WApiCollection","generatesClass":true,"externalName":"WApiCollection","methods":[{"name":"Item","externalName":"item"},{"name":"ProcessDefinition","externalName":"processDefinition"},{"name":"Activity","externalName":"activity"},{"name":"Workitem","externalName":"workitem"},{"name":"ProcessInstance","externalName":"processInstance"},{"name":"User","externalName":"user"},{"name":"Role","externalName":"role"},{"name":"State","externalName":"state"},{"name":"Restriction","externalName":"restriction"},{"name":"RestrictionDefinition","externalName":"restrictionDefinition"},{"name":"Value","externalName":"value"},{"name":"ApplicationData","externalName":"applicationData"},{"name":"FindProcessDefinition","externalName":"findProcessDefinition"},{"name":"FindProcessInstance","externalName":"findProcessInstance"},{"name":"FindWorkitem","externalName":"findWorkitem"},{"name":"FindActivity","externalName":"findActivity"},{"name":"FindUser","externalName":"findUser"},{"name":"FindRole","externalName":"findRole"},{"name":"FindApplicationData","externalName":"findApplicationData"},{"name":"FindRestriction","externalName":"findRestriction"},{"name":"Event","externalName":"event"},{"name":"DocumentDefinition","externalName":"documentDefinition"},{"name":"DocumentInstance","externalName":"documentInstance"},{"name":"Attribute","externalName":"attribute"},{"name":"Calendar","externalName":"calendar"}]},{"name":"WApiApplicationData","generatesClass":true,"externalName":"WApiApplicationData","methods":[{"name":"Add","externalName":"add"},{"name":"Clear","externalName":"clear"},{"name":"Remove","externalName":"remove"},{"name":"SetValue","externalName":"setValue"},{"name":"valueAtIndex","externalName":"valueAtIndex"}]},{"name":"WApiWebApplication","generatesClass":true,"externalName":"WApiWebApplication","methods":[{"name":"Close","externalName":"close"},{"name":"CheckRights","externalName":"checkRights"},{"name":"CloseAndComplete","externalName":"closeAndComplete"},{"name":"SignIn","externalName":"signIn"},{"name":"Download","externalName":"download"},{"name":"DownloadDocument","externalName":"downloadDocument"},{"name":"GetDocumentURL","externalName":"getDocumentURL"},{"name":"CompleteAndContinue","externalName":"completeAndContinue"}]},{"name":"WApiUser","generatesClass":true,"externalName":"WApiUser","methods":[{"name":"GetWorklist","externalName":"getWorklist"},{"name":"GetRoleRestrictions","externalName":"getRoleRestrictions"},{"name":"AddRole","externalName":"addRole"},{"name":"RemoveRole","externalName":"removeRole"},{"name":"AddRestriction","externalName":"addRestriction"},{"name":"RemoveRestriction","externalName":"removeRestriction"},{"name":"RebuildWorklist","externalName":"rebuildWorklist"},{"name":"Block","externalName":"block"},{"name":"Unblock","externalName":"unblock"},{"name":"GetWorklistOrderBy","externalName":"getWorklistOrderBy"},{"name":"ListCreatableProcessDefinitions","externalName":"listCreatableProcessDefinitions"},{"name":"ListCreatableProcessDefinitionsOrderBy","externalName":"listCreatableProcessDefinitionsOrderBy"},{"name":"ResetPassword","externalName":"resetPassword"},{"name":"ChangePassword","externalName":"changePassword"}]},{"name":"WApiRole","generatesClass":true,"externalName":"WApiRole","methods":[{"name":"AddChild","externalName":"addChild"},{"name":"RemoveChild","externalName":"removeChild"},{"name":"AddUser","externalName":"addUser"},{"name":"RemoveUser","externalName":"removeUser"}]},{"name":"WApiOrganizationalModel","generatesClass":true,"externalName":"WApiOrganizationalModel","methods":[{"name":"ListUsers","externalName":"listUsers"},{"name":"ListRoles","externalName":"listRoles"},{"name":"ListRestrictionDefinitions","externalName":"listRestrictionDefinitions"},{"name":"ListRestrictions","externalName":"listRestrictions"},{"name":"GetUserById","externalName":"getUserById"},{"name":"GetRoleById","externalName":"getRoleById"},{"name":"GetUserByName","externalName":"getUserByName"},{"name":"GetRoleByName","externalName":"getRoleByName"},{"name":"GetRestrictionDefinitionByName","externalName":"getRestrictionDefinitionByName"},{"name":"AddUser","externalName":"addUser"},{"name":"AddRole","externalName":"addRole"},{"name":"AddRestrictionDefinition","externalName":"addRestrictionDefinition"},{"name":"ListUsersOrderBy","externalName":"listUsersOrderBy"},{"name":"ListRolesOrderBy","externalName":"listRolesOrderBy"},{"name":"ListRestrictionDefinitionsOrderBy","externalName":"listRestrictionDefinitionsOrderBy"},{"name":"ListRestrictionsOrderBy","externalName":"listRestrictionsOrderBy"}]},{"name":"WApiRestriction","generatesClass":true,"externalName":"WApiRestriction","methods":[]},{"name":"WApiRestrictionDefinition","generatesClass":true,"externalName":"WApiRestrictionDefinition","methods":[{"name":"AddValue","externalName":"addValue"},{"name":"RemoveValue","externalName":"removeValue"}]},{"name":"File","generatesClass":true,"externalName":"File","methods":[{"name":"Delete","externalName":"delete"},{"name":"Exists","externalName":"exists"},{"name":"Rename","externalName":"rename"},{"name":"Copy","externalName":"copy"},{"name":"GetName","externalName":"getName"},{"name":"GetAbsoluteName","externalName":"getAbsoluteName"},{"name":"GetURI","externalName":"getURI"},{"name":"GetLength","externalName":"getLength"},{"name":"GetLastModified","externalName":"getLastModified"},{"name":"GetPath","externalName":"getPath"},{"name":"Open","externalName":"open"},{"name":"OpenWrite","externalName":"openWrite"},{"name":"OpenRead","externalName":"openRead"},{"name":"Close","externalName":"close"},{"name":"ReadLine","externalName":"readLine"},{"name":"ReadAllText","externalName":"readAllText"},{"name":"ReadAllLines","externalName":"readAllLines"},{"name":"WriteLine","externalName":"writeLine"},{"name":"WriteAllText","externalName":"writeAllText"},{"name":"WriteAllLines","externalName":"writeAllLines"},{"name":"AppendAllText","externalName":"appendAllText"},{"name":"AppendAllLines","externalName":"appendAllLines"},{"name":"Create","externalName":"create"},{"name":"XSLTApply","externalName":"xSLTApply"},{"name":"HTMLClean","externalName":"hTMLClean"},{"name":"FromBase64String","externalName":"fromBase64String"}]},{"name":"FileCollection","generatesClass":true,"externalName":"FileCollection","methods":[{"name":"Item","externalName":"item"}]},{"name":"Directory","generatesClass":true,"externalName":"Directory","methods":[{"name":"Create","externalName":"create"},{"name":"Delete","externalName":"delete"},{"name":"Exists","externalName":"exists"},{"name":"Rename","externalName":"rename"},{"name":"GetName","externalName":"getName"},{"name":"GetAbsoluteName","externalName":"getAbsoluteName"},{"name":"GetFiles","externalName":"getFiles"},{"name":"GetDirectories","externalName":"getDirectories"}]},{"name":"DirectoryCollection","generatesClass":true,"externalName":"DirectoryCollection","methods":[{"name":"Item","externalName":"item"}]},{"name":"LDAPClient","generatesClass":true,"externalName":"LDAPClient","methods":[{"name":"Connect","externalName":"connect"},{"name":"Disconnect","externalName":"disconnect"},{"name":"GetAttribute","externalName":"getAttribute"}]},{"name":"Properties","generatesClass":true,"externalName":"Properties","methods":[{"name":"Set","externalName":"set"},{"name":"Get","externalName":"get"},{"name":"Remove","externalName":"remove"},{"name":"Clear","externalName":"clear"},{"name":"ToJson","externalName":"toJson"},{"name":"FromJson","externalName":"fromJson"}]},{"name":"QueueMessage","generatesClass":true,"externalName":"QueueMessage","methods":[]},{"name":"Queue","generatesClass":true,"externalName":"Queue","methods":[{"name":"Connect","externalName":"connect"},{"name":"Disconnect","externalName":"disconnect"},{"name":"Send","externalName":"send"},{"name":"Commit","externalName":"commit"},{"name":"Rollback","externalName":"rollback"},{"name":"Receive","externalName":"receive"}]},{"name":"WApiAssignmentChangeEvent","generatesClass":true,"externalName":"WApiAssignmentChangeEvent","methods":[]},{"name":"WApiPriorityChangeEvent","generatesClass":true,"externalName":"WApiPriorityChangeEvent","methods":[]},{"name":"WApiEventRepository","generatesClass":true,"externalName":"WApiEventRepository","methods":[{"name":"ListEvents","externalName":"listEvents"},{"name":"ListEventsOrderBy","externalName":"listEventsOrderBy"}]},{"name":"WApiObject","generatesClass":true,"externalName":"WApiObject","methods":[]},{"name":"WApiAttribute","generatesClass":true,"externalName":"WApiAttribute","methods":[]},{"name":"WApiDocumentRepository","generatesClass":true,"externalName":"WApiDocumentRepository","methods":[{"name":"ListDocumentDefinitions","externalName":"listDocumentDefinitions"},{"name":"ListDocumentInstances","externalName":"listDocumentInstances"},{"name":"ListDocumentDefinitionsOrderBy","externalName":"listDocumentDefinitionsOrderBy"},{"name":"ListDocumentInstancesOrderBy","externalName":"listDocumentInstancesOrderBy"},{"name":"GetDocumentDefinitionById","externalName":"getDocumentDefinitionById"},{"name":"GetDocumentDefinitionByName","externalName":"getDocumentDefinitionByName"},{"name":"GetDocumentInstanceById","externalName":"getDocumentInstanceById"}]},{"name":"WApiDocumentDefinition","generatesClass":true,"externalName":"WApiDocumentDefinition","methods":[{"name":"CreateInstance","externalName":"createInstance"},{"name":"CreateInstanceFromFile","externalName":"createInstanceFromFile"}]},{"name":"WApiDocumentInstance","generatesClass":true,"externalName":"WApiDocumentInstance","methods":[{"name":"Read","externalName":"read"},{"name":"CheckIn","externalName":"checkIn"},{"name":"CheckOut","externalName":"checkOut"},{"name":"UndoCheckOut","externalName":"undoCheckOut"}]},{"name":"WApiActionPerformedEvent","generatesClass":true,"externalName":"WApiActionPerformedEvent","methods":[]},{"name":"Property","generatesClass":true,"externalName":"Property","methods":[]},{"name":"Expression","generatesClass":true,"externalName":"Expression","methods":[{"name":"Evaluate","externalName":"evaluate"}]},{"name":"RegEx","generatesClass":false,"externalName":"RegEx","methods":[{"name":"GetLastErrCode","externalName":"getLastErrCode"},{"name":"GetLastErrDescription","externalName":"getLastErrDescription"}]},{"name":"TextSearch","generatesClass":false,"externalName":"TextSearch","methods":[{"name":"textSearchfind","externalName":"textSearchfind"},{"name":"textSearchadd","externalName":"textSearchadd"},{"name":"textSearchupdate","externalName":"textSearchupdate"},{"name":"textSearchdelete","externalName":"textSearchdelete"},{"name":"BuildDictionary","externalName":"buildDictionary"},{"name":"CheckSpell","externalName":"checkSpell"},{"name":"ReindexAll","externalName":"reindexAll"},{"name":"HTMLPreview","externalName":"hTMLPreview"}]},{"name":"Window","generatesClass":true,"externalName":"Window","methods":[{"name":"Open","externalName":"open"}]},{"name":"Video","generatesClass":true,"externalName":"Video","methods":[{"name":"FromURL","externalName":"fromURL"},{"name":"IsEmpty","externalName":"isEmpty"}]},{"name":"Audio","generatesClass":true,"externalName":"Audio","methods":[{"name":"FromURL","externalName":"fromURL"},{"name":"IsEmpty","externalName":"isEmpty"}]},{"name":"BinaryFile","generatesClass":true,"externalName":"BinaryFile","methods":[{"name":"FromURL","externalName":"fromURL"},{"name":"IsEmpty","externalName":"isEmpty"}]},{"name":"Cookie","generatesClass":true,"externalName":"Cookie","methods":[]},{"name":"CallOptions","generatesClass":true,"externalName":"CallOptions","methods":[]},{"name":"CryptoCertificate","generatesClass":true,"externalName":"CryptoCertificate","methods":[{"name":"Load","externalName":"load"},{"name":"FromBase64","externalName":"fromBase64"},{"name":"ToBase64","externalName":"toBase64"},{"name":"HasPrivateKey","externalName":"hasPrivateKey"},{"name":"Verify","externalName":"verify"}]},{"name":"CryptoHash","generatesClass":true,"externalName":"CryptoHash","methods":[{"name":"Compute","externalName":"compute"}]},{"name":"CryptoSymmetricEncrypt","generatesClass":true,"externalName":"CryptoSymmetricEncrypt","methods":[{"name":"Encrypt","externalName":"encrypt"},{"name":"Decrypt","externalName":"decrypt"}]},{"name":"CryptoAsymmetricEncrypt","generatesClass":true,"externalName":"CryptoAsymmetricEncrypt","methods":[{"name":"Encrypt","externalName":"encrypt"},{"name":"Decrypt","externalName":"decrypt"}]},{"name":"CryptoSign","generatesClass":true,"externalName":"CryptoSign","methods":[{"name":"Sign","externalName":"sign"},{"name":"Verify","externalName":"verify"}]},{"name":"CryptoSignXml","generatesClass":true,"externalName":"CryptoSignXml","methods":[{"name":"AddReference","externalName":"addReference"},{"name":"Sign","externalName":"sign"},{"name":"SignElements","externalName":"signElements"},{"name":"Verify","externalName":"verify"}]},{"name":"Geography","generatesClass":true,"externalName":"Geography","methods":[{"name":"FromString","externalName":"fromString"},{"name":"FromWkt","externalName":"fromWkt"},{"name":"FromGeoJson","externalName":"fromGeoJson"},{"name":"ToString","externalName":"toString"},{"name":"ToGeoJson","externalName":"toGeoJson"},{"name":"ToWkt","externalName":"toWkt"},{"name":"ToGeoPoint","externalName":"toGeoPoint"},{"name":"ToGeoLine","externalName":"toGeoLine"},{"name":"ToGeoPolygon","externalName":"toGeoPolygon"},{"name":"Distance","externalName":"distance"},{"name":"Intersect","externalName":"intersect"},{"name":"IsNull","externalName":"isNull"},{"name":"SetNull","externalName":"setNull"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"SetEmpty","externalName":"setEmpty"},{"name":"IsNullOrEmpty","externalName":"isNullOrEmpty"},{"name":"FromString","externalName":"fromString"},{"name":"FromWkt","externalName":"fromWkt"},{"name":"FromGeoJson","externalName":"fromGeoJson"},{"name":"Distance","externalName":"distance"},{"name":"Intersect","externalName":"intersect"}]},{"name":"GeoPoint","generatesClass":true,"externalName":"GeoPoint","methods":[{"name":"FromString","externalName":"fromString"},{"name":"FromWkt","externalName":"fromWkt"},{"name":"FromGeoJson","externalName":"fromGeoJson"},{"name":"ToGeography","externalName":"toGeography"},{"name":"ToString","externalName":"toString"},{"name":"ToGeoJson","externalName":"toGeoJson"},{"name":"ToWKT","externalName":"toWKT"},{"name":"Distance","externalName":"distance"},{"name":"Intersect","externalName":"intersect"},{"name":"IsNull","externalName":"isNull"},{"name":"SetNull","externalName":"setNull"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"SetEmpty","externalName":"setEmpty"},{"name":"IsNullOrEmpty","externalName":"isNullOrEmpty"},{"name":"New","externalName":"new"},{"name":"FromString","externalName":"fromString"},{"name":"FromWkt","externalName":"fromWkt"},{"name":"FromGeoJson","externalName":"fromGeoJson"},{"name":"Distance","externalName":"distance"}]},{"name":"GeoLine","generatesClass":true,"externalName":"GeoLine","methods":[{"name":"FromString","externalName":"fromString"},{"name":"FromWkt","externalName":"fromWkt"},{"name":"FromGeoJson","externalName":"fromGeoJson"},{"name":"ToGeography","externalName":"toGeography"},{"name":"ToString","externalName":"toString"},{"name":"ToGeoJson","externalName":"toGeoJson"},{"name":"ToWkt","externalName":"toWkt"},{"name":"Intersect","externalName":"intersect"},{"name":"IsNull","externalName":"isNull"},{"name":"SetNull","externalName":"setNull"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"SetEmpty","externalName":"setEmpty"},{"name":"IsNullOrEmpty","externalName":"isNullOrEmpty"},{"name":"FromString","externalName":"fromString"},{"name":"FromWkt","externalName":"fromWkt"},{"name":"FromGeoJson","externalName":"fromGeoJson"},{"name":"Intersect","externalName":"intersect"}]},{"name":"GeoPolygon","generatesClass":true,"externalName":"GeoPolygon","methods":[{"name":"FromString","externalName":"fromString"},{"name":"FromWkt","externalName":"fromWkt"},{"name":"FromGeoJson","externalName":"fromGeoJson"},{"name":"ToGeography","externalName":"toGeography"},{"name":"ToString","externalName":"toString"},{"name":"ToGeoJson","externalName":"toGeoJson"},{"name":"ToWkt","externalName":"toWkt"},{"name":"Intersect","externalName":"intersect"},{"name":"Area","externalName":"area"},{"name":"IsNull","externalName":"isNull"},{"name":"SetNull","externalName":"setNull"},{"name":"IsEmpty","externalName":"isEmpty"},{"name":"SetEmpty","externalName":"setEmpty"},{"name":"IsNullOrEmpty","externalName":"isNullOrEmpty"},{"name":"FromString","externalName":"fromString"},{"name":"FromWkt","externalName":"fromWkt"},{"name":"FromGeoJson","externalName":"fromGeoJson"},{"name":"Intersect","externalName":"intersect"},{"name":"Area","externalName":"area"}]},{"name":"WSAddressing","generatesClass":true,"externalName":"WSAddressing","methods":[]},{"name":"WSAddressingEndPoint","generatesClass":true,"externalName":"WSAddressingEndPoint","methods":[]},{"name":"Cache","generatesClass":true,"externalName":"Cache","methods":[{"name":"GetCache","externalName":"getCache"},{"name":"ClearAllCaches","externalName":"clearAllCaches"},{"name":"Set","externalName":"set"},{"name":"Get","externalName":"get"},{"name":"Contains","externalName":"contains"},{"name":"Remove","externalName":"remove"},{"name":"Clear","externalName":"clear"}]},{"name":"StorageProvider","generatesClass":true,"externalName":"StorageProvider","methods":[{"name":"GetPrivate","externalName":"getPrivate"},{"name":"UploadPrivate","externalName":"uploadPrivate"},{"name":"Get","externalName":"get"},{"name":"Upload","externalName":"upload"},{"name":"Download","externalName":"download"},{"name":"DownloadPrivate","externalName":"downloadPrivate"},{"name":"GetDirectory","externalName":"getDirectory"}]},{"name":"Synchronization","generatesClass":false,"externalName":"Synchronization","methods":[{"name":"Receive","externalName":"receive"},{"name":"ServerStatus","externalName":"serverStatus"},{"name":"Send","externalName":"send"},{"name":"ResetOfflineDatabase","externalName":"resetOfflineDatabase"},{"name":"SetSendCheckpoint","externalName":"setSendCheckpoint"}]},{"name":"ArrayPEM","generatesClass":false,"externalName":"ArrayPEM","methods":[]},{"name":"VariablePEM","generatesClass":true,"externalName":"VariablePEM","methods":[{"name":"SetEmpty","externalName":"setEmpty"},{"name":"ToFormattedString","externalName":"toFormattedString"}]},{"name":"DomainPEM","generatesClass":true,"externalName":"DomainPEM","methods":[{"name":"Convert","externalName":"convert"},{"name":"Elements","externalName":"elements"},{"name":"EnumerationDescription","externalName":"enumerationDescription"},{"name":"EnumerationImage","externalName":"enumerationImage"}]},{"name":"GXProgramMetadata","generatesClass":true,"externalName":"GXProgramMetadata","methods":[{"name":"Link","externalName":"link"}]},{"name":"SDObject","generatesClass":true,"externalName":"SDObject","methods":[{"name":"Call","externalName":"call"},{"name":"Create","externalName":"create"},{"name":"Link","externalName":"link"}]},{"name":"GXProgram","generatesClass":true,"externalName":"GXProgram","methods":[{"name":"Call","externalName":"call"},{"name":"Create","externalName":"create"},{"name":"Link","externalName":"link"},{"name":"Popup","externalName":"popup"},{"name":"Submit","externalName":"submit"},{"name":"Udp","externalName":"udp"},{"name":"Udf","externalName":"udf"}]},{"name":"GXDataSelector","generatesClass":true,"externalName":"GXDataSelector","methods":[{"name":"Call","externalName":"call"}]},{"name":"ImagePEMs","generatesClass":true,"externalName":"ImagePEMs","methods":[{"name":"Link","externalName":"link"}]},{"name":"OutputGroup","generatesClass":true,"externalName":"OutputGroup","methods":[{"name":"Insert","externalName":"insert"}]},{"name":"BusinessComponentLevel","generatesClass":false,"externalName":"BusinessComponentLevel","methods":[]},{"name":"BusinessComponent","generatesClass":true,"externalName":"BusinessComponent","methods":[{"name":"Check","externalName":"check"},{"name":"Delete","externalName":"delete"},{"name":"Load","externalName":"load"},{"name":"Mode","externalName":"mode"},{"name":"Save","externalName":"save"},{"name":"ToXml","externalName":"toXml"},{"name":"FromXml","externalName":"fromXml"},{"name":"FromXmlFile","externalName":"fromXmlFile"},{"name":"ToJson","externalName":"toJson"},{"name":"FromJson","externalName":"fromJson"},{"name":"FromJsonFile","externalName":"fromJsonFile"},{"name":"Update","externalName":"update"},{"name":"Insert","externalName":"insert"},{"name":"InsertOrUpdate","externalName":"insertOrUpdate"},{"name":"Success","externalName":"success"},{"name":"Fail","externalName":"fail"},{"name":"GetMessages","externalName":"getMessages"},{"name":"Clone","externalName":"clone"},{"name":"CreateBC","externalName":"createBC"},{"name":"CreateCollection","externalName":"createCollection"},{"name":"GetValue","externalName":"getValue"},{"name":"SetValue","externalName":"setValue"},{"name":"GetMetadata","externalName":"getMetadata"}]},{"name":"AttributePEM","generatesClass":true,"externalName":"AttributePEM","methods":[{"name":"SetNull","externalName":"setNull"},{"name":"IsNull","externalName":"isNull"},{"name":"SetEmpty","externalName":"setEmpty"},{"name":"GetOldValue","externalName":"getOldValue"},{"name":"ToFormattedString","externalName":"toFormattedString"}]},{"name":"BasedOnEnumeratedDomain","generatesClass":true,"externalName":"BasedOnEnumeratedDomain","methods":[{"name":"EnumerationDescription","externalName":"enumerationDescription"},{"name":"EnumerationImage","externalName":"enumerationImage"}]},{"name":"SDT","generatesClass":true,"externalName":"SDT","methods":[{"name":"ToXml","externalName":"toXml"},{"name":"FromXml","externalName":"fromXml"},{"name":"FromXmlFile","externalName":"fromXmlFile"},{"name":"Clone","externalName":"clone"},{"name":"ToJson","externalName":"toJson"},{"name":"FromJson","externalName":"fromJson"},{"name":"FromJsonFile","externalName":"fromJsonFile"},{"name":"IsNull","externalName":"isNull"},{"name":"SetNull","externalName":"setNull"}]},{"name":"SDTItem","generatesClass":true,"externalName":"SDTItem","methods":[{"name":"ToFormattedString","externalName":"toFormattedString"}]},{"name":"Iterator","generatesClass":true,"externalName":"Iterator","methods":[{"name":"First","externalName":"first"},{"name":"Next","externalName":"next"},{"name":"Eof","externalName":"eof"}]},{"name":"","generatesClass":false,"externalName":"","methods":[]},{"name":"void","generatesClass":false,"externalName":"Void","methods":[]},{"name":"GxImage","generatesClass":false,"externalName":"GxImage","methods":[]},{"name":"Timezones","generatesClass":false,"externalName":"Timezones","methods":[]},{"name":"short","generatesClass":false,"externalName":"Short","methods":[]},{"name":"Object","generatesClass":false,"externalName":"Object","methods":[]},{"name":"Messages","generatesClass":false,"externalName":"Messages","methods":[]},{"name":"int","generatesClass":false,"externalName":"Int","methods":[]},{"name":"GxControlFrame","generatesClass":false,"externalName":"GxControlFrame","methods":[]},{"name":"CallEffect","generatesClass":false,"externalName":"CallEffect","methods":[]},{"name":"CallType","generatesClass":false,"externalName":"CallType","methods":[]},{"name":"TargetSize","generatesClass":false,"externalName":"TargetSize","methods":[]},{"name":"DipOrPercentage","generatesClass":false,"externalName":"DipOrPercentage","methods":[]},{"name":"GeneXus.Common.UI.Progress","generatesClass":true,"externalName":"GeneXusCommonUIProgress","methods":[{"name":"Show","externalName":"show"},{"name":"ShowWithTitle","externalName":"showWithTitle"},{"name":"ShowWithTitleAndDescription","externalName":"showWithTitleAndDescription"},{"name":"Hide","externalName":"hide"}]},{"name":"GeneXus.Common.UI.Navigation","generatesClass":false,"externalName":"GeneXusCommonUINavigation","methods":[{"name":"ShowTarget","externalName":"showTarget"},{"name":"HideTarget","externalName":"hideTarget"},{"name":"ExpandTarget","externalName":"expandTarget"},{"name":"CollapseTarget","externalName":"collapseTarget"}]},{"name":"GeneXus.Common.Configuration.ConfigurationManager","generatesClass":false,"externalName":"GeneXusCommonConfigurationConfigurationManager","methods":[{"name":"GetValue","externalName":"getValue"},{"name":"HasValue","externalName":"hasValue"}]},{"name":"GeneXus.Common.Clipboard","generatesClass":false,"externalName":"GeneXusCommonClipboard","methods":[{"name":"SetText","externalName":"setText"},{"name":"GetText","externalName":"getText"}]},{"name":"GeneXus.Common.Analytics","generatesClass":false,"externalName":"GeneXusCommonAnalytics","methods":[{"name":"TrackView","externalName":"trackView"},{"name":"TrackEvent","externalName":"trackEvent"},{"name":"TrackPurchase","externalName":"trackPurchase"},{"name":"setAnalyticsUserId","externalName":"setAnalyticsUserId"}]},{"name":"GeneXus.Common.Geolocation","generatesClass":true,"externalName":"GeneXusCommonGeolocation","methods":[{"name":"GetMyLocation","externalName":"getMyLocation"},{"name":"Authorized","externalName":"authorized"},{"name":"ServiceEnabled","externalName":"serviceEnabled"},{"name":"StartTracking","externalName":"startTracking"},{"name":"EndTracking","externalName":"endTracking"},{"name":"GetLocationHistory","externalName":"getLocationHistory"},{"name":"ClearLocationHistory","externalName":"clearLocationHistory"},{"name":"GetLatitude","externalName":"getLatitude"},{"name":"GetLongitude","externalName":"getLongitude"},{"name":"GetDistance","externalName":"getDistance"},{"name":"GetAddress","externalName":"getAddress"},{"name":"GetLocation","externalName":"getLocation"},{"name":"SetProximityAlerts","externalName":"setProximityAlerts"},{"name":"GetProximityAlerts","externalName":"getProximityAlerts"},{"name":"GetCurrentProximityAlert","externalName":"getCurrentProximityAlert"},{"name":"ClearProximityAlerts","externalName":"clearProximityAlerts"},{"name":"PickLocation","externalName":"pickLocation"}]},{"name":"GeneXus.Common.Server","generatesClass":false,"externalName":"GeneXusCommonServer","methods":[{"name":"InvalidateCache","externalName":"invalidateCache"}]},{"name":"GeneXus.Common.Runtime","generatesClass":true,"externalName":"GeneXusCommonRuntime","methods":[]},{"name":"GeneXus.Common.Log","generatesClass":false,"externalName":"GeneXusCommonLog","methods":[{"name":"Write","externalName":"write"},{"name":"logError","externalName":"logError"},{"name":"Warning","externalName":"warning"},{"name":"Info","externalName":"info"},{"name":"Debug","externalName":"debug"},{"name":"Fatal","externalName":"fatal"}]},{"name":"GeneXus.Common.Maps","generatesClass":false,"externalName":"GeneXusCommonMaps","methods":[{"name":"CalculateDirections","externalName":"calculateDirections"}]},{"name":"GeneXus.Client.ClientInformation","generatesClass":true,"externalName":"GeneXusClientClientInformation","methods":[]},{"name":"GeneXus.Client.ClientStorage","generatesClass":false,"externalName":"GeneXusClientClientStorage","methods":[{"name":"setValue","externalName":"setValue"},{"name":"SecureSet","externalName":"secureSet"},{"name":"Get","externalName":"get"},{"name":"Remove","externalName":"remove"},{"name":"Clear","externalName":"clear"}]},{"name":"GeneXus.Client.Socket","generatesClass":true,"externalName":"GeneXusClientSocket","methods":[{"name":"Open","externalName":"open"},{"name":"Close","externalName":"close"},{"name":"Send","externalName":"send"}]},{"name":"GeneXus.Social.Facebook","generatesClass":true,"externalName":"GeneXusSocialFacebook","methods":[{"name":"PostToWall","externalName":"postToWall"},{"name":"ShareLink","externalName":"shareLink"},{"name":"ShareImage","externalName":"shareImage"},{"name":"ShareVideo","externalName":"shareVideo"}]},{"name":"GeneXus.Social.Twitter","generatesClass":false,"externalName":"GeneXusSocialTwitter","methods":[{"name":"Tweet","externalName":"tweet"},{"name":"Follow","externalName":"follow"}]},{"name":"GeneXus.Social.Share","generatesClass":false,"externalName":"GeneXusSocialShare","methods":[{"name":"ShareText","externalName":"shareText"},{"name":"ShareImage","externalName":"shareImage"}]},{"name":"GeneXus.Server.Socket","generatesClass":true,"externalName":"GeneXusServerSocket","methods":[{"name":"Notify","externalName":"notify"},{"name":"NotifyClient","externalName":"notifyClient"},{"name":"Broadcast","externalName":"broadcast"},{"name":"NotifyClientText","externalName":"notifyClientText"}]},{"name":"GeneXus.SD.Synchronization.SynchronizationEvents","generatesClass":false,"externalName":"GeneXusSDSynchronizationSynchronizationEvents","methods":[{"name":"HasEvents","externalName":"hasEvents"},{"name":"GetEvents","externalName":"getEvents"},{"name":"MarkEventAsPending","externalName":"markEventAsPending"},{"name":"RemoveEvent","externalName":"removeEvent"}]},{"name":"GeneXus.SD.Synchronization.Synchronization","generatesClass":false,"externalName":"GeneXusSDSynchronizationSynchronization","methods":[]},{"name":"GeneXus.SD.iOS.Permissions","generatesClass":false,"externalName":"GeneXusSDiOSPermissions","methods":[{"name":"RequestUserNotificationsPermission","externalName":"requestUserNotificationsPermission"},{"name":"RequestLocationPermissionWhenInUse","externalName":"requestLocationPermissionWhenInUse"},{"name":"RequestLocationPermissionAlways","externalName":"requestLocationPermissionAlways"},{"name":"RequestRemoteNotificationsPermission","externalName":"requestRemoteNotificationsPermission"}]},{"name":"GeneXus.SD.Store.StoreManager","generatesClass":true,"externalName":"GeneXusSDStoreStoreManager","methods":[{"name":"GetProducts","externalName":"getProducts"},{"name":"PurchaseProduct","externalName":"purchaseProduct"},{"name":"GetPurchases","externalName":"getPurchases"},{"name":"ConsumeProduct","externalName":"consumeProduct"},{"name":"RestorePurchases","externalName":"restorePurchases"}]},{"name":"GeneXus.SD.Notifications.NotificationsConfiguration","generatesClass":true,"externalName":"GeneXusSDNotificationsNotificationsConfiguration","methods":[]},{"name":"GeneXus.SD.Notifications.RemoteNotificationResult","generatesClass":true,"externalName":"GeneXusSDNotificationsRemoteNotificationResult","methods":[]},{"name":"GeneXus.SD.Notifications.NotificationParameters","generatesClass":true,"externalName":"GeneXusSDNotificationsNotificationParameters","methods":[{"name":"SetParameter","externalName":"setParameter"}]},{"name":"GeneXus.SD.Notifications.RemoteNotifications","generatesClass":true,"externalName":"GeneXusSDNotificationsRemoteNotifications","methods":[{"name":"Call","externalName":"call"},{"name":"IOSSetBadge","externalName":"iOSSetBadge"},{"name":"IOSResetBadge","externalName":"iOSResetBadge"},{"name":"CallAction","externalName":"callAction"},{"name":"OpenSession","externalName":"openSession"},{"name":"Add","externalName":"add"},{"name":"Send","externalName":"send"},{"name":"SetConfiguration","externalName":"setConfiguration"}]},{"name":"GeneXus.SD.Notifications.LocalNotifications","generatesClass":false,"externalName":"GeneXusSDNotificationsLocalNotifications","methods":[{"name":"CreateAlerts","externalName":"createAlerts"},{"name":"ListAlerts","externalName":"listAlerts"},{"name":"RemoveAlerts","externalName":"removeAlerts"},{"name":"RemoveAllAlerts","externalName":"removeAllAlerts"}]},{"name":"GeneXus.SD.Media.Camera","generatesClass":false,"externalName":"GeneXusSDMediaCamera","methods":[{"name":"TakePhoto","externalName":"takePhoto"},{"name":"RecordVideo","externalName":"recordVideo"}]},{"name":"GeneXus.SD.Media.PhotoLibrary","generatesClass":false,"externalName":"GeneXusSDMediaPhotoLibrary","methods":[{"name":"savePhoto","externalName":"savePhoto"},{"name":"SaveVideo","externalName":"saveVideo"},{"name":"ChooseImage","externalName":"chooseImage"},{"name":"ChooseVideo","externalName":"chooseVideo"},{"name":"ChooseImages","externalName":"chooseImages"}]},{"name":"GeneXus.SD.Media.Audio","generatesClass":false,"externalName":"GeneXusSDMediaAudio","methods":[{"name":"Play","externalName":"play"},{"name":"PlayBackground","externalName":"playBackground"},{"name":"Stop","externalName":"stop"},{"name":"IsPlaying","externalName":"isPlaying"},{"name":"GetQueue","externalName":"getQueue"},{"name":"GetQueueState","externalName":"getQueueState"},{"name":"SetQueue","externalName":"setQueue"},{"name":"PlayQueue","externalName":"playQueue"},{"name":"PauseQueue","externalName":"pauseQueue"},{"name":"SetQueueCurrentItem","externalName":"setQueueCurrentItem"},{"name":"SetQueueCurrentIndex","externalName":"setQueueCurrentIndex"},{"name":"SetPlayerSettings","externalName":"setPlayerSettings"},{"name":"iOSSetShowsMiniPlayer","externalName":"iOSSetShowsMiniPlayer"},{"name":"iOSDisplayFullScreenPlayer","externalName":"iOSDisplayFullScreenPlayer"},{"name":"iOSDismissFullScreenPlayer","externalName":"iOSDismissFullScreenPlayer"}]},{"name":"GeneXus.SD.Media.AudioRecorder","generatesClass":true,"externalName":"GeneXusSDMediaAudioRecorder","methods":[{"name":"Start","externalName":"start"},{"name":"Stop","externalName":"stop"}]},{"name":"GeneXus.SD.Actions","generatesClass":false,"externalName":"GeneXusSDActions","methods":[{"name":"Login","externalName":"login"},{"name":"LoginExternal","externalName":"loginExternal"},{"name":"Logout","externalName":"logout"},{"name":"GoHome","externalName":"goHome"},{"name":"ReturnTo","externalName":"returnTo"},{"name":"Save","externalName":"save"},{"name":"Cancel","externalName":"cancel"},{"name":"deleteAction","externalName":"deleteAction"},{"name":"TakeApplicationScreenshot","externalName":"takeApplicationScreenshot"}]},{"name":"GeneXus.SD.Contacts","generatesClass":false,"externalName":"GeneXusSDContacts","methods":[{"name":"AddContact","externalName":"addContact"},{"name":"RemoveContact","externalName":"removeContact"},{"name":"ViewContact","externalName":"viewContact"},{"name":"GetAllContacts","externalName":"getAllContacts"}]},{"name":"GeneXus.SD.Calendar","generatesClass":false,"externalName":"GeneXusSDCalendar","methods":[{"name":"Schedule","externalName":"schedule"}]},{"name":"GeneXus.SD.Interop","generatesClass":true,"externalName":"GeneXusSDInterop","methods":[{"name":"SendMessage","externalName":"sendMessage"},{"name":"PlayVideo","externalName":"playVideo"},{"name":"PlayAudio","externalName":"playAudio"},{"name":"PlaceCall","externalName":"placeCall"},{"name":"SendEmail","externalName":"sendEmail"},{"name":"SendEmailAdvanced","externalName":"sendEmailAdvanced"},{"name":"SendSMS","externalName":"sendSMS"},{"name":"Msg","externalName":"msg"},{"name":"Confirm","externalName":"confirm"},{"name":"OpenInBrowser","externalName":"openInBrowser"},{"name":"CanOpen","externalName":"canOpen"},{"name":"Open","externalName":"open"},{"name":"ClearCache","externalName":"clearCache"},{"name":"IOSSetBadgeNumber","externalName":"iOSSetBadgeNumber"},{"name":"SetBadgeNumber","externalName":"setBadgeNumber"},{"name":"IOSSetBadgeTextToTabIndex","externalName":"iOSSetBadgeTextToTabIndex"},{"name":"IOSSetSelectedTabIndex","externalName":"iOSSetSelectedTabIndex"}]},{"name":"GeneXus.SD.Scanner","generatesClass":false,"externalName":"GeneXusSDScanner","methods":[{"name":"ScanBarcode","externalName":"scanBarcode"},{"name":"ScanInLoop","externalName":"scanInLoop"}]},{"name":"GeneXus.SD.Network","generatesClass":true,"externalName":"GeneXusSDNetwork","methods":[{"name":"IsServerAvailable","externalName":"isServerAvailable"},{"name":"Type","externalName":"type"},{"name":"TrafficBasedCost","externalName":"trafficBasedCost"},{"name":"SetApplicationServerURL","externalName":"setApplicationServerURL"}]},{"name":"GeneXus.SD.Beacons","generatesClass":true,"externalName":"GeneXusSDBeacons","methods":[{"name":"AddBeaconProximityAlert","externalName":"addBeaconProximityAlert"},{"name":"AddBeaconProximityAlerts","externalName":"addBeaconProximityAlerts"},{"name":"GetBeaconProximityAlerts","externalName":"getBeaconProximityAlerts"},{"name":"RemoveBeaconProximityAlert","externalName":"removeBeaconProximityAlert"},{"name":"ClearBeaconProximityAlerts","externalName":"clearBeaconProximityAlerts"},{"name":"GetBeaconRegionState","externalName":"getBeaconRegionState"},{"name":"StartRangingBeaconRegion","externalName":"startRangingBeaconRegion"},{"name":"GetRangedBeaconRegions","externalName":"getRangedBeaconRegions"},{"name":"StopRangingBeaconRegion","externalName":"stopRangingBeaconRegion"},{"name":"GetBeaconsInRange","externalName":"getBeaconsInRange"},{"name":"StartAsBeacon","externalName":"startAsBeacon"},{"name":"StopAsBeacon","externalName":"stopAsBeacon"}]},{"name":"GeneXus.SD.Search","generatesClass":false,"externalName":"GeneXusSDSearch","methods":[]},{"name":"GeneXus.SD.DeepLink","generatesClass":false,"externalName":"GeneXusSDDeepLink","methods":[]},{"name":"GeneXus.SD.WebBrowser","generatesClass":false,"externalName":"GeneXusSDWebBrowser","methods":[{"name":"Open","externalName":"open"},{"name":"Close","externalName":"close"}]},{"name":"GeneXus.SD.DeviceAuthentication","generatesClass":true,"externalName":"GeneXusSDDeviceAuthentication","methods":[{"name":"IsAvailable","externalName":"isAvailable"},{"name":"Authenticate","externalName":"authenticate"}]},{"name":"GeneXus.SD.AppLifecycle","generatesClass":true,"externalName":"GeneXusSDAppLifecycle","methods":[]},{"name":"GeneXus.SD.CardScanner","generatesClass":true,"externalName":"GeneXusSDCardScanner","methods":[{"name":"ScanCard","externalName":"scanCard"}]}]}
+{
+  "modules": [
+    {
+      "name": "Core",
+      "generatesClass": false,
+      "externalName": "Core",
+      "methods": [
+        { "name": "AddMth", "externalName": "addMth" },
+        { "name": "AddYr", "externalName": "addYr" },
+        { "name": "Age", "externalName": "age" },
+        { "name": "Asc", "externalName": "asc" },
+        { "name": "Ask", "externalName": "ask" },
+        { "name": "Average", "externalName": "average" },
+        { "name": "BrowserID", "externalName": "browserID" },
+        { "name": "BrowserVersion", "externalName": "browserVersion" },
+        { "name": "ByteCount", "externalName": "byteCount" },
+        { "name": "CDoW", "externalName": "cDoW" },
+        { "name": "Chr", "externalName": "chr" },
+        { "name": "CMonth", "externalName": "cMonth" },
+        { "name": "Cols", "externalName": "cols" },
+        { "name": "Compare", "externalName": "compare" },
+        { "name": "Concat", "externalName": "concat" },
+        { "name": "Count", "externalName": "count" },
+        { "name": "CtoD", "externalName": "ctoD" },
+        { "name": "CtoT", "externalName": "ctoT" },
+        { "name": "Day", "externalName": "day" },
+        { "name": "Decrypt64", "externalName": "decrypt64" },
+        { "name": "DFRClose", "externalName": "dFRClose" },
+        { "name": "DFRGDate", "externalName": "dFRGDate" },
+        { "name": "DFRGNum", "externalName": "dFRGNum" },
+        { "name": "DFRGTxt", "externalName": "dFRGTxt" },
+        { "name": "DFRNext", "externalName": "dFRNext" },
+        { "name": "DFROpen", "externalName": "dFROpen" },
+        { "name": "DFWClose", "externalName": "dFWClose" },
+        { "name": "DFWNext", "externalName": "dFWNext" },
+        { "name": "DFWOpen", "externalName": "dFWOpen" },
+        { "name": "DFWPDate", "externalName": "dFWPDate" },
+        { "name": "DFWPNum", "externalName": "dFWPNum" },
+        { "name": "DFWPTxt", "externalName": "dFWPTxt" },
+        { "name": "DoW", "externalName": "doW" },
+        { "name": "DtoC", "externalName": "dtoC" },
+        { "name": "Encrypt64", "externalName": "encrypt64" },
+        { "name": "EoM", "externalName": "eoM" },
+        { "name": "Exists", "externalName": "exists" },
+        { "name": "FileExist", "externalName": "fileExist" },
+        { "name": "Find", "externalName": "find" },
+        { "name": "Format", "externalName": "format" },
+        { "name": "FromBase64", "externalName": "fromBase64" },
+        { "name": "GetCookie", "externalName": "getCookie" },
+        { "name": "GetDataStore", "externalName": "getDataStore" },
+        { "name": "GetEncryptionKey", "externalName": "getEncryptionKey" },
+        { "name": "GetLanguage", "externalName": "getLanguage" },
+        { "name": "GetLocation", "externalName": "getLocation" },
+        { "name": "GetMessageText", "externalName": "getMessageText" },
+        { "name": "GetSOAPErr", "externalName": "getSOAPErr" },
+        { "name": "GetSOAPErrMsg", "externalName": "getSOAPErrMsg" },
+        { "name": "GetTheme", "externalName": "getTheme" },
+        { "name": "GXGetMLi", "externalName": "gXGetMLi" },
+        { "name": "GXMLines", "externalName": "gXMLines" },
+        { "name": "Hour", "externalName": "hour" },
+        { "name": "HTMLClean", "externalName": "hTMLClean" },
+        { "name": "UrlEncode", "externalName": "urlEncode" },
+        { "name": "iif", "externalName": "iif" },
+        { "name": "Int", "externalName": "int" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "Len", "externalName": "len" },
+        { "name": "Link", "externalName": "link" },
+        { "name": "LoadBitmap", "externalName": "loadBitmap" },
+        { "name": "Lower", "externalName": "lower" },
+        {
+          "name": "LTrim",
+          "externalName": "lTrim",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim"
+        },
+        { "name": "Max", "externalName": "max" },
+        { "name": "Min", "externalName": "min" },
+        { "name": "Minute", "externalName": "minute" },
+        { "name": "Mod", "externalName": "mod" },
+        { "name": "Month", "externalName": "month" },
+        { "name": "NewLine", "externalName": "newLine" },
+        { "name": "Now", "externalName": "now" },
+        { "name": "isNullValue", "externalName": "isNullValue" },
+        { "name": "NullValue", "externalName": "nullValue" },
+        { "name": "OpenDocument", "externalName": "openDocument" },
+        { "name": "PadL", "externalName": "padL" },
+        { "name": "PadR", "externalName": "padR" },
+        { "name": "PathToUrl", "externalName": "pathToUrl" },
+        { "name": "PrintDocument", "externalName": "printDocument" },
+        { "name": "Random", "externalName": "random" },
+        { "name": "ReadRegKey", "externalName": "readRegKey" },
+        { "name": "RemoteAddr", "externalName": "remoteAddr" },
+        { "name": "ReturnOnClick", "externalName": "returnOnClick" },
+        { "name": "RGB", "externalName": "rGB" },
+        { "name": "Round", "externalName": "round" },
+        { "name": "RoundToEven", "externalName": "roundToEven" },
+        { "name": "Rows", "externalName": "rows" },
+        { "name": "RSeed", "externalName": "rSeed" },
+        {
+          "name": "RTrim",
+          "externalName": "rTrim",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim"
+        },
+        { "name": "Second", "externalName": "second" },
+        { "name": "ServerDate", "externalName": "serverDate" },
+        { "name": "ServerNow", "externalName": "serverNow" },
+        { "name": "ServerTime", "externalName": "serverTime" },
+        { "name": "SetCookie", "externalName": "setCookie" },
+        { "name": "SetLanguage", "externalName": "setLanguage" },
+        { "name": "SetTheme", "externalName": "setTheme" },
+        { "name": "SetUserId", "externalName": "setUserId" },
+        { "name": "SetWrkSt", "externalName": "setWrkSt" },
+        { "name": "Shell", "externalName": "shell" },
+        { "name": "Sleep", "externalName": "sleep" },
+        { "name": "Space", "externalName": "space" },
+        { "name": "Str", "externalName": "str" },
+        { "name": "StrReplace", "externalName": "strReplace" },
+        { "name": "StrSearch", "externalName": "strSearch" },
+        { "name": "StrSearchRev", "externalName": "strSearchRev" },
+        { "name": "SubStr", "externalName": "subStr" },
+        { "name": "Sum", "externalName": "sum" },
+        { "name": "SysDate", "externalName": "sysDate" },
+        { "name": "SysTime", "externalName": "sysTime" },
+        { "name": "TAdd", "externalName": "tAdd" },
+        { "name": "TDiff", "externalName": "tDiff" },
+        { "name": "Time", "externalName": "time" },
+        { "name": "ToBase64", "externalName": "toBase64" },
+        { "name": "Today", "externalName": "today" },
+        { "name": "ToFormattedString", "externalName": "toFormattedString" },
+        { "name": "Trim", "externalName": "trim" },
+        { "name": "Trunc", "externalName": "trunc" },
+        { "name": "TtoC", "externalName": "ttoC" },
+        { "name": "UDP", "externalName": "uDP" },
+        { "name": "Upper", "externalName": "upper" },
+        { "name": "UserCls", "externalName": "userCls" },
+        { "name": "UserID", "externalName": "userID" },
+        { "name": "Val", "externalName": "val" },
+        { "name": "WriteRegKey", "externalName": "writeRegKey" },
+        { "name": "WrkSt", "externalName": "wrkSt" },
+        { "name": "XSLTApply", "externalName": "xSLTApply" },
+        { "name": "XToD", "externalName": "xToD" },
+        { "name": "Year", "externalName": "year" },
+        { "name": "YMDHMStoT", "externalName": "yMDHMStoT" },
+        { "name": "YMDtoD", "externalName": "yMDtoD" },
+        { "name": "Set", "externalName": "set" },
+        { "name": "UDF", "externalName": "uDF" },
+        { "name": "Confirmed", "externalName": "confirmed" },
+        { "name": "Cursor", "externalName": "cursor" },
+        { "name": "DeleteFile", "externalName": "deleteFile" },
+        { "name": "SetEnvProperty", "externalName": "setEnvProperty" },
+        { "name": "Error_handler", "externalName": "errorhandler" },
+        { "name": "NoLoad", "externalName": "noLoad" },
+        { "name": "NoRead", "externalName": "noRead" },
+        { "name": "Output_file", "externalName": "outputfile" },
+        { "name": "Printer", "externalName": "printer" },
+        { "name": "XFile", "externalName": "xFile" },
+        { "name": "XIndex", "externalName": "xIndex" },
+        { "name": "XLocation", "externalName": "xLocation" },
+        { "name": "XUse", "externalName": "xUse" },
+        { "name": "NoPrompt", "externalName": "noPrompt" },
+        { "name": "Order", "externalName": "order" },
+        { "name": "Confirm", "externalName": "confirm" },
+        { "name": "Msg", "externalName": "msg" },
+        { "name": "Level", "externalName": "level" },
+        { "name": "Modified", "externalName": "modified" },
+        { "name": "Old", "externalName": "old" },
+        { "name": "Previous", "externalName": "previous" },
+        { "name": "Accept", "externalName": "accept" },
+        { "name": "Add", "externalName": "add" },
+        { "name": "AllowNulls", "externalName": "allowNulls" },
+        { "name": "Call", "externalName": "call" },
+        { "name": "Default_mode", "externalName": "defaultmode" },
+        { "name": "Equal", "externalName": "equal" },
+        { "name": "Error", "externalName": "error" },
+        { "name": "NoAccept", "externalName": "noAccept" },
+        { "name": "NoConfirm", "externalName": "noConfirm" },
+        { "name": "RefMsg", "externalName": "refMsg" },
+        { "name": "Serial", "externalName": "serial" },
+        { "name": "Submit", "externalName": "submit" },
+        { "name": "Subtract", "externalName": "subtract" },
+        { "name": "Update", "externalName": "update" },
+        { "name": "Hidden", "externalName": "hidden" },
+        { "name": "Workfile_lines", "externalName": "workfilelines" },
+        { "name": "XOrder", "externalName": "xOrder" },
+        { "name": "Calculate", "externalName": "calculate" },
+        { "name": "Search", "externalName": "search" }
+      ]
+    },
+    {
+      "name": "Numeric",
+      "generatesClass": true,
+      "externalName": "Numeric",
+      "methods": [
+        { "name": "Integer", "externalName": "integer" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "Round", "externalName": "round" },
+        { "name": "RoundToEven", "externalName": "roundToEven" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "Truncate", "externalName": "truncate" }
+      ]
+    },
+    {
+      "name": "Character",
+      "generatesClass": true,
+      "externalName": "Character",
+      "methods": [
+        {
+          "name": "CharAt",
+          "externalName": "charAt",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/charAt"
+        },
+        {
+          "name": "Contains",
+          "externalName": "contains",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/contains"
+        },
+        {
+          "name": "EndsWith",
+          "externalName": "endsWith",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith"
+        },
+        {
+          "name": "IndexOf",
+          "externalName": "indexOf",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf"
+        },
+        {
+          "name": "IsEmpty",
+          "externalName": "isEmpty",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty"
+        },
+        {
+          "name": "IsMatch",
+          "externalName": "isMatch",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch"
+        },
+        {
+          "name": "LastIndexOf",
+          "externalName": "lastIndexOf",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf"
+        },
+        {
+          "name": "Length",
+          "externalName": "length",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/length"
+        },
+        {
+          "name": "Matches",
+          "externalName": "matches",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/matches"
+        },
+        {
+          "name": "RemoveDiacritics",
+          "externalName": "removeDiacritics",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics"
+        },
+        {
+          "name": "Replace",
+          "externalName": "replace",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/replace"
+        },
+        {
+          "name": "ReplaceRegEx",
+          "externalName": "replaceRegEx",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/replaceRegExp"
+        },
+        {
+          "name": "PadLeft",
+          "externalName": "padLeft",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft"
+        },
+        {
+          "name": "PadRight",
+          "externalName": "padRight",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/padRight"
+        },
+        {
+          "name": "SplitRegEx",
+          "externalName": "splitRegEx",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp"
+        },
+        {
+          "name": "StartsWith",
+          "externalName": "startsWith",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf"
+        },
+        {
+          "name": "Substring",
+          "externalName": "substr",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/subString"
+        },
+        {
+          "name": "ToLower",
+          "externalName": "toLower",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toLower"
+        },
+        {
+          "name": "ToNumeric",
+          "externalName": "toNumeric",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric"
+        },
+        {
+          "name": "ToUpper",
+          "externalName": "toUpper",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper"
+        },
+        {
+          "name": "Trim",
+          "externalName": "trim",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/trim"
+        },
+        {
+          "name": "TrimEnd",
+          "externalName": "trimEnd",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim"
+        },
+        {
+          "name": "TrimStart",
+          "externalName": "trimStart",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim"
+        },
+        { "name": "FromString", "externalName": "fromString" },
+        {
+          "name": "ToString",
+          "externalName": "toString",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toString"
+        },
+        { "name": "XSLTApply", "externalName": "xSLTApply" },
+        { "name": "HTMLClean", "externalName": "hTMLClean" }
+      ]
+    },
+    {
+      "name": "Date",
+      "generatesClass": true,
+      "externalName": "Date",
+      "methods": [
+        { "name": "AddDays", "externalName": "addDays" },
+        { "name": "AddMonths", "externalName": "addMonths" },
+        { "name": "AddYears", "externalName": "addYears" },
+        { "name": "Age", "externalName": "age" },
+        { "name": "Day", "externalName": "day" },
+        { "name": "DayOfWeek", "externalName": "dayOfWeek" },
+        { "name": "DayOfWeekName", "externalName": "dayOfWeekName" },
+        { "name": "EndOfMonth", "externalName": "endOfMonth" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "Month", "externalName": "month" },
+        { "name": "MonthName", "externalName": "monthName" },
+        { "name": "Year", "externalName": "year" },
+        { "name": "ToDate", "externalName": "toDate" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "Set", "externalName": "set" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "New", "externalName": "new" }
+      ]
+    },
+    {
+      "name": "Image",
+      "generatesClass": true,
+      "externalName": "Image",
+      "methods": [{ "name": "IsEmpty", "externalName": "isEmpty" }]
+    },
+    {
+      "name": "LongVarchar",
+      "generatesClass": true,
+      "externalName": "LongVarchar",
+      "methods": [
+        { "name": "CharAt", "externalName": "charAt" },
+        { "name": "Contains", "externalName": "contains" },
+        { "name": "EndsWith", "externalName": "endsWith" },
+        { "name": "IndexOf", "externalName": "indexOf" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "IsMatch", "externalName": "isMatch" },
+        { "name": "LastIndexOf", "externalName": "lastIndexOf" },
+        { "name": "Length", "externalName": "length" },
+        { "name": "Matches", "externalName": "matches" },
+        { "name": "Replace", "externalName": "replace" },
+        { "name": "ReplaceRegEx", "externalName": "replaceRegEx" },
+        { "name": "PadLeft", "externalName": "padLeft" },
+        { "name": "PadRight", "externalName": "padRight" },
+        { "name": "SplitRegEx", "externalName": "splitRegEx" },
+        { "name": "StartsWith", "externalName": "startsWith" },
+        { "name": "Substring", "externalName": "substr" },
+        { "name": "ToLower", "externalName": "toLower" },
+        { "name": "ToNumeric", "externalName": "toNumeric" },
+        { "name": "ToUpper", "externalName": "toUpper" },
+        { "name": "Trim", "externalName": "trim" },
+        { "name": "TrimEnd", "externalName": "trimEnd" },
+        { "name": "TrimStart", "externalName": "trimStart" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "XSLTApply", "externalName": "xSLTApply" },
+        { "name": "HTMLClean", "externalName": "hTMLClean" }
+      ]
+    },
+    {
+      "name": "DateTime",
+      "generatesClass": true,
+      "externalName": "DateTime",
+      "methods": [
+        { "name": "AddMilliseconds", "externalName": "addMilliseconds" },
+        { "name": "AddSeconds", "externalName": "addSeconds" },
+        { "name": "AddMinutes", "externalName": "addMinutes" },
+        { "name": "AddHours", "externalName": "addHours" },
+        { "name": "AddDays", "externalName": "addDays" },
+        { "name": "AddMonths", "externalName": "addMonths" },
+        { "name": "AddYears", "externalName": "addYears" },
+        { "name": "Age", "externalName": "age" },
+        { "name": "Day", "externalName": "day" },
+        { "name": "DayOfWeek", "externalName": "dayOfWeek" },
+        { "name": "DayOfWeekName", "externalName": "dayOfWeekName" },
+        { "name": "EndOfMonth", "externalName": "endOfMonth" },
+        { "name": "Hour", "externalName": "hour" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "Minute", "externalName": "minute" },
+        { "name": "Month", "externalName": "month" },
+        { "name": "MonthName", "externalName": "monthName" },
+        { "name": "Second", "externalName": "second" },
+        { "name": "Millisecond", "externalName": "millisecond" },
+        { "name": "Difference", "externalName": "difference" },
+        { "name": "Year", "externalName": "year" },
+        { "name": "ToDate", "externalName": "toDate" },
+        { "name": "ToUniversalTime", "externalName": "toUniversalTime" },
+        { "name": "FromTimeZone", "externalName": "fromTimeZone" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "Set", "externalName": "set" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "New", "externalName": "new" },
+        { "name": "Now", "externalName": "now" },
+        { "name": "Time", "externalName": "time" },
+        { "name": "GetTimeZone", "externalName": "getTimeZone" },
+        { "name": "CurrentOffset", "externalName": "currentOffset" },
+        { "name": "SetTimeZone", "externalName": "setTimeZone" }
+      ]
+    },
+    {
+      "name": "Varchar",
+      "generatesClass": true,
+      "externalName": "Varchar",
+      "methods": [
+        { "name": "CharAt", "externalName": "charAt" },
+        { "name": "Contains", "externalName": "contains" },
+        { "name": "EndsWith", "externalName": "endsWith" },
+        { "name": "IndexOf", "externalName": "indexOf" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "IsMatch", "externalName": "isMatch" },
+        { "name": "LastIndexOf", "externalName": "lastIndexOf" },
+        { "name": "Length", "externalName": "length" },
+        { "name": "Matches", "externalName": "matches" },
+        { "name": "Replace", "externalName": "replace" },
+        { "name": "ReplaceRegEx", "externalName": "replaceRegEx" },
+        { "name": "PadLeft", "externalName": "padLeft" },
+        { "name": "PadRight", "externalName": "padRight" },
+        { "name": "StartsWith", "externalName": "startsWith" },
+        { "name": "Substring", "externalName": "substr" },
+        { "name": "SplitRegEx", "externalName": "splitRegEx" },
+        { "name": "ToLower", "externalName": "toLower" },
+        { "name": "ToNumeric", "externalName": "toNumeric" },
+        { "name": "ToUpper", "externalName": "toUpper" },
+        { "name": "Trim", "externalName": "trim" },
+        { "name": "TrimEnd", "externalName": "trimEnd" },
+        { "name": "TrimStart", "externalName": "trimStart" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "XSLTApply", "externalName": "xSLTApply" },
+        { "name": "HTMLClean", "externalName": "hTMLClean" }
+      ]
+    },
+    {
+      "name": "Binary",
+      "generatesClass": true,
+      "externalName": "Binary",
+      "methods": [
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToBase64String", "externalName": "toBase64String" },
+        { "name": "FromBase64String", "externalName": "fromBase64String" }
+      ]
+    },
+    {
+      "name": "Boolean",
+      "generatesClass": true,
+      "externalName": "Boolean",
+      "methods": [
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "ToString", "externalName": "toString" }
+      ]
+    },
+    {
+      "name": "MailMessage",
+      "generatesClass": true,
+      "externalName": "MailMessage",
+      "methods": [
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "GetHeader", "externalName": "getHeader" },
+        { "name": "AddHeader", "externalName": "addHeader" }
+      ]
+    },
+    {
+      "name": "XMLWriter",
+      "generatesClass": true,
+      "externalName": "XMLWriter",
+      "methods": [
+        { "name": "Open", "externalName": "open" },
+        { "name": "OpenToString", "externalName": "openToString" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "OpenRequest", "externalName": "openRequest" },
+        { "name": "OpenResponse", "externalName": "openResponse" },
+        { "name": "WriteElement", "externalName": "writeElement" },
+        { "name": "WriteStartElement", "externalName": "writeStartElement" },
+        { "name": "WriteEndElement", "externalName": "writeEndElement" },
+        { "name": "WriteAttribute", "externalName": "writeAttribute" },
+        { "name": "WriteText", "externalName": "writeText" },
+        { "name": "WriteRawText", "externalName": "writeRawText" },
+        { "name": "WriteComment", "externalName": "writeComment" },
+        {
+          "name": "WriteEntityReference",
+          "externalName": "writeEntityReference"
+        },
+        { "name": "WriteCData", "externalName": "writeCData" },
+        {
+          "name": "WriteProcessingInstruction",
+          "externalName": "writeProcessingInstruction"
+        },
+        { "name": "WriteStartDocument", "externalName": "writeStartDocument" },
+        { "name": "WriteDocType", "externalName": "writeDocType" },
+        { "name": "WriteDocTypeSystem", "externalName": "writeDocTypeSystem" },
+        { "name": "WriteDocTypePublic", "externalName": "writeDocTypePublic" },
+        {
+          "name": "WriteNSStartElement",
+          "externalName": "writeNSStartElement"
+        },
+        { "name": "WriteNSElement", "externalName": "writeNSElement" }
+      ]
+    },
+    {
+      "name": "XMLReader",
+      "generatesClass": true,
+      "externalName": "XMLReader",
+      "methods": [
+        { "name": "Open", "externalName": "open" },
+        { "name": "OpenFromString", "externalName": "openFromString" },
+        { "name": "Read", "externalName": "read" },
+        { "name": "OpenRequest", "externalName": "openRequest" },
+        { "name": "OpenResponse", "externalName": "openResponse" },
+        { "name": "ReadType", "externalName": "readType" },
+        { "name": "GetAttributeByName", "externalName": "getAttributeByName" },
+        {
+          "name": "GetAttributeByIndex",
+          "externalName": "getAttributeByIndex"
+        },
+        { "name": "ExistsAttribute", "externalName": "existsAttribute" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "Skip", "externalName": "skip" },
+        { "name": "ReadRawXML", "externalName": "readRawXML" },
+        { "name": "GetAttributeName", "externalName": "getAttributeName" },
+        { "name": "GetAttributePrefix", "externalName": "getAttributePrefix" },
+        {
+          "name": "GetAttributeLocalName",
+          "externalName": "getAttributeLocalName"
+        },
+        { "name": "GetAttributeURI", "externalName": "getAttributeURI" },
+        {
+          "name": "GetAttEntityValueByIndex",
+          "externalName": "getAttEntityValueByIndex"
+        },
+        {
+          "name": "GetAttEntityValueByName",
+          "externalName": "getAttEntityValueByName"
+        },
+        {
+          "name": "GetAttEntityNotationByIndex",
+          "externalName": "getAttEntityNotationByIndex"
+        },
+        {
+          "name": "GetAttEntityNotationByName",
+          "externalName": "getAttEntityNotationByName"
+        },
+        { "name": "SetDocEncoding", "externalName": "setDocEncoding" },
+        { "name": "SetNodeEncoding", "externalName": "setNodeEncoding" },
+        { "name": "AddSchema", "externalName": "addSchema" }
+      ]
+    },
+    {
+      "name": "HttpClient",
+      "generatesClass": true,
+      "externalName": "HttpClient",
+      "methods": [
+        { "name": "AddAuthentication", "externalName": "addAuthentication" },
+        {
+          "name": "AddProxyAuthentication",
+          "externalName": "addProxyAuthentication"
+        },
+        { "name": "AddFile", "externalName": "addFile" },
+        { "name": "AddHeader", "externalName": "addHeader" },
+        { "name": "AddString", "externalName": "addString" },
+        { "name": "AddVariable", "externalName": "addVariable" },
+        { "name": "Execute", "externalName": "execute" },
+        { "name": "GetHeader", "externalName": "getHeader" },
+        { "name": "ToFile", "externalName": "toFile" },
+        { "name": "ToString", "externalName": "toString" }
+      ]
+    },
+    {
+      "name": "HttpResponse",
+      "generatesClass": true,
+      "externalName": "HttpResponse",
+      "methods": [
+        { "name": "AddHeader", "externalName": "addHeader" },
+        { "name": "AddString", "externalName": "addString" },
+        { "name": "AddFile", "externalName": "addFile" },
+        { "name": "SetCookie", "externalName": "setCookie" }
+      ]
+    },
+    {
+      "name": "HttpRequest",
+      "generatesClass": true,
+      "externalName": "HttpRequest",
+      "methods": [
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToFile", "externalName": "toFile" },
+        { "name": "GetHeader", "externalName": "getHeader" },
+        { "name": "GetVariable", "externalName": "getVariable" }
+      ]
+    },
+    {
+      "name": "StringCollection",
+      "generatesClass": true,
+      "externalName": "StringCollection",
+      "methods": [
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Add", "externalName": "add" },
+        { "name": "Item", "externalName": "item" }
+      ]
+    },
+    {
+      "name": "MailRecipient",
+      "generatesClass": true,
+      "externalName": "MailRecipient",
+      "methods": []
+    },
+    {
+      "name": "RecipientCollection",
+      "generatesClass": true,
+      "externalName": "RecipientCollection",
+      "methods": [
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "New", "externalName": "new" },
+        { "name": "Add", "externalName": "add" },
+        { "name": "Item", "externalName": "item" }
+      ]
+    },
+    {
+      "name": "SMTPSession",
+      "generatesClass": true,
+      "externalName": "SMTPSession",
+      "methods": [
+        { "name": "Login", "externalName": "login" },
+        { "name": "Logout", "externalName": "logout" },
+        { "name": "Send", "externalName": "send" }
+      ]
+    },
+    {
+      "name": "POP3Session",
+      "generatesClass": true,
+      "externalName": "POP3Session",
+      "methods": [
+        { "name": "Login", "externalName": "login" },
+        { "name": "Logout", "externalName": "logout" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "MarkAsRead", "externalName": "markAsRead" },
+        { "name": "Receive", "externalName": "receive" },
+        { "name": "GetNextUID", "externalName": "getNextUID" },
+        { "name": "Skip", "externalName": "skip" }
+      ]
+    },
+    {
+      "name": "OutlookSession",
+      "generatesClass": true,
+      "externalName": "OutlookSession",
+      "methods": [
+        { "name": "ChangeFolder", "externalName": "changeFolder" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "MarkAsRead", "externalName": "markAsRead" },
+        { "name": "Receive", "externalName": "receive" },
+        { "name": "Send", "externalName": "send" }
+      ]
+    },
+    {
+      "name": "MAPISession",
+      "generatesClass": true,
+      "externalName": "MAPISession",
+      "methods": [
+        { "name": "Login", "externalName": "login" },
+        { "name": "Logout", "externalName": "logout" },
+        { "name": "ChangeFolder", "externalName": "changeFolder" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "mapiMarkAsRead", "externalName": "mapiMarkAsRead" },
+        { "name": "Receive", "externalName": "receive" },
+        { "name": "Send", "externalName": "send" }
+      ]
+    },
+    {
+      "name": "WordDocument",
+      "generatesClass": true,
+      "externalName": "WordDocument",
+      "methods": [
+        { "name": "Open", "externalName": "open" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "Unbind", "externalName": "unbind" },
+        { "name": "Save", "externalName": "save" },
+        { "name": "SaveAs", "externalName": "saveAs" },
+        { "name": "Show", "externalName": "show" },
+        { "name": "Hide", "externalName": "hide" },
+        { "name": "Append", "externalName": "append" },
+        { "name": "Print", "externalName": "print" },
+        { "name": "Replace", "externalName": "replace" },
+        { "name": "SpellCheck", "externalName": "spellCheck" },
+        { "name": "RunMacro", "externalName": "runMacro" }
+      ]
+    },
+    {
+      "name": "ExcelDocument",
+      "generatesClass": true,
+      "externalName": "ExcelDocument",
+      "methods": [
+        { "name": "Open", "externalName": "open" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "Unbind", "externalName": "unbind" },
+        { "name": "Save", "externalName": "save" },
+        { "name": "Show", "externalName": "show" },
+        { "name": "Hide", "externalName": "hide" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Print", "externalName": "print" },
+        { "name": "SelectSheet", "externalName": "selectSheet" },
+        { "name": "RenameSheet", "externalName": "renameSheet" },
+        { "name": "RunMacro", "externalName": "runMacro" },
+        { "name": "Cells", "externalName": "cells" }
+      ]
+    },
+    {
+      "name": "WebSession",
+      "generatesClass": true,
+      "externalName": "WebSession",
+      "methods": [
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Destroy", "externalName": "destroy" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "Set", "externalName": "set" }
+      ]
+    },
+    {
+      "name": "WebWrapper",
+      "generatesClass": true,
+      "externalName": "WebWrapper",
+      "methods": [{ "name": "GetResponse", "externalName": "getResponse" }]
+    },
+    {
+      "name": "Variant",
+      "generatesClass": false,
+      "externalName": "Variant",
+      "methods": []
+    },
+    {
+      "name": "ExcelCells",
+      "generatesClass": true,
+      "externalName": "ExcelCells",
+      "methods": []
+    },
+    {
+      "name": "DBConnection",
+      "generatesClass": true,
+      "externalName": "DBConnection",
+      "methods": [
+        { "name": "Connect", "externalName": "connect" },
+        { "name": "Disconnect", "externalName": "disconnect" }
+      ]
+    },
+    {
+      "name": "Location",
+      "generatesClass": true,
+      "externalName": "Location",
+      "methods": []
+    },
+    {
+      "name": "WApiCalendar",
+      "generatesClass": true,
+      "externalName": "WApiCalendar",
+      "methods": [
+        { "name": "isHoliday", "externalName": "isHoliday" },
+        { "name": "isWeekend", "externalName": "isWeekend" },
+        { "name": "isWorkday", "externalName": "isWorkday" },
+        {
+          "name": "FirstWorkdayInMonth",
+          "externalName": "firstWorkdayInMonth"
+        },
+        { "name": "LastWorkdayInMonth", "externalName": "lastWorkdayInMonth" },
+        { "name": "NextWorkday", "externalName": "nextWorkday" },
+        { "name": "Workday", "externalName": "workday" },
+        { "name": "Worktime", "externalName": "worktime" },
+        { "name": "WorkdayDuration", "externalName": "workdayDuration" },
+        {
+          "name": "WorkdaysBetweenDates",
+          "externalName": "workdaysBetweenDates"
+        }
+      ]
+    },
+    {
+      "name": "RegExMatch",
+      "generatesClass": true,
+      "externalName": "RegExMatch",
+      "methods": []
+    },
+    {
+      "name": "RegExMatchCollection",
+      "generatesClass": false,
+      "externalName": "RegExMatchCollection",
+      "methods": []
+    },
+    {
+      "name": "ContentInfo",
+      "generatesClass": true,
+      "externalName": "ContentInfo",
+      "methods": []
+    },
+    {
+      "name": "Blob",
+      "generatesClass": false,
+      "externalName": "Blob",
+      "methods": []
+    },
+    {
+      "name": "SearchResult",
+      "generatesClass": true,
+      "externalName": "SearchResult",
+      "methods": [{ "name": "Items", "externalName": "items" }]
+    },
+    {
+      "name": "SearchResultCollection",
+      "generatesClass": true,
+      "externalName": "SearchResultCollection",
+      "methods": [{ "name": "Item", "externalName": "item" }]
+    },
+    {
+      "name": "SearchResultItem",
+      "generatesClass": true,
+      "externalName": "SearchResultItem",
+      "methods": []
+    },
+    {
+      "name": "WApiEvent",
+      "generatesClass": true,
+      "externalName": "WApiEvent",
+      "methods": []
+    },
+    {
+      "name": "Collection",
+      "generatesClass": true,
+      "externalName": "Collection",
+      "methods": [
+        { "name": "Add", "externalName": "add" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Item", "externalName": "item" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "IndexOf", "externalName": "indexOf" },
+        { "name": "ToXml", "externalName": "toXml" },
+        { "name": "FromXml", "externalName": "fromXml" },
+        { "name": "FromXmlFile", "externalName": "fromXmlFile" },
+        { "name": "ToJson", "externalName": "toJson" },
+        { "name": "FromJson", "externalName": "fromJson" },
+        { "name": "FromJsonFile", "externalName": "fromJsonFile" },
+        { "name": "Clone", "externalName": "clone" },
+        { "name": "Sort", "externalName": "sort" }
+      ]
+    },
+    {
+      "name": "BusinessComponentCollection",
+      "generatesClass": true,
+      "externalName": "BusinessComponentCollection",
+      "methods": [
+        { "name": "GetByKey", "externalName": "getByKey" },
+        { "name": "RemoveByKey", "externalName": "removeByKey" },
+        { "name": "Update", "externalName": "update" },
+        { "name": "Insert", "externalName": "insert" },
+        { "name": "InsertOrUpdate", "externalName": "insertOrUpdate" },
+        { "name": "Delete", "externalName": "delete" }
+      ]
+    },
+    {
+      "name": "BusinessComponentLinesCollection",
+      "generatesClass": true,
+      "externalName": "BusinessComponentLinesCollection",
+      "methods": [
+        { "name": "GetByKey", "externalName": "getByKey" },
+        { "name": "RemoveByKey", "externalName": "removeByKey" }
+      ]
+    },
+    {
+      "name": "GUID",
+      "generatesClass": true,
+      "externalName": "GUID",
+      "methods": [
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "Empty", "externalName": "empty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "NewGuid", "externalName": "newGuid" },
+        { "name": "IsMatch", "externalName": "isMatch" }
+      ]
+    },
+    {
+      "name": "Meta_collection",
+      "generatesClass": true,
+      "externalName": "Metacollection",
+      "methods": [
+        { "name": "AddItem", "externalName": "addItem" },
+        { "name": "RemoveItem", "externalName": "removeItem" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Value", "externalName": "value" },
+        { "name": "Text", "externalName": "text" }
+      ]
+    },
+    {
+      "name": "HTMLBODY",
+      "generatesClass": true,
+      "externalName": "HTMLBODY",
+      "methods": []
+    },
+    {
+      "name": "WApiStateChangeEvent",
+      "generatesClass": true,
+      "externalName": "WApiStateChangeEvent",
+      "methods": []
+    },
+    {
+      "name": "WApiDataChangeEvent",
+      "generatesClass": true,
+      "externalName": "WApiDataChangeEvent",
+      "methods": []
+    },
+    {
+      "name": "WApiServer",
+      "generatesClass": true,
+      "externalName": "WApiServer",
+      "methods": [
+        { "name": "Connect", "externalName": "connect" },
+        { "name": "Disconnect", "externalName": "disconnect" },
+        {
+          "name": "ListProcessDefinitions",
+          "externalName": "listProcessDefinitions"
+        },
+        { "name": "ListActivities", "externalName": "listActivities" },
+        {
+          "name": "ListProcessInstances",
+          "externalName": "listProcessInstances"
+        },
+        { "name": "ListWorkitems", "externalName": "listWorkitems" },
+        {
+          "name": "GetProcessDefinitionById",
+          "externalName": "getProcessDefinitionById"
+        },
+        { "name": "GetActivityById", "externalName": "getActivityById" },
+        {
+          "name": "GetProcessInstanceById",
+          "externalName": "getProcessInstanceById"
+        },
+        { "name": "GetWorkitemById", "externalName": "getWorkitemById" },
+        {
+          "name": "GetProcessDefinitionByName",
+          "externalName": "getProcessDefinitionByName"
+        },
+        { "name": "GetActivityByName", "externalName": "getActivityByName" },
+        {
+          "name": "GetProcessInstanceBySubject",
+          "externalName": "getProcessInstanceBySubject"
+        },
+        {
+          "name": "GetOrganizationalModel",
+          "externalName": "getOrganizationalModel"
+        },
+        { "name": "GetEventRepository", "externalName": "getEventRepository" },
+        {
+          "name": "GetDocumentRepository",
+          "externalName": "getDocumentRepository"
+        },
+        {
+          "name": "ListProcessDefinitionsOrderBy",
+          "externalName": "listProcessDefinitionsOrderBy"
+        },
+        {
+          "name": "ListActivitiesOrderBy",
+          "externalName": "listActivitiesOrderBy"
+        },
+        {
+          "name": "ListProcessInstancesOrderBy",
+          "externalName": "listProcessInstancesOrderBy"
+        },
+        {
+          "name": "ListWorkitemsOrderBy",
+          "externalName": "listWorkitemsOrderBy"
+        },
+        { "name": "ListCalendars", "externalName": "listCalendars" }
+      ]
+    },
+    {
+      "name": "WApiFilter",
+      "generatesClass": true,
+      "externalName": "WApiFilter",
+      "methods": [{ "name": "Clear", "externalName": "clear" }]
+    },
+    {
+      "name": "WApiError",
+      "generatesClass": true,
+      "externalName": "WApiError",
+      "methods": []
+    },
+    {
+      "name": "WApiProcessDefinition",
+      "generatesClass": true,
+      "externalName": "WApiProcessDefinition",
+      "methods": [
+        { "name": "CreateInstance", "externalName": "createInstance" },
+        { "name": "GetActivityById", "externalName": "getActivityById" },
+        { "name": "GetActivityByName", "externalName": "getActivityByName" },
+        { "name": "ChangeState", "externalName": "changeState" },
+        { "name": "Enable", "externalName": "enable" },
+        { "name": "Disable", "externalName": "disable" }
+      ]
+    },
+    {
+      "name": "WApiActivity",
+      "generatesClass": true,
+      "externalName": "WApiActivity",
+      "methods": []
+    },
+    {
+      "name": "WApiWorkitem",
+      "generatesClass": true,
+      "externalName": "WApiWorkitem",
+      "methods": [
+        { "name": "Complete", "externalName": "complete" },
+        { "name": "Assign", "externalName": "assign" },
+        { "name": "Reassign", "externalName": "reassign" },
+        { "name": "ChangeState", "externalName": "changeState" },
+        {
+          "name": "SelectSuccessiveOptionalActivity",
+          "externalName": "selectSuccessiveOptionalActivity"
+        },
+        {
+          "name": "PostConditionFailed",
+          "externalName": "postConditionFailed"
+        },
+        { "name": "Delegate", "externalName": "delegate" },
+        { "name": "DelegateToRole", "externalName": "delegateToRole" },
+        { "name": "Skip", "externalName": "skip" },
+        { "name": "Undo", "externalName": "undo" }
+      ]
+    },
+    {
+      "name": "WApiProcessInstance",
+      "generatesClass": true,
+      "externalName": "WApiProcessInstance",
+      "methods": [
+        { "name": "Start", "externalName": "start" },
+        { "name": "StartFrom", "externalName": "startFrom" },
+        { "name": "Suspend", "externalName": "suspend" },
+        { "name": "Reactivate", "externalName": "reactivate" },
+        { "name": "Resume", "externalName": "resume" },
+        { "name": "Abort", "externalName": "abort" },
+        { "name": "ChangeState", "externalName": "changeState" },
+        { "name": "AddRestriction", "externalName": "addRestriction" },
+        { "name": "RemoveRestriction", "externalName": "removeRestriction" },
+        {
+          "name": "GetApplicationDataByName",
+          "externalName": "getApplicationDataByName"
+        },
+        { "name": "PreassignWorkitem", "externalName": "preassignWorkitem" },
+        {
+          "name": "GetWorkitemByActivity",
+          "externalName": "getWorkitemByActivity"
+        },
+        { "name": "CreateWorkitem", "externalName": "createWorkitem" }
+      ]
+    },
+    {
+      "name": "WApiCollection",
+      "generatesClass": true,
+      "externalName": "WApiCollection",
+      "methods": [
+        { "name": "Item", "externalName": "item" },
+        { "name": "ProcessDefinition", "externalName": "processDefinition" },
+        { "name": "Activity", "externalName": "activity" },
+        { "name": "Workitem", "externalName": "workitem" },
+        { "name": "ProcessInstance", "externalName": "processInstance" },
+        { "name": "User", "externalName": "user" },
+        { "name": "Role", "externalName": "role" },
+        { "name": "State", "externalName": "state" },
+        { "name": "Restriction", "externalName": "restriction" },
+        {
+          "name": "RestrictionDefinition",
+          "externalName": "restrictionDefinition"
+        },
+        { "name": "Value", "externalName": "value" },
+        { "name": "ApplicationData", "externalName": "applicationData" },
+        {
+          "name": "FindProcessDefinition",
+          "externalName": "findProcessDefinition"
+        },
+        {
+          "name": "FindProcessInstance",
+          "externalName": "findProcessInstance"
+        },
+        { "name": "FindWorkitem", "externalName": "findWorkitem" },
+        { "name": "FindActivity", "externalName": "findActivity" },
+        { "name": "FindUser", "externalName": "findUser" },
+        { "name": "FindRole", "externalName": "findRole" },
+        {
+          "name": "FindApplicationData",
+          "externalName": "findApplicationData"
+        },
+        { "name": "FindRestriction", "externalName": "findRestriction" },
+        { "name": "Event", "externalName": "event" },
+        { "name": "DocumentDefinition", "externalName": "documentDefinition" },
+        { "name": "DocumentInstance", "externalName": "documentInstance" },
+        { "name": "Attribute", "externalName": "attribute" },
+        { "name": "Calendar", "externalName": "calendar" }
+      ]
+    },
+    {
+      "name": "WApiApplicationData",
+      "generatesClass": true,
+      "externalName": "WApiApplicationData",
+      "methods": [
+        { "name": "Add", "externalName": "add" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "SetValue", "externalName": "setValue" },
+        { "name": "valueAtIndex", "externalName": "valueAtIndex" }
+      ]
+    },
+    {
+      "name": "WApiWebApplication",
+      "generatesClass": true,
+      "externalName": "WApiWebApplication",
+      "methods": [
+        { "name": "Close", "externalName": "close" },
+        { "name": "CheckRights", "externalName": "checkRights" },
+        { "name": "CloseAndComplete", "externalName": "closeAndComplete" },
+        { "name": "SignIn", "externalName": "signIn" },
+        { "name": "Download", "externalName": "download" },
+        { "name": "DownloadDocument", "externalName": "downloadDocument" },
+        { "name": "GetDocumentURL", "externalName": "getDocumentURL" },
+        { "name": "CompleteAndContinue", "externalName": "completeAndContinue" }
+      ]
+    },
+    {
+      "name": "WApiUser",
+      "generatesClass": true,
+      "externalName": "WApiUser",
+      "methods": [
+        { "name": "GetWorklist", "externalName": "getWorklist" },
+        {
+          "name": "GetRoleRestrictions",
+          "externalName": "getRoleRestrictions"
+        },
+        { "name": "AddRole", "externalName": "addRole" },
+        { "name": "RemoveRole", "externalName": "removeRole" },
+        { "name": "AddRestriction", "externalName": "addRestriction" },
+        { "name": "RemoveRestriction", "externalName": "removeRestriction" },
+        { "name": "RebuildWorklist", "externalName": "rebuildWorklist" },
+        { "name": "Block", "externalName": "block" },
+        { "name": "Unblock", "externalName": "unblock" },
+        { "name": "GetWorklistOrderBy", "externalName": "getWorklistOrderBy" },
+        {
+          "name": "ListCreatableProcessDefinitions",
+          "externalName": "listCreatableProcessDefinitions"
+        },
+        {
+          "name": "ListCreatableProcessDefinitionsOrderBy",
+          "externalName": "listCreatableProcessDefinitionsOrderBy"
+        },
+        { "name": "ResetPassword", "externalName": "resetPassword" },
+        { "name": "ChangePassword", "externalName": "changePassword" }
+      ]
+    },
+    {
+      "name": "WApiRole",
+      "generatesClass": true,
+      "externalName": "WApiRole",
+      "methods": [
+        { "name": "AddChild", "externalName": "addChild" },
+        { "name": "RemoveChild", "externalName": "removeChild" },
+        { "name": "AddUser", "externalName": "addUser" },
+        { "name": "RemoveUser", "externalName": "removeUser" }
+      ]
+    },
+    {
+      "name": "WApiOrganizationalModel",
+      "generatesClass": true,
+      "externalName": "WApiOrganizationalModel",
+      "methods": [
+        { "name": "ListUsers", "externalName": "listUsers" },
+        { "name": "ListRoles", "externalName": "listRoles" },
+        {
+          "name": "ListRestrictionDefinitions",
+          "externalName": "listRestrictionDefinitions"
+        },
+        { "name": "ListRestrictions", "externalName": "listRestrictions" },
+        { "name": "GetUserById", "externalName": "getUserById" },
+        { "name": "GetRoleById", "externalName": "getRoleById" },
+        { "name": "GetUserByName", "externalName": "getUserByName" },
+        { "name": "GetRoleByName", "externalName": "getRoleByName" },
+        {
+          "name": "GetRestrictionDefinitionByName",
+          "externalName": "getRestrictionDefinitionByName"
+        },
+        { "name": "AddUser", "externalName": "addUser" },
+        { "name": "AddRole", "externalName": "addRole" },
+        {
+          "name": "AddRestrictionDefinition",
+          "externalName": "addRestrictionDefinition"
+        },
+        { "name": "ListUsersOrderBy", "externalName": "listUsersOrderBy" },
+        { "name": "ListRolesOrderBy", "externalName": "listRolesOrderBy" },
+        {
+          "name": "ListRestrictionDefinitionsOrderBy",
+          "externalName": "listRestrictionDefinitionsOrderBy"
+        },
+        {
+          "name": "ListRestrictionsOrderBy",
+          "externalName": "listRestrictionsOrderBy"
+        }
+      ]
+    },
+    {
+      "name": "WApiRestriction",
+      "generatesClass": true,
+      "externalName": "WApiRestriction",
+      "methods": []
+    },
+    {
+      "name": "WApiRestrictionDefinition",
+      "generatesClass": true,
+      "externalName": "WApiRestrictionDefinition",
+      "methods": [
+        { "name": "AddValue", "externalName": "addValue" },
+        { "name": "RemoveValue", "externalName": "removeValue" }
+      ]
+    },
+    {
+      "name": "File",
+      "generatesClass": true,
+      "externalName": "File",
+      "methods": [
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "Exists", "externalName": "exists" },
+        { "name": "Rename", "externalName": "rename" },
+        { "name": "Copy", "externalName": "copy" },
+        { "name": "GetName", "externalName": "getName" },
+        { "name": "GetAbsoluteName", "externalName": "getAbsoluteName" },
+        { "name": "GetURI", "externalName": "getURI" },
+        { "name": "GetLength", "externalName": "getLength" },
+        { "name": "GetLastModified", "externalName": "getLastModified" },
+        { "name": "GetPath", "externalName": "getPath" },
+        { "name": "Open", "externalName": "open" },
+        { "name": "OpenWrite", "externalName": "openWrite" },
+        { "name": "OpenRead", "externalName": "openRead" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "ReadLine", "externalName": "readLine" },
+        { "name": "ReadAllText", "externalName": "readAllText" },
+        { "name": "ReadAllLines", "externalName": "readAllLines" },
+        { "name": "WriteLine", "externalName": "writeLine" },
+        { "name": "WriteAllText", "externalName": "writeAllText" },
+        { "name": "WriteAllLines", "externalName": "writeAllLines" },
+        { "name": "AppendAllText", "externalName": "appendAllText" },
+        { "name": "AppendAllLines", "externalName": "appendAllLines" },
+        { "name": "Create", "externalName": "create" },
+        { "name": "XSLTApply", "externalName": "xSLTApply" },
+        { "name": "HTMLClean", "externalName": "hTMLClean" },
+        { "name": "FromBase64String", "externalName": "fromBase64String" }
+      ]
+    },
+    {
+      "name": "FileCollection",
+      "generatesClass": true,
+      "externalName": "FileCollection",
+      "methods": [{ "name": "Item", "externalName": "item" }]
+    },
+    {
+      "name": "Directory",
+      "generatesClass": true,
+      "externalName": "Directory",
+      "methods": [
+        { "name": "Create", "externalName": "create" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "Exists", "externalName": "exists" },
+        { "name": "Rename", "externalName": "rename" },
+        { "name": "GetName", "externalName": "getName" },
+        { "name": "GetAbsoluteName", "externalName": "getAbsoluteName" },
+        { "name": "GetFiles", "externalName": "getFiles" },
+        { "name": "GetDirectories", "externalName": "getDirectories" }
+      ]
+    },
+    {
+      "name": "DirectoryCollection",
+      "generatesClass": true,
+      "externalName": "DirectoryCollection",
+      "methods": [{ "name": "Item", "externalName": "item" }]
+    },
+    {
+      "name": "LDAPClient",
+      "generatesClass": true,
+      "externalName": "LDAPClient",
+      "methods": [
+        { "name": "Connect", "externalName": "connect" },
+        { "name": "Disconnect", "externalName": "disconnect" },
+        { "name": "GetAttribute", "externalName": "getAttribute" }
+      ]
+    },
+    {
+      "name": "Properties",
+      "generatesClass": true,
+      "externalName": "Properties",
+      "methods": [
+        { "name": "Set", "externalName": "set" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "ToJson", "externalName": "toJson" },
+        { "name": "FromJson", "externalName": "fromJson" }
+      ]
+    },
+    {
+      "name": "QueueMessage",
+      "generatesClass": true,
+      "externalName": "QueueMessage",
+      "methods": []
+    },
+    {
+      "name": "Queue",
+      "generatesClass": true,
+      "externalName": "Queue",
+      "methods": [
+        { "name": "Connect", "externalName": "connect" },
+        { "name": "Disconnect", "externalName": "disconnect" },
+        { "name": "Send", "externalName": "send" },
+        { "name": "Commit", "externalName": "commit" },
+        { "name": "Rollback", "externalName": "rollback" },
+        { "name": "Receive", "externalName": "receive" }
+      ]
+    },
+    {
+      "name": "WApiAssignmentChangeEvent",
+      "generatesClass": true,
+      "externalName": "WApiAssignmentChangeEvent",
+      "methods": []
+    },
+    {
+      "name": "WApiPriorityChangeEvent",
+      "generatesClass": true,
+      "externalName": "WApiPriorityChangeEvent",
+      "methods": []
+    },
+    {
+      "name": "WApiEventRepository",
+      "generatesClass": true,
+      "externalName": "WApiEventRepository",
+      "methods": [
+        { "name": "ListEvents", "externalName": "listEvents" },
+        { "name": "ListEventsOrderBy", "externalName": "listEventsOrderBy" }
+      ]
+    },
+    {
+      "name": "WApiObject",
+      "generatesClass": true,
+      "externalName": "WApiObject",
+      "methods": []
+    },
+    {
+      "name": "WApiAttribute",
+      "generatesClass": true,
+      "externalName": "WApiAttribute",
+      "methods": []
+    },
+    {
+      "name": "WApiDocumentRepository",
+      "generatesClass": true,
+      "externalName": "WApiDocumentRepository",
+      "methods": [
+        {
+          "name": "ListDocumentDefinitions",
+          "externalName": "listDocumentDefinitions"
+        },
+        {
+          "name": "ListDocumentInstances",
+          "externalName": "listDocumentInstances"
+        },
+        {
+          "name": "ListDocumentDefinitionsOrderBy",
+          "externalName": "listDocumentDefinitionsOrderBy"
+        },
+        {
+          "name": "ListDocumentInstancesOrderBy",
+          "externalName": "listDocumentInstancesOrderBy"
+        },
+        {
+          "name": "GetDocumentDefinitionById",
+          "externalName": "getDocumentDefinitionById"
+        },
+        {
+          "name": "GetDocumentDefinitionByName",
+          "externalName": "getDocumentDefinitionByName"
+        },
+        {
+          "name": "GetDocumentInstanceById",
+          "externalName": "getDocumentInstanceById"
+        }
+      ]
+    },
+    {
+      "name": "WApiDocumentDefinition",
+      "generatesClass": true,
+      "externalName": "WApiDocumentDefinition",
+      "methods": [
+        { "name": "CreateInstance", "externalName": "createInstance" },
+        {
+          "name": "CreateInstanceFromFile",
+          "externalName": "createInstanceFromFile"
+        }
+      ]
+    },
+    {
+      "name": "WApiDocumentInstance",
+      "generatesClass": true,
+      "externalName": "WApiDocumentInstance",
+      "methods": [
+        { "name": "Read", "externalName": "read" },
+        { "name": "CheckIn", "externalName": "checkIn" },
+        { "name": "CheckOut", "externalName": "checkOut" },
+        { "name": "UndoCheckOut", "externalName": "undoCheckOut" }
+      ]
+    },
+    {
+      "name": "WApiActionPerformedEvent",
+      "generatesClass": true,
+      "externalName": "WApiActionPerformedEvent",
+      "methods": []
+    },
+    {
+      "name": "Property",
+      "generatesClass": true,
+      "externalName": "Property",
+      "methods": []
+    },
+    {
+      "name": "Expression",
+      "generatesClass": true,
+      "externalName": "Expression",
+      "methods": [{ "name": "Evaluate", "externalName": "evaluate" }]
+    },
+    {
+      "name": "RegEx",
+      "generatesClass": false,
+      "externalName": "RegEx",
+      "methods": [
+        { "name": "GetLastErrCode", "externalName": "getLastErrCode" },
+        {
+          "name": "GetLastErrDescription",
+          "externalName": "getLastErrDescription"
+        }
+      ]
+    },
+    {
+      "name": "TextSearch",
+      "generatesClass": false,
+      "externalName": "TextSearch",
+      "methods": [
+        { "name": "textSearchfind", "externalName": "textSearchfind" },
+        { "name": "textSearchadd", "externalName": "textSearchadd" },
+        { "name": "textSearchupdate", "externalName": "textSearchupdate" },
+        { "name": "textSearchdelete", "externalName": "textSearchdelete" },
+        { "name": "BuildDictionary", "externalName": "buildDictionary" },
+        { "name": "CheckSpell", "externalName": "checkSpell" },
+        { "name": "ReindexAll", "externalName": "reindexAll" },
+        { "name": "HTMLPreview", "externalName": "hTMLPreview" }
+      ]
+    },
+    {
+      "name": "Window",
+      "generatesClass": true,
+      "externalName": "Window",
+      "methods": [{ "name": "Open", "externalName": "open" }]
+    },
+    {
+      "name": "Video",
+      "generatesClass": true,
+      "externalName": "Video",
+      "methods": [
+        { "name": "FromURL", "externalName": "fromURL" },
+        { "name": "IsEmpty", "externalName": "isEmpty" }
+      ]
+    },
+    {
+      "name": "Audio",
+      "generatesClass": true,
+      "externalName": "Audio",
+      "methods": [
+        { "name": "FromURL", "externalName": "fromURL" },
+        { "name": "IsEmpty", "externalName": "isEmpty" }
+      ]
+    },
+    {
+      "name": "BinaryFile",
+      "generatesClass": true,
+      "externalName": "BinaryFile",
+      "methods": [
+        { "name": "FromURL", "externalName": "fromURL" },
+        { "name": "IsEmpty", "externalName": "isEmpty" }
+      ]
+    },
+    {
+      "name": "Cookie",
+      "generatesClass": true,
+      "externalName": "Cookie",
+      "methods": []
+    },
+    {
+      "name": "CallOptions",
+      "generatesClass": true,
+      "externalName": "CallOptions",
+      "methods": []
+    },
+    {
+      "name": "CryptoCertificate",
+      "generatesClass": true,
+      "externalName": "CryptoCertificate",
+      "methods": [
+        { "name": "Load", "externalName": "load" },
+        { "name": "FromBase64", "externalName": "fromBase64" },
+        { "name": "ToBase64", "externalName": "toBase64" },
+        { "name": "HasPrivateKey", "externalName": "hasPrivateKey" },
+        { "name": "Verify", "externalName": "verify" }
+      ]
+    },
+    {
+      "name": "CryptoHash",
+      "generatesClass": true,
+      "externalName": "CryptoHash",
+      "methods": [{ "name": "Compute", "externalName": "compute" }]
+    },
+    {
+      "name": "CryptoSymmetricEncrypt",
+      "generatesClass": true,
+      "externalName": "CryptoSymmetricEncrypt",
+      "methods": [
+        { "name": "Encrypt", "externalName": "encrypt" },
+        { "name": "Decrypt", "externalName": "decrypt" }
+      ]
+    },
+    {
+      "name": "CryptoAsymmetricEncrypt",
+      "generatesClass": true,
+      "externalName": "CryptoAsymmetricEncrypt",
+      "methods": [
+        { "name": "Encrypt", "externalName": "encrypt" },
+        { "name": "Decrypt", "externalName": "decrypt" }
+      ]
+    },
+    {
+      "name": "CryptoSign",
+      "generatesClass": true,
+      "externalName": "CryptoSign",
+      "methods": [
+        { "name": "Sign", "externalName": "sign" },
+        { "name": "Verify", "externalName": "verify" }
+      ]
+    },
+    {
+      "name": "CryptoSignXml",
+      "generatesClass": true,
+      "externalName": "CryptoSignXml",
+      "methods": [
+        { "name": "AddReference", "externalName": "addReference" },
+        { "name": "Sign", "externalName": "sign" },
+        { "name": "SignElements", "externalName": "signElements" },
+        { "name": "Verify", "externalName": "verify" }
+      ]
+    },
+    {
+      "name": "Geography",
+      "generatesClass": true,
+      "externalName": "Geography",
+      "methods": [
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToGeoJson", "externalName": "toGeoJson" },
+        { "name": "ToWkt", "externalName": "toWkt" },
+        { "name": "ToGeoPoint", "externalName": "toGeoPoint" },
+        { "name": "ToGeoLine", "externalName": "toGeoLine" },
+        { "name": "ToGeoPolygon", "externalName": "toGeoPolygon" },
+        { "name": "Distance", "externalName": "distance" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "IsNullOrEmpty", "externalName": "isNullOrEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "Distance", "externalName": "distance" },
+        { "name": "Intersect", "externalName": "intersect" }
+      ]
+    },
+    {
+      "name": "GeoPoint",
+      "generatesClass": true,
+      "externalName": "GeoPoint",
+      "methods": [
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "ToGeography", "externalName": "toGeography" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToGeoJson", "externalName": "toGeoJson" },
+        { "name": "ToWKT", "externalName": "toWKT" },
+        { "name": "Distance", "externalName": "distance" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "IsNullOrEmpty", "externalName": "isNullOrEmpty" },
+        { "name": "New", "externalName": "new" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "Distance", "externalName": "distance" }
+      ]
+    },
+    {
+      "name": "GeoLine",
+      "generatesClass": true,
+      "externalName": "GeoLine",
+      "methods": [
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "ToGeography", "externalName": "toGeography" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToGeoJson", "externalName": "toGeoJson" },
+        { "name": "ToWkt", "externalName": "toWkt" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "IsNullOrEmpty", "externalName": "isNullOrEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "Intersect", "externalName": "intersect" }
+      ]
+    },
+    {
+      "name": "GeoPolygon",
+      "generatesClass": true,
+      "externalName": "GeoPolygon",
+      "methods": [
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "ToGeography", "externalName": "toGeography" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToGeoJson", "externalName": "toGeoJson" },
+        { "name": "ToWkt", "externalName": "toWkt" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "Area", "externalName": "area" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "IsNullOrEmpty", "externalName": "isNullOrEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "Area", "externalName": "area" }
+      ]
+    },
+    {
+      "name": "WSAddressing",
+      "generatesClass": true,
+      "externalName": "WSAddressing",
+      "methods": []
+    },
+    {
+      "name": "WSAddressingEndPoint",
+      "generatesClass": true,
+      "externalName": "WSAddressingEndPoint",
+      "methods": []
+    },
+    {
+      "name": "Cache",
+      "generatesClass": true,
+      "externalName": "Cache",
+      "methods": [
+        { "name": "GetCache", "externalName": "getCache" },
+        { "name": "ClearAllCaches", "externalName": "clearAllCaches" },
+        { "name": "Set", "externalName": "set" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Contains", "externalName": "contains" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "Clear", "externalName": "clear" }
+      ]
+    },
+    {
+      "name": "StorageProvider",
+      "generatesClass": true,
+      "externalName": "StorageProvider",
+      "methods": [
+        { "name": "GetPrivate", "externalName": "getPrivate" },
+        { "name": "UploadPrivate", "externalName": "uploadPrivate" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Upload", "externalName": "upload" },
+        { "name": "Download", "externalName": "download" },
+        { "name": "DownloadPrivate", "externalName": "downloadPrivate" },
+        { "name": "GetDirectory", "externalName": "getDirectory" }
+      ]
+    },
+    {
+      "name": "Synchronization",
+      "generatesClass": false,
+      "externalName": "Synchronization",
+      "methods": [
+        { "name": "Receive", "externalName": "receive" },
+        { "name": "ServerStatus", "externalName": "serverStatus" },
+        { "name": "Send", "externalName": "send" },
+        {
+          "name": "ResetOfflineDatabase",
+          "externalName": "resetOfflineDatabase"
+        },
+        { "name": "SetSendCheckpoint", "externalName": "setSendCheckpoint" }
+      ]
+    },
+    {
+      "name": "ArrayPEM",
+      "generatesClass": false,
+      "externalName": "ArrayPEM",
+      "methods": []
+    },
+    {
+      "name": "VariablePEM",
+      "generatesClass": true,
+      "externalName": "VariablePEM",
+      "methods": [
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "ToFormattedString", "externalName": "toFormattedString" }
+      ]
+    },
+    {
+      "name": "DomainPEM",
+      "generatesClass": true,
+      "externalName": "DomainPEM",
+      "methods": [
+        { "name": "Convert", "externalName": "convert" },
+        { "name": "Elements", "externalName": "elements" },
+        {
+          "name": "EnumerationDescription",
+          "externalName": "enumerationDescription"
+        },
+        { "name": "EnumerationImage", "externalName": "enumerationImage" }
+      ]
+    },
+    {
+      "name": "GXProgramMetadata",
+      "generatesClass": true,
+      "externalName": "GXProgramMetadata",
+      "methods": [{ "name": "Link", "externalName": "link" }]
+    },
+    {
+      "name": "SDObject",
+      "generatesClass": true,
+      "externalName": "SDObject",
+      "methods": [
+        { "name": "Call", "externalName": "call" },
+        { "name": "Create", "externalName": "create" },
+        { "name": "Link", "externalName": "link" }
+      ]
+    },
+    {
+      "name": "GXProgram",
+      "generatesClass": true,
+      "externalName": "GXProgram",
+      "methods": [
+        { "name": "Call", "externalName": "call" },
+        { "name": "Create", "externalName": "create" },
+        { "name": "Link", "externalName": "link" },
+        { "name": "Popup", "externalName": "popup" },
+        { "name": "Submit", "externalName": "submit" },
+        { "name": "Udp", "externalName": "udp" },
+        { "name": "Udf", "externalName": "udf" }
+      ]
+    },
+    {
+      "name": "GXDataSelector",
+      "generatesClass": true,
+      "externalName": "GXDataSelector",
+      "methods": [{ "name": "Call", "externalName": "call" }]
+    },
+    {
+      "name": "ImagePEMs",
+      "generatesClass": true,
+      "externalName": "ImagePEMs",
+      "methods": [{ "name": "Link", "externalName": "link" }]
+    },
+    {
+      "name": "OutputGroup",
+      "generatesClass": true,
+      "externalName": "OutputGroup",
+      "methods": [{ "name": "Insert", "externalName": "insert" }]
+    },
+    {
+      "name": "BusinessComponentLevel",
+      "generatesClass": false,
+      "externalName": "BusinessComponentLevel",
+      "methods": []
+    },
+    {
+      "name": "BusinessComponent",
+      "generatesClass": true,
+      "externalName": "BusinessComponent",
+      "methods": [
+        { "name": "Check", "externalName": "check" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "Load", "externalName": "load" },
+        { "name": "Mode", "externalName": "mode" },
+        { "name": "Save", "externalName": "save" },
+        { "name": "ToXml", "externalName": "toXml" },
+        { "name": "FromXml", "externalName": "fromXml" },
+        { "name": "FromXmlFile", "externalName": "fromXmlFile" },
+        { "name": "ToJson", "externalName": "toJson" },
+        { "name": "FromJson", "externalName": "fromJson" },
+        { "name": "FromJsonFile", "externalName": "fromJsonFile" },
+        { "name": "Update", "externalName": "update" },
+        { "name": "Insert", "externalName": "insert" },
+        { "name": "InsertOrUpdate", "externalName": "insertOrUpdate" },
+        { "name": "Success", "externalName": "success" },
+        { "name": "Fail", "externalName": "fail" },
+        { "name": "GetMessages", "externalName": "getMessages" },
+        { "name": "Clone", "externalName": "clone" },
+        { "name": "CreateBC", "externalName": "createBC" },
+        { "name": "CreateCollection", "externalName": "createCollection" },
+        { "name": "GetValue", "externalName": "getValue" },
+        { "name": "SetValue", "externalName": "setValue" },
+        { "name": "GetMetadata", "externalName": "getMetadata" }
+      ]
+    },
+    {
+      "name": "AttributePEM",
+      "generatesClass": true,
+      "externalName": "AttributePEM",
+      "methods": [
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "GetOldValue", "externalName": "getOldValue" },
+        { "name": "ToFormattedString", "externalName": "toFormattedString" }
+      ]
+    },
+    {
+      "name": "BasedOnEnumeratedDomain",
+      "generatesClass": true,
+      "externalName": "BasedOnEnumeratedDomain",
+      "methods": [
+        {
+          "name": "EnumerationDescription",
+          "externalName": "enumerationDescription"
+        },
+        { "name": "EnumerationImage", "externalName": "enumerationImage" }
+      ]
+    },
+    {
+      "name": "SDT",
+      "generatesClass": true,
+      "externalName": "SDT",
+      "methods": [
+        { "name": "ToXml", "externalName": "toXml" },
+        { "name": "FromXml", "externalName": "fromXml" },
+        { "name": "FromXmlFile", "externalName": "fromXmlFile" },
+        { "name": "Clone", "externalName": "clone" },
+        { "name": "ToJson", "externalName": "toJson" },
+        { "name": "FromJson", "externalName": "fromJson" },
+        { "name": "FromJsonFile", "externalName": "fromJsonFile" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" }
+      ]
+    },
+    {
+      "name": "SDTItem",
+      "generatesClass": true,
+      "externalName": "SDTItem",
+      "methods": [
+        { "name": "ToFormattedString", "externalName": "toFormattedString" }
+      ]
+    },
+    {
+      "name": "Iterator",
+      "generatesClass": true,
+      "externalName": "Iterator",
+      "methods": [
+        { "name": "First", "externalName": "first" },
+        { "name": "Next", "externalName": "next" },
+        { "name": "Eof", "externalName": "eof" }
+      ]
+    },
+    { "name": "", "generatesClass": false, "externalName": "", "methods": [] },
+    {
+      "name": "void",
+      "generatesClass": false,
+      "externalName": "Void",
+      "methods": []
+    },
+    {
+      "name": "GxImage",
+      "generatesClass": false,
+      "externalName": "GxImage",
+      "methods": []
+    },
+    {
+      "name": "Timezones",
+      "generatesClass": false,
+      "externalName": "Timezones",
+      "methods": []
+    },
+    {
+      "name": "short",
+      "generatesClass": false,
+      "externalName": "Short",
+      "methods": []
+    },
+    {
+      "name": "Object",
+      "generatesClass": false,
+      "externalName": "Object",
+      "methods": []
+    },
+    {
+      "name": "Messages",
+      "generatesClass": false,
+      "externalName": "Messages",
+      "methods": []
+    },
+    {
+      "name": "int",
+      "generatesClass": false,
+      "externalName": "Int",
+      "methods": []
+    },
+    {
+      "name": "GxControlFrame",
+      "generatesClass": false,
+      "externalName": "GxControlFrame",
+      "methods": []
+    },
+    {
+      "name": "CallEffect",
+      "generatesClass": false,
+      "externalName": "CallEffect",
+      "methods": []
+    },
+    {
+      "name": "CallType",
+      "generatesClass": false,
+      "externalName": "CallType",
+      "methods": []
+    },
+    {
+      "name": "TargetSize",
+      "generatesClass": false,
+      "externalName": "TargetSize",
+      "methods": []
+    },
+    {
+      "name": "DipOrPercentage",
+      "generatesClass": false,
+      "externalName": "DipOrPercentage",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.Common.UI.Progress",
+      "generatesClass": true,
+      "externalName": "GeneXusCommonUIProgress",
+      "methods": [
+        { "name": "Show", "externalName": "show" },
+        { "name": "ShowWithTitle", "externalName": "showWithTitle" },
+        {
+          "name": "ShowWithTitleAndDescription",
+          "externalName": "showWithTitleAndDescription"
+        },
+        { "name": "Hide", "externalName": "hide" }
+      ]
+    },
+    {
+      "name": "GeneXus.Common.UI.Navigation",
+      "generatesClass": false,
+      "externalName": "GeneXusCommonUINavigation",
+      "methods": [
+        { "name": "ShowTarget", "externalName": "showTarget" },
+        { "name": "HideTarget", "externalName": "hideTarget" },
+        { "name": "ExpandTarget", "externalName": "expandTarget" },
+        { "name": "CollapseTarget", "externalName": "collapseTarget" }
+      ]
+    },
+    {
+      "name": "GeneXus.Common.Configuration.ConfigurationManager",
+      "generatesClass": false,
+      "externalName": "GeneXusCommonConfigurationConfigurationManager",
+      "methods": [
+        { "name": "GetValue", "externalName": "getValue" },
+        { "name": "HasValue", "externalName": "hasValue" }
+      ]
+    },
+    {
+      "name": "GeneXus.Common.Clipboard",
+      "generatesClass": false,
+      "externalName": "GeneXusCommonClipboard",
+      "methods": [
+        { "name": "SetText", "externalName": "setText" },
+        { "name": "GetText", "externalName": "getText" }
+      ]
+    },
+    {
+      "name": "GeneXus.Common.Analytics",
+      "generatesClass": false,
+      "externalName": "GeneXusCommonAnalytics",
+      "methods": [
+        { "name": "TrackView", "externalName": "trackView" },
+        { "name": "TrackEvent", "externalName": "trackEvent" },
+        { "name": "TrackPurchase", "externalName": "trackPurchase" },
+        { "name": "setAnalyticsUserId", "externalName": "setAnalyticsUserId" }
+      ]
+    },
+    {
+      "name": "GeneXus.Common.Geolocation",
+      "generatesClass": true,
+      "externalName": "GeneXusCommonGeolocation",
+      "methods": [
+        { "name": "GetMyLocation", "externalName": "getMyLocation" },
+        { "name": "Authorized", "externalName": "authorized" },
+        { "name": "ServiceEnabled", "externalName": "serviceEnabled" },
+        { "name": "StartTracking", "externalName": "startTracking" },
+        { "name": "EndTracking", "externalName": "endTracking" },
+        { "name": "GetLocationHistory", "externalName": "getLocationHistory" },
+        {
+          "name": "ClearLocationHistory",
+          "externalName": "clearLocationHistory"
+        },
+        { "name": "GetLatitude", "externalName": "getLatitude" },
+        { "name": "GetLongitude", "externalName": "getLongitude" },
+        { "name": "GetDistance", "externalName": "getDistance" },
+        { "name": "GetAddress", "externalName": "getAddress" },
+        { "name": "GetLocation", "externalName": "getLocation" },
+        { "name": "SetProximityAlerts", "externalName": "setProximityAlerts" },
+        { "name": "GetProximityAlerts", "externalName": "getProximityAlerts" },
+        {
+          "name": "GetCurrentProximityAlert",
+          "externalName": "getCurrentProximityAlert"
+        },
+        {
+          "name": "ClearProximityAlerts",
+          "externalName": "clearProximityAlerts"
+        },
+        { "name": "PickLocation", "externalName": "pickLocation" }
+      ]
+    },
+    {
+      "name": "GeneXus.Common.Server",
+      "generatesClass": false,
+      "externalName": "GeneXusCommonServer",
+      "methods": [
+        { "name": "InvalidateCache", "externalName": "invalidateCache" }
+      ]
+    },
+    {
+      "name": "GeneXus.Common.Runtime",
+      "generatesClass": true,
+      "externalName": "GeneXusCommonRuntime",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.Common.Log",
+      "generatesClass": false,
+      "externalName": "GeneXusCommonLog",
+      "methods": [
+        { "name": "Write", "externalName": "write" },
+        { "name": "logError", "externalName": "logError" },
+        { "name": "Warning", "externalName": "warning" },
+        { "name": "Info", "externalName": "info" },
+        { "name": "Debug", "externalName": "debug" },
+        { "name": "Fatal", "externalName": "fatal" }
+      ]
+    },
+    {
+      "name": "GeneXus.Common.Maps",
+      "generatesClass": false,
+      "externalName": "GeneXusCommonMaps",
+      "methods": [
+        { "name": "CalculateDirections", "externalName": "calculateDirections" }
+      ]
+    },
+    {
+      "name": "GeneXus.Client.ClientInformation",
+      "generatesClass": true,
+      "externalName": "GeneXusClientClientInformation",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.Client.ClientStorage",
+      "generatesClass": false,
+      "externalName": "GeneXusClientClientStorage",
+      "methods": [
+        { "name": "setValue", "externalName": "setValue" },
+        { "name": "SecureSet", "externalName": "secureSet" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "Clear", "externalName": "clear" }
+      ]
+    },
+    {
+      "name": "GeneXus.Client.Socket",
+      "generatesClass": true,
+      "externalName": "GeneXusClientSocket",
+      "methods": [
+        { "name": "Open", "externalName": "open" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "Send", "externalName": "send" }
+      ]
+    },
+    {
+      "name": "GeneXus.Social.Facebook",
+      "generatesClass": true,
+      "externalName": "GeneXusSocialFacebook",
+      "methods": [
+        { "name": "PostToWall", "externalName": "postToWall" },
+        { "name": "ShareLink", "externalName": "shareLink" },
+        { "name": "ShareImage", "externalName": "shareImage" },
+        { "name": "ShareVideo", "externalName": "shareVideo" }
+      ]
+    },
+    {
+      "name": "GeneXus.Social.Twitter",
+      "generatesClass": false,
+      "externalName": "GeneXusSocialTwitter",
+      "methods": [
+        { "name": "Tweet", "externalName": "tweet" },
+        { "name": "Follow", "externalName": "follow" }
+      ]
+    },
+    {
+      "name": "GeneXus.Social.Share",
+      "generatesClass": false,
+      "externalName": "GeneXusSocialShare",
+      "methods": [
+        { "name": "ShareText", "externalName": "shareText" },
+        { "name": "ShareImage", "externalName": "shareImage" }
+      ]
+    },
+    {
+      "name": "GeneXus.Server.Socket",
+      "generatesClass": true,
+      "externalName": "GeneXusServerSocket",
+      "methods": [
+        { "name": "Notify", "externalName": "notify" },
+        { "name": "NotifyClient", "externalName": "notifyClient" },
+        { "name": "Broadcast", "externalName": "broadcast" },
+        { "name": "NotifyClientText", "externalName": "notifyClientText" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Synchronization.SynchronizationEvents",
+      "generatesClass": false,
+      "externalName": "GeneXusSDSynchronizationSynchronizationEvents",
+      "methods": [
+        { "name": "HasEvents", "externalName": "hasEvents" },
+        { "name": "GetEvents", "externalName": "getEvents" },
+        { "name": "MarkEventAsPending", "externalName": "markEventAsPending" },
+        { "name": "RemoveEvent", "externalName": "removeEvent" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Synchronization.Synchronization",
+      "generatesClass": false,
+      "externalName": "GeneXusSDSynchronizationSynchronization",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.SD.iOS.Permissions",
+      "generatesClass": false,
+      "externalName": "GeneXusSDiOSPermissions",
+      "methods": [
+        {
+          "name": "RequestUserNotificationsPermission",
+          "externalName": "requestUserNotificationsPermission"
+        },
+        {
+          "name": "RequestLocationPermissionWhenInUse",
+          "externalName": "requestLocationPermissionWhenInUse"
+        },
+        {
+          "name": "RequestLocationPermissionAlways",
+          "externalName": "requestLocationPermissionAlways"
+        },
+        {
+          "name": "RequestRemoteNotificationsPermission",
+          "externalName": "requestRemoteNotificationsPermission"
+        }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Store.StoreManager",
+      "generatesClass": true,
+      "externalName": "GeneXusSDStoreStoreManager",
+      "methods": [
+        { "name": "GetProducts", "externalName": "getProducts" },
+        { "name": "PurchaseProduct", "externalName": "purchaseProduct" },
+        { "name": "GetPurchases", "externalName": "getPurchases" },
+        { "name": "ConsumeProduct", "externalName": "consumeProduct" },
+        { "name": "RestorePurchases", "externalName": "restorePurchases" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Notifications.NotificationsConfiguration",
+      "generatesClass": true,
+      "externalName": "GeneXusSDNotificationsNotificationsConfiguration",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.SD.Notifications.RemoteNotificationResult",
+      "generatesClass": true,
+      "externalName": "GeneXusSDNotificationsRemoteNotificationResult",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.SD.Notifications.NotificationParameters",
+      "generatesClass": true,
+      "externalName": "GeneXusSDNotificationsNotificationParameters",
+      "methods": [{ "name": "SetParameter", "externalName": "setParameter" }]
+    },
+    {
+      "name": "GeneXus.SD.Notifications.RemoteNotifications",
+      "generatesClass": true,
+      "externalName": "GeneXusSDNotificationsRemoteNotifications",
+      "methods": [
+        { "name": "Call", "externalName": "call" },
+        { "name": "IOSSetBadge", "externalName": "iOSSetBadge" },
+        { "name": "IOSResetBadge", "externalName": "iOSResetBadge" },
+        { "name": "CallAction", "externalName": "callAction" },
+        { "name": "OpenSession", "externalName": "openSession" },
+        { "name": "Add", "externalName": "add" },
+        { "name": "Send", "externalName": "send" },
+        { "name": "SetConfiguration", "externalName": "setConfiguration" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Notifications.LocalNotifications",
+      "generatesClass": false,
+      "externalName": "GeneXusSDNotificationsLocalNotifications",
+      "methods": [
+        { "name": "CreateAlerts", "externalName": "createAlerts" },
+        { "name": "ListAlerts", "externalName": "listAlerts" },
+        { "name": "RemoveAlerts", "externalName": "removeAlerts" },
+        { "name": "RemoveAllAlerts", "externalName": "removeAllAlerts" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Media.Camera",
+      "generatesClass": false,
+      "externalName": "GeneXusSDMediaCamera",
+      "methods": [
+        { "name": "TakePhoto", "externalName": "takePhoto" },
+        { "name": "RecordVideo", "externalName": "recordVideo" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Media.PhotoLibrary",
+      "generatesClass": false,
+      "externalName": "GeneXusSDMediaPhotoLibrary",
+      "methods": [
+        { "name": "savePhoto", "externalName": "savePhoto" },
+        { "name": "SaveVideo", "externalName": "saveVideo" },
+        { "name": "ChooseImage", "externalName": "chooseImage" },
+        { "name": "ChooseVideo", "externalName": "chooseVideo" },
+        { "name": "ChooseImages", "externalName": "chooseImages" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Media.Audio",
+      "generatesClass": false,
+      "externalName": "GeneXusSDMediaAudio",
+      "methods": [
+        { "name": "Play", "externalName": "play" },
+        { "name": "PlayBackground", "externalName": "playBackground" },
+        { "name": "Stop", "externalName": "stop" },
+        { "name": "IsPlaying", "externalName": "isPlaying" },
+        { "name": "GetQueue", "externalName": "getQueue" },
+        { "name": "GetQueueState", "externalName": "getQueueState" },
+        { "name": "SetQueue", "externalName": "setQueue" },
+        { "name": "PlayQueue", "externalName": "playQueue" },
+        { "name": "PauseQueue", "externalName": "pauseQueue" },
+        {
+          "name": "SetQueueCurrentItem",
+          "externalName": "setQueueCurrentItem"
+        },
+        {
+          "name": "SetQueueCurrentIndex",
+          "externalName": "setQueueCurrentIndex"
+        },
+        { "name": "SetPlayerSettings", "externalName": "setPlayerSettings" },
+        {
+          "name": "iOSSetShowsMiniPlayer",
+          "externalName": "iOSSetShowsMiniPlayer"
+        },
+        {
+          "name": "iOSDisplayFullScreenPlayer",
+          "externalName": "iOSDisplayFullScreenPlayer"
+        },
+        {
+          "name": "iOSDismissFullScreenPlayer",
+          "externalName": "iOSDismissFullScreenPlayer"
+        }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Media.AudioRecorder",
+      "generatesClass": true,
+      "externalName": "GeneXusSDMediaAudioRecorder",
+      "methods": [
+        { "name": "Start", "externalName": "start" },
+        { "name": "Stop", "externalName": "stop" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Actions",
+      "generatesClass": false,
+      "externalName": "GeneXusSDActions",
+      "methods": [
+        { "name": "Login", "externalName": "login" },
+        { "name": "LoginExternal", "externalName": "loginExternal" },
+        { "name": "Logout", "externalName": "logout" },
+        { "name": "GoHome", "externalName": "goHome" },
+        { "name": "ReturnTo", "externalName": "returnTo" },
+        { "name": "Save", "externalName": "save" },
+        { "name": "Cancel", "externalName": "cancel" },
+        { "name": "deleteAction", "externalName": "deleteAction" },
+        {
+          "name": "TakeApplicationScreenshot",
+          "externalName": "takeApplicationScreenshot"
+        }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Contacts",
+      "generatesClass": false,
+      "externalName": "GeneXusSDContacts",
+      "methods": [
+        { "name": "AddContact", "externalName": "addContact" },
+        { "name": "RemoveContact", "externalName": "removeContact" },
+        { "name": "ViewContact", "externalName": "viewContact" },
+        { "name": "GetAllContacts", "externalName": "getAllContacts" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Calendar",
+      "generatesClass": false,
+      "externalName": "GeneXusSDCalendar",
+      "methods": [{ "name": "Schedule", "externalName": "schedule" }]
+    },
+    {
+      "name": "GeneXus.SD.Interop",
+      "generatesClass": true,
+      "externalName": "GeneXusSDInterop",
+      "methods": [
+        { "name": "SendMessage", "externalName": "sendMessage" },
+        { "name": "PlayVideo", "externalName": "playVideo" },
+        { "name": "PlayAudio", "externalName": "playAudio" },
+        { "name": "PlaceCall", "externalName": "placeCall" },
+        { "name": "SendEmail", "externalName": "sendEmail" },
+        { "name": "SendEmailAdvanced", "externalName": "sendEmailAdvanced" },
+        { "name": "SendSMS", "externalName": "sendSMS" },
+        { "name": "Msg", "externalName": "msg" },
+        { "name": "Confirm", "externalName": "confirm" },
+        { "name": "OpenInBrowser", "externalName": "openInBrowser" },
+        { "name": "CanOpen", "externalName": "canOpen" },
+        { "name": "Open", "externalName": "open" },
+        { "name": "ClearCache", "externalName": "clearCache" },
+        { "name": "IOSSetBadgeNumber", "externalName": "iOSSetBadgeNumber" },
+        { "name": "SetBadgeNumber", "externalName": "setBadgeNumber" },
+        {
+          "name": "IOSSetBadgeTextToTabIndex",
+          "externalName": "iOSSetBadgeTextToTabIndex"
+        },
+        {
+          "name": "IOSSetSelectedTabIndex",
+          "externalName": "iOSSetSelectedTabIndex"
+        }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Scanner",
+      "generatesClass": false,
+      "externalName": "GeneXusSDScanner",
+      "methods": [
+        { "name": "ScanBarcode", "externalName": "scanBarcode" },
+        { "name": "ScanInLoop", "externalName": "scanInLoop" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Network",
+      "generatesClass": true,
+      "externalName": "GeneXusSDNetwork",
+      "methods": [
+        { "name": "IsServerAvailable", "externalName": "isServerAvailable" },
+        { "name": "Type", "externalName": "type" },
+        { "name": "TrafficBasedCost", "externalName": "trafficBasedCost" },
+        {
+          "name": "SetApplicationServerURL",
+          "externalName": "setApplicationServerURL"
+        }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Beacons",
+      "generatesClass": true,
+      "externalName": "GeneXusSDBeacons",
+      "methods": [
+        {
+          "name": "AddBeaconProximityAlert",
+          "externalName": "addBeaconProximityAlert"
+        },
+        {
+          "name": "AddBeaconProximityAlerts",
+          "externalName": "addBeaconProximityAlerts"
+        },
+        {
+          "name": "GetBeaconProximityAlerts",
+          "externalName": "getBeaconProximityAlerts"
+        },
+        {
+          "name": "RemoveBeaconProximityAlert",
+          "externalName": "removeBeaconProximityAlert"
+        },
+        {
+          "name": "ClearBeaconProximityAlerts",
+          "externalName": "clearBeaconProximityAlerts"
+        },
+        {
+          "name": "GetBeaconRegionState",
+          "externalName": "getBeaconRegionState"
+        },
+        {
+          "name": "StartRangingBeaconRegion",
+          "externalName": "startRangingBeaconRegion"
+        },
+        {
+          "name": "GetRangedBeaconRegions",
+          "externalName": "getRangedBeaconRegions"
+        },
+        {
+          "name": "StopRangingBeaconRegion",
+          "externalName": "stopRangingBeaconRegion"
+        },
+        { "name": "GetBeaconsInRange", "externalName": "getBeaconsInRange" },
+        { "name": "StartAsBeacon", "externalName": "startAsBeacon" },
+        { "name": "StopAsBeacon", "externalName": "stopAsBeacon" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.Search",
+      "generatesClass": false,
+      "externalName": "GeneXusSDSearch",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.SD.DeepLink",
+      "generatesClass": false,
+      "externalName": "GeneXusSDDeepLink",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.SD.WebBrowser",
+      "generatesClass": false,
+      "externalName": "GeneXusSDWebBrowser",
+      "methods": [
+        { "name": "Open", "externalName": "open" },
+        { "name": "Close", "externalName": "close" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.DeviceAuthentication",
+      "generatesClass": true,
+      "externalName": "GeneXusSDDeviceAuthentication",
+      "methods": [
+        { "name": "IsAvailable", "externalName": "isAvailable" },
+        { "name": "Authenticate", "externalName": "authenticate" }
+      ]
+    },
+    {
+      "name": "GeneXus.SD.AppLifecycle",
+      "generatesClass": true,
+      "externalName": "GeneXusSDAppLifecycle",
+      "methods": []
+    },
+    {
+      "name": "GeneXus.SD.CardScanner",
+      "generatesClass": true,
+      "externalName": "GeneXusSDCardScanner",
+      "methods": [{ "name": "ScanCard", "externalName": "scanCard" }]
+    }
+  ]
+}

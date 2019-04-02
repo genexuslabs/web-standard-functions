@@ -7,7 +7,7 @@ import { length } from "../text/length";
  * @param {number} from
  * @return number
  */
- export const lastIndexOf = (
+export const lastIndexOf = (
   target: string,
   pattern: string,
   from: number
