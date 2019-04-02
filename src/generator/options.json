@@ -116,8 +116,12 @@
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
           "name": "toString"
+        },
+        "FromString": {
+            "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+            "name": "fromString"
+          }
         }
-      }
     }
   },
 
