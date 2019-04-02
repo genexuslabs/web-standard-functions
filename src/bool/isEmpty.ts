@@ -3,5 +3,5 @@
  * @param b 
  */
 export const isEmpty = (b: boolean): boolean => {
-    return b == false;
+    return b === false;
 }

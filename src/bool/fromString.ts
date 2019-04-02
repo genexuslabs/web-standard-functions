@@ -4,5 +4,5 @@
  */
 
 export const fromString = (str: string): boolean => {
-    return (str.toLowerCase() == "true")
+    return (str.toLowerCase() === "true")
 }
