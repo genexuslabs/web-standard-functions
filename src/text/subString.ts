@@ -5,7 +5,7 @@
  * @return string
  */
 
-let unicodeSubstring = require("unicode-substring");
+import * as unicodeSubstring from "unicode-substring";
 
 export const subString = (
   target: string,
