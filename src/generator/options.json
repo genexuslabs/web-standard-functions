@@ -75,7 +75,7 @@
         "RemoveDiacritics": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
           "name": "removeDiacritics"
-        }
+        },
         "Replace": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
           "name": "replace"
@@ -120,58 +120,60 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
           "name": "fromString"
         }
-      },
-      "Boolean": {
-        "members": {
-          "IsEmpty": {
-            "path": "@genexus/web-standard-functions/dist/lib-esm/bool/isEmpty",
-            "name": "isEmpty"
-          },
-          "FromString": {
-            "path": "@genexus/web-standard-functions/dist/lib-esm/bool/fromString",
-            "name": "fromString"
-          },
-          "ToString": {
-            "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
-            "name": "toString"
-          }
+      }
+    },
+    "Boolean": {
+      "members": {
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/isEmpty",
+          "name": "isEmpty"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/fromString",
+          "name": "fromString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
+          "name": "toString"
         }
-      },
-      "disambiguated": {
-        "Core": {
-          "Null": "isNullValue"
-        },
-        "TextSearch": {
-          "Add": "textSearchadd",
-          "Delete": "textSearchdelete",
-          "Find": "textSearchfind",
-          "Update": "textSearchupdate"
-        },
-        "GeneXus.Client.ClientStorage": {
-          "Set": "setValue"
-        },
-        "GeneXus.Common.Analytics": {
-          "SetUserId": "setAnalyticsUserId"
-        },
-        "GeneXus.Common.Log": {
-          "Error": "logError"
-        },
-        "GeneXus.SD.Actions": {
-          "Delete": "deleteAction"
-        },
-        "GeneXus.SD.Media.PhotoLibrary": {
-          "Save": "savePhoto"
-        },
-        "MAPISession": {
-          "MarkAsRead": "mapiMarkAsRead"
-        },
-        "WApiApplicationData": {
-          "Value": "valueAtIndex"
-        }
-      },
-      "ignored": {
-        "Core": [
-          "Default"
-        ]
       }
     }
+  },
+  "disambiguated": {
+    "Core": {
+      "Null": "isNullValue"
+    },
+    "TextSearch": {
+      "Add": "textSearchadd",
+      "Delete": "textSearchdelete",
+      "Find": "textSearchfind",
+      "Update": "textSearchupdate"
+    },
+    "GeneXus.Client.ClientStorage": {
+      "Set": "setValue"
+    },
+    "GeneXus.Common.Analytics": {
+      "SetUserId": "setAnalyticsUserId"
+    },
+    "GeneXus.Common.Log": {
+      "Error": "logError"
+    },
+    "GeneXus.SD.Actions": {
+      "Delete": "deleteAction"
+    },
+    "GeneXus.SD.Media.PhotoLibrary": {
+      "Save": "savePhoto"
+    },
+    "MAPISession": {
+      "MarkAsRead": "mapiMarkAsRead"
+    },
+    "WApiApplicationData": {
+      "Value": "valueAtIndex"
+    }
+  },
+  "ignored": {
+    "Core": [
+      "Default"
+    ]
+  }
+}

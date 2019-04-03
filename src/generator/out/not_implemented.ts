@@ -132,9 +132,9 @@ export function cols(array: any): any {
  * @param operand1
  * @param operator
  * @param operand2
- * @return any
+ * @return boolean
  */
-export function compare(operand1: any, operator: any, operand2: any): any {
+export function compare(operand1: any, operator: any, operand2: any): boolean {
   notImplemented();
   return null;
 }
@@ -531,7 +531,7 @@ export function urlEncode(urlString: any): any {
  * @param value
  * @return any
  */
-export function iif(condition: any, value: any, value2: any): any {
+export function iif(condition: boolean, value: any, value2: any): any {
   notImplemented();
   return null;
 }
@@ -547,9 +547,9 @@ export function int(value: number): number {
 
 /**
  * @param name
- * @return any
+ * @return boolean
  */
-export function isNull(name: any): any {
+export function isNull(name: any): boolean {
   notImplemented();
   return null;
 }
@@ -661,9 +661,9 @@ export function now(): any {
 
 /**
  * @param name
- * @return any
+ * @return boolean
  */
-export function isNullValue(name: any): any {
+export function isNullValue(name: any): boolean {
   notImplemented();
   return null;
 }
@@ -1368,9 +1368,9 @@ export function order(attribute: any): any {
 
 /**
  * @param message
- * @return any
+ * @return boolean
  */
-export function confirm(message: any): any {
+export function confirm(message: any): boolean {
   notImplemented();
   return null;
 }
@@ -1395,9 +1395,9 @@ export function level(attribute: any): number {
 }
 
 /**
- * @return any
+ * @return boolean
  */
-export function modified(): any {
+export function modified(): boolean {
   notImplemented();
   return null;
 }
@@ -1619,9 +1619,9 @@ export class Numeric {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -1763,9 +1763,9 @@ export class Date {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -1846,9 +1846,9 @@ export class Date {
 export class Image {
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -1867,18 +1867,18 @@ export class LongVarchar {
   
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  contains(substr: any): any {
+  contains(substr: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  endsWith(substr: any): any {
+  endsWith(substr: any): boolean {
     notImplemented();
     return null;
   }
@@ -1894,18 +1894,18 @@ export class LongVarchar {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
   
   /**
    * @param regularExpression
-   * @return any
+   * @return boolean
    */
-  isMatch(regularExpression: any): any {
+  isMatch(regularExpression: any): boolean {
     notImplemented();
     return null;
   }
@@ -1988,9 +1988,9 @@ export class LongVarchar {
   
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  startsWith(substr: any): any {
+  startsWith(substr: any): boolean {
     notImplemented();
     return null;
   }
@@ -2205,9 +2205,9 @@ export class DateTime {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -2375,9 +2375,9 @@ export class DateTime {
   
   /**
    * @param timeZone
-   * @return any
+   * @return boolean
    */
-  static setTimeZone(timeZone: any): any {
+  static setTimeZone(timeZone: any): boolean {
     notImplemented();
     return null;
   }
@@ -2396,18 +2396,18 @@ export class Varchar {
   
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  contains(substr: any): any {
+  contains(substr: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  endsWith(substr: any): any {
+  endsWith(substr: any): boolean {
     notImplemented();
     return null;
   }
@@ -2423,18 +2423,18 @@ export class Varchar {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
   
   /**
    * @param regularExpression
-   * @return any
+   * @return boolean
    */
-  isMatch(regularExpression: any): any {
+  isMatch(regularExpression: any): boolean {
     notImplemented();
     return null;
   }
@@ -2508,9 +2508,9 @@ export class Varchar {
   
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  startsWith(substr: any): any {
+  startsWith(substr: any): boolean {
     notImplemented();
     return null;
   }
@@ -2621,9 +2621,9 @@ export class Varchar {
 export class Binary {
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -2663,33 +2663,8 @@ export class Binary {
   }
 }
 
-export class Boolean {
-  
-  /**
-   * @return any
-   */
-  isEmpty(): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @param value
-   * @return any
-   */
-  fromString(value: any): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @return any
-   */
-  toString(): any {
-    notImplemented();
-    return null;
-  }
-}
+// Type: Boolean
+// end Type
 
 export class MailMessage {
   
@@ -2984,7 +2959,7 @@ export class XMLWriter {
    * @param standalone
    * @return any
    */
-  writeStartDocument(encoding: any, standalone: any): any {
+  writeStartDocument(encoding: any, standalone: boolean): any {
     notImplemented();
     return null;
   }
@@ -6388,7 +6363,7 @@ export class Collection {
    * @param includeState
    * @return any
    */
-  toXml(includeHeader: any, includeState: any): any {
+  toXml(includeHeader: boolean, includeState: boolean): any {
     notImplemented();
     return null;
   }
@@ -6396,9 +6371,9 @@ export class Collection {
   /**
    * @param name
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXml(name: any, outMessages: any): any {
+  fromXml(name: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -6406,9 +6381,9 @@ export class Collection {
   /**
    * @param name
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXmlFile(name: any, outMessages: any): any {
+  fromXmlFile(name: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -6417,7 +6392,7 @@ export class Collection {
    * @param includeState
    * @return any
    */
-  toJson(includeState: any): any {
+  toJson(includeState: boolean): any {
     notImplemented();
     return null;
   }
@@ -6425,9 +6400,9 @@ export class Collection {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJson(source: any, outMessages: any): any {
+  fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -6435,9 +6410,9 @@ export class Collection {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJsonFile(source: any, outMessages: any): any {
+  fromJsonFile(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -6495,41 +6470,41 @@ export class BusinessComponentCollection {
   
   /**
    * @param primaryKeyAtt
-   * @return any
+   * @return boolean
    */
-  removeByKey(primaryKeyAtt: any): any {
+  removeByKey(primaryKeyAtt: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  update(): any {
+  update(): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  insert(): any {
+  insert(): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  insertOrUpdate(): any {
+  insertOrUpdate(): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  delete(): any {
+  delete(): boolean {
     notImplemented();
     return null;
   }
@@ -6548,9 +6523,9 @@ export class BusinessComponentLinesCollection {
   
   /**
    * @param primaryKeyAtt
-   * @return any
+   * @return boolean
    */
-  removeByKey(primaryKeyAtt: any): any {
+  removeByKey(primaryKeyAtt: any): boolean {
     notImplemented();
     return null;
   }
@@ -6559,9 +6534,9 @@ export class BusinessComponentLinesCollection {
 export class GUID {
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -6611,9 +6586,9 @@ export class GUID {
   
   /**
    * @param regularExpression
-   * @return any
+   * @return boolean
    */
-  isMatch(regularExpression: any): any {
+  isMatch(regularExpression: any): boolean {
     notImplemented();
     return null;
   }
@@ -9746,9 +9721,9 @@ export class File {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  exists(): any {
+  exists(): boolean {
     notImplemented();
     return null;
   }
@@ -9956,9 +9931,9 @@ export class File {
   
   /**
    * @param base64String
-   * @return any
+   * @return boolean
    */
-  fromBase64String(base64String: any): any {
+  fromBase64String(base64String: any): boolean {
     notImplemented();
     return null;
   }
@@ -9999,11 +9974,11 @@ export class File {
   /**
    * 
    */
-  private meOF: any;
-  get eOF(): any {
+  private meOF: boolean;
+  get eOF(): boolean {
     return this.meOF;
   }
-  set eOF(value: any) {
+  set eOF(value: boolean) {
     this.meOF = value;
   }
   
@@ -10061,9 +10036,9 @@ export class Directory {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  exists(): any {
+  exists(): boolean {
     notImplemented();
     return null;
   }
@@ -10348,9 +10323,9 @@ export class Properties {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJson(source: any, outMessages: any): any {
+  fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -11389,9 +11364,9 @@ export function textSearchfind(content: any, itemsPerPage: number, pageNumber: n
 /**
  * @param variableBCorText
  * @param info
- * @return any
+ * @return boolean
  */
-export function textSearchadd(variableBCorText: any, info: any): any {
+export function textSearchadd(variableBCorText: any, info: any): boolean {
   notImplemented();
   return null;
 }
@@ -11399,26 +11374,26 @@ export function textSearchadd(variableBCorText: any, info: any): any {
 /**
  * @param variableBCorText
  * @param info
- * @return any
+ * @return boolean
  */
-export function textSearchupdate(variableBCorText: any, info: any): any {
+export function textSearchupdate(variableBCorText: any, info: any): boolean {
   notImplemented();
   return null;
 }
 
 /**
  * @param variable
- * @return any
+ * @return boolean
  */
-export function textSearchdelete(variable: any): any {
+export function textSearchdelete(variable: any): boolean {
   notImplemented();
   return null;
 }
 
 /**
- * @return any
+ * @return boolean
  */
-export function buildDictionary(): any {
+export function buildDictionary(): boolean {
   notImplemented();
   return null;
 }
@@ -11487,11 +11462,11 @@ export class Window {
   /**
    * 
    */
-  private mautoresize: any;
-  get autoresize(): any {
+  private mautoresize: boolean;
+  get autoresize(): boolean {
     return this.mautoresize;
   }
-  set autoresize(value: any) {
+  set autoresize(value: boolean) {
     this.mautoresize = value;
   }
   
@@ -11596,9 +11571,9 @@ export class Video {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -11616,9 +11591,9 @@ export class Audio {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -11636,9 +11611,9 @@ export class BinaryFile {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -11704,22 +11679,22 @@ export class Cookie {
   /**
    * 
    */
-  private msecure: any;
-  get secure(): any {
+  private msecure: boolean;
+  get secure(): boolean {
     return this.msecure;
   }
-  set secure(value: any) {
+  set secure(value: boolean) {
     this.msecure = value;
   }
   
   /**
    * 
    */
-  private mhttpOnly: any;
-  get httpOnly(): any {
+  private mhttpOnly: boolean;
+  get httpOnly(): boolean {
     return this.mhttpOnly;
   }
-  set httpOnly(value: any) {
+  set httpOnly(value: boolean) {
     this.mhttpOnly = value;
   }
 }
@@ -11834,17 +11809,17 @@ export class CryptoCertificate {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  hasPrivateKey(): any {
+  hasPrivateKey(): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  verify(): any {
+  verify(): boolean {
     notImplemented();
     return null;
   }
@@ -12154,7 +12129,7 @@ export class CryptoSign {
    * @param detached
    * @return any
    */
-  sign(text: any, detached: any): any {
+  sign(text: any, detached: boolean): any {
     notImplemented();
     return null;
   }
@@ -12163,9 +12138,9 @@ export class CryptoSign {
    * @param signature
    * @param text
    * @param detached
-   * @return any
+   * @return boolean
    */
-  verify(signature: any, text: any, detached: any): any {
+  verify(signature: any, text: any, detached: boolean): boolean {
     notImplemented();
     return null;
   }
@@ -12217,11 +12192,11 @@ export class CryptoSign {
   /**
    * 
    */
-  private mvalidateCertificate: any;
-  get validateCertificate(): any {
+  private mvalidateCertificate: boolean;
+  get validateCertificate(): boolean {
     return this.mvalidateCertificate;
   }
-  set validateCertificate(value: any) {
+  set validateCertificate(value: boolean) {
     this.mvalidateCertificate = value;
   }
   
@@ -12269,9 +12244,9 @@ export class CryptoSignXml {
   
   /**
    * @param signature
-   * @return any
+   * @return boolean
    */
-  verify(signature: any): any {
+  verify(signature: any): boolean {
     notImplemented();
     return null;
   }
@@ -12312,11 +12287,11 @@ export class CryptoSignXml {
   /**
    * 
    */
-  private mvalidateCertificate: any;
-  get validateCertificate(): any {
+  private mvalidateCertificate: boolean;
+  get validateCertificate(): boolean {
     return this.mvalidateCertificate;
   }
-  set validateCertificate(value: any) {
+  set validateCertificate(value: boolean) {
     this.mvalidateCertificate = value;
   }
   
@@ -12420,17 +12395,17 @@ export class Geography {
   
   /**
    * @param object
-   * @return any
+   * @return boolean
    */
-  intersect(object: any): any {
+  intersect(object: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
@@ -12444,9 +12419,9 @@ export class Geography {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -12460,9 +12435,9 @@ export class Geography {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNullOrEmpty(): any {
+  isNullOrEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -12507,9 +12482,9 @@ export class Geography {
   /**
    * @param objectA
    * @param objectB
-   * @return any
+   * @return boolean
    */
-  static intersect(objectA: any, objectB: any): any {
+  static intersect(objectA: any, objectB: any): boolean {
     notImplemented();
     return null;
   }
@@ -12609,17 +12584,17 @@ export class GeoPoint {
   
   /**
    * @param object
-   * @return any
+   * @return boolean
    */
-  intersect(object: any): any {
+  intersect(object: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
@@ -12633,9 +12608,9 @@ export class GeoPoint {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -12649,9 +12624,9 @@ export class GeoPoint {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNullOrEmpty(): any {
+  isNullOrEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -12800,17 +12775,17 @@ export class GeoLine {
   
   /**
    * @param object
-   * @return any
+   * @return boolean
    */
-  intersect(object: any): any {
+  intersect(object: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
@@ -12824,9 +12799,9 @@ export class GeoLine {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -12840,9 +12815,9 @@ export class GeoLine {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNullOrEmpty(): any {
+  isNullOrEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -12877,9 +12852,9 @@ export class GeoLine {
   /**
    * @param objectA
    * @param objectB
-   * @return any
+   * @return boolean
    */
-  static intersect(objectA: any, objectB: any): any {
+  static intersect(objectA: any, objectB: any): boolean {
     notImplemented();
     return null;
   }
@@ -12959,9 +12934,9 @@ export class GeoPolygon {
   
   /**
    * @param object
-   * @return any
+   * @return boolean
    */
-  intersect(object: any): any {
+  intersect(object: any): boolean {
     notImplemented();
     return null;
   }
@@ -12975,9 +12950,9 @@ export class GeoPolygon {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
@@ -12991,9 +12966,9 @@ export class GeoPolygon {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -13007,9 +12982,9 @@ export class GeoPolygon {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNullOrEmpty(): any {
+  isNullOrEmpty(): boolean {
     notImplemented();
     return null;
   }
@@ -13044,9 +13019,9 @@ export class GeoPolygon {
   /**
    * @param objectA
    * @param objectB
-   * @return any
+   * @return boolean
    */
-  static intersect(objectA: any, objectB: any): any {
+  static intersect(objectA: any, objectB: any): boolean {
     notImplemented();
     return null;
   }
@@ -13240,9 +13215,9 @@ export class Cache {
   
   /**
    * @param key
-   * @return any
+   * @return boolean
    */
-  contains(key: any): any {
+  contains(key: any): boolean {
     notImplemented();
     return null;
   }
@@ -13290,9 +13265,9 @@ export class StorageProvider {
    * @param outExternalFile
    * @param expirationMinutes
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  getPrivate(storageObjectFullName: any, outExternalFile: any, expirationMinutes: number, outMessages: any): any {
+  getPrivate(storageObjectFullName: any, outExternalFile: any, expirationMinutes: number, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13302,9 +13277,9 @@ export class StorageProvider {
    * @param storageObjectFullName
    * @param outUploadedFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  uploadPrivate(fileFullPath: any, storageObjectFullName: any, outUploadedFile: any, outMessages: any): any {
+  uploadPrivate(fileFullPath: any, storageObjectFullName: any, outUploadedFile: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13313,9 +13288,9 @@ export class StorageProvider {
    * @param storageObjectFullName
    * @param outExternalFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  get(storageObjectFullName: any, outExternalFile: any, outMessages: any): any {
+  get(storageObjectFullName: any, outExternalFile: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13325,9 +13300,9 @@ export class StorageProvider {
    * @param storageObjectFullName
    * @param outUploadedFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  upload(fileFullPath: any, storageObjectFullName: any, outUploadedFile: any, outMessages: any): any {
+  upload(fileFullPath: any, storageObjectFullName: any, outUploadedFile: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13336,9 +13311,9 @@ export class StorageProvider {
    * @param storageObjectFullName
    * @param outLocalFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  download(storageObjectFullName: any, outLocalFile: any, outMessages: any): any {
+  download(storageObjectFullName: any, outLocalFile: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13347,9 +13322,9 @@ export class StorageProvider {
    * @param storageObjectFullName
    * @param outLocalFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  downloadPrivate(storageObjectFullName: any, outLocalFile: any, outMessages: any): any {
+  downloadPrivate(storageObjectFullName: any, outLocalFile: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13358,9 +13333,9 @@ export class StorageProvider {
    * @param storageDirectoryFullName
    * @param outExternalDirectory
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  getDirectory(storageDirectoryFullName: any, outExternalDirectory: any, outMessages: any): any {
+  getDirectory(storageDirectoryFullName: any, outExternalDirectory: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13697,7 +13672,7 @@ export class BusinessComponent {
    * @param includeState
    * @return any
    */
-  toXml(includeHeader: any, includeState: any): any {
+  toXml(includeHeader: boolean, includeState: boolean): any {
     notImplemented();
     return null;
   }
@@ -13705,9 +13680,9 @@ export class BusinessComponent {
   /**
    * @param xml
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXml(xml: any, outMessages: any): any {
+  fromXml(xml: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13715,9 +13690,9 @@ export class BusinessComponent {
   /**
    * @param xml
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXmlFile(xml: any, outMessages: any): any {
+  fromXmlFile(xml: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13726,7 +13701,7 @@ export class BusinessComponent {
    * @param includeState
    * @return any
    */
-  toJson(includeState: any): any {
+  toJson(includeState: boolean): any {
     notImplemented();
     return null;
   }
@@ -13734,9 +13709,9 @@ export class BusinessComponent {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJson(source: any, outMessages: any): any {
+  fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13744,49 +13719,49 @@ export class BusinessComponent {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJsonFile(source: any, outMessages: any): any {
+  fromJsonFile(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  update(): any {
+  update(): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  insert(): any {
+  insert(): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  insertOrUpdate(): any {
+  insertOrUpdate(): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  success(): any {
+  success(): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  fail(): any {
+  fail(): boolean {
     notImplemented();
     return null;
   }
@@ -13922,7 +13897,7 @@ export class SDT {
    * @param includeState
    * @return any
    */
-  toXml(includeHeader: any, includeState: any): any {
+  toXml(includeHeader: boolean, includeState: boolean): any {
     notImplemented();
     return null;
   }
@@ -13930,9 +13905,9 @@ export class SDT {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXml(source: any, outMessages: any): any {
+  fromXml(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13940,9 +13915,9 @@ export class SDT {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXmlFile(source: any, outMessages: any): any {
+  fromXmlFile(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13959,7 +13934,7 @@ export class SDT {
    * @param includeState
    * @return any
    */
-  toJson(includeState: any): any {
+  toJson(includeState: boolean): any {
     notImplemented();
     return null;
   }
@@ -13967,9 +13942,9 @@ export class SDT {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJson(source: any, outMessages: any): any {
+  fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
@@ -13977,17 +13952,17 @@ export class SDT {
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJsonFile(source: any, outMessages: any): any {
+  fromJsonFile(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
@@ -14031,9 +14006,9 @@ export class Iterator {
   }
   
   /**
-   * @return any
+   * @return boolean
    */
-  eof(): any {
+  eof(): boolean {
     notImplemented();
     return null;
   }
@@ -14237,9 +14212,9 @@ export function getValue(propName: any, fileName: any): any {
 /**
  * @param propName
  * @param fileName
- * @return any
+ * @return boolean
  */
-export function hasValue(propName: any, fileName: any): any {
+export function hasValue(propName: any, fileName: any): boolean {
   notImplemented();
   return null;
 }
@@ -14317,25 +14292,25 @@ export class GeneXusCommonGeolocation {
    * @param ignoreErrors
    * @return any
    */
-  static getMyLocation(minAccuracy: any, timeout: any, includeHeadingAndSpeed: any, ignoreErrors: any): any {
+  static getMyLocation(minAccuracy: any, timeout: any, includeHeadingAndSpeed: boolean, ignoreErrors: boolean): any {
     notImplemented();
     return null;
   }
   
   /**
    * Indicates wether the application has been given permission to use location services
-   * @return any
+   * @return boolean
    */
-  static authorized(): any {
+  static authorized(): boolean {
     notImplemented();
     return null;
   }
   
   /**
    * Indicates wether location services are enable in the device
-   * @return any
+   * @return boolean
    */
-  static serviceEnabled(): any {
+  static serviceEnabled(): boolean {
     notImplemented();
     return null;
   }
@@ -14435,9 +14410,9 @@ export class GeneXusCommonGeolocation {
   
   /**
    * @param proximityAlerts
-   * @return any
+   * @return boolean
    */
-  static setProximityAlerts(proximityAlerts: any): any {
+  static setProximityAlerts(proximityAlerts: any): boolean {
     notImplemented();
     return null;
   }
@@ -14581,7 +14556,7 @@ export function fatal(message: any, topic: any): any {
  * @param requestAlternateRoutes
  * @return any
  */
-export function calculateDirections(sourceLocation: any, destinationLocation: any, transportType: any, requestAlternateRoutes: any): any {
+export function calculateDirections(sourceLocation: any, destinationLocation: any, transportType: any, requestAlternateRoutes: boolean): any {
   notImplemented();
   return null;
 }
@@ -14941,9 +14916,9 @@ export class GeneXusServerSocket {
 
 /**
  * @param eventStatus
- * @return any
+ * @return boolean
  */
-export function hasEvents(eventStatus: any): any {
+export function hasEvents(eventStatus: any): boolean {
   notImplemented();
   return null;
 }
@@ -15049,9 +15024,9 @@ export class GeneXusSDStoreStoreManager {
   
   /**
    * @param productIdentifier
-   * @return any
+   * @return boolean
    */
-  static consumeProduct(productIdentifier: any): any {
+  static consumeProduct(productIdentifier: any): boolean {
     notImplemented();
     return null;
   }
@@ -15068,8 +15043,8 @@ export class GeneXusSDStoreStoreManager {
   /**
    * If user device can make purchases
    */
-  private static mcanMakePurchases: any;
-  static get canMakePurchases(): any {
+  private static mcanMakePurchases: boolean;
+  static get canMakePurchases(): boolean {
     return this.mcanMakePurchases;
   }
   
@@ -15102,11 +15077,11 @@ export class GeneXusSDNotificationsNotificationsConfiguration {
   /**
    * 
    */
-  private miOSuseSandboxServer: any;
-  get iOSuseSandboxServer(): any {
+  private miOSuseSandboxServer: boolean;
+  get iOSuseSandboxServer(): boolean {
     return this.miOSuseSandboxServer;
   }
-  set iOSuseSandboxServer(value: any) {
+  set iOSuseSandboxServer(value: boolean) {
     this.miOSuseSandboxServer = value;
   }
   
@@ -15451,9 +15426,9 @@ export function stop(category: any): any {
 /**
  * Returns whether there is audio playing in any category
  * @param category
- * @return any
+ * @return boolean
  */
-export function isPlaying(category: any): any {
+export function isPlaying(category: any): boolean {
   notImplemented();
   return null;
 }
@@ -15538,7 +15513,7 @@ export function setPlayerSettings(settings: any): any {
  * @param show
  * @return any
  */
-export function iOSSetShowsMiniPlayer(show: any): any {
+export function iOSSetShowsMiniPlayer(show: boolean): any {
   notImplemented();
   return null;
 }
@@ -15564,9 +15539,9 @@ export class GeneXusSDMediaAudioRecorder {
   
   /**
    * Starts a recording session. Returns True if the operation was successful, False otherwise
-   * @return any
+   * @return boolean
    */
-  static start(): any {
+  static start(): boolean {
     notImplemented();
     return null;
   }
@@ -15583,8 +15558,8 @@ export class GeneXusSDMediaAudioRecorder {
   /**
    * True if there is an active recording session, False otherwise
    */
-  private static misRecording: any;
-  static get isRecording(): any {
+  private static misRecording: boolean;
+  static get isRecording(): boolean {
     return this.misRecording;
   }
   
@@ -15597,9 +15572,9 @@ export class GeneXusSDMediaAudioRecorder {
  * @param user
  * @param password
  * @param additionalParameters
- * @return any
+ * @return boolean
  */
-export function login(user: any, password: any, additionalParameters: any): any {
+export function login(user: any, password: any, additionalParameters: any): boolean {
   notImplemented();
   return null;
 }
@@ -15610,9 +15585,9 @@ export function login(user: any, password: any, additionalParameters: any): any 
  * @param user
  * @param password
  * @param additionalParameters
- * @return any
+ * @return boolean
  */
-export function loginExternal(type: any, user: any, password: any, additionalParameters: any): any {
+export function loginExternal(type: any, user: any, password: any, additionalParameters: any): boolean {
   notImplemented();
   return null;
 }
@@ -15693,9 +15668,9 @@ export function takeApplicationScreenshot(): any {
  * @param companyName
  * @param photo
  * @param message
- * @return any
+ * @return boolean
  */
-export function addContact(firstName: any, lastName: any, eMail: any, phone: any, companyName: any, photo: any, message: any): any {
+export function addContact(firstName: any, lastName: any, eMail: any, phone: any, companyName: any, photo: any, message: any): boolean {
   notImplemented();
   return null;
 }
@@ -15706,9 +15681,9 @@ export function addContact(firstName: any, lastName: any, eMail: any, phone: any
  * @param eMail
  * @param phone
  * @param message
- * @return any
+ * @return boolean
  */
-export function removeContact(firstName: any, lastName: any, eMail: any, phone: any, message: any): any {
+export function removeContact(firstName: any, lastName: any, eMail: any, phone: any, message: any): boolean {
   notImplemented();
   return null;
 }
@@ -15836,9 +15811,9 @@ export class GeneXusSDInterop {
   
   /**
    * @param message
-   * @return any
+   * @return boolean
    */
-  static confirm(message: any): any {
+  static confirm(message: any): boolean {
     notImplemented();
     return null;
   }
@@ -15855,9 +15830,9 @@ export class GeneXusSDInterop {
   
   /**
    * @param url
-   * @return any
+   * @return boolean
    */
-  static canOpen(url: any): any {
+  static canOpen(url: any): boolean {
     notImplemented();
     return null;
   }
@@ -15943,7 +15918,7 @@ export function scanBarcode(barcodeTypes: any): any {
  * @param barcodeTypes
  * @return any
  */
-export function scanInLoop(beepOnEachRead: any, barcodeTypes: any): any {
+export function scanInLoop(beepOnEachRead: boolean, barcodeTypes: any): any {
   notImplemented();
   return null;
 }
@@ -15953,9 +15928,9 @@ export class GeneXusSDNetwork {
   
   /**
    * @param url
-   * @return any
+   * @return boolean
    */
-  static isServerAvailable(url: any): any {
+  static isServerAvailable(url: any): boolean {
     notImplemented();
     return null;
   }
@@ -15971,9 +15946,9 @@ export class GeneXusSDNetwork {
   
   /**
    * @param url
-   * @return any
+   * @return boolean
    */
-  static trafficBasedCost(url: any): any {
+  static trafficBasedCost(url: any): boolean {
     notImplemented();
     return null;
   }
@@ -16003,9 +15978,9 @@ export class GeneXusSDBeacons {
   /**
    * Start monitoring the specified beacon region.
    * @param proximityAlert
-   * @return any
+   * @return boolean
    */
-  static addBeaconProximityAlert(proximityAlert: any): any {
+  static addBeaconProximityAlert(proximityAlert: any): boolean {
     notImplemented();
     return null;
   }
@@ -16013,9 +15988,9 @@ export class GeneXusSDBeacons {
   /**
    * Start monitoring the specified beacon regions.
    * @param proximityAlerts
-   * @return any
+   * @return boolean
    */
-  static addBeaconProximityAlerts(proximityAlerts: any): any {
+  static addBeaconProximityAlerts(proximityAlerts: any): boolean {
     notImplemented();
     return null;
   }
@@ -16061,9 +16036,9 @@ export class GeneXusSDBeacons {
   /**
    * Starts the delivery of notifications for beacons in the specified region.
    * @param beaconRegion
-   * @return any
+   * @return boolean
    */
-  static startRangingBeaconRegion(beaconRegion: any): any {
+  static startRangingBeaconRegion(beaconRegion: any): boolean {
     notImplemented();
     return null;
   }
@@ -16100,18 +16075,18 @@ export class GeneXusSDBeacons {
   /**
    * Advertises the current device as a beacon.
    * @param beaconInfo
-   * @return any
+   * @return boolean
    */
-  static startAsBeacon(beaconInfo: any): any {
+  static startAsBeacon(beaconInfo: any): boolean {
     notImplemented();
     return null;
   }
   
   /**
    * Stops advertising the current device as a beacon.
-   * @return any
+   * @return boolean
    */
-  static stopAsBeacon(): any {
+  static stopAsBeacon(): boolean {
     notImplemented();
     return null;
   }
@@ -16119,8 +16094,8 @@ export class GeneXusSDBeacons {
   /**
    * Determines whether the device supports ranging. If False, all attempts to range beacons will fail.
    */
-  private static mrangingAvailable: any;
-  static get rangingAvailable(): any {
+  private static mrangingAvailable: boolean;
+  static get rangingAvailable(): boolean {
     return this.mrangingAvailable;
   }
   
@@ -16128,8 +16103,8 @@ export class GeneXusSDBeacons {
   /**
    * Determines whether the device supports beacon proximity alerts. If False, all attempts to set proximity alerts will fail.
    */
-  private static mbeaconProximityAlertsAvailable: any;
-  static get beaconProximityAlertsAvailable(): any {
+  private static mbeaconProximityAlertsAvailable: boolean;
+  static get beaconProximityAlertsAvailable(): boolean {
     return this.mbeaconProximityAlertsAvailable;
   }
   
@@ -16137,8 +16112,8 @@ export class GeneXusSDBeacons {
   /**
    * Determines whether the user has location services enabled. If False, and you proceed to call other Location API, user will be prompted with the warning or fail depending on the current authorization status.
    */
-  private static mserviceEnabled: any;
-  static get serviceEnabled(): any {
+  private static mserviceEnabled: boolean;
+  static get serviceEnabled(): boolean {
     return this.mserviceEnabled;
   }
   
@@ -16186,9 +16161,9 @@ export class GeneXusSDDeviceAuthentication {
   /**
    * Returns True if the API can be used in the current device, False otherwise
    * @param method
-   * @return any
+   * @return boolean
    */
-  static isAvailable(method: any): any {
+  static isAvailable(method: any): boolean {
     notImplemented();
     return null;
   }
@@ -16198,9 +16173,9 @@ export class GeneXusSDDeviceAuthentication {
    * @param method
    * @param title
    * @param usageDescription
-   * @return any
+   * @return boolean
    */
-  static authenticate(method: any, title: any, usageDescription: any): any {
+  static authenticate(method: any, title: any, usageDescription: any): boolean {
     notImplemented();
     return null;
   }
@@ -16251,8 +16226,8 @@ export class GeneXusSDCardScanner {
   /**
    * 
    */
-  private static misAvailable: any;
-  static get isAvailable(): any {
+  private static misAvailable: boolean;
+  static get isAvailable(): boolean {
     return this.misAvailable;
   }
   
@@ -16260,44 +16235,44 @@ export class GeneXusSDCardScanner {
   /**
    * 
    */
-  private static mcollectCardholderName: any;
-  static get collectCardholderName(): any {
+  private static mcollectCardholderName: boolean;
+  static get collectCardholderName(): boolean {
     return this.mcollectCardholderName;
   }
-  static set collectCardholderName(value: any) {
+  static set collectCardholderName(value: boolean) {
     this.mcollectCardholderName = value;
   }
   
   /**
    * 
    */
-  private static mcollectCVV: any;
-  static get collectCVV(): any {
+  private static mcollectCVV: boolean;
+  static get collectCVV(): boolean {
     return this.mcollectCVV;
   }
-  static set collectCVV(value: any) {
+  static set collectCVV(value: boolean) {
     this.mcollectCVV = value;
   }
   
   /**
    * 
    */
-  private static mcollectExpiry: any;
-  static get collectExpiry(): any {
+  private static mcollectExpiry: boolean;
+  static get collectExpiry(): boolean {
     return this.mcollectExpiry;
   }
-  static set collectExpiry(value: any) {
+  static set collectExpiry(value: boolean) {
     this.mcollectExpiry = value;
   }
   
   /**
    * 
    */
-  private static mcollectPostalCode: any;
-  static get collectPostalCode(): any {
+  private static mcollectPostalCode: boolean;
+  static get collectPostalCode(): boolean {
     return this.mcollectPostalCode;
   }
-  static set collectPostalCode(value: any) {
+  static set collectPostalCode(value: boolean) {
     this.mcollectPostalCode = value;
   }
   
@@ -16315,33 +16290,33 @@ export class GeneXusSDCardScanner {
   /**
    * 
    */
-  private static mdisableManualEntry: any;
-  static get disableManualEntry(): any {
+  private static mdisableManualEntry: boolean;
+  static get disableManualEntry(): boolean {
     return this.mdisableManualEntry;
   }
-  static set disableManualEntry(value: any) {
+  static set disableManualEntry(value: boolean) {
     this.mdisableManualEntry = value;
   }
   
   /**
    * 
    */
-  private static mrestrictPostalCodeNumeric: any;
-  static get restrictPostalCodeNumeric(): any {
+  private static mrestrictPostalCodeNumeric: boolean;
+  static get restrictPostalCodeNumeric(): boolean {
     return this.mrestrictPostalCodeNumeric;
   }
-  static set restrictPostalCodeNumeric(value: any) {
+  static set restrictPostalCodeNumeric(value: boolean) {
     this.mrestrictPostalCodeNumeric = value;
   }
   
   /**
    * 
    */
-  private static mscanExpiry: any;
-  static get scanExpiry(): any {
+  private static mscanExpiry: boolean;
+  static get scanExpiry(): boolean {
     return this.mscanExpiry;
   }
-  static set scanExpiry(value: any) {
+  static set scanExpiry(value: boolean) {
     this.mscanExpiry = value;
   }
   
@@ -16359,11 +16334,11 @@ export class GeneXusSDCardScanner {
   /**
    * 
    */
-  private static msuppressScanConfirmation: any;
-  static get suppressScanConfirmation(): any {
+  private static msuppressScanConfirmation: boolean;
+  static get suppressScanConfirmation(): boolean {
     return this.msuppressScanConfirmation;
   }
-  static set suppressScanConfirmation(value: any) {
+  static set suppressScanConfirmation(value: boolean) {
     this.msuppressScanConfirmation = value;
   }
 }
