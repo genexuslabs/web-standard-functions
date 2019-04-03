@@ -4,7 +4,6 @@ function notImplemented() {
   console.log("Not yet implemented");
 }
 
-
 // Type: Core
 
 /**
@@ -132,9 +131,9 @@ export function cols(array: any): any {
  * @param operand1
  * @param operator
  * @param operand2
- * @return any
+ * @return boolean
  */
-export function compare(operand1: any, operator: any, operand2: any): any {
+export function compare(operand1: any, operator: any, operand2: any): boolean {
   notImplemented();
   return null;
 }
@@ -250,7 +249,13 @@ export function dFRNext(): number {
  * @param encoding
  * @return number
  */
-export function dFROpen(fileName: any, regLength: number, fieldDelimiter: any, strDelimiter: any, encoding: any): number {
+export function dFROpen(
+  fileName: any,
+  regLength: number,
+  fieldDelimiter: any,
+  strDelimiter: any,
+  encoding: any
+): number {
   notImplemented();
   return null;
 }
@@ -279,7 +284,13 @@ export function dFWNext(): number {
  * @param encoding
  * @return number
  */
-export function dFWOpen(fileName: any, fieldDelimiter: any, strDelimiter: any, append: number, encoding: any): number {
+export function dFWOpen(
+  fileName: any,
+  fieldDelimiter: any,
+  strDelimiter: any,
+  append: number,
+  encoding: any
+): number {
   notImplemented();
   return null;
 }
@@ -531,7 +542,7 @@ export function urlEncode(urlString: any): any {
  * @param value
  * @return any
  */
-export function iif(condition: any, value: any, value2: any): any {
+export function iif(condition: boolean, value: any, value2: any): any {
   notImplemented();
   return null;
 }
@@ -547,9 +558,9 @@ export function int(value: number): number {
 
 /**
  * @param name
- * @return any
+ * @return boolean
  */
-export function isNull(name: any): any {
+export function isNull(name: any): boolean {
   notImplemented();
   return null;
 }
@@ -598,7 +609,12 @@ export function lower(value: any): any {
  * @param attribute
  * @return any
  */
-export function max(attribute: any, condition: any, defaultValue: any, attribute2: any): any {
+export function max(
+  attribute: any,
+  condition: any,
+  defaultValue: any,
+  attribute2: any
+): any {
   notImplemented();
   return null;
 }
@@ -610,7 +626,12 @@ export function max(attribute: any, condition: any, defaultValue: any, attribute
  * @param attribute
  * @return any
  */
-export function min(attribute: any, condition: any, defaultValue: any, attribute2: any): any {
+export function min(
+  attribute: any,
+  condition: any,
+  defaultValue: any,
+  attribute2: any
+): any {
   notImplemented();
   return null;
 }
@@ -661,9 +682,9 @@ export function now(): any {
 
 /**
  * @param name
- * @return any
+ * @return boolean
  */
-export function isNullValue(name: any): any {
+export function isNullValue(name: any): boolean {
   notImplemented();
   return null;
 }
@@ -850,7 +871,14 @@ export function serverTime(): any {
  * @param secure
  * @return number
  */
-export function setCookie(name: any, value: any, path: any, expiration: Date, domain: any, secure: number): number {
+export function setCookie(
+  name: any,
+  value: any,
+  path: any,
+  expiration: Date,
+  domain: any,
+  secure: number
+): number {
   notImplemented();
   return null;
 }
@@ -1186,7 +1214,14 @@ export function year(value: Date): number {
  * @param seconds
  * @return any
  */
-export function yMDHMStoT(year: number, month: number, day: number, hour: number, minutes: number, seconds: number): any {
+export function yMDHMStoT(
+  year: number,
+  month: number,
+  day: number,
+  hour: number,
+  minutes: number,
+  seconds: number
+): any {
   notImplemented();
   return null;
 }
@@ -1322,7 +1357,12 @@ export function xFile(name: any, parameter: any): any {
  * @param parameter
  * @return any
  */
-export function xIndex(tableName: any, name: any, type: any, parameter: any): any {
+export function xIndex(
+  tableName: any,
+  name: any,
+  type: any,
+  parameter: any
+): any {
   notImplemented();
   return null;
 }
@@ -1368,9 +1408,9 @@ export function order(attribute: any): any {
 
 /**
  * @param message
- * @return any
+ * @return boolean
  */
-export function confirm(message: any): any {
+export function confirm(message: any): boolean {
   notImplemented();
   return null;
 }
@@ -1395,9 +1435,9 @@ export function level(attribute: any): number {
 }
 
 /**
- * @return any
+ * @return boolean
  */
-export function modified(): any {
+export function modified(): boolean {
   notImplemented();
   return null;
 }
@@ -1534,7 +1574,11 @@ export function serial(att1: any, att2: any, step: number): any {
  * @param parameter
  * @return any
  */
-export function submit(userProgram: any, submitParms: any, parameter: any): any {
+export function submit(
+  userProgram: any,
+  submitParms: any,
+  parameter: any
+): any {
   notImplemented();
   return null;
 }
@@ -1593,7 +1637,12 @@ export function xOrder(file: any, index: any): any {
  * @param errorMessage
  * @return any
  */
-export function calculate(expressionToEvaluate: any, variablesList: any, resultError: number, errorMessage: any): any {
+export function calculate(
+  expressionToEvaluate: any,
+  variablesList: any,
+  resultError: number,
+  errorMessage: any
+): any {
   notImplemented();
   return null;
 }
@@ -1609,7 +1658,6 @@ export function search(condition: any): any {
 // end Type
 
 export class Numeric {
-  
   /**
    * @return number
    */
@@ -1617,15 +1665,15 @@ export class Numeric {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -1634,7 +1682,7 @@ export class Numeric {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pDecimals
    * @return number
@@ -1643,7 +1691,7 @@ export class Numeric {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pDecimals
    * @return number
@@ -1652,7 +1700,7 @@ export class Numeric {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -1660,7 +1708,7 @@ export class Numeric {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pDecimals
    * @return number
@@ -1672,7 +1720,6 @@ export class Numeric {
 }
 
 export class Character {
-  
   /**
    * @param xSLTFile
    * @return any
@@ -1681,7 +1728,7 @@ export class Character {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -1692,7 +1739,6 @@ export class Character {
 }
 
 export class Date {
-  
   /**
    * @param days
    * @return Date
@@ -1701,7 +1747,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param months
    * @return Date
@@ -1710,7 +1756,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param years
    * @return Date
@@ -1719,7 +1765,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pDate
    * @return number
@@ -1728,7 +1774,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -1736,7 +1782,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -1744,7 +1790,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param language
    * @return any
@@ -1753,7 +1799,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return Date
    */
@@ -1761,15 +1807,15 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -1777,7 +1823,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param language
    * @return any
@@ -1786,7 +1832,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -1794,7 +1840,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return Date
    */
@@ -1802,7 +1848,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -1811,7 +1857,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pYear
    * @param pMonth
@@ -1822,7 +1868,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -1830,7 +1876,7 @@ export class Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param year
    * @param month
@@ -1844,18 +1890,16 @@ export class Date {
 }
 
 export class Image {
-  
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class LongVarchar {
-  
   /**
    * @param position
    * @return any
@@ -1864,25 +1908,25 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  contains(substr: any): any {
+  contains(substr: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  endsWith(substr: any): any {
+  endsWith(substr: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
    * @param startPosition
@@ -1892,24 +1936,24 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
-   * @return any
+   * @return boolean
    */
-  isMatch(regularExpression: any): any {
+  isMatch(regularExpression: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
    * @param startPosition
@@ -1919,7 +1963,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -1927,7 +1971,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
    * @return any
@@ -1936,7 +1980,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
    * @param replaceString
@@ -1946,7 +1990,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
    * @param replaceString
@@ -1956,7 +2000,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param length
    * @param fillChar
@@ -1966,7 +2010,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param length
    * @param fillChar
@@ -1976,7 +2020,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
    * @return any
@@ -1985,16 +2029,16 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  startsWith(substr: any): any {
+  startsWith(substr: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param startPosition
    * @param length
@@ -2004,7 +2048,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2012,7 +2056,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param decimalSeparator
    * @return number
@@ -2021,7 +2065,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2029,7 +2073,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2037,7 +2081,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2045,7 +2089,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2053,7 +2097,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -2062,7 +2106,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2070,7 +2114,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param xSLTFile
    * @return any
@@ -2079,7 +2123,7 @@ export class LongVarchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2090,7 +2134,6 @@ export class LongVarchar {
 }
 
 export class DateTime {
-  
   /**
    * @param milliseconds
    * @return Date
@@ -2099,7 +2142,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param seconds
    * @return Date
@@ -2108,7 +2151,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param minutes
    * @return Date
@@ -2117,7 +2160,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param hours
    * @return Date
@@ -2126,7 +2169,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param days
    * @return Date
@@ -2135,7 +2178,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param months
    * @return Date
@@ -2144,7 +2187,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param years
    * @return Date
@@ -2153,7 +2196,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pDate
    * @return number
@@ -2162,7 +2205,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2170,7 +2213,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2178,7 +2221,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param language
    * @return any
@@ -2187,7 +2230,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return Date
    */
@@ -2195,7 +2238,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2203,15 +2246,15 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2219,7 +2262,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2227,7 +2270,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param language
    * @return any
@@ -2236,7 +2279,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2244,7 +2287,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2252,7 +2295,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param dateTimeValue
    * @return number
@@ -2261,7 +2304,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2269,7 +2312,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return Date
    */
@@ -2277,7 +2320,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return Date
    */
@@ -2285,7 +2328,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param timezone
    * @return Date
@@ -2294,7 +2337,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -2303,7 +2346,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pYear
    * @param pMonth
@@ -2313,11 +2356,18 @@ export class DateTime {
    * @param pSec
    * @return any
    */
-  set(pYear: number, pMonth: number, pDay: number, pHour: number, pMin: number, pSec: number): any {
+  set(
+    pYear: number,
+    pMonth: number,
+    pDay: number,
+    pHour: number,
+    pMin: number,
+    pSec: number
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2325,7 +2375,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param year
    * @param month
@@ -2336,11 +2386,19 @@ export class DateTime {
    * @param millisecond
    * @return Date
    */
-  static new(year: number, month: number, day: number, hour: number, minute: number, second: number, millisecond: number): Date {
+  static new(
+    year: number,
+    month: number,
+    day: number,
+    hour: number,
+    minute: number,
+    second: number,
+    millisecond: number
+  ): Date {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return Date
    */
@@ -2348,7 +2406,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2356,7 +2414,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2364,7 +2422,7 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2372,19 +2430,18 @@ export class DateTime {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param timeZone
-   * @return any
+   * @return boolean
    */
-  static setTimeZone(timeZone: any): any {
+  static setTimeZone(timeZone: any): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class Varchar {
-  
   /**
    * @param position
    * @return any
@@ -2393,25 +2450,25 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  contains(substr: any): any {
+  contains(substr: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  endsWith(substr: any): any {
+  endsWith(substr: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
    * @param startPosition
@@ -2421,24 +2478,24 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
-   * @return any
+   * @return boolean
    */
-  isMatch(regularExpression: any): any {
+  isMatch(regularExpression: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
    * @param startPosition
@@ -2448,7 +2505,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -2456,7 +2513,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
    * @return any
@@ -2465,7 +2522,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
    * @param replaceString
@@ -2475,7 +2532,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
    * @param replaceString
@@ -2485,7 +2542,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param length
    * @param fillChar
@@ -2495,7 +2552,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param length
    * @param fillChar
@@ -2505,16 +2562,16 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param substr
-   * @return any
+   * @return boolean
    */
-  startsWith(substr: any): any {
+  startsWith(substr: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param startPosition
    * @param length
@@ -2524,7 +2581,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
    * @return any
@@ -2533,7 +2590,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2541,7 +2598,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param decimalSeparator
    * @return number
@@ -2550,7 +2607,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2558,7 +2615,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2566,7 +2623,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2574,7 +2631,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2582,7 +2639,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -2591,7 +2648,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2599,7 +2656,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param xSLTFile
    * @return any
@@ -2608,7 +2665,7 @@ export class Varchar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2619,15 +2676,14 @@ export class Varchar {
 }
 
 export class Binary {
-  
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -2636,7 +2692,7 @@ export class Binary {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2644,7 +2700,7 @@ export class Binary {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2652,7 +2708,7 @@ export class Binary {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param content
    * @return any
@@ -2663,36 +2719,10 @@ export class Binary {
   }
 }
 
-export class Boolean {
-  
-  /**
-   * @return any
-   */
-  isEmpty(): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @param value
-   * @return any
-   */
-  fromString(value: any): any {
-    notImplemented();
-    return null;
-  }
-  
-  /**
-   * @return any
-   */
-  toString(): any {
-    notImplemented();
-    return null;
-  }
-}
+// Type: Boolean
+// end Type
 
 export class MailMessage {
-  
   /**
    * @return any
    */
@@ -2700,7 +2730,7 @@ export class MailMessage {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -2709,7 +2739,7 @@ export class MailMessage {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param value
@@ -2719,9 +2749,9 @@ export class MailMessage {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mattachments: any;
   get attachments(): any {
@@ -2730,9 +2760,9 @@ export class MailMessage {
   set attachments(value: any) {
     this.mattachments = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mbCC: any;
   get bCC(): any {
@@ -2741,9 +2771,9 @@ export class MailMessage {
   set bCC(value: any) {
     this.mbCC = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcC: any;
   get cC(): any {
@@ -2752,9 +2782,9 @@ export class MailMessage {
   set cC(value: any) {
     this.mcC = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdateReceived: Date;
   get dateReceived(): Date {
@@ -2763,9 +2793,9 @@ export class MailMessage {
   set dateReceived(value: Date) {
     this.mdateReceived = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdateSent: Date;
   get dateSent(): Date {
@@ -2774,9 +2804,9 @@ export class MailMessage {
   set dateSent(value: Date) {
     this.mdateSent = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mfrom: any;
   get from(): any {
@@ -2785,9 +2815,9 @@ export class MailMessage {
   set from(value: any) {
     this.mfrom = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhTMLText: any;
   get hTMLText(): any {
@@ -2796,9 +2826,9 @@ export class MailMessage {
   set hTMLText(value: any) {
     this.mhTMLText = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msubject: any;
   get subject(): any {
@@ -2807,9 +2837,9 @@ export class MailMessage {
   set subject(value: any) {
     this.msubject = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtext: any;
   get text(): any {
@@ -2818,9 +2848,9 @@ export class MailMessage {
   set text(value: any) {
     this.mtext = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mto: any;
   get to(): any {
@@ -2829,9 +2859,9 @@ export class MailMessage {
   set to(value: any) {
     this.mto = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mreplyTo: any;
   get replyTo(): any {
@@ -2843,7 +2873,6 @@ export class MailMessage {
 }
 
 export class XMLWriter {
-  
   /**
    * @param file
    * @return any
@@ -2852,7 +2881,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2860,7 +2889,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2868,7 +2897,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param client
    * @return any
@@ -2877,7 +2906,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param response
    * @return any
@@ -2886,7 +2915,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param value
@@ -2896,7 +2925,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -2905,7 +2934,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -2913,7 +2942,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param value
@@ -2923,7 +2952,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param text
    * @return any
@@ -2932,7 +2961,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param text
    * @return any
@@ -2941,7 +2970,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param comment
    * @return any
@@ -2950,7 +2979,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param entity
    * @return any
@@ -2959,7 +2988,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param cData
    * @return any
@@ -2968,7 +2997,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param target
    * @param value
@@ -2978,17 +3007,17 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param encoding
    * @param standalone
    * @return any
    */
-  writeStartDocument(encoding: any, standalone: any): any {
+  writeStartDocument(encoding: any, standalone: boolean): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param subset
@@ -2998,7 +3027,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param uri
@@ -3009,7 +3038,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param pubId
@@ -3021,7 +3050,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param localName
    * @param prefix
@@ -3032,7 +3061,7 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param localName
    * @param nameSpaceURI
@@ -3043,9 +3072,9 @@ export class XMLWriter {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mindentation: number;
   get indentation(): number {
@@ -3054,9 +3083,9 @@ export class XMLWriter {
   set indentation(value: number) {
     this.mindentation = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mindentChar: any;
   get indentChar(): any {
@@ -3065,9 +3094,9 @@ export class XMLWriter {
   set indentChar(value: any) {
     this.mindentChar = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -3076,9 +3105,9 @@ export class XMLWriter {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -3087,9 +3116,9 @@ export class XMLWriter {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mresultingString: any;
   get resultingString(): any {
@@ -3101,7 +3130,6 @@ export class XMLWriter {
 }
 
 export class XMLReader {
-  
   /**
    * @param file
    * @return any
@@ -3110,7 +3138,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @return any
@@ -3119,7 +3147,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -3127,7 +3155,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param request
    * @return any
@@ -3136,7 +3164,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param client
    * @return any
@@ -3145,7 +3173,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param nodeType
    * @param name
@@ -3155,7 +3183,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3164,7 +3192,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -3173,7 +3201,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return number
@@ -3182,7 +3210,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -3190,7 +3218,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -3198,7 +3226,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -3206,7 +3234,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -3215,7 +3243,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -3224,7 +3252,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -3233,7 +3261,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -3242,7 +3270,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -3251,7 +3279,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3260,7 +3288,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -3269,7 +3297,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3278,7 +3306,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param encoding
    * @return any
@@ -3287,7 +3315,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param encoding
    * @return any
@@ -3296,7 +3324,7 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param uri
    * @param namespace
@@ -3306,9 +3334,9 @@ export class XMLReader {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnodeType: number;
   get nodeType(): number {
@@ -3317,9 +3345,9 @@ export class XMLReader {
   set nodeType(value: number) {
     this.mnodeType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -3328,9 +3356,9 @@ export class XMLReader {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvalue: any;
   get value(): any {
@@ -3339,9 +3367,9 @@ export class XMLReader {
   set value(value: any) {
     this.mvalue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mattributeCount: number;
   get attributeCount(): number {
@@ -3350,9 +3378,9 @@ export class XMLReader {
   set attributeCount(value: number) {
     this.mattributeCount = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -3361,9 +3389,9 @@ export class XMLReader {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrLineNumber: number;
   get errLineNumber(): number {
@@ -3372,9 +3400,9 @@ export class XMLReader {
   set errLineNumber(value: number) {
     this.merrLineNumber = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrLinePos: number;
   get errLinePos(): number {
@@ -3383,9 +3411,9 @@ export class XMLReader {
   set errLinePos(value: number) {
     this.merrLinePos = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -3394,9 +3422,9 @@ export class XMLReader {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private meOF: number;
   get eOF(): number {
@@ -3405,9 +3433,9 @@ export class XMLReader {
   set eOF(value: number) {
     this.meOF = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private misSimple: number;
   get isSimple(): number {
@@ -3416,9 +3444,9 @@ export class XMLReader {
   set isSimple(value: number) {
     this.misSimple = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprefix: any;
   get prefix(): any {
@@ -3427,9 +3455,9 @@ export class XMLReader {
   set prefix(value: any) {
     this.mprefix = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mlocalName: any;
   get localName(): any {
@@ -3438,9 +3466,9 @@ export class XMLReader {
   set localName(value: any) {
     this.mlocalName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnameSpaceURI: any;
   get nameSpaceURI(): any {
@@ -3449,9 +3477,9 @@ export class XMLReader {
   set nameSpaceURI(value: any) {
     this.mnameSpaceURI = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private melementType: number;
   get elementType(): number {
@@ -3460,9 +3488,9 @@ export class XMLReader {
   set elementType(value: number) {
     this.melementType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mendTagType: number;
   get endTagType(): number {
@@ -3471,9 +3499,9 @@ export class XMLReader {
   set endTagType(value: number) {
     this.mendTagType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtextType: number;
   get textType(): number {
@@ -3482,9 +3510,9 @@ export class XMLReader {
   set textType(value: number) {
     this.mtextType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcommentType: number;
   get commentType(): number {
@@ -3493,9 +3521,9 @@ export class XMLReader {
   set commentType(value: number) {
     this.mcommentType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mwhiteSpaceType: number;
   get whiteSpaceType(): number {
@@ -3504,9 +3532,9 @@ export class XMLReader {
   set whiteSpaceType(value: number) {
     this.mwhiteSpaceType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcDataType: number;
   get cDataType(): number {
@@ -3515,9 +3543,9 @@ export class XMLReader {
   set cDataType(value: number) {
     this.mcDataType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessingInstructionType: number;
   get processingInstructionType(): number {
@@ -3526,9 +3554,9 @@ export class XMLReader {
   set processingInstructionType(value: number) {
     this.mprocessingInstructionType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdoctypeType: number;
   get doctypeType(): number {
@@ -3537,9 +3565,9 @@ export class XMLReader {
   set doctypeType(value: number) {
     this.mdoctypeType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mreadExternalEntities: number;
   get readExternalEntities(): number {
@@ -3548,9 +3576,9 @@ export class XMLReader {
   set readExternalEntities(value: number) {
     this.mreadExternalEntities = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mremoveWhiteSpaces: number;
   get removeWhiteSpaces(): number {
@@ -3559,9 +3587,9 @@ export class XMLReader {
   set removeWhiteSpaces(value: number) {
     this.mremoveWhiteSpaces = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mremoveWhiteNodes: number;
   get removeWhiteNodes(): number {
@@ -3570,9 +3598,9 @@ export class XMLReader {
   set removeWhiteNodes(value: number) {
     this.mremoveWhiteNodes = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msimpleElements: number;
   get simpleElements(): number {
@@ -3581,9 +3609,9 @@ export class XMLReader {
   set simpleElements(value: number) {
     this.msimpleElements = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mlinesNormalization: number;
   get linesNormalization(): number {
@@ -3592,9 +3620,9 @@ export class XMLReader {
   set linesNormalization(value: number) {
     this.mlinesNormalization = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstopOnInvalid: number;
   get stopOnInvalid(): number {
@@ -3603,9 +3631,9 @@ export class XMLReader {
   set stopOnInvalid(value: number) {
     this.mstopOnInvalid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvalidationType: number;
   get validationType(): number {
@@ -3617,7 +3645,6 @@ export class XMLReader {
 }
 
 export class HttpClient {
-  
   /**
    * @param authType
    * @param realm
@@ -3625,11 +3652,16 @@ export class HttpClient {
    * @param password
    * @return any
    */
-  addAuthentication(authType: number, realm: any, user: any, password: any): any {
+  addAuthentication(
+    authType: number,
+    realm: any,
+    user: any,
+    password: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param authType
    * @param realm
@@ -3637,11 +3669,16 @@ export class HttpClient {
    * @param password
    * @return any
    */
-  addProxyAuthentication(authType: number, realm: any, user: any, password: any): any {
+  addProxyAuthentication(
+    authType: number,
+    realm: any,
+    user: any,
+    password: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param fileName
    * @param name
@@ -3651,7 +3688,7 @@ export class HttpClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param value
@@ -3661,7 +3698,7 @@ export class HttpClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -3670,7 +3707,7 @@ export class HttpClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param value
@@ -3680,7 +3717,7 @@ export class HttpClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param method
    * @param url
@@ -3690,7 +3727,7 @@ export class HttpClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3699,7 +3736,7 @@ export class HttpClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3708,7 +3745,7 @@ export class HttpClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -3716,9 +3753,9 @@ export class HttpClient {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mbaseUrl: any;
   get baseUrl(): any {
@@ -3727,9 +3764,9 @@ export class HttpClient {
   set baseUrl(value: any) {
     this.mbaseUrl = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mbasic: number;
   get basic(): number {
@@ -3738,9 +3775,9 @@ export class HttpClient {
   set basic(value: number) {
     this.mbasic = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdigest: number;
   get digest(): number {
@@ -3749,9 +3786,9 @@ export class HttpClient {
   set digest(value: number) {
     this.mdigest = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -3760,9 +3797,9 @@ export class HttpClient {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -3771,9 +3808,9 @@ export class HttpClient {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhost: any;
   get host(): any {
@@ -3782,9 +3819,9 @@ export class HttpClient {
   set host(value: any) {
     this.mhost = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mport: number;
   get port(): number {
@@ -3793,9 +3830,9 @@ export class HttpClient {
   set port(value: number) {
     this.mport = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyServerHost: any;
   get proxyServerHost(): any {
@@ -3804,9 +3841,9 @@ export class HttpClient {
   set proxyServerHost(value: any) {
     this.mproxyServerHost = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyServerPort: number;
   get proxyServerPort(): number {
@@ -3815,9 +3852,9 @@ export class HttpClient {
   set proxyServerPort(value: number) {
     this.mproxyServerPort = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mreasonLine: any;
   get reasonLine(): any {
@@ -3826,9 +3863,9 @@ export class HttpClient {
   set reasonLine(value: any) {
     this.mreasonLine = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msecure: number;
   get secure(): number {
@@ -3837,9 +3874,9 @@ export class HttpClient {
   set secure(value: number) {
     this.msecure = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstatusCode: number;
   get statusCode(): number {
@@ -3848,9 +3885,9 @@ export class HttpClient {
   set statusCode(value: number) {
     this.mstatusCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeout: number;
   get timeout(): number {
@@ -3862,7 +3899,6 @@ export class HttpClient {
 }
 
 export class HttpResponse {
-  
   /**
    * @param name
    * @param value
@@ -3872,7 +3908,7 @@ export class HttpResponse {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -3881,7 +3917,7 @@ export class HttpResponse {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3890,7 +3926,7 @@ export class HttpResponse {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param cookie
    * @return number
@@ -3899,9 +3935,9 @@ export class HttpResponse {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -3910,9 +3946,9 @@ export class HttpResponse {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -3924,7 +3960,6 @@ export class HttpResponse {
 }
 
 export class HttpRequest {
-  
   /**
    * @return any
    */
@@ -3932,7 +3967,7 @@ export class HttpRequest {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3941,7 +3976,7 @@ export class HttpRequest {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3950,7 +3985,7 @@ export class HttpRequest {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -3959,9 +3994,9 @@ export class HttpRequest {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mbaseUrl: any;
   get baseUrl(): any {
@@ -3970,9 +4005,9 @@ export class HttpRequest {
   set baseUrl(value: any) {
     this.mbaseUrl = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -3981,9 +4016,9 @@ export class HttpRequest {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -3992,9 +4027,9 @@ export class HttpRequest {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmethod: any;
   get method(): any {
@@ -4003,9 +4038,9 @@ export class HttpRequest {
   set method(value: any) {
     this.mmethod = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mqueryString: any;
   get queryString(): any {
@@ -4014,9 +4049,9 @@ export class HttpRequest {
   set queryString(value: any) {
     this.mqueryString = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mreferrer: any;
   get referrer(): any {
@@ -4025,9 +4060,9 @@ export class HttpRequest {
   set referrer(value: any) {
     this.mreferrer = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mremoteAddress: any;
   get remoteAddress(): any {
@@ -4036,9 +4071,9 @@ export class HttpRequest {
   set remoteAddress(value: any) {
     this.mremoteAddress = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mscriptName: any;
   get scriptName(): any {
@@ -4047,9 +4082,9 @@ export class HttpRequest {
   set scriptName(value: any) {
     this.mscriptName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mscriptPath: any;
   get scriptPath(): any {
@@ -4058,9 +4093,9 @@ export class HttpRequest {
   set scriptPath(value: any) {
     this.mscriptPath = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msecure: number;
   get secure(): number {
@@ -4069,9 +4104,9 @@ export class HttpRequest {
   set secure(value: number) {
     this.msecure = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mserverHost: any;
   get serverHost(): any {
@@ -4080,9 +4115,9 @@ export class HttpRequest {
   set serverHost(value: any) {
     this.mserverHost = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mserverPort: number;
   get serverPort(): number {
@@ -4094,7 +4129,6 @@ export class HttpRequest {
 }
 
 export class StringCollection {
-  
   /**
    * @return any
    */
@@ -4102,7 +4136,7 @@ export class StringCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param element
    * @return any
@@ -4111,7 +4145,7 @@ export class StringCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -4120,9 +4154,9 @@ export class StringCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -4134,9 +4168,8 @@ export class StringCollection {
 }
 
 export class MailRecipient {
-  
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -4145,9 +4178,9 @@ export class MailRecipient {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private maddress: any;
   get address(): any {
@@ -4159,7 +4192,6 @@ export class MailRecipient {
 }
 
 export class RecipientCollection {
-  
   /**
    * @return any
    */
@@ -4167,7 +4199,7 @@ export class RecipientCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param address
@@ -4177,7 +4209,7 @@ export class RecipientCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param recipient
    * @return any
@@ -4186,7 +4218,7 @@ export class RecipientCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -4195,9 +4227,9 @@ export class RecipientCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -4209,7 +4241,6 @@ export class RecipientCollection {
 }
 
 export class SMTPSession {
-  
   /**
    * @return number
    */
@@ -4217,7 +4248,7 @@ export class SMTPSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4225,7 +4256,7 @@ export class SMTPSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return number
@@ -4234,9 +4265,9 @@ export class SMTPSession {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mattachDir: any;
   get attachDir(): any {
@@ -4245,9 +4276,9 @@ export class SMTPSession {
   set attachDir(value: any) {
     this.mattachDir = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDisplay: number;
   get errDisplay(): number {
@@ -4256,9 +4287,9 @@ export class SMTPSession {
   set errDisplay(value: number) {
     this.merrDisplay = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -4267,9 +4298,9 @@ export class SMTPSession {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -4278,9 +4309,9 @@ export class SMTPSession {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhost: any;
   get host(): any {
@@ -4289,9 +4320,9 @@ export class SMTPSession {
   set host(value: any) {
     this.mhost = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mport: number;
   get port(): number {
@@ -4300,9 +4331,9 @@ export class SMTPSession {
   set port(value: number) {
     this.mport = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msender: any;
   get sender(): any {
@@ -4311,9 +4342,9 @@ export class SMTPSession {
   set sender(value: any) {
     this.msender = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mauthentication: number;
   get authentication(): number {
@@ -4322,9 +4353,9 @@ export class SMTPSession {
   set authentication(value: number) {
     this.mauthentication = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msecure: number;
   get secure(): number {
@@ -4333,9 +4364,9 @@ export class SMTPSession {
   set secure(value: number) {
     this.msecure = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muserName: any;
   get userName(): any {
@@ -4344,9 +4375,9 @@ export class SMTPSession {
   set userName(value: any) {
     this.muserName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpassword: any;
   get password(): any {
@@ -4355,9 +4386,9 @@ export class SMTPSession {
   set password(value: any) {
     this.mpassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeout: number;
   get timeout(): number {
@@ -4369,7 +4400,6 @@ export class SMTPSession {
 }
 
 export class POP3Session {
-  
   /**
    * @return number
    */
@@ -4377,7 +4407,7 @@ export class POP3Session {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4385,7 +4415,7 @@ export class POP3Session {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4393,7 +4423,7 @@ export class POP3Session {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4401,7 +4431,7 @@ export class POP3Session {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return number
@@ -4410,7 +4440,7 @@ export class POP3Session {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param uID
    * @return number
@@ -4419,7 +4449,7 @@ export class POP3Session {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4427,9 +4457,9 @@ export class POP3Session {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mattachDir: any;
   get attachDir(): any {
@@ -4438,9 +4468,9 @@ export class POP3Session {
   set attachDir(value: any) {
     this.mattachDir = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDisplay: number;
   get errDisplay(): number {
@@ -4449,9 +4479,9 @@ export class POP3Session {
   set errDisplay(value: number) {
     this.merrDisplay = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -4460,9 +4490,9 @@ export class POP3Session {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -4471,9 +4501,9 @@ export class POP3Session {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhost: any;
   get host(): any {
@@ -4482,9 +4512,9 @@ export class POP3Session {
   set host(value: any) {
     this.mhost = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mport: number;
   get port(): number {
@@ -4493,9 +4523,9 @@ export class POP3Session {
   set port(value: number) {
     this.mport = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muserName: any;
   get userName(): any {
@@ -4504,9 +4534,9 @@ export class POP3Session {
   set userName(value: any) {
     this.muserName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpassword: any;
   get password(): any {
@@ -4515,9 +4545,9 @@ export class POP3Session {
   set password(value: any) {
     this.mpassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeout: number;
   get timeout(): number {
@@ -4526,9 +4556,9 @@ export class POP3Session {
   set timeout(value: number) {
     this.mtimeout = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnewMessages: number;
   get newMessages(): number {
@@ -4537,9 +4567,9 @@ export class POP3Session {
   set newMessages(value: number) {
     this.mnewMessages = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msecure: number;
   get secure(): number {
@@ -4548,9 +4578,9 @@ export class POP3Session {
   set secure(value: number) {
     this.msecure = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -4562,7 +4592,6 @@ export class POP3Session {
 }
 
 export class OutlookSession {
-  
   /**
    * @param folderName
    * @return number
@@ -4571,7 +4600,7 @@ export class OutlookSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4579,7 +4608,7 @@ export class OutlookSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4587,7 +4616,7 @@ export class OutlookSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return number
@@ -4596,7 +4625,7 @@ export class OutlookSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return number
@@ -4605,9 +4634,9 @@ export class OutlookSession {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mattachDir: any;
   get attachDir(): any {
@@ -4616,9 +4645,9 @@ export class OutlookSession {
   set attachDir(value: any) {
     this.mattachDir = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDisplay: number;
   get errDisplay(): number {
@@ -4627,9 +4656,9 @@ export class OutlookSession {
   set errDisplay(value: number) {
     this.merrDisplay = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -4638,9 +4667,9 @@ export class OutlookSession {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -4649,9 +4678,9 @@ export class OutlookSession {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnewMessages: number;
   get newMessages(): number {
@@ -4660,9 +4689,9 @@ export class OutlookSession {
   set newMessages(value: number) {
     this.mnewMessages = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -4671,9 +4700,9 @@ export class OutlookSession {
   set count(value: number) {
     this.mcount = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private meditWindow: number;
   get editWindow(): number {
@@ -4685,7 +4714,6 @@ export class OutlookSession {
 }
 
 export class MAPISession {
-  
   /**
    * @return number
    */
@@ -4693,7 +4721,7 @@ export class MAPISession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4701,7 +4729,7 @@ export class MAPISession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param folderName
    * @return number
@@ -4710,7 +4738,7 @@ export class MAPISession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4718,7 +4746,7 @@ export class MAPISession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4726,7 +4754,7 @@ export class MAPISession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return number
@@ -4735,7 +4763,7 @@ export class MAPISession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return number
@@ -4744,9 +4772,9 @@ export class MAPISession {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mattachDir: any;
   get attachDir(): any {
@@ -4755,9 +4783,9 @@ export class MAPISession {
   set attachDir(value: any) {
     this.mattachDir = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDisplay: number;
   get errDisplay(): number {
@@ -4766,9 +4794,9 @@ export class MAPISession {
   set errDisplay(value: number) {
     this.merrDisplay = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -4777,9 +4805,9 @@ export class MAPISession {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -4788,9 +4816,9 @@ export class MAPISession {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnewMessages: number;
   get newMessages(): number {
@@ -4799,9 +4827,9 @@ export class MAPISession {
   set newMessages(value: number) {
     this.mnewMessages = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmarkAsRead: number;
   get markAsRead(): number {
@@ -4810,9 +4838,9 @@ export class MAPISession {
   set markAsRead(value: number) {
     this.mmarkAsRead = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -4821,9 +4849,9 @@ export class MAPISession {
   set count(value: number) {
     this.mcount = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private meditWindow: number;
   get editWindow(): number {
@@ -4832,9 +4860,9 @@ export class MAPISession {
   set editWindow(value: number) {
     this.meditWindow = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprofile: any;
   get profile(): any {
@@ -4846,7 +4874,6 @@ export class MAPISession {
 }
 
 export class WordDocument {
-  
   /**
    * @param fileName
    * @return number
@@ -4855,7 +4882,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4863,7 +4890,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4871,7 +4898,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4879,7 +4906,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param fileName
    * @param fileType
@@ -4887,11 +4914,16 @@ export class WordDocument {
    * @param lineBreaks
    * @return number
    */
-  saveAs(fileName: any, fileType: any, dOSText: number, lineBreaks: number): number {
+  saveAs(
+    fileName: any,
+    fileType: any,
+    dOSText: number,
+    lineBreaks: number
+  ): number {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4899,7 +4931,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4907,7 +4939,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param text
    * @return number
@@ -4916,7 +4948,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param preview
    * @param background
@@ -4926,7 +4958,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param oldValue
    * @param newValue
@@ -4934,11 +4966,16 @@ export class WordDocument {
    * @param matchWholeWord
    * @return number
    */
-  replace(oldValue: any, newValue: any, matchCase: number, matchWholeWord: number): number {
+  replace(
+    oldValue: any,
+    newValue: any,
+    matchCase: number,
+    matchWholeWord: number
+  ): number {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -4946,7 +4983,7 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param macroName
    * @param arg
@@ -4956,9 +4993,9 @@ export class WordDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mreadOnly: number;
   get readOnly(): number {
@@ -4967,9 +5004,9 @@ export class WordDocument {
   set readOnly(value: number) {
     this.mreadOnly = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtemplate: any;
   get template(): any {
@@ -4978,9 +5015,9 @@ export class WordDocument {
   set template(value: any) {
     this.mtemplate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtext: any;
   get text(): any {
@@ -4989,9 +5026,9 @@ export class WordDocument {
   set text(value: any) {
     this.mtext = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDisplay: number;
   get errDisplay(): number {
@@ -5000,9 +5037,9 @@ export class WordDocument {
   set errDisplay(value: number) {
     this.merrDisplay = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -5011,9 +5048,9 @@ export class WordDocument {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -5022,9 +5059,9 @@ export class WordDocument {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmacroReturnText: any;
   get macroReturnText(): any {
@@ -5033,9 +5070,9 @@ export class WordDocument {
   set macroReturnText(value: any) {
     this.mmacroReturnText = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmacroReturnNumber: number;
   get macroReturnNumber(): number {
@@ -5044,9 +5081,9 @@ export class WordDocument {
   set macroReturnNumber(value: number) {
     this.mmacroReturnNumber = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmacroReturnDate: Date;
   get macroReturnDate(): Date {
@@ -5058,7 +5095,6 @@ export class WordDocument {
 }
 
 export class ExcelDocument {
-  
   /**
    * @param fileName
    * @return number
@@ -5067,7 +5103,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -5075,7 +5111,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -5083,7 +5119,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -5091,7 +5127,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -5099,7 +5135,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -5107,7 +5143,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -5115,7 +5151,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param preview
    * @return number
@@ -5124,7 +5160,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param sheetName
    * @return number
@@ -5133,7 +5169,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param sheetName
    * @return number
@@ -5142,7 +5178,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param macroName
    * @param arg
@@ -5152,7 +5188,7 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param row
    * @param col
@@ -5164,9 +5200,9 @@ export class ExcelDocument {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mreadOnly: number;
   get readOnly(): number {
@@ -5175,9 +5211,9 @@ export class ExcelDocument {
   set readOnly(value: number) {
     this.mreadOnly = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mautoFit: number;
   get autoFit(): number {
@@ -5186,9 +5222,9 @@ export class ExcelDocument {
   set autoFit(value: number) {
     this.mautoFit = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private museAutomation: number;
   get useAutomation(): number {
@@ -5197,9 +5233,9 @@ export class ExcelDocument {
   set useAutomation(value: number) {
     this.museAutomation = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtemplate: any;
   get template(): any {
@@ -5208,9 +5244,9 @@ export class ExcelDocument {
   set template(value: any) {
     this.mtemplate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdelimiter: any;
   get delimiter(): any {
@@ -5219,9 +5255,9 @@ export class ExcelDocument {
   set delimiter(value: any) {
     this.mdelimiter = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDisplay: number;
   get errDisplay(): number {
@@ -5230,9 +5266,9 @@ export class ExcelDocument {
   set errDisplay(value: number) {
     this.merrDisplay = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -5241,9 +5277,9 @@ export class ExcelDocument {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -5252,9 +5288,9 @@ export class ExcelDocument {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmacroReturnText: any;
   get macroReturnText(): any {
@@ -5263,9 +5299,9 @@ export class ExcelDocument {
   set macroReturnText(value: any) {
     this.mmacroReturnText = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmacroReturnNumber: number;
   get macroReturnNumber(): number {
@@ -5274,9 +5310,9 @@ export class ExcelDocument {
   set macroReturnNumber(value: number) {
     this.mmacroReturnNumber = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmacroReturnDate: Date;
   get macroReturnDate(): Date {
@@ -5288,7 +5324,6 @@ export class ExcelDocument {
 }
 
 export class WebSession {
-  
   /**
    * @return any
    */
@@ -5296,7 +5331,7 @@ export class WebSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -5304,7 +5339,7 @@ export class WebSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param key
    * @return any
@@ -5313,7 +5348,7 @@ export class WebSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param key
    * @return any
@@ -5322,7 +5357,7 @@ export class WebSession {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param key
    * @param value
@@ -5332,9 +5367,9 @@ export class WebSession {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: any;
   get id(): any {
@@ -5346,7 +5381,6 @@ export class WebSession {
 }
 
 export class WebWrapper {
-  
   /**
    * @return any
    */
@@ -5354,9 +5388,9 @@ export class WebWrapper {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mbaseURL: any;
   get baseURL(): any {
@@ -5365,9 +5399,9 @@ export class WebWrapper {
   set baseURL(value: any) {
     this.mbaseURL = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mobject: any;
   get object(): any {
@@ -5382,9 +5416,8 @@ export class WebWrapper {
 // end Type
 
 export class ExcelCells {
-  
   /**
-   * 
+   *
    */
   private mvalue: any;
   get value(): any {
@@ -5393,9 +5426,9 @@ export class ExcelCells {
   set value(value: any) {
     this.mvalue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtext: any;
   get text(): any {
@@ -5404,9 +5437,9 @@ export class ExcelCells {
   set text(value: any) {
     this.mtext = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnum: number;
   get num(): number {
@@ -5415,9 +5448,9 @@ export class ExcelCells {
   set num(value: number) {
     this.mnum = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdate: Date;
   get date(): Date {
@@ -5426,9 +5459,9 @@ export class ExcelCells {
   set date(value: Date) {
     this.mdate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mfont: any;
   get font(): any {
@@ -5437,9 +5470,9 @@ export class ExcelCells {
   set font(value: any) {
     this.mfont = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcolor: number;
   get color(): number {
@@ -5448,9 +5481,9 @@ export class ExcelCells {
   set color(value: number) {
     this.mcolor = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msize: number;
   get size(): number {
@@ -5459,9 +5492,9 @@ export class ExcelCells {
   set size(value: number) {
     this.msize = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: any;
   get type(): any {
@@ -5470,9 +5503,9 @@ export class ExcelCells {
   set type(value: any) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mbold: number;
   get bold(): number {
@@ -5481,9 +5514,9 @@ export class ExcelCells {
   set bold(value: number) {
     this.mbold = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mitalic: number;
   get italic(): number {
@@ -5492,9 +5525,9 @@ export class ExcelCells {
   set italic(value: number) {
     this.mitalic = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private munderline: number;
   get underline(): number {
@@ -5506,7 +5539,6 @@ export class ExcelCells {
 }
 
 export class DBConnection {
-  
   /**
    * @return number
    */
@@ -5514,7 +5546,7 @@ export class DBConnection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -5522,9 +5554,9 @@ export class DBConnection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private museExternalDatasource: number;
   get useExternalDatasource(): number {
@@ -5533,9 +5565,9 @@ export class DBConnection {
   set useExternalDatasource(value: number) {
     this.museExternalDatasource = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mexternalDatasourceName: any;
   get externalDatasourceName(): any {
@@ -5544,9 +5576,9 @@ export class DBConnection {
   set externalDatasourceName(value: any) {
     this.mexternalDatasourceName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mjDBCDriverName: any;
   get jDBCDriverName(): any {
@@ -5555,9 +5587,9 @@ export class DBConnection {
   set jDBCDriverName(value: any) {
     this.mjDBCDriverName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mjDBCDriverURL: any;
   get jDBCDriverURL(): any {
@@ -5566,9 +5598,9 @@ export class DBConnection {
   set jDBCDriverURL(value: any) {
     this.mjDBCDriverURL = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private moDBCFileDatasourceName: any;
   get oDBCFileDatasourceName(): any {
@@ -5577,9 +5609,9 @@ export class DBConnection {
   set oDBCFileDatasourceName(value: any) {
     this.moDBCFileDatasourceName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private moDBCDatasourceName: any;
   get oDBCDatasourceName(): any {
@@ -5588,9 +5620,9 @@ export class DBConnection {
   set oDBCDatasourceName(value: any) {
     this.moDBCDatasourceName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private moDBCDriverName: any;
   get oDBCDriverName(): any {
@@ -5599,9 +5631,9 @@ export class DBConnection {
   set oDBCDriverName(value: any) {
     this.moDBCDriverName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muserName: any;
   get userName(): any {
@@ -5610,9 +5642,9 @@ export class DBConnection {
   set userName(value: any) {
     this.muserName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muserPassword: any;
   get userPassword(): any {
@@ -5621,9 +5653,9 @@ export class DBConnection {
   set userPassword(value: any) {
     this.muserPassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mconnectionData: any;
   get connectionData(): any {
@@ -5632,9 +5664,9 @@ export class DBConnection {
   set connectionData(value: any) {
     this.mconnectionData = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mshowPrompt: number;
   get showPrompt(): number {
@@ -5643,9 +5675,9 @@ export class DBConnection {
   set showPrompt(value: number) {
     this.mshowPrompt = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mconnectionMethod: number;
   get connectionMethod(): number {
@@ -5654,9 +5686,9 @@ export class DBConnection {
   set connectionMethod(value: number) {
     this.mconnectionMethod = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -5665,9 +5697,9 @@ export class DBConnection {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -5676,9 +5708,9 @@ export class DBConnection {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdatastoreName: any;
   get datastoreName(): any {
@@ -5690,9 +5722,8 @@ export class DBConnection {
 }
 
 export class Location {
-  
   /**
-   * 
+   *
    */
   private mhost: any;
   get host(): any {
@@ -5701,9 +5732,9 @@ export class Location {
   set host(value: any) {
     this.mhost = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mport: number;
   get port(): number {
@@ -5712,9 +5743,9 @@ export class Location {
   set port(value: number) {
     this.mport = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msecure: number;
   get secure(): number {
@@ -5723,9 +5754,9 @@ export class Location {
   set secure(value: number) {
     this.msecure = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mbaseUrl: any;
   get baseUrl(): any {
@@ -5734,9 +5765,9 @@ export class Location {
   set baseUrl(value: any) {
     this.mbaseUrl = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mresourceName: any;
   get resourceName(): any {
@@ -5745,9 +5776,9 @@ export class Location {
   set resourceName(value: any) {
     this.mresourceName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeout: number;
   get timeout(): number {
@@ -5756,9 +5787,9 @@ export class Location {
   set timeout(value: number) {
     this.mtimeout = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mauthentication: number;
   get authentication(): number {
@@ -5767,9 +5798,9 @@ export class Location {
   set authentication(value: number) {
     this.mauthentication = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mauthenticationMethod: number;
   get authenticationMethod(): number {
@@ -5778,9 +5809,9 @@ export class Location {
   set authenticationMethod(value: number) {
     this.mauthenticationMethod = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mauthenticationUser: any;
   get authenticationUser(): any {
@@ -5789,9 +5820,9 @@ export class Location {
   set authenticationUser(value: any) {
     this.mauthenticationUser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mauthenticationRealm: any;
   get authenticationRealm(): any {
@@ -5800,9 +5831,9 @@ export class Location {
   set authenticationRealm(value: any) {
     this.mauthenticationRealm = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mauthenticationPassword: any;
   get authenticationPassword(): any {
@@ -5811,9 +5842,9 @@ export class Location {
   set authenticationPassword(value: any) {
     this.mauthenticationPassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcancelOnError: number;
   get cancelOnError(): number {
@@ -5822,9 +5853,9 @@ export class Location {
   set cancelOnError(value: number) {
     this.mcancelOnError = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyServerHost: any;
   get proxyServerHost(): any {
@@ -5833,9 +5864,9 @@ export class Location {
   set proxyServerHost(value: any) {
     this.mproxyServerHost = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyServerPort: number;
   get proxyServerPort(): number {
@@ -5844,9 +5875,9 @@ export class Location {
   set proxyServerPort(value: number) {
     this.mproxyServerPort = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyAuthentication: number;
   get proxyAuthentication(): number {
@@ -5855,9 +5886,9 @@ export class Location {
   set proxyAuthentication(value: number) {
     this.mproxyAuthentication = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyAuthenticationMethod: number;
   get proxyAuthenticationMethod(): number {
@@ -5866,9 +5897,9 @@ export class Location {
   set proxyAuthenticationMethod(value: number) {
     this.mproxyAuthenticationMethod = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyAuthenticationUser: any;
   get proxyAuthenticationUser(): any {
@@ -5877,9 +5908,9 @@ export class Location {
   set proxyAuthenticationUser(value: any) {
     this.mproxyAuthenticationUser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyAuthenticationRealm: any;
   get proxyAuthenticationRealm(): any {
@@ -5888,9 +5919,9 @@ export class Location {
   set proxyAuthenticationRealm(value: any) {
     this.mproxyAuthenticationRealm = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproxyAuthenticationPassword: any;
   get proxyAuthenticationPassword(): any {
@@ -5899,9 +5930,9 @@ export class Location {
   set proxyAuthenticationPassword(value: any) {
     this.mproxyAuthenticationPassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mwSAddressing: any;
   get wSAddressing(): any {
@@ -5913,7 +5944,6 @@ export class Location {
 }
 
 export class WApiCalendar {
-  
   /**
    * @param date
    * @param isHoliday
@@ -5923,7 +5953,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param date
    * @param isWeekend
@@ -5933,7 +5963,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param date
    * @param isWorkday
@@ -5943,7 +5973,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param month
    * @param year
@@ -5954,7 +5984,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param month
    * @param year
@@ -5965,7 +5995,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param startDate
    * @param nextWorkday
@@ -5975,7 +6005,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param startDate
    * @param days
@@ -5986,7 +6016,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param startTime
    * @param seconds
@@ -5997,7 +6027,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param date
    * @param duration
@@ -6007,7 +6037,7 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param startDate
    * @param endDate
@@ -6018,9 +6048,9 @@ export class WApiCalendar {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -6029,9 +6059,9 @@ export class WApiCalendar {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -6040,9 +6070,9 @@ export class WApiCalendar {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdescription: any;
   get description(): any {
@@ -6054,9 +6084,8 @@ export class WApiCalendar {
 }
 
 export class RegExMatch {
-  
   /**
-   * 
+   *
    */
   private mvalue: any;
   get value(): any {
@@ -6065,9 +6094,9 @@ export class RegExMatch {
   set value(value: any) {
     this.mvalue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mgroups: any;
   get groups(): any {
@@ -6082,9 +6111,8 @@ export class RegExMatch {
 // end Type
 
 export class ContentInfo {
-  
   /**
-   * 
+   *
    */
   private mtitle: any;
   get title(): any {
@@ -6093,9 +6121,9 @@ export class ContentInfo {
   set title(value: any) {
     this.mtitle = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mviewer: any;
   get viewer(): any {
@@ -6104,9 +6132,9 @@ export class ContentInfo {
   set viewer(value: any) {
     this.mviewer = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: any;
   get type(): any {
@@ -6115,9 +6143,9 @@ export class ContentInfo {
   set type(value: any) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: any;
   get id(): any {
@@ -6132,7 +6160,6 @@ export class ContentInfo {
 // end Type
 
 export class SearchResult {
-  
   /**
    * @return any
    */
@@ -6140,9 +6167,9 @@ export class SearchResult {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmaxItems: number;
   get maxItems(): number {
@@ -6151,9 +6178,9 @@ export class SearchResult {
   set maxItems(value: number) {
     this.mmaxItems = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private melapsedTime: number;
   get elapsedTime(): number {
@@ -6165,7 +6192,6 @@ export class SearchResult {
 }
 
 export class SearchResultCollection {
-  
   /**
    * @param index
    * @return any
@@ -6174,9 +6200,9 @@ export class SearchResultCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -6188,9 +6214,8 @@ export class SearchResultCollection {
 }
 
 export class SearchResultItem {
-  
   /**
-   * 
+   *
    */
   private mtype: any;
   get type(): any {
@@ -6199,9 +6224,9 @@ export class SearchResultItem {
   set type(value: any) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: any;
   get id(): any {
@@ -6210,9 +6235,9 @@ export class SearchResultItem {
   set id(value: any) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtitle: any;
   get title(): any {
@@ -6221,9 +6246,9 @@ export class SearchResultItem {
   set title(value: any) {
     this.mtitle = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mviewer: any;
   get viewer(): any {
@@ -6232,9 +6257,9 @@ export class SearchResultItem {
   set viewer(value: any) {
     this.mviewer = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeStamp: Date;
   get timeStamp(): Date {
@@ -6243,9 +6268,9 @@ export class SearchResultItem {
   set timeStamp(value: Date) {
     this.mtimeStamp = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mscore: number;
   get score(): number {
@@ -6257,9 +6282,8 @@ export class SearchResultItem {
 }
 
 export class WApiEvent {
-  
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -6268,9 +6292,9 @@ export class WApiEvent {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeStamp: Date;
   get timeStamp(): Date {
@@ -6279,9 +6303,9 @@ export class WApiEvent {
   set timeStamp(value: Date) {
     this.mtimeStamp = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: number;
   get type(): number {
@@ -6290,9 +6314,9 @@ export class WApiEvent {
   set type(value: number) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msource: any;
   get source(): any {
@@ -6301,9 +6325,9 @@ export class WApiEvent {
   set source(value: any) {
     this.msource = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtarget: any;
   get target(): any {
@@ -6312,9 +6336,9 @@ export class WApiEvent {
   set target(value: any) {
     this.mtarget = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetType: number;
   get targetType(): number {
@@ -6323,9 +6347,9 @@ export class WApiEvent {
   set targetType(value: number) {
     this.mtargetType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -6337,7 +6361,6 @@ export class WApiEvent {
 }
 
 export class Collection {
-  
   /**
    * @param item
    * @param index
@@ -6347,7 +6370,7 @@ export class Collection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -6355,7 +6378,7 @@ export class Collection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -6364,7 +6387,7 @@ export class Collection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -6373,7 +6396,7 @@ export class Collection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param item
    * @return number
@@ -6382,66 +6405,66 @@ export class Collection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param includeHeader
    * @param includeState
    * @return any
    */
-  toXml(includeHeader: any, includeState: any): any {
+  toXml(includeHeader: boolean, includeState: boolean): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXml(name: any, outMessages: any): any {
+  fromXml(name: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXmlFile(name: any, outMessages: any): any {
+  fromXmlFile(name: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param includeState
    * @return any
    */
-  toJson(includeState: any): any {
+  toJson(includeState: boolean): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJson(source: any, outMessages: any): any {
+  fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJsonFile(source: any, outMessages: any): any {
+  fromJsonFile(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -6449,7 +6472,7 @@ export class Collection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param columnListString
    * @return any
@@ -6458,9 +6481,9 @@ export class Collection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -6469,9 +6492,9 @@ export class Collection {
   set count(value: number) {
     this.mcount = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcurrentItem: any;
   get currentItem(): any {
@@ -6483,7 +6506,6 @@ export class Collection {
 }
 
 export class BusinessComponentCollection {
-  
   /**
    * @param primaryKeyAtt
    * @return any
@@ -6492,51 +6514,50 @@ export class BusinessComponentCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param primaryKeyAtt
-   * @return any
+   * @return boolean
    */
-  removeByKey(primaryKeyAtt: any): any {
+  removeByKey(primaryKeyAtt: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  update(): any {
+  update(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  insert(): any {
+  insert(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  insertOrUpdate(): any {
+  insertOrUpdate(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  delete(): any {
+  delete(): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class BusinessComponentLinesCollection {
-  
   /**
    * @param primaryKeyAtt
    * @return any
@@ -6545,27 +6566,26 @@ export class BusinessComponentLinesCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param primaryKeyAtt
-   * @return any
+   * @return boolean
    */
-  removeByKey(primaryKeyAtt: any): any {
+  removeByKey(primaryKeyAtt: any): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class GUID {
-  
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -6574,7 +6594,7 @@ export class GUID {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param strFormat
    * @return any
@@ -6583,7 +6603,7 @@ export class GUID {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -6591,7 +6611,7 @@ export class GUID {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -6600,7 +6620,7 @@ export class GUID {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -6608,19 +6628,18 @@ export class GUID {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param regularExpression
-   * @return any
+   * @return boolean
    */
-  isMatch(regularExpression: any): any {
+  isMatch(regularExpression: any): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class Metacollection {
-  
   /**
    * @param name
    * @param content
@@ -6630,7 +6649,7 @@ export class Metacollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -6639,7 +6658,7 @@ export class Metacollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -6647,7 +6666,7 @@ export class Metacollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -6656,7 +6675,7 @@ export class Metacollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -6665,9 +6684,9 @@ export class Metacollection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: any;
   get count(): any {
@@ -6679,9 +6698,8 @@ export class Metacollection {
 }
 
 export class HTMLBODY {
-  
   /**
-   * 
+   *
    */
   private mmeta: any;
   get meta(): any {
@@ -6690,9 +6708,9 @@ export class HTMLBODY {
   set meta(value: any) {
     this.mmeta = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmetaEquiv: any;
   get metaEquiv(): any {
@@ -6701,9 +6719,9 @@ export class HTMLBODY {
   set metaEquiv(value: any) {
     this.mmetaEquiv = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mjScriptSrc: any;
   get jScriptSrc(): any {
@@ -6712,9 +6730,9 @@ export class HTMLBODY {
   set jScriptSrc(value: any) {
     this.mjScriptSrc = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mheaderRawHTML: any;
   get headerRawHTML(): any {
@@ -6726,9 +6744,8 @@ export class HTMLBODY {
 }
 
 export class WApiStateChangeEvent {
-  
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -6737,9 +6754,9 @@ export class WApiStateChangeEvent {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeStamp: Date;
   get timeStamp(): Date {
@@ -6748,9 +6765,9 @@ export class WApiStateChangeEvent {
   set timeStamp(value: Date) {
     this.mtimeStamp = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: number;
   get type(): number {
@@ -6759,9 +6776,9 @@ export class WApiStateChangeEvent {
   set type(value: number) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msource: any;
   get source(): any {
@@ -6770,9 +6787,9 @@ export class WApiStateChangeEvent {
   set source(value: any) {
     this.msource = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtarget: any;
   get target(): any {
@@ -6781,9 +6798,9 @@ export class WApiStateChangeEvent {
   set target(value: any) {
     this.mtarget = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetType: number;
   get targetType(): number {
@@ -6792,9 +6809,9 @@ export class WApiStateChangeEvent {
   set targetType(value: number) {
     this.mtargetType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -6803,9 +6820,9 @@ export class WApiStateChangeEvent {
   set user(value: any) {
     this.muser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private moldState: any;
   get oldState(): any {
@@ -6814,9 +6831,9 @@ export class WApiStateChangeEvent {
   set oldState(value: any) {
     this.moldState = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnewState: any;
   get newState(): any {
@@ -6828,9 +6845,8 @@ export class WApiStateChangeEvent {
 }
 
 export class WApiDataChangeEvent {
-  
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -6839,9 +6855,9 @@ export class WApiDataChangeEvent {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeStamp: Date;
   get timeStamp(): Date {
@@ -6850,9 +6866,9 @@ export class WApiDataChangeEvent {
   set timeStamp(value: Date) {
     this.mtimeStamp = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: number;
   get type(): number {
@@ -6861,9 +6877,9 @@ export class WApiDataChangeEvent {
   set type(value: number) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msource: any;
   get source(): any {
@@ -6872,9 +6888,9 @@ export class WApiDataChangeEvent {
   set source(value: any) {
     this.msource = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtarget: any;
   get target(): any {
@@ -6883,9 +6899,9 @@ export class WApiDataChangeEvent {
   set target(value: any) {
     this.mtarget = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetType: number;
   get targetType(): number {
@@ -6894,9 +6910,9 @@ export class WApiDataChangeEvent {
   set targetType(value: number) {
     this.mtargetType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -6905,9 +6921,9 @@ export class WApiDataChangeEvent {
   set user(value: any) {
     this.muser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdataName: any;
   get dataName(): any {
@@ -6916,9 +6932,9 @@ export class WApiDataChangeEvent {
   set dataName(value: any) {
     this.mdataName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private moldValue: any;
   get oldValue(): any {
@@ -6927,9 +6943,9 @@ export class WApiDataChangeEvent {
   set oldValue(value: any) {
     this.moldValue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnewValue: any;
   get newValue(): any {
@@ -6941,7 +6957,6 @@ export class WApiDataChangeEvent {
 }
 
 export class WApiServer {
-  
   /**
    * @param user
    * @param password
@@ -6952,7 +6967,7 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -6960,18 +6975,22 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param processDefinitions
    * @param error
    * @return any
    */
-  listProcessDefinitions(filter: any, processDefinitions: any, error: any): any {
+  listProcessDefinitions(
+    filter: any,
+    processDefinitions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param activities
@@ -6982,7 +7001,7 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param processInstances
@@ -6993,7 +7012,7 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param workitems
@@ -7004,18 +7023,22 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param processDefinition
    * @param error
    * @return any
    */
-  getProcessDefinitionById(id: number, processDefinition: any, error: any): any {
+  getProcessDefinitionById(
+    id: number,
+    processDefinition: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param processDefinitionId
    * @param activityId
@@ -7023,11 +7046,16 @@ export class WApiServer {
    * @param error
    * @return any
    */
-  getActivityById(processDefinitionId: number, activityId: number, activity: any, error: any): any {
+  getActivityById(
+    processDefinitionId: number,
+    activityId: number,
+    activity: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param processInstance
@@ -7038,7 +7066,7 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param workitem
@@ -7049,18 +7077,22 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param processDefinition
    * @param error
    * @return any
    */
-  getProcessDefinitionByName(name: any, processDefinition: any, error: any): any {
+  getProcessDefinitionByName(
+    name: any,
+    processDefinition: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param activity
@@ -7071,18 +7103,22 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param subject
    * @param processInstance
    * @param error
    * @return any
    */
-  getProcessInstanceBySubject(subject: any, processInstance: any, error: any): any {
+  getProcessInstanceBySubject(
+    subject: any,
+    processInstance: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param organizationalModel
    * @param error
@@ -7092,7 +7128,7 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param eventRepository
    * @param error
@@ -7102,7 +7138,7 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param documentRepository
    * @param error
@@ -7112,7 +7148,7 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -7120,11 +7156,16 @@ export class WApiServer {
    * @param error
    * @return any
    */
-  listProcessDefinitionsOrderBy(filter: any, order: number, processDefinitions: any, error: any): any {
+  listProcessDefinitionsOrderBy(
+    filter: any,
+    order: number,
+    processDefinitions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -7132,11 +7173,16 @@ export class WApiServer {
    * @param error
    * @return any
    */
-  listActivitiesOrderBy(filter: any, order: number, activities: any, error: any): any {
+  listActivitiesOrderBy(
+    filter: any,
+    order: number,
+    activities: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -7144,11 +7190,16 @@ export class WApiServer {
    * @param error
    * @return any
    */
-  listProcessInstancesOrderBy(filter: any, order: number, processInstances: any, error: any): any {
+  listProcessInstancesOrderBy(
+    filter: any,
+    order: number,
+    processInstances: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -7156,11 +7207,16 @@ export class WApiServer {
    * @param error
    * @return any
    */
-  listWorkitemsOrderBy(filter: any, order: number, workitems: any, error: any): any {
+  listWorkitemsOrderBy(
+    filter: any,
+    order: number,
+    workitems: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param calendars
@@ -7171,9 +7227,9 @@ export class WApiServer {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private msession: any;
   get session(): any {
@@ -7182,9 +7238,9 @@ export class WApiServer {
   set session(value: any) {
     this.msession = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mautoCommit: number;
   get autoCommit(): number {
@@ -7193,9 +7249,9 @@ export class WApiServer {
   set autoCommit(value: number) {
     this.mautoCommit = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mautoRebuildWorklists: number;
   get autoRebuildWorklists(): number {
@@ -7207,7 +7263,6 @@ export class WApiServer {
 }
 
 export class WApiFilter {
-  
   /**
    * @return any
    */
@@ -7215,9 +7270,9 @@ export class WApiFilter {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -7226,9 +7281,9 @@ export class WApiFilter {
   set user(value: any) {
     this.muser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mrole: any;
   get role(): any {
@@ -7237,9 +7292,9 @@ export class WApiFilter {
   set role(value: any) {
     this.mrole = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mrestriction: any;
   get restriction(): any {
@@ -7248,9 +7303,9 @@ export class WApiFilter {
   set restriction(value: any) {
     this.mrestriction = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstate: any;
   get state(): any {
@@ -7259,9 +7314,9 @@ export class WApiFilter {
   set state(value: any) {
     this.mstate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessDefinition: any;
   get processDefinition(): any {
@@ -7270,9 +7325,9 @@ export class WApiFilter {
   set processDefinition(value: any) {
     this.mprocessDefinition = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessInstance: any;
   get processInstance(): any {
@@ -7281,9 +7336,9 @@ export class WApiFilter {
   set processInstance(value: any) {
     this.mprocessInstance = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msubject: any;
   get subject(): any {
@@ -7292,9 +7347,9 @@ export class WApiFilter {
   set subject(value: any) {
     this.msubject = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mactivity: any;
   get activity(): any {
@@ -7303,9 +7358,9 @@ export class WApiFilter {
   set activity(value: any) {
     this.mactivity = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mfrom: Date;
   get from(): Date {
@@ -7314,9 +7369,9 @@ export class WApiFilter {
   set from(value: Date) {
     this.mfrom = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mto: Date;
   get to(): Date {
@@ -7325,9 +7380,9 @@ export class WApiFilter {
   set to(value: Date) {
     this.mto = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpriority: number;
   get priority(): number {
@@ -7336,9 +7391,9 @@ export class WApiFilter {
   set priority(value: number) {
     this.mpriority = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -7347,9 +7402,9 @@ export class WApiFilter {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private meventType: number;
   get eventType(): number {
@@ -7358,9 +7413,9 @@ export class WApiFilter {
   set eventType(value: number) {
     this.meventType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mobjectType: number;
   get objectType(): number {
@@ -7369,9 +7424,9 @@ export class WApiFilter {
   set objectType(value: number) {
     this.mobjectType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdocumentDefinition: any;
   get documentDefinition(): any {
@@ -7380,9 +7435,9 @@ export class WApiFilter {
   set documentDefinition(value: any) {
     this.mdocumentDefinition = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mwithWarning: number;
   get withWarning(): number {
@@ -7394,9 +7449,8 @@ export class WApiFilter {
 }
 
 export class WApiError {
-  
   /**
-   * 
+   *
    */
   private mcode: number;
   get code(): number {
@@ -7405,9 +7459,9 @@ export class WApiError {
   set code(value: number) {
     this.mcode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmessage: any;
   get message(): any {
@@ -7419,7 +7473,6 @@ export class WApiError {
 }
 
 export class WApiProcessDefinition {
-  
   /**
    * @param processInstance
    * @param error
@@ -7429,7 +7482,7 @@ export class WApiProcessDefinition {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param activity
@@ -7440,7 +7493,7 @@ export class WApiProcessDefinition {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param activity
@@ -7451,7 +7504,7 @@ export class WApiProcessDefinition {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param state
    * @param error
@@ -7461,7 +7514,7 @@ export class WApiProcessDefinition {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -7470,7 +7523,7 @@ export class WApiProcessDefinition {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -7479,9 +7532,9 @@ export class WApiProcessDefinition {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -7490,9 +7543,9 @@ export class WApiProcessDefinition {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mversion: number;
   get version(): number {
@@ -7501,9 +7554,9 @@ export class WApiProcessDefinition {
   set version(value: number) {
     this.mversion = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -7512,9 +7565,9 @@ export class WApiProcessDefinition {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstate: any;
   get state(): any {
@@ -7523,9 +7576,9 @@ export class WApiProcessDefinition {
   set state(value: any) {
     this.mstate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mactivities: any;
   get activities(): any {
@@ -7534,9 +7587,9 @@ export class WApiProcessDefinition {
   set activities(value: any) {
     this.mactivities = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mextendedAttributes: any;
   get extendedAttributes(): any {
@@ -7545,9 +7598,9 @@ export class WApiProcessDefinition {
   set extendedAttributes(value: any) {
     this.mextendedAttributes = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdocumentDefinitions: any;
   get documentDefinitions(): any {
@@ -7556,9 +7609,9 @@ export class WApiProcessDefinition {
   set documentDefinitions(value: any) {
     this.mdocumentDefinitions = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private misMain: number;
   get isMain(): number {
@@ -7567,9 +7620,9 @@ export class WApiProcessDefinition {
   set isMain(value: number) {
     this.misMain = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcalendar: any;
   get calendar(): any {
@@ -7581,9 +7634,8 @@ export class WApiProcessDefinition {
 }
 
 export class WApiActivity {
-  
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -7592,9 +7644,9 @@ export class WApiActivity {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessDefinition: any;
   get processDefinition(): any {
@@ -7603,9 +7655,9 @@ export class WApiActivity {
   set processDefinition(value: any) {
     this.mprocessDefinition = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessDefinitionId: number;
   get processDefinitionId(): number {
@@ -7614,9 +7666,9 @@ export class WApiActivity {
   set processDefinitionId(value: number) {
     this.mprocessDefinitionId = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -7625,9 +7677,9 @@ export class WApiActivity {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mapplication: any;
   get application(): any {
@@ -7636,9 +7688,9 @@ export class WApiActivity {
   set application(value: any) {
     this.mapplication = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhtmlApplication: any;
   get htmlApplication(): any {
@@ -7647,9 +7699,9 @@ export class WApiActivity {
   set htmlApplication(value: any) {
     this.mhtmlApplication = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mroles: any;
   get roles(): any {
@@ -7658,9 +7710,9 @@ export class WApiActivity {
   set roles(value: any) {
     this.mroles = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msuccessiveActivities: any;
   get successiveActivities(): any {
@@ -7669,9 +7721,9 @@ export class WApiActivity {
   set successiveActivities(value: any) {
     this.msuccessiveActivities = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mextendedAttributes: any;
   get extendedAttributes(): any {
@@ -7680,9 +7732,9 @@ export class WApiActivity {
   set extendedAttributes(value: any) {
     this.mextendedAttributes = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mclass: number;
   get class(): number {
@@ -7691,9 +7743,9 @@ export class WApiActivity {
   set class(value: number) {
     this.mclass = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private misInitial: number;
   get isInitial(): number {
@@ -7702,9 +7754,9 @@ export class WApiActivity {
   set isInitial(value: number) {
     this.misInitial = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private misFinal: number;
   get isFinal(): number {
@@ -7713,9 +7765,9 @@ export class WApiActivity {
   set isFinal(value: number) {
     this.misFinal = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msubprocess: any;
   get subprocess(): any {
@@ -7724,9 +7776,9 @@ export class WApiActivity {
   set subprocess(value: any) {
     this.msubprocess = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msuccessiveOptionalActivities: any;
   get successiveOptionalActivities(): any {
@@ -7735,9 +7787,9 @@ export class WApiActivity {
   set successiveOptionalActivities(value: any) {
     this.msuccessiveOptionalActivities = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdocumentDefinitions: any;
   get documentDefinitions(): any {
@@ -7749,7 +7801,6 @@ export class WApiActivity {
 }
 
 export class WApiWorkitem {
-  
   /**
    * @param error
    * @return any
@@ -7758,7 +7809,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param user
    * @param error
@@ -7768,7 +7819,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param sourceUser
    * @param targetUser
@@ -7779,7 +7830,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param state
    * @param error
@@ -7789,7 +7840,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param activity
    * @param error
@@ -7799,7 +7850,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return any
@@ -7808,7 +7859,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param user
    * @param workitem
@@ -7819,7 +7870,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param role
    * @param workitem
@@ -7830,7 +7881,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -7839,7 +7890,7 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -7848,9 +7899,9 @@ export class WApiWorkitem {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -7859,9 +7910,9 @@ export class WApiWorkitem {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcreated: Date;
   get created(): Date {
@@ -7870,9 +7921,9 @@ export class WApiWorkitem {
   set created(value: Date) {
     this.mcreated = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mended: Date;
   get ended(): Date {
@@ -7881,9 +7932,9 @@ export class WApiWorkitem {
   set ended(value: Date) {
     this.mended = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mwarningTime: Date;
   get warningTime(): Date {
@@ -7892,9 +7943,9 @@ export class WApiWorkitem {
   set warningTime(value: Date) {
     this.mwarningTime = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdeadlineTime: Date;
   get deadlineTime(): Date {
@@ -7903,9 +7954,9 @@ export class WApiWorkitem {
   set deadlineTime(value: Date) {
     this.mdeadlineTime = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpriority: number;
   get priority(): number {
@@ -7914,9 +7965,9 @@ export class WApiWorkitem {
   set priority(value: number) {
     this.mpriority = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcomments: any;
   get comments(): any {
@@ -7925,9 +7976,9 @@ export class WApiWorkitem {
   set comments(value: any) {
     this.mcomments = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstate: any;
   get state(): any {
@@ -7936,9 +7987,9 @@ export class WApiWorkitem {
   set state(value: any) {
     this.mstate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessDefinition: any;
   get processDefinition(): any {
@@ -7947,9 +7998,9 @@ export class WApiWorkitem {
   set processDefinition(value: any) {
     this.mprocessDefinition = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessDefinitionId: number;
   get processDefinitionId(): number {
@@ -7958,9 +8009,9 @@ export class WApiWorkitem {
   set processDefinitionId(value: number) {
     this.mprocessDefinitionId = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mactivity: any;
   get activity(): any {
@@ -7969,9 +8020,9 @@ export class WApiWorkitem {
   set activity(value: any) {
     this.mactivity = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mactivityId: number;
   get activityId(): number {
@@ -7980,9 +8031,9 @@ export class WApiWorkitem {
   set activityId(value: number) {
     this.mactivityId = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessInstance: any;
   get processInstance(): any {
@@ -7991,9 +8042,9 @@ export class WApiWorkitem {
   set processInstance(value: any) {
     this.mprocessInstance = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessInstanceId: number;
   get processInstanceId(): number {
@@ -8002,9 +8053,9 @@ export class WApiWorkitem {
   set processInstanceId(value: number) {
     this.mprocessInstanceId = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mparticipant: any;
   get participant(): any {
@@ -8013,9 +8064,9 @@ export class WApiWorkitem {
   set participant(value: any) {
     this.mparticipant = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mparticipantCandidates: any;
   get participantCandidates(): any {
@@ -8024,9 +8075,9 @@ export class WApiWorkitem {
   set participantCandidates(value: any) {
     this.mparticipantCandidates = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstates: any;
   get states(): any {
@@ -8035,9 +8086,9 @@ export class WApiWorkitem {
   set states(value: any) {
     this.mstates = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdocumentInstances: any;
   get documentInstances(): any {
@@ -8046,9 +8097,9 @@ export class WApiWorkitem {
   set documentInstances(value: any) {
     this.mdocumentInstances = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private misSubprocess: number;
   get isSubprocess(): number {
@@ -8057,9 +8108,9 @@ export class WApiWorkitem {
   set isSubprocess(value: number) {
     this.misSubprocess = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msubprocess: any;
   get subprocess(): any {
@@ -8068,9 +8119,9 @@ export class WApiWorkitem {
   set subprocess(value: any) {
     this.msubprocess = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcollaborators: any;
   get collaborators(): any {
@@ -8079,9 +8130,9 @@ export class WApiWorkitem {
   set collaborators(value: any) {
     this.mcollaborators = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mindex: number;
   get index(): number {
@@ -8093,7 +8144,6 @@ export class WApiWorkitem {
 }
 
 export class WApiProcessInstance {
-  
   /**
    * @param error
    * @return any
@@ -8102,7 +8152,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param activity
    * @param error
@@ -8112,7 +8162,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -8121,7 +8171,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param activity
    * @param error
@@ -8131,7 +8181,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -8140,7 +8190,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -8149,7 +8199,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param state
    * @param error
@@ -8159,7 +8209,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param restriction
    * @param error
@@ -8169,7 +8219,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param restriction
    * @param error
@@ -8179,7 +8229,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param applicationData
@@ -8190,7 +8240,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param activity
    * @param user
@@ -8201,7 +8251,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param activity
    * @param workitem
@@ -8212,7 +8262,7 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param activity
    * @param workitem
@@ -8223,9 +8273,9 @@ export class WApiProcessInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -8234,9 +8284,9 @@ export class WApiProcessInstance {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessDefinition: any;
   get processDefinition(): any {
@@ -8245,9 +8295,9 @@ export class WApiProcessInstance {
   set processDefinition(value: any) {
     this.mprocessDefinition = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprocessDefinitionId: number;
   get processDefinitionId(): number {
@@ -8256,9 +8306,9 @@ export class WApiProcessInstance {
   set processDefinitionId(value: number) {
     this.mprocessDefinitionId = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msubject: any;
   get subject(): any {
@@ -8267,9 +8317,9 @@ export class WApiProcessInstance {
   set subject(value: any) {
     this.msubject = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpriority: number;
   get priority(): number {
@@ -8278,9 +8328,9 @@ export class WApiProcessInstance {
   set priority(value: number) {
     this.mpriority = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcomments: any;
   get comments(): any {
@@ -8289,9 +8339,9 @@ export class WApiProcessInstance {
   set comments(value: any) {
     this.mcomments = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcreator: any;
   get creator(): any {
@@ -8300,9 +8350,9 @@ export class WApiProcessInstance {
   set creator(value: any) {
     this.mcreator = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstate: any;
   get state(): any {
@@ -8311,9 +8361,9 @@ export class WApiProcessInstance {
   set state(value: any) {
     this.mstate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcreated: Date;
   get created(): Date {
@@ -8322,9 +8372,9 @@ export class WApiProcessInstance {
   set created(value: Date) {
     this.mcreated = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mended: Date;
   get ended(): Date {
@@ -8333,9 +8383,9 @@ export class WApiProcessInstance {
   set ended(value: Date) {
     this.mended = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mwarningTime: Date;
   get warningTime(): Date {
@@ -8344,9 +8394,9 @@ export class WApiProcessInstance {
   set warningTime(value: Date) {
     this.mwarningTime = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdeadlineTime: Date;
   get deadlineTime(): Date {
@@ -8355,9 +8405,9 @@ export class WApiProcessInstance {
   set deadlineTime(value: Date) {
     this.mdeadlineTime = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhasParent: number;
   get hasParent(): number {
@@ -8366,9 +8416,9 @@ export class WApiProcessInstance {
   set hasParent(value: number) {
     this.mhasParent = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mparent: any;
   get parent(): any {
@@ -8377,9 +8427,9 @@ export class WApiProcessInstance {
   set parent(value: any) {
     this.mparent = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhasChildren: number;
   get hasChildren(): number {
@@ -8388,9 +8438,9 @@ export class WApiProcessInstance {
   set hasChildren(value: number) {
     this.mhasChildren = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mchildren: any;
   get children(): any {
@@ -8399,9 +8449,9 @@ export class WApiProcessInstance {
   set children(value: any) {
     this.mchildren = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mworkitems: any;
   get workitems(): any {
@@ -8410,9 +8460,9 @@ export class WApiProcessInstance {
   set workitems(value: any) {
     this.mworkitems = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mparticipants: any;
   get participants(): any {
@@ -8421,9 +8471,9 @@ export class WApiProcessInstance {
   set participants(value: any) {
     this.mparticipants = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstates: any;
   get states(): any {
@@ -8432,9 +8482,9 @@ export class WApiProcessInstance {
   set states(value: any) {
     this.mstates = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mrestrictions: any;
   get restrictions(): any {
@@ -8443,9 +8493,9 @@ export class WApiProcessInstance {
   set restrictions(value: any) {
     this.mrestrictions = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mapplicationData: any;
   get applicationData(): any {
@@ -8454,9 +8504,9 @@ export class WApiProcessInstance {
   set applicationData(value: any) {
     this.mapplicationData = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdocumentInstances: any;
   get documentInstances(): any {
@@ -8465,9 +8515,9 @@ export class WApiProcessInstance {
   set documentInstances(value: any) {
     this.mdocumentInstances = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mrecursiveWorkitems: any;
   get recursiveWorkitems(): any {
@@ -8476,9 +8526,9 @@ export class WApiProcessInstance {
   set recursiveWorkitems(value: any) {
     this.mrecursiveWorkitems = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcalendar: any;
   get calendar(): any {
@@ -8487,9 +8537,9 @@ export class WApiProcessInstance {
   set calendar(value: any) {
     this.mcalendar = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mparentWorkitem: any;
   get parentWorkitem(): any {
@@ -8498,9 +8548,9 @@ export class WApiProcessInstance {
   set parentWorkitem(value: any) {
     this.mparentWorkitem = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mactiveWorkitems: any;
   get activeWorkitems(): any {
@@ -8512,7 +8562,6 @@ export class WApiProcessInstance {
 }
 
 export class WApiCollection {
-  
   /**
    * @param index
    * @param item
@@ -8522,7 +8571,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param processDefinition
@@ -8532,7 +8581,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param activity
@@ -8542,7 +8591,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param workitem
@@ -8552,7 +8601,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param processInstance
@@ -8562,7 +8611,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param user
@@ -8572,7 +8621,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param role
@@ -8582,7 +8631,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param state
@@ -8592,7 +8641,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param restriction
@@ -8602,7 +8651,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param restrictionDefinition
@@ -8612,7 +8661,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param value
@@ -8622,7 +8671,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param applicationData
@@ -8632,7 +8681,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param processDefinition
@@ -8643,7 +8692,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param subject
    * @param processInstance
@@ -8654,7 +8703,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param activityName
    * @param workitem
@@ -8665,7 +8714,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param activity
@@ -8676,7 +8725,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param user
@@ -8687,7 +8736,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param role
@@ -8698,7 +8747,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param applicationData
@@ -8709,7 +8758,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param value
@@ -8721,7 +8770,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param event
@@ -8731,7 +8780,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param documentDefinition
@@ -8741,7 +8790,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param documentInstance
@@ -8751,7 +8800,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param attribute
@@ -8761,7 +8810,7 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param calendar
@@ -8771,9 +8820,9 @@ export class WApiCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mlength: number;
   get length(): number {
@@ -8782,9 +8831,9 @@ export class WApiCollection {
   set length(value: number) {
     this.mlength = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -8796,7 +8845,6 @@ export class WApiCollection {
 }
 
 export class WApiApplicationData {
-  
   /**
    * @param value
    * @return any
@@ -8805,7 +8853,7 @@ export class WApiApplicationData {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -8813,7 +8861,7 @@ export class WApiApplicationData {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @return any
@@ -8822,7 +8870,7 @@ export class WApiApplicationData {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param value
@@ -8832,7 +8880,7 @@ export class WApiApplicationData {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param index
    * @param value
@@ -8842,9 +8890,9 @@ export class WApiApplicationData {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcharacterValue: any;
   get characterValue(): any {
@@ -8853,9 +8901,9 @@ export class WApiApplicationData {
   set characterValue(value: any) {
     this.mcharacterValue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -8864,9 +8912,9 @@ export class WApiApplicationData {
   set count(value: number) {
     this.mcount = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdateTimeValue: Date;
   get dateTimeValue(): Date {
@@ -8875,9 +8923,9 @@ export class WApiApplicationData {
   set dateTimeValue(value: Date) {
     this.mdateTimeValue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdateValue: Date;
   get dateValue(): Date {
@@ -8886,9 +8934,9 @@ export class WApiApplicationData {
   set dateValue(value: Date) {
     this.mdateValue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdimension: number;
   get dimension(): number {
@@ -8897,9 +8945,9 @@ export class WApiApplicationData {
   set dimension(value: number) {
     this.mdimension = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mlength: number;
   get length(): number {
@@ -8908,9 +8956,9 @@ export class WApiApplicationData {
   set length(value: number) {
     this.mlength = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -8919,9 +8967,9 @@ export class WApiApplicationData {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnumericValue: number;
   get numericValue(): number {
@@ -8930,9 +8978,9 @@ export class WApiApplicationData {
   set numericValue(value: number) {
     this.mnumericValue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: any;
   get type(): any {
@@ -8941,9 +8989,9 @@ export class WApiApplicationData {
   set type(value: any) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvalue: any;
   get value(): any {
@@ -8955,7 +9003,6 @@ export class WApiApplicationData {
 }
 
 export class WApiWebApplication {
-  
   /**
    * @return any
    */
@@ -8963,7 +9010,7 @@ export class WApiWebApplication {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param workitem
    * @param error
@@ -8973,7 +9020,7 @@ export class WApiWebApplication {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param workitem
    * @return any
@@ -8982,7 +9029,7 @@ export class WApiWebApplication {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param user
    * @param password
@@ -8993,7 +9040,7 @@ export class WApiWebApplication {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param file
    * @param name
@@ -9003,7 +9050,7 @@ export class WApiWebApplication {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param documentInstance
    * @return any
@@ -9012,7 +9059,7 @@ export class WApiWebApplication {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param documentInstance
    * @param url
@@ -9022,7 +9069,7 @@ export class WApiWebApplication {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param workitem
    * @return any
@@ -9031,9 +9078,9 @@ export class WApiWebApplication {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mconnectedUser: any;
   get connectedUser(): any {
@@ -9042,9 +9089,9 @@ export class WApiWebApplication {
   set connectedUser(value: any) {
     this.mconnectedUser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mactiveSession: any;
   get activeSession(): any {
@@ -9053,9 +9100,9 @@ export class WApiWebApplication {
   set activeSession(value: any) {
     this.mactiveSession = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mlanguage: any;
   get language(): any {
@@ -9067,7 +9114,6 @@ export class WApiWebApplication {
 }
 
 export class WApiUser {
-  
   /**
    * @param filter
    * @param workitems
@@ -9078,7 +9124,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param role
    * @param restrictions
@@ -9089,7 +9135,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param role
    * @param error
@@ -9099,7 +9145,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param role
    * @param error
@@ -9109,7 +9155,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param restriction
    * @param role
@@ -9120,7 +9166,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param restriction
    * @param role
@@ -9131,7 +9177,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -9140,7 +9186,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -9149,7 +9195,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -9158,7 +9204,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -9166,22 +9212,31 @@ export class WApiUser {
    * @param error
    * @return any
    */
-  getWorklistOrderBy(filter: any, order: number, workitems: any, error: any): any {
+  getWorklistOrderBy(
+    filter: any,
+    order: number,
+    workitems: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param processDefinitions
    * @param error
    * @return any
    */
-  listCreatableProcessDefinitions(filter: any, processDefinitions: any, error: any): any {
+  listCreatableProcessDefinitions(
+    filter: any,
+    processDefinitions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -9189,11 +9244,16 @@ export class WApiUser {
    * @param error
    * @return any
    */
-  listCreatableProcessDefinitionsOrderBy(filter: any, order: number, processDefinitions: any, error: any): any {
+  listCreatableProcessDefinitionsOrderBy(
+    filter: any,
+    order: number,
+    processDefinitions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param error
    * @return any
@@ -9202,7 +9262,7 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param currentPassword
    * @param newPassword
@@ -9213,9 +9273,9 @@ export class WApiUser {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: any;
   get id(): any {
@@ -9224,9 +9284,9 @@ export class WApiUser {
   set id(value: any) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -9235,9 +9295,9 @@ export class WApiUser {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private maccessLevel: number;
   get accessLevel(): number {
@@ -9246,9 +9306,9 @@ export class WApiUser {
   set accessLevel(value: number) {
     this.maccessLevel = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private memail: any;
   get email(): any {
@@ -9257,9 +9317,9 @@ export class WApiUser {
   set email(value: any) {
     this.memail = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpassword: any;
   get password(): any {
@@ -9268,9 +9328,9 @@ export class WApiUser {
   set password(value: any) {
     this.mpassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mworkload: number;
   get workload(): number {
@@ -9279,9 +9339,9 @@ export class WApiUser {
   set workload(value: number) {
     this.mworkload = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private misConnected: number;
   get isConnected(): number {
@@ -9290,9 +9350,9 @@ export class WApiUser {
   set isConnected(value: number) {
     this.misConnected = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private misOutOfOffice: number;
   get isOutOfOffice(): number {
@@ -9301,9 +9361,9 @@ export class WApiUser {
   set isOutOfOffice(value: number) {
     this.misOutOfOffice = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private misBlocked: number;
   get isBlocked(): number {
@@ -9312,9 +9372,9 @@ export class WApiUser {
   set isBlocked(value: number) {
     this.misBlocked = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mroles: any;
   get roles(): any {
@@ -9323,9 +9383,9 @@ export class WApiUser {
   set roles(value: any) {
     this.mroles = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mrestrictions: any;
   get restrictions(): any {
@@ -9337,7 +9397,6 @@ export class WApiUser {
 }
 
 export class WApiRole {
-  
   /**
    * @param child
    * @param error
@@ -9347,7 +9406,7 @@ export class WApiRole {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param child
    * @param error
@@ -9357,7 +9416,7 @@ export class WApiRole {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param user
    * @param error
@@ -9367,7 +9426,7 @@ export class WApiRole {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param user
    * @param error
@@ -9377,9 +9436,9 @@ export class WApiRole {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -9388,9 +9447,9 @@ export class WApiRole {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -9399,9 +9458,9 @@ export class WApiRole {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private musers: any;
   get users(): any {
@@ -9410,9 +9469,9 @@ export class WApiRole {
   set users(value: any) {
     this.musers = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhasParent: number;
   get hasParent(): number {
@@ -9421,9 +9480,9 @@ export class WApiRole {
   set hasParent(value: number) {
     this.mhasParent = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhasChildren: number;
   get hasChildren(): number {
@@ -9432,9 +9491,9 @@ export class WApiRole {
   set hasChildren(value: number) {
     this.mhasChildren = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mparent: any;
   get parent(): any {
@@ -9443,9 +9502,9 @@ export class WApiRole {
   set parent(value: any) {
     this.mparent = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mchildren: any;
   get children(): any {
@@ -9457,7 +9516,6 @@ export class WApiRole {
 }
 
 export class WApiOrganizationalModel {
-  
   /**
    * @param filter
    * @param users
@@ -9468,7 +9526,7 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param roles
@@ -9479,18 +9537,22 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param restrictionDefinitions
    * @param error
    * @return any
    */
-  listRestrictionDefinitions(filter: any, restrictionDefinitions: any, error: any): any {
+  listRestrictionDefinitions(
+    filter: any,
+    restrictionDefinitions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param restrictions
@@ -9501,7 +9563,7 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param user
@@ -9512,7 +9574,7 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param role
@@ -9523,7 +9585,7 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param user
@@ -9534,7 +9596,7 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param role
@@ -9545,18 +9607,22 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param restrictionDefinition
    * @param error
    * @return any
    */
-  getRestrictionDefinitionByName(name: any, restrictionDefinition: any, error: any): any {
+  getRestrictionDefinitionByName(
+    name: any,
+    restrictionDefinition: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param name
@@ -9567,11 +9633,19 @@ export class WApiOrganizationalModel {
    * @param error
    * @return any
    */
-  addUser(id: any, name: any, email: any, accessLevel: number, password: any, user: any, error: any): any {
+  addUser(
+    id: any,
+    name: any,
+    email: any,
+    accessLevel: number,
+    password: any,
+    user: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param role
@@ -9582,7 +9656,7 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param description
@@ -9591,11 +9665,17 @@ export class WApiOrganizationalModel {
    * @param error
    * @return any
    */
-  addRestrictionDefinition(name: any, description: any, type: number, restrictionDefinition: any, error: any): any {
+  addRestrictionDefinition(
+    name: any,
+    description: any,
+    type: number,
+    restrictionDefinition: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -9607,7 +9687,7 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -9619,7 +9699,7 @@ export class WApiOrganizationalModel {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -9627,11 +9707,16 @@ export class WApiOrganizationalModel {
    * @param error
    * @return any
    */
-  listRestrictionDefinitionsOrderBy(filter: any, order: number, restrictionDefinitions: any, error: any): any {
+  listRestrictionDefinitionsOrderBy(
+    filter: any,
+    order: number,
+    restrictionDefinitions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -9639,16 +9724,20 @@ export class WApiOrganizationalModel {
    * @param error
    * @return any
    */
-  listRestrictionsOrderBy(filter: any, order: number, restrictions: any, error: any): any {
+  listRestrictionsOrderBy(
+    filter: any,
+    order: number,
+    restrictions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
 }
 
 export class WApiRestriction {
-  
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -9657,9 +9746,9 @@ export class WApiRestriction {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvalue: any;
   get value(): any {
@@ -9671,7 +9760,6 @@ export class WApiRestriction {
 }
 
 export class WApiRestrictionDefinition {
-  
   /**
    * @param value
    * @return any
@@ -9680,7 +9768,7 @@ export class WApiRestrictionDefinition {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -9689,9 +9777,9 @@ export class WApiRestrictionDefinition {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -9700,9 +9788,9 @@ export class WApiRestrictionDefinition {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdescription: any;
   get description(): any {
@@ -9711,9 +9799,9 @@ export class WApiRestrictionDefinition {
   set description(value: any) {
     this.mdescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: number;
   get type(): number {
@@ -9722,9 +9810,9 @@ export class WApiRestrictionDefinition {
   set type(value: number) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvalues: any;
   get values(): any {
@@ -9736,7 +9824,6 @@ export class WApiRestrictionDefinition {
 }
 
 export class File {
-  
   /**
    * @return any
    */
@@ -9744,15 +9831,15 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  exists(): any {
+  exists(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -9761,7 +9848,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -9770,7 +9857,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -9778,7 +9865,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -9786,7 +9873,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -9794,7 +9881,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -9802,7 +9889,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return Date
    */
@@ -9810,7 +9897,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -9818,7 +9905,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param encoding
    * @return any
@@ -9827,7 +9914,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param encoding
    * @return any
@@ -9836,7 +9923,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param encoding
    * @return any
@@ -9845,7 +9932,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -9853,7 +9940,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -9861,7 +9948,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param encoding
    * @return any
@@ -9870,7 +9957,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param encoding
    * @return any
@@ -9879,7 +9966,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @return any
@@ -9888,7 +9975,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @param encoding
@@ -9898,7 +9985,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @param encoding
@@ -9908,7 +9995,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param value
    * @param encoding
@@ -9918,7 +10005,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param vale
    * @param encoding
@@ -9928,7 +10015,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -9936,7 +10023,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param xSLTFile
    * @return any
@@ -9945,7 +10032,7 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -9953,18 +10040,18 @@ export class File {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param base64String
-   * @return any
+   * @return boolean
    */
-  fromBase64String(base64String: any): any {
+  fromBase64String(base64String: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -9973,9 +10060,9 @@ export class File {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -9984,9 +10071,9 @@ export class File {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mseparator: any;
   get separator(): any {
@@ -9995,20 +10082,20 @@ export class File {
   set separator(value: any) {
     this.mseparator = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private meOF: any;
-  get eOF(): any {
+  private meOF: boolean;
+  get eOF(): boolean {
     return this.meOF;
   }
-  set eOF(value: any) {
+  set eOF(value: boolean) {
     this.meOF = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msource: any;
   get source(): any {
@@ -10020,7 +10107,6 @@ export class File {
 }
 
 export class FileCollection {
-  
   /**
    * @param i
    * @return any
@@ -10029,9 +10115,9 @@ export class FileCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -10043,7 +10129,6 @@ export class FileCollection {
 }
 
 export class Directory {
-  
   /**
    * @return any
    */
@@ -10051,7 +10136,7 @@ export class Directory {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10059,15 +10144,15 @@ export class Directory {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  exists(): any {
+  exists(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -10076,7 +10161,7 @@ export class Directory {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10084,7 +10169,7 @@ export class Directory {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10092,7 +10177,7 @@ export class Directory {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @return any
@@ -10101,7 +10186,7 @@ export class Directory {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10109,9 +10194,9 @@ export class Directory {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -10120,9 +10205,9 @@ export class Directory {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -10131,45 +10216,41 @@ export class Directory {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mapplicationDataPath: any;
   static get applicationDataPath(): any {
     return this.mapplicationDataPath;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mexternalFilesPath: any;
   static get externalFilesPath(): any {
     return this.mexternalFilesPath;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mtemporaryFilesPath: any;
   static get temporaryFilesPath(): any {
     return this.mtemporaryFilesPath;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mcacheFilesPath: any;
   static get cacheFilesPath(): any {
     return this.mcacheFilesPath;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private msource: any;
   get source(): any {
@@ -10181,7 +10262,6 @@ export class Directory {
 }
 
 export class DirectoryCollection {
-  
   /**
    * @param i
    * @return any
@@ -10190,9 +10270,9 @@ export class DirectoryCollection {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcount: number;
   get count(): number {
@@ -10204,7 +10284,6 @@ export class DirectoryCollection {
 }
 
 export class LDAPClient {
-  
   /**
    * @return number
    */
@@ -10212,7 +10291,7 @@ export class LDAPClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10220,7 +10299,7 @@ export class LDAPClient {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param attributeName
    * @param context
@@ -10231,9 +10310,9 @@ export class LDAPClient {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mhost: any;
   get host(): any {
@@ -10242,9 +10321,9 @@ export class LDAPClient {
   set host(value: any) {
     this.mhost = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mport: number;
   get port(): number {
@@ -10253,9 +10332,9 @@ export class LDAPClient {
   set port(value: number) {
     this.mport = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mauthenticationMethod: any;
   get authenticationMethod(): any {
@@ -10264,9 +10343,9 @@ export class LDAPClient {
   set authenticationMethod(value: any) {
     this.mauthenticationMethod = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -10275,9 +10354,9 @@ export class LDAPClient {
   set user(value: any) {
     this.muser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpassword: any;
   get password(): any {
@@ -10286,9 +10365,9 @@ export class LDAPClient {
   set password(value: any) {
     this.mpassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msecure: number;
   get secure(): number {
@@ -10300,7 +10379,6 @@ export class LDAPClient {
 }
 
 export class Properties {
-  
   /**
    * @param attributeName
    * @param attributeValue
@@ -10310,7 +10388,7 @@ export class Properties {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param attributeName
    * @return any
@@ -10319,7 +10397,7 @@ export class Properties {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param attributeName
    * @return any
@@ -10328,7 +10406,7 @@ export class Properties {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10336,7 +10414,7 @@ export class Properties {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10344,22 +10422,21 @@ export class Properties {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJson(source: any, outMessages: any): any {
+  fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class QueueMessage {
-  
   /**
-   * 
+   *
    */
   private mtext: any;
   get text(): any {
@@ -10368,9 +10445,9 @@ export class QueueMessage {
   set text(value: any) {
     this.mtext = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpriority: number;
   get priority(): number {
@@ -10382,7 +10459,6 @@ export class QueueMessage {
 }
 
 export class Queue {
-  
   /**
    * @return number
    */
@@ -10390,7 +10466,7 @@ export class Queue {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10398,7 +10474,7 @@ export class Queue {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return any
@@ -10407,7 +10483,7 @@ export class Queue {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10415,7 +10491,7 @@ export class Queue {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10423,7 +10499,7 @@ export class Queue {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -10431,9 +10507,9 @@ export class Queue {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -10442,9 +10518,9 @@ export class Queue {
   set user(value: any) {
     this.muser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpassword: any;
   get password(): any {
@@ -10453,9 +10529,9 @@ export class Queue {
   set password(value: any) {
     this.mpassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mprovider: any;
   get provider(): any {
@@ -10464,9 +10540,9 @@ export class Queue {
   set provider(value: any) {
     this.mprovider = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mbrowse: number;
   get browse(): number {
@@ -10478,9 +10554,8 @@ export class Queue {
 }
 
 export class WApiAssignmentChangeEvent {
-  
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -10489,9 +10564,9 @@ export class WApiAssignmentChangeEvent {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeStamp: Date;
   get timeStamp(): Date {
@@ -10500,9 +10575,9 @@ export class WApiAssignmentChangeEvent {
   set timeStamp(value: Date) {
     this.mtimeStamp = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: number;
   get type(): number {
@@ -10511,9 +10586,9 @@ export class WApiAssignmentChangeEvent {
   set type(value: number) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msource: any;
   get source(): any {
@@ -10522,9 +10597,9 @@ export class WApiAssignmentChangeEvent {
   set source(value: any) {
     this.msource = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtarget: any;
   get target(): any {
@@ -10533,9 +10608,9 @@ export class WApiAssignmentChangeEvent {
   set target(value: any) {
     this.mtarget = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetType: number;
   get targetType(): number {
@@ -10544,9 +10619,9 @@ export class WApiAssignmentChangeEvent {
   set targetType(value: number) {
     this.mtargetType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -10555,9 +10630,9 @@ export class WApiAssignmentChangeEvent {
   set user(value: any) {
     this.muser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private massignmentType: number;
   get assignmentType(): number {
@@ -10566,9 +10641,9 @@ export class WApiAssignmentChangeEvent {
   set assignmentType(value: number) {
     this.massignmentType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private moldUser: any;
   get oldUser(): any {
@@ -10577,9 +10652,9 @@ export class WApiAssignmentChangeEvent {
   set oldUser(value: any) {
     this.moldUser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnewUser: any;
   get newUser(): any {
@@ -10588,9 +10663,9 @@ export class WApiAssignmentChangeEvent {
   set newUser(value: any) {
     this.mnewUser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private moldRole: any;
   get oldRole(): any {
@@ -10599,9 +10674,9 @@ export class WApiAssignmentChangeEvent {
   set oldRole(value: any) {
     this.moldRole = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnewRole: any;
   get newRole(): any {
@@ -10613,9 +10688,8 @@ export class WApiAssignmentChangeEvent {
 }
 
 export class WApiPriorityChangeEvent {
-  
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -10624,9 +10698,9 @@ export class WApiPriorityChangeEvent {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeStamp: Date;
   get timeStamp(): Date {
@@ -10635,9 +10709,9 @@ export class WApiPriorityChangeEvent {
   set timeStamp(value: Date) {
     this.mtimeStamp = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: number;
   get type(): number {
@@ -10646,9 +10720,9 @@ export class WApiPriorityChangeEvent {
   set type(value: number) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msource: any;
   get source(): any {
@@ -10657,9 +10731,9 @@ export class WApiPriorityChangeEvent {
   set source(value: any) {
     this.msource = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtarget: any;
   get target(): any {
@@ -10668,9 +10742,9 @@ export class WApiPriorityChangeEvent {
   set target(value: any) {
     this.mtarget = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetType: number;
   get targetType(): number {
@@ -10679,9 +10753,9 @@ export class WApiPriorityChangeEvent {
   set targetType(value: number) {
     this.mtargetType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -10690,9 +10764,9 @@ export class WApiPriorityChangeEvent {
   set user(value: any) {
     this.muser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private moldPriority: number;
   get oldPriority(): number {
@@ -10701,9 +10775,9 @@ export class WApiPriorityChangeEvent {
   set oldPriority(value: number) {
     this.moldPriority = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnewPriority: number;
   get newPriority(): number {
@@ -10715,7 +10789,6 @@ export class WApiPriorityChangeEvent {
 }
 
 export class WApiEventRepository {
-  
   /**
    * @param filter
    * @param events
@@ -10726,7 +10799,7 @@ export class WApiEventRepository {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -10738,9 +10811,9 @@ export class WApiEventRepository {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private menableEvents: number;
   get enableEvents(): number {
@@ -10752,9 +10825,8 @@ export class WApiEventRepository {
 }
 
 export class WApiObject {
-  
   /**
-   * 
+   *
    */
   private mtype: number;
   get type(): number {
@@ -10763,9 +10835,9 @@ export class WApiObject {
   set type(value: number) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtoProcessInstance: any;
   get toProcessInstance(): any {
@@ -10774,9 +10846,9 @@ export class WApiObject {
   set toProcessInstance(value: any) {
     this.mtoProcessInstance = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtoDocumentInstance: any;
   get toDocumentInstance(): any {
@@ -10785,9 +10857,9 @@ export class WApiObject {
   set toDocumentInstance(value: any) {
     this.mtoDocumentInstance = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtoWorkitem: any;
   get toWorkitem(): any {
@@ -10796,9 +10868,9 @@ export class WApiObject {
   set toWorkitem(value: any) {
     this.mtoWorkitem = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtoProcessDefinition: any;
   get toProcessDefinition(): any {
@@ -10807,9 +10879,9 @@ export class WApiObject {
   set toProcessDefinition(value: any) {
     this.mtoProcessDefinition = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtoApplicationData: any;
   get toApplicationData(): any {
@@ -10821,9 +10893,8 @@ export class WApiObject {
 }
 
 export class WApiAttribute {
-  
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -10832,9 +10903,9 @@ export class WApiAttribute {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvalue: any;
   get value(): any {
@@ -10846,18 +10917,21 @@ export class WApiAttribute {
 }
 
 export class WApiDocumentRepository {
-  
   /**
    * @param filter
    * @param documentDefinitions
    * @param error
    * @return any
    */
-  listDocumentDefinitions(filter: any, documentDefinitions: any, error: any): any {
+  listDocumentDefinitions(
+    filter: any,
+    documentDefinitions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param documentInstances
@@ -10868,7 +10942,7 @@ export class WApiDocumentRepository {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -10876,11 +10950,16 @@ export class WApiDocumentRepository {
    * @param error
    * @return any
    */
-  listDocumentDefinitionsOrderBy(filter: any, order: number, documentDefinitions: any, error: any): any {
+  listDocumentDefinitionsOrderBy(
+    filter: any,
+    order: number,
+    documentDefinitions: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param filter
    * @param order
@@ -10888,33 +10967,46 @@ export class WApiDocumentRepository {
    * @param error
    * @return any
    */
-  listDocumentInstancesOrderBy(filter: any, order: number, documentInstances: any, error: any): any {
+  listDocumentInstancesOrderBy(
+    filter: any,
+    order: number,
+    documentInstances: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param documentDefinition
    * @param error
    * @return any
    */
-  getDocumentDefinitionById(id: number, documentDefinition: any, error: any): any {
+  getDocumentDefinitionById(
+    id: number,
+    documentDefinition: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param documentDefinition
    * @param error
    * @return any
    */
-  getDocumentDefinitionByName(name: any, documentDefinition: any, error: any): any {
+  getDocumentDefinitionByName(
+    name: any,
+    documentDefinition: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param id
    * @param version
@@ -10922,13 +11014,18 @@ export class WApiDocumentRepository {
    * @param error
    * @return any
    */
-  getDocumentInstanceById(id: number, version: number, documentInstance: any, error: any): any {
+  getDocumentInstanceById(
+    id: number,
+    version: number,
+    documentInstance: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private menableDocuments: number;
   get enableDocuments(): number {
@@ -10940,7 +11037,6 @@ export class WApiDocumentRepository {
 }
 
 export class WApiDocumentDefinition {
-  
   /**
    * @param workitem
    * @param name
@@ -10948,11 +11044,16 @@ export class WApiDocumentDefinition {
    * @param error
    * @return any
    */
-  createInstance(workitem: any, name: any, documentInstance: any, error: any): any {
+  createInstance(
+    workitem: any,
+    name: any,
+    documentInstance: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param workitem
    * @param name
@@ -10961,13 +11062,19 @@ export class WApiDocumentDefinition {
    * @param error
    * @return any
    */
-  createInstanceFromFile(workitem: any, name: any, file: any, documentInstance: any, error: any): any {
+  createInstanceFromFile(
+    workitem: any,
+    name: any,
+    file: any,
+    documentInstance: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -10976,9 +11083,9 @@ export class WApiDocumentDefinition {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -10990,7 +11097,6 @@ export class WApiDocumentDefinition {
 }
 
 export class WApiDocumentInstance {
-  
   /**
    * @param user
    * @param workitem
@@ -10999,11 +11105,17 @@ export class WApiDocumentInstance {
    * @param error
    * @return any
    */
-  read(user: any, workitem: any, targetDirectory: any, file: any, error: any): any {
+  read(
+    user: any,
+    workitem: any,
+    targetDirectory: any,
+    file: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param user
    * @param workitem
@@ -11015,7 +11127,7 @@ export class WApiDocumentInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param user
    * @param workitem
@@ -11024,11 +11136,17 @@ export class WApiDocumentInstance {
    * @param error
    * @return any
    */
-  checkOut(user: any, workitem: any, targetDirectory: any, file: any, error: any): any {
+  checkOut(
+    user: any,
+    workitem: any,
+    targetDirectory: any,
+    file: any,
+    error: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param user
    * @param error
@@ -11038,9 +11156,9 @@ export class WApiDocumentInstance {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -11049,9 +11167,9 @@ export class WApiDocumentInstance {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mversion: number;
   get version(): number {
@@ -11060,9 +11178,9 @@ export class WApiDocumentInstance {
   set version(value: number) {
     this.mversion = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -11071,9 +11189,9 @@ export class WApiDocumentInstance {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcreated: Date;
   get created(): Date {
@@ -11082,9 +11200,9 @@ export class WApiDocumentInstance {
   set created(value: Date) {
     this.mcreated = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mupdated: Date;
   get updated(): Date {
@@ -11093,9 +11211,9 @@ export class WApiDocumentInstance {
   set updated(value: Date) {
     this.mupdated = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcomments: any;
   get comments(): any {
@@ -11104,9 +11222,9 @@ export class WApiDocumentInstance {
   set comments(value: any) {
     this.mcomments = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstate: any;
   get state(): any {
@@ -11115,9 +11233,9 @@ export class WApiDocumentInstance {
   set state(value: any) {
     this.mstate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcheckedOutBy: any;
   get checkedOutBy(): any {
@@ -11126,9 +11244,9 @@ export class WApiDocumentInstance {
   set checkedOutBy(value: any) {
     this.mcheckedOutBy = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcheckedOutAt: Date;
   get checkedOutAt(): Date {
@@ -11137,9 +11255,9 @@ export class WApiDocumentInstance {
   set checkedOutAt(value: Date) {
     this.mcheckedOutAt = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdocumentDefinition: any;
   get documentDefinition(): any {
@@ -11148,9 +11266,9 @@ export class WApiDocumentInstance {
   set documentDefinition(value: any) {
     this.mdocumentDefinition = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdocumentDefinitionId: number;
   get documentDefinitionId(): number {
@@ -11159,9 +11277,9 @@ export class WApiDocumentInstance {
   set documentDefinitionId(value: number) {
     this.mdocumentDefinitionId = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mauthor: any;
   get author(): any {
@@ -11173,9 +11291,8 @@ export class WApiDocumentInstance {
 }
 
 export class WApiActionPerformedEvent {
-  
   /**
-   * 
+   *
    */
   private mid: number;
   get id(): number {
@@ -11184,9 +11301,9 @@ export class WApiActionPerformedEvent {
   set id(value: number) {
     this.mid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtimeStamp: Date;
   get timeStamp(): Date {
@@ -11195,9 +11312,9 @@ export class WApiActionPerformedEvent {
   set timeStamp(value: Date) {
     this.mtimeStamp = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: number;
   get type(): number {
@@ -11206,9 +11323,9 @@ export class WApiActionPerformedEvent {
   set type(value: number) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msource: any;
   get source(): any {
@@ -11217,9 +11334,9 @@ export class WApiActionPerformedEvent {
   set source(value: any) {
     this.msource = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtarget: any;
   get target(): any {
@@ -11228,9 +11345,9 @@ export class WApiActionPerformedEvent {
   set target(value: any) {
     this.mtarget = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetType: number;
   get targetType(): number {
@@ -11239,9 +11356,9 @@ export class WApiActionPerformedEvent {
   set targetType(value: number) {
     this.mtargetType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private muser: any;
   get user(): any {
@@ -11250,9 +11367,9 @@ export class WApiActionPerformedEvent {
   set user(value: any) {
     this.muser = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mactionPerformed: number;
   get actionPerformed(): number {
@@ -11261,9 +11378,9 @@ export class WApiActionPerformedEvent {
   set actionPerformed(value: number) {
     this.mactionPerformed = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcontext: any;
   get context(): any {
@@ -11275,9 +11392,8 @@ export class WApiActionPerformedEvent {
 }
 
 export class Property {
-  
   /**
-   * 
+   *
    */
   private mkey: any;
   get key(): any {
@@ -11286,9 +11402,9 @@ export class Property {
   set key(value: any) {
     this.mkey = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvalue: any;
   get value(): any {
@@ -11300,7 +11416,6 @@ export class Property {
 }
 
 export class Expression {
-  
   /**
    * @return number
    */
@@ -11308,9 +11423,9 @@ export class Expression {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mexpression: any;
   get expression(): any {
@@ -11319,9 +11434,9 @@ export class Expression {
   set expression(value: any) {
     this.mexpression = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvariables: any;
   get variables(): any {
@@ -11330,9 +11445,9 @@ export class Expression {
   set variables(value: any) {
     this.mvariables = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -11341,9 +11456,9 @@ export class Expression {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -11381,7 +11496,11 @@ export function getLastErrDescription(): any {
  * @param pageNumber
  * @return any
  */
-export function textSearchfind(content: any, itemsPerPage: number, pageNumber: number): any {
+export function textSearchfind(
+  content: any,
+  itemsPerPage: number,
+  pageNumber: number
+): any {
   notImplemented();
   return null;
 }
@@ -11389,9 +11508,9 @@ export function textSearchfind(content: any, itemsPerPage: number, pageNumber: n
 /**
  * @param variableBCorText
  * @param info
- * @return any
+ * @return boolean
  */
-export function textSearchadd(variableBCorText: any, info: any): any {
+export function textSearchadd(variableBCorText: any, info: any): boolean {
   notImplemented();
   return null;
 }
@@ -11399,26 +11518,26 @@ export function textSearchadd(variableBCorText: any, info: any): any {
 /**
  * @param variableBCorText
  * @param info
- * @return any
+ * @return boolean
  */
-export function textSearchupdate(variableBCorText: any, info: any): any {
+export function textSearchupdate(variableBCorText: any, info: any): boolean {
   notImplemented();
   return null;
 }
 
 /**
  * @param variable
- * @return any
+ * @return boolean
  */
-export function textSearchdelete(variable: any): any {
+export function textSearchdelete(variable: any): boolean {
   notImplemented();
   return null;
 }
 
 /**
- * @return any
+ * @return boolean
  */
-export function buildDictionary(): any {
+export function buildDictionary(): boolean {
   notImplemented();
   return null;
 }
@@ -11450,14 +11569,21 @@ export function reindexAll(): number {
  * @param maxNumFragments
  * @return any
  */
-export function hTMLPreview(variableBCorText: any, query: any, textType: any, preTag: any, postTag: any, fragmentSize: number, maxNumFragments: number): any {
+export function hTMLPreview(
+  variableBCorText: any,
+  query: any,
+  textType: any,
+  preTag: any,
+  postTag: any,
+  fragmentSize: number,
+  maxNumFragments: number
+): any {
   notImplemented();
   return null;
 }
 // end Type
 
 export class Window {
-  
   /**
    * @return any
    */
@@ -11465,38 +11591,36 @@ export class Window {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mcentered: number;
   static get centered(): number {
     return this.mcentered;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mabsolute: number;
   static get absolute(): number {
     return this.mabsolute;
   }
-  
-  
+
   /**
-   * 
+   *
    */
-  private mautoresize: any;
-  get autoresize(): any {
+  private mautoresize: boolean;
+  get autoresize(): boolean {
     return this.mautoresize;
   }
-  set autoresize(value: any) {
+  set autoresize(value: boolean) {
     this.mautoresize = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mwidth: number;
   get width(): number {
@@ -11505,9 +11629,9 @@ export class Window {
   set width(value: number) {
     this.mwidth = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mheight: number;
   get height(): number {
@@ -11516,9 +11640,9 @@ export class Window {
   set height(value: number) {
     this.mheight = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mposition: number;
   get position(): number {
@@ -11527,9 +11651,9 @@ export class Window {
   set position(value: number) {
     this.mposition = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtop: number;
   get top(): number {
@@ -11538,9 +11662,9 @@ export class Window {
   set top(value: number) {
     this.mtop = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mleft: number;
   get left(): number {
@@ -11549,9 +11673,9 @@ export class Window {
   set left(value: number) {
     this.mleft = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private murl: any;
   get url(): any {
@@ -11560,9 +11684,9 @@ export class Window {
   set url(value: any) {
     this.murl = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mobject: any;
   get object(): any {
@@ -11571,9 +11695,9 @@ export class Window {
   set object(value: any) {
     this.mobject = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mclass: any;
   get class(): any {
@@ -11585,7 +11709,6 @@ export class Window {
 }
 
 export class Video {
-  
   /**
    * @param videoURL
    * @return any
@@ -11594,18 +11717,17 @@ export class Video {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class Audio {
-  
   /**
    * @param videoURL
    * @return any
@@ -11614,18 +11736,17 @@ export class Audio {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class BinaryFile {
-  
   /**
    * @param fileURL
    * @return any
@@ -11634,20 +11755,19 @@ export class BinaryFile {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
 }
 
 export class Cookie {
-  
   /**
-   * 
+   *
    */
   private mname: any;
   get name(): any {
@@ -11656,9 +11776,9 @@ export class Cookie {
   set name(value: any) {
     this.mname = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mvalue: any;
   get value(): any {
@@ -11667,9 +11787,9 @@ export class Cookie {
   set value(value: any) {
     this.mvalue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mpath: any;
   get path(): any {
@@ -11678,9 +11798,9 @@ export class Cookie {
   set path(value: any) {
     this.mpath = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mexpirationDate: Date;
   get expirationDate(): Date {
@@ -11689,9 +11809,9 @@ export class Cookie {
   set expirationDate(value: Date) {
     this.mexpirationDate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mdomain: any;
   get domain(): any {
@@ -11700,34 +11820,33 @@ export class Cookie {
   set domain(value: any) {
     this.mdomain = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private msecure: any;
-  get secure(): any {
+  private msecure: boolean;
+  get secure(): boolean {
     return this.msecure;
   }
-  set secure(value: any) {
+  set secure(value: boolean) {
     this.msecure = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private mhttpOnly: any;
-  get httpOnly(): any {
+  private mhttpOnly: boolean;
+  get httpOnly(): boolean {
     return this.mhttpOnly;
   }
-  set httpOnly(value: any) {
+  set httpOnly(value: boolean) {
     this.mhttpOnly = value;
   }
 }
 
 export class CallOptions {
-  
   /**
-   * 
+   *
    */
   private menterEffect: any;
   get enterEffect(): any {
@@ -11736,9 +11855,9 @@ export class CallOptions {
   set enterEffect(value: any) {
     this.menterEffect = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mexitEffect: any;
   get exitEffect(): any {
@@ -11747,9 +11866,9 @@ export class CallOptions {
   set exitEffect(value: any) {
     this.mexitEffect = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: any;
   get type(): any {
@@ -11758,9 +11877,9 @@ export class CallOptions {
   set type(value: any) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtarget: any;
   get target(): any {
@@ -11769,9 +11888,9 @@ export class CallOptions {
   set target(value: any) {
     this.mtarget = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetSize: any;
   get targetSize(): any {
@@ -11780,9 +11899,9 @@ export class CallOptions {
   set targetSize(value: any) {
     this.mtargetSize = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetWidth: any;
   get targetWidth(): any {
@@ -11791,9 +11910,9 @@ export class CallOptions {
   set targetWidth(value: any) {
     this.mtargetWidth = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtargetHeight: any;
   get targetHeight(): any {
@@ -11805,7 +11924,6 @@ export class CallOptions {
 }
 
 export class CryptoCertificate {
-  
   /**
    * @param certPath
    * @param password
@@ -11815,7 +11933,7 @@ export class CryptoCertificate {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param base64String
    * @return number
@@ -11824,7 +11942,7 @@ export class CryptoCertificate {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -11832,25 +11950,25 @@ export class CryptoCertificate {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  hasPrivateKey(): any {
+  hasPrivateKey(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  verify(): any {
+  verify(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -11859,9 +11977,9 @@ export class CryptoCertificate {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -11870,9 +11988,9 @@ export class CryptoCertificate {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private missuer: any;
   get issuer(): any {
@@ -11881,9 +11999,9 @@ export class CryptoCertificate {
   set issuer(value: any) {
     this.missuer = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msubject: any;
   get subject(): any {
@@ -11892,9 +12010,9 @@ export class CryptoCertificate {
   set subject(value: any) {
     this.msubject = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mserialNumber: any;
   get serialNumber(): any {
@@ -11903,9 +12021,9 @@ export class CryptoCertificate {
   set serialNumber(value: any) {
     this.mserialNumber = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnotAfter: Date;
   get notAfter(): Date {
@@ -11914,9 +12032,9 @@ export class CryptoCertificate {
   set notAfter(value: Date) {
     this.mnotAfter = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mnotBefore: Date;
   get notBefore(): Date {
@@ -11925,9 +12043,9 @@ export class CryptoCertificate {
   set notBefore(value: Date) {
     this.mnotBefore = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mversion: number;
   get version(): number {
@@ -11939,7 +12057,6 @@ export class CryptoCertificate {
 }
 
 export class CryptoHash {
-  
   /**
    * @param text
    * @param key
@@ -11949,9 +12066,9 @@ export class CryptoHash {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -11960,9 +12077,9 @@ export class CryptoHash {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -11971,9 +12088,9 @@ export class CryptoHash {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private malgorithm: any;
   get algorithm(): any {
@@ -11985,7 +12102,6 @@ export class CryptoHash {
 }
 
 export class CryptoSymmetricEncrypt {
-  
   /**
    * @param text
    * @return any
@@ -11994,7 +12110,7 @@ export class CryptoSymmetricEncrypt {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param text
    * @return any
@@ -12003,9 +12119,9 @@ export class CryptoSymmetricEncrypt {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -12014,9 +12130,9 @@ export class CryptoSymmetricEncrypt {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -12025,9 +12141,9 @@ export class CryptoSymmetricEncrypt {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private malgorithm: any;
   get algorithm(): any {
@@ -12036,9 +12152,9 @@ export class CryptoSymmetricEncrypt {
   set algorithm(value: any) {
     this.malgorithm = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mkey: any;
   get key(): any {
@@ -12047,9 +12163,9 @@ export class CryptoSymmetricEncrypt {
   set key(value: any) {
     this.mkey = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private miV: any;
   get iV(): any {
@@ -12058,9 +12174,9 @@ export class CryptoSymmetricEncrypt {
   set iV(value: any) {
     this.miV = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mkeySize: number;
   get keySize(): number {
@@ -12069,9 +12185,9 @@ export class CryptoSymmetricEncrypt {
   set keySize(value: number) {
     this.mkeySize = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mblockSize: number;
   get blockSize(): number {
@@ -12083,7 +12199,6 @@ export class CryptoSymmetricEncrypt {
 }
 
 export class CryptoAsymmetricEncrypt {
-  
   /**
    * @param text
    * @return any
@@ -12092,7 +12207,7 @@ export class CryptoAsymmetricEncrypt {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param text
    * @return any
@@ -12101,9 +12216,9 @@ export class CryptoAsymmetricEncrypt {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -12112,9 +12227,9 @@ export class CryptoAsymmetricEncrypt {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -12123,9 +12238,9 @@ export class CryptoAsymmetricEncrypt {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private malgorithm: any;
   get algorithm(): any {
@@ -12134,9 +12249,9 @@ export class CryptoAsymmetricEncrypt {
   set algorithm(value: any) {
     this.malgorithm = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcertificate: any;
   get certificate(): any {
@@ -12148,30 +12263,29 @@ export class CryptoAsymmetricEncrypt {
 }
 
 export class CryptoSign {
-  
   /**
    * @param text
    * @param detached
    * @return any
    */
-  sign(text: any, detached: any): any {
+  sign(text: any, detached: boolean): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param signature
    * @param text
    * @param detached
-   * @return any
+   * @return boolean
    */
-  verify(signature: any, text: any, detached: any): any {
+  verify(signature: any, text: any, detached: boolean): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -12180,9 +12294,9 @@ export class CryptoSign {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -12191,9 +12305,9 @@ export class CryptoSign {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private malgorithm: any;
   get algorithm(): any {
@@ -12202,9 +12316,9 @@ export class CryptoSign {
   set algorithm(value: any) {
     this.malgorithm = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcertificate: any;
   get certificate(): any {
@@ -12213,20 +12327,20 @@ export class CryptoSign {
   set certificate(value: any) {
     this.mcertificate = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private mvalidateCertificate: any;
-  get validateCertificate(): any {
+  private mvalidateCertificate: boolean;
+  get validateCertificate(): boolean {
     return this.mvalidateCertificate;
   }
-  set validateCertificate(value: any) {
+  set validateCertificate(value: boolean) {
     this.mvalidateCertificate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mstandard: any;
   get standard(): any {
@@ -12238,7 +12352,6 @@ export class CryptoSign {
 }
 
 export class CryptoSignXml {
-  
   /**
    * @param reference
    * @return any
@@ -12247,7 +12360,7 @@ export class CryptoSignXml {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param text
    * @return any
@@ -12256,7 +12369,7 @@ export class CryptoSignXml {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param text
    * @param xPath
@@ -12266,18 +12379,18 @@ export class CryptoSignXml {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param signature
-   * @return any
+   * @return boolean
    */
-  verify(signature: any): any {
+  verify(signature: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
@@ -12286,9 +12399,9 @@ export class CryptoSignXml {
   set errCode(value: number) {
     this.merrCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
@@ -12297,9 +12410,9 @@ export class CryptoSignXml {
   set errDescription(value: any) {
     this.merrDescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcertificate: any;
   get certificate(): any {
@@ -12308,20 +12421,20 @@ export class CryptoSignXml {
   set certificate(value: any) {
     this.mcertificate = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private mvalidateCertificate: any;
-  get validateCertificate(): any {
+  private mvalidateCertificate: boolean;
+  get validateCertificate(): boolean {
     return this.mvalidateCertificate;
   }
-  set validateCertificate(value: any) {
+  set validateCertificate(value: boolean) {
     this.mvalidateCertificate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mkeyInfoClauses: any;
   get keyInfoClauses(): any {
@@ -12333,7 +12446,6 @@ export class CryptoSignXml {
 }
 
 export class Geography {
-  
   /**
    * @param gSText
    * @return any
@@ -12342,7 +12454,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12351,7 +12463,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12360,7 +12472,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12368,7 +12480,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12376,7 +12488,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12384,7 +12496,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12392,7 +12504,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12400,7 +12512,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12408,7 +12520,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param point
    * @return number
@@ -12417,24 +12529,24 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param object
-   * @return any
+   * @return boolean
    */
-  intersect(object: any): any {
+  intersect(object: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12442,15 +12554,15 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12458,15 +12570,15 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNullOrEmpty(): any {
+  isNullOrEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12475,7 +12587,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12484,7 +12596,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12493,7 +12605,7 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pointFrom
    * @param pointTo
@@ -12503,19 +12615,19 @@ export class Geography {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param objectA
    * @param objectB
-   * @return any
+   * @return boolean
    */
-  static intersect(objectA: any, objectB: any): any {
+  static intersect(objectA: any, objectB: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private msrid: number;
   get srid(): number {
@@ -12524,9 +12636,9 @@ export class Geography {
   set srid(value: number) {
     this.msrid = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mfeatureType: any;
   get featureType(): any {
@@ -12538,7 +12650,6 @@ export class Geography {
 }
 
 export class GeoPoint {
-  
   /**
    * @param gSText
    * @return any
@@ -12547,7 +12658,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12556,7 +12667,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12565,7 +12676,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12573,7 +12684,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12581,7 +12692,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12589,7 +12700,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12597,7 +12708,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param point
    * @return number
@@ -12606,24 +12717,24 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param object
-   * @return any
+   * @return boolean
    */
-  intersect(object: any): any {
+  intersect(object: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12631,15 +12742,15 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12647,15 +12758,15 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNullOrEmpty(): any {
+  isNullOrEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param latitude
    * @param longitude
@@ -12665,7 +12776,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12674,7 +12785,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12683,7 +12794,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12692,7 +12803,7 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param pointFrom
    * @param pointTo
@@ -12702,9 +12813,9 @@ export class GeoPoint {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mlongitude: number;
   get longitude(): number {
@@ -12713,9 +12824,9 @@ export class GeoPoint {
   set longitude(value: number) {
     this.mlongitude = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mlatitude: number;
   get latitude(): number {
@@ -12724,9 +12835,9 @@ export class GeoPoint {
   set latitude(value: number) {
     this.mlatitude = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private msrid: number;
   get srid(): number {
@@ -12738,7 +12849,6 @@ export class GeoPoint {
 }
 
 export class GeoLine {
-  
   /**
    * @param gSText
    * @return any
@@ -12747,7 +12857,7 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12756,7 +12866,7 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12765,7 +12875,7 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12773,7 +12883,7 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12781,7 +12891,7 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12789,7 +12899,7 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12797,24 +12907,24 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param object
-   * @return any
+   * @return boolean
    */
-  intersect(object: any): any {
+  intersect(object: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12822,15 +12932,15 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12838,15 +12948,15 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNullOrEmpty(): any {
+  isNullOrEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12855,7 +12965,7 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12864,7 +12974,7 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12873,19 +12983,19 @@ export class GeoLine {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param objectA
    * @param objectB
-   * @return any
+   * @return boolean
    */
-  static intersect(objectA: any, objectB: any): any {
+  static intersect(objectA: any, objectB: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private msrid: number;
   get srid(): number {
@@ -12897,7 +13007,6 @@ export class GeoLine {
 }
 
 export class GeoPolygon {
-  
   /**
    * @param gSText
    * @return any
@@ -12906,7 +13015,7 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12915,7 +13024,7 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -12924,7 +13033,7 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12932,7 +13041,7 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12940,7 +13049,7 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12948,7 +13057,7 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12956,16 +13065,16 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param object
-   * @return any
+   * @return boolean
    */
-  intersect(object: any): any {
+  intersect(object: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return number
    */
@@ -12973,15 +13082,15 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -12989,15 +13098,15 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isEmpty(): any {
+  isEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13005,15 +13114,15 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNullOrEmpty(): any {
+  isNullOrEmpty(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -13022,7 +13131,7 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -13031,7 +13140,7 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param gSText
    * @return any
@@ -13040,17 +13149,17 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param objectA
    * @param objectB
-   * @return any
+   * @return boolean
    */
-  static intersect(objectA: any, objectB: any): any {
+  static intersect(objectA: any, objectB: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param objectA
    * @return number
@@ -13059,9 +13168,9 @@ export class GeoPolygon {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private msrid: number;
   get srid(): number {
@@ -13073,9 +13182,8 @@ export class GeoPolygon {
 }
 
 export class WSAddressing {
-  
   /**
-   * 
+   *
    */
   private mto: any;
   get to(): any {
@@ -13084,9 +13192,9 @@ export class WSAddressing {
   set to(value: any) {
     this.mto = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private maction: any;
   get action(): any {
@@ -13095,9 +13203,9 @@ export class WSAddressing {
   set action(value: any) {
     this.maction = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mmessageID: any;
   get messageID(): any {
@@ -13106,9 +13214,9 @@ export class WSAddressing {
   set messageID(value: any) {
     this.mmessageID = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mfrom: any;
   get from(): any {
@@ -13117,9 +13225,9 @@ export class WSAddressing {
   set from(value: any) {
     this.mfrom = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mreplyTo: any;
   get replyTo(): any {
@@ -13128,9 +13236,9 @@ export class WSAddressing {
   set replyTo(value: any) {
     this.mreplyTo = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mfaultTo: any;
   get faultTo(): any {
@@ -13142,9 +13250,8 @@ export class WSAddressing {
 }
 
 export class WSAddressingEndPoint {
-  
   /**
-   * 
+   *
    */
   private maddress: any;
   get address(): any {
@@ -13153,9 +13260,9 @@ export class WSAddressingEndPoint {
   set address(value: any) {
     this.maddress = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mportType: any;
   get portType(): any {
@@ -13164,9 +13271,9 @@ export class WSAddressingEndPoint {
   set portType(value: any) {
     this.mportType = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mserviceName: any;
   get serviceName(): any {
@@ -13175,9 +13282,9 @@ export class WSAddressingEndPoint {
   set serviceName(value: any) {
     this.mserviceName = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mproperties: any;
   get properties(): any {
@@ -13186,9 +13293,9 @@ export class WSAddressingEndPoint {
   set properties(value: any) {
     this.mproperties = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mparameters: any;
   get parameters(): any {
@@ -13200,7 +13307,6 @@ export class WSAddressingEndPoint {
 }
 
 export class Cache {
-  
   /**
    * @param name
    * @return any
@@ -13209,7 +13315,7 @@ export class Cache {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13217,7 +13323,7 @@ export class Cache {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param key
    * @param value
@@ -13228,7 +13334,7 @@ export class Cache {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param key
    * @return any
@@ -13237,16 +13343,16 @@ export class Cache {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param key
-   * @return any
+   * @return boolean
    */
-  contains(key: any): any {
+  contains(key: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param key
    * @return any
@@ -13255,7 +13361,7 @@ export class Cache {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13263,104 +13369,132 @@ export class Cache {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mdatabase: any;
   static get database(): any {
     return this.mdatabase;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static msmartDevices: any;
   static get smartDevices(): any {
     return this.msmartDevices;
   }
-  
 }
 
 export class StorageProvider {
-  
   /**
    * @param storageObjectFullName
    * @param outExternalFile
    * @param expirationMinutes
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  getPrivate(storageObjectFullName: any, outExternalFile: any, expirationMinutes: number, outMessages: any): any {
+  getPrivate(
+    storageObjectFullName: any,
+    outExternalFile: any,
+    expirationMinutes: number,
+    outMessages: any
+  ): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param fileFullPath
    * @param storageObjectFullName
    * @param outUploadedFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  uploadPrivate(fileFullPath: any, storageObjectFullName: any, outUploadedFile: any, outMessages: any): any {
+  uploadPrivate(
+    fileFullPath: any,
+    storageObjectFullName: any,
+    outUploadedFile: any,
+    outMessages: any
+  ): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param storageObjectFullName
    * @param outExternalFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  get(storageObjectFullName: any, outExternalFile: any, outMessages: any): any {
+  get(
+    storageObjectFullName: any,
+    outExternalFile: any,
+    outMessages: any
+  ): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param fileFullPath
    * @param storageObjectFullName
    * @param outUploadedFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  upload(fileFullPath: any, storageObjectFullName: any, outUploadedFile: any, outMessages: any): any {
+  upload(
+    fileFullPath: any,
+    storageObjectFullName: any,
+    outUploadedFile: any,
+    outMessages: any
+  ): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param storageObjectFullName
    * @param outLocalFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  download(storageObjectFullName: any, outLocalFile: any, outMessages: any): any {
+  download(
+    storageObjectFullName: any,
+    outLocalFile: any,
+    outMessages: any
+  ): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param storageObjectFullName
    * @param outLocalFile
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  downloadPrivate(storageObjectFullName: any, outLocalFile: any, outMessages: any): any {
+  downloadPrivate(
+    storageObjectFullName: any,
+    outLocalFile: any,
+    outMessages: any
+  ): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param storageDirectoryFullName
    * @param outExternalDirectory
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  getDirectory(storageDirectoryFullName: any, outExternalDirectory: any, outMessages: any): any {
+  getDirectory(
+    storageDirectoryFullName: any,
+    outExternalDirectory: any,
+    outMessages: any
+  ): boolean {
     notImplemented();
     return null;
   }
@@ -13413,7 +13547,6 @@ export function setSendCheckpoint(): number {
 // end Type
 
 export class VariablePEM {
-  
   /**
    * @return any
    */
@@ -13421,7 +13554,7 @@ export class VariablePEM {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13432,7 +13565,6 @@ export class VariablePEM {
 }
 
 export class DomainPEM {
-  
   /**
    * @param expression
    * @return any
@@ -13441,7 +13573,7 @@ export class DomainPEM {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13449,7 +13581,7 @@ export class DomainPEM {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param enumeratedValue
    * @return any
@@ -13458,7 +13590,7 @@ export class DomainPEM {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param enumeratedValue
    * @return any
@@ -13470,7 +13602,6 @@ export class DomainPEM {
 }
 
 export class GXProgramMetadata {
-  
   /**
    * @param att
    * @return any
@@ -13482,7 +13613,6 @@ export class GXProgramMetadata {
 }
 
 export class SDObject {
-  
   /**
    * @param att
    * @return any
@@ -13491,7 +13621,7 @@ export class SDObject {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param att
    * @return any
@@ -13500,7 +13630,7 @@ export class SDObject {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param att
    * @return any
@@ -13509,9 +13639,9 @@ export class SDObject {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcallOptions: any;
   get callOptions(): any {
@@ -13523,7 +13653,6 @@ export class SDObject {
 }
 
 export class GXProgram {
-  
   /**
    * @param att
    * @return any
@@ -13532,7 +13661,7 @@ export class GXProgram {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param att
    * @return any
@@ -13541,7 +13670,7 @@ export class GXProgram {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param att
    * @return any
@@ -13550,7 +13679,7 @@ export class GXProgram {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param parameter
    * @return any
@@ -13559,7 +13688,7 @@ export class GXProgram {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param submitParameters
    * @param att
@@ -13569,7 +13698,7 @@ export class GXProgram {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param att
    * @return any
@@ -13578,7 +13707,7 @@ export class GXProgram {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param att
    * @return any
@@ -13587,9 +13716,9 @@ export class GXProgram {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mtype: any;
   get type(): any {
@@ -13598,9 +13727,9 @@ export class GXProgram {
   set type(value: any) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mcallOptions: any;
   get callOptions(): any {
@@ -13612,7 +13741,6 @@ export class GXProgram {
 }
 
 export class GXDataSelector {
-  
   /**
    * @param att
    * @return any
@@ -13624,7 +13752,6 @@ export class GXDataSelector {
 }
 
 export class ImagePEMs {
-  
   /**
    * @return any
    */
@@ -13635,7 +13762,6 @@ export class ImagePEMs {
 }
 
 export class OutputGroup {
-  
   /**
    * @param parameter
    * @return any
@@ -13650,7 +13776,6 @@ export class OutputGroup {
 // end Type
 
 export class BusinessComponent {
-  
   /**
    * @return any
    */
@@ -13658,7 +13783,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13666,7 +13791,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param primaryKeyAtt
    * @return any
@@ -13675,7 +13800,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13683,7 +13808,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13691,106 +13816,106 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param includeHeader
    * @param includeState
    * @return any
    */
-  toXml(includeHeader: any, includeState: any): any {
+  toXml(includeHeader: boolean, includeState: boolean): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param xml
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXml(xml: any, outMessages: any): any {
+  fromXml(xml: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param xml
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXmlFile(xml: any, outMessages: any): any {
+  fromXmlFile(xml: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param includeState
    * @return any
    */
-  toJson(includeState: any): any {
+  toJson(includeState: boolean): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJson(source: any, outMessages: any): any {
+  fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJsonFile(source: any, outMessages: any): any {
+  fromJsonFile(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  update(): any {
+  update(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  insert(): any {
+  insert(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  insertOrUpdate(): any {
+  insertOrUpdate(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  success(): any {
+  success(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  fail(): any {
+  fail(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13798,7 +13923,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13806,7 +13931,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -13815,7 +13940,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -13824,7 +13949,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @return any
@@ -13833,7 +13958,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param name
    * @param value
@@ -13843,7 +13968,7 @@ export class BusinessComponent {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13854,7 +13979,6 @@ export class BusinessComponent {
 }
 
 export class AttributePEM {
-  
   /**
    * @return any
    */
@@ -13862,7 +13986,7 @@ export class AttributePEM {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13870,7 +13994,7 @@ export class AttributePEM {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13878,7 +14002,7 @@ export class AttributePEM {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13886,7 +14010,7 @@ export class AttributePEM {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13897,7 +14021,6 @@ export class AttributePEM {
 }
 
 export class BasedOnEnumeratedDomain {
-  
   /**
    * @return any
    */
@@ -13905,7 +14028,7 @@ export class BasedOnEnumeratedDomain {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13916,37 +14039,36 @@ export class BasedOnEnumeratedDomain {
 }
 
 export class SDT {
-  
   /**
    * @param includeHeader
    * @param includeState
    * @return any
    */
-  toXml(includeHeader: any, includeState: any): any {
+  toXml(includeHeader: boolean, includeState: boolean): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXml(source: any, outMessages: any): any {
+  fromXml(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromXmlFile(source: any, outMessages: any): any {
+  fromXmlFile(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -13954,44 +14076,44 @@ export class SDT {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param includeState
    * @return any
    */
-  toJson(includeState: any): any {
+  toJson(includeState: boolean): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJson(source: any, outMessages: any): any {
+  fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param source
    * @param outMessages
-   * @return any
+   * @return boolean
    */
-  fromJsonFile(source: any, outMessages: any): any {
+  fromJsonFile(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  isNull(): any {
+  isNull(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -14002,7 +14124,6 @@ export class SDT {
 }
 
 export class SDTItem {
-  
   /**
    * @return any
    */
@@ -14013,7 +14134,6 @@ export class SDTItem {
 }
 
 export class Iterator {
-  
   /**
    * @return any
    */
@@ -14021,7 +14141,7 @@ export class Iterator {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -14029,17 +14149,17 @@ export class Iterator {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * @return any
+   * @return boolean
    */
-  eof(): any {
+  eof(): boolean {
     notImplemented();
     return null;
   }
 }
 
-// Type: 
+// Type:
 // end Type
 
 // Type: Void
@@ -14079,7 +14199,6 @@ export class Iterator {
 // end Type
 
 export class GeneXusCommonUIProgress {
-  
   /**
    * @return any
    */
@@ -14087,7 +14206,7 @@ export class GeneXusCommonUIProgress {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param title
    * @return any
@@ -14096,7 +14215,7 @@ export class GeneXusCommonUIProgress {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param title
    * @param description
@@ -14106,7 +14225,7 @@ export class GeneXusCommonUIProgress {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -14114,9 +14233,9 @@ export class GeneXusCommonUIProgress {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mclass: any;
   static get class(): any {
@@ -14125,9 +14244,9 @@ export class GeneXusCommonUIProgress {
   static set class(value: any) {
     this.mclass = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mtype: any;
   static get type(): any {
@@ -14136,9 +14255,9 @@ export class GeneXusCommonUIProgress {
   static set type(value: any) {
     this.mtype = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mtitle: any;
   static get title(): any {
@@ -14147,9 +14266,9 @@ export class GeneXusCommonUIProgress {
   static set title(value: any) {
     this.mtitle = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mdescription: any;
   static get description(): any {
@@ -14158,9 +14277,9 @@ export class GeneXusCommonUIProgress {
   static set description(value: any) {
     this.mdescription = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mmaxValue: any;
   static get maxValue(): any {
@@ -14169,9 +14288,9 @@ export class GeneXusCommonUIProgress {
   static set maxValue(value: any) {
     this.mmaxValue = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mvalue: any;
   static get value(): any {
@@ -14237,9 +14356,9 @@ export function getValue(propName: any, fileName: any): any {
 /**
  * @param propName
  * @param fileName
- * @return any
+ * @return boolean
  */
-export function hasValue(propName: any, fileName: any): any {
+export function hasValue(propName: any, fileName: any): boolean {
   notImplemented();
   return null;
 }
@@ -14283,7 +14402,12 @@ export function trackView(viewName: any): any {
  * @param value
  * @return any
  */
-export function trackEvent(category: any, action: any, label: any, value: number): any {
+export function trackEvent(
+  category: any,
+  action: any,
+  label: any,
+  value: number
+): any {
   notImplemented();
   return null;
 }
@@ -14308,7 +14432,6 @@ export function setAnalyticsUserId(userId: any): any {
 // end Type
 
 export class GeneXusCommonGeolocation {
-  
   /**
    * Returns the current location for the device
    * @param minAccuracy
@@ -14317,29 +14440,34 @@ export class GeneXusCommonGeolocation {
    * @param ignoreErrors
    * @return any
    */
-  static getMyLocation(minAccuracy: any, timeout: any, includeHeadingAndSpeed: any, ignoreErrors: any): any {
+  static getMyLocation(
+    minAccuracy: any,
+    timeout: any,
+    includeHeadingAndSpeed: boolean,
+    ignoreErrors: boolean
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Indicates wether the application has been given permission to use location services
-   * @return any
+   * @return boolean
    */
-  static authorized(): any {
+  static authorized(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Indicates wether location services are enable in the device
-   * @return any
+   * @return boolean
    */
-  static serviceEnabled(): any {
+  static serviceEnabled(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Starts generating tracking information
    * @param changesInterval
@@ -14349,11 +14477,17 @@ export class GeneXusCommonGeolocation {
    * @param accuracy
    * @return any
    */
-  static startTracking(changesInterval: any, distance: any, action: any, actionTimeInterval: any, accuracy: any): any {
+  static startTracking(
+    changesInterval: any,
+    distance: any,
+    action: any,
+    actionTimeInterval: any,
+    accuracy: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Stops the generation of tracking information
    * @return any
@@ -14362,7 +14496,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Returns a collection of location information generated by the tracking methods
    * @param startTime
@@ -14372,7 +14506,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Removes all previous location information generated by the tracking methods
    * @return any
@@ -14381,7 +14515,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Returns the latitude of the given location
    * @param location
@@ -14391,7 +14525,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Returns the longitude of the given location
    * @param location
@@ -14401,7 +14535,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Returns the distance between the two locations given
    * @param fromLocation
@@ -14412,7 +14546,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Returns a collection of addresses for the given location
    * @param location
@@ -14422,7 +14556,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Returns a collection of locations for the given address
    * @param address
@@ -14432,16 +14566,16 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param proximityAlerts
-   * @return any
+   * @return boolean
    */
-  static setProximityAlerts(proximityAlerts: any): any {
+  static setProximityAlerts(proximityAlerts: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -14449,7 +14583,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -14457,7 +14591,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -14465,7 +14599,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param geoLocationPickerParameters
    * @return any
@@ -14474,7 +14608,7 @@ export class GeneXusCommonGeolocation {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Returns the current authorization status.
    */
@@ -14482,7 +14616,6 @@ export class GeneXusCommonGeolocation {
   static get authorizationStatus(): any {
     return this.mauthorizationStatus;
   }
-  
 }
 
 // Type: GeneXusCommonServer
@@ -14497,15 +14630,13 @@ export function invalidateCache(): any {
 // end Type
 
 export class GeneXusCommonRuntime {
-  
   /**
-   * 
+   *
    */
   private static menvironment: any;
   static get environment(): any {
     return this.menvironment;
   }
-  
 }
 
 // Type: GeneXusCommonLog
@@ -14581,103 +14712,97 @@ export function fatal(message: any, topic: any): any {
  * @param requestAlternateRoutes
  * @return any
  */
-export function calculateDirections(sourceLocation: any, destinationLocation: any, transportType: any, requestAlternateRoutes: any): any {
+export function calculateDirections(
+  sourceLocation: any,
+  destinationLocation: any,
+  transportType: any,
+  requestAlternateRoutes: boolean
+): any {
   notImplemented();
   return null;
 }
 // end Type
 
 export class GeneXusClientClientInformation {
-  
   /**
-   * 
+   *
    */
   private static mid: any;
   static get id(): any {
     return this.mid;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static moSName: any;
   static get oSName(): any {
     return this.moSName;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static moSVersion: any;
   static get oSVersion(): any {
     return this.moSVersion;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mnetworkID: any;
   static get networkID(): any {
     return this.mnetworkID;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mlanguage: any;
   static get language(): any {
     return this.mlanguage;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mdeviceType: any;
   static get deviceType(): any {
     return this.mdeviceType;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mplatformName: any;
   static get platformName(): any {
     return this.mplatformName;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mappVersionCode: any;
   static get appVersionCode(): any {
     return this.mappVersionCode;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mappVersionName: any;
   static get appVersionName(): any {
     return this.mappVersionName;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private static mapplicationId: any;
   static get applicationId(): any {
     return this.mapplicationId;
   }
-  
 }
 
 // Type: GeneXusClientClientStorage
@@ -14730,7 +14855,6 @@ export function clear(): any {
 // end Type
 
 export class GeneXusClientSocket {
-  
   /**
    * @param url
    * @return any
@@ -14739,7 +14863,7 @@ export class GeneXusClientSocket {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -14747,7 +14871,7 @@ export class GeneXusClientSocket {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param msg
    * @return any
@@ -14756,9 +14880,9 @@ export class GeneXusClientSocket {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mstatus: any;
   static get status(): any {
@@ -14770,7 +14894,6 @@ export class GeneXusClientSocket {
 }
 
 export class GeneXusSocialFacebook {
-  
   /**
    * @param name
    * @param caption
@@ -14779,11 +14902,17 @@ export class GeneXusSocialFacebook {
    * @param picture
    * @return any
    */
-  static postToWall(name: any, caption: any, description: any, link: any, picture: any): any {
+  static postToWall(
+    name: any,
+    caption: any,
+    description: any,
+    link: any,
+    picture: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param link
    * @return any
@@ -14792,7 +14921,7 @@ export class GeneXusSocialFacebook {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param image
    * @return any
@@ -14801,7 +14930,7 @@ export class GeneXusSocialFacebook {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param video
    * @return any
@@ -14810,7 +14939,7 @@ export class GeneXusSocialFacebook {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Access Token for interacting with FB Graph API
    */
@@ -14818,7 +14947,6 @@ export class GeneXusSocialFacebook {
   static get accessToken(): any {
     return this.maccessToken;
   }
-  
 }
 
 // Type: GeneXusSocialTwitter
@@ -14870,7 +14998,6 @@ export function shareImage(image: any, text: any, url: any, title: any): any {
 // end Type
 
 export class GeneXusServerSocket {
-  
   /**
    * @param sdtNotification
    * @return number
@@ -14879,7 +15006,7 @@ export class GeneXusServerSocket {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param clientId
    * @param sdtNotification
@@ -14889,7 +15016,7 @@ export class GeneXusServerSocket {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param sdtNotification
    * @return any
@@ -14898,7 +15025,7 @@ export class GeneXusServerSocket {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param clientId
    * @param message
@@ -14908,42 +15035,39 @@ export class GeneXusServerSocket {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private mclientId: any;
   get clientId(): any {
     return this.mclientId;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private merrCode: number;
   get errCode(): number {
     return this.merrCode;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private merrDescription: any;
   get errDescription(): any {
     return this.merrDescription;
   }
-  
 }
 
 // Type: GeneXusSDSynchronizationSynchronizationEvents
 
 /**
  * @param eventStatus
- * @return any
+ * @return boolean
  */
-export function hasEvents(eventStatus: any): any {
+export function hasEvents(eventStatus: any): boolean {
   notImplemented();
   return null;
 }
@@ -15019,7 +15143,6 @@ export function requestRemoteNotificationsPermission(): any {
 // end Type
 
 export class GeneXusSDStoreStoreManager {
-  
   /**
    * @param productIdentifiers
    * @return any
@@ -15028,7 +15151,7 @@ export class GeneXusSDStoreStoreManager {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param productIdentifier
    * @param quantity
@@ -15038,7 +15161,7 @@ export class GeneXusSDStoreStoreManager {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -15046,16 +15169,16 @@ export class GeneXusSDStoreStoreManager {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param productIdentifier
-   * @return any
+   * @return boolean
    */
-  static consumeProduct(productIdentifier: any): any {
+  static consumeProduct(productIdentifier: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Restore transactions (iOS only)
    * @return any
@@ -15064,21 +15187,19 @@ export class GeneXusSDStoreStoreManager {
     notImplemented();
     return null;
   }
-  
+
   /**
    * If user device can make purchases
    */
-  private static mcanMakePurchases: any;
-  static get canMakePurchases(): any {
+  private static mcanMakePurchases: boolean;
+  static get canMakePurchases(): boolean {
     return this.mcanMakePurchases;
   }
-  
 }
 
 export class GeneXusSDNotificationsNotificationsConfiguration {
-  
   /**
-   * 
+   *
    */
   private miOScertificate: any;
   get iOScertificate(): any {
@@ -15087,9 +15208,9 @@ export class GeneXusSDNotificationsNotificationsConfiguration {
   set iOScertificate(value: any) {
     this.miOScertificate = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private miOScertificatePassword: any;
   get iOScertificatePassword(): any {
@@ -15098,20 +15219,20 @@ export class GeneXusSDNotificationsNotificationsConfiguration {
   set iOScertificatePassword(value: any) {
     this.miOScertificatePassword = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private miOSuseSandboxServer: any;
-  get iOSuseSandboxServer(): any {
+  private miOSuseSandboxServer: boolean;
+  get iOSuseSandboxServer(): boolean {
     return this.miOSuseSandboxServer;
   }
-  set iOSuseSandboxServer(value: any) {
+  set iOSuseSandboxServer(value: boolean) {
     this.miOSuseSandboxServer = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mandroidSenderId: any;
   get androidSenderId(): any {
@@ -15120,9 +15241,9 @@ export class GeneXusSDNotificationsNotificationsConfiguration {
   set androidSenderId(value: any) {
     this.mandroidSenderId = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mandroidSenderAPIKey: any;
   get androidSenderAPIKey(): any {
@@ -15131,9 +15252,9 @@ export class GeneXusSDNotificationsNotificationsConfiguration {
   set androidSenderAPIKey(value: any) {
     this.mandroidSenderAPIKey = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mwNSPackageSecurityIdentifier: any;
   get wNSPackageSecurityIdentifier(): any {
@@ -15142,9 +15263,9 @@ export class GeneXusSDNotificationsNotificationsConfiguration {
   set wNSPackageSecurityIdentifier(value: any) {
     this.mwNSPackageSecurityIdentifier = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private mwNSClientSecret: any;
   get wNSClientSecret(): any {
@@ -15156,46 +15277,40 @@ export class GeneXusSDNotificationsNotificationsConfiguration {
 }
 
 export class GeneXusSDNotificationsRemoteNotificationResult {
-  
   /**
-   * 
+   *
    */
   private merrorCode: number;
   get errorCode(): number {
     return this.merrorCode;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private merrorDescription: any;
   get errorDescription(): any {
     return this.merrorDescription;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private mdeviceType: any;
   get deviceType(): any {
     return this.mdeviceType;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private mdeviceToken: any;
   get deviceToken(): any {
     return this.mdeviceToken;
   }
-  
 }
 
 export class GeneXusSDNotificationsNotificationParameters {
-  
   /**
    * @param name
    * @param value
@@ -15208,7 +15323,6 @@ export class GeneXusSDNotificationsNotificationParameters {
 }
 
 export class GeneXusSDNotificationsRemoteNotifications {
-  
   /**
    * @param applicationId
    * @param deviceType
@@ -15216,11 +15330,16 @@ export class GeneXusSDNotificationsRemoteNotifications {
    * @param alertMessage
    * @return number
    */
-  call(applicationId: any, deviceType: any, deviceToken: any, alertMessage: any): number {
+  call(
+    applicationId: any,
+    deviceType: any,
+    deviceToken: any,
+    alertMessage: any
+  ): number {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param applicationId
    * @param deviceToken
@@ -15228,11 +15347,16 @@ export class GeneXusSDNotificationsRemoteNotifications {
    * @param sound
    * @return number
    */
-  iOSSetBadge(applicationId: any, deviceToken: any, badgeNumber: number, sound: any): number {
+  iOSSetBadge(
+    applicationId: any,
+    deviceToken: any,
+    badgeNumber: number,
+    sound: any
+  ): number {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param applicationId
    * @param deviceToken
@@ -15242,7 +15366,7 @@ export class GeneXusSDNotificationsRemoteNotifications {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param applicationId
    * @param deviceType
@@ -15252,11 +15376,18 @@ export class GeneXusSDNotificationsRemoteNotifications {
    * @param parameters
    * @return any
    */
-  callAction(applicationId: any, deviceType: any, deviceToken: any, alertMessage: any, actionName: any, parameters: any): any {
+  callAction(
+    applicationId: any,
+    deviceType: any,
+    deviceToken: any,
+    alertMessage: any,
+    actionName: any,
+    parameters: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param applicationId
    * @return number
@@ -15265,7 +15396,7 @@ export class GeneXusSDNotificationsRemoteNotifications {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param remoteNotification
    * @return any
@@ -15274,7 +15405,7 @@ export class GeneXusSDNotificationsRemoteNotifications {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -15282,7 +15413,7 @@ export class GeneXusSDNotificationsRemoteNotifications {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param applicationId
    * @param configuration
@@ -15292,24 +15423,22 @@ export class GeneXusSDNotificationsRemoteNotifications {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private merrorCode: number;
   get errorCode(): number {
     return this.merrorCode;
   }
-  
-  
+
   /**
-   * 
+   *
    */
   private merrorDescription: any;
   get errorDescription(): any {
     return this.merrorDescription;
   }
-  
 }
 
 // Type: GeneXusSDNotificationsLocalNotifications
@@ -15451,9 +15580,9 @@ export function stop(category: any): any {
 /**
  * Returns whether there is audio playing in any category
  * @param category
- * @return any
+ * @return boolean
  */
-export function isPlaying(category: any): any {
+export function isPlaying(category: any): boolean {
   notImplemented();
   return null;
 }
@@ -15538,7 +15667,7 @@ export function setPlayerSettings(settings: any): any {
  * @param show
  * @return any
  */
-export function iOSSetShowsMiniPlayer(show: any): any {
+export function iOSSetShowsMiniPlayer(show: boolean): any {
   notImplemented();
   return null;
 }
@@ -15561,16 +15690,15 @@ export function iOSDismissFullScreenPlayer(): any {
 // end Type
 
 export class GeneXusSDMediaAudioRecorder {
-  
   /**
    * Starts a recording session. Returns True if the operation was successful, False otherwise
-   * @return any
+   * @return boolean
    */
-  static start(): any {
+  static start(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Stops the recording session and returns the URL of the recorder file.
    * @return any
@@ -15579,15 +15707,14 @@ export class GeneXusSDMediaAudioRecorder {
     notImplemented();
     return null;
   }
-  
+
   /**
    * True if there is an active recording session, False otherwise
    */
-  private static misRecording: any;
-  static get isRecording(): any {
+  private static misRecording: boolean;
+  static get isRecording(): boolean {
     return this.misRecording;
   }
-  
 }
 
 // Type: GeneXusSDActions
@@ -15597,9 +15724,13 @@ export class GeneXusSDMediaAudioRecorder {
  * @param user
  * @param password
  * @param additionalParameters
- * @return any
+ * @return boolean
  */
-export function login(user: any, password: any, additionalParameters: any): any {
+export function login(
+  user: any,
+  password: any,
+  additionalParameters: any
+): boolean {
   notImplemented();
   return null;
 }
@@ -15610,9 +15741,14 @@ export function login(user: any, password: any, additionalParameters: any): any 
  * @param user
  * @param password
  * @param additionalParameters
- * @return any
+ * @return boolean
  */
-export function loginExternal(type: any, user: any, password: any, additionalParameters: any): any {
+export function loginExternal(
+  type: any,
+  user: any,
+  password: any,
+  additionalParameters: any
+): boolean {
   notImplemented();
   return null;
 }
@@ -15693,9 +15829,17 @@ export function takeApplicationScreenshot(): any {
  * @param companyName
  * @param photo
  * @param message
- * @return any
+ * @return boolean
  */
-export function addContact(firstName: any, lastName: any, eMail: any, phone: any, companyName: any, photo: any, message: any): any {
+export function addContact(
+  firstName: any,
+  lastName: any,
+  eMail: any,
+  phone: any,
+  companyName: any,
+  photo: any,
+  message: any
+): boolean {
   notImplemented();
   return null;
 }
@@ -15706,9 +15850,15 @@ export function addContact(firstName: any, lastName: any, eMail: any, phone: any
  * @param eMail
  * @param phone
  * @param message
- * @return any
+ * @return boolean
  */
-export function removeContact(firstName: any, lastName: any, eMail: any, phone: any, message: any): any {
+export function removeContact(
+  firstName: any,
+  lastName: any,
+  eMail: any,
+  phone: any,
+  message: any
+): boolean {
   notImplemented();
   return null;
 }
@@ -15720,7 +15870,12 @@ export function removeContact(firstName: any, lastName: any, eMail: any, phone: 
  * @param phone
  * @return any
  */
-export function viewContact(firstName: any, lastName: any, eMail: any, phone: any): any {
+export function viewContact(
+  firstName: any,
+  lastName: any,
+  eMail: any,
+  phone: any
+): any {
   notImplemented();
   return null;
 }
@@ -15746,14 +15901,20 @@ export function getAllContacts(): any {
  * @param place
  * @return any
  */
-export function schedule(title: any, startDate: Date, endDate: Date, startTime: any, endTime: any, place: any): any {
+export function schedule(
+  title: any,
+  startDate: Date,
+  endDate: Date,
+  startTime: any,
+  endTime: any,
+  place: any
+): any {
   notImplemented();
   return null;
 }
 // end Type
 
 export class GeneXusSDInterop {
-  
   /**
    * @param message
    * @param to
@@ -15763,7 +15924,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param video
    * @return any
@@ -15772,7 +15933,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param audio
    * @return any
@@ -15781,7 +15942,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param phone
    * @return any
@@ -15790,7 +15951,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param to
    * @param subject
@@ -15801,7 +15962,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param to
    * @param cc
@@ -15810,11 +15971,17 @@ export class GeneXusSDInterop {
    * @param message
    * @return any
    */
-  static sendEmailAdvanced(to: any, cc: any, bcc: any, subject: any, message: any): any {
+  static sendEmailAdvanced(
+    to: any,
+    cc: any,
+    bcc: any,
+    subject: any,
+    message: any
+  ): any {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param to
    * @param message
@@ -15824,7 +15991,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
    * @return any
@@ -15833,16 +16000,16 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param message
-   * @return any
+   * @return boolean
    */
-  static confirm(message: any): any {
+  static confirm(message: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Deprecated: use WebBrowser.Open instead
    * @param url
@@ -15852,16 +16019,16 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param url
-   * @return any
+   * @return boolean
    */
-  static canOpen(url: any): any {
+  static canOpen(url: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param url
    * @return any
@@ -15870,7 +16037,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @return any
    */
@@ -15878,7 +16045,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Deprecated: use Interop.SetBadgeNumber instead
    * @param num
@@ -15888,7 +16055,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param num
    * @return any
@@ -15897,7 +16064,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param text
    * @param tabIndex
@@ -15907,7 +16074,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param tabIndex
    * @return any
@@ -15916,7 +16083,7 @@ export class GeneXusSDInterop {
     notImplemented();
     return null;
   }
-  
+
   /**
    * DEPRECATED. Use AppLifecycle.ApplicationState instead.
    */
@@ -15924,7 +16091,6 @@ export class GeneXusSDInterop {
   static get applicationState(): any {
     return this.mapplicationState;
   }
-  
 }
 
 // Type: GeneXusSDScanner
@@ -15943,23 +16109,22 @@ export function scanBarcode(barcodeTypes: any): any {
  * @param barcodeTypes
  * @return any
  */
-export function scanInLoop(beepOnEachRead: any, barcodeTypes: any): any {
+export function scanInLoop(beepOnEachRead: boolean, barcodeTypes: any): any {
   notImplemented();
   return null;
 }
 // end Type
 
 export class GeneXusSDNetwork {
-  
   /**
    * @param url
-   * @return any
+   * @return boolean
    */
-  static isServerAvailable(url: any): any {
+  static isServerAvailable(url: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param url
    * @return any
@@ -15968,16 +16133,16 @@ export class GeneXusSDNetwork {
     notImplemented();
     return null;
   }
-  
+
   /**
    * @param url
-   * @return any
+   * @return boolean
    */
-  static trafficBasedCost(url: any): any {
+  static trafficBasedCost(url: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * If the property Dynamic Services URL is set to True, changes the URL at runtime.
    * @param url
@@ -15987,39 +16152,37 @@ export class GeneXusSDNetwork {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mapplicationServerURL: any;
   static get applicationServerURL(): any {
     return this.mapplicationServerURL;
   }
-  
 }
 
 export class GeneXusSDBeacons {
-  
   /**
    * Start monitoring the specified beacon region.
    * @param proximityAlert
-   * @return any
+   * @return boolean
    */
-  static addBeaconProximityAlert(proximityAlert: any): any {
+  static addBeaconProximityAlert(proximityAlert: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Start monitoring the specified beacon regions.
    * @param proximityAlerts
-   * @return any
+   * @return boolean
    */
-  static addBeaconProximityAlerts(proximityAlerts: any): any {
+  static addBeaconProximityAlerts(proximityAlerts: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Retrieve a collection for the beacon regions that are currently being monitored.
    * @return any
@@ -16028,7 +16191,7 @@ export class GeneXusSDBeacons {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Removes the beacon region being monitored.
    * @param proximityAlertRegionId
@@ -16038,7 +16201,7 @@ export class GeneXusSDBeacons {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Removes all the beacon regions being monitored.
    * @return any
@@ -16047,7 +16210,7 @@ export class GeneXusSDBeacons {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Retrieve the cached state of the specified region.
    * @param regionId
@@ -16057,17 +16220,17 @@ export class GeneXusSDBeacons {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Starts the delivery of notifications for beacons in the specified region.
    * @param beaconRegion
-   * @return any
+   * @return boolean
    */
-  static startRangingBeaconRegion(beaconRegion: any): any {
+  static startRangingBeaconRegion(beaconRegion: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Retrieve a collection for the beacon regions that are currently providing ranging.
    * @return any
@@ -16076,7 +16239,7 @@ export class GeneXusSDBeacons {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Stops the delivery of notifications for the specified beacon region.
    * @param regionId
@@ -16086,7 +16249,7 @@ export class GeneXusSDBeacons {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Retrieve a collection for the beacons (sorted by proximity) currently in range for the given region.
    * @param regionId
@@ -16096,53 +16259,50 @@ export class GeneXusSDBeacons {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Advertises the current device as a beacon.
    * @param beaconInfo
-   * @return any
+   * @return boolean
    */
-  static startAsBeacon(beaconInfo: any): any {
+  static startAsBeacon(beaconInfo: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Stops advertising the current device as a beacon.
-   * @return any
+   * @return boolean
    */
-  static stopAsBeacon(): any {
+  static stopAsBeacon(): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Determines whether the device supports ranging. If False, all attempts to range beacons will fail.
    */
-  private static mrangingAvailable: any;
-  static get rangingAvailable(): any {
+  private static mrangingAvailable: boolean;
+  static get rangingAvailable(): boolean {
     return this.mrangingAvailable;
   }
-  
-  
+
   /**
    * Determines whether the device supports beacon proximity alerts. If False, all attempts to set proximity alerts will fail.
    */
-  private static mbeaconProximityAlertsAvailable: any;
-  static get beaconProximityAlertsAvailable(): any {
+  private static mbeaconProximityAlertsAvailable: boolean;
+  static get beaconProximityAlertsAvailable(): boolean {
     return this.mbeaconProximityAlertsAvailable;
   }
-  
-  
+
   /**
    * Determines whether the user has location services enabled. If False, and you proceed to call other Location API, user will be prompted with the warning or fail depending on the current authorization status.
    */
-  private static mserviceEnabled: any;
-  static get serviceEnabled(): any {
+  private static mserviceEnabled: boolean;
+  static get serviceEnabled(): boolean {
     return this.mserviceEnabled;
   }
-  
-  
+
   /**
    * Returns the current authorization status.
    */
@@ -16150,7 +16310,6 @@ export class GeneXusSDBeacons {
   static get authorizationStatus(): any {
     return this.mauthorizationStatus;
   }
-  
 }
 
 // Type: GeneXusSDSearch
@@ -16182,29 +16341,28 @@ export function close(): any {
 // end Type
 
 export class GeneXusSDDeviceAuthentication {
-  
   /**
    * Returns True if the API can be used in the current device, False otherwise
    * @param method
-   * @return any
+   * @return boolean
    */
-  static isAvailable(method: any): any {
+  static isAvailable(method: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Performs the authentication step, using the method that corresponds for the current device.
    * @param method
    * @param title
    * @param usageDescription
-   * @return any
+   * @return boolean
    */
-  static authenticate(method: any, title: any, usageDescription: any): any {
+  static authenticate(method: any, title: any, usageDescription: any): boolean {
     notImplemented();
     return null;
   }
-  
+
   /**
    * Returns the name of the biometrics authentication method available on the current device
    */
@@ -16212,8 +16370,7 @@ export class GeneXusSDDeviceAuthentication {
   static get biometricsDescription(): any {
     return this.mbiometricsDescription;
   }
-  
-  
+
   /**
    * Indicates the minimum time (in seconds) before asking the user to locally authenticate again after a successful authentication
    */
@@ -16227,7 +16384,6 @@ export class GeneXusSDDeviceAuthentication {
 }
 
 export class GeneXusSDAppLifecycle {
-  
   /**
    * The runtime state of the application.
    */
@@ -16235,11 +16391,9 @@ export class GeneXusSDAppLifecycle {
   static get applicationState(): any {
     return this.mapplicationState;
   }
-  
 }
 
 export class GeneXusSDCardScanner {
-  
   /**
    * @return any
    */
@@ -16247,62 +16401,61 @@ export class GeneXusSDCardScanner {
     notImplemented();
     return null;
   }
-  
+
   /**
-   * 
+   *
    */
-  private static misAvailable: any;
-  static get isAvailable(): any {
+  private static misAvailable: boolean;
+  static get isAvailable(): boolean {
     return this.misAvailable;
   }
-  
-  
+
   /**
-   * 
+   *
    */
-  private static mcollectCardholderName: any;
-  static get collectCardholderName(): any {
+  private static mcollectCardholderName: boolean;
+  static get collectCardholderName(): boolean {
     return this.mcollectCardholderName;
   }
-  static set collectCardholderName(value: any) {
+  static set collectCardholderName(value: boolean) {
     this.mcollectCardholderName = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private static mcollectCVV: any;
-  static get collectCVV(): any {
+  private static mcollectCVV: boolean;
+  static get collectCVV(): boolean {
     return this.mcollectCVV;
   }
-  static set collectCVV(value: any) {
+  static set collectCVV(value: boolean) {
     this.mcollectCVV = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private static mcollectExpiry: any;
-  static get collectExpiry(): any {
+  private static mcollectExpiry: boolean;
+  static get collectExpiry(): boolean {
     return this.mcollectExpiry;
   }
-  static set collectExpiry(value: any) {
+  static set collectExpiry(value: boolean) {
     this.mcollectExpiry = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private static mcollectPostalCode: any;
-  static get collectPostalCode(): any {
+  private static mcollectPostalCode: boolean;
+  static get collectPostalCode(): boolean {
     return this.mcollectPostalCode;
   }
-  static set collectPostalCode(value: any) {
+  static set collectPostalCode(value: boolean) {
     this.mcollectPostalCode = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mdetectionMode: any;
   static get detectionMode(): any {
@@ -16311,42 +16464,42 @@ export class GeneXusSDCardScanner {
   static set detectionMode(value: any) {
     this.mdetectionMode = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private static mdisableManualEntry: any;
-  static get disableManualEntry(): any {
+  private static mdisableManualEntry: boolean;
+  static get disableManualEntry(): boolean {
     return this.mdisableManualEntry;
   }
-  static set disableManualEntry(value: any) {
+  static set disableManualEntry(value: boolean) {
     this.mdisableManualEntry = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private static mrestrictPostalCodeNumeric: any;
-  static get restrictPostalCodeNumeric(): any {
+  private static mrestrictPostalCodeNumeric: boolean;
+  static get restrictPostalCodeNumeric(): boolean {
     return this.mrestrictPostalCodeNumeric;
   }
-  static set restrictPostalCodeNumeric(value: any) {
+  static set restrictPostalCodeNumeric(value: boolean) {
     this.mrestrictPostalCodeNumeric = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private static mscanExpiry: any;
-  static get scanExpiry(): any {
+  private static mscanExpiry: boolean;
+  static get scanExpiry(): boolean {
     return this.mscanExpiry;
   }
-  static set scanExpiry(value: any) {
+  static set scanExpiry(value: boolean) {
     this.mscanExpiry = value;
   }
-  
+
   /**
-   * 
+   *
    */
   private static mscanInstructionsText: any;
   static get scanInstructionsText(): any {
@@ -16355,15 +16508,15 @@ export class GeneXusSDCardScanner {
   static set scanInstructionsText(value: any) {
     this.mscanInstructionsText = value;
   }
-  
+
   /**
-   * 
+   *
    */
-  private static msuppressScanConfirmation: any;
-  static get suppressScanConfirmation(): any {
+  private static msuppressScanConfirmation: boolean;
+  static get suppressScanConfirmation(): boolean {
     return this.msuppressScanConfirmation;
   }
-  static set suppressScanConfirmation(value: any) {
+  static set suppressScanConfirmation(value: boolean) {
     this.msuppressScanConfirmation = value;
   }
 }

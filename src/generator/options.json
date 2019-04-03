@@ -5,7 +5,6 @@
   "angularMappings": {
     "defaultModulesPath": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
   },
-
   "implemented": {
     "Core": {
       "members": {
@@ -118,13 +117,28 @@
           "name": "toString"
         },
         "FromString": {
-            "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-            "name": "fromString"
-          }
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
         }
+      }
+    },
+    "Boolean": {
+      "members": {
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/isEmpty",
+          "name": "isEmpty"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/fromString",
+          "name": "fromString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
+          "name": "toString"
+        }
+      }
     }
   },
-
   "disambiguated": {
     "Core": {
       "Null": "isNullValue"
@@ -157,7 +171,6 @@
       "Value": "valueAtIndex"
     }
   },
-
   "ignored": {
     "Core": ["Default"]
   }
