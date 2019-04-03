@@ -151,6 +151,10 @@
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
           "name": "fromString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
         }
       }
     }
