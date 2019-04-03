@@ -147,6 +147,10 @@
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty",
           "name": "isEmpty"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
+          "name": "fromString"
         }
       }
     }
