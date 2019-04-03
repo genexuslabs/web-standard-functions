@@ -2,9 +2,9 @@
  * Search string for pattern
  * @param {string} target
  * @param {string} pattern
- * @return Boolean
+ * @return boolean
  */
 
-export const contains = (target: string, pattern: string): Boolean => {
+export const contains = (target: string, pattern: string): boolean => {
   return target.indexOf(pattern) !== -1;
 };
