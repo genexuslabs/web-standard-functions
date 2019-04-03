@@ -137,6 +137,14 @@
           "name": "toString"
         }
       }
+    },
+    "Numeric": {
+      "members": {
+        "Integer": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
+          "name": "integer"
+        }
+      }
     }
   },
   "disambiguated": {
