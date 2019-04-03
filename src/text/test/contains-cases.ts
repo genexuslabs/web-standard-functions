@@ -1,4 +1,4 @@
-// charAt test cases
+// contains test cases
 export const testCases: Array<[string, string, boolean]> = [
   ["Peñarol Campeón del Siglo XX", "Peñarol", true],
   ["Peñarol Campeón del Siglo XX 😀", " del", true],

@@ -5,6 +5,7 @@
  * @return Boolean
  */
 
-export const isMatch = (target: string, rex: string | RegExp): Boolean => {
-  return new RegExp(rex).exec(target) !== null;
+export const isMatch = (target: string, regExp: string | RegExp): Boolean => {
+  let rex = typeof regExp === "string" ? new RegExp(regExp) : regExp;
+  return rex.exec(target) !== null;
 };
