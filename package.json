@@ -44,7 +44,6 @@
   "devDependencies": {
     "@types/bignumber.js": "^5.0.0",
     "@types/jest": "^23.3.14",
-    "jest": "^24.7.0",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0",
     "shx": "^0.3.2",
@@ -58,6 +57,7 @@
   "dependencies": {
     "bignumber.js": "^7.2.1",
     "jdu": "^1.0.0",
+    "jest": "^23.6.0",
     "unicode-substring": "^1.0.0"
   },
   "jest": {
