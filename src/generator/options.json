@@ -163,6 +163,10 @@
         "RoundToEven": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
           "name": "roundToEven"
+        },
+        "Truncate": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
+          "name": "truncate"
         }
       }
     }
