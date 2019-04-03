@@ -159,6 +159,10 @@
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
           "name": "round"
+        },
+        "RoundToEven": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
+          "name": "roundToEven"
         }
       }
     }
