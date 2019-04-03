@@ -2,7 +2,7 @@
  * Return matches against regexp
  * @param {string} target
  * @param {string} regExp
- * @return Boolean
+ * @return Array
  */
 
 export const matches = (
