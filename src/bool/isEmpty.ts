@@ -1,7 +1,7 @@
 /**
  * Returns wether the received parameter is the empty value or not
- * @param b 
+ * @param b
  */
 export const isEmpty = (b: boolean): boolean => {
-    return b === false;
-}
+  return b === false;
+};

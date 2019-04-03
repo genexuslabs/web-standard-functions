@@ -1,7 +1,7 @@
 /**
  * Converts the given boolean value to string
- * @param b 
+ * @param b
  */
 export const toString = (b: boolean): string => {
-    return b ? "true" : "false";
-}
+  return b ? "true" : "false";
+};

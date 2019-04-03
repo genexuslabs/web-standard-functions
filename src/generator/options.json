@@ -172,8 +172,6 @@
     }
   },
   "ignored": {
-    "Core": [
-      "Default"
-    ]
+    "Core": ["Default"]
   }
 }
