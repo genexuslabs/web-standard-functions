@@ -1,4 +1,4 @@
-let jdu = require('jdu');
+let jdu = require("jdu");
 /**
  * Returns the text without diacritic characters.
  * @param {string} value

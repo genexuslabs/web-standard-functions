@@ -1,5 +1,5 @@
 /**
- * Search string for trailing pattern 
+ * Search string for trailing pattern
  * @param {string} target
  * @param {string} pattern
  * @return Boolean

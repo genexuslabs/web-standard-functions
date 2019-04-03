@@ -7,8 +7,8 @@ import { length } from "./length";
  * @param {number} from
  * @return number
  */
- 
- export const indexOf = (
+
+export const indexOf = (
   target: string,
   pattern: string,
   from: number

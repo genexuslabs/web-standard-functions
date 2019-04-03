@@ -1,5 +1,5 @@
 export const testCases = [
   ["Textoáéíóú", "Textoaeiou"],
   ["áéíóú", "aeiou"],
-  ["😀áéí😀óú😀", "😀aei😀ou😀"],
+  ["😀áéí😀óú😀", "😀aei😀ou😀"]
 ];

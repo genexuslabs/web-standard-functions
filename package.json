@@ -57,7 +57,8 @@
   },
   "dependencies": {
     "bignumber.js": "^7.2.1",
-    "jdu": "^1.0.0"
+    "jdu": "^1.0.0",
+    "unicode-substring": "^1.0.0"
   },
   "jest": {
     "transform": {

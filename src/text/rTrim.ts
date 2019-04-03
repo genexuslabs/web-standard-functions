@@ -6,6 +6,6 @@ const regExp = / +$/g;
  * @return string
  */
 
- export const rTrim = (s: string): string => {
+export const rTrim = (s: string): string => {
   return s.replace(regExp, "");
 };

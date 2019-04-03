@@ -1,4 +1,4 @@
-import {trim} from "./trim";
+import { trim } from "./trim";
 
 /**
  * Test string for emptiness or spaces only content
@@ -6,5 +6,5 @@ import {trim} from "./trim";
  * @return Boolean
  */
 export const isEmpty = (target: string): Boolean => {
-  return trim(target) === '';
+  return trim(target) === "";
 };
