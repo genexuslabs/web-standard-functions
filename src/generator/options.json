@@ -155,6 +155,10 @@
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
           "name": "toString"
+        },
+        "Round": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
+          "name": "round"
         }
       }
     }
