@@ -2514,7 +2514,12 @@
       "externalName": "ContentInfo",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     },
-    { "name": "Blob", "generatesClass": false, "externalName": "Blob" },
+    {
+      "name": "Blob",
+      "generatesClass": true,
+      "externalName": "Blob",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
     {
       "name": "SearchResult",
       "generatesClass": true,
@@ -4684,6 +4689,30 @@
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     },
     {
+      "name": "WSSecurity",
+      "generatesClass": true,
+      "externalName": "WSSecurity",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
+    {
+      "name": "WSSignature",
+      "generatesClass": true,
+      "externalName": "WSSignature",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
+    {
+      "name": "WSEncryption",
+      "generatesClass": true,
+      "externalName": "WSEncryption",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
+    {
+      "name": "WSSecurityKeyStore",
+      "generatesClass": true,
+      "externalName": "WSSecurityKeyStore",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
+    {
       "name": "Cache",
       "generatesClass": true,
       "externalName": "Cache",
@@ -6395,6 +6424,18 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         }
       ]
+    },
+    {
+      "name": "BlobFile",
+      "generatesClass": true,
+      "externalName": "BlobFile",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
+    {
+      "name": "VarChar",
+      "generatesClass": true,
+      "externalName": "VarChar",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     }
   ]
 }

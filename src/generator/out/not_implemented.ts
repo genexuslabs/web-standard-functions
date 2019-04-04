@@ -1618,8 +1618,18 @@ export function search(condition: any): any {
 }
 // end Type
 
-// Type: Numeric
-// end Type
+export class Numeric {
+  /**
+   * Set automatic numbering on/off
+   */
+  private mautonum: boolean;
+  get autonum(): boolean {
+    return this.mautonum;
+  }
+  set autonum(value: boolean) {
+    this.mautonum = value;
+  }
+}
 
 export class Character {
   /**
@@ -1637,6 +1647,17 @@ export class Character {
   hTMLClean(): any {
     notImplemented();
     return null;
+  }
+
+  /**
+   * National language support
+   */
+  private menablenationallanguagesupport: any;
+  get enablenationallanguagesupport(): any {
+    return this.menablenationallanguagesupport;
+  }
+  set enablenationallanguagesupport(value: any) {
+    this.menablenationallanguagesupport = value;
   }
 }
 
@@ -1798,6 +1819,66 @@ export class Image {
   isEmpty(): boolean {
     notImplemented();
     return null;
+  }
+
+  /**
+   * Image Name
+   */
+  private mimageName: any;
+  get imageName(): any {
+    return this.mimageName;
+  }
+
+  /**
+   * Image Type
+   */
+  private mimageType: any;
+  get imageType(): any {
+    return this.mimageType;
+  }
+
+  /**
+   * Image URI
+   */
+  private mimageURI: any;
+  get imageURI(): any {
+    return this.mimageURI;
+  }
+  set imageURI(value: any) {
+    this.mimageURI = value;
+  }
+
+  /**
+   * Image Width
+   */
+  private mimageWidth: any;
+  get imageWidth(): any {
+    return this.mimageWidth;
+  }
+  set imageWidth(value: any) {
+    this.mimageWidth = value;
+  }
+
+  /**
+   * Image Height
+   */
+  private mimageHeight: any;
+  get imageHeight(): any {
+    return this.mimageHeight;
+  }
+  set imageHeight(value: any) {
+    this.mimageHeight = value;
+  }
+
+  /**
+   * File Size
+   */
+  private mfileSize: any;
+  get fileSize(): any {
+    return this.mfileSize;
+  }
+  set fileSize(value: any) {
+    this.mfileSize = value;
   }
 }
 
@@ -2032,6 +2113,17 @@ export class LongVarchar {
   hTMLClean(): any {
     notImplemented();
     return null;
+  }
+
+  /**
+   * National language support
+   */
+  private menablenationallanguagesupport: any;
+  get enablenationallanguagesupport(): any {
+    return this.menablenationallanguagesupport;
+  }
+  set enablenationallanguagesupport(value: any) {
+    this.menablenationallanguagesupport = value;
   }
 }
 
@@ -5843,6 +5935,17 @@ export class Location {
   set wSAddressing(value: any) {
     this.mwSAddressing = value;
   }
+
+  /**
+   *
+   */
+  private mwSSecurity: any;
+  get wSSecurity(): any {
+    return this.mwSSecurity;
+  }
+  set wSSecurity(value: any) {
+    this.mwSSecurity = value;
+  }
 }
 
 export class WApiCalendar {
@@ -6058,8 +6161,40 @@ export class ContentInfo {
   }
 }
 
-// Type: Blob
-// end Type
+export class Blob {
+  /**
+   * File type
+   */
+  private mfileType: any;
+  get fileType(): any {
+    return this.mfileType;
+  }
+  set fileType(value: any) {
+    this.mfileType = value;
+  }
+
+  /**
+   * File type attribute
+   */
+  private mfileTypeAttribute: any;
+  get fileTypeAttribute(): any {
+    return this.mfileTypeAttribute;
+  }
+  set fileTypeAttribute(value: any) {
+    this.mfileTypeAttribute = value;
+  }
+
+  /**
+   * File name attribute
+   */
+  private mfileNameAttribute: any;
+  get fileNameAttribute(): any {
+    return this.mfileNameAttribute;
+  }
+  set fileNameAttribute(value: any) {
+    this.mfileNameAttribute = value;
+  }
+}
 
 export class SearchResult {
   /**
@@ -6538,6 +6673,17 @@ export class GUID {
   isMatch(regularExpression: any): boolean {
     notImplemented();
     return null;
+  }
+
+  /**
+   * Set Autogenerate for Guid
+   */
+  private mautogenerateGuid: boolean;
+  get autogenerateGuid(): boolean {
+    return this.mautogenerateGuid;
+  }
+  set autogenerateGuid(value: boolean) {
+    this.mautogenerateGuid = value;
   }
 }
 
@@ -11627,6 +11773,33 @@ export class Video {
     notImplemented();
     return null;
   }
+
+  /**
+   * Video Name
+   */
+  private mvideoName: any;
+  get videoName(): any {
+    return this.mvideoName;
+  }
+
+  /**
+   * Video Type
+   */
+  private mvideoType: any;
+  get videoType(): any {
+    return this.mvideoType;
+  }
+
+  /**
+   * Video URI
+   */
+  private mvideoURI: any;
+  get videoURI(): any {
+    return this.mvideoURI;
+  }
+  set videoURI(value: any) {
+    this.mvideoURI = value;
+  }
 }
 
 export class Audio {
@@ -11645,6 +11818,33 @@ export class Audio {
   isEmpty(): boolean {
     notImplemented();
     return null;
+  }
+
+  /**
+   * Audio Name
+   */
+  private maudioName: any;
+  get audioName(): any {
+    return this.maudioName;
+  }
+
+  /**
+   * Audio Type
+   */
+  private maudioType: any;
+  get audioType(): any {
+    return this.maudioType;
+  }
+
+  /**
+   * Audio URI
+   */
+  private maudioURI: any;
+  get audioURI(): any {
+    return this.maudioURI;
+  }
+  set audioURI(value: any) {
+    this.maudioURI = value;
   }
 }
 
@@ -13205,6 +13405,207 @@ export class WSAddressingEndPoint {
   }
   set parameters(value: any) {
     this.mparameters = value;
+  }
+}
+
+export class WSSecurity {
+  /**
+   *
+   */
+  private msignature: any;
+  get signature(): any {
+    return this.msignature;
+  }
+  set signature(value: any) {
+    this.msignature = value;
+  }
+
+  /**
+   *
+   */
+  private mencryption: any;
+  get encryption(): any {
+    return this.mencryption;
+  }
+  set encryption(value: any) {
+    this.mencryption = value;
+  }
+
+  /**
+   *
+   */
+  private static mbINARYSECURITYTOKEN: number;
+  static get bINARYSECURITYTOKEN(): number {
+    return this.mbINARYSECURITYTOKEN;
+  }
+
+  /**
+   *
+   */
+  private static miSSUERSERIAL: number;
+  static get iSSUERSERIAL(): number {
+    return this.miSSUERSERIAL;
+  }
+
+  /**
+   *
+   */
+  private static mx509KEYIDENTIFIER: number;
+  static get x509KEYIDENTIFIER(): number {
+    return this.mx509KEYIDENTIFIER;
+  }
+
+  /**
+   *
+   */
+  private static msKIKEYIDENTIFIER: number;
+  static get sKIKEYIDENTIFIER(): number {
+    return this.msKIKEYIDENTIFIER;
+  }
+
+  /**
+   *
+   */
+  private static mtHUMBPRINTIDENTIFIER: number;
+  static get tHUMBPRINTIDENTIFIER(): number {
+    return this.mtHUMBPRINTIDENTIFIER;
+  }
+
+  /**
+   *
+   */
+  private static mkEYVALUE: number;
+  static get kEYVALUE(): number {
+    return this.mkEYVALUE;
+  }
+}
+
+export class WSSignature {
+  /**
+   *
+   */
+  private mkeystore: any;
+  get keystore(): any {
+    return this.mkeystore;
+  }
+  set keystore(value: any) {
+    this.mkeystore = value;
+  }
+
+  /**
+   *
+   */
+  private malias: any;
+  get alias(): any {
+    return this.malias;
+  }
+  set alias(value: any) {
+    this.malias = value;
+  }
+
+  /**
+   *
+   */
+  private mkeyIdentifierType: number;
+  get keyIdentifierType(): number {
+    return this.mkeyIdentifierType;
+  }
+  set keyIdentifierType(value: number) {
+    this.mkeyIdentifierType = value;
+  }
+}
+
+export class WSEncryption {
+  /**
+   *
+   */
+  private mkeystore: any;
+  get keystore(): any {
+    return this.mkeystore;
+  }
+  set keystore(value: any) {
+    this.mkeystore = value;
+  }
+
+  /**
+   *
+   */
+  private malias: any;
+  get alias(): any {
+    return this.malias;
+  }
+  set alias(value: any) {
+    this.malias = value;
+  }
+
+  /**
+   *
+   */
+  private mkeyIdentifierType: number;
+  get keyIdentifierType(): number {
+    return this.mkeyIdentifierType;
+  }
+  set keyIdentifierType(value: number) {
+    this.mkeyIdentifierType = value;
+  }
+}
+
+export class WSSecurityKeyStore {
+  /**
+   *
+   */
+  private mtype: any;
+  get type(): any {
+    return this.mtype;
+  }
+  set type(value: any) {
+    this.mtype = value;
+  }
+
+  /**
+   *
+   */
+  private mpassword: any;
+  get password(): any {
+    return this.mpassword;
+  }
+  set password(value: any) {
+    this.mpassword = value;
+  }
+
+  /**
+   *
+   */
+  private msource: any;
+  get source(): any {
+    return this.msource;
+  }
+  set source(value: any) {
+    this.msource = value;
+  }
+
+  /**
+   *
+   */
+  private static mjKS: any;
+  static get jKS(): any {
+    return this.mjKS;
+  }
+
+  /**
+   *
+   */
+  private static mjCEKS: any;
+  static get jCEKS(): any {
+    return this.mjCEKS;
+  }
+
+  /**
+   *
+   */
+  private static mpKCS11: any;
+  static get pKCS11(): any {
+    return this.mpKCS11;
   }
 }
 
@@ -16420,5 +16821,50 @@ export class GeneXusSDCardScanner {
   }
   static set suppressScanConfirmation(value: boolean) {
     this.msuppressScanConfirmation = value;
+  }
+}
+
+export class BlobFile {
+  /**
+   * File type
+   */
+  private mfileType: any;
+  get fileType(): any {
+    return this.mfileType;
+  }
+  set fileType(value: any) {
+    this.mfileType = value;
+  }
+
+  /**
+   * File Name
+   */
+  private mfileName: any;
+  get fileName(): any {
+    return this.mfileName;
+  }
+
+  /**
+   * File URI
+   */
+  private mfileURI: any;
+  get fileURI(): any {
+    return this.mfileURI;
+  }
+  set fileURI(value: any) {
+    this.mfileURI = value;
+  }
+}
+
+export class VarChar {
+  /**
+   * National language support
+   */
+  private menablenationallanguagesupport: any;
+  get enablenationallanguagesupport(): any {
+    return this.menablenationallanguagesupport;
+  }
+  set enablenationallanguagesupport(value: any) {
+    this.menablenationallanguagesupport = value;
   }
 }
