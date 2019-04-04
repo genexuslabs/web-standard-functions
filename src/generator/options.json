@@ -172,6 +172,34 @@
     }
   },
   "ignored": {
-    "Core": ["Default"]
+    "Core": ["Default"],
+    "WApiActionPerformedEvent": "all",
+    "WApiActivity": "all",
+    "WApiApplicationData": "all",
+    "WApiAssignmentChangeEvent": "all",
+    "WApiAttribute": "all",
+    "WApiCalendar": "all",
+    "WApiCollection": "all",
+    "WApiDataChangeEvent": "all",
+    "WApiDocumentDefinition": "all",
+    "WApiDocumentInstance": "all",
+    "WApiDocumentRepository": "all",
+    "WApiError": "all",
+    "WApiEvent": "all",
+    "WApiEventRepository": "all",
+    "WApiFilter": "all",
+    "WApiObject": "all",
+    "WApiOrganizationalModel": "all",
+    "WApiPriorityChangeEvent": "all",
+    "WApiProcessDefinition": "all",
+    "WApiProcessInstance": "all",
+    "WApiRestriction": "all",
+    "WApiRestrictionDefinition": "all",
+    "WApiRole": "all",
+    "WApiServer": "all",
+    "WApiStateChangeEvent": "all",
+    "WApiUser": "all",
+    "WApiWebApplication": "all",
+    "WApiWorkitem": "all"
   }
 }
