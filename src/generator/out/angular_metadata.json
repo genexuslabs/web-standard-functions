@@ -31,11 +31,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Average",
-          "externalName": "average",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "BrowserID",
           "externalName": "browserID",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -78,11 +73,6 @@
         {
           "name": "Concat",
           "externalName": "concat",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Count",
-          "externalName": "count",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -193,11 +183,6 @@
         {
           "name": "FileExist",
           "externalName": "fileExist",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Find",
-          "externalName": "find",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -319,16 +304,6 @@
           "name": "LTrim",
           "externalName": "lTrim",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim"
-        },
-        {
-          "name": "Max",
-          "externalName": "max",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Min",
-          "externalName": "min",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "Minute",
@@ -526,11 +501,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Sum",
-          "externalName": "sum",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "SysDate",
           "externalName": "sysDate",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -583,11 +553,6 @@
         {
           "name": "TtoC",
           "externalName": "ttoC",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "UDP",
-          "externalName": "uDP",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -651,11 +616,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "UDF",
-          "externalName": "uDF",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Confirmed",
           "externalName": "confirmed",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -681,48 +641,8 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "NoLoad",
-          "externalName": "noLoad",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "NoRead",
-          "externalName": "noRead",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Output_file",
           "externalName": "outputfile",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Printer",
-          "externalName": "printer",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XFile",
-          "externalName": "xFile",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XIndex",
-          "externalName": "xIndex",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XLocation",
-          "externalName": "xLocation",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XUse",
-          "externalName": "xUse",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "NoPrompt",
-          "externalName": "noPrompt",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -776,11 +696,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Call",
-          "externalName": "call",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Default_mode",
           "externalName": "defaultmode",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -796,23 +711,8 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "NoAccept",
-          "externalName": "noAccept",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "NoConfirm",
-          "externalName": "noConfirm",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "RefMsg",
           "externalName": "refMsg",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Serial",
-          "externalName": "serial",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -831,18 +731,8 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Hidden",
-          "externalName": "hidden",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Workfile_lines",
           "externalName": "workfilelines",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XOrder",
-          "externalName": "xOrder",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -2408,7 +2298,11 @@
         }
       ]
     },
-    { "name": "Variant", "generatesClass": false, "externalName": "Variant" },
+    {
+      "name": "Variant",
+      "generatesClass": false,
+      "externalName": "Variant"
+    },
     {
       "name": "ExcelCells",
       "generatesClass": true,
@@ -3878,7 +3772,11 @@
         }
       ]
     },
-    { "name": "ArrayPEM", "generatesClass": false, "externalName": "ArrayPEM" },
+    {
+      "name": "ArrayPEM",
+      "generatesClass": false,
+      "externalName": "ArrayPEM"
+    },
     {
       "name": "VariablePEM",
       "generatesClass": true,
@@ -4311,18 +4209,46 @@
         }
       ]
     },
-    { "name": "", "generatesClass": false, "externalName": "" },
-    { "name": "void", "generatesClass": false, "externalName": "Void" },
-    { "name": "GxImage", "generatesClass": false, "externalName": "GxImage" },
+    {
+      "name": "",
+      "generatesClass": false,
+      "externalName": ""
+    },
+    {
+      "name": "void",
+      "generatesClass": false,
+      "externalName": "Void"
+    },
+    {
+      "name": "GxImage",
+      "generatesClass": false,
+      "externalName": "GxImage"
+    },
     {
       "name": "Timezones",
       "generatesClass": false,
       "externalName": "Timezones"
     },
-    { "name": "short", "generatesClass": false, "externalName": "Short" },
-    { "name": "Object", "generatesClass": false, "externalName": "Object" },
-    { "name": "Messages", "generatesClass": false, "externalName": "Messages" },
-    { "name": "int", "generatesClass": false, "externalName": "Int" },
+    {
+      "name": "short",
+      "generatesClass": false,
+      "externalName": "Short"
+    },
+    {
+      "name": "Object",
+      "generatesClass": false,
+      "externalName": "Object"
+    },
+    {
+      "name": "Messages",
+      "generatesClass": false,
+      "externalName": "Messages"
+    },
+    {
+      "name": "int",
+      "generatesClass": false,
+      "externalName": "Int"
+    },
     {
       "name": "GxControlFrame",
       "generatesClass": false,
@@ -4333,7 +4259,11 @@
       "generatesClass": false,
       "externalName": "CallEffect"
     },
-    { "name": "CallType", "generatesClass": false, "externalName": "CallType" },
+    {
+      "name": "CallType",
+      "generatesClass": false,
+      "externalName": "CallType"
+    },
     {
       "name": "TargetSize",
       "generatesClass": false,

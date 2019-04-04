@@ -55,15 +55,6 @@ export function ask(message: any): any {
 }
 
 /**
- * @param expression
- * @return number
- */
-export function average(expression: any): number {
-  notImplemented();
-  return null;
-}
-
-/**
  * @return number
  */
 export function browserID(): number {
@@ -145,15 +136,6 @@ export function compare(operand1: any, operator: any, operand2: any): boolean {
  * @return any
  */
 export function concat(value1: any, value2: any, separator: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param attribute
- * @return number
- */
-export function count(attribute: any): number {
   notImplemented();
   return null;
 }
@@ -382,17 +364,6 @@ export function fileExist(fileName: any): number {
 }
 
 /**
- * @param attribute
- * @param condition
- * @param defaultValue
- * @return any
- */
-export function find(attribute: any, condition: any, defaultValue: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param str1
  * @param str2
  * @return any
@@ -598,40 +569,6 @@ export function loadBitmap(fileName: any): any {
  * @return any
  */
 export function lower(value: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param attribute
- * @param condition
- * @param defaultValue
- * @param attribute
- * @return any
- */
-export function max(
-  attribute: any,
-  condition: any,
-  defaultValue: any,
-  attribute2: any
-): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param attribute
- * @param condition
- * @param defaultValue
- * @param attribute
- * @return any
- */
-export function min(
-  attribute: any,
-  condition: any,
-  defaultValue: any,
-  attribute2: any
-): any {
   notImplemented();
   return null;
 }
@@ -1003,15 +940,6 @@ export function subStr(value: any, start: number, length: number): any {
 }
 
 /**
- * @param expression
- * @return any
- */
-export function sum(expression: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @return Date
  */
 export function sysDate(): Date {
@@ -1107,16 +1035,6 @@ export function trunc(value: number, decimals: number): number {
  * @return any
  */
 export function ttoC(value: any, dateDigits: number, hourDigits: number): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param object
- * @param parameter
- * @return any
- */
-export function uDP(object: any, parameter: any): any {
   notImplemented();
   return null;
 }
@@ -1249,16 +1167,6 @@ export function set(attribute: any, condition: any, defaultValue: any): any {
 }
 
 /**
- * @param object
- * @param parameter
- * @return any
- */
-export function uDF(object: any, parameter: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @return any
  */
 export function confirmed(): any {
@@ -1304,95 +1212,11 @@ export function errorhandler(subroutineName: any): any {
 }
 
 /**
- * @return any
- */
-export function noLoad(): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param attribute
- * @return any
- */
-export function noRead(attribute: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param fileName
  * @param type
  * @return any
  */
 export function outputfile(fileName: any, type: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param printerFile
- * @param type
- * @return any
- */
-export function printer(printerFile: any, type: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param name
- * @param parameter
- * @return any
- */
-export function xFile(name: any, parameter: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param tableName
- * @param name
- * @param type
- * @param parameter
- * @return any
- */
-export function xIndex(
-  tableName: any,
-  name: any,
-  type: any,
-  parameter: any
-): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param name
- * @param parameter
- * @param parameter
- * @return any
- */
-export function xLocation(name: any, parameter: any, parameter2: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param name
- * @param parameter
- * @return any
- */
-export function xUse(name: any, parameter: number): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param name
- * @return any
- */
-export function noPrompt(name: any): any {
   notImplemented();
   return null;
 }
@@ -1490,16 +1314,6 @@ export function allowNulls(attribute: any): any {
 }
 
 /**
- * @param userProgram
- * @param parameter
- * @return any
- */
-export function call(userProgram: any, parameter: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param action
  * @param level
  * @return any
@@ -1530,40 +1344,11 @@ export function error(message: any, exceptionName: any): any {
 }
 
 /**
- * @param name
- * @return any
- */
-export function noAccept(name: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param level
- * @return any
- */
-export function noConfirm(level: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param message
  * @param attribute
  * @return any
  */
 export function refMsg(message: any, attribute: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param att1
- * @param att2
- * @param step
- * @return any
- */
-export function serial(att1: any, att2: any, step: number): any {
   notImplemented();
   return null;
 }
@@ -1603,29 +1388,10 @@ export function update(attribute: any): any {
 }
 
 /**
- * @param name
- * @return any
- */
-export function hidden(name: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param linesCount
  * @return any
  */
 export function workfilelines(linesCount: number): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param file
- * @param index
- * @return any
- */
-export function xOrder(file: any, index: any): any {
   notImplemented();
   return null;
 }
