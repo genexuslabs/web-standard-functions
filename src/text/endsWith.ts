@@ -2,9 +2,9 @@
  * Search string for trailing pattern
  * @param {string} target
  * @param {string} pattern
- * @return Boolean
+ * @return boolean
  */
 
-export const endsWith = (target: string, pattern: string): Boolean => {
+export const endsWith = (target: string, pattern: string): boolean => {
   return target.endsWith(pattern);
 };

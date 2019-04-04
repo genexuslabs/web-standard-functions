@@ -13,7 +13,7 @@
     "precommit": "pretty-quick --staged && npm run lint",
     "pretty-quick": "pretty-quick",
     "start": "tsc --watch",
-    "test": "jest --no-cache",
+    "test": "jest --no-cache --maxWorkers 2",
     "test.prod": "npm run lint && npm run test -- --coverage --no-cache",
     "test.watch": "jest --watch --no-cache",
     "lint": "tslint  --project tsconfig.json -t codeFrame src/**/*.ts test/**/*.ts",
@@ -52,12 +52,13 @@
     "tslint": "^5.15.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.4.1"
+    "typescript": "^3.4.1",
+    "jest": "^23.6.0"
   },
   "dependencies": {
     "bignumber.js": "^7.2.1",
+    "htmltidy": "0.0.6",
     "jdu": "^1.0.0",
-    "jest": "^23.6.0",
     "unicode-substring": "^1.0.0"
   },
   "jest": {
