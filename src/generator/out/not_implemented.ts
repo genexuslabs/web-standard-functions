@@ -548,15 +548,6 @@ export function iif(condition: boolean, value: any, value2: any): any {
 }
 
 /**
- * @param value
- * @return number
- */
-export function int(value: number): number {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param name
  * @return boolean
  */
@@ -787,26 +778,6 @@ export function returnOnClick(): any {
  * @return any
  */
 export function rGB(red: number, green: number, blue: number): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param value
- * @param decimals
- * @return number
- */
-export function round(value: number, decimals: number): number {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param value
- * @param decimals
- * @return number
- */
-export function roundToEven(value: number, decimals: number): number {
   notImplemented();
   return null;
 }
@@ -1086,16 +1057,6 @@ export function toFormattedString(name: any): any {
  * @return any
  */
 export function trim(value: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param value
- * @param decimals
- * @return number
- */
-export function trunc(value: number, decimals: number): number {
   notImplemented();
   return null;
 }
@@ -1657,67 +1618,8 @@ export function search(condition: any): any {
 }
 // end Type
 
-export class Numeric {
-  /**
-   * @return number
-   */
-  integer(): number {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @return boolean
-   */
-  isEmpty(): boolean {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param value
-   * @return any
-   */
-  fromString(value: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param pDecimals
-   * @return number
-   */
-  round(pDecimals: number): number {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param pDecimals
-   * @return number
-   */
-  roundToEven(pDecimals: number): number {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @return any
-   */
-  toString(): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param pDecimals
-   * @return number
-   */
-  truncate(pDecimals: number): number {
-    notImplemented();
-    return null;
-  }
-}
+// Type: Numeric
+// end Type
 
 export class Character {
   /**
