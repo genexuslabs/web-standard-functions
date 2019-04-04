@@ -172,7 +172,14 @@
     }
   },
   "ignored": {
-    "Core": ["Default"],
+    "Core": [
+      "Default", 
+      "Average", "Count", "Find", "Max", "Min", "Sum",
+      "Call", "UDF", "UDP",
+      "NoAccept", "NoConfirm", "NoLoad", "NoPrompt", "NoRead",
+      "OutputFile", "Printer",
+      "XFile", "XIndex", "XLocation", "XUse"
+    ],
     "WApiActionPerformedEvent": "all",
     "WApiActivity": "all",
     "WApiApplicationData": "all",
