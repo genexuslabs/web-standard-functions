@@ -4,5 +4,5 @@
  * @returns string
  */
 export const toString = (value: number): string => {
-  return String(value);
+  return value.toString();
 };
