@@ -172,6 +172,7 @@
     }
   },
   "ignored": {
-    "Core": ["Default"]
+    "Core": ["Default"],
+    "GUID": ["AutogenerateGuid"]
   }
 }
