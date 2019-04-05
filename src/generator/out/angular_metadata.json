@@ -2298,11 +2298,7 @@
         }
       ]
     },
-    {
-      "name": "Variant",
-      "generatesClass": false,
-      "externalName": "Variant"
-    },
+    { "name": "Variant", "generatesClass": false, "externalName": "Variant" },
     {
       "name": "ExcelCells",
       "generatesClass": true,
@@ -2521,7 +2517,7 @@
       "name": "GUID",
       "generatesClass": true,
       "externalName": "GUID",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/types/guid",
       "methods": [
         {
           "name": "IsEmpty",
@@ -2551,11 +2547,6 @@
         {
           "name": "NewGuid",
           "externalName": "newGuid",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "IsMatch",
-          "externalName": "isMatch",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         }
       ]
@@ -3772,11 +3763,7 @@
         }
       ]
     },
-    {
-      "name": "ArrayPEM",
-      "generatesClass": false,
-      "externalName": "ArrayPEM"
-    },
+    { "name": "ArrayPEM", "generatesClass": false, "externalName": "ArrayPEM" },
     {
       "name": "VariablePEM",
       "generatesClass": true,
@@ -4209,46 +4196,18 @@
         }
       ]
     },
-    {
-      "name": "",
-      "generatesClass": false,
-      "externalName": ""
-    },
-    {
-      "name": "void",
-      "generatesClass": false,
-      "externalName": "Void"
-    },
-    {
-      "name": "GxImage",
-      "generatesClass": false,
-      "externalName": "GxImage"
-    },
+    { "name": "", "generatesClass": false, "externalName": "" },
+    { "name": "void", "generatesClass": false, "externalName": "Void" },
+    { "name": "GxImage", "generatesClass": false, "externalName": "GxImage" },
     {
       "name": "Timezones",
       "generatesClass": false,
       "externalName": "Timezones"
     },
-    {
-      "name": "short",
-      "generatesClass": false,
-      "externalName": "Short"
-    },
-    {
-      "name": "Object",
-      "generatesClass": false,
-      "externalName": "Object"
-    },
-    {
-      "name": "Messages",
-      "generatesClass": false,
-      "externalName": "Messages"
-    },
-    {
-      "name": "int",
-      "generatesClass": false,
-      "externalName": "Int"
-    },
+    { "name": "short", "generatesClass": false, "externalName": "Short" },
+    { "name": "Object", "generatesClass": false, "externalName": "Object" },
+    { "name": "Messages", "generatesClass": false, "externalName": "Messages" },
+    { "name": "int", "generatesClass": false, "externalName": "Int" },
     {
       "name": "GxControlFrame",
       "generatesClass": false,
@@ -4259,11 +4218,7 @@
       "generatesClass": false,
       "externalName": "CallEffect"
     },
-    {
-      "name": "CallType",
-      "generatesClass": false,
-      "externalName": "CallType"
-    },
+    { "name": "CallType", "generatesClass": false, "externalName": "CallType" },
     {
       "name": "TargetSize",
       "generatesClass": false,
