@@ -119,6 +119,238 @@
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
           "name": "fromString"
+        },
+        "HTMLClean": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
+          "name": "htmlClean"
+        },
+        "XSLTApply": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
+          "name": "xsltApply"
+        }
+      }
+    },
+    "Varchar": {
+      "members": {
+        "TrimStart": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "lTrim"
+        },
+        "TrimEnd": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rTrim"
+        },
+        "Trim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
+        },
+        "CharAt": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
+          "name": "charAt"
+        },
+        "Contains": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
+          "name": "contains"
+        },
+        "Length": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
+        },
+        "IndexOf": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+          "name": "indexOf"
+        },
+        "LastIndexOf": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty"
+        },
+        "StartsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "startsWith"
+        },
+        "EndsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+          "name": "endsWith"
+        },
+        "IsMatch": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
+          "name": "isMatch"
+        },
+        "Matches": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
+          "name": "matches"
+        },
+        "RemoveDiacritics": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
+          "name": "removeDiacritics"
+        },
+        "Replace": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
+          "name": "replace"
+        },
+        "ReplaceRegEx": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replaceRegExp",
+          "name": "replaceRegExp"
+        },
+        "SplitRegEx": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
+          "name": "splitRegExp"
+        },
+        "PadLeft": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
+        },
+        "PadRight": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
+        },
+        "Substring": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
+          "name": "subString"
+        },
+        "ToLower": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
+          "name": "toLower"
+        },
+        "ToUpper": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
+        },
+        "ToNumeric": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
+          "name": "toNumeric"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
+        },
+        "HTMLClean": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
+          "name": "htmlClean"
+        },
+        "XSLTApply": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
+          "name": "xsltApply"
+        }
+      }
+    },
+    "LongVarchar": {
+      "members": {
+        "TrimStart": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "lTrim"
+        },
+        "TrimEnd": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rTrim"
+        },
+        "Trim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
+        },
+        "CharAt": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
+          "name": "charAt"
+        },
+        "Contains": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
+          "name": "contains"
+        },
+        "Length": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
+        },
+        "IndexOf": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+          "name": "indexOf"
+        },
+        "LastIndexOf": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty"
+        },
+        "StartsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "startsWith"
+        },
+        "EndsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+          "name": "endsWith"
+        },
+        "IsMatch": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
+          "name": "isMatch"
+        },
+        "Matches": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
+          "name": "matches"
+        },
+        "RemoveDiacritics": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
+          "name": "removeDiacritics"
+        },
+        "Replace": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
+          "name": "replace"
+        },
+        "ReplaceRegEx": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replaceRegExp",
+          "name": "replaceRegExp"
+        },
+        "SplitRegEx": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
+          "name": "splitRegExp"
+        },
+        "PadLeft": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
+        },
+        "PadRight": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
+        },
+        "Substring": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
+          "name": "subString"
+        },
+        "ToLower": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
+          "name": "toLower"
+        },
+        "ToUpper": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
+        },
+        "ToNumeric": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
+          "name": "toNumeric"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
+        },
+        "HTMLClean": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
+          "name": "htmlClean"
+        },
+        "XSLTApply": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
+          "name": "xsltApply"
         }
       }
     },

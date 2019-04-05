@@ -924,12 +924,12 @@
         {
           "name": "XSLTApply",
           "externalName": "xSLTApply",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply"
         },
         {
           "name": "HTMLClean",
           "externalName": "hTMLClean",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean"
         }
       ]
     },
@@ -1048,132 +1048,132 @@
         {
           "name": "CharAt",
           "externalName": "charAt",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/charAt"
         },
         {
           "name": "Contains",
           "externalName": "contains",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/contains"
         },
         {
           "name": "EndsWith",
           "externalName": "endsWith",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith"
         },
         {
           "name": "IndexOf",
           "externalName": "indexOf",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf"
         },
         {
           "name": "IsEmpty",
           "externalName": "isEmpty",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty"
         },
         {
           "name": "IsMatch",
           "externalName": "isMatch",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch"
         },
         {
           "name": "LastIndexOf",
           "externalName": "lastIndexOf",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf"
         },
         {
           "name": "Length",
           "externalName": "length",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/length"
         },
         {
           "name": "Matches",
           "externalName": "matches",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/matches"
         },
         {
           "name": "Replace",
           "externalName": "replace",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/replace"
         },
         {
           "name": "ReplaceRegEx",
           "externalName": "replaceRegEx",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/replaceRegExp"
         },
         {
           "name": "PadLeft",
           "externalName": "padLeft",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft"
         },
         {
           "name": "PadRight",
           "externalName": "padRight",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/padRight"
         },
         {
           "name": "SplitRegEx",
           "externalName": "splitRegEx",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp"
         },
         {
           "name": "StartsWith",
           "externalName": "startsWith",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf"
         },
         {
           "name": "Substring",
           "externalName": "substr",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/subString"
         },
         {
           "name": "ToLower",
           "externalName": "toLower",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toLower"
         },
         {
           "name": "ToNumeric",
           "externalName": "toNumeric",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric"
         },
         {
           "name": "ToUpper",
           "externalName": "toUpper",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper"
         },
         {
           "name": "Trim",
           "externalName": "trim",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/trim"
         },
         {
           "name": "TrimEnd",
           "externalName": "trimEnd",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim"
         },
         {
           "name": "TrimStart",
           "externalName": "trimStart",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim"
         },
         {
           "name": "FromString",
           "externalName": "fromString",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/fromString"
         },
         {
           "name": "ToString",
           "externalName": "toString",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toString"
         },
         {
           "name": "XSLTApply",
           "externalName": "xSLTApply",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply"
         },
         {
           "name": "HTMLClean",
           "externalName": "hTMLClean",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean"
         }
       ]
     },
@@ -1359,132 +1359,132 @@
         {
           "name": "CharAt",
           "externalName": "charAt",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/charAt"
         },
         {
           "name": "Contains",
           "externalName": "contains",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/contains"
         },
         {
           "name": "EndsWith",
           "externalName": "endsWith",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith"
         },
         {
           "name": "IndexOf",
           "externalName": "indexOf",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf"
         },
         {
           "name": "IsEmpty",
           "externalName": "isEmpty",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty"
         },
         {
           "name": "IsMatch",
           "externalName": "isMatch",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch"
         },
         {
           "name": "LastIndexOf",
           "externalName": "lastIndexOf",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf"
         },
         {
           "name": "Length",
           "externalName": "length",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/length"
         },
         {
           "name": "Matches",
           "externalName": "matches",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/matches"
         },
         {
           "name": "Replace",
           "externalName": "replace",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/replace"
         },
         {
           "name": "ReplaceRegEx",
           "externalName": "replaceRegEx",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/replaceRegExp"
         },
         {
           "name": "PadLeft",
           "externalName": "padLeft",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft"
         },
         {
           "name": "PadRight",
           "externalName": "padRight",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/padRight"
         },
         {
           "name": "StartsWith",
           "externalName": "startsWith",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf"
         },
         {
           "name": "Substring",
           "externalName": "substr",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/subString"
         },
         {
           "name": "SplitRegEx",
           "externalName": "splitRegEx",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp"
         },
         {
           "name": "ToLower",
           "externalName": "toLower",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toLower"
         },
         {
           "name": "ToNumeric",
           "externalName": "toNumeric",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric"
         },
         {
           "name": "ToUpper",
           "externalName": "toUpper",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper"
         },
         {
           "name": "Trim",
           "externalName": "trim",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/trim"
         },
         {
           "name": "TrimEnd",
           "externalName": "trimEnd",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim"
         },
         {
           "name": "TrimStart",
           "externalName": "trimStart",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim"
         },
         {
           "name": "FromString",
           "externalName": "fromString",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/fromString"
         },
         {
           "name": "ToString",
           "externalName": "toString",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/toString"
         },
         {
           "name": "XSLTApply",
           "externalName": "xSLTApply",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply"
         },
         {
           "name": "HTMLClean",
           "externalName": "hTMLClean",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean"
         }
       ]
     },
