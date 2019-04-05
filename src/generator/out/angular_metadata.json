@@ -31,11 +31,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Average",
-          "externalName": "average",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "BrowserID",
           "externalName": "browserID",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -78,11 +73,6 @@
         {
           "name": "Concat",
           "externalName": "concat",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Count",
-          "externalName": "count",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -196,11 +186,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Find",
-          "externalName": "find",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Format",
           "externalName": "format",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -288,7 +273,7 @@
         {
           "name": "Int",
           "externalName": "int",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer"
         },
         {
           "name": "IsNull",
@@ -319,16 +304,6 @@
           "name": "LTrim",
           "externalName": "lTrim",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim"
-        },
-        {
-          "name": "Max",
-          "externalName": "max",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Min",
-          "externalName": "min",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "Minute",
@@ -418,12 +393,12 @@
         {
           "name": "Round",
           "externalName": "round",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/round"
         },
         {
           "name": "RoundToEven",
           "externalName": "roundToEven",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven"
         },
         {
           "name": "Rows",
@@ -526,11 +501,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Sum",
-          "externalName": "sum",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "SysDate",
           "externalName": "sysDate",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -578,16 +548,11 @@
         {
           "name": "Trunc",
           "externalName": "trunc",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate"
         },
         {
           "name": "TtoC",
           "externalName": "ttoC",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "UDP",
-          "externalName": "uDP",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -651,11 +616,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "UDF",
-          "externalName": "uDF",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Confirmed",
           "externalName": "confirmed",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -681,48 +641,8 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "NoLoad",
-          "externalName": "noLoad",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "NoRead",
-          "externalName": "noRead",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Output_file",
           "externalName": "outputfile",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Printer",
-          "externalName": "printer",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XFile",
-          "externalName": "xFile",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XIndex",
-          "externalName": "xIndex",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XLocation",
-          "externalName": "xLocation",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XUse",
-          "externalName": "xUse",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "NoPrompt",
-          "externalName": "noPrompt",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -776,11 +696,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Call",
-          "externalName": "call",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Default_mode",
           "externalName": "defaultmode",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
@@ -796,23 +711,8 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "NoAccept",
-          "externalName": "noAccept",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "NoConfirm",
-          "externalName": "noConfirm",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "RefMsg",
           "externalName": "refMsg",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Serial",
-          "externalName": "serial",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -831,18 +731,8 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
-          "name": "Hidden",
-          "externalName": "hidden",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
           "name": "Workfile_lines",
           "externalName": "workfilelines",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "XOrder",
-          "externalName": "xOrder",
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
@@ -866,37 +756,37 @@
         {
           "name": "Integer",
           "externalName": "integer",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer"
         },
         {
           "name": "IsEmpty",
           "externalName": "isEmpty",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty"
         },
         {
           "name": "FromString",
           "externalName": "fromString",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString"
         },
         {
           "name": "Round",
           "externalName": "round",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/round"
         },
         {
           "name": "RoundToEven",
           "externalName": "roundToEven",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven"
         },
         {
           "name": "ToString",
           "externalName": "toString",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString"
         },
         {
           "name": "Truncate",
           "externalName": "truncate",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate"
         }
       ]
     },
@@ -2408,7 +2298,11 @@
         }
       ]
     },
-    { "name": "Variant", "generatesClass": false, "externalName": "Variant" },
+    {
+      "name": "Variant",
+      "generatesClass": false,
+      "externalName": "Variant"
+    },
     {
       "name": "ExcelCells",
       "generatesClass": true,
@@ -2438,64 +2332,6 @@
       "generatesClass": true,
       "externalName": "Location",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiCalendar",
-      "generatesClass": true,
-      "externalName": "WApiCalendar",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "isHoliday",
-          "externalName": "isHoliday",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "isWeekend",
-          "externalName": "isWeekend",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "isWorkday",
-          "externalName": "isWorkday",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FirstWorkdayInMonth",
-          "externalName": "firstWorkdayInMonth",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "LastWorkdayInMonth",
-          "externalName": "lastWorkdayInMonth",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "NextWorkday",
-          "externalName": "nextWorkday",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Workday",
-          "externalName": "workday",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Worktime",
-          "externalName": "worktime",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "WorkdayDuration",
-          "externalName": "workdayDuration",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "WorkdaysBetweenDates",
-          "externalName": "workdaysBetweenDates",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
     },
     {
       "name": "RegExMatch",
@@ -2550,12 +2386,6 @@
       "name": "SearchResultItem",
       "generatesClass": true,
       "externalName": "SearchResultItem",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiEvent",
-      "generatesClass": true,
-      "externalName": "WApiEvent",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     },
     {
@@ -2768,757 +2598,6 @@
       "generatesClass": true,
       "externalName": "HTMLBODY",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiStateChangeEvent",
-      "generatesClass": true,
-      "externalName": "WApiStateChangeEvent",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiDataChangeEvent",
-      "generatesClass": true,
-      "externalName": "WApiDataChangeEvent",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiServer",
-      "generatesClass": true,
-      "externalName": "WApiServer",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Connect",
-          "externalName": "connect",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Disconnect",
-          "externalName": "disconnect",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListProcessDefinitions",
-          "externalName": "listProcessDefinitions",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListActivities",
-          "externalName": "listActivities",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListProcessInstances",
-          "externalName": "listProcessInstances",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListWorkitems",
-          "externalName": "listWorkitems",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetProcessDefinitionById",
-          "externalName": "getProcessDefinitionById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetActivityById",
-          "externalName": "getActivityById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetProcessInstanceById",
-          "externalName": "getProcessInstanceById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetWorkitemById",
-          "externalName": "getWorkitemById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetProcessDefinitionByName",
-          "externalName": "getProcessDefinitionByName",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetActivityByName",
-          "externalName": "getActivityByName",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetProcessInstanceBySubject",
-          "externalName": "getProcessInstanceBySubject",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetOrganizationalModel",
-          "externalName": "getOrganizationalModel",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetEventRepository",
-          "externalName": "getEventRepository",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetDocumentRepository",
-          "externalName": "getDocumentRepository",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListProcessDefinitionsOrderBy",
-          "externalName": "listProcessDefinitionsOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListActivitiesOrderBy",
-          "externalName": "listActivitiesOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListProcessInstancesOrderBy",
-          "externalName": "listProcessInstancesOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListWorkitemsOrderBy",
-          "externalName": "listWorkitemsOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListCalendars",
-          "externalName": "listCalendars",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiFilter",
-      "generatesClass": true,
-      "externalName": "WApiFilter",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Clear",
-          "externalName": "clear",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiError",
-      "generatesClass": true,
-      "externalName": "WApiError",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiProcessDefinition",
-      "generatesClass": true,
-      "externalName": "WApiProcessDefinition",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "CreateInstance",
-          "externalName": "createInstance",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetActivityById",
-          "externalName": "getActivityById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetActivityByName",
-          "externalName": "getActivityByName",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ChangeState",
-          "externalName": "changeState",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Enable",
-          "externalName": "enable",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Disable",
-          "externalName": "disable",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiActivity",
-      "generatesClass": true,
-      "externalName": "WApiActivity",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiWorkitem",
-      "generatesClass": true,
-      "externalName": "WApiWorkitem",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Complete",
-          "externalName": "complete",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Assign",
-          "externalName": "assign",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Reassign",
-          "externalName": "reassign",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ChangeState",
-          "externalName": "changeState",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "SelectSuccessiveOptionalActivity",
-          "externalName": "selectSuccessiveOptionalActivity",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "PostConditionFailed",
-          "externalName": "postConditionFailed",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Delegate",
-          "externalName": "delegate",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "DelegateToRole",
-          "externalName": "delegateToRole",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Skip",
-          "externalName": "skip",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Undo",
-          "externalName": "undo",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiProcessInstance",
-      "generatesClass": true,
-      "externalName": "WApiProcessInstance",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Start",
-          "externalName": "start",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "StartFrom",
-          "externalName": "startFrom",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Suspend",
-          "externalName": "suspend",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Reactivate",
-          "externalName": "reactivate",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Resume",
-          "externalName": "resume",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Abort",
-          "externalName": "abort",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ChangeState",
-          "externalName": "changeState",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "AddRestriction",
-          "externalName": "addRestriction",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "RemoveRestriction",
-          "externalName": "removeRestriction",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetApplicationDataByName",
-          "externalName": "getApplicationDataByName",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "PreassignWorkitem",
-          "externalName": "preassignWorkitem",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetWorkitemByActivity",
-          "externalName": "getWorkitemByActivity",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "CreateWorkitem",
-          "externalName": "createWorkitem",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiCollection",
-      "generatesClass": true,
-      "externalName": "WApiCollection",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Item",
-          "externalName": "item",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ProcessDefinition",
-          "externalName": "processDefinition",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Activity",
-          "externalName": "activity",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Workitem",
-          "externalName": "workitem",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ProcessInstance",
-          "externalName": "processInstance",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "User",
-          "externalName": "user",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Role",
-          "externalName": "role",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "State",
-          "externalName": "state",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Restriction",
-          "externalName": "restriction",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "RestrictionDefinition",
-          "externalName": "restrictionDefinition",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Value",
-          "externalName": "value",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ApplicationData",
-          "externalName": "applicationData",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FindProcessDefinition",
-          "externalName": "findProcessDefinition",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FindProcessInstance",
-          "externalName": "findProcessInstance",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FindWorkitem",
-          "externalName": "findWorkitem",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FindActivity",
-          "externalName": "findActivity",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FindUser",
-          "externalName": "findUser",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FindRole",
-          "externalName": "findRole",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FindApplicationData",
-          "externalName": "findApplicationData",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "FindRestriction",
-          "externalName": "findRestriction",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Event",
-          "externalName": "event",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "DocumentDefinition",
-          "externalName": "documentDefinition",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "DocumentInstance",
-          "externalName": "documentInstance",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Attribute",
-          "externalName": "attribute",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Calendar",
-          "externalName": "calendar",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiApplicationData",
-      "generatesClass": true,
-      "externalName": "WApiApplicationData",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Add",
-          "externalName": "add",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Clear",
-          "externalName": "clear",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Remove",
-          "externalName": "remove",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "SetValue",
-          "externalName": "setValue",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "valueAtIndex",
-          "externalName": "valueAtIndex",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiWebApplication",
-      "generatesClass": true,
-      "externalName": "WApiWebApplication",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Close",
-          "externalName": "close",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "CheckRights",
-          "externalName": "checkRights",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "CloseAndComplete",
-          "externalName": "closeAndComplete",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "SignIn",
-          "externalName": "signIn",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Download",
-          "externalName": "download",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "DownloadDocument",
-          "externalName": "downloadDocument",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetDocumentURL",
-          "externalName": "getDocumentURL",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "CompleteAndContinue",
-          "externalName": "completeAndContinue",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiUser",
-      "generatesClass": true,
-      "externalName": "WApiUser",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "GetWorklist",
-          "externalName": "getWorklist",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetRoleRestrictions",
-          "externalName": "getRoleRestrictions",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "AddRole",
-          "externalName": "addRole",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "RemoveRole",
-          "externalName": "removeRole",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "AddRestriction",
-          "externalName": "addRestriction",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "RemoveRestriction",
-          "externalName": "removeRestriction",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "RebuildWorklist",
-          "externalName": "rebuildWorklist",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Block",
-          "externalName": "block",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "Unblock",
-          "externalName": "unblock",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetWorklistOrderBy",
-          "externalName": "getWorklistOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListCreatableProcessDefinitions",
-          "externalName": "listCreatableProcessDefinitions",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListCreatableProcessDefinitionsOrderBy",
-          "externalName": "listCreatableProcessDefinitionsOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ResetPassword",
-          "externalName": "resetPassword",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ChangePassword",
-          "externalName": "changePassword",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiRole",
-      "generatesClass": true,
-      "externalName": "WApiRole",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "AddChild",
-          "externalName": "addChild",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "RemoveChild",
-          "externalName": "removeChild",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "AddUser",
-          "externalName": "addUser",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "RemoveUser",
-          "externalName": "removeUser",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiOrganizationalModel",
-      "generatesClass": true,
-      "externalName": "WApiOrganizationalModel",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "ListUsers",
-          "externalName": "listUsers",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListRoles",
-          "externalName": "listRoles",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListRestrictionDefinitions",
-          "externalName": "listRestrictionDefinitions",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListRestrictions",
-          "externalName": "listRestrictions",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetUserById",
-          "externalName": "getUserById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetRoleById",
-          "externalName": "getRoleById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetUserByName",
-          "externalName": "getUserByName",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetRoleByName",
-          "externalName": "getRoleByName",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetRestrictionDefinitionByName",
-          "externalName": "getRestrictionDefinitionByName",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "AddUser",
-          "externalName": "addUser",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "AddRole",
-          "externalName": "addRole",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "AddRestrictionDefinition",
-          "externalName": "addRestrictionDefinition",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListUsersOrderBy",
-          "externalName": "listUsersOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListRolesOrderBy",
-          "externalName": "listRolesOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListRestrictionDefinitionsOrderBy",
-          "externalName": "listRestrictionDefinitionsOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListRestrictionsOrderBy",
-          "externalName": "listRestrictionsOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiRestriction",
-      "generatesClass": true,
-      "externalName": "WApiRestriction",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiRestrictionDefinition",
-      "generatesClass": true,
-      "externalName": "WApiRestrictionDefinition",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "AddValue",
-          "externalName": "addValue",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "RemoveValue",
-          "externalName": "removeValue",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
     },
     {
       "name": "File",
@@ -3836,143 +2915,6 @@
           "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         }
       ]
-    },
-    {
-      "name": "WApiAssignmentChangeEvent",
-      "generatesClass": true,
-      "externalName": "WApiAssignmentChangeEvent",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiPriorityChangeEvent",
-      "generatesClass": true,
-      "externalName": "WApiPriorityChangeEvent",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiEventRepository",
-      "generatesClass": true,
-      "externalName": "WApiEventRepository",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "ListEvents",
-          "externalName": "listEvents",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListEventsOrderBy",
-          "externalName": "listEventsOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiObject",
-      "generatesClass": true,
-      "externalName": "WApiObject",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiAttribute",
-      "generatesClass": true,
-      "externalName": "WApiAttribute",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "WApiDocumentRepository",
-      "generatesClass": true,
-      "externalName": "WApiDocumentRepository",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "ListDocumentDefinitions",
-          "externalName": "listDocumentDefinitions",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListDocumentInstances",
-          "externalName": "listDocumentInstances",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListDocumentDefinitionsOrderBy",
-          "externalName": "listDocumentDefinitionsOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "ListDocumentInstancesOrderBy",
-          "externalName": "listDocumentInstancesOrderBy",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetDocumentDefinitionById",
-          "externalName": "getDocumentDefinitionById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetDocumentDefinitionByName",
-          "externalName": "getDocumentDefinitionByName",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "GetDocumentInstanceById",
-          "externalName": "getDocumentInstanceById",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiDocumentDefinition",
-      "generatesClass": true,
-      "externalName": "WApiDocumentDefinition",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "CreateInstance",
-          "externalName": "createInstance",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "CreateInstanceFromFile",
-          "externalName": "createInstanceFromFile",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiDocumentInstance",
-      "generatesClass": true,
-      "externalName": "WApiDocumentInstance",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Read",
-          "externalName": "read",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "CheckIn",
-          "externalName": "checkIn",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "CheckOut",
-          "externalName": "checkOut",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        },
-        {
-          "name": "UndoCheckOut",
-          "externalName": "undoCheckOut",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-        }
-      ]
-    },
-    {
-      "name": "WApiActionPerformedEvent",
-      "generatesClass": true,
-      "externalName": "WApiActionPerformedEvent",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     },
     {
       "name": "Property",
@@ -4830,7 +3772,11 @@
         }
       ]
     },
-    { "name": "ArrayPEM", "generatesClass": false, "externalName": "ArrayPEM" },
+    {
+      "name": "ArrayPEM",
+      "generatesClass": false,
+      "externalName": "ArrayPEM"
+    },
     {
       "name": "VariablePEM",
       "generatesClass": true,
@@ -5263,18 +4209,46 @@
         }
       ]
     },
-    { "name": "", "generatesClass": false, "externalName": "" },
-    { "name": "void", "generatesClass": false, "externalName": "Void" },
-    { "name": "GxImage", "generatesClass": false, "externalName": "GxImage" },
+    {
+      "name": "",
+      "generatesClass": false,
+      "externalName": ""
+    },
+    {
+      "name": "void",
+      "generatesClass": false,
+      "externalName": "Void"
+    },
+    {
+      "name": "GxImage",
+      "generatesClass": false,
+      "externalName": "GxImage"
+    },
     {
       "name": "Timezones",
       "generatesClass": false,
       "externalName": "Timezones"
     },
-    { "name": "short", "generatesClass": false, "externalName": "Short" },
-    { "name": "Object", "generatesClass": false, "externalName": "Object" },
-    { "name": "Messages", "generatesClass": false, "externalName": "Messages" },
-    { "name": "int", "generatesClass": false, "externalName": "Int" },
+    {
+      "name": "short",
+      "generatesClass": false,
+      "externalName": "Short"
+    },
+    {
+      "name": "Object",
+      "generatesClass": false,
+      "externalName": "Object"
+    },
+    {
+      "name": "Messages",
+      "generatesClass": false,
+      "externalName": "Messages"
+    },
+    {
+      "name": "int",
+      "generatesClass": false,
+      "externalName": "Int"
+    },
     {
       "name": "GxControlFrame",
       "generatesClass": false,
@@ -5285,7 +4259,11 @@
       "generatesClass": false,
       "externalName": "CallEffect"
     },
-    { "name": "CallType", "generatesClass": false, "externalName": "CallType" },
+    {
+      "name": "CallType",
+      "generatesClass": false,
+      "externalName": "CallType"
+    },
     {
       "name": "TargetSize",
       "generatesClass": false,

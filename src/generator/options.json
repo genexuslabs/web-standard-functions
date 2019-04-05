@@ -15,6 +15,22 @@
         "RTrim": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rtrim"
+        },
+        "Int": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
+          "name": "integer"
+        },
+        "Round": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
+          "name": "round"
+        },
+        "RoundToEven": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
+          "name": "roundToEven"
+        },
+        "Trunc": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
+          "name": "truncate"
         }
       }
     },
@@ -372,6 +388,38 @@
     },
     "GUID": {
       "path": "@genexus/web-standard-functions/dist/lib-esm/types/guid"
+    },
+    "Numeric": {
+      "members": {
+        "Integer": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
+          "name": "integer"
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty",
+          "name": "isEmpty"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
+          "name": "fromString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
+        },
+        "Round": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
+          "name": "round"
+        },
+        "RoundToEven": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
+          "name": "roundToEven"
+        },
+        "Truncate": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
+          "name": "truncate"
+        }
+      }
     }
   },
   "disambiguated": {
@@ -407,7 +455,60 @@
     }
   },
   "ignored": {
-    "Core": ["Default"],
-    "GUID": ["AutogenerateGuid"]
+    "Core": [
+      "Default",
+      "Average",
+      "Count",
+      "Find",
+      "Max",
+      "Min",
+      "Sum",
+      "Call",
+      "UDF",
+      "UDP",
+      "Hidden",
+      "NoAccept",
+      "NoConfirm",
+      "NoLoad",
+      "NoPrompt",
+      "NoRead",
+      "Serial",
+      "OutputFile",
+      "Printer",
+      "XFile",
+      "XIndex",
+      "XLocation",
+      "XOrder",
+      "XUse"
+    ],
+    "GUID": ["AutogenerateGuid"],
+    "WApiActionPerformedEvent": "all",
+    "WApiActivity": "all",
+    "WApiApplicationData": "all",
+    "WApiAssignmentChangeEvent": "all",
+    "WApiAttribute": "all",
+    "WApiCalendar": "all",
+    "WApiCollection": "all",
+    "WApiDataChangeEvent": "all",
+    "WApiDocumentDefinition": "all",
+    "WApiDocumentInstance": "all",
+    "WApiDocumentRepository": "all",
+    "WApiError": "all",
+    "WApiEvent": "all",
+    "WApiEventRepository": "all",
+    "WApiFilter": "all",
+    "WApiObject": "all",
+    "WApiOrganizationalModel": "all",
+    "WApiPriorityChangeEvent": "all",
+    "WApiProcessDefinition": "all",
+    "WApiProcessInstance": "all",
+    "WApiRestriction": "all",
+    "WApiRestrictionDefinition": "all",
+    "WApiRole": "all",
+    "WApiServer": "all",
+    "WApiStateChangeEvent": "all",
+    "WApiUser": "all",
+    "WApiWebApplication": "all",
+    "WApiWorkitem": "all"
   }
 }
