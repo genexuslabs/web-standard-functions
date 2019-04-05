@@ -137,6 +137,9 @@
           "name": "toString"
         }
       }
+    },
+    "GUID": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/guid"
     }
   },
   "disambiguated": {
