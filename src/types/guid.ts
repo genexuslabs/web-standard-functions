@@ -11,12 +11,12 @@ export class GUID {
   private normalizeValue(str: string): string {
     const lStr = str.toLowerCase();
 
-    const regExp1 = /[0-9a-f]{8}(-[0-9a-f]{4}){3}[0-9a-f]{12}/;
+    const regExp1 = /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/;
     const regExp2 = /[0-9a-f]{32}/;
 
-    if (str.length === 36 && regExp1.exec(str) !== null) {
+    if (lStr.length === 36 && regExp1.exec(lStr) !== null) {
       return lStr;
-    } else if (str.length === 32 && regExp2.exec(str) !== null) {
+    } else if (lStr.length === 32 && regExp2.exec(lStr) !== null) {
       return (
         lStr.substr(0, 8) +
         "-" +
@@ -38,7 +38,7 @@ export class GUID {
    * @returns boolean
    */
   isEmpty(): boolean {
-    return this === GUID.emptyGUID;
+    return this.value === GUID.emptyValue;
   }
 
   /**
