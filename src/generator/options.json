@@ -481,7 +481,7 @@
       "XOrder",
       "XUse"
     ],
-    "GUID": ["AutogenerateGuid"],
+    "GUID": ["AutogenerateGuid", "IsMatch"],
     "WApiActionPerformedEvent": "all",
     "WApiActivity": "all",
     "WApiApplicationData": "all",

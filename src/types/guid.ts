@@ -1,5 +1,3 @@
-import { isMatch as strIsMatch } from "../text/isMatch";
-
 export class GUID {
   private value: string;
 
@@ -59,13 +57,6 @@ export class GUID {
   toString(format: string = undefined) {
     // TODO: apply formatting. Which are the valid formats?
     return this.value;
-  }
-
-  /**
-   *
-   */
-  isMatch(regExp: string | RegExp): boolean {
-    return strIsMatch(this.value, regExp);
   }
 
   /**
