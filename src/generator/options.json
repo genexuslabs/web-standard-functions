@@ -8,17 +8,21 @@
   "implemented": {
     "Core": {
       "members": {
-        "LTrim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
-          "name": "ltrim"
+        "Asc": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/asc",
+          "name": "asc"
         },
-        "RTrim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
-          "name": "rtrim"
+        "Chr": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/chr",
+          "name": "chr"
         },
         "Int": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
+        },
+        "LTrim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "ltrim"
         },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
@@ -27,6 +31,10 @@
         "RoundToEven": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
           "name": "roundToEven"
+        },
+        "RTrim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rtrim"
         },
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
