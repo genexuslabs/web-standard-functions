@@ -452,6 +452,8 @@
     }
   },
   "ignored": {
+    "AttributePEM": "all",
+    "BasedOnEnumeratedDomain": "all",
     "Core": [
       "Default",
       "Average",
@@ -478,6 +480,28 @@
       "XOrder",
       "XUse"
     ],
+    "Character": ["Enable national language support"],
+    "DBConnection": "all",
+    "DomainPEM": "all",
+    "ExcelCells": "all",
+    "ExcelDocument": "all",
+    "GxImage": "all",
+    "LDAPClient": "all",
+    "LongVarchar": ["Enable national language support"],
+    "MailMessage": "all",
+    "MailRecipient": "all",
+    "MAPISession": "all",
+    "Numeric": ["Autonumber"],
+    "OutlookSession": "all",
+    "POP3Session": "all",
+    "Queue": "all",
+    "QueueMessage": "all",
+    "RecipientCollection": "all",
+    "Synchronization": "all",
+    "SMTPSession": "all",
+    "Varchar": ["Enable national language support"],
+    "VariablePEM": "all",
+    "Void": "all",
     "WApiActionPerformedEvent": "all",
     "WApiActivity": "all",
     "WApiApplicationData": "all",
@@ -505,6 +529,7 @@
     "WApiStateChangeEvent": "all",
     "WApiUser": "all",
     "WApiWebApplication": "all",
-    "WApiWorkitem": "all"
+    "WApiWorkitem": "all",
+    "WordDocument": "all"
   }
 }
