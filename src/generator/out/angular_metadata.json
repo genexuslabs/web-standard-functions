@@ -5172,12 +5172,6 @@
       "generatesClass": true,
       "externalName": "BlobFile",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
-    },
-    {
-      "name": "VarChar",
-      "generatesClass": true,
-      "externalName": "VarChar",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     }
   ]
 }

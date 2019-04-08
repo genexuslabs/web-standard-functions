@@ -1952,8 +1952,18 @@ export class DateTime {
   }
 }
 
-// Type: Varchar
-// end Type
+export class Varchar {
+  /**
+   * National language support
+   */
+  private menablenationallanguagesupport: any;
+  get enablenationallanguagesupport(): any {
+    return this.menablenationallanguagesupport;
+  }
+  set enablenationallanguagesupport(value: any) {
+    this.menablenationallanguagesupport = value;
+  }
+}
 
 export class Binary {
   /**
@@ -12002,18 +12012,5 @@ export class BlobFile {
   }
   set fileURI(value: any) {
     this.mfileURI = value;
-  }
-}
-
-export class VarChar {
-  /**
-   * National language support
-   */
-  private menablenationallanguagesupport: any;
-  get enablenationallanguagesupport(): any {
-    return this.menablenationallanguagesupport;
-  }
-  set enablenationallanguagesupport(value: any) {
-    this.menablenationallanguagesupport = value;
   }
 }
