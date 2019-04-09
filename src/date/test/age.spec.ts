@@ -1,7 +1,7 @@
 import { age } from "../age";
 
 export const testCases: Array<[Date, Date, number]> = [
-  [ new Date(1891,8,28), new Date(2019,8,28), 127],
+  [ new Date(1891,8,28), new Date(2019,8,29), 128],
   [ new Date(1968,7,9), new Date(2019,4,5), 50],
   [ new Date(2019,4,5), new Date(1968,8,9), -50],
   [ new Date(2018,4,5), new Date(2019,4,5), 1],
