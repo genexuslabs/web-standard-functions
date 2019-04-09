@@ -31,6 +31,10 @@
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
+        },
+        "Compare": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
+          "name": "compare"
         }
       }
     },
