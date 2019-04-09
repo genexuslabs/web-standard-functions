@@ -13,7 +13,7 @@
     "precommit": "pretty-quick --staged && npm run lint",
     "pretty-quick": "pretty-quick",
     "start": "tsc --watch",
-    "test": "set \"NODE_ICU_DATA=node_modules/full-icu\" && jest --no-cache --maxWorkers 2",
+    "test": "env-cmd ./test/.env jest --no-cache --maxWorkers 2",
     "test.prod": "npm run lint && npm run test -- --coverage --no-cache",
     "test.watch": "jest --watch --no-cache",
     "lint": "tslint  --project tsconfig.json -t codeFrame src/**/*.ts test/**/*.ts",
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@types/bignumber.js": "^5.0.0",
     "@types/jest": "^23.3.14",
+    "env-cmd": "^8.0.2",
     "jest": "^23.6.0",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0",

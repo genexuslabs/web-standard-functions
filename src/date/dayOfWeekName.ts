@@ -23,5 +23,3 @@ let gxToLibLangMapping = (gxlang: string): string => {
 export const dayOfWeekName = (dateFrom: Date, language: string): number => {
   return DateTime.fromJSDate(dateFrom).setLocale(gxToLibLangMapping(language)).toFormat("cccc");
 };
-
-console.log( "", new Intl.DateTimeFormat('es',{month:'long'}).format(new Date(9E8)));
