@@ -13,7 +13,7 @@
     "precommit": "pretty-quick --staged && npm run lint",
     "pretty-quick": "pretty-quick",
     "start": "tsc --watch",
-    "test": "jest --no-cache --maxWorkers 2",
+    "test": "set \"NODE_ICU_DATA=node_modules/full-icu\" && jest --no-cache --maxWorkers 2",
     "test.prod": "npm run lint && npm run test -- --coverage --no-cache",
     "test.watch": "jest --watch --no-cache",
     "lint": "tslint  --project tsconfig.json -t codeFrame src/**/*.ts test/**/*.ts",
@@ -57,7 +57,9 @@
   },
   "dependencies": {
     "bignumber.js": "^7.2.1",
+    "full-icu": "^1.2.1",
     "jdu": "^1.0.0",
+    "luxon": "^1.12.0",
     "tidy-html5": "^0.1.1",
     "unicode-substring": "^1.0.0",
     "xslt-processor": "^0.11.5"
