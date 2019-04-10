@@ -6,8 +6,15 @@
  * @return number
  */
 
- import { DateTime } from "luxon";
+import { DateTime } from "luxon";
+import { today } from "../date/today";
 
-export const age = (dateFrom: Date, dateTo: Date): number  => {
-  return Math.trunc((DateTime.fromJSDate(dateTo).diff(DateTime.fromJSDate(dateFrom), 'years')).years);
+export const age = (dateFrom: Date, dateTo?: Date): number => {
+  if (dateTo === undefined) {
+    dateTo = today();
+  }
+  return Math.trunc(
+    DateTime.fromJSDate(dateTo).diff(DateTime.fromJSDate(dateFrom), "years")
+      .years
+  );
 };

@@ -6,6 +6,6 @@
 
 import { DateTime } from "luxon";
 
-export const dayOfWeek = (dateFrom: Date): number  => {
-  return parseInt(DateTime.fromJSDate(dateFrom).toFormat('c'), 10) + 1;
+export const dayOfWeek = (dateFrom: Date): number => {
+  return (parseInt(DateTime.fromJSDate(dateFrom).toFormat("c"), 10) % 7) + 1;
 };

@@ -16,10 +16,12 @@ let gxToLibLangMapping = (gxlang: string): string => {
     ["cht", "tw"] /*Traditional Chinese*/,
     ["jap", "ja"] /*Japanese*/
   ]);
-  let luxonLang = gxtoluxonLang.get( gxlang);
+  let luxonLang = gxtoluxonLang.get(gxlang);
   return luxonLang || "en";
 };
 
-export const dayOfWeekName = (dateFrom: Date, language: string): number => {
-  return DateTime.fromJSDate(dateFrom).setLocale(gxToLibLangMapping(language)).toFormat("cccc");
+export const dayOfWeekName = (dateFrom: Date, language: string): string => {
+  return DateTime.fromJSDate(dateFrom)
+    .setLocale(gxToLibLangMapping(language))
+    .toFormat("cccc");
 };
