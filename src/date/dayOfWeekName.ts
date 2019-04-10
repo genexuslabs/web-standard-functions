@@ -20,6 +20,6 @@ let gxToLibLangMapping = (gxlang: string): string => {
   return luxonLang || "en";
 };
 
-export const dayOfWeekName = (dateFrom: Date, language: string): number => {
+export const dayOfWeekName = (dateFrom: Date, language: string): string => {
   return DateTime.fromJSDate(dateFrom).setLocale(gxToLibLangMapping(language)).toFormat("cccc");
 };
