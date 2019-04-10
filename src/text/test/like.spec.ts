@@ -7,7 +7,10 @@ const testCases: Array<[string, string, boolean]> = [
   ["texto", "%xto", true],
   ["texto", "%x", true],
   ["Hello world!", "He%o%!", true],
-  ["Hello world!", "%%%%%world", true]
+  ["Hello world!", "%%%%%world", true],
+  ["texto", "_xto", false],
+  ["texto", "_exto", true],
+  ["texto", "t_xto", true]
 ];
 
 describe("like operator", () => {
