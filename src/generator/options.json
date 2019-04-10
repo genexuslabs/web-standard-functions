@@ -31,6 +31,18 @@
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
+        },
+        "Concat": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
+          "name": "concat"
+        },
+        "Compare": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
+          "name": "compare"
+        },
+        "Format": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
+          "name": "format"
         }
       }
     },
@@ -386,6 +398,9 @@
         }
       }
     },
+    "GUID": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/guid"
+    },
     "Numeric": {
       "members": {
         "Integer": {
@@ -485,6 +500,7 @@
     "DomainPEM": "all",
     "ExcelCells": "all",
     "ExcelDocument": "all",
+    "GUID": ["AutogenerateGuid", "IsMatch"],
     "GxImage": "all",
     "LDAPClient": "all",
     "LongVarchar": ["Enable national language support"],

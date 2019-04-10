@@ -1984,6 +1984,7 @@
       "name": "Variant",
       "generatesClass": false
     },
+    },
     {
       "name": "Location",
       "generatesClass": true,
@@ -2154,7 +2155,7 @@
       "name": "GUID",
       "generatesClass": true,
       "externalName": "GUID",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/types/guid",
       "methods": [
         {
           "name": "IsEmpty",
@@ -2182,10 +2183,6 @@
           "name": "NewGuid",
           "externalName": "newGuid",
           "isStatic": true
-        },
-        {
-          "name": "IsMatch",
-          "externalName": "isMatch"
         }
       ]
     },
