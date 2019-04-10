@@ -35,6 +35,10 @@
         "Concat": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
           "name": "concat"
+        },
+        "Format": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
+          "name": "format"
         }
       }
     },
