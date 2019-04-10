@@ -17,7 +17,7 @@
     "test.prod": "npm run lint && npm run test -- --coverage --no-cache",
     "test.watch": "jest --watch --no-cache",
     "lint": "tslint  --project tsconfig.json -t codeFrame src/**/*.ts test/**/*.ts",
-    "validate": "npm run lint && npm run test && npm run generate-api && npm run build",
+    "validate": "npm run lint && npm run generate-api && npm run test && npm run build",
     "generate-api": "cd ./node_modules/standard-api-generator && node ./index.js -o ../../src/generator/options.json && cd ../.."
   },
   "files": [
