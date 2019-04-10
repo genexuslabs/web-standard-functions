@@ -40,11 +40,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
         },
-<<<<<<< HEAD
         "Today": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "name": "today"
-=======
+        },
         "Concat": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
           "name": "concat"
@@ -56,7 +55,6 @@
         "Format": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
           "name": "format"
->>>>>>> cb893830f8a0de0cc930e524ec954326c8874097
         }
       }
     },
