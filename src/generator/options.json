@@ -35,6 +35,10 @@
         "Compare": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
           "name": "compare"
+        },
+        "Format": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
+          "name": "format"
         }
       }
     },
