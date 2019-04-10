@@ -4,9 +4,9 @@
  * @returns The string with the character defined by the given ASCII value
  */
 export const chr = (val: number): string => {
-  if (val >= 0 && val < 128) {
+  if (val >= 0) {
     return String.fromCharCode(val);
   } else {
-    return undefined;
+    return "";
   }
 };

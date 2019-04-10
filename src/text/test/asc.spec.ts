@@ -5,8 +5,9 @@ const testCases: Array<[string, number]> = [
   ["texto", 116],
   ["T", 84],
   ["Texto", 84],
-  ["", undefined],
-  ["😀", undefined]
+  ["", 0],
+  ["😀", 55357],
+  ["ñ", 241]
 ];
 
 describe("asc function", () => {

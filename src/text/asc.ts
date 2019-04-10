@@ -5,8 +5,7 @@
  */
 export const asc = (str: string): number => {
   if (Array.from(str).length === 0) {
-    return undefined;
+    return 0;
   }
-  const asc = str.charCodeAt(0);
-  return asc < 128 ? asc : undefined;
+  return str.charCodeAt(0);
 };
