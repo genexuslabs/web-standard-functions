@@ -8,17 +8,21 @@
   "implemented": {
     "Core": {
       "members": {
-        "LTrim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
-          "name": "ltrim"
+        "Asc": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/asc",
+          "name": "asc"
         },
-        "RTrim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
-          "name": "rtrim"
+        "Chr": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/chr",
+          "name": "chr"
         },
         "Int": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
+        },
+        "LTrim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "ltrim"
         },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
@@ -28,13 +32,31 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
           "name": "roundToEven"
         },
+        "RTrim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rtrim"
+        },
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
         },
+<<<<<<< HEAD
         "Today": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "name": "today"
+=======
+        "Concat": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
+          "name": "concat"
+        },
+        "Compare": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
+          "name": "compare"
+        },
+        "Format": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
+          "name": "format"
+>>>>>>> cb893830f8a0de0cc930e524ec954326c8874097
         }
       }
     },
@@ -390,6 +412,9 @@
         }
       }
     },
+    "GUID": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/guid"
+    },
     "Numeric": {
       "members": {
         "Integer": {
@@ -514,6 +539,7 @@
       "XOrder",
       "XUse"
     ],
+    "GUID": ["AutogenerateGuid", "IsMatch"],
     "WApiActionPerformedEvent": "all",
     "WApiActivity": "all",
     "WApiApplicationData": "all",
