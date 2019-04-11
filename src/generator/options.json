@@ -104,17 +104,13 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
           "name": "subString"
         },
-        "Trim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
-          "name": "trim"
-        },
-        "Trunc": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
-          "name": "truncate"
-        },
         "Today": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "name": "today"
+        },
+        "Trim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
         },
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
@@ -131,18 +127,6 @@
         "XSLTApply": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
           "name": "xsltApply"
-        },
-        "Concat": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
-          "name": "concat"
-        },
-        "Compare": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
-          "name": "compare"
-        },
-        "Format": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
-          "name": "format"
         }
       }
     },
