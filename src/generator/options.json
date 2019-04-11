@@ -16,6 +16,18 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/chr",
           "name": "chr"
         },
+        "Compare": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
+          "name": "compare"
+        },
+        "Concat": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
+          "name": "concat"
+        },
+        "Format": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
+          "name": "format"
+        },
         "Int": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
@@ -40,42 +52,18 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
           "name": "toBase64"
         },
-        "Trunc": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
-          "name": "truncate"
-        },
         "Today": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "name": "today"
         },
-        "Concat": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
-          "name": "concat"
-        },
-        "Compare": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
-          "name": "compare"
-        },
-        "Format": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
-          "name": "format"
+        "Trunc": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
+          "name": "truncate"
         }
       }
     },
     "Character": {
       "members": {
-        "TrimStart": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
-          "name": "lTrim"
-        },
-        "TrimEnd": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
-          "name": "rTrim"
-        },
-        "Trim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
-          "name": "trim"
-        },
         "CharAt": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
           "name": "charAt"
@@ -84,37 +72,49 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
           "name": "contains"
         },
-        "Length": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
-          "name": "length"
+        "EndsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+          "name": "endsWith"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
+        },
+        "HTMLClean": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
+          "name": "htmlClean"
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
           "name": "indexOf"
         },
-        "LastIndexOf": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
-          "name": "lastIndexOf"
-        },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
           "name": "isEmpty"
-        },
-        "StartsWith": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
-          "name": "startsWith"
-        },
-        "EndsWith": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
-          "name": "endsWith"
         },
         "IsMatch": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
         },
+        "LastIndexOf": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
+        },
+        "Length": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
+        },
         "Matches": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
           "name": "matches"
+        },
+        "PadLeft": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
+        },
+        "PadRight": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
         },
         "RemoveDiacritics": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
@@ -132,13 +132,9 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
           "name": "splitRegExp"
         },
-        "PadLeft": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
-          "name": "padLeft"
-        },
-        "PadRight": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
-          "name": "padRight"
+        "StartsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "startsWith"
         },
         "Substring": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
@@ -148,10 +144,6 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
           "name": "toLower"
         },
-        "ToUpper": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
-          "name": "toUpper"
-        },
         "ToNumeric": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
           "name": "toNumeric"
@@ -160,13 +152,21 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
           "name": "toString"
         },
-        "FromString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+        "ToUpper": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
         },
-        "HTMLClean": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
-          "name": "htmlClean"
+        "Trim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
+        },
+        "TrimEnd": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rTrim"
+        },
+        "TrimStart": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "lTrim"
         },
         "XSLTApply": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
@@ -176,18 +176,6 @@
     },
     "Varchar": {
       "members": {
-        "TrimStart": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
-          "name": "lTrim"
-        },
-        "TrimEnd": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
-          "name": "rTrim"
-        },
-        "Trim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
-          "name": "trim"
-        },
         "CharAt": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
           "name": "charAt"
@@ -196,37 +184,49 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
           "name": "contains"
         },
-        "Length": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
-          "name": "length"
+        "EndsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+          "name": "endsWith"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
+        },
+        "HTMLClean": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
+          "name": "htmlClean"
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
           "name": "indexOf"
         },
-        "LastIndexOf": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
-          "name": "lastIndexOf"
-        },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
           "name": "isEmpty"
-        },
-        "StartsWith": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
-          "name": "startsWith"
-        },
-        "EndsWith": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
-          "name": "endsWith"
         },
         "IsMatch": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
         },
+        "LastIndexOf": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
+        },
+        "Length": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
+        },
         "Matches": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
           "name": "matches"
+        },
+        "PadLeft": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
+        },
+        "PadRight": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
         },
         "RemoveDiacritics": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
@@ -244,13 +244,9 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
           "name": "splitRegExp"
         },
-        "PadLeft": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
-          "name": "padLeft"
-        },
-        "PadRight": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
-          "name": "padRight"
+        "StartsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "startsWith"
         },
         "Substring": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
@@ -260,10 +256,6 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
           "name": "toLower"
         },
-        "ToUpper": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
-          "name": "toUpper"
-        },
         "ToNumeric": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
           "name": "toNumeric"
@@ -272,13 +264,21 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
           "name": "toString"
         },
-        "FromString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+        "ToUpper": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
         },
-        "HTMLClean": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
-          "name": "htmlClean"
+        "Trim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
+        },
+        "TrimEnd": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rTrim"
+        },
+        "TrimStart": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "lTrim"
         },
         "XSLTApply": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
@@ -288,18 +288,6 @@
     },
     "LongVarchar": {
       "members": {
-        "TrimStart": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
-          "name": "lTrim"
-        },
-        "TrimEnd": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
-          "name": "rTrim"
-        },
-        "Trim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
-          "name": "trim"
-        },
         "CharAt": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
           "name": "charAt"
@@ -308,37 +296,49 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
           "name": "contains"
         },
-        "Length": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
-          "name": "length"
+        "EndsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+          "name": "endsWith"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
+        },
+        "HTMLClean": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
+          "name": "htmlClean"
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
           "name": "indexOf"
         },
-        "LastIndexOf": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
-          "name": "lastIndexOf"
-        },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
           "name": "isEmpty"
-        },
-        "StartsWith": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
-          "name": "startsWith"
-        },
-        "EndsWith": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
-          "name": "endsWith"
         },
         "IsMatch": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
         },
+        "LastIndexOf": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
+        },
+        "Length": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
+        },
         "Matches": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
           "name": "matches"
+        },
+        "PadLeft": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
+        },
+        "PadRight": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
         },
         "RemoveDiacritics": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
@@ -356,13 +356,9 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
           "name": "splitRegExp"
         },
-        "PadLeft": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
-          "name": "padLeft"
-        },
-        "PadRight": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
-          "name": "padRight"
+        "StartsWith": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "startsWith"
         },
         "Substring": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
@@ -372,10 +368,6 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
           "name": "toLower"
         },
-        "ToUpper": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
-          "name": "toUpper"
-        },
         "ToNumeric": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
           "name": "toNumeric"
@@ -384,13 +376,21 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
           "name": "toString"
         },
-        "FromString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+        "ToUpper": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
         },
-        "HTMLClean": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
-          "name": "htmlClean"
+        "Trim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
+        },
+        "TrimEnd": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rTrim"
+        },
+        "TrimStart": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "lTrim"
         },
         "XSLTApply": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
@@ -419,6 +419,10 @@
     },
     "Numeric": {
       "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
+          "name": "fromString"
+        },
         "Integer": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
@@ -427,14 +431,6 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty",
           "name": "isEmpty"
         },
-        "FromString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
-          "name": "fromString"
-        },
-        "ToString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
-          "name": "toString"
-        },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
           "name": "round"
@@ -442,6 +438,10 @@
         "RoundToEven": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
           "name": "roundToEven"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
         },
         "Truncate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
