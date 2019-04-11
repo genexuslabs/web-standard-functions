@@ -36,6 +36,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rtrim"
         },
+        "ToBase64": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
+          "name": "toBase64"
+        },
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
