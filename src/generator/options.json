@@ -554,12 +554,6 @@
     },
     "GeneXus.SD.Media.PhotoLibrary": {
       "Save": "savePhoto"
-    },
-    "MAPISession": {
-      "MarkAsRead": "mapiMarkAsRead"
-    },
-    "WApiApplicationData": {
-      "Value": "valueAtIndex"
     }
   },
   "ignored": {
