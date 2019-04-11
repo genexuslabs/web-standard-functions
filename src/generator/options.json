@@ -19,14 +19,37 @@
         "Iif": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
           "name": "iif"
+        "HTMLClean": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
+          "name": "htmlClean"
         },
         "Int": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
         },
+        "Len": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
+        },
+        "Lower": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
+          "name": "toLower"
+        },
         "LTrim": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
           "name": "ltrim"
+        },
+        "Mod": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/math/mod",
+          "name": "mod"
+        },
+        "PadL": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
+        },
+        "PadR": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
         },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
@@ -40,6 +63,30 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rtrim"
         },
+        "Str": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
+        },
+        "StrReplace": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
+          "name": "replace"
+        },
+        "StrSearch": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+          "name": "indexOf"
+        },
+        "StrSearchRev": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
+        },
+        "Substr": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
+          "name": "subString"
+        },
+        "Trim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
+        },
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
@@ -47,6 +94,18 @@
         "Today": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "name": "today"
+        },
+        "Val": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
+          "name": "toNumeric"
+        },
+        "Upper": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
+        },
+        "XSLTApply": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
+          "name": "xsltApply"
         },
         "Concat": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
@@ -506,12 +565,6 @@
     },
     "GeneXus.SD.Media.PhotoLibrary": {
       "Save": "savePhoto"
-    },
-    "MAPISession": {
-      "MarkAsRead": "mapiMarkAsRead"
-    },
-    "WApiApplicationData": {
-      "Value": "valueAtIndex"
     }
   },
   "ignored": {
