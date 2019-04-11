@@ -68,6 +68,14 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
           "name": "replace"
         },
+        "StrSearch": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+          "name": "indexOf"
+        },
+        "StrSearchRev": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
+        },
         "Substr": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
           "name": "subString"
