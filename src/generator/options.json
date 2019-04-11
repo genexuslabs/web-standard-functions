@@ -36,6 +36,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
           "name": "ltrim"
         },
+        "Mod": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/math/mod",
+          "name": "mod"
+        },
         "PadL": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
           "name": "padLeft"
@@ -55,6 +59,14 @@
         "RTrim": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rtrim"
+        },
+        "Str": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
+        },
+        "StrReplace": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
+          "name": "replace"
         },
         "Substr": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
