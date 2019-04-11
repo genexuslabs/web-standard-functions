@@ -32,6 +32,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromBase64",
           "name": "fromBase64"
         },
+        "GetCookie": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/getCookie",
+          "name": "getCookie"
+        },
         "Iif": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
           "name": "iif"
@@ -80,9 +84,9 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rtrim"
         },
-        "ToBase64": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
-          "name": "toBase64"
+        "SetCookie": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/setCookie",
+          "name": "setCookie"
         },
         "Str": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
@@ -103,6 +107,10 @@
         "Substr": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
           "name": "subString"
+        },
+        "ToBase64": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
+          "name": "toBase64"
         },
         "Today": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
