@@ -7,6 +7,8 @@
 
 import { DateTime } from "luxon";
 
-export const addYears = (date: Date, years: number): Date  => {
-  return DateTime.fromJSDate(date).plus({years:Math.trunc(years)}).toJSDate();
+export const addYears = (date: Date, years: number): Date => {
+  return DateTime.fromJSDate(date)
+    .plus({ years: Math.trunc(years) })
+    .toJSDate();
 };

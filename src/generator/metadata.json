@@ -6812,6 +6812,14 @@
           "name": "HTMLClean"
         }
       ],
+      "properties": [
+        {
+          "description": "National language support",
+          "readonly": false,
+          "type": "Combo",
+          "name": "Enable national language support"
+        }
+      ],
       "name": "Varchar"
     },
     {
@@ -23946,18 +23954,6 @@
         }
       ],
       "name": "BlobFile"
-    },
-    {
-      "description": "",
-      "properties": [
-        {
-          "description": "National language support",
-          "readonly": false,
-          "type": "Combo",
-          "name": "Enable national language support"
-        }
-      ],
-      "name": "VarChar"
     }
   ]
 }

@@ -21,5 +21,7 @@ let gxToLibLangMapping = (gxlang: string): string => {
 };
 
 export const dayOfWeekName = (dateFrom: Date, language: string): string => {
-  return DateTime.fromJSDate(dateFrom).setLocale(gxToLibLangMapping(language)).toFormat("cccc");
+  return DateTime.fromJSDate(dateFrom)
+    .setLocale(gxToLibLangMapping(language))
+    .toFormat("cccc");
 };

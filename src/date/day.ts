@@ -4,9 +4,8 @@
  * @return number
  */
 
-
 import { DateTime } from "luxon";
 
-export const day = (dateFrom: Date): number  => {
+export const day = (dateFrom: Date): number => {
   return DateTime.fromJSDate(dateFrom).day;
 };
