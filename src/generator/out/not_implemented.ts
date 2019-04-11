@@ -37,15 +37,6 @@ export function age(value: Date, value2: Date): number {
 }
 
 /**
- * @param expression
- * @return any
- */
-export function asc(expression: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param message
  * @return any
  */
@@ -91,15 +82,6 @@ export function cDoW(value: Date, language: any): any {
 }
 
 /**
- * @param charCode
- * @return any
- */
-export function chr(charCode: number): any {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param value
  * @param language
  * @return any
@@ -114,28 +96,6 @@ export function cMonth(value: Date, language: any): any {
  * @return any
  */
 export function cols(array: any): any {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param operand1
- * @param operator
- * @param operand2
- * @return boolean
- */
-export function compare(operand1: any, operator: any, operand2: any): boolean {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param value1
- * @param value2
- * @param separator
- * @return any
- */
-export function concat(value1: any, value2: any, separator: any): any {
   notImplemented();
   return null;
 }
@@ -359,16 +319,6 @@ export function exists(attribute: any): number {
  * @return number
  */
 export function fileExist(fileName: any): number {
-  notImplemented();
-  return null;
-}
-
-/**
- * @param str1
- * @param str2
- * @return any
- */
-export function format(str1: any, str2: any): any {
   notImplemented();
   return null;
 }
@@ -964,14 +914,6 @@ export function toBase64(str: any): any {
 }
 
 /**
- * @return Date
- */
-export function today(): Date {
-  notImplemented();
-  return null;
-}
-
-/**
  * @param name
  * @return any
  */
@@ -1384,74 +1326,33 @@ export function search(condition: any): any {
 }
 // end Type
 
-// Type: Numeric
-// end Type
+export class Numeric {
+  /**
+   * Set automatic numbering on/off
+   */
+  private mautonum: boolean;
+  get autonum(): boolean {
+    return this.mautonum;
+  }
+  set autonum(value: boolean) {
+    this.mautonum = value;
+  }
+}
 
-// Type: Character
-// end Type
+export class Character {
+  /**
+   * National language support
+   */
+  private menablenationallanguagesupport: any;
+  get enablenationallanguagesupport(): any {
+    return this.menablenationallanguagesupport;
+  }
+  set enablenationallanguagesupport(value: any) {
+    this.menablenationallanguagesupport = value;
+  }
+}
 
 export class Date {
-  /**
-   * @param days
-   * @return Date
-   */
-  addDays(days: number): Date {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param months
-   * @return Date
-   */
-  addMonths(months: number): Date {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param years
-   * @return Date
-   */
-  addYears(years: number): Date {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param pDate
-   * @return number
-   */
-  age(pDate: Date): number {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @return number
-   */
-  day(): number {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @return number
-   */
-  dayOfWeek(): number {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param language
-   * @return any
-   */
-  dayOfWeekName(language: any): any {
-    notImplemented();
-    return null;
-  }
-
   /**
    * @return Date
    */
@@ -1611,8 +1512,18 @@ export class Image {
   }
 }
 
-// Type: LongVarchar
-// end Type
+export class LongVarchar {
+  /**
+   * National language support
+   */
+  private menablenationallanguagesupport: any;
+  get enablenationallanguagesupport(): any {
+    return this.menablenationallanguagesupport;
+  }
+  set enablenationallanguagesupport(value: any) {
+    this.menablenationallanguagesupport = value;
+  }
+}
 
 export class DateTime {
   /**
@@ -1971,6 +1882,156 @@ export class Binary {
 
 // Type: Boolean
 // end Type
+
+export class MailMessage {
+  /**
+   * @return any
+   */
+  clear(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param name
+   * @return any
+   */
+  getHeader(name: any): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param name
+   * @param value
+   * @return any
+   */
+  addHeader(name: any, value: any): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mattachments: any;
+  get attachments(): any {
+    return this.mattachments;
+  }
+  set attachments(value: any) {
+    this.mattachments = value;
+  }
+
+  /**
+   *
+   */
+  private mbCC: any;
+  get bCC(): any {
+    return this.mbCC;
+  }
+  set bCC(value: any) {
+    this.mbCC = value;
+  }
+
+  /**
+   *
+   */
+  private mcC: any;
+  get cC(): any {
+    return this.mcC;
+  }
+  set cC(value: any) {
+    this.mcC = value;
+  }
+
+  /**
+   *
+   */
+  private mdateReceived: Date;
+  get dateReceived(): Date {
+    return this.mdateReceived;
+  }
+  set dateReceived(value: Date) {
+    this.mdateReceived = value;
+  }
+
+  /**
+   *
+   */
+  private mdateSent: Date;
+  get dateSent(): Date {
+    return this.mdateSent;
+  }
+  set dateSent(value: Date) {
+    this.mdateSent = value;
+  }
+
+  /**
+   *
+   */
+  private mfrom: any;
+  get from(): any {
+    return this.mfrom;
+  }
+  set from(value: any) {
+    this.mfrom = value;
+  }
+
+  /**
+   *
+   */
+  private mhTMLText: any;
+  get hTMLText(): any {
+    return this.mhTMLText;
+  }
+  set hTMLText(value: any) {
+    this.mhTMLText = value;
+  }
+
+  /**
+   *
+   */
+  private msubject: any;
+  get subject(): any {
+    return this.msubject;
+  }
+  set subject(value: any) {
+    this.msubject = value;
+  }
+
+  /**
+   *
+   */
+  private mtext: any;
+  get text(): any {
+    return this.mtext;
+  }
+  set text(value: any) {
+    this.mtext = value;
+  }
+
+  /**
+   *
+   */
+  private mto: any;
+  get to(): any {
+    return this.mto;
+  }
+  set to(value: any) {
+    this.mto = value;
+  }
+
+  /**
+   *
+   */
+  private mreplyTo: any;
+  get replyTo(): any {
+    return this.mreplyTo;
+  }
+  set replyTo(value: any) {
+    this.mreplyTo = value;
+  }
+}
 
 export class XMLWriter {
   /**
@@ -3267,6 +3328,1162 @@ export class StringCollection {
   }
 }
 
+export class MailRecipient {
+  /**
+   *
+   */
+  private mname: any;
+  get name(): any {
+    return this.mname;
+  }
+  set name(value: any) {
+    this.mname = value;
+  }
+
+  /**
+   *
+   */
+  private maddress: any;
+  get address(): any {
+    return this.maddress;
+  }
+  set address(value: any) {
+    this.maddress = value;
+  }
+}
+
+export class RecipientCollection {
+  /**
+   * @return any
+   */
+  clear(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param name
+   * @param address
+   * @return any
+   */
+  new(name: any, address: any): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param recipient
+   * @return any
+   */
+  add(recipient: any): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param index
+   * @return any
+   */
+  item(index: number): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mcount: number;
+  get count(): number {
+    return this.mcount;
+  }
+  set count(value: number) {
+    this.mcount = value;
+  }
+}
+
+export class SMTPSession {
+  /**
+   * @return number
+   */
+  login(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  logout(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param message
+   * @return number
+   */
+  send(message: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mattachDir: any;
+  get attachDir(): any {
+    return this.mattachDir;
+  }
+  set attachDir(value: any) {
+    this.mattachDir = value;
+  }
+
+  /**
+   *
+   */
+  private merrDisplay: number;
+  get errDisplay(): number {
+    return this.merrDisplay;
+  }
+  set errDisplay(value: number) {
+    this.merrDisplay = value;
+  }
+
+  /**
+   *
+   */
+  private merrCode: number;
+  get errCode(): number {
+    return this.merrCode;
+  }
+  set errCode(value: number) {
+    this.merrCode = value;
+  }
+
+  /**
+   *
+   */
+  private merrDescription: any;
+  get errDescription(): any {
+    return this.merrDescription;
+  }
+  set errDescription(value: any) {
+    this.merrDescription = value;
+  }
+
+  /**
+   *
+   */
+  private mhost: any;
+  get host(): any {
+    return this.mhost;
+  }
+  set host(value: any) {
+    this.mhost = value;
+  }
+
+  /**
+   *
+   */
+  private mport: number;
+  get port(): number {
+    return this.mport;
+  }
+  set port(value: number) {
+    this.mport = value;
+  }
+
+  /**
+   *
+   */
+  private msender: any;
+  get sender(): any {
+    return this.msender;
+  }
+  set sender(value: any) {
+    this.msender = value;
+  }
+
+  /**
+   *
+   */
+  private mauthentication: number;
+  get authentication(): number {
+    return this.mauthentication;
+  }
+  set authentication(value: number) {
+    this.mauthentication = value;
+  }
+
+  /**
+   *
+   */
+  private msecure: number;
+  get secure(): number {
+    return this.msecure;
+  }
+  set secure(value: number) {
+    this.msecure = value;
+  }
+
+  /**
+   *
+   */
+  private muserName: any;
+  get userName(): any {
+    return this.muserName;
+  }
+  set userName(value: any) {
+    this.muserName = value;
+  }
+
+  /**
+   *
+   */
+  private mpassword: any;
+  get password(): any {
+    return this.mpassword;
+  }
+  set password(value: any) {
+    this.mpassword = value;
+  }
+
+  /**
+   *
+   */
+  private mtimeout: number;
+  get timeout(): number {
+    return this.mtimeout;
+  }
+  set timeout(value: number) {
+    this.mtimeout = value;
+  }
+}
+
+export class POP3Session {
+  /**
+   * @return number
+   */
+  login(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  logout(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  delete(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  markAsRead(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param message
+   * @return number
+   */
+  receive(message: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param uID
+   * @return number
+   */
+  getNextUID(uID: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  skip(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mattachDir: any;
+  get attachDir(): any {
+    return this.mattachDir;
+  }
+  set attachDir(value: any) {
+    this.mattachDir = value;
+  }
+
+  /**
+   *
+   */
+  private merrDisplay: number;
+  get errDisplay(): number {
+    return this.merrDisplay;
+  }
+  set errDisplay(value: number) {
+    this.merrDisplay = value;
+  }
+
+  /**
+   *
+   */
+  private merrCode: number;
+  get errCode(): number {
+    return this.merrCode;
+  }
+  set errCode(value: number) {
+    this.merrCode = value;
+  }
+
+  /**
+   *
+   */
+  private merrDescription: any;
+  get errDescription(): any {
+    return this.merrDescription;
+  }
+  set errDescription(value: any) {
+    this.merrDescription = value;
+  }
+
+  /**
+   *
+   */
+  private mhost: any;
+  get host(): any {
+    return this.mhost;
+  }
+  set host(value: any) {
+    this.mhost = value;
+  }
+
+  /**
+   *
+   */
+  private mport: number;
+  get port(): number {
+    return this.mport;
+  }
+  set port(value: number) {
+    this.mport = value;
+  }
+
+  /**
+   *
+   */
+  private muserName: any;
+  get userName(): any {
+    return this.muserName;
+  }
+  set userName(value: any) {
+    this.muserName = value;
+  }
+
+  /**
+   *
+   */
+  private mpassword: any;
+  get password(): any {
+    return this.mpassword;
+  }
+  set password(value: any) {
+    this.mpassword = value;
+  }
+
+  /**
+   *
+   */
+  private mtimeout: number;
+  get timeout(): number {
+    return this.mtimeout;
+  }
+  set timeout(value: number) {
+    this.mtimeout = value;
+  }
+
+  /**
+   *
+   */
+  private mnewMessages: number;
+  get newMessages(): number {
+    return this.mnewMessages;
+  }
+  set newMessages(value: number) {
+    this.mnewMessages = value;
+  }
+
+  /**
+   *
+   */
+  private msecure: number;
+  get secure(): number {
+    return this.msecure;
+  }
+  set secure(value: number) {
+    this.msecure = value;
+  }
+
+  /**
+   *
+   */
+  private mcount: number;
+  get count(): number {
+    return this.mcount;
+  }
+  set count(value: number) {
+    this.mcount = value;
+  }
+}
+
+export class OutlookSession {
+  /**
+   * @param folderName
+   * @return number
+   */
+  changeFolder(folderName: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  delete(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  markAsRead(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param message
+   * @return number
+   */
+  receive(message: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param message
+   * @return number
+   */
+  send(message: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mattachDir: any;
+  get attachDir(): any {
+    return this.mattachDir;
+  }
+  set attachDir(value: any) {
+    this.mattachDir = value;
+  }
+
+  /**
+   *
+   */
+  private merrDisplay: number;
+  get errDisplay(): number {
+    return this.merrDisplay;
+  }
+  set errDisplay(value: number) {
+    this.merrDisplay = value;
+  }
+
+  /**
+   *
+   */
+  private merrCode: number;
+  get errCode(): number {
+    return this.merrCode;
+  }
+  set errCode(value: number) {
+    this.merrCode = value;
+  }
+
+  /**
+   *
+   */
+  private merrDescription: any;
+  get errDescription(): any {
+    return this.merrDescription;
+  }
+  set errDescription(value: any) {
+    this.merrDescription = value;
+  }
+
+  /**
+   *
+   */
+  private mnewMessages: number;
+  get newMessages(): number {
+    return this.mnewMessages;
+  }
+  set newMessages(value: number) {
+    this.mnewMessages = value;
+  }
+
+  /**
+   *
+   */
+  private mcount: number;
+  get count(): number {
+    return this.mcount;
+  }
+  set count(value: number) {
+    this.mcount = value;
+  }
+
+  /**
+   *
+   */
+  private meditWindow: number;
+  get editWindow(): number {
+    return this.meditWindow;
+  }
+  set editWindow(value: number) {
+    this.meditWindow = value;
+  }
+}
+
+export class MAPISession {
+  /**
+   * @return number
+   */
+  login(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  logout(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param folderName
+   * @return number
+   */
+  changeFolder(folderName: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  delete(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  mapiMarkAsRead(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param message
+   * @return number
+   */
+  receive(message: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param message
+   * @return number
+   */
+  send(message: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mattachDir: any;
+  get attachDir(): any {
+    return this.mattachDir;
+  }
+  set attachDir(value: any) {
+    this.mattachDir = value;
+  }
+
+  /**
+   *
+   */
+  private merrDisplay: number;
+  get errDisplay(): number {
+    return this.merrDisplay;
+  }
+  set errDisplay(value: number) {
+    this.merrDisplay = value;
+  }
+
+  /**
+   *
+   */
+  private merrCode: number;
+  get errCode(): number {
+    return this.merrCode;
+  }
+  set errCode(value: number) {
+    this.merrCode = value;
+  }
+
+  /**
+   *
+   */
+  private merrDescription: any;
+  get errDescription(): any {
+    return this.merrDescription;
+  }
+  set errDescription(value: any) {
+    this.merrDescription = value;
+  }
+
+  /**
+   *
+   */
+  private mnewMessages: number;
+  get newMessages(): number {
+    return this.mnewMessages;
+  }
+  set newMessages(value: number) {
+    this.mnewMessages = value;
+  }
+
+  /**
+   *
+   */
+  private mmarkAsRead: number;
+  get markAsRead(): number {
+    return this.mmarkAsRead;
+  }
+  set markAsRead(value: number) {
+    this.mmarkAsRead = value;
+  }
+
+  /**
+   *
+   */
+  private mcount: number;
+  get count(): number {
+    return this.mcount;
+  }
+  set count(value: number) {
+    this.mcount = value;
+  }
+
+  /**
+   *
+   */
+  private meditWindow: number;
+  get editWindow(): number {
+    return this.meditWindow;
+  }
+  set editWindow(value: number) {
+    this.meditWindow = value;
+  }
+
+  /**
+   *
+   */
+  private mprofile: any;
+  get profile(): any {
+    return this.mprofile;
+  }
+  set profile(value: any) {
+    this.mprofile = value;
+  }
+}
+
+export class WordDocument {
+  /**
+   * @param fileName
+   * @return number
+   */
+  open(fileName: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  close(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  unbind(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  save(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param fileName
+   * @param fileType
+   * @param dOSText
+   * @param lineBreaks
+   * @return number
+   */
+  saveAs(
+    fileName: any,
+    fileType: any,
+    dOSText: number,
+    lineBreaks: number
+  ): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  show(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  hide(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param text
+   * @return number
+   */
+  append(text: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param preview
+   * @param background
+   * @return number
+   */
+  print(preview: number, background: number): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param oldValue
+   * @param newValue
+   * @param matchCase
+   * @param matchWholeWord
+   * @return number
+   */
+  replace(
+    oldValue: any,
+    newValue: any,
+    matchCase: number,
+    matchWholeWord: number
+  ): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  spellCheck(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param macroName
+   * @param arg
+   * @return number
+   */
+  runMacro(macroName: any, arg: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mreadOnly: number;
+  get readOnly(): number {
+    return this.mreadOnly;
+  }
+  set readOnly(value: number) {
+    this.mreadOnly = value;
+  }
+
+  /**
+   *
+   */
+  private mtemplate: any;
+  get template(): any {
+    return this.mtemplate;
+  }
+  set template(value: any) {
+    this.mtemplate = value;
+  }
+
+  /**
+   *
+   */
+  private mtext: any;
+  get text(): any {
+    return this.mtext;
+  }
+  set text(value: any) {
+    this.mtext = value;
+  }
+
+  /**
+   *
+   */
+  private merrDisplay: number;
+  get errDisplay(): number {
+    return this.merrDisplay;
+  }
+  set errDisplay(value: number) {
+    this.merrDisplay = value;
+  }
+
+  /**
+   *
+   */
+  private merrCode: number;
+  get errCode(): number {
+    return this.merrCode;
+  }
+  set errCode(value: number) {
+    this.merrCode = value;
+  }
+
+  /**
+   *
+   */
+  private merrDescription: any;
+  get errDescription(): any {
+    return this.merrDescription;
+  }
+  set errDescription(value: any) {
+    this.merrDescription = value;
+  }
+
+  /**
+   *
+   */
+  private mmacroReturnText: any;
+  get macroReturnText(): any {
+    return this.mmacroReturnText;
+  }
+  set macroReturnText(value: any) {
+    this.mmacroReturnText = value;
+  }
+
+  /**
+   *
+   */
+  private mmacroReturnNumber: number;
+  get macroReturnNumber(): number {
+    return this.mmacroReturnNumber;
+  }
+  set macroReturnNumber(value: number) {
+    this.mmacroReturnNumber = value;
+  }
+
+  /**
+   *
+   */
+  private mmacroReturnDate: Date;
+  get macroReturnDate(): Date {
+    return this.mmacroReturnDate;
+  }
+  set macroReturnDate(value: Date) {
+    this.mmacroReturnDate = value;
+  }
+}
+
+export class ExcelDocument {
+  /**
+   * @param fileName
+   * @return number
+   */
+  open(fileName: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  close(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  unbind(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  save(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  show(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  hide(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  clear(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param preview
+   * @return number
+   */
+  print(preview: number): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param sheetName
+   * @return number
+   */
+  selectSheet(sheetName: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param sheetName
+   * @return number
+   */
+  renameSheet(sheetName: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param macroName
+   * @param arg
+   * @return number
+   */
+  runMacro(macroName: any, arg: any): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param row
+   * @param col
+   * @param height
+   * @param width
+   * @return any
+   */
+  cells(row: number, col: number, height: number, width: number): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mreadOnly: number;
+  get readOnly(): number {
+    return this.mreadOnly;
+  }
+  set readOnly(value: number) {
+    this.mreadOnly = value;
+  }
+
+  /**
+   *
+   */
+  private mautoFit: number;
+  get autoFit(): number {
+    return this.mautoFit;
+  }
+  set autoFit(value: number) {
+    this.mautoFit = value;
+  }
+
+  /**
+   *
+   */
+  private museAutomation: number;
+  get useAutomation(): number {
+    return this.museAutomation;
+  }
+  set useAutomation(value: number) {
+    this.museAutomation = value;
+  }
+
+  /**
+   *
+   */
+  private mtemplate: any;
+  get template(): any {
+    return this.mtemplate;
+  }
+  set template(value: any) {
+    this.mtemplate = value;
+  }
+
+  /**
+   *
+   */
+  private mdelimiter: any;
+  get delimiter(): any {
+    return this.mdelimiter;
+  }
+  set delimiter(value: any) {
+    this.mdelimiter = value;
+  }
+
+  /**
+   *
+   */
+  private merrDisplay: number;
+  get errDisplay(): number {
+    return this.merrDisplay;
+  }
+  set errDisplay(value: number) {
+    this.merrDisplay = value;
+  }
+
+  /**
+   *
+   */
+  private merrCode: number;
+  get errCode(): number {
+    return this.merrCode;
+  }
+  set errCode(value: number) {
+    this.merrCode = value;
+  }
+
+  /**
+   *
+   */
+  private merrDescription: any;
+  get errDescription(): any {
+    return this.merrDescription;
+  }
+  set errDescription(value: any) {
+    this.merrDescription = value;
+  }
+
+  /**
+   *
+   */
+  private mmacroReturnText: any;
+  get macroReturnText(): any {
+    return this.mmacroReturnText;
+  }
+  set macroReturnText(value: any) {
+    this.mmacroReturnText = value;
+  }
+
+  /**
+   *
+   */
+  private mmacroReturnNumber: number;
+  get macroReturnNumber(): number {
+    return this.mmacroReturnNumber;
+  }
+  set macroReturnNumber(value: number) {
+    this.mmacroReturnNumber = value;
+  }
+
+  /**
+   *
+   */
+  private mmacroReturnDate: Date;
+  get macroReturnDate(): Date {
+    return this.mmacroReturnDate;
+  }
+  set macroReturnDate(value: Date) {
+    this.mmacroReturnDate = value;
+  }
+}
+
 export class WebSession {
   /**
    * @return any
@@ -3358,6 +4575,312 @@ export class WebWrapper {
 
 // Type: Variant
 // end Type
+
+export class ExcelCells {
+  /**
+   *
+   */
+  private mvalue: any;
+  get value(): any {
+    return this.mvalue;
+  }
+  set value(value: any) {
+    this.mvalue = value;
+  }
+
+  /**
+   *
+   */
+  private mtext: any;
+  get text(): any {
+    return this.mtext;
+  }
+  set text(value: any) {
+    this.mtext = value;
+  }
+
+  /**
+   *
+   */
+  private mnum: number;
+  get num(): number {
+    return this.mnum;
+  }
+  set num(value: number) {
+    this.mnum = value;
+  }
+
+  /**
+   *
+   */
+  private mdate: Date;
+  get date(): Date {
+    return this.mdate;
+  }
+  set date(value: Date) {
+    this.mdate = value;
+  }
+
+  /**
+   *
+   */
+  private mfont: any;
+  get font(): any {
+    return this.mfont;
+  }
+  set font(value: any) {
+    this.mfont = value;
+  }
+
+  /**
+   *
+   */
+  private mcolor: number;
+  get color(): number {
+    return this.mcolor;
+  }
+  set color(value: number) {
+    this.mcolor = value;
+  }
+
+  /**
+   *
+   */
+  private msize: number;
+  get size(): number {
+    return this.msize;
+  }
+  set size(value: number) {
+    this.msize = value;
+  }
+
+  /**
+   *
+   */
+  private mtype: any;
+  get type(): any {
+    return this.mtype;
+  }
+  set type(value: any) {
+    this.mtype = value;
+  }
+
+  /**
+   *
+   */
+  private mbold: number;
+  get bold(): number {
+    return this.mbold;
+  }
+  set bold(value: number) {
+    this.mbold = value;
+  }
+
+  /**
+   *
+   */
+  private mitalic: number;
+  get italic(): number {
+    return this.mitalic;
+  }
+  set italic(value: number) {
+    this.mitalic = value;
+  }
+
+  /**
+   *
+   */
+  private munderline: number;
+  get underline(): number {
+    return this.munderline;
+  }
+  set underline(value: number) {
+    this.munderline = value;
+  }
+}
+
+export class DBConnection {
+  /**
+   * @return number
+   */
+  connect(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return number
+   */
+  disconnect(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private museExternalDatasource: number;
+  get useExternalDatasource(): number {
+    return this.museExternalDatasource;
+  }
+  set useExternalDatasource(value: number) {
+    this.museExternalDatasource = value;
+  }
+
+  /**
+   *
+   */
+  private mexternalDatasourceName: any;
+  get externalDatasourceName(): any {
+    return this.mexternalDatasourceName;
+  }
+  set externalDatasourceName(value: any) {
+    this.mexternalDatasourceName = value;
+  }
+
+  /**
+   *
+   */
+  private mjDBCDriverName: any;
+  get jDBCDriverName(): any {
+    return this.mjDBCDriverName;
+  }
+  set jDBCDriverName(value: any) {
+    this.mjDBCDriverName = value;
+  }
+
+  /**
+   *
+   */
+  private mjDBCDriverURL: any;
+  get jDBCDriverURL(): any {
+    return this.mjDBCDriverURL;
+  }
+  set jDBCDriverURL(value: any) {
+    this.mjDBCDriverURL = value;
+  }
+
+  /**
+   *
+   */
+  private moDBCFileDatasourceName: any;
+  get oDBCFileDatasourceName(): any {
+    return this.moDBCFileDatasourceName;
+  }
+  set oDBCFileDatasourceName(value: any) {
+    this.moDBCFileDatasourceName = value;
+  }
+
+  /**
+   *
+   */
+  private moDBCDatasourceName: any;
+  get oDBCDatasourceName(): any {
+    return this.moDBCDatasourceName;
+  }
+  set oDBCDatasourceName(value: any) {
+    this.moDBCDatasourceName = value;
+  }
+
+  /**
+   *
+   */
+  private moDBCDriverName: any;
+  get oDBCDriverName(): any {
+    return this.moDBCDriverName;
+  }
+  set oDBCDriverName(value: any) {
+    this.moDBCDriverName = value;
+  }
+
+  /**
+   *
+   */
+  private muserName: any;
+  get userName(): any {
+    return this.muserName;
+  }
+  set userName(value: any) {
+    this.muserName = value;
+  }
+
+  /**
+   *
+   */
+  private muserPassword: any;
+  get userPassword(): any {
+    return this.muserPassword;
+  }
+  set userPassword(value: any) {
+    this.muserPassword = value;
+  }
+
+  /**
+   *
+   */
+  private mconnectionData: any;
+  get connectionData(): any {
+    return this.mconnectionData;
+  }
+  set connectionData(value: any) {
+    this.mconnectionData = value;
+  }
+
+  /**
+   *
+   */
+  private mshowPrompt: number;
+  get showPrompt(): number {
+    return this.mshowPrompt;
+  }
+  set showPrompt(value: number) {
+    this.mshowPrompt = value;
+  }
+
+  /**
+   *
+   */
+  private mconnectionMethod: number;
+  get connectionMethod(): number {
+    return this.mconnectionMethod;
+  }
+  set connectionMethod(value: number) {
+    this.mconnectionMethod = value;
+  }
+
+  /**
+   *
+   */
+  private merrCode: number;
+  get errCode(): number {
+    return this.merrCode;
+  }
+  set errCode(value: number) {
+    this.merrCode = value;
+  }
+
+  /**
+   *
+   */
+  private merrDescription: any;
+  get errDescription(): any {
+    return this.merrDescription;
+  }
+  set errDescription(value: any) {
+    this.merrDescription = value;
+  }
+
+  /**
+   *
+   */
+  private mdatastoreName: any;
+  get datastoreName(): any {
+    return this.mdatastoreName;
+  }
+  set datastoreName(value: any) {
+    this.mdatastoreName = value;
+  }
+}
 
 export class Location {
   /**
@@ -4603,6 +6126,101 @@ export class DirectoryCollection {
   }
 }
 
+export class LDAPClient {
+  /**
+   * @return number
+   */
+  connect(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  disconnect(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param attributeName
+   * @param context
+   * @param matchAttributes
+   * @return any
+   */
+  getAttribute(attributeName: any, context: any, matchAttributes: any): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private mhost: any;
+  get host(): any {
+    return this.mhost;
+  }
+  set host(value: any) {
+    this.mhost = value;
+  }
+
+  /**
+   *
+   */
+  private mport: number;
+  get port(): number {
+    return this.mport;
+  }
+  set port(value: number) {
+    this.mport = value;
+  }
+
+  /**
+   *
+   */
+  private mauthenticationMethod: any;
+  get authenticationMethod(): any {
+    return this.mauthenticationMethod;
+  }
+  set authenticationMethod(value: any) {
+    this.mauthenticationMethod = value;
+  }
+
+  /**
+   *
+   */
+  private muser: any;
+  get user(): any {
+    return this.muser;
+  }
+  set user(value: any) {
+    this.muser = value;
+  }
+
+  /**
+   *
+   */
+  private mpassword: any;
+  get password(): any {
+    return this.mpassword;
+  }
+  set password(value: any) {
+    this.mpassword = value;
+  }
+
+  /**
+   *
+   */
+  private msecure: number;
+  get secure(): number {
+    return this.msecure;
+  }
+  set secure(value: number) {
+    this.msecure = value;
+  }
+}
+
 export class Properties {
   /**
    * @param attributeName
@@ -4656,6 +6274,125 @@ export class Properties {
   fromJson(source: any, outMessages: any): boolean {
     notImplemented();
     return null;
+  }
+}
+
+export class QueueMessage {
+  /**
+   *
+   */
+  private mtext: any;
+  get text(): any {
+    return this.mtext;
+  }
+  set text(value: any) {
+    this.mtext = value;
+  }
+
+  /**
+   *
+   */
+  private mpriority: number;
+  get priority(): number {
+    return this.mpriority;
+  }
+  set priority(value: number) {
+    this.mpriority = value;
+  }
+}
+
+export class Queue {
+  /**
+   * @return number
+   */
+  connect(): number {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  disconnect(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param message
+   * @return any
+   */
+  send(message: any): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  commit(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  rollback(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  receive(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   *
+   */
+  private muser: any;
+  get user(): any {
+    return this.muser;
+  }
+  set user(value: any) {
+    this.muser = value;
+  }
+
+  /**
+   *
+   */
+  private mpassword: any;
+  get password(): any {
+    return this.mpassword;
+  }
+  set password(value: any) {
+    this.mpassword = value;
+  }
+
+  /**
+   *
+   */
+  private mprovider: any;
+  get provider(): any {
+    return this.mprovider;
+  }
+  set provider(value: any) {
+    this.mprovider = value;
+  }
+
+  /**
+   *
+   */
+  private mbrowse: number;
+  get browse(): number {
+    return this.mbrowse;
+  }
+  set browse(value: number) {
+    this.mbrowse = value;
   }
 }
 
@@ -7023,8 +8760,106 @@ export class StorageProvider {
   }
 }
 
+// Type: Synchronization
+
+/**
+ * @return number
+ */
+export function receive(): number {
+  notImplemented();
+  return null;
+}
+
+/**
+ * @return number
+ */
+export function serverStatus(): number {
+  notImplemented();
+  return null;
+}
+
+/**
+ * @return number
+ */
+export function send(): number {
+  notImplemented();
+  return null;
+}
+
+/**
+ * @return any
+ */
+export function resetOfflineDatabase(): any {
+  notImplemented();
+  return null;
+}
+
+/**
+ * @return number
+ */
+export function setSendCheckpoint(): number {
+  notImplemented();
+  return null;
+}
+// end Type
+
 // Type: ArrayPEM
 // end Type
+
+export class VariablePEM {
+  /**
+   * @return any
+   */
+  setEmpty(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  toFormattedString(): any {
+    notImplemented();
+    return null;
+  }
+}
+
+export class DomainPEM {
+  /**
+   * @param expression
+   * @return any
+   */
+  convert(expression: any): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  elements(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param enumeratedValue
+   * @return any
+   */
+  enumerationDescription(enumeratedValue: any): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @param enumeratedValue
+   * @return any
+   */
+  enumerationImage(enumeratedValue: any): any {
+    notImplemented();
+    return null;
+  }
+}
 
 export class GXProgramMetadata {
   /**
@@ -7403,6 +9238,66 @@ export class BusinessComponent {
   }
 }
 
+export class AttributePEM {
+  /**
+   * @return any
+   */
+  setNull(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  isNull(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  setEmpty(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  getOldValue(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  toFormattedString(): any {
+    notImplemented();
+    return null;
+  }
+}
+
+export class BasedOnEnumeratedDomain {
+  /**
+   * @return any
+   */
+  enumerationDescription(): any {
+    notImplemented();
+    return null;
+  }
+
+  /**
+   * @return any
+   */
+  enumerationImage(): any {
+    notImplemented();
+    return null;
+  }
+}
+
 export class SDT {
   /**
    * @param includeHeader
@@ -7528,6 +9423,9 @@ export class Iterator {
 // end Type
 
 // Type: Void
+// end Type
+
+// Type: GxImage
 // end Type
 
 // Type: Timezones
@@ -9912,5 +11810,18 @@ export class BlobFile {
   }
   set fileURI(value: any) {
     this.mfileURI = value;
+  }
+}
+
+export class VarChar {
+  /**
+   * National language support
+   */
+  private menablenationallanguagesupport: any;
+  get enablenationallanguagesupport(): any {
+    return this.menablenationallanguagesupport;
+  }
+  set enablenationallanguagesupport(value: any) {
+    this.menablenationallanguagesupport = value;
   }
 }

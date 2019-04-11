@@ -25,7 +25,7 @@
         {
           "name": "Asc",
           "externalName": "asc",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/asc",
           "isStatic": true
         },
         {
@@ -61,7 +61,7 @@
         {
           "name": "Chr",
           "externalName": "chr",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/chr",
           "isStatic": true
         },
         {
@@ -79,13 +79,13 @@
         {
           "name": "Compare",
           "externalName": "compare",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
           "isStatic": true
         },
         {
           "name": "Concat",
           "externalName": "concat",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
           "isStatic": true
         },
         {
@@ -223,7 +223,7 @@
         {
           "name": "Format",
           "externalName": "format",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/text/format",
           "isStatic": true
         },
         {
@@ -637,7 +637,7 @@
         {
           "name": "Today",
           "externalName": "today",
-          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "isStatic": true
         },
         {
@@ -1078,77 +1078,92 @@
     },
     {
       "name": "Date",
-      "generatesClass": true,
-      "externalName": "Date",
-      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "generatesClass": false,
       "methods": [
         {
           "name": "AddDays",
-          "externalName": "addDays"
+          "externalName": "addDays",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/date/addDays"
         },
         {
           "name": "AddMonths",
-          "externalName": "addMonths"
+          "externalName": "addMonths",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/date/addMonths"
         },
         {
           "name": "AddYears",
-          "externalName": "addYears"
+          "externalName": "addYears",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/date/addYears"
         },
         {
           "name": "Age",
-          "externalName": "age"
+          "externalName": "age",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/date/age"
         },
         {
           "name": "Day",
-          "externalName": "day"
+          "externalName": "day",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/date/day"
         },
         {
           "name": "DayOfWeek",
-          "externalName": "dayOfWeek"
+          "externalName": "dayOfWeek",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeek"
         },
         {
           "name": "DayOfWeekName",
-          "externalName": "dayOfWeekName"
+          "externalName": "dayOfWeekName",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName"
         },
         {
           "name": "EndOfMonth",
-          "externalName": "endOfMonth"
+          "externalName": "endOfMonth",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "IsEmpty",
-          "externalName": "isEmpty"
+          "externalName": "isEmpty",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "Month",
-          "externalName": "month"
+          "externalName": "month",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "MonthName",
-          "externalName": "monthName"
+          "externalName": "monthName",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "Year",
-          "externalName": "year"
+          "externalName": "year",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "ToDate",
-          "externalName": "toDate"
+          "externalName": "toDate",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "FromString",
-          "externalName": "fromString"
+          "externalName": "fromString",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "Set",
-          "externalName": "set"
+          "externalName": "set",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "ToString",
-          "externalName": "toString"
+          "externalName": "toString",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
         },
         {
           "name": "New",
           "externalName": "new",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
           "isStatic": true
         }
       ]
@@ -1158,12 +1173,7 @@
       "generatesClass": true,
       "externalName": "Image",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        }
-      ]
+      "methods": [{ "name": "IsEmpty", "externalName": "isEmpty" }]
     },
     {
       "name": "LongVarchar",
@@ -1307,129 +1317,36 @@
       "externalName": "DateTime",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "AddMilliseconds",
-          "externalName": "addMilliseconds"
-        },
-        {
-          "name": "AddSeconds",
-          "externalName": "addSeconds"
-        },
-        {
-          "name": "AddMinutes",
-          "externalName": "addMinutes"
-        },
-        {
-          "name": "AddHours",
-          "externalName": "addHours"
-        },
-        {
-          "name": "AddDays",
-          "externalName": "addDays"
-        },
-        {
-          "name": "AddMonths",
-          "externalName": "addMonths"
-        },
-        {
-          "name": "AddYears",
-          "externalName": "addYears"
-        },
-        {
-          "name": "Age",
-          "externalName": "age"
-        },
-        {
-          "name": "Day",
-          "externalName": "day"
-        },
-        {
-          "name": "DayOfWeek",
-          "externalName": "dayOfWeek"
-        },
-        {
-          "name": "DayOfWeekName",
-          "externalName": "dayOfWeekName"
-        },
-        {
-          "name": "EndOfMonth",
-          "externalName": "endOfMonth"
-        },
-        {
-          "name": "Hour",
-          "externalName": "hour"
-        },
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        },
-        {
-          "name": "Minute",
-          "externalName": "minute"
-        },
-        {
-          "name": "Month",
-          "externalName": "month"
-        },
-        {
-          "name": "MonthName",
-          "externalName": "monthName"
-        },
-        {
-          "name": "Second",
-          "externalName": "second"
-        },
-        {
-          "name": "Millisecond",
-          "externalName": "millisecond"
-        },
-        {
-          "name": "Difference",
-          "externalName": "difference"
-        },
-        {
-          "name": "Year",
-          "externalName": "year"
-        },
-        {
-          "name": "ToDate",
-          "externalName": "toDate"
-        },
-        {
-          "name": "ToUniversalTime",
-          "externalName": "toUniversalTime"
-        },
-        {
-          "name": "FromTimeZone",
-          "externalName": "fromTimeZone"
-        },
-        {
-          "name": "FromString",
-          "externalName": "fromString"
-        },
-        {
-          "name": "Set",
-          "externalName": "set"
-        },
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        },
-        {
-          "name": "New",
-          "externalName": "new",
-          "isStatic": true
-        },
-        {
-          "name": "Now",
-          "externalName": "now",
-          "isStatic": true
-        },
-        {
-          "name": "Time",
-          "externalName": "time",
-          "isStatic": true
-        },
+        { "name": "AddMilliseconds", "externalName": "addMilliseconds" },
+        { "name": "AddSeconds", "externalName": "addSeconds" },
+        { "name": "AddMinutes", "externalName": "addMinutes" },
+        { "name": "AddHours", "externalName": "addHours" },
+        { "name": "AddDays", "externalName": "addDays" },
+        { "name": "AddMonths", "externalName": "addMonths" },
+        { "name": "AddYears", "externalName": "addYears" },
+        { "name": "Age", "externalName": "age" },
+        { "name": "Day", "externalName": "day" },
+        { "name": "DayOfWeek", "externalName": "dayOfWeek" },
+        { "name": "DayOfWeekName", "externalName": "dayOfWeekName" },
+        { "name": "EndOfMonth", "externalName": "endOfMonth" },
+        { "name": "Hour", "externalName": "hour" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "Minute", "externalName": "minute" },
+        { "name": "Month", "externalName": "month" },
+        { "name": "MonthName", "externalName": "monthName" },
+        { "name": "Second", "externalName": "second" },
+        { "name": "Millisecond", "externalName": "millisecond" },
+        { "name": "Difference", "externalName": "difference" },
+        { "name": "Year", "externalName": "year" },
+        { "name": "ToDate", "externalName": "toDate" },
+        { "name": "ToUniversalTime", "externalName": "toUniversalTime" },
+        { "name": "FromTimeZone", "externalName": "fromTimeZone" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "Set", "externalName": "set" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "New", "externalName": "new", "isStatic": true },
+        { "name": "Now", "externalName": "now", "isStatic": true },
+        { "name": "Time", "externalName": "time", "isStatic": true },
         {
           "name": "GetTimeZone",
           "externalName": "getTimeZone",
@@ -1589,26 +1506,11 @@
       "externalName": "Binary",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        },
-        {
-          "name": "FromString",
-          "externalName": "fromString"
-        },
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        },
-        {
-          "name": "ToBase64String",
-          "externalName": "toBase64String"
-        },
-        {
-          "name": "FromBase64String",
-          "externalName": "fromBase64String"
-        }
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToBase64String", "externalName": "toBase64String" },
+        { "name": "FromBase64String", "externalName": "fromBase64String" }
       ]
     },
     {
@@ -1633,95 +1535,52 @@
       ]
     },
     {
+      "name": "MailMessage",
+      "generatesClass": true,
+      "externalName": "MailMessage",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "GetHeader", "externalName": "getHeader" },
+        { "name": "AddHeader", "externalName": "addHeader" }
+      ]
+    },
+    {
       "name": "XMLWriter",
       "generatesClass": true,
       "externalName": "XMLWriter",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Open",
-          "externalName": "open"
-        },
-        {
-          "name": "OpenToString",
-          "externalName": "openToString"
-        },
-        {
-          "name": "Close",
-          "externalName": "close"
-        },
-        {
-          "name": "OpenRequest",
-          "externalName": "openRequest"
-        },
-        {
-          "name": "OpenResponse",
-          "externalName": "openResponse"
-        },
-        {
-          "name": "WriteElement",
-          "externalName": "writeElement"
-        },
-        {
-          "name": "WriteStartElement",
-          "externalName": "writeStartElement"
-        },
-        {
-          "name": "WriteEndElement",
-          "externalName": "writeEndElement"
-        },
-        {
-          "name": "WriteAttribute",
-          "externalName": "writeAttribute"
-        },
-        {
-          "name": "WriteText",
-          "externalName": "writeText"
-        },
-        {
-          "name": "WriteRawText",
-          "externalName": "writeRawText"
-        },
-        {
-          "name": "WriteComment",
-          "externalName": "writeComment"
-        },
+        { "name": "Open", "externalName": "open" },
+        { "name": "OpenToString", "externalName": "openToString" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "OpenRequest", "externalName": "openRequest" },
+        { "name": "OpenResponse", "externalName": "openResponse" },
+        { "name": "WriteElement", "externalName": "writeElement" },
+        { "name": "WriteStartElement", "externalName": "writeStartElement" },
+        { "name": "WriteEndElement", "externalName": "writeEndElement" },
+        { "name": "WriteAttribute", "externalName": "writeAttribute" },
+        { "name": "WriteText", "externalName": "writeText" },
+        { "name": "WriteRawText", "externalName": "writeRawText" },
+        { "name": "WriteComment", "externalName": "writeComment" },
         {
           "name": "WriteEntityReference",
           "externalName": "writeEntityReference"
         },
-        {
-          "name": "WriteCData",
-          "externalName": "writeCData"
-        },
+        { "name": "WriteCData", "externalName": "writeCData" },
         {
           "name": "WriteProcessingInstruction",
           "externalName": "writeProcessingInstruction"
         },
-        {
-          "name": "WriteStartDocument",
-          "externalName": "writeStartDocument"
-        },
-        {
-          "name": "WriteDocType",
-          "externalName": "writeDocType"
-        },
-        {
-          "name": "WriteDocTypeSystem",
-          "externalName": "writeDocTypeSystem"
-        },
-        {
-          "name": "WriteDocTypePublic",
-          "externalName": "writeDocTypePublic"
-        },
+        { "name": "WriteStartDocument", "externalName": "writeStartDocument" },
+        { "name": "WriteDocType", "externalName": "writeDocType" },
+        { "name": "WriteDocTypeSystem", "externalName": "writeDocTypeSystem" },
+        { "name": "WriteDocTypePublic", "externalName": "writeDocTypePublic" },
         {
           "name": "WriteNSStartElement",
           "externalName": "writeNSStartElement"
         },
-        {
-          "name": "WriteNSElement",
-          "externalName": "writeNSElement"
-        }
+        { "name": "WriteNSElement", "externalName": "writeNSElement" }
       ]
     },
     {
@@ -1730,70 +1589,28 @@
       "externalName": "XMLReader",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Open",
-          "externalName": "open"
-        },
-        {
-          "name": "OpenFromString",
-          "externalName": "openFromString"
-        },
-        {
-          "name": "Read",
-          "externalName": "read"
-        },
-        {
-          "name": "OpenRequest",
-          "externalName": "openRequest"
-        },
-        {
-          "name": "OpenResponse",
-          "externalName": "openResponse"
-        },
-        {
-          "name": "ReadType",
-          "externalName": "readType"
-        },
-        {
-          "name": "GetAttributeByName",
-          "externalName": "getAttributeByName"
-        },
+        { "name": "Open", "externalName": "open" },
+        { "name": "OpenFromString", "externalName": "openFromString" },
+        { "name": "Read", "externalName": "read" },
+        { "name": "OpenRequest", "externalName": "openRequest" },
+        { "name": "OpenResponse", "externalName": "openResponse" },
+        { "name": "ReadType", "externalName": "readType" },
+        { "name": "GetAttributeByName", "externalName": "getAttributeByName" },
         {
           "name": "GetAttributeByIndex",
           "externalName": "getAttributeByIndex"
         },
-        {
-          "name": "ExistsAttribute",
-          "externalName": "existsAttribute"
-        },
-        {
-          "name": "Close",
-          "externalName": "close"
-        },
-        {
-          "name": "Skip",
-          "externalName": "skip"
-        },
-        {
-          "name": "ReadRawXML",
-          "externalName": "readRawXML"
-        },
-        {
-          "name": "GetAttributeName",
-          "externalName": "getAttributeName"
-        },
-        {
-          "name": "GetAttributePrefix",
-          "externalName": "getAttributePrefix"
-        },
+        { "name": "ExistsAttribute", "externalName": "existsAttribute" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "Skip", "externalName": "skip" },
+        { "name": "ReadRawXML", "externalName": "readRawXML" },
+        { "name": "GetAttributeName", "externalName": "getAttributeName" },
+        { "name": "GetAttributePrefix", "externalName": "getAttributePrefix" },
         {
           "name": "GetAttributeLocalName",
           "externalName": "getAttributeLocalName"
         },
-        {
-          "name": "GetAttributeURI",
-          "externalName": "getAttributeURI"
-        },
+        { "name": "GetAttributeURI", "externalName": "getAttributeURI" },
         {
           "name": "GetAttEntityValueByIndex",
           "externalName": "getAttEntityValueByIndex"
@@ -1810,18 +1627,9 @@
           "name": "GetAttEntityNotationByName",
           "externalName": "getAttEntityNotationByName"
         },
-        {
-          "name": "SetDocEncoding",
-          "externalName": "setDocEncoding"
-        },
-        {
-          "name": "SetNodeEncoding",
-          "externalName": "setNodeEncoding"
-        },
-        {
-          "name": "AddSchema",
-          "externalName": "addSchema"
-        }
+        { "name": "SetDocEncoding", "externalName": "setDocEncoding" },
+        { "name": "SetNodeEncoding", "externalName": "setNodeEncoding" },
+        { "name": "AddSchema", "externalName": "addSchema" }
       ]
     },
     {
@@ -1830,46 +1638,19 @@
       "externalName": "HttpClient",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "AddAuthentication",
-          "externalName": "addAuthentication"
-        },
+        { "name": "AddAuthentication", "externalName": "addAuthentication" },
         {
           "name": "AddProxyAuthentication",
           "externalName": "addProxyAuthentication"
         },
-        {
-          "name": "AddFile",
-          "externalName": "addFile"
-        },
-        {
-          "name": "AddHeader",
-          "externalName": "addHeader"
-        },
-        {
-          "name": "AddString",
-          "externalName": "addString"
-        },
-        {
-          "name": "AddVariable",
-          "externalName": "addVariable"
-        },
-        {
-          "name": "Execute",
-          "externalName": "execute"
-        },
-        {
-          "name": "GetHeader",
-          "externalName": "getHeader"
-        },
-        {
-          "name": "ToFile",
-          "externalName": "toFile"
-        },
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        }
+        { "name": "AddFile", "externalName": "addFile" },
+        { "name": "AddHeader", "externalName": "addHeader" },
+        { "name": "AddString", "externalName": "addString" },
+        { "name": "AddVariable", "externalName": "addVariable" },
+        { "name": "Execute", "externalName": "execute" },
+        { "name": "GetHeader", "externalName": "getHeader" },
+        { "name": "ToFile", "externalName": "toFile" },
+        { "name": "ToString", "externalName": "toString" }
       ]
     },
     {
@@ -1878,22 +1659,10 @@
       "externalName": "HttpResponse",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "AddHeader",
-          "externalName": "addHeader"
-        },
-        {
-          "name": "AddString",
-          "externalName": "addString"
-        },
-        {
-          "name": "AddFile",
-          "externalName": "addFile"
-        },
-        {
-          "name": "SetCookie",
-          "externalName": "setCookie"
-        }
+        { "name": "AddHeader", "externalName": "addHeader" },
+        { "name": "AddString", "externalName": "addString" },
+        { "name": "AddFile", "externalName": "addFile" },
+        { "name": "SetCookie", "externalName": "setCookie" }
       ]
     },
     {
@@ -1902,22 +1671,10 @@
       "externalName": "HttpRequest",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        },
-        {
-          "name": "ToFile",
-          "externalName": "toFile"
-        },
-        {
-          "name": "GetHeader",
-          "externalName": "getHeader"
-        },
-        {
-          "name": "GetVariable",
-          "externalName": "getVariable"
-        }
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToFile", "externalName": "toFile" },
+        { "name": "GetHeader", "externalName": "getHeader" },
+        { "name": "GetVariable", "externalName": "getVariable" }
       ]
     },
     {
@@ -1926,18 +1683,121 @@
       "externalName": "StringCollection",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Clear",
-          "externalName": "clear"
-        },
-        {
-          "name": "Add",
-          "externalName": "add"
-        },
-        {
-          "name": "Item",
-          "externalName": "item"
-        }
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Add", "externalName": "add" },
+        { "name": "Item", "externalName": "item" }
+      ]
+    },
+    {
+      "name": "MailRecipient",
+      "generatesClass": true,
+      "externalName": "MailRecipient",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
+    {
+      "name": "RecipientCollection",
+      "generatesClass": true,
+      "externalName": "RecipientCollection",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "New", "externalName": "new" },
+        { "name": "Add", "externalName": "add" },
+        { "name": "Item", "externalName": "item" }
+      ]
+    },
+    {
+      "name": "SMTPSession",
+      "generatesClass": true,
+      "externalName": "SMTPSession",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Login", "externalName": "login" },
+        { "name": "Logout", "externalName": "logout" },
+        { "name": "Send", "externalName": "send" }
+      ]
+    },
+    {
+      "name": "POP3Session",
+      "generatesClass": true,
+      "externalName": "POP3Session",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Login", "externalName": "login" },
+        { "name": "Logout", "externalName": "logout" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "MarkAsRead", "externalName": "markAsRead" },
+        { "name": "Receive", "externalName": "receive" },
+        { "name": "GetNextUID", "externalName": "getNextUID" },
+        { "name": "Skip", "externalName": "skip" }
+      ]
+    },
+    {
+      "name": "OutlookSession",
+      "generatesClass": true,
+      "externalName": "OutlookSession",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "ChangeFolder", "externalName": "changeFolder" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "MarkAsRead", "externalName": "markAsRead" },
+        { "name": "Receive", "externalName": "receive" },
+        { "name": "Send", "externalName": "send" }
+      ]
+    },
+    {
+      "name": "MAPISession",
+      "generatesClass": true,
+      "externalName": "MAPISession",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Login", "externalName": "login" },
+        { "name": "Logout", "externalName": "logout" },
+        { "name": "ChangeFolder", "externalName": "changeFolder" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "mapiMarkAsRead", "externalName": "mapiMarkAsRead" },
+        { "name": "Receive", "externalName": "receive" },
+        { "name": "Send", "externalName": "send" }
+      ]
+    },
+    {
+      "name": "WordDocument",
+      "generatesClass": true,
+      "externalName": "WordDocument",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Open", "externalName": "open" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "Unbind", "externalName": "unbind" },
+        { "name": "Save", "externalName": "save" },
+        { "name": "SaveAs", "externalName": "saveAs" },
+        { "name": "Show", "externalName": "show" },
+        { "name": "Hide", "externalName": "hide" },
+        { "name": "Append", "externalName": "append" },
+        { "name": "Print", "externalName": "print" },
+        { "name": "Replace", "externalName": "replace" },
+        { "name": "SpellCheck", "externalName": "spellCheck" },
+        { "name": "RunMacro", "externalName": "runMacro" }
+      ]
+    },
+    {
+      "name": "ExcelDocument",
+      "generatesClass": true,
+      "externalName": "ExcelDocument",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Open", "externalName": "open" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "Unbind", "externalName": "unbind" },
+        { "name": "Save", "externalName": "save" },
+        { "name": "Show", "externalName": "show" },
+        { "name": "Hide", "externalName": "hide" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Print", "externalName": "print" },
+        { "name": "SelectSheet", "externalName": "selectSheet" },
+        { "name": "RenameSheet", "externalName": "renameSheet" },
+        { "name": "RunMacro", "externalName": "runMacro" },
+        { "name": "Cells", "externalName": "cells" }
       ]
     },
     {
@@ -1946,26 +1806,11 @@
       "externalName": "WebSession",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Clear",
-          "externalName": "clear"
-        },
-        {
-          "name": "Destroy",
-          "externalName": "destroy"
-        },
-        {
-          "name": "Get",
-          "externalName": "get"
-        },
-        {
-          "name": "Remove",
-          "externalName": "remove"
-        },
-        {
-          "name": "Set",
-          "externalName": "set"
-        }
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Destroy", "externalName": "destroy" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "Set", "externalName": "set" }
       ]
     },
     {
@@ -1973,17 +1818,24 @@
       "generatesClass": true,
       "externalName": "WebWrapper",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "GetResponse",
-          "externalName": "getResponse"
-        }
-      ]
+      "methods": [{ "name": "GetResponse", "externalName": "getResponse" }]
+    },
+    { "name": "Variant", "generatesClass": false },
+    {
+      "name": "ExcelCells",
+      "generatesClass": true,
+      "externalName": "ExcelCells",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     },
     {
-      "name": "Variant",
-      "generatesClass": false
-    },
+      "name": "DBConnection",
+      "generatesClass": true,
+      "externalName": "DBConnection",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Connect", "externalName": "connect" },
+        { "name": "Disconnect", "externalName": "disconnect" }
+      ]
     },
     {
       "name": "Location",
@@ -1997,10 +1849,7 @@
       "externalName": "RegExMatch",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     },
-    {
-      "name": "RegExMatchCollection",
-      "generatesClass": false
-    },
+    { "name": "RegExMatchCollection", "generatesClass": false },
     {
       "name": "ContentInfo",
       "generatesClass": true,
@@ -2018,24 +1867,14 @@
       "generatesClass": true,
       "externalName": "SearchResult",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Items",
-          "externalName": "items"
-        }
-      ]
+      "methods": [{ "name": "Items", "externalName": "items" }]
     },
     {
       "name": "SearchResultCollection",
       "generatesClass": true,
       "externalName": "SearchResultCollection",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Item",
-          "externalName": "item"
-        }
-      ]
+      "methods": [{ "name": "Item", "externalName": "item" }]
     },
     {
       "name": "SearchResultItem",
@@ -2049,58 +1888,19 @@
       "externalName": "Collection",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Add",
-          "externalName": "add"
-        },
-        {
-          "name": "Clear",
-          "externalName": "clear"
-        },
-        {
-          "name": "Item",
-          "externalName": "item"
-        },
-        {
-          "name": "Remove",
-          "externalName": "remove"
-        },
-        {
-          "name": "IndexOf",
-          "externalName": "indexOf"
-        },
-        {
-          "name": "ToXml",
-          "externalName": "toXml"
-        },
-        {
-          "name": "FromXml",
-          "externalName": "fromXml"
-        },
-        {
-          "name": "FromXmlFile",
-          "externalName": "fromXmlFile"
-        },
-        {
-          "name": "ToJson",
-          "externalName": "toJson"
-        },
-        {
-          "name": "FromJson",
-          "externalName": "fromJson"
-        },
-        {
-          "name": "FromJsonFile",
-          "externalName": "fromJsonFile"
-        },
-        {
-          "name": "Clone",
-          "externalName": "clone"
-        },
-        {
-          "name": "Sort",
-          "externalName": "sort"
-        }
+        { "name": "Add", "externalName": "add" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Item", "externalName": "item" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "IndexOf", "externalName": "indexOf" },
+        { "name": "ToXml", "externalName": "toXml" },
+        { "name": "FromXml", "externalName": "fromXml" },
+        { "name": "FromXmlFile", "externalName": "fromXmlFile" },
+        { "name": "ToJson", "externalName": "toJson" },
+        { "name": "FromJson", "externalName": "fromJson" },
+        { "name": "FromJsonFile", "externalName": "fromJsonFile" },
+        { "name": "Clone", "externalName": "clone" },
+        { "name": "Sort", "externalName": "sort" }
       ]
     },
     {
@@ -2109,30 +1909,12 @@
       "externalName": "BusinessComponentCollection",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "GetByKey",
-          "externalName": "getByKey"
-        },
-        {
-          "name": "RemoveByKey",
-          "externalName": "removeByKey"
-        },
-        {
-          "name": "Update",
-          "externalName": "update"
-        },
-        {
-          "name": "Insert",
-          "externalName": "insert"
-        },
-        {
-          "name": "InsertOrUpdate",
-          "externalName": "insertOrUpdate"
-        },
-        {
-          "name": "Delete",
-          "externalName": "delete"
-        }
+        { "name": "GetByKey", "externalName": "getByKey" },
+        { "name": "RemoveByKey", "externalName": "removeByKey" },
+        { "name": "Update", "externalName": "update" },
+        { "name": "Insert", "externalName": "insert" },
+        { "name": "InsertOrUpdate", "externalName": "insertOrUpdate" },
+        { "name": "Delete", "externalName": "delete" }
       ]
     },
     {
@@ -2141,14 +1923,8 @@
       "externalName": "BusinessComponentLinesCollection",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "GetByKey",
-          "externalName": "getByKey"
-        },
-        {
-          "name": "RemoveByKey",
-          "externalName": "removeByKey"
-        }
+        { "name": "GetByKey", "externalName": "getByKey" },
+        { "name": "RemoveByKey", "externalName": "removeByKey" }
       ]
     },
     {
@@ -2157,33 +1933,16 @@
       "externalName": "GUID",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/types/guid",
       "methods": [
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        },
-        {
-          "name": "FromString",
-          "externalName": "fromString"
-        },
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        },
-        {
-          "name": "Empty",
-          "externalName": "empty",
-          "isStatic": true
-        },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "Empty", "externalName": "empty", "isStatic": true },
         {
           "name": "FromString",
           "externalName": "fromString",
           "isStatic": true
         },
-        {
-          "name": "NewGuid",
-          "externalName": "newGuid",
-          "isStatic": true
-        }
+        { "name": "NewGuid", "externalName": "newGuid", "isStatic": true }
       ]
     },
     {
@@ -2192,26 +1951,11 @@
       "externalName": "Metacollection",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "AddItem",
-          "externalName": "addItem"
-        },
-        {
-          "name": "RemoveItem",
-          "externalName": "removeItem"
-        },
-        {
-          "name": "Clear",
-          "externalName": "clear"
-        },
-        {
-          "name": "Value",
-          "externalName": "value"
-        },
-        {
-          "name": "Text",
-          "externalName": "text"
-        }
+        { "name": "AddItem", "externalName": "addItem" },
+        { "name": "RemoveItem", "externalName": "removeItem" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "Value", "externalName": "value" },
+        { "name": "Text", "externalName": "text" }
       ]
     },
     {
@@ -2226,110 +1970,32 @@
       "externalName": "File",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Delete",
-          "externalName": "delete"
-        },
-        {
-          "name": "Exists",
-          "externalName": "exists"
-        },
-        {
-          "name": "Rename",
-          "externalName": "rename"
-        },
-        {
-          "name": "Copy",
-          "externalName": "copy"
-        },
-        {
-          "name": "GetName",
-          "externalName": "getName"
-        },
-        {
-          "name": "GetAbsoluteName",
-          "externalName": "getAbsoluteName"
-        },
-        {
-          "name": "GetURI",
-          "externalName": "getURI"
-        },
-        {
-          "name": "GetLength",
-          "externalName": "getLength"
-        },
-        {
-          "name": "GetLastModified",
-          "externalName": "getLastModified"
-        },
-        {
-          "name": "GetPath",
-          "externalName": "getPath"
-        },
-        {
-          "name": "Open",
-          "externalName": "open"
-        },
-        {
-          "name": "OpenWrite",
-          "externalName": "openWrite"
-        },
-        {
-          "name": "OpenRead",
-          "externalName": "openRead"
-        },
-        {
-          "name": "Close",
-          "externalName": "close"
-        },
-        {
-          "name": "ReadLine",
-          "externalName": "readLine"
-        },
-        {
-          "name": "ReadAllText",
-          "externalName": "readAllText"
-        },
-        {
-          "name": "ReadAllLines",
-          "externalName": "readAllLines"
-        },
-        {
-          "name": "WriteLine",
-          "externalName": "writeLine"
-        },
-        {
-          "name": "WriteAllText",
-          "externalName": "writeAllText"
-        },
-        {
-          "name": "WriteAllLines",
-          "externalName": "writeAllLines"
-        },
-        {
-          "name": "AppendAllText",
-          "externalName": "appendAllText"
-        },
-        {
-          "name": "AppendAllLines",
-          "externalName": "appendAllLines"
-        },
-        {
-          "name": "Create",
-          "externalName": "create"
-        },
-        {
-          "name": "XSLTApply",
-          "externalName": "xSLTApply"
-        },
-        {
-          "name": "HTMLClean",
-          "externalName": "hTMLClean"
-        },
-        {
-          "name": "FromBase64String",
-          "externalName": "fromBase64String"
-        }
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "Exists", "externalName": "exists" },
+        { "name": "Rename", "externalName": "rename" },
+        { "name": "Copy", "externalName": "copy" },
+        { "name": "GetName", "externalName": "getName" },
+        { "name": "GetAbsoluteName", "externalName": "getAbsoluteName" },
+        { "name": "GetURI", "externalName": "getURI" },
+        { "name": "GetLength", "externalName": "getLength" },
+        { "name": "GetLastModified", "externalName": "getLastModified" },
+        { "name": "GetPath", "externalName": "getPath" },
+        { "name": "Open", "externalName": "open" },
+        { "name": "OpenWrite", "externalName": "openWrite" },
+        { "name": "OpenRead", "externalName": "openRead" },
+        { "name": "Close", "externalName": "close" },
+        { "name": "ReadLine", "externalName": "readLine" },
+        { "name": "ReadAllText", "externalName": "readAllText" },
+        { "name": "ReadAllLines", "externalName": "readAllLines" },
+        { "name": "WriteLine", "externalName": "writeLine" },
+        { "name": "WriteAllText", "externalName": "writeAllText" },
+        { "name": "WriteAllLines", "externalName": "writeAllLines" },
+        { "name": "AppendAllText", "externalName": "appendAllText" },
+        { "name": "AppendAllLines", "externalName": "appendAllLines" },
+        { "name": "Create", "externalName": "create" },
+        { "name": "XSLTApply", "externalName": "xSLTApply" },
+        { "name": "HTMLClean", "externalName": "hTMLClean" },
+        { "name": "FromBase64String", "externalName": "fromBase64String" }
       ]
     },
     {
@@ -2337,12 +2003,7 @@
       "generatesClass": true,
       "externalName": "FileCollection",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Item",
-          "externalName": "item"
-        }
-      ]
+      "methods": [{ "name": "Item", "externalName": "item" }]
     },
     {
       "name": "Directory",
@@ -2350,38 +2011,14 @@
       "externalName": "Directory",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Create",
-          "externalName": "create"
-        },
-        {
-          "name": "Delete",
-          "externalName": "delete"
-        },
-        {
-          "name": "Exists",
-          "externalName": "exists"
-        },
-        {
-          "name": "Rename",
-          "externalName": "rename"
-        },
-        {
-          "name": "GetName",
-          "externalName": "getName"
-        },
-        {
-          "name": "GetAbsoluteName",
-          "externalName": "getAbsoluteName"
-        },
-        {
-          "name": "GetFiles",
-          "externalName": "getFiles"
-        },
-        {
-          "name": "GetDirectories",
-          "externalName": "getDirectories"
-        }
+        { "name": "Create", "externalName": "create" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "Exists", "externalName": "exists" },
+        { "name": "Rename", "externalName": "rename" },
+        { "name": "GetName", "externalName": "getName" },
+        { "name": "GetAbsoluteName", "externalName": "getAbsoluteName" },
+        { "name": "GetFiles", "externalName": "getFiles" },
+        { "name": "GetDirectories", "externalName": "getDirectories" }
       ]
     },
     {
@@ -2389,11 +2026,17 @@
       "generatesClass": true,
       "externalName": "DirectoryCollection",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [{ "name": "Item", "externalName": "item" }]
+    },
+    {
+      "name": "LDAPClient",
+      "generatesClass": true,
+      "externalName": "LDAPClient",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Item",
-          "externalName": "item"
-        }
+        { "name": "Connect", "externalName": "connect" },
+        { "name": "Disconnect", "externalName": "disconnect" },
+        { "name": "GetAttribute", "externalName": "getAttribute" }
       ]
     },
     {
@@ -2402,30 +2045,32 @@
       "externalName": "Properties",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Set",
-          "externalName": "set"
-        },
-        {
-          "name": "Get",
-          "externalName": "get"
-        },
-        {
-          "name": "Remove",
-          "externalName": "remove"
-        },
-        {
-          "name": "Clear",
-          "externalName": "clear"
-        },
-        {
-          "name": "ToJson",
-          "externalName": "toJson"
-        },
-        {
-          "name": "FromJson",
-          "externalName": "fromJson"
-        }
+        { "name": "Set", "externalName": "set" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "Clear", "externalName": "clear" },
+        { "name": "ToJson", "externalName": "toJson" },
+        { "name": "FromJson", "externalName": "fromJson" }
+      ]
+    },
+    {
+      "name": "QueueMessage",
+      "generatesClass": true,
+      "externalName": "QueueMessage",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
+    {
+      "name": "Queue",
+      "generatesClass": true,
+      "externalName": "Queue",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Connect", "externalName": "connect" },
+        { "name": "Disconnect", "externalName": "disconnect" },
+        { "name": "Send", "externalName": "send" },
+        { "name": "Commit", "externalName": "commit" },
+        { "name": "Rollback", "externalName": "rollback" },
+        { "name": "Receive", "externalName": "receive" }
       ]
     },
     {
@@ -2439,12 +2084,7 @@
       "generatesClass": true,
       "externalName": "Expression",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Evaluate",
-          "externalName": "evaluate"
-        }
-      ]
+      "methods": [{ "name": "Evaluate", "externalName": "evaluate" }]
     },
     {
       "name": "RegEx",
@@ -2523,12 +2163,7 @@
       "generatesClass": true,
       "externalName": "Window",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Open",
-          "externalName": "open"
-        }
-      ]
+      "methods": [{ "name": "Open", "externalName": "open" }]
     },
     {
       "name": "Video",
@@ -2536,14 +2171,8 @@
       "externalName": "Video",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "FromURL",
-          "externalName": "fromURL"
-        },
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        }
+        { "name": "FromURL", "externalName": "fromURL" },
+        { "name": "IsEmpty", "externalName": "isEmpty" }
       ]
     },
     {
@@ -2552,14 +2181,8 @@
       "externalName": "Audio",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "FromURL",
-          "externalName": "fromURL"
-        },
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        }
+        { "name": "FromURL", "externalName": "fromURL" },
+        { "name": "IsEmpty", "externalName": "isEmpty" }
       ]
     },
     {
@@ -2568,14 +2191,8 @@
       "externalName": "BinaryFile",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "FromURL",
-          "externalName": "fromURL"
-        },
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        }
+        { "name": "FromURL", "externalName": "fromURL" },
+        { "name": "IsEmpty", "externalName": "isEmpty" }
       ]
     },
     {
@@ -2596,26 +2213,11 @@
       "externalName": "CryptoCertificate",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Load",
-          "externalName": "load"
-        },
-        {
-          "name": "FromBase64",
-          "externalName": "fromBase64"
-        },
-        {
-          "name": "ToBase64",
-          "externalName": "toBase64"
-        },
-        {
-          "name": "HasPrivateKey",
-          "externalName": "hasPrivateKey"
-        },
-        {
-          "name": "Verify",
-          "externalName": "verify"
-        }
+        { "name": "Load", "externalName": "load" },
+        { "name": "FromBase64", "externalName": "fromBase64" },
+        { "name": "ToBase64", "externalName": "toBase64" },
+        { "name": "HasPrivateKey", "externalName": "hasPrivateKey" },
+        { "name": "Verify", "externalName": "verify" }
       ]
     },
     {
@@ -2623,12 +2225,7 @@
       "generatesClass": true,
       "externalName": "CryptoHash",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Compute",
-          "externalName": "compute"
-        }
-      ]
+      "methods": [{ "name": "Compute", "externalName": "compute" }]
     },
     {
       "name": "CryptoSymmetricEncrypt",
@@ -2636,14 +2233,8 @@
       "externalName": "CryptoSymmetricEncrypt",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Encrypt",
-          "externalName": "encrypt"
-        },
-        {
-          "name": "Decrypt",
-          "externalName": "decrypt"
-        }
+        { "name": "Encrypt", "externalName": "encrypt" },
+        { "name": "Decrypt", "externalName": "decrypt" }
       ]
     },
     {
@@ -2652,14 +2243,8 @@
       "externalName": "CryptoAsymmetricEncrypt",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Encrypt",
-          "externalName": "encrypt"
-        },
-        {
-          "name": "Decrypt",
-          "externalName": "decrypt"
-        }
+        { "name": "Encrypt", "externalName": "encrypt" },
+        { "name": "Decrypt", "externalName": "decrypt" }
       ]
     },
     {
@@ -2668,14 +2253,8 @@
       "externalName": "CryptoSign",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Sign",
-          "externalName": "sign"
-        },
-        {
-          "name": "Verify",
-          "externalName": "verify"
-        }
+        { "name": "Sign", "externalName": "sign" },
+        { "name": "Verify", "externalName": "verify" }
       ]
     },
     {
@@ -2684,22 +2263,10 @@
       "externalName": "CryptoSignXml",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "AddReference",
-          "externalName": "addReference"
-        },
-        {
-          "name": "Sign",
-          "externalName": "sign"
-        },
-        {
-          "name": "SignElements",
-          "externalName": "signElements"
-        },
-        {
-          "name": "Verify",
-          "externalName": "verify"
-        }
+        { "name": "AddReference", "externalName": "addReference" },
+        { "name": "Sign", "externalName": "sign" },
+        { "name": "SignElements", "externalName": "signElements" },
+        { "name": "Verify", "externalName": "verify" }
       ]
     },
     {
@@ -2708,95 +2275,35 @@
       "externalName": "Geography",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "FromString",
-          "externalName": "fromString"
-        },
-        {
-          "name": "FromWkt",
-          "externalName": "fromWkt"
-        },
-        {
-          "name": "FromGeoJson",
-          "externalName": "fromGeoJson"
-        },
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        },
-        {
-          "name": "ToGeoJson",
-          "externalName": "toGeoJson"
-        },
-        {
-          "name": "ToWkt",
-          "externalName": "toWkt"
-        },
-        {
-          "name": "ToGeoPoint",
-          "externalName": "toGeoPoint"
-        },
-        {
-          "name": "ToGeoLine",
-          "externalName": "toGeoLine"
-        },
-        {
-          "name": "ToGeoPolygon",
-          "externalName": "toGeoPolygon"
-        },
-        {
-          "name": "Distance",
-          "externalName": "distance"
-        },
-        {
-          "name": "Intersect",
-          "externalName": "intersect"
-        },
-        {
-          "name": "IsNull",
-          "externalName": "isNull"
-        },
-        {
-          "name": "SetNull",
-          "externalName": "setNull"
-        },
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        },
-        {
-          "name": "SetEmpty",
-          "externalName": "setEmpty"
-        },
-        {
-          "name": "IsNullOrEmpty",
-          "externalName": "isNullOrEmpty"
-        },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToGeoJson", "externalName": "toGeoJson" },
+        { "name": "ToWkt", "externalName": "toWkt" },
+        { "name": "ToGeoPoint", "externalName": "toGeoPoint" },
+        { "name": "ToGeoLine", "externalName": "toGeoLine" },
+        { "name": "ToGeoPolygon", "externalName": "toGeoPolygon" },
+        { "name": "Distance", "externalName": "distance" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "IsNullOrEmpty", "externalName": "isNullOrEmpty" },
         {
           "name": "FromString",
           "externalName": "fromString",
           "isStatic": true
         },
-        {
-          "name": "FromWkt",
-          "externalName": "fromWkt",
-          "isStatic": true
-        },
+        { "name": "FromWkt", "externalName": "fromWkt", "isStatic": true },
         {
           "name": "FromGeoJson",
           "externalName": "fromGeoJson",
           "isStatic": true
         },
-        {
-          "name": "Distance",
-          "externalName": "distance",
-          "isStatic": true
-        },
-        {
-          "name": "Intersect",
-          "externalName": "intersect",
-          "isStatic": true
-        }
+        { "name": "Distance", "externalName": "distance", "isStatic": true },
+        { "name": "Intersect", "externalName": "intersect", "isStatic": true }
       ]
     },
     {
@@ -2805,87 +2312,33 @@
       "externalName": "GeoPoint",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "FromString",
-          "externalName": "fromString"
-        },
-        {
-          "name": "FromWkt",
-          "externalName": "fromWkt"
-        },
-        {
-          "name": "FromGeoJson",
-          "externalName": "fromGeoJson"
-        },
-        {
-          "name": "ToGeography",
-          "externalName": "toGeography"
-        },
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        },
-        {
-          "name": "ToGeoJson",
-          "externalName": "toGeoJson"
-        },
-        {
-          "name": "ToWKT",
-          "externalName": "toWKT"
-        },
-        {
-          "name": "Distance",
-          "externalName": "distance"
-        },
-        {
-          "name": "Intersect",
-          "externalName": "intersect"
-        },
-        {
-          "name": "IsNull",
-          "externalName": "isNull"
-        },
-        {
-          "name": "SetNull",
-          "externalName": "setNull"
-        },
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        },
-        {
-          "name": "SetEmpty",
-          "externalName": "setEmpty"
-        },
-        {
-          "name": "IsNullOrEmpty",
-          "externalName": "isNullOrEmpty"
-        },
-        {
-          "name": "New",
-          "externalName": "new",
-          "isStatic": true
-        },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "ToGeography", "externalName": "toGeography" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToGeoJson", "externalName": "toGeoJson" },
+        { "name": "ToWKT", "externalName": "toWKT" },
+        { "name": "Distance", "externalName": "distance" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "IsNullOrEmpty", "externalName": "isNullOrEmpty" },
+        { "name": "New", "externalName": "new", "isStatic": true },
         {
           "name": "FromString",
           "externalName": "fromString",
           "isStatic": true
         },
-        {
-          "name": "FromWkt",
-          "externalName": "fromWkt",
-          "isStatic": true
-        },
+        { "name": "FromWkt", "externalName": "fromWkt", "isStatic": true },
         {
           "name": "FromGeoJson",
           "externalName": "fromGeoJson",
           "isStatic": true
         },
-        {
-          "name": "Distance",
-          "externalName": "distance",
-          "isStatic": true
-        }
+        { "name": "Distance", "externalName": "distance", "isStatic": true }
       ]
     },
     {
@@ -2894,78 +2347,31 @@
       "externalName": "GeoLine",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "FromString",
-          "externalName": "fromString"
-        },
-        {
-          "name": "FromWkt",
-          "externalName": "fromWkt"
-        },
-        {
-          "name": "FromGeoJson",
-          "externalName": "fromGeoJson"
-        },
-        {
-          "name": "ToGeography",
-          "externalName": "toGeography"
-        },
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        },
-        {
-          "name": "ToGeoJson",
-          "externalName": "toGeoJson"
-        },
-        {
-          "name": "ToWkt",
-          "externalName": "toWkt"
-        },
-        {
-          "name": "Intersect",
-          "externalName": "intersect"
-        },
-        {
-          "name": "IsNull",
-          "externalName": "isNull"
-        },
-        {
-          "name": "SetNull",
-          "externalName": "setNull"
-        },
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        },
-        {
-          "name": "SetEmpty",
-          "externalName": "setEmpty"
-        },
-        {
-          "name": "IsNullOrEmpty",
-          "externalName": "isNullOrEmpty"
-        },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "ToGeography", "externalName": "toGeography" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToGeoJson", "externalName": "toGeoJson" },
+        { "name": "ToWkt", "externalName": "toWkt" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "IsNullOrEmpty", "externalName": "isNullOrEmpty" },
         {
           "name": "FromString",
           "externalName": "fromString",
           "isStatic": true
         },
-        {
-          "name": "FromWkt",
-          "externalName": "fromWkt",
-          "isStatic": true
-        },
+        { "name": "FromWkt", "externalName": "fromWkt", "isStatic": true },
         {
           "name": "FromGeoJson",
           "externalName": "fromGeoJson",
           "isStatic": true
         },
-        {
-          "name": "Intersect",
-          "externalName": "intersect",
-          "isStatic": true
-        }
+        { "name": "Intersect", "externalName": "intersect", "isStatic": true }
       ]
     },
     {
@@ -2974,87 +2380,33 @@
       "externalName": "GeoPolygon",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "FromString",
-          "externalName": "fromString"
-        },
-        {
-          "name": "FromWkt",
-          "externalName": "fromWkt"
-        },
-        {
-          "name": "FromGeoJson",
-          "externalName": "fromGeoJson"
-        },
-        {
-          "name": "ToGeography",
-          "externalName": "toGeography"
-        },
-        {
-          "name": "ToString",
-          "externalName": "toString"
-        },
-        {
-          "name": "ToGeoJson",
-          "externalName": "toGeoJson"
-        },
-        {
-          "name": "ToWkt",
-          "externalName": "toWkt"
-        },
-        {
-          "name": "Intersect",
-          "externalName": "intersect"
-        },
-        {
-          "name": "Area",
-          "externalName": "area"
-        },
-        {
-          "name": "IsNull",
-          "externalName": "isNull"
-        },
-        {
-          "name": "SetNull",
-          "externalName": "setNull"
-        },
-        {
-          "name": "IsEmpty",
-          "externalName": "isEmpty"
-        },
-        {
-          "name": "SetEmpty",
-          "externalName": "setEmpty"
-        },
-        {
-          "name": "IsNullOrEmpty",
-          "externalName": "isNullOrEmpty"
-        },
+        { "name": "FromString", "externalName": "fromString" },
+        { "name": "FromWkt", "externalName": "fromWkt" },
+        { "name": "FromGeoJson", "externalName": "fromGeoJson" },
+        { "name": "ToGeography", "externalName": "toGeography" },
+        { "name": "ToString", "externalName": "toString" },
+        { "name": "ToGeoJson", "externalName": "toGeoJson" },
+        { "name": "ToWkt", "externalName": "toWkt" },
+        { "name": "Intersect", "externalName": "intersect" },
+        { "name": "Area", "externalName": "area" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsEmpty", "externalName": "isEmpty" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "IsNullOrEmpty", "externalName": "isNullOrEmpty" },
         {
           "name": "FromString",
           "externalName": "fromString",
           "isStatic": true
         },
-        {
-          "name": "FromWkt",
-          "externalName": "fromWkt",
-          "isStatic": true
-        },
+        { "name": "FromWkt", "externalName": "fromWkt", "isStatic": true },
         {
           "name": "FromGeoJson",
           "externalName": "fromGeoJson",
           "isStatic": true
         },
-        {
-          "name": "Intersect",
-          "externalName": "intersect",
-          "isStatic": true
-        },
-        {
-          "name": "Area",
-          "externalName": "area",
-          "isStatic": true
-        }
+        { "name": "Intersect", "externalName": "intersect", "isStatic": true },
+        { "name": "Area", "externalName": "area", "isStatic": true }
       ]
     },
     {
@@ -3099,36 +2451,17 @@
       "externalName": "Cache",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "GetCache",
-          "externalName": "getCache",
-          "isStatic": true
-        },
+        { "name": "GetCache", "externalName": "getCache", "isStatic": true },
         {
           "name": "ClearAllCaches",
           "externalName": "clearAllCaches",
           "isStatic": true
         },
-        {
-          "name": "Set",
-          "externalName": "set"
-        },
-        {
-          "name": "Get",
-          "externalName": "get"
-        },
-        {
-          "name": "Contains",
-          "externalName": "contains"
-        },
-        {
-          "name": "Remove",
-          "externalName": "remove"
-        },
-        {
-          "name": "Clear",
-          "externalName": "clear"
-        }
+        { "name": "Set", "externalName": "set" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Contains", "externalName": "contains" },
+        { "name": "Remove", "externalName": "remove" },
+        { "name": "Clear", "externalName": "clear" }
       ]
     },
     {
@@ -3137,51 +2470,83 @@
       "externalName": "StorageProvider",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "GetPrivate",
-          "externalName": "getPrivate"
-        },
-        {
-          "name": "UploadPrivate",
-          "externalName": "uploadPrivate"
-        },
-        {
-          "name": "Get",
-          "externalName": "get"
-        },
-        {
-          "name": "Upload",
-          "externalName": "upload"
-        },
-        {
-          "name": "Download",
-          "externalName": "download"
-        },
-        {
-          "name": "DownloadPrivate",
-          "externalName": "downloadPrivate"
-        },
-        {
-          "name": "GetDirectory",
-          "externalName": "getDirectory"
-        }
+        { "name": "GetPrivate", "externalName": "getPrivate" },
+        { "name": "UploadPrivate", "externalName": "uploadPrivate" },
+        { "name": "Get", "externalName": "get" },
+        { "name": "Upload", "externalName": "upload" },
+        { "name": "Download", "externalName": "download" },
+        { "name": "DownloadPrivate", "externalName": "downloadPrivate" },
+        { "name": "GetDirectory", "externalName": "getDirectory" }
       ]
     },
     {
-      "name": "ArrayPEM",
-      "generatesClass": false
+      "name": "Synchronization",
+      "generatesClass": false,
+      "methods": [
+        {
+          "name": "Receive",
+          "externalName": "receive",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "isStatic": true
+        },
+        {
+          "name": "ServerStatus",
+          "externalName": "serverStatus",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "isStatic": true
+        },
+        {
+          "name": "Send",
+          "externalName": "send",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "isStatic": true
+        },
+        {
+          "name": "ResetOfflineDatabase",
+          "externalName": "resetOfflineDatabase",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "isStatic": true
+        },
+        {
+          "name": "SetSendCheckpoint",
+          "externalName": "setSendCheckpoint",
+          "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+          "isStatic": true
+        }
+      ]
+    },
+    { "name": "ArrayPEM", "generatesClass": false },
+    {
+      "name": "VariablePEM",
+      "generatesClass": true,
+      "externalName": "VariablePEM",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "ToFormattedString", "externalName": "toFormattedString" }
+      ]
+    },
+    {
+      "name": "DomainPEM",
+      "generatesClass": true,
+      "externalName": "DomainPEM",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "Convert", "externalName": "convert" },
+        { "name": "Elements", "externalName": "elements" },
+        {
+          "name": "EnumerationDescription",
+          "externalName": "enumerationDescription"
+        },
+        { "name": "EnumerationImage", "externalName": "enumerationImage" }
+      ]
     },
     {
       "name": "GXProgramMetadata",
       "generatesClass": true,
       "externalName": "GXProgramMetadata",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Link",
-          "externalName": "link"
-        }
-      ]
+      "methods": [{ "name": "Link", "externalName": "link" }]
     },
     {
       "name": "SDObject",
@@ -3189,18 +2554,9 @@
       "externalName": "SDObject",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Call",
-          "externalName": "call"
-        },
-        {
-          "name": "Create",
-          "externalName": "create"
-        },
-        {
-          "name": "Link",
-          "externalName": "link"
-        }
+        { "name": "Call", "externalName": "call" },
+        { "name": "Create", "externalName": "create" },
+        { "name": "Link", "externalName": "link" }
       ]
     },
     {
@@ -3209,34 +2565,13 @@
       "externalName": "GXProgram",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Call",
-          "externalName": "call"
-        },
-        {
-          "name": "Create",
-          "externalName": "create"
-        },
-        {
-          "name": "Link",
-          "externalName": "link"
-        },
-        {
-          "name": "Popup",
-          "externalName": "popup"
-        },
-        {
-          "name": "Submit",
-          "externalName": "submit"
-        },
-        {
-          "name": "Udp",
-          "externalName": "udp"
-        },
-        {
-          "name": "Udf",
-          "externalName": "udf"
-        }
+        { "name": "Call", "externalName": "call" },
+        { "name": "Create", "externalName": "create" },
+        { "name": "Link", "externalName": "link" },
+        { "name": "Popup", "externalName": "popup" },
+        { "name": "Submit", "externalName": "submit" },
+        { "name": "Udp", "externalName": "udp" },
+        { "name": "Udf", "externalName": "udf" }
       ]
     },
     {
@@ -3244,141 +2579,82 @@
       "generatesClass": true,
       "externalName": "GXDataSelector",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Call",
-          "externalName": "call"
-        }
-      ]
+      "methods": [{ "name": "Call", "externalName": "call" }]
     },
     {
       "name": "ImagePEMs",
       "generatesClass": true,
       "externalName": "ImagePEMs",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Link",
-          "externalName": "link"
-        }
-      ]
+      "methods": [{ "name": "Link", "externalName": "link" }]
     },
     {
       "name": "OutputGroup",
       "generatesClass": true,
       "externalName": "OutputGroup",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "Insert",
-          "externalName": "insert"
-        }
-      ]
+      "methods": [{ "name": "Insert", "externalName": "insert" }]
     },
-    {
-      "name": "BusinessComponentLevel",
-      "generatesClass": false
-    },
+    { "name": "BusinessComponentLevel", "generatesClass": false },
     {
       "name": "BusinessComponent",
       "generatesClass": true,
       "externalName": "BusinessComponent",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Check",
-          "externalName": "check"
-        },
-        {
-          "name": "Delete",
-          "externalName": "delete"
-        },
-        {
-          "name": "Load",
-          "externalName": "load"
-        },
-        {
-          "name": "Mode",
-          "externalName": "mode"
-        },
-        {
-          "name": "Save",
-          "externalName": "save"
-        },
-        {
-          "name": "ToXml",
-          "externalName": "toXml"
-        },
-        {
-          "name": "FromXml",
-          "externalName": "fromXml"
-        },
-        {
-          "name": "FromXmlFile",
-          "externalName": "fromXmlFile"
-        },
-        {
-          "name": "ToJson",
-          "externalName": "toJson"
-        },
-        {
-          "name": "FromJson",
-          "externalName": "fromJson"
-        },
-        {
-          "name": "FromJsonFile",
-          "externalName": "fromJsonFile"
-        },
-        {
-          "name": "Update",
-          "externalName": "update"
-        },
-        {
-          "name": "Insert",
-          "externalName": "insert"
-        },
-        {
-          "name": "InsertOrUpdate",
-          "externalName": "insertOrUpdate"
-        },
-        {
-          "name": "Success",
-          "externalName": "success"
-        },
-        {
-          "name": "Fail",
-          "externalName": "fail"
-        },
-        {
-          "name": "GetMessages",
-          "externalName": "getMessages"
-        },
-        {
-          "name": "Clone",
-          "externalName": "clone"
-        },
-        {
-          "name": "CreateBC",
-          "externalName": "createBC",
-          "isStatic": true
-        },
+        { "name": "Check", "externalName": "check" },
+        { "name": "Delete", "externalName": "delete" },
+        { "name": "Load", "externalName": "load" },
+        { "name": "Mode", "externalName": "mode" },
+        { "name": "Save", "externalName": "save" },
+        { "name": "ToXml", "externalName": "toXml" },
+        { "name": "FromXml", "externalName": "fromXml" },
+        { "name": "FromXmlFile", "externalName": "fromXmlFile" },
+        { "name": "ToJson", "externalName": "toJson" },
+        { "name": "FromJson", "externalName": "fromJson" },
+        { "name": "FromJsonFile", "externalName": "fromJsonFile" },
+        { "name": "Update", "externalName": "update" },
+        { "name": "Insert", "externalName": "insert" },
+        { "name": "InsertOrUpdate", "externalName": "insertOrUpdate" },
+        { "name": "Success", "externalName": "success" },
+        { "name": "Fail", "externalName": "fail" },
+        { "name": "GetMessages", "externalName": "getMessages" },
+        { "name": "Clone", "externalName": "clone" },
+        { "name": "CreateBC", "externalName": "createBC", "isStatic": true },
         {
           "name": "CreateCollection",
           "externalName": "createCollection",
           "isStatic": true
         },
+        { "name": "GetValue", "externalName": "getValue" },
+        { "name": "SetValue", "externalName": "setValue" },
+        { "name": "GetMetadata", "externalName": "getMetadata" }
+      ]
+    },
+    {
+      "name": "AttributePEM",
+      "generatesClass": true,
+      "externalName": "AttributePEM",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
+        { "name": "SetNull", "externalName": "setNull" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetEmpty", "externalName": "setEmpty" },
+        { "name": "GetOldValue", "externalName": "getOldValue" },
+        { "name": "ToFormattedString", "externalName": "toFormattedString" }
+      ]
+    },
+    {
+      "name": "BasedOnEnumeratedDomain",
+      "generatesClass": true,
+      "externalName": "BasedOnEnumeratedDomain",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
+      "methods": [
         {
-          "name": "GetValue",
-          "externalName": "getValue"
+          "name": "EnumerationDescription",
+          "externalName": "enumerationDescription"
         },
-        {
-          "name": "SetValue",
-          "externalName": "setValue"
-        },
-        {
-          "name": "GetMetadata",
-          "externalName": "getMetadata"
-        }
+        { "name": "EnumerationImage", "externalName": "enumerationImage" }
       ]
     },
     {
@@ -3387,42 +2663,15 @@
       "externalName": "SDT",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "ToXml",
-          "externalName": "toXml"
-        },
-        {
-          "name": "FromXml",
-          "externalName": "fromXml"
-        },
-        {
-          "name": "FromXmlFile",
-          "externalName": "fromXmlFile"
-        },
-        {
-          "name": "Clone",
-          "externalName": "clone"
-        },
-        {
-          "name": "ToJson",
-          "externalName": "toJson"
-        },
-        {
-          "name": "FromJson",
-          "externalName": "fromJson"
-        },
-        {
-          "name": "FromJsonFile",
-          "externalName": "fromJsonFile"
-        },
-        {
-          "name": "IsNull",
-          "externalName": "isNull"
-        },
-        {
-          "name": "SetNull",
-          "externalName": "setNull"
-        }
+        { "name": "ToXml", "externalName": "toXml" },
+        { "name": "FromXml", "externalName": "fromXml" },
+        { "name": "FromXmlFile", "externalName": "fromXmlFile" },
+        { "name": "Clone", "externalName": "clone" },
+        { "name": "ToJson", "externalName": "toJson" },
+        { "name": "FromJson", "externalName": "fromJson" },
+        { "name": "FromJsonFile", "externalName": "fromJsonFile" },
+        { "name": "IsNull", "externalName": "isNull" },
+        { "name": "SetNull", "externalName": "setNull" }
       ]
     },
     {
@@ -3431,10 +2680,7 @@
       "externalName": "SDTItem",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "ToFormattedString",
-          "externalName": "toFormattedString"
-        }
+        { "name": "ToFormattedString", "externalName": "toFormattedString" }
       ]
     },
     {
@@ -3443,79 +2689,31 @@
       "externalName": "Iterator",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "First",
-          "externalName": "first"
-        },
-        {
-          "name": "Next",
-          "externalName": "next"
-        },
-        {
-          "name": "Eof",
-          "externalName": "eof"
-        }
+        { "name": "First", "externalName": "first" },
+        { "name": "Next", "externalName": "next" },
+        { "name": "Eof", "externalName": "eof" }
       ]
     },
-    {
-      "name": "",
-      "generatesClass": false
-    },
-    {
-      "name": "void",
-      "generatesClass": false
-    },
-    {
-      "name": "Timezones",
-      "generatesClass": false
-    },
-    {
-      "name": "short",
-      "generatesClass": false
-    },
-    {
-      "name": "Object",
-      "generatesClass": false
-    },
-    {
-      "name": "Messages",
-      "generatesClass": false
-    },
-    {
-      "name": "int",
-      "generatesClass": false
-    },
-    {
-      "name": "GxControlFrame",
-      "generatesClass": false
-    },
-    {
-      "name": "CallEffect",
-      "generatesClass": false
-    },
-    {
-      "name": "CallType",
-      "generatesClass": false
-    },
-    {
-      "name": "TargetSize",
-      "generatesClass": false
-    },
-    {
-      "name": "DipOrPercentage",
-      "generatesClass": false
-    },
+    { "name": "", "generatesClass": false },
+    { "name": "void", "generatesClass": false },
+    { "name": "GxImage", "generatesClass": false },
+    { "name": "Timezones", "generatesClass": false },
+    { "name": "short", "generatesClass": false },
+    { "name": "Object", "generatesClass": false },
+    { "name": "Messages", "generatesClass": false },
+    { "name": "int", "generatesClass": false },
+    { "name": "GxControlFrame", "generatesClass": false },
+    { "name": "CallEffect", "generatesClass": false },
+    { "name": "CallType", "generatesClass": false },
+    { "name": "TargetSize", "generatesClass": false },
+    { "name": "DipOrPercentage", "generatesClass": false },
     {
       "name": "GeneXus.Common.UI.Progress",
       "generatesClass": true,
       "externalName": "GeneXusCommonUIProgress",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Show",
-          "externalName": "show",
-          "isStatic": true
-        },
+        { "name": "Show", "externalName": "show", "isStatic": true },
         {
           "name": "ShowWithTitle",
           "externalName": "showWithTitle",
@@ -3526,11 +2724,7 @@
           "externalName": "showWithTitleAndDescription",
           "isStatic": true
         },
-        {
-          "name": "Hide",
-          "externalName": "hide",
-          "isStatic": true
-        }
+        { "name": "Hide", "externalName": "hide", "isStatic": true }
       ]
     },
     {
@@ -3842,21 +3036,9 @@
       "externalName": "GeneXusClientSocket",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Open",
-          "externalName": "open",
-          "isStatic": true
-        },
-        {
-          "name": "Close",
-          "externalName": "close",
-          "isStatic": true
-        },
-        {
-          "name": "Send",
-          "externalName": "send",
-          "isStatic": true
-        }
+        { "name": "Open", "externalName": "open", "isStatic": true },
+        { "name": "Close", "externalName": "close", "isStatic": true },
+        { "name": "Send", "externalName": "send", "isStatic": true }
       ]
     },
     {
@@ -3870,21 +3052,13 @@
           "externalName": "postToWall",
           "isStatic": true
         },
-        {
-          "name": "ShareLink",
-          "externalName": "shareLink",
-          "isStatic": true
-        },
+        { "name": "ShareLink", "externalName": "shareLink", "isStatic": true },
         {
           "name": "ShareImage",
           "externalName": "shareImage",
           "isStatic": true
         },
-        {
-          "name": "ShareVideo",
-          "externalName": "shareVideo",
-          "isStatic": true
-        }
+        { "name": "ShareVideo", "externalName": "shareVideo", "isStatic": true }
       ]
     },
     {
@@ -3929,22 +3103,10 @@
       "externalName": "GeneXusServerSocket",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Notify",
-          "externalName": "notify"
-        },
-        {
-          "name": "NotifyClient",
-          "externalName": "notifyClient"
-        },
-        {
-          "name": "Broadcast",
-          "externalName": "broadcast"
-        },
-        {
-          "name": "NotifyClientText",
-          "externalName": "notifyClientText"
-        }
+        { "name": "Notify", "externalName": "notify" },
+        { "name": "NotifyClient", "externalName": "notifyClient" },
+        { "name": "Broadcast", "externalName": "broadcast" },
+        { "name": "NotifyClientText", "externalName": "notifyClientText" }
       ]
     },
     {
@@ -4061,12 +3223,7 @@
       "generatesClass": true,
       "externalName": "GeneXusSDNotificationsNotificationParameters",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
-      "methods": [
-        {
-          "name": "SetParameter",
-          "externalName": "setParameter"
-        }
-      ]
+      "methods": [{ "name": "SetParameter", "externalName": "setParameter" }]
     },
     {
       "name": "GeneXus.SD.Notifications.RemoteNotifications",
@@ -4074,38 +3231,14 @@
       "externalName": "GeneXusSDNotificationsRemoteNotifications",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Call",
-          "externalName": "call"
-        },
-        {
-          "name": "IOSSetBadge",
-          "externalName": "iOSSetBadge"
-        },
-        {
-          "name": "IOSResetBadge",
-          "externalName": "iOSResetBadge"
-        },
-        {
-          "name": "CallAction",
-          "externalName": "callAction"
-        },
-        {
-          "name": "OpenSession",
-          "externalName": "openSession"
-        },
-        {
-          "name": "Add",
-          "externalName": "add"
-        },
-        {
-          "name": "Send",
-          "externalName": "send"
-        },
-        {
-          "name": "SetConfiguration",
-          "externalName": "setConfiguration"
-        }
+        { "name": "Call", "externalName": "call" },
+        { "name": "IOSSetBadge", "externalName": "iOSSetBadge" },
+        { "name": "IOSResetBadge", "externalName": "iOSResetBadge" },
+        { "name": "CallAction", "externalName": "callAction" },
+        { "name": "OpenSession", "externalName": "openSession" },
+        { "name": "Add", "externalName": "add" },
+        { "name": "Send", "externalName": "send" },
+        { "name": "SetConfiguration", "externalName": "setConfiguration" }
       ]
     },
     {
@@ -4294,16 +3427,8 @@
       "externalName": "GeneXusSDMediaAudioRecorder",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "Start",
-          "externalName": "start",
-          "isStatic": true
-        },
-        {
-          "name": "Stop",
-          "externalName": "stop",
-          "isStatic": true
-        }
+        { "name": "Start", "externalName": "start", "isStatic": true },
+        { "name": "Stop", "externalName": "stop", "isStatic": true }
       ]
     },
     {
@@ -4419,61 +3544,25 @@
           "externalName": "sendMessage",
           "isStatic": true
         },
-        {
-          "name": "PlayVideo",
-          "externalName": "playVideo",
-          "isStatic": true
-        },
-        {
-          "name": "PlayAudio",
-          "externalName": "playAudio",
-          "isStatic": true
-        },
-        {
-          "name": "PlaceCall",
-          "externalName": "placeCall",
-          "isStatic": true
-        },
-        {
-          "name": "SendEmail",
-          "externalName": "sendEmail",
-          "isStatic": true
-        },
+        { "name": "PlayVideo", "externalName": "playVideo", "isStatic": true },
+        { "name": "PlayAudio", "externalName": "playAudio", "isStatic": true },
+        { "name": "PlaceCall", "externalName": "placeCall", "isStatic": true },
+        { "name": "SendEmail", "externalName": "sendEmail", "isStatic": true },
         {
           "name": "SendEmailAdvanced",
           "externalName": "sendEmailAdvanced",
           "isStatic": true
         },
-        {
-          "name": "SendSMS",
-          "externalName": "sendSMS",
-          "isStatic": true
-        },
-        {
-          "name": "Msg",
-          "externalName": "msg",
-          "isStatic": true
-        },
-        {
-          "name": "Confirm",
-          "externalName": "confirm",
-          "isStatic": true
-        },
+        { "name": "SendSMS", "externalName": "sendSMS", "isStatic": true },
+        { "name": "Msg", "externalName": "msg", "isStatic": true },
+        { "name": "Confirm", "externalName": "confirm", "isStatic": true },
         {
           "name": "OpenInBrowser",
           "externalName": "openInBrowser",
           "isStatic": true
         },
-        {
-          "name": "CanOpen",
-          "externalName": "canOpen",
-          "isStatic": true
-        },
-        {
-          "name": "Open",
-          "externalName": "open",
-          "isStatic": true
-        },
+        { "name": "CanOpen", "externalName": "canOpen", "isStatic": true },
+        { "name": "Open", "externalName": "open", "isStatic": true },
         {
           "name": "ClearCache",
           "externalName": "clearCache",
@@ -4530,11 +3619,7 @@
           "externalName": "isServerAvailable",
           "isStatic": true
         },
-        {
-          "name": "Type",
-          "externalName": "type",
-          "isStatic": true
-        },
+        { "name": "Type", "externalName": "type", "isStatic": true },
         {
           "name": "TrafficBasedCost",
           "externalName": "trafficBasedCost",
@@ -4615,14 +3700,8 @@
         }
       ]
     },
-    {
-      "name": "GeneXus.SD.Search",
-      "generatesClass": false
-    },
-    {
-      "name": "GeneXus.SD.DeepLink",
-      "generatesClass": false
-    },
+    { "name": "GeneXus.SD.Search", "generatesClass": false },
+    { "name": "GeneXus.SD.DeepLink", "generatesClass": false },
     {
       "name": "GeneXus.SD.WebBrowser",
       "generatesClass": false,
@@ -4671,17 +3750,19 @@
       "externalName": "GeneXusSDCardScanner",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented",
       "methods": [
-        {
-          "name": "ScanCard",
-          "externalName": "scanCard",
-          "isStatic": true
-        }
+        { "name": "ScanCard", "externalName": "scanCard", "isStatic": true }
       ]
     },
     {
       "name": "BlobFile",
       "generatesClass": true,
       "externalName": "BlobFile",
+      "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
+    },
+    {
+      "name": "VarChar",
+      "generatesClass": true,
+      "externalName": "VarChar",
       "externalModuleName": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
     }
   ]

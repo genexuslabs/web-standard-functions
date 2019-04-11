@@ -8,17 +8,21 @@
   "implemented": {
     "Core": {
       "members": {
-        "LTrim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
-          "name": "ltrim"
+        "Asc": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/asc",
+          "name": "asc"
         },
-        "RTrim": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
-          "name": "rtrim"
+        "Chr": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/chr",
+          "name": "chr"
         },
         "Int": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
+        },
+        "LTrim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "ltrim"
         },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
@@ -28,9 +32,17 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
           "name": "roundToEven"
         },
+        "RTrim": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rtrim"
+        },
         "Trunc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
+        },
+        "Today": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
+          "name": "today"
         },
         "Concat": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
@@ -430,6 +442,38 @@
         "Truncate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
+        }
+      }
+    },
+    "Date": {
+      "members": {
+        "AddDays": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addDays",
+          "name": "addDays"
+        },
+        "AddMonths": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addMonths",
+          "name": "addMonths"
+        },
+        "AddYears": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addYears",
+          "name": "addYears"
+        },
+        "Age": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/age",
+          "name": "age"
+        },
+        "Day": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/day",
+          "name": "day"
+        },
+        "DayOfWeek": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeek",
+          "name": "dayOfWeek"
+        },
+        "DayOfWeekName": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName",
+          "name": "dayOfWeekName"
         }
       }
     }
