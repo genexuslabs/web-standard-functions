@@ -40,6 +40,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
         },
+        "Today": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
+          "name": "today"
+        },
         "Concat": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/concat",
           "name": "concat"
@@ -438,6 +442,38 @@
         "Truncate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
+        }
+      }
+    },
+    "Date": {
+      "members": {
+        "AddDays": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addDays",
+          "name": "addDays"
+        },
+        "AddMonths": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addMonths",
+          "name": "addMonths"
+        },
+        "AddYears": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addYears",
+          "name": "addYears"
+        },
+        "Age": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/age",
+          "name": "age"
+        },
+        "Day": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/day",
+          "name": "day"
+        },
+        "DayOfWeek": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeek",
+          "name": "dayOfWeek"
+        },
+        "DayOfWeekName": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName",
+          "name": "dayOfWeekName"
         }
       }
     }
