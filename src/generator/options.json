@@ -28,6 +28,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
           "name": "format"
         },
+        "FromBase64": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromBase64",
+          "name": "fromBase64"
+        },
         "Int": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
