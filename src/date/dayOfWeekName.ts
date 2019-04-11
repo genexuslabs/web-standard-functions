@@ -12,9 +12,9 @@ let gxToLibLangMapping = (gxlang: string): string => {
     ["eng", "en"] /*English*/,
     ["por", "pt"] /*Portuguese*/,
     ["ita", "it"] /*Italian*/,
-    ["chs", "zh"] /*Simplified Chinese*/,
-    ["cht", "tw"] /*Traditional Chinese*/,
-    ["jap", "ja"] /*Japanese*/
+    ["chs", "zh-Hans"] /*Simplified Chinese*/,
+    ["cht", "zh-Hant"] /*Traditional Chinese*/,
+    ["jap", "jpn"] /*Japanese*/
   ]);
   let luxonLang = gxtoluxonLang.get(gxlang);
   return luxonLang || "en";
