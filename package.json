@@ -21,7 +21,8 @@
     "generate-api": "cd ./node_modules/standard-api-generator && node ./index.js -o ../../src/generator/options.json && cd ../.."
   },
   "files": [
-    "dist"
+    "dist",
+    "src/generator/out/angular_metadata.json"
   ],
   "engines": {
     "node": ">=8.1.0"
