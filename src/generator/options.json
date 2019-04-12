@@ -561,6 +561,10 @@
         "EndOfMonth": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
           "name": "endOfMonth"
+        },
+        "Month": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
+          "name": "month"
         }
       }
     }
