@@ -20,7 +20,7 @@ describe("create new GUID", () => {
     const guidStr = guid.toString();
     expect(guidStr.length).toBe(36);
     expect(guidStr).toMatch(
-      /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/
+      /[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}/
     );
     expect(guidStr).not.toBe(emptyGuidStr);
   });
