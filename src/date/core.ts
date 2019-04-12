@@ -11,3 +11,7 @@ export let gxToLibLangMapping = (gxlang: string): string => {
   let luxonLang = gxtoluxonLang.get(gxlang);
   return luxonLang || "en";
 };
+
+
+export const EMPTY_DATE_VALUE = new Date(0, 0, 0, 0, 0, 0, 0);
+

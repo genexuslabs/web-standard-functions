@@ -55,7 +55,6 @@ describe("check if a GUID is empty", () => {
   });
   it("should return true for a GUID created from an invalid GUID string", () => {
     const guid = GUID.fromString("xyz");
-    console.log(guid.toString());
     expect(guid.isEmpty()).toBe(true);
   });
   it("should return false for a new GUID", () => {

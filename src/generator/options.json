@@ -577,6 +577,26 @@
         "MonthName": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
           "name": "monthName"
+        }  ,
+        "ToDate": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
+          "name": "toDate"
+        },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "name": "fromString"
+        },
+        "Set": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/set",
+          "name": "set"
+        },
+        "New": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
+          "name": "newInstance"
+        } ,
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
+          "name": "toString"
         }  
       }
     }

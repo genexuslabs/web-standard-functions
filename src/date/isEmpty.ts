@@ -4,7 +4,7 @@
  * @return boolean
  */
 
-const EMPTY_DATE_VALUE = new Date(0, 0, 0, 0, 0, 0, 0);
+ import {EMPTY_DATE_VALUE} from "./core";
 
 export const isEmpty = (target: Date): boolean => {
   return target.getTime() === EMPTY_DATE_VALUE.getTime();
