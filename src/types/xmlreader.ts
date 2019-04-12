@@ -1,14 +1,31 @@
 import { notImplemented, notSupported } from "../misc/helpers";
 
-const ErrorCodes = {
-  no_error: 0,
-  open_file: 1
-};
+enum ErrorCodes {
+  no_error = 0,
+  open_file = 1,
+  no_open_document = 2
+}
+
+enum GXNodeType {
+  element = 1,
+  endTag = 2,
+  text = 4,
+  comment = 8,
+  whiteSpace = 16,
+  cdata = 32,
+  processingInstruction = 64,
+  documentType = 128
+}
 
 export class XMLReader {
   // Internal variables
 
   private document: Document = null;
+
+  private currentNodeInfo = {
+    node: null,
+    gxType: null
+  };
 
   // Properties
 
@@ -28,16 +45,30 @@ export class XMLReader {
     return this.mErrDescription;
   }
 
-  // Opening documents
+  /**
+   * Returns the name of the current element
+   */
+  get name(): string {
+    return this.currentNodeInfo.node ? this.currentNodeInfo.node.nodeName : "";
+  }
 
   /**
-   * @param {string} file
-   * @return number
+   * Returns the value of the current element
    */
-  open(file: string): number {
-    notSupported();
-    return null;
+  get value(): string {
+    return this.isSingleElementNode(this.currentNodeInfo.node)
+      ? this.currentNodeInfo.node.textContent
+      : "";
   }
+
+  /**
+   * Returns the current node type obtained through the method Read or ReadType
+   */
+  get nodeType(): number {
+    return this.currentNodeInfo.gxType;
+  }
+
+  // Opening documents
 
   /**
    * Reads the XML document from the given string source
@@ -45,6 +76,7 @@ export class XMLReader {
    * @return number
    */
   openFromString(source: string): number {
+    this.resetDocument();
     this.resetErrors();
     const parser = new DOMParser();
     const hasError = false;
@@ -57,6 +89,42 @@ export class XMLReader {
     return 0;
   }
 
+  // Reading
+
+  /**
+   * Used to obtain the different nodes of the open file, in a sequential manner.
+   * @return {number} If a node is read, the value returned is greater than zero. Otherwise it returns zero.
+   */
+  read(): number {
+    if (!this.document) {
+      this.mErrCode = ErrorCodes.no_open_document;
+      this.mErrDescription = "No open document";
+    } else if (!this.currentNodeInfo.node) {
+      this.setCurrentNode(this.document.documentElement);
+    } else {
+      const node = this.currentNodeInfo.node;
+      const gxType = this.currentNodeInfo.gxType;
+      if (
+        gxType !== GXNodeType.endTag &&
+        node.childNodes.length > 0 &&
+        !this.isSingleElementNode(node)
+      ) {
+        this.setCurrentNode(node.firstChild);
+      } else if (node.nextSibling) {
+        this.setCurrentNode(node.nextSibling);
+      } else if (
+        node.parentNode &&
+        node.parentNode.nodeType !== 9 /* Document */
+      ) {
+        this.setCurrentNode(node.parentNode, GXNodeType.endTag);
+      } else {
+        this.setCurrentNode(null);
+      }
+    }
+
+    return this.currentNodeInfo.node ? 1 : 0;
+  }
+
   // Private methods
 
   private resetErrors() {
@@ -64,17 +132,68 @@ export class XMLReader {
     this.mErrDescription = "";
   }
 
+  private resetDocument() {
+    this.document = null;
+    this.currentNodeInfo.node = null;
+  }
+
+  private isSingleElementNode(node: Node): boolean {
+    return (
+      node &&
+      node.nodeType === 1 &&
+      node.childNodes.length === 1 &&
+      node.firstChild.childNodes.length === 0
+    );
+  }
+
+  private nodeTypeToGXNodeType(type: number): GXNodeType {
+    switch (type) {
+      case 1: // Element
+        return GXNodeType.element;
+      case 3: // Text
+        return GXNodeType.text;
+      case 4: // CDATA
+        return GXNodeType.cdata;
+      case 7: // ProcessingInstruction
+        return GXNodeType.processingInstruction;
+      case 8: // Comment
+        return GXNodeType.comment;
+      case 10: // DocumentType
+        return GXNodeType.documentType;
+      case 2: // Attr
+      case 5: // EntityReference
+      case 6: // Entity
+      case 9: // Document
+      case 11: // DocumentFragment
+      case 12: // Notation
+      default:
+        return undefined;
+    }
+  }
+
+  private setCurrentNode(node: Node, gxNodeType: GXNodeType = undefined) {
+    this.currentNodeInfo.node = node;
+    if (node) {
+      this.currentNodeInfo.gxType = gxNodeType
+        ? gxNodeType
+        : this.nodeTypeToGXNodeType(node.nodeType);
+    }
+  }
+
+  // Not (yet) supported
+
+  /**
+   * @param {string} file
+   * @return number
+   */
+  open(file: string): number {
+    notSupported();
+    return null;
+  }
+
   // ===========================
   // To check
   // ===========================
-
-  /**
-   * @return number
-   */
-  read(): number {
-    notImplemented();
-    return null;
-  }
 
   /**
    * @param request
@@ -253,39 +372,6 @@ export class XMLReader {
   addSchema(uri: any, namespace: any): any {
     notImplemented();
     return null;
-  }
-
-  /**
-   *
-   */
-  private mnodeType: number;
-  get nodeType(): number {
-    return this.mnodeType;
-  }
-  set nodeType(value: number) {
-    this.mnodeType = value;
-  }
-
-  /**
-   *
-   */
-  private mname: any;
-  get name(): any {
-    return this.mname;
-  }
-  set name(value: any) {
-    this.mname = value;
-  }
-
-  /**
-   *
-   */
-  private mvalue: any;
-  get value(): any {
-    return this.mvalue;
-  }
-  set value(value: any) {
-    this.mvalue = value;
   }
 
   /**
