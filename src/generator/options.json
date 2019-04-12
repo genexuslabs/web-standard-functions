@@ -565,6 +565,10 @@
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
           "name": "isEmpty"
+        },
+        "Year": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/year",
+          "name": "year"
         }
       }
     }
