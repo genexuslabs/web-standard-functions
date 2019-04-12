@@ -565,6 +565,10 @@
         "Month": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
           "name": "month"
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
+          "name": "isEmpty"
         }
       }
     }
