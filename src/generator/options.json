@@ -570,6 +570,9 @@
     },
     "XMLReader": {
       "path": "@genexus/web-standard-functions/dist/lib-esm/types/xmlreader"
+    },
+    "XMLWriter": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/xmlwriter"
     }
   },
   "disambiguated": {
