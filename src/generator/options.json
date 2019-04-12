@@ -557,6 +557,10 @@
         "DayOfWeekName": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName",
           "name": "dayOfWeekName"
+        },
+        "EndOfMonth": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
+          "name": "endOfMonth"
         }
       }
     }
