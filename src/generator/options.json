@@ -562,6 +562,10 @@
         "EndOfMonth": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
           "name": "endOfMonth"
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
+          "name": "isEmpty"
         }
       }
     }
