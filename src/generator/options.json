@@ -6,6 +6,9 @@
     "defaultModulesPath": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
   },
   "implemented": {
+    "Cookie": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/cookie"
+    },
     "Core": {
       "members": {
         "Asc": {
