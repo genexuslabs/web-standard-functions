@@ -562,6 +562,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
           "name": "endOfMonth"
         },
+        "Month": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
+          "name": "month"
+        },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
           "name": "isEmpty"
@@ -569,7 +573,11 @@
         "Year": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/year",
           "name": "year"
-        }
+        },
+        "MonthName": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
+          "name": "monthName"
+        }  
       }
     }
   },
