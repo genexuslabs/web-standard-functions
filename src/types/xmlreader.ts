@@ -125,6 +125,49 @@ export class XMLReader {
     return this.currentNodeInfo.node ? 1 : 0;
   }
 
+  /**
+   * Returns the value of an attribute of the current node indicated by its name
+   * @param {string} name The attribute's name
+   * @return {string} The attribute's value in the current node
+   */
+  getAttributeByName(name: string): string {
+    const atts = this.getCurrentNodeAttributesList();
+    for (const att of atts) {
+      if (att.nodeName === name) {
+        return att.nodeValue;
+      }
+    }
+    return "";
+  }
+
+  /**
+   * Returns the value of an attribute of the current node indicated by its index
+   * @param {number} index The search index
+   * @return {string} The attribute's value in the current node
+   */
+  getAttributeByIndex(index: number): string {
+    const atts = this.getCurrentNodeAttributesList();
+    if (index >= 0 && index < atts.length) {
+      return atts[index].nodeValue;
+    }
+    return "";
+  }
+
+  /**
+   * Indicates if there is an attribute with the given name in the current node
+   * @param {string} name The name of the attribute
+   * @return {number} 1 if the attribute exists, 0 otherwise
+   */
+  existsAttribute(name: any): number {
+    const atts = this.getCurrentNodeAttributesList();
+    for (const att of atts) {
+      if (att.nodeName === name) {
+        return 1;
+      }
+    }
+    return 0;
+  }
+
   // Private methods
 
   private resetErrors() {
@@ -180,6 +223,14 @@ export class XMLReader {
     }
   }
 
+  private getCurrentNodeAttributesList(): Node[] {
+    const element = this.currentNodeInfo.node as Element;
+    if (!element) {
+      return null;
+    }
+    return Array.from(element.attributes);
+  }
+
   // Not (yet) supported
 
   /**
@@ -219,33 +270,6 @@ export class XMLReader {
    * @return number
    */
   readType(nodeType: number, name: any): number {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param name
-   * @return any
-   */
-  getAttributeByName(name: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param index
-   * @return any
-   */
-  getAttributeByIndex(index: number): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param name
-   * @return number
-   */
-  existsAttribute(name: any): number {
     notImplemented();
     return null;
   }
