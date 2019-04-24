@@ -152,6 +152,28 @@ export class XMLReader {
     return ret;
   }
 
+  /**
+   * Allows skipping a full element with all its children/sons.
+   * It is valid only for nodes of the Element type.
+   * @return {number}
+   */
+  skip(): number {
+    if (this.currentNodeInfo.gxType === GXNodeType.element) {
+      const node = this.currentNodeInfo.node;
+      if (node.nextSibling) {
+        this.setCurrentNode(node.nextSibling);
+      } else if (
+        node.parentNode &&
+        node.parentNode.nodeType !== 9 /* Document */
+      ) {
+        this.setCurrentNode(node.parentNode, GXNodeType.endTag);
+      } else {
+        this.setCurrentNode(null);
+      }
+    }
+    return 0;
+  }
+
   // Attributes
 
   /**
@@ -289,14 +311,6 @@ export class XMLReader {
    * @return any
    */
   openResponse(client: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @return number
-   */
-  skip(): number {
     notImplemented();
     return null;
   }

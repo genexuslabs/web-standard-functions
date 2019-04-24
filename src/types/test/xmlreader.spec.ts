@@ -172,4 +172,22 @@ describe("XMLReader data type", () => {
     res = reader.read();
     expect(res).toBe(0);
   });
+
+  it("should skip the current node if requested to do so", () => {
+    const reader = new XMLReader();
+    reader.openFromString(
+      "<cases><test><name>Test1</name><result>Ok</result></test><test><name>Test2</name><result>Fail</result></test></cases>"
+    );
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+
+    let res = reader.readType(1, "test");
+    expect(res).not.toBe(0);
+
+    res = reader.skip();
+
+    res = reader.readType(1, "name");
+    expect(reader.name).toBe("name");
+    expect(reader.value).toBe("Test2");
+  });
 });
