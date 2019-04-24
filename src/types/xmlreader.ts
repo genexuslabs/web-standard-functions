@@ -132,12 +132,13 @@ export class XMLReader {
    * @return {number} If a node is read, the value returned is greater than zero. Otherwise it returns zero.
    */
   readType(nodeType: number, name: string = undefined): number {
-    let ret: number;
-    while ((ret = this.read()) > 0) {
+    let ret = this.read();
+    while (ret > 0) {
       const currType: number = this.currentNodeInfo.gxType;
       if ((nodeType & currType) === currType && (!name || this.name === name)) {
         break;
       }
+      ret = this.read();
     }
     return ret;
   }
