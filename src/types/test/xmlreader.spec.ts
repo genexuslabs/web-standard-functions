@@ -51,6 +51,63 @@ describe("XMLReader data type", () => {
     expect(res).toBe(0);
   });
 
+  it("should read only the required node types till the end", () => {
+    const reader = new XMLReader();
+    reader.openFromString(
+      "<cases><test>Test1</test><test>Test2</test></cases>"
+    );
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+
+    let res = 0;
+
+    res = reader.readType(1);
+    expect(res).not.toBe(0);
+    expect(reader.name).toBe("cases");
+    expect(reader.nodeType).toBe(1);
+
+    res = reader.readType(1);
+    expect(res).not.toBe(0);
+    expect(reader.name).toBe("test");
+    expect(reader.value).toBe("Test1");
+    expect(reader.nodeType).toBe(1);
+
+    res = reader.readType(1);
+    expect(res).not.toBe(0);
+    expect(reader.name).toBe("test");
+    expect(reader.value).toBe("Test2");
+    expect(reader.nodeType).toBe(1);
+
+    res = reader.readType(1);
+    expect(res).toBe(0);
+  });
+
+  it("should read only the required node types with the given name till the end", () => {
+    const reader = new XMLReader();
+    reader.openFromString(
+      "<cases><test>Test1</test><test>Test2</test></cases>"
+    );
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+
+    let res = 0;
+
+    res = reader.readType(1, "test");
+    expect(res).not.toBe(0);
+    expect(reader.name).toBe("test");
+    expect(reader.value).toBe("Test1");
+    expect(reader.nodeType).toBe(1);
+
+    res = reader.readType(1, "test");
+    expect(res).not.toBe(0);
+    expect(reader.name).toBe("test");
+    expect(reader.value).toBe("Test2");
+    expect(reader.nodeType).toBe(1);
+
+    res = reader.readType(1, "test");
+    expect(res).toBe(0);
+  });
+
   it("should get an attribute by name", () => {
     const reader = new XMLReader();
     reader.openFromString('<cases><test success="true">Test1</test></cases>');

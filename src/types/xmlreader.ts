@@ -126,6 +126,25 @@ export class XMLReader {
   }
 
   /**
+   * Moves forward to the following node, but only if constraints established are fulfilled
+   * @param {number} nodeType Node types to consider
+   * @param {string} name (Optional) Specifies the value for the name of the node to be read, as long as the node is Element or EndTag type
+   * @return {number} If a node is read, the value returned is greater than zero. Otherwise it returns zero.
+   */
+  readType(nodeType: number, name: string = undefined): number {
+    let ret: number;
+    while ((ret = this.read()) > 0) {
+      const currType: number = this.currentNodeInfo.gxType;
+      if ((nodeType & currType) === currType && (!name || this.name === name)) {
+        break;
+      }
+    }
+    return ret;
+  }
+
+  // Attributes
+
+  /**
    * Returns the value of an attribute of the current node indicated by its name
    * @param {string} name The attribute's name
    * @return {string} The attribute's value in the current node
@@ -260,16 +279,6 @@ export class XMLReader {
    * @return any
    */
   openResponse(client: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param nodeType
-   * @param name
-   * @return number
-   */
-  readType(nodeType: number, name: any): number {
     notImplemented();
     return null;
   }
