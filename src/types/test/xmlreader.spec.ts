@@ -185,8 +185,10 @@ describe("XMLReader data type", () => {
     expect(res).not.toBe(0);
 
     res = reader.skip();
+    expect(res).not.toBe(0);
 
     res = reader.readType(1, "name");
+    expect(res).not.toBe(0);
     expect(reader.name).toBe("name");
     expect(reader.value).toBe("Test2");
   });

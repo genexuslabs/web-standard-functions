@@ -171,7 +171,7 @@ export class XMLReader {
         this.setCurrentNode(null);
       }
     }
-    return 0;
+    return this.currentNodeInfo.node ? 1 : 0;
   }
 
   // Attributes
