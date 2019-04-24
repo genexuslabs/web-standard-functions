@@ -192,4 +192,26 @@ describe("XMLReader data type", () => {
     expect(reader.name).toBe("name");
     expect(reader.value).toBe("Test2");
   });
+
+  it("should read raw XML", () => {
+    const reader = new XMLReader();
+    reader.openFromString(
+      "<cases><test><name>Test1</name><result>Ok</result></test><test><name>Test2</name><result>Fail</result></test></cases>"
+    );
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+
+    let res = reader.readType(1, "test");
+    expect(res).not.toBe(0);
+
+    let xmlString = reader.readRawXML();
+    expect(xmlString).toBe(
+      "<test><name>Test1</name><result>Ok</result></test>"
+    );
+
+    xmlString = reader.readRawXML();
+    expect(xmlString).toBe(
+      "<test><name>Test2</name><result>Fail</result></test>"
+    );
+  });
 });

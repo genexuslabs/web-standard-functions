@@ -153,6 +153,19 @@ export class XMLReader {
   }
 
   /**
+   * Allows obtaining flat XML text from the start of an element.
+   * @return {string} The XML corresponding to the current node
+   */
+  readRawXML(): string {
+    let xml = "";
+    if (this.currentNodeInfo.gxType === GXNodeType.element) {
+      xml = this.currentNodeInfo.node.outerHTML;
+      this.skip();
+    }
+    return xml;
+  }
+
+  /**
    * Allows skipping a full element with all its children/sons.
    * It is valid only for nodes of the Element type.
    * @return {number}
@@ -311,14 +324,6 @@ export class XMLReader {
    * @return any
    */
   openResponse(client: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @return any
-   */
-  readRawXML(): any {
     notImplemented();
     return null;
   }
