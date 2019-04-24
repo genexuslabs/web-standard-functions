@@ -89,6 +89,15 @@ export class XMLReader {
     return 0;
   }
 
+  /**
+   * Closes the current reading session
+   * @return {number}
+   */
+  close(): number {
+    this.resetDocument();
+    return 0;
+  }
+
   // Reading
 
   /**
@@ -280,14 +289,6 @@ export class XMLReader {
    * @return any
    */
   openResponse(client: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @return any
-   */
-  close(): any {
     notImplemented();
     return null;
   }

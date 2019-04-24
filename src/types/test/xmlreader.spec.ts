@@ -159,4 +159,17 @@ describe("XMLReader data type", () => {
     let attValue = reader.getAttributeByName("success");
     expect(attValue).toBe("");
   });
+
+  it("should no longer read after a close", () => {
+    const reader = new XMLReader();
+    reader.openFromString("<cases><test>Test1</test></cases>");
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+
+    let res = reader.close();
+    expect(res).toBe(0);
+
+    res = reader.read();
+    expect(res).toBe(0);
+  });
 });
