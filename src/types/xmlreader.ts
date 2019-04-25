@@ -505,9 +505,6 @@ export class XMLReader {
   get errLineNumber(): number {
     return this.merrLineNumber;
   }
-  set errLineNumber(value: number) {
-    this.merrLineNumber = value;
-  }
 
   /**
    *
@@ -515,9 +512,6 @@ export class XMLReader {
   private merrLinePos: number;
   get errLinePos(): number {
     return this.merrLinePos;
-  }
-  set errLinePos(value: number) {
-    this.merrLinePos = value;
   }
 
   /**
@@ -527,9 +521,6 @@ export class XMLReader {
   get prefix(): any {
     return this.mprefix;
   }
-  set prefix(value: any) {
-    this.mprefix = value;
-  }
 
   /**
    *
@@ -537,9 +528,6 @@ export class XMLReader {
   private mlocalName: any;
   get localName(): any {
     return this.mlocalName;
-  }
-  set localName(value: any) {
-    this.mlocalName = value;
   }
 
   /**
@@ -549,9 +537,6 @@ export class XMLReader {
   get nameSpaceURI(): any {
     return this.mnameSpaceURI;
   }
-  set nameSpaceURI(value: any) {
-    this.mnameSpaceURI = value;
-  }
 
   /**
    *
@@ -559,9 +544,6 @@ export class XMLReader {
   private melementType: number;
   get elementType(): number {
     return this.melementType;
-  }
-  set elementType(value: number) {
-    this.melementType = value;
   }
 
   /**
@@ -571,9 +553,6 @@ export class XMLReader {
   get endTagType(): number {
     return this.mendTagType;
   }
-  set endTagType(value: number) {
-    this.mendTagType = value;
-  }
 
   /**
    *
@@ -581,9 +560,6 @@ export class XMLReader {
   private mtextType: number;
   get textType(): number {
     return this.mtextType;
-  }
-  set textType(value: number) {
-    this.mtextType = value;
   }
 
   /**
@@ -593,9 +569,6 @@ export class XMLReader {
   get commentType(): number {
     return this.mcommentType;
   }
-  set commentType(value: number) {
-    this.mcommentType = value;
-  }
 
   /**
    *
@@ -603,9 +576,6 @@ export class XMLReader {
   private mwhiteSpaceType: number;
   get whiteSpaceType(): number {
     return this.mwhiteSpaceType;
-  }
-  set whiteSpaceType(value: number) {
-    this.mwhiteSpaceType = value;
   }
 
   /**
@@ -615,9 +585,6 @@ export class XMLReader {
   get cDataType(): number {
     return this.mcDataType;
   }
-  set cDataType(value: number) {
-    this.mcDataType = value;
-  }
 
   /**
    *
@@ -626,9 +593,6 @@ export class XMLReader {
   get processingInstructionType(): number {
     return this.mprocessingInstructionType;
   }
-  set processingInstructionType(value: number) {
-    this.mprocessingInstructionType = value;
-  }
 
   /**
    *
@@ -636,9 +600,6 @@ export class XMLReader {
   private mdoctypeType: number;
   get doctypeType(): number {
     return this.mdoctypeType;
-  }
-  set doctypeType(value: number) {
-    this.mdoctypeType = value;
   }
 
   /**
