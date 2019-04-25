@@ -232,6 +232,51 @@ export class XMLReader {
     return 0;
   }
 
+  /**
+   * Returns the full name, including the namespace if it exists
+   * @param {number} index
+   * @return string
+   */
+  getAttributeName(index: number): string {
+    const atts = this.getCurrentNodeAttributesList();
+    if (index >= 0 && index < atts.length) {
+      return atts[index].nodeName;
+    }
+    return "";
+  }
+
+  /**
+   * Returns the attribute's the namespace if it exists
+   * @param {number} index
+   * @return string
+   */
+  getAttributePrefix(index: number): string {
+    const attName = this.getAttributeName(index);
+    let prefix = "";
+    if (attName !== "") {
+      const components = attName.split(":");
+      if (components.length === 2) {
+        prefix = components[0];
+      }
+    }
+    return prefix;
+  }
+
+  /**
+   * Returns the name of the attribute, excluding the namespace if it exists
+   * @param {number} index
+   * @return string
+   */
+  getAttributeLocalName(index: number): string {
+    const attName = this.getAttributeName(index);
+    let localName = "";
+    if (attName !== "") {
+      const components = attName.split(":");
+      localName = components.length === 2 ? components[1] : attName;
+    }
+    return localName;
+  }
+
   // Private methods
 
   private resetErrors() {
@@ -329,37 +374,11 @@ export class XMLReader {
   }
 
   /**
-   * @param index
-   * @return any
+   * Returns the URI of the namespace if it exists
+   * @param {number} index
+   * @return string
    */
-  getAttributeName(index: number): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param index
-   * @return any
-   */
-  getAttributePrefix(index: number): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param index
-   * @return any
-   */
-  getAttributeLocalName(index: number): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param index
-   * @return any
-   */
-  getAttributeURI(index: number): any {
+  getAttributeURI(index: number): string {
     notImplemented();
     return null;
   }
