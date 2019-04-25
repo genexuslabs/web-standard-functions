@@ -214,4 +214,37 @@ describe("XMLReader data type", () => {
       "<test><name>Test2</name><result>Fail</result></test>"
     );
   });
+
+  it("should count the number of attributes in the current node", () => {
+    const reader = new XMLReader();
+    reader.openFromString('<cases><test success="true">Test1</test></cases>');
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+
+    let res = 0;
+    res = reader.read(); // cases
+    expect(res).not.toBe(0);
+    expect(reader.attributeCount).toBe(0);
+
+    res = reader.read(); // test
+    expect(res).not.toBe(0);
+    expect(reader.attributeCount).toBe(1);
+  });
+
+  it("should return the correct value for the EOF propertuy", () => {
+    const reader = new XMLReader();
+    reader.openFromString('<cases><test success="true">Test1</test></cases>');
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+    expect(reader.eOF).toBe(0);
+
+    reader.read(); // cases
+    expect(reader.eOF).toBe(0);
+
+    reader.read(); // test
+    expect(reader.eOF).toBe(0);
+
+    reader.read(); // end cases
+    expect(reader.eOF).toBe(1);
+  });
 });

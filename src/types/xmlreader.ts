@@ -40,8 +40,8 @@ export class XMLReader {
   /**
    * Returns the error description for the last operation.
    */
-  private mErrDescription: any;
-  get errDescription(): any {
+  private mErrDescription: string;
+  get errDescription(): string {
     return this.mErrDescription;
   }
 
@@ -68,6 +68,14 @@ export class XMLReader {
     return this.currentNodeInfo.gxType;
   }
 
+  /**
+   * Indicates whether the end of the document was reached
+   */
+  private mEOF: boolean;
+  get eOF(): number {
+    return this.mEOF ? 1 : 0;
+  }
+
   // Opening documents
 
   /**
@@ -86,6 +94,7 @@ export class XMLReader {
       this.mErrDescription = doc.documentElement.innerText;
     }
     this.document = hasError ? null : doc;
+    this.mEOF = hasError;
     return 0;
   }
 
@@ -109,7 +118,9 @@ export class XMLReader {
       this.mErrCode = ErrorCodes.no_open_document;
       this.mErrDescription = "No open document";
     } else if (!this.currentNodeInfo.node) {
-      this.setCurrentNode(this.document.documentElement);
+      if (!this.eOF) {
+        this.setCurrentNode(this.document.documentElement);
+      }
     } else {
       const node = this.currentNodeInfo.node;
       const gxType = this.currentNodeInfo.gxType;
@@ -188,6 +199,14 @@ export class XMLReader {
   }
 
   // Attributes
+
+  /**
+   * Returns the number of attributes in the current node, obtained through the Read or ReadType methods
+   */
+  get attributeCount(): number {
+    const atts = this.getCurrentNodeAttributesList();
+    return atts.length;
+  }
 
   /**
    * Returns the value of an attribute of the current node indicated by its name
@@ -287,6 +306,8 @@ export class XMLReader {
   private resetDocument() {
     this.document = null;
     this.currentNodeInfo.node = null;
+    this.currentNodeInfo.gxType = null;
+    this.mEOF = true;
   }
 
   private isSingleElementNode(node: Node): boolean {
@@ -329,7 +350,10 @@ export class XMLReader {
       this.currentNodeInfo.gxType = gxNodeType
         ? gxNodeType
         : this.nodeTypeToGXNodeType(node.nodeType);
+    } else {
+      this.currentNodeInfo.gxType = null;
     }
+    this.setEOFForCurrentNode();
   }
 
   private getCurrentNodeAttributesList(): Node[] {
@@ -338,6 +362,26 @@ export class XMLReader {
       return null;
     }
     return Array.from(element.attributes);
+  }
+
+  setEOFForCurrentNode() {
+    const node = this.currentNodeInfo.node;
+    if (node === null) {
+      this.mEOF = true;
+    } else {
+      const gxType = this.currentNodeInfo.gxType;
+      if (
+        (gxType !== GXNodeType.endTag &&
+          node.childNodes.length > 0 &&
+          !this.isSingleElementNode(node)) ||
+        node.nextSibling ||
+        (node.parentNode && node.parentNode.nodeType !== 9) /* Document */
+      ) {
+        this.mEOF = false;
+      } else {
+        this.mEOF = true;
+      }
+    }
   }
 
   // Not (yet) supported
@@ -450,17 +494,6 @@ export class XMLReader {
   /**
    *
    */
-  private mattributeCount: number;
-  get attributeCount(): number {
-    return this.mattributeCount;
-  }
-  set attributeCount(value: number) {
-    this.mattributeCount = value;
-  }
-
-  /**
-   *
-   */
   private merrLineNumber: number;
   get errLineNumber(): number {
     return this.merrLineNumber;
@@ -478,17 +511,6 @@ export class XMLReader {
   }
   set errLinePos(value: number) {
     this.merrLinePos = value;
-  }
-
-  /**
-   *
-   */
-  private meOF: number;
-  get eOF(): number {
-    return this.meOF;
-  }
-  set eOF(value: number) {
-    this.meOF = value;
   }
 
   /**
