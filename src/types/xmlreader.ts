@@ -83,6 +83,32 @@ export class XMLReader {
     return this.isSingleElementNode(this.currentNodeInfo.node) ? 1 : 0;
   }
 
+  /**
+   * Returns the element's the namespace if it exists
+   */
+  get prefix(): string {
+    let prefix = "";
+    let components = this.name.split(":");
+    if (components.length === 2) {
+      prefix = components[0];
+    }
+    return prefix;
+  }
+
+  /**
+   * Returns the name that represents the namespace, without indicating the prefix
+   */
+  get localName(): string {
+    let localName = "";
+    let components = this.name.split(":");
+    if (components.length === 2) {
+      localName = components[1];
+    } else {
+      localName = components[0];
+    }
+    return localName;
+  }
+
   // Opening documents
 
   /**
@@ -512,22 +538,6 @@ export class XMLReader {
   private merrLinePos: number;
   get errLinePos(): number {
     return this.merrLinePos;
-  }
-
-  /**
-   *
-   */
-  private mprefix: any;
-  get prefix(): any {
-    return this.mprefix;
-  }
-
-  /**
-   *
-   */
-  private mlocalName: any;
-  get localName(): any {
-    return this.mlocalName;
   }
 
   /**
