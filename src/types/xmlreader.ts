@@ -109,6 +109,64 @@ export class XMLReader {
     return localName;
   }
 
+  // Properties for node type constants
+
+  /**
+   *
+   */
+  get elementType(): number {
+    return GXNodeType.element;
+  }
+
+  /**
+   *
+   */
+  get endTagType(): number {
+    return GXNodeType.endTag;
+  }
+
+  /**
+   *
+   */
+  get textType(): number {
+    return GXNodeType.text;
+  }
+
+  /**
+   *
+   */
+  get commentType(): number {
+    return GXNodeType.comment;
+  }
+
+  /**
+   *
+   */
+  get whiteSpaceType(): number {
+    return GXNodeType.whiteSpace;
+  }
+
+  /**
+   *
+   */
+  get cDataType(): number {
+    return GXNodeType.cdata;
+  }
+
+  /**
+   *
+   */
+  get processingInstructionType(): number {
+    return GXNodeType.processingInstruction;
+  }
+
+  /**
+   *
+   */
+  get doctypeType(): number {
+    return GXNodeType.documentType;
+  }
+
   // Opening documents
 
   /**
@@ -546,70 +604,6 @@ export class XMLReader {
   private mnameSpaceURI: any;
   get nameSpaceURI(): any {
     return this.mnameSpaceURI;
-  }
-
-  /**
-   *
-   */
-  private melementType: number;
-  get elementType(): number {
-    return this.melementType;
-  }
-
-  /**
-   *
-   */
-  private mendTagType: number;
-  get endTagType(): number {
-    return this.mendTagType;
-  }
-
-  /**
-   *
-   */
-  private mtextType: number;
-  get textType(): number {
-    return this.mtextType;
-  }
-
-  /**
-   *
-   */
-  private mcommentType: number;
-  get commentType(): number {
-    return this.mcommentType;
-  }
-
-  /**
-   *
-   */
-  private mwhiteSpaceType: number;
-  get whiteSpaceType(): number {
-    return this.mwhiteSpaceType;
-  }
-
-  /**
-   *
-   */
-  private mcDataType: number;
-  get cDataType(): number {
-    return this.mcDataType;
-  }
-
-  /**
-   *
-   */
-  private mprocessingInstructionType: number;
-  get processingInstructionType(): number {
-    return this.mprocessingInstructionType;
-  }
-
-  /**
-   *
-   */
-  private mdoctypeType: number;
-  get doctypeType(): number {
-    return this.mdoctypeType;
   }
 
   /**
