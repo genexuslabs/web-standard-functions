@@ -76,6 +76,13 @@ export class XMLReader {
     return this.mEOF ? 1 : 0;
   }
 
+  /**
+   * Indicates whether the current node obtained through the Read or ReadType method is simple
+   */
+  get isSimple(): number {
+    return this.isSingleElementNode(this.currentNodeInfo.node) ? 1 : 0;
+  }
+
   // Opening documents
 
   /**
@@ -511,17 +518,6 @@ export class XMLReader {
   }
   set errLinePos(value: number) {
     this.merrLinePos = value;
-  }
-
-  /**
-   *
-   */
-  private misSimple: number;
-  get isSimple(): number {
-    return this.misSimple;
-  }
-  set isSimple(value: number) {
-    this.misSimple = value;
   }
 
   /**

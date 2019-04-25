@@ -247,4 +247,17 @@ describe("XMLReader data type", () => {
     reader.read(); // end cases
     expect(reader.eOF).toBe(1);
   });
+
+  it("should return the correct value for the IsSimple property", () => {
+    const reader = new XMLReader();
+    reader.openFromString('<cases><test success="true">Test1</test></cases>');
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+
+    reader.read(); // cases
+    expect(reader.isSimple).toBe(0);
+
+    reader.read(); // test
+    expect(reader.isSimple).toBe(1);
+  });
 });
