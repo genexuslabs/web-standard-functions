@@ -260,4 +260,31 @@ describe("XMLReader data type", () => {
     reader.read(); // test
     expect(reader.isSimple).toBe(1);
   });
+
+  it("should read text elements if SimpleElements is false", () => {
+    const reader = new XMLReader();
+    reader.simpleElements = 0;
+    reader.openFromString('<cases><test success="true">Test1</test></cases>');
+    expect(reader.errCode).toBe(0);
+    expect(reader.errDescription).toBe("");
+
+    reader.read(); // cases
+    expect(reader.name).toBe("cases");
+    expect(reader.nodeType).toBe(1);
+
+    reader.read(); // test
+    expect(reader.name).toBe("test");
+    expect(reader.nodeType).toBe(1);
+
+    reader.read(); // text: Test1
+    expect(reader.nodeType).toBe(4);
+
+    reader.read(); // end test
+    expect(reader.name).toBe("test");
+    expect(reader.nodeType).toBe(2);
+
+    reader.read(); // end cases
+    expect(reader.name).toBe("cases");
+    expect(reader.nodeType).toBe(2);
+  });
 });

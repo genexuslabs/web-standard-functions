@@ -109,6 +109,17 @@ export class XMLReader {
     return localName;
   }
 
+  /**
+   *
+   */
+  private mSimpleElements: number = 1;
+  get simpleElements(): number {
+    return this.mSimpleElements;
+  }
+  set simpleElements(value: number) {
+    this.mSimpleElements = value;
+  }
+
   // Properties for node type constants
 
   /**
@@ -218,7 +229,7 @@ export class XMLReader {
       if (
         gxType !== GXNodeType.endTag &&
         node.childNodes.length > 0 &&
-        !this.isSingleElementNode(node)
+        (!this.isSingleElementNode(node) || !this.simpleElements)
       ) {
         this.setCurrentNode(node.firstChild);
       } else if (node.nextSibling) {
@@ -462,9 +473,7 @@ export class XMLReader {
     } else {
       const gxType = this.currentNodeInfo.gxType;
       if (
-        (gxType !== GXNodeType.endTag &&
-          node.childNodes.length > 0 &&
-          !this.isSingleElementNode(node)) ||
+        (gxType !== GXNodeType.endTag && node.childNodes.length > 0) ||
         node.nextSibling ||
         (node.parentNode && node.parentNode.nodeType !== 9) /* Document */
       ) {
@@ -637,17 +646,6 @@ export class XMLReader {
   }
   set removeWhiteNodes(value: number) {
     this.mremoveWhiteNodes = value;
-  }
-
-  /**
-   *
-   */
-  private msimpleElements: number;
-  get simpleElements(): number {
-    return this.msimpleElements;
-  }
-  set simpleElements(value: number) {
-    this.msimpleElements = value;
   }
 
   /**
