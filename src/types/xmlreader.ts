@@ -1,10 +1,5 @@
 import { notImplemented, notSupported } from "../misc/helpers";
-
-enum ErrorCodes {
-  no_error = 0,
-  open_file = 1,
-  no_open_document = 2
-}
+import { XMLErrorCodes as ErrorCodes } from "./xmlcommon";
 
 enum GXNodeType {
   element = 1,

@@ -1,32 +1,102 @@
-function notImplemented() {
-  console.log("Not yet implemented");
-}
+import { notImplemented, notSupported } from "../misc/helpers";
+import { XMLErrorCodes as ErrorCodes } from "./xmlcommon";
 
 export class XMLWriter {
+  // Internal variables
+
+  private document: Document = null;
+
+  private currentElement: Element = null;
+
+  // Properties
+
   /**
-   * @param file
-   * @return any
+   * Returns the error code for the last operation.
    */
-  open(file: any): any {
-    notImplemented();
-    return null;
+  private mErrCode: number;
+  get errCode(): number {
+    return this.mErrCode;
   }
 
   /**
-   * @return any
+   * Returns the error description for the last operation.
+   */
+  private mErrDescription: string;
+  get errDescription(): string {
+    return this.mErrDescription;
+  }
+
+  /**
+   * Allows to inquire the value of the XML document that is in the internal buffer
+   * when the document was created with the OpenToString() method
+   */
+  get resultingString(): string {
+    console.log(this.document);
+    console.log(this.document.firstElementChild);
+    return this.document.firstElementChild.outerHTML;
+  }
+
+  // Opening documents
+
+  /**
+   * Allows the creation of an XML document by an internal buffer instead of a file
+   * @return {number}
    */
   openToString(): any {
-    notImplemented();
-    return null;
+    this.document = document.implementation.createDocument("", "", null);
+    this.resetErrors();
+    return 0;
   }
 
   /**
-   * @return any
+   * Closes the current writing session
+   * @return {number}
    */
-  close(): any {
-    notImplemented();
+  close(): number {
+    this.document = null;
+    this.currentElement = null;
+    return 0;
+  }
+
+  // Writing
+
+  /**
+   * Writes an element with the indicated value
+   * @param {string} name Element's name
+   * @param {string} value Element's value
+   * @return {number}
+   */
+  writeElement(name: string, value: string): number {
+    if (this.document) {
+      let elem = this.document.createElement(name);
+      let text = this.document.createTextNode(value);
+      elem.appendChild(text);
+      this.document.appendChild(elem);
+    }
+    return 0;
+  }
+
+  // Private methods
+
+  private resetErrors() {
+    this.mErrCode = ErrorCodes.no_error;
+    this.mErrDescription = "";
+  }
+
+  // Not (yet) supported
+
+  /**
+   * @param {string} file
+   * @return number
+   */
+  open(file: string): number {
+    notSupported();
     return null;
   }
+
+  // ===========================
+  // To check
+  // ===========================
 
   /**
    * @param client
@@ -42,16 +112,6 @@ export class XMLWriter {
    * @return any
    */
   openResponse(response: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param name
-   * @param value
-   * @return any
-   */
-  writeElement(name: any, value: any): any {
     notImplemented();
     return null;
   }
@@ -223,38 +283,5 @@ export class XMLWriter {
   }
   set indentChar(value: any) {
     this.mindentChar = value;
-  }
-
-  /**
-   *
-   */
-  private merrCode: number;
-  get errCode(): number {
-    return this.merrCode;
-  }
-  set errCode(value: number) {
-    this.merrCode = value;
-  }
-
-  /**
-   *
-   */
-  private merrDescription: any;
-  get errDescription(): any {
-    return this.merrDescription;
-  }
-  set errDescription(value: any) {
-    this.merrDescription = value;
-  }
-
-  /**
-   *
-   */
-  private mresultingString: any;
-  get resultingString(): any {
-    return this.mresultingString;
-  }
-  set resultingString(value: any) {
-    this.mresultingString = value;
   }
 }
