@@ -1,5 +1,5 @@
 import { notImplemented, notSupported } from "../misc/helpers";
-import { XMLErrorCodes as ErrorCodes } from "./xmlcommon";
+import { XMLBase, XMLErrorCodes as ErrorCodes } from "./xmlcommon";
 
 enum GXNodeType {
   element = 1,
@@ -12,7 +12,7 @@ enum GXNodeType {
   documentType = 128
 }
 
-export class XMLReader {
+export class XMLReader extends XMLBase {
   // Internal variables
 
   private document: Document = null;
@@ -23,22 +23,6 @@ export class XMLReader {
   };
 
   // Properties
-
-  /**
-   * Returns the error code for the last operation.
-   */
-  private mErrCode: number;
-  get errCode(): number {
-    return this.mErrCode;
-  }
-
-  /**
-   * Returns the error description for the last operation.
-   */
-  private mErrDescription: string;
-  get errDescription(): string {
-    return this.mErrDescription;
-  }
 
   /**
    * Returns the name of the current element

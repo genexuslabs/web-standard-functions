@@ -1,7 +1,7 @@
 import { notImplemented, notSupported } from "../misc/helpers";
-import { XMLErrorCodes as ErrorCodes } from "./xmlcommon";
+import { XMLBase, XMLErrorCodes as ErrorCodes } from "./xmlcommon";
 
-export class XMLWriter {
+export class XMLWriter extends XMLBase {
   // Internal variables
 
   private document: Document = null;
@@ -9,22 +9,6 @@ export class XMLWriter {
   private currentElement: Element = null;
 
   // Properties
-
-  /**
-   * Returns the error code for the last operation.
-   */
-  private mErrCode: number;
-  get errCode(): number {
-    return this.mErrCode;
-  }
-
-  /**
-   * Returns the error description for the last operation.
-   */
-  private mErrDescription: string;
-  get errDescription(): string {
-    return this.mErrDescription;
-  }
 
   /**
    * Allows to inquire the value of the XML document that is in the internal buffer
