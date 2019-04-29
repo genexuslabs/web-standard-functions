@@ -15,8 +15,6 @@ export class XMLWriter extends XMLBase {
    * when the document was created with the OpenToString() method
    */
   get resultingString(): string {
-    console.log(this.document);
-    console.log(this.document.firstElementChild);
     return this.document.firstElementChild.outerHTML;
   }
 
