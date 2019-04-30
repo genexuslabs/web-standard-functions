@@ -577,7 +577,7 @@
         "MonthName": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
           "name": "monthName"
-        }  ,
+        },
         "ToDate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
           "name": "toDate"
@@ -593,11 +593,31 @@
         "New": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
           "name": "newInstance"
-        } ,
+        },
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
           "name": "toString"
-        }  
+        }
+      }
+    },
+    "GeneXus.Client.ClientStorage": {
+      "members": {
+        "Set": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-storage/set",
+          "name": "set"
+        },
+        "Get": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-storage/get",
+          "name": "get"
+        },
+        "Remove": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-storage/remove",
+          "name": "remove"
+        },
+        "Clear": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-storage/clear",
+          "name": "clear"
+        }
       }
     }
   },
@@ -610,9 +630,6 @@
       "Delete": "textSearchdelete",
       "Find": "textSearchfind",
       "Update": "textSearchupdate"
-    },
-    "GeneXus.Client.ClientStorage": {
-      "Set": "setValue"
     },
     "GeneXus.Common.Analytics": {
       "SetUserId": "setAnalyticsUserId"
