@@ -50,4 +50,24 @@ describe("XMLReader data type", () => {
     expect(writer.resultingString).toBe('<test testId="1">Test1</test>');
     writer.close();
   });
+
+  it("should fail adding an invalid XML using WriteRawText", () => {
+    let writer = new XMLWriter();
+    writer.openToString();
+    expect(writer.errCode).toBe(0);
+    expect(writer.errDescription).toBe("");
+    writer.writeRawText('<test testId="1">Test1');
+    expect(writer.errCode).not.toBe(0);
+    expect(writer.errDescription).not.toBe("");
+  });
+
+  it("should add a valid XML using WriteRawText", () => {
+    let writer = new XMLWriter();
+    writer.openToString();
+    expect(writer.errCode).toBe(0);
+    expect(writer.errDescription).toBe("");
+    writer.writeRawText('<test testId="1">Test1</test>');
+    expect(writer.errCode).toBe(0);
+    expect(writer.resultingString).toBe('<test testId="1">Test1</test>');
+  });
 });

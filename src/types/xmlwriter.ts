@@ -156,6 +156,31 @@ export class XMLWriter extends XMLBase {
     return this.errCode;
   }
 
+  /**
+   * Generates any text without replacing special characters with character sequences
+   * @param {string} text Text to append
+   * @return {number}
+   */
+  writeRawText(text: any): any {
+    if (this.errCode === 0) {
+      let elem = this.elemStack.top() || this.document;
+      if (elem) {
+        let xml = new DOMParser().parseFromString(text, "application/xml");
+        if (xml.documentElement.nodeName === "parsererror") {
+          console.log(xml);
+          this.mErrCode = ErrorCodes.unknown_error;
+          this.mErrDescription = xml.documentElement.firstChild.nodeValue;
+        } else {
+          elem.appendChild(xml.documentElement);
+        }
+      } else {
+        this.mErrCode = ErrorCodes.missing_start_element;
+        this.mErrDescription = "Missing start element";
+      }
+    }
+    return this.errCode;
+  }
+
   // Private methods
 
   private resetErrors() {
@@ -192,15 +217,6 @@ export class XMLWriter extends XMLBase {
    * @return any
    */
   openResponse(response: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param text
-   * @return any
-   */
-  writeRawText(text: any): any {
     notImplemented();
     return null;
   }
