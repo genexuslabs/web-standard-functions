@@ -70,4 +70,17 @@ describe("XMLReader data type", () => {
     expect(writer.errCode).toBe(0);
     expect(writer.resultingString).toBe('<test testId="1">Test1</test>');
   });
+
+  it("should add a comment", () => {
+    let writer = new XMLWriter();
+    writer.openToString();
+    expect(writer.errCode).toBe(0);
+    expect(writer.errDescription).toBe("");
+    writer.writeStartElement("test");
+    writer.writeComment("comment");
+    writer.writeText("Test1");
+    writer.writeEndElement();
+    expect(writer.errCode).toBe(0);
+    expect(writer.resultingString).toBe("<test><!--comment-->Test1</test>");
+  });
 });

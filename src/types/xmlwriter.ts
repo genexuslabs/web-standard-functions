@@ -161,18 +161,36 @@ export class XMLWriter extends XMLBase {
    * @param {string} text Text to append
    * @return {number}
    */
-  writeRawText(text: any): any {
+  writeRawText(text: string): number {
     if (this.errCode === 0) {
       let elem = this.elemStack.top() || this.document;
       if (elem) {
         let xml = new DOMParser().parseFromString(text, "application/xml");
         if (xml.documentElement.nodeName === "parsererror") {
-          console.log(xml);
           this.mErrCode = ErrorCodes.unknown_error;
           this.mErrDescription = xml.documentElement.firstChild.nodeValue;
         } else {
           elem.appendChild(xml.documentElement);
         }
+      } else {
+        this.mErrCode = ErrorCodes.missing_start_element;
+        this.mErrDescription = "Missing start element";
+      }
+    }
+    return this.errCode;
+  }
+
+  /**
+   * Writes the comment indicated
+   * @param {string} comment
+   * @return {number}
+   */
+  writeComment(comment: string): number {
+    if (this.errCode === 0) {
+      let elem = this.elemStack.top() || this.document;
+      if (elem) {
+        let xml = this.document.createComment(comment);
+        elem.appendChild(xml);
       } else {
         this.mErrCode = ErrorCodes.missing_start_element;
         this.mErrDescription = "Missing start element";
@@ -217,15 +235,6 @@ export class XMLWriter extends XMLBase {
    * @return any
    */
   openResponse(response: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param comment
-   * @return any
-   */
-  writeComment(comment: any): any {
     notImplemented();
     return null;
   }
