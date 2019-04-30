@@ -39,13 +39,13 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/web/getCookie",
           "name": "getCookie"
         },
-        "Iif": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
-          "name": "iif"
-        },
         "HTMLClean": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/htmlClean",
           "name": "htmlClean"
+        },
+        "Iif": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
+          "name": "iif"
         },
         "Int": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
@@ -566,41 +566,41 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
           "name": "endOfMonth"
         },
-        "Month": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
-          "name": "month"
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "name": "fromString"
         },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
           "name": "isEmpty"
         },
-        "Year": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/year",
-          "name": "year"
+        "Month": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
+          "name": "month"
         },
         "MonthName": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
           "name": "monthName"
         },
-        "ToDate": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
-          "name": "toDate"
-        },
-        "FromString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
-          "name": "fromString"
+        "New": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
+          "name": "newInstance"
         },
         "Set": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/set",
           "name": "set"
         },
-        "New": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
-          "name": "newInstance"
+        "ToDate": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
+          "name": "toDate"
         },
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
           "name": "toString"
+        },
+        "Year": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/year",
+          "name": "year"
         }
       }
     }
