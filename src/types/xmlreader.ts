@@ -445,7 +445,7 @@ export class XMLReader extends XMLBase {
     return Array.from(element.attributes);
   }
 
-  setEOFForCurrentNode() {
+  private setEOFForCurrentNode() {
     const node = this.currentNodeInfo.node;
     if (node === null) {
       this.mEOF = true;
