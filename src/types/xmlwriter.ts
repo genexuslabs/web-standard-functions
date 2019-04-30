@@ -150,17 +150,9 @@ export class XMLWriter extends XMLBase {
    * @return {number}
    */
   writeText(text: string): number {
-    if (this.errCode === 0) {
-      let elem = this.elemStack.top();
-      if (elem) {
-        let textElem = this.document.createTextNode(text);
-        elem.appendChild(textElem);
-      } else {
-        this.mErrCode = ErrorCodes.missing_start_element;
-        this.mErrDescription = "Missing start element";
-      }
-    }
-    return this.errCode;
+    return this.appendNodeToCurrentElement(false, () => {
+      return this.document.createTextNode(text);
+    });
   }
 
   /**
@@ -188,22 +180,16 @@ export class XMLWriter extends XMLBase {
    * @return {number}
    */
   writeRawText(text: string): number {
-    if (this.errCode === 0) {
-      let elem = this.elemStack.top() || this.document;
-      if (elem) {
-        let xml = new DOMParser().parseFromString(text, "application/xml");
-        if (xml.documentElement.nodeName === "parsererror") {
-          this.mErrCode = ErrorCodes.unknown_error;
-          this.mErrDescription = xml.documentElement.firstChild.nodeValue;
-        } else {
-          elem.appendChild(xml.documentElement);
-        }
+    return this.appendNodeToCurrentElement(true, () => {
+      let xml = new DOMParser().parseFromString(text, "application/xml");
+      if (xml.documentElement.nodeName === "parsererror") {
+        this.mErrCode = ErrorCodes.unknown_error;
+        this.mErrDescription = xml.documentElement.firstChild.nodeValue;
+        return null;
       } else {
-        this.mErrCode = ErrorCodes.missing_start_element;
-        this.mErrDescription = "Missing start element";
+        return xml.documentElement;
       }
-    }
-    return this.errCode;
+    });
   }
 
   /**
@@ -212,11 +198,25 @@ export class XMLWriter extends XMLBase {
    * @return {number}
    */
   writeComment(comment: string): number {
+    return this.appendNodeToCurrentElement(true, () => {
+      return this.document.createComment(comment);
+    });
+  }
+
+  // Private methods
+
+  private appendNodeToCurrentElement(
+    allowAppendToDocument: boolean,
+    nodeCreation: () => Node
+  ): number {
     if (this.errCode === 0) {
-      let elem = this.elemStack.top() || this.document;
+      let elem =
+        this.elemStack.top() || (allowAppendToDocument ? this.document : null);
       if (elem) {
-        let xml = this.document.createComment(comment);
-        elem.appendChild(xml);
+        let xml = nodeCreation();
+        if (xml) {
+          elem.appendChild(xml);
+        }
       } else {
         this.mErrCode = ErrorCodes.missing_start_element;
         this.mErrDescription = "Missing start element";
@@ -224,8 +224,6 @@ export class XMLWriter extends XMLBase {
     }
     return this.errCode;
   }
-
-  // Private methods
 
   private resetErrors() {
     this.mErrCode = ErrorCodes.no_error;
