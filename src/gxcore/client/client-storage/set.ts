@@ -6,7 +6,7 @@ import { prefixKey, storage } from "./common";
  * @param {string} key
  * @param {string} value
  */
-export function setValue(key: string, value: string) {
+export function set(key: string, value: string) {
   let pKey = prefixKey(key);
   storage.setItem(pKey, value);
 }

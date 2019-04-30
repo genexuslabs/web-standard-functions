@@ -5,7 +5,7 @@ import { prefixKey, storage } from "./common";
  * @param {string} key
  * @return {string}
  */
-export function getValue(key: string): string {
+export function get(key: string): string {
   let pKey = prefixKey(key);
   let value = storage.getItem(pKey);
   return value || "";
