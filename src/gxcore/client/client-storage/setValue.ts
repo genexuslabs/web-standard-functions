@@ -1,4 +1,4 @@
-import { prefixKey } from "./common";
+import { prefixKey, storage } from "./common";
 
 /**
  * Saves the received value associated with the specified key.
@@ -8,5 +8,5 @@ import { prefixKey } from "./common";
  */
 export function setValue(key: string, value: string) {
   let pKey = prefixKey(key);
-  window.localStorage.setItem(pKey, value);
+  storage.setItem(pKey, value);
 }
