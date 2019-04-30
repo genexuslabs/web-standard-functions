@@ -67,6 +67,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/math/mod",
           "name": "mod"
         },
+        "NewLine": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/newline",
+          "name": "newLine"
+        },
         "PadL": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
           "name": "padLeft"
@@ -577,7 +581,7 @@
         "MonthName": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
           "name": "monthName"
-        }  ,
+        },
         "ToDate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
           "name": "toDate"
@@ -593,11 +597,11 @@
         "New": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
           "name": "newInstance"
-        } ,
+        },
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
           "name": "toString"
-        }  
+        }
       }
     }
   },
