@@ -5,7 +5,6 @@
  */
 
 import { DateTime } from "luxon";
-import { nullValue } from "../generator/out/not_implemented";
 import { EMPTY_DATE_VALUE } from "./core";
 
 export const fromString = (dateFrom: string): Date => {
