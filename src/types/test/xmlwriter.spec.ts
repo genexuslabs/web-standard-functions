@@ -83,4 +83,19 @@ describe("XMLReader data type", () => {
     expect(writer.errCode).toBe(0);
     expect(writer.resultingString).toBe("<test><!--comment-->Test1</test>");
   });
+
+  it("should add a document delcaration", () => {
+    let writer = new XMLWriter();
+    writer.openToString();
+    expect(writer.errCode).toBe(0);
+    expect(writer.errDescription).toBe("");
+    writer.writeStartDocument("UTF-8", 1);
+    writer.writeStartElement("test");
+    writer.writeText("Test1");
+    writer.writeEndElement();
+    expect(writer.errCode).toBe(0);
+    expect(writer.resultingString).toBe(
+      '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><test>Test1</test>'
+    );
+  });
 });

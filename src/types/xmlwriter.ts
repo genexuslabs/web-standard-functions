@@ -30,6 +30,9 @@ export class XMLWriter extends XMLBase {
 
   private elemStack = new XMLWriter.XMLWriterElementStack();
 
+  private encoding: string = null;
+  private standalone: boolean = null;
+
   // Properties
 
   /**
@@ -37,7 +40,15 @@ export class XMLWriter extends XMLBase {
    * when the document was created with the OpenToString() method
    */
   get resultingString(): string {
-    return this.document.firstElementChild.outerHTML;
+    let content = this.document.firstElementChild.outerHTML;
+    if (this.encoding) {
+      let standalone = this.standalone ? ' standalone="yes"' : "";
+      let hedader = `<?xml version="1.0" encoding="${
+        this.encoding
+      }"${standalone}?>`;
+      content = `${hedader}${content}`;
+    }
+    return content;
   }
 
   // Opening documents
@@ -64,6 +75,21 @@ export class XMLWriter extends XMLBase {
   }
 
   // Writing
+
+  /**
+   * Writes the XML declaration using version 1.0 and ISO-8859-1 coding
+   * @param {string} encoding Encoding to be used in the XML file
+   * @param {number} standalone
+   * @return {number}
+   */
+  writeStartDocument(
+    encoding: string = "ISO-8859-1",
+    standalone: number = 0
+  ): any {
+    this.encoding = encoding;
+    this.standalone = standalone !== 0;
+    return 0;
+  }
 
   /**
    * Writes an element with the indicated value
@@ -263,16 +289,6 @@ export class XMLWriter extends XMLBase {
    * @return any
    */
   writeProcessingInstruction(target: any, value: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param encoding
-   * @param standalone
-   * @return any
-   */
-  writeStartDocument(encoding: any, standalone: boolean): any {
     notImplemented();
     return null;
   }
