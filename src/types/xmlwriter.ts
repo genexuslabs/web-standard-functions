@@ -72,10 +72,14 @@ export class XMLWriter extends XMLBase {
    * @return {number}
    */
   writeElement(name: string, value: string): number {
-    this.writeStartElement(name);
-    this.writeText(value);
-    this.writeEndElement();
-    return 0;
+    if (this.errCode === 0) {
+      this.writeStartElement(name);
+    }
+    if (this.errCode === 0) {
+      this.writeText(value);
+      this.writeEndElement();
+    }
+    return this.errCode;
   }
 
   /**
@@ -84,14 +88,16 @@ export class XMLWriter extends XMLBase {
    * @return {number}
    */
   writeStartElement(name: string): number {
-    if (this.document) {
-      let elem = this.document.createElement(name);
-      this.elemStack.push(elem);
-    } else {
-      this.mErrCode = ErrorCodes.no_open_document;
-      this.mErrDescription = "No open document";
+    if (this.errCode === 0) {
+      if (this.document) {
+        let elem = this.document.createElement(name);
+        this.elemStack.push(elem);
+      } else {
+        this.mErrCode = ErrorCodes.no_open_document;
+        this.mErrDescription = "No open document";
+      }
     }
-    return 0;
+    return this.mErrCode;
   }
 
   /**
@@ -99,15 +105,17 @@ export class XMLWriter extends XMLBase {
    * @return {number}
    */
   writeEndElement(): number {
-    let elem = this.elemStack.pop();
-    if (elem) {
-      let parent = this.elemStack.top() || this.document;
-      parent.appendChild(elem);
-    } else {
-      this.mErrCode = ErrorCodes.missing_start_element;
-      this.mErrDescription = "Missing start element";
+    if (this.errCode === 0) {
+      let elem = this.elemStack.pop();
+      if (elem) {
+        let parent = this.elemStack.top() || this.document;
+        parent.appendChild(elem);
+      } else {
+        this.mErrCode = ErrorCodes.missing_start_element;
+        this.mErrDescription = "Missing start element";
+      }
     }
-    return 0;
+    return this.errCode;
   }
 
   /**
@@ -116,15 +124,36 @@ export class XMLWriter extends XMLBase {
    * @return {number}
    */
   writeText(text: string): number {
-    let elem = this.elemStack.top();
-    if (elem) {
-      let textElem = this.document.createTextNode(text);
-      elem.appendChild(textElem);
-    } else {
-      this.mErrCode = ErrorCodes.missing_start_element;
-      this.mErrDescription = "Missing start element";
+    if (this.errCode === 0) {
+      let elem = this.elemStack.top();
+      if (elem) {
+        let textElem = this.document.createTextNode(text);
+        elem.appendChild(textElem);
+      } else {
+        this.mErrCode = ErrorCodes.missing_start_element;
+        this.mErrDescription = "Missing start element";
+      }
     }
-    return 0;
+    return this.errCode;
+  }
+
+  /**
+   * Creates an attribute in the current element
+   * @param {string} name Attribute's name
+   * @param {string} value Attribute's value
+   * @return {number}
+   */
+  writeAttribute(name: string, value: string): number {
+    if (this.errCode === 0) {
+      let elem = this.elemStack.top();
+      if (elem) {
+        elem.setAttribute(name, value);
+      } else {
+        this.mErrCode = ErrorCodes.missing_start_element;
+        this.mErrDescription = "Missing start element";
+      }
+    }
+    return this.errCode;
   }
 
   // Private methods
@@ -163,16 +192,6 @@ export class XMLWriter extends XMLBase {
    * @return any
    */
   openResponse(response: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param name
-   * @param value
-   * @return any
-   */
-  writeAttribute(name: any, value: any): any {
     notImplemented();
     return null;
   }

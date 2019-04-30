@@ -37,4 +37,17 @@ describe("XMLReader data type", () => {
     );
     writer.close();
   });
+
+  it("should add an attribute", () => {
+    let writer = new XMLWriter();
+    writer.openToString();
+    expect(writer.errCode).toBe(0);
+    expect(writer.errDescription).toBe("");
+    writer.writeStartElement("test");
+    writer.writeAttribute("testId", "1");
+    writer.writeText("Test1");
+    writer.writeEndElement();
+    expect(writer.resultingString).toBe('<test testId="1">Test1</test>');
+    writer.close();
+  });
 });
