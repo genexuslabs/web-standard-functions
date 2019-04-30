@@ -203,6 +203,17 @@ export class XMLWriter extends XMLBase {
     });
   }
 
+  /**
+   * Writes a CData section with the indicated value
+   * @param {string} cData Value to write as a CData section
+   * @return any
+   */
+  writeCData(cData: string): number {
+    return this.appendNodeToCurrentElement(false, () => {
+      return this.document.createCDATASection(cData);
+    });
+  }
+
   // Private methods
 
   private appendNodeToCurrentElement(
@@ -268,15 +279,6 @@ export class XMLWriter extends XMLBase {
    * @return any
    */
   writeEntityReference(entity: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param cData
-   * @return any
-   */
-  writeCData(cData: any): any {
     notImplemented();
     return null;
   }
