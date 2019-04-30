@@ -2,11 +2,33 @@ import { notImplemented, notSupported } from "../misc/helpers";
 import { XMLBase, XMLErrorCodes as ErrorCodes } from "./xmlcommon";
 
 export class XMLWriter extends XMLBase {
+  private static XMLWriterElementStack = class {
+    private elements: Element[];
+
+    constructor() {
+      this.elements = new Array<Element>();
+    }
+
+    push(elem: Element) {
+      this.elements.push(elem);
+    }
+
+    pop(): Element {
+      return this.elements.length > 0 ? this.elements.pop() : undefined;
+    }
+
+    top(): Element {
+      return this.elements.length > 0
+        ? this.elements[this.elements.length - 1]
+        : undefined;
+    }
+  };
+
   // Internal variables
 
   private document: Document = null;
 
-  private currentElement: Element = null;
+  private elemStack = new XMLWriter.XMLWriterElementStack();
 
   // Properties
 
@@ -26,6 +48,7 @@ export class XMLWriter extends XMLBase {
    */
   openToString(): any {
     this.document = document.implementation.createDocument("", "", null);
+    this.elemStack = new XMLWriter.XMLWriterElementStack();
     this.resetErrors();
     return 0;
   }
@@ -36,7 +59,7 @@ export class XMLWriter extends XMLBase {
    */
   close(): number {
     this.document = null;
-    this.currentElement = null;
+    this.elemStack = null;
     return 0;
   }
 
@@ -49,11 +72,57 @@ export class XMLWriter extends XMLBase {
    * @return {number}
    */
   writeElement(name: string, value: string): number {
+    this.writeStartElement(name);
+    this.writeText(value);
+    this.writeEndElement();
+    return 0;
+  }
+
+  /**
+   * Starts a compound element
+   * @param {string} name Element's name
+   * @return {number}
+   */
+  writeStartElement(name: string): number {
     if (this.document) {
       let elem = this.document.createElement(name);
-      let text = this.document.createTextNode(value);
-      elem.appendChild(text);
-      this.document.appendChild(elem);
+      this.elemStack.push(elem);
+    } else {
+      this.mErrCode = ErrorCodes.no_open_document;
+      this.mErrDescription = "No open document";
+    }
+    return 0;
+  }
+
+  /**
+   * Closes the last element that was opened using the WriteStartElement method
+   * @return {number}
+   */
+  writeEndElement(): number {
+    let elem = this.elemStack.pop();
+    if (elem) {
+      let parent = this.elemStack.top() || this.document;
+      parent.appendChild(elem);
+    } else {
+      this.mErrCode = ErrorCodes.missing_start_element;
+      this.mErrDescription = "Missing start element";
+    }
+    return 0;
+  }
+
+  /**
+   * Generates character data with the indicated value string
+   * @param {string} text
+   * @return {number}
+   */
+  writeText(text: string): number {
+    let elem = this.elemStack.top();
+    if (elem) {
+      let textElem = this.document.createTextNode(text);
+      elem.appendChild(textElem);
+    } else {
+      this.mErrCode = ErrorCodes.missing_start_element;
+      this.mErrDescription = "Missing start element";
     }
     return 0;
   }
@@ -100,36 +169,10 @@ export class XMLWriter extends XMLBase {
 
   /**
    * @param name
-   * @return any
-   */
-  writeStartElement(name: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @return any
-   */
-  writeEndElement(): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param name
    * @param value
    * @return any
    */
   writeAttribute(name: any, value: any): any {
-    notImplemented();
-    return null;
-  }
-
-  /**
-   * @param text
-   * @return any
-   */
-  writeText(text: any): any {
     notImplemented();
     return null;
   }

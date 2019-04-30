@@ -18,4 +18,23 @@ describe("XMLReader data type", () => {
     expect(writer.resultingString).toBe("<test>Test1</test>");
     writer.close();
   });
+
+  it("should write using start and end element", () => {
+    let writer = new XMLWriter();
+    writer.openToString();
+    expect(writer.errCode).toBe(0);
+    expect(writer.errDescription).toBe("");
+    writer.writeStartElement("case");
+    writer.writeStartElement("test");
+    writer.writeText("Test1");
+    writer.writeEndElement();
+    writer.writeStartElement("test");
+    writer.writeText("Test2");
+    writer.writeEndElement();
+    writer.writeEndElement();
+    expect(writer.resultingString).toBe(
+      "<case><test>Test1</test><test>Test2</test></case>"
+    );
+    writer.close();
+  });
 });
