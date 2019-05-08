@@ -1,6 +1,9 @@
 dist/
 coverage/
+
+# Generated files
 src/generator/out/
+src/index.ts
 
 *~
 *.sw[mnpcod]
