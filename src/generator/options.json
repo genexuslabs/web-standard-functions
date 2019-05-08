@@ -49,7 +49,7 @@
           "name": "htmlClean"
         },
         "Iif": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
+          "path": "./misc/iif",
           "name": "iif"
         },
         "Int": {
@@ -76,7 +76,7 @@
           "name": "mod"
         },
         "NewLine": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/newline",
+          "path": "./text/newline",
           "name": "newLine"
         },
         "PadL": {
@@ -685,7 +685,7 @@
         },
         "FromString": {
           "path": "./date/fromString",
-          "name": "fromString"
+          "name": "fromString",
           "alias": "dFromString"
         },
         "IsEmpty": {
