@@ -1,5 +1,3 @@
-import { clear } from "../../generator/out/not_implemented";
-
 export const testCases: Array<[string, string, number]> = [
   ["123.45", ".", 123.45],
   ["123.45", undefined, 123.45],
