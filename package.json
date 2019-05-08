@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run generate-api && npm run build.commonjs && npm run build.es6",
     "build.commonjs": "tsc",
     "build.es6": "tsc -m es6 --outDir ./dist/lib-esm",
-    "clean": "shx rm -rf ./dist && shx rm -rf ./src/generator/out",
+    "clean": "shx rm -rf ./dist && shx rm -f ./src/index.ts && shx rm -rf ./src/generator/out",
     "generate-api": "cd ./node_modules/standard-api-generator && node ./index.js -o ../../src/generator/options.json && cd ../..",
     "lint": "tslint  --project tsconfig.json -t codeFrame src/**/*.ts test/**/*.ts",
     "precommit": "pretty-quick --staged && npm run lint",
