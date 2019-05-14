@@ -25,39 +25,38 @@ export class GeneXusClientClientInformation {
   }
 
   /**
-   *
+   * Returns the operating system name
    */
-  private static moSName: any;
-  static get oSName(): any {
+  static get oSName(): string {
     notImplemented();
-    return this.moSName;
+    return null;
   }
 
   /**
-   *
+   * Returns the version of the operating system
    */
-  private static moSVersion: any;
-  static get oSVersion(): any {
+  static get oSVersion(): string {
     notImplemented();
-    return this.moSVersion;
+    return null;
   }
 
   /**
-   *
+   * Returns a unique identifier for the device
+   * Current implementation returns the same as the `id` property
    */
-  private static mnetworkID: any;
-  static get networkID(): any {
-    notImplemented();
-    return this.mnetworkID;
+  static get networkID(): string {
+    return this.id;
   }
 
   /**
-   *
+   * A character string is returned with the device language
    */
-  private static mlanguage: any;
-  static get language(): any {
-    notImplemented();
-    return this.mlanguage;
+  static get language(): string {
+    let lang = navigator.languages
+      ? navigator.languages[0]
+      : navigator.language;
+
+    return lang;
   }
 
   /**
