@@ -153,12 +153,13 @@ export class GeneXusClientClientInformation {
   }
 
   /**
-   *
+   * Returns the platform name of the device as much specific as possible
    */
-  private static mplatformName: any;
-  static get platformName(): any {
-    notImplemented();
-    return this.mplatformName;
+  static get platformName(): string {
+    var nVer = navigator.appVersion;
+    var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
+
+    return "Web" + mobile ? " Mobile" : "";
   }
 
   /**

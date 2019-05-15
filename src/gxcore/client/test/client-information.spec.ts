@@ -26,4 +26,8 @@ describe("ClientInformation external object", () => {
     let networkId = clientInfo.networkID;
     expect(networkId.length).not.toBe(0);
   });
+  it("should return a non-empty platform name", () => {
+    let platformName = clientInfo.platformName;
+    expect(platformName.length).not.toBe(0);
+  });
 });
