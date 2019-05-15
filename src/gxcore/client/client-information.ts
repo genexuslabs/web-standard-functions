@@ -163,29 +163,26 @@ export class GeneXusClientClientInformation {
   }
 
   /**
-   *
+   * Returns the version number of the application which it was set by the developer
    */
-  private static mappVersionCode: any;
-  static get appVersionCode(): any {
+  static get appVersionCode(): string {
     notImplemented();
-    return this.mappVersionCode;
+    return null;
   }
 
   /**
-   *
+   * Returns the version name of the application which it was set by the developer
    */
-  private static mappVersionName: any;
-  static get appVersionName(): any {
+  static get appVersionName(): string {
     notImplemented();
-    return this.mappVersionName;
+    return null;
   }
 
   /**
-   *
+   * Returns the application identifier
    */
-  private static mapplicationId: any;
-  static get applicationId(): any {
+  static get applicationId(): string {
     notImplemented();
-    return this.mapplicationId;
+    return null;
   }
 }
