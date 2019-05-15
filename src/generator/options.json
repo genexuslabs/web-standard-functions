@@ -720,6 +720,9 @@
           "alias": "dToString"
         }
       }
+    },
+    "GeneXus.SD.Synchronization.SynchronizationEvents": {
+      "path": "./gxcore/sd/synchronization/synchronizationEvents"
     }
   },
   "disambiguated": {
