@@ -720,6 +720,9 @@
           "alias": "dToString"
         }
       }
+    },
+    "GeneXus.Client.ClientInformation": {
+      "path": "./gxcore/client/client-information"
     }
   },
   "disambiguated": {
