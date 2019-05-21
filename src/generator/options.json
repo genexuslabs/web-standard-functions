@@ -41,10 +41,6 @@
           "path": "./web/getCookie",
           "name": "getCookie"
         },
-        "Iif": {
-          "path": "./misc/iif",
-          "name": "iif"
-        },
         "HTMLClean": {
           "path": "./text/htmlClean",
           "name": "htmlClean"

@@ -5,7 +5,7 @@ import { storage, keyPrefix } from "./common";
  */
 export function clear() {
   for (let i = storage.length - 1; i >= 0; i--) {
-    var key = storage.key(i);
+    let key = storage.key(i);
     if (key.startsWith(keyPrefix)) {
       storage.removeItem(key);
     }
