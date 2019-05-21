@@ -8,16 +8,9 @@ function notImplemented() {
 }
 
 function findOSInUserAgent(clientStrings): string {
-  var nAgt = navigator.userAgent;
-  var os = "Unknown";
-  for (var id in clientStrings) {
-    var cs = clientStrings[id];
-    if (cs.r.test(nAgt)) {
-      os = cs.s;
-      break;
-    }
-  }
-  return os;
+  let nAgt = navigator.userAgent;
+  let os = clientStrings.find( (cs) => cs.r.test(nAgt));
+  return os ? os.s : "Unknown";
 }
 
 export class GeneXusClientClientInformation {
@@ -42,7 +35,7 @@ export class GeneXusClientClientInformation {
    */
   static get oSName(): string {
     return findOSInUserAgent([
-      { s: "Windows", r: /(Windows)/ },
+      { s: "Windows", r: /(Windows|win32|win64)/ },
       { s: "Android", r: /Android/ },
       { s: "Open BSD", r: /OpenBSD/ },
       { s: "Sun OS", r: /SunOS/ },
@@ -65,7 +58,7 @@ export class GeneXusClientClientInformation {
    * Returns the version of the operating system
    */
   static get oSVersion(): string {
-    var os = findOSInUserAgent([
+    let os = findOSInUserAgent([
       { s: "Windows 10", r: /(Windows 10.0|Windows NT 10.0)/ },
       { s: "Windows 8.1", r: /(Windows 8.1|Windows NT 6.3)/ },
       { s: "Windows 8", r: /(Windows 8|Windows NT 6.2)/ },
@@ -80,6 +73,7 @@ export class GeneXusClientClientInformation {
       { s: "Windows NT 4.0", r: /(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/ },
       { s: "Windows CE", r: /Windows CE/ },
       { s: "Windows 3.11", r: /Win16/ },
+      { s: "Windows unknown-version", r: /(Windows|win32|win64)/ },
       { s: "Android", r: /Android/ },
       { s: "Open BSD", r: /OpenBSD/ },
       { s: "Sun OS", r: /SunOS/ },
@@ -97,14 +91,14 @@ export class GeneXusClientClientInformation {
       }
     ]);
 
-    var osVersion = "Unknown";
+    let osVersion = "Unknown";
 
     if (/Windows/.test(os)) {
       osVersion = /Windows (.*)/.exec(os)[1];
     }
 
-    var nAgt = navigator.userAgent;
-    var nVer = navigator.appVersion;
+    let nAgt = navigator.userAgent;
+    let nVer = navigator.appVersion;
     switch (os) {
       case "Mac OS X":
         osVersion = /Mac OS X (10[\.\_\d]+)/.exec(nAgt)[1];
@@ -115,7 +109,7 @@ export class GeneXusClientClientInformation {
         break;
 
       case "iOS":
-        var osVersionComponents = /OS (\d+)_(\d+)_?(\d+)?/.exec(nVer);
+        let osVersionComponents = /OS (\d+)_(\d+)_?(\d+)?/.exec(nVer);
         osVersion =
           osVersionComponents[1] +
           "." +
@@ -156,8 +150,8 @@ export class GeneXusClientClientInformation {
    * Returns the platform name of the device as much specific as possible
    */
   static get platformName(): string {
-    var nVer = navigator.appVersion;
-    var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
+    let nVer = navigator.appVersion;
+    let mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
 
     return "Web" + mobile ? " Mobile" : "";
   }
