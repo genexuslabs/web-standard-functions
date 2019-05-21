@@ -759,6 +759,70 @@
     },
     "GeneXus.Client.ClientInformation": {
       "path": "./gxcore/client/client-information"
+    },
+    "DateTime": {
+      "members": {
+        "AddDays": {
+          "path": "./date/addDays",
+          "name": "addDays",
+          "alias": "dAddDays"
+        },
+        "AddMonths": {
+          "path": "./date/addMonths",
+          "name": "addMonths",
+          "alias": "dAddMonths"
+        },
+        "AddYears": {
+          "path": "./date/addYears",
+          "name": "addYears",
+          "alias": "dAddYears"
+        },
+        "Age": {
+          "path": "./date/age",
+          "name": "age",
+          "alias": "dAge"
+        },
+        "Day": {
+          "path": "./date/day",
+          "name": "day",
+          "alias": "dDay"
+        },
+        "DayOfWeek": {
+          "path": "./date/dayOfWeek",
+          "name": "dayOfWeek",
+          "alias": "dDayOfWeek"
+        },
+        "DayOfWeekName": {
+          "path": "./date/dayOfWeekName",
+          "name": "dayOfWeekName",
+          "alias": "dDayOfWeekName"
+        },
+        "EndOfMonth": {
+          "path": "./date/endOfMonth",
+          "name": "endOfMonth",
+          "alias": "dEndOfMonth"
+        },
+        "IsEmpty": {
+          "path": "./date/isEmpty",
+          "name": "isEmpty",
+          "alias": "dIsEmpty"
+        },
+        "Month": {
+          "path": "./date/month",
+          "name": "month",
+          "alias": "dMonth"
+        },
+        "MonthName": {
+          "path": "./date/monthName",
+          "name": "monthName",
+          "alias": "dMonthName"
+        },
+        "Year": {
+          "path": "./date/year",
+          "name": "year",
+          "alias": "dYear"
+        }
+      }
     }
   },
   "disambiguated": {
