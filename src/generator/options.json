@@ -4,7 +4,8 @@
   "angularMappingsOutputFilePath": "../../src/generator/out/angular_metadata.json",
   "angularIndexOutputFilePath": "../../src/index.ts",
   "angularMappings": {
-    "defaultModulesPath": "./generator/out/not_implemented"
+    "defaultModulesPath": "./generator/out/not_implemented",
+    "angularIndexPath": "@genexus/web-standard-functions/dist/lib-esm/index"
   },
   "implemented": {
     "Cookie": {
@@ -40,13 +41,13 @@
           "path": "./web/getCookie",
           "name": "getCookie"
         },
-        "Iif": {
-          "path": "./misc/iif",
-          "name": "iif"
-        },
         "HTMLClean": {
           "path": "./text/htmlClean",
           "name": "htmlClean"
+        },
+        "Iif": {
+          "path": "./misc/iif",
+          "name": "iif"
         },
         "Int": {
           "path": "./numeric/integer",
@@ -70,6 +71,10 @@
         "Mod": {
           "path": "./math/mod",
           "name": "mod"
+        },
+        "NewLine": {
+          "path": "./text/newline",
+          "name": "newLine"
         },
         "PadL": {
           "path": "./text/padLeft",
@@ -675,50 +680,77 @@
           "name": "endOfMonth",
           "alias": "dEndOfMonth"
         },
-        "Month": {
-          "path": "./date/month",
-          "name": "month",
-          "alias": "dMonth"
+        "FromString": {
+          "path": "./date/fromString",
+          "name": "fromString",
+          "alias": "dFromString"
         },
         "IsEmpty": {
           "path": "./date/isEmpty",
           "name": "isEmpty",
           "alias": "dIsEmpty"
         },
-        "Year": {
-          "path": "./date/year",
-          "name": "year",
-          "alias": "dYear"
+        "Month": {
+          "path": "./date/month",
+          "name": "month",
+          "alias": "dMonth"
         },
         "MonthName": {
           "path": "./date/monthName",
           "name": "monthName",
           "alias": "dMonthName"
         },
-        "ToDate": {
-          "path": "./date/toDate",
-          "name": "toDate"
-        },
-        "FromString": {
-          "path": "./date/fromString",
-          "name": "fromString",
-          "alias": "dFromString"
+        "New": {
+          "path": "./date/newInstance",
+          "name": "newInstance"
         },
         "Set": {
           "path": "./date/set",
           "name": "set",
           "alias": "dSet"
         },
-        "New": {
-          "path": "./date/newInstance",
-          "name": "newInstance"
+        "ToDate": {
+          "path": "./date/toDate",
+          "name": "toDate"
         },
         "ToString": {
           "path": "./date/toString",
           "name": "toString",
           "alias": "dToString"
+        },
+        "Year": {
+          "path": "./date/year",
+          "name": "year",
+          "alias": "dYear"
         }
       }
+    },
+    "GeneXus.Client.ClientStorage": {
+      "members": {
+        "Set": {
+          "path": "./gxcore/client/client-storage/set",
+          "name": "set",
+          "alias": "clientStorageSet"
+        },
+        "Get": {
+          "path": "./gxcore/client/client-storage/get",
+          "name": "get",
+          "alias": "clientStorageGet"
+        },
+        "Remove": {
+          "path": "./gxcore/client/client-storage/remove",
+          "name": "remove",
+          "alias": "clientStorageRemove"
+        },
+        "Clear": {
+          "path": "./gxcore/client/client-storage/clear",
+          "name": "clear",
+          "alias": "clientStorageClear"
+        }
+      }
+    },
+    "GeneXus.Client.ClientInformation": {
+      "path": "./gxcore/client/client-information"
     },
     "XMLReader": {
       "path": "./types/xmlreader"
@@ -736,9 +768,6 @@
       "Delete": "textSearchdelete",
       "Find": "textSearchfind",
       "Update": "textSearchupdate"
-    },
-    "GeneXus.Client.ClientStorage": {
-      "Set": "setValue"
     },
     "GeneXus.Common.Analytics": {
       "SetUserId": "setAnalyticsUserId"
