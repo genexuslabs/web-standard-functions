@@ -4,6 +4,6 @@
  * @return number
  */
 
-export const second = (dateFrom: Date): number => {
+export const millisecond = (dateFrom: Date): number => {
   return dateFrom.getMilliseconds();
 };
