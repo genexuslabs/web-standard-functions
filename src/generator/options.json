@@ -41,6 +41,10 @@
           "path": "./web/getCookie",
           "name": "getCookie"
         },
+        "GetLanguage": {
+          "path": "./misc/getLanguage",
+          "name": "getLanguage"
+        },
         "HTMLClean": {
           "path": "./text/htmlClean",
           "name": "htmlClean"
@@ -101,6 +105,10 @@
         "SetCookie": {
           "path": "./web/setCookie",
           "name": "setCookie"
+        },
+        "SetLanguage": {
+          "path": "./misc/setLanguage",
+          "name": "setLanguage"
         },
         "Str": {
           "path": "./numeric/toString",
