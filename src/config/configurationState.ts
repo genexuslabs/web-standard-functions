@@ -1,5 +1,6 @@
 const keyPrefix: string = "gx.config.configurationstate";
 const languageKey: string = "language";
+const validLanguagesKey: string = "languages";
 
 export class ConfigurationState {
   // Singleton
@@ -13,9 +14,18 @@ export class ConfigurationState {
     return ConfigurationState.instance;
   }
 
-  private constructor() {
-    // TODO: default language should be read from the KB settings
-    this.setLanguage(navigator.language);
+  private constructor() {}
+
+  // Loading model properties
+
+  /**
+   * Loads properties from the environment
+   */
+  loadProperties(props: { [key: string]: string }) {
+    console.log(`Props: ${props}`);
+    let instance = ConfigurationState.getInstance();
+    instance.setStoredValue(validLanguagesKey, props[validLanguagesKey]);
+    instance.setLanguage(props[languageKey]);
   }
 
   // Language
@@ -42,8 +52,8 @@ export class ConfigurationState {
   }
 
   private supportedLanguages(): string[] {
-    // TODO: read from the KB settings
-    return [];
+    let languages = this.getStoredValue(validLanguagesKey);
+    return languages ? languages.split(",") : [];
   }
 
   // Local storage
