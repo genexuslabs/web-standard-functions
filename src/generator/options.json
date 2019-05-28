@@ -843,8 +843,8 @@
         },
         "Millisecond": {
           "path": "./datetime/millisecond",
-          "name": "millsecond",
-          "alias": "dtMillsecond"
+          "name": "millisecond",
+          "alias": "dtMillisecond"
         },
         "Difference": {
           "path": "./datetime/difference",
@@ -902,7 +902,10 @@
       "IsNull": "dtIsNull",
       "SetNull": "dtSetNull",
       "ToFormattedString": "dtToFormattedString",
-      "SetEmpty": "dtSetEmpty"
+      "SetEmpty": "dtSetEmpty",
+      "New": "dtNew",
+      "Set": "dtSet",
+      "ToDate": "dtTodate"
     },
     "Boolean": {
       "IsNull": "bIsNull",
