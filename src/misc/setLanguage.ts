@@ -6,5 +6,5 @@ import { ConfigurationState } from "../config/configurationState";
  * @returns 0 if the language can be set, a value greater than 0 if it cannot be set
  */
 export const setLanguage = (lang: string): number => {
-  return new ConfigurationState().setLanguage(lang);
+  return ConfigurationState.getInstance().setLanguage(lang);
 };

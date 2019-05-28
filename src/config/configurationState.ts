@@ -2,7 +2,18 @@ const keyPrefix: string = "gx.config.configurationstate";
 const languageKey: string = "language";
 
 export class ConfigurationState {
-  constructor() {
+  // Singleton
+
+  private static instance: ConfigurationState;
+
+  static getInstance() {
+    if (!ConfigurationState.instance) {
+      ConfigurationState.instance = new ConfigurationState();
+    }
+    return ConfigurationState.instance;
+  }
+
+  private constructor() {
     // TODO: default language should be read from the KB settings
     this.setLanguage(navigator.language);
   }
