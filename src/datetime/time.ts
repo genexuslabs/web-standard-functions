@@ -7,7 +7,9 @@ export enum time_format {
   format_24 = 24
 }
 
-export const time = (timeformat: time_format): String => {
-  let format = timeformat === time_format.format_12 ? "en-US" : "en-GB";
-  return new Date().toLocaleTimeString(format);
+import { DateTime } from "luxon";
+
+export const time = (tf: time_format, date?: Date): String => {
+  let format = tf === time_format.format_12 ? "en-US" : "en-GB";
+  return (date || new Date()).toLocaleTimeString(format);
 };
