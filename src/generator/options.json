@@ -143,6 +143,10 @@
           "path": "./date/today",
           "name": "today"
         },
+        "Now": {
+          "path": "./datetime/now",
+          "name": "now"
+        },
         "Trim": {
           "path": "./text/trim",
           "name": "trim"
@@ -765,62 +769,97 @@
         "AddDays": {
           "path": "./date/addDays",
           "name": "addDays",
-          "alias": "dAddDays"
+          "alias": "dtAddDays"
         },
         "AddMonths": {
           "path": "./date/addMonths",
           "name": "addMonths",
-          "alias": "dAddMonths"
+          "alias": "dtAddMonths"
         },
         "AddYears": {
           "path": "./date/addYears",
           "name": "addYears",
-          "alias": "dAddYears"
+          "alias": "dtAddYears"
         },
         "Age": {
           "path": "./date/age",
           "name": "age",
-          "alias": "dAge"
+          "alias": "dtAge"
         },
         "Day": {
           "path": "./date/day",
           "name": "day",
-          "alias": "dDay"
+          "alias": "dtDay"
         },
         "DayOfWeek": {
           "path": "./date/dayOfWeek",
           "name": "dayOfWeek",
-          "alias": "dDayOfWeek"
+          "alias": "dtDayOfWeek"
         },
         "DayOfWeekName": {
           "path": "./date/dayOfWeekName",
           "name": "dayOfWeekName",
-          "alias": "dDayOfWeekName"
+          "alias": "dtDayOfWeekName"
         },
         "EndOfMonth": {
           "path": "./date/endOfMonth",
           "name": "endOfMonth",
-          "alias": "dEndOfMonth"
+          "alias": "dtEndOfMonth"
         },
         "IsEmpty": {
           "path": "./date/isEmpty",
           "name": "isEmpty",
-          "alias": "dIsEmpty"
+          "alias": "dtIsEmpty"
         },
         "Month": {
           "path": "./date/month",
           "name": "month",
-          "alias": "dMonth"
+          "alias": "dtMonth"
         },
         "MonthName": {
           "path": "./date/monthName",
           "name": "monthName",
-          "alias": "dMonthName"
+          "alias": "dtMonthName"
         },
         "Year": {
           "path": "./date/year",
           "name": "year",
-          "alias": "dYear"
+          "alias": "dtYear"
+        },
+        "Hour": {
+          "path": "./datetime/hour",
+          "name": "hour",
+          "alias": "dtHour"
+        },
+        "Minute": {
+          "path": "./datetime/minute",
+          "name": "minute",
+          "alias": "dtMinute"
+        },
+        "Second": {
+          "path": "./datetime/second",
+          "name": "second",
+          "alias": "dtSecond"
+        },
+        "Millisecond": {
+          "path": "./datetime/millisecond",
+          "name": "millsecond",
+          "alias": "dtMillsecond"
+        },
+        "Difference": {
+          "path": "./datetime/difference",
+          "name": "difference",
+          "alias": "dtDifference"
+        },
+        "Now": {
+          "path": "./datetime/now",
+          "name": "now",
+          "alias": "dtNow"
+        },
+        "Time": {
+          "path": "./datetime/time",
+          "name": "time",
+          "alias": "dttime"
         }
       }
     }
