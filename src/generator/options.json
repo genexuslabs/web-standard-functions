@@ -3,6 +3,9 @@
   "notImplementedOutputFilePath": "../../src/generator/out/not_implemented.ts",
   "angularMappingsOutputFilePath": "../../src/generator/out/angular_metadata.json",
   "angularIndexOutputFilePath": "../../src/index.ts",
+  "notImplementedSettings": {
+    "doNotGenerateClasses": true
+  },
   "angularMappings": {
     "defaultModulesPath": "./generator/out/not_implemented",
     "angularIndexPath": "@genexus/web-standard-functions/dist/lib-esm/index"
@@ -790,8 +793,24 @@
     "DateTime": {
       "IsNull": "dtIsNull",
       "SetNull": "dtSetNull",
+      "FromString": "dtFromString",
+      "ToString": "dtToString",
       "ToFormattedString": "dtToFormattedString",
-      "SetEmpty": "dtSetEmpty"
+      "IsEmpty": "dtIsEmpty",
+      "SetEmpty": "dtSetEmpty",
+      "Age": "dtAge",
+      "Day": "dtDay",
+      "Month": "dtMonth",
+      "Year": "dtYear",
+      "Hour": "dtHour",
+      "Minute": "dtMinute",
+      "Seconds": "dtSeconds",
+      "Now": "dtNow",
+      "Second": "dtSecond",
+      "Time": "dtTime",
+      "Set": "dtSet",
+      "New": "dtNew",
+      "ToDate": "dtToDate"
     },
     "Boolean": {
       "IsNull": "bIsNull",
@@ -799,14 +818,236 @@
       "ToFormattedString": "bToFormattedString",
       "SetEmpty": "bSetEmpty"
     },
+
+    "Audio": {
+      "IsNull": "audioIsNull",
+      "SetNull": "audioSetNull",
+      "FromString": "audioFromString",
+      "ToString": "audioToString",
+      "ToFormattedString": "audioToFormattedString",
+      "IsEmpty": "audioIsEmpty",
+      "SetEmpty": "audioSetEmpty"
+    },
+    "Binary": {
+      "IsNull": "binaryIsNull",
+      "SetNull": "binarySetNull",
+      "FromString": "binaryFromString",
+      "ToString": "binaryToString",
+      "ToFormattedString": "binaryToFormattedString",
+      "IsEmpty": "binaryIsEmpty",
+      "SetEmpty": "binarySetEmpty",
+      "FromBase64String": "binaryFromBase64String"
+    },
+    "BinaryFile": {
+      "FromURL": "binaryFileFromURL",
+      "IsEmpty": "binaryFileIsEmpty"
+    },
+    "Blob": {
+      "IsNull": "blobIsNull",
+      "SetNull": "blobSetNull",
+      "FromString": "blobFromString",
+      "ToString": "blobToString",
+      "ToFormattedString": "blobToFormattedString",
+      "IsEmpty": "blobIsEmpty",
+      "SetEmpty": "blobSetEmpty"
+    },
+    "BusinessComponent": {
+      "Clone": "bcClone",
+      "Delete": "bcDelete",
+      "FromJson": "bcFromJson",
+      "FromJsonFile": "bcFromJsonFile",
+      "FromXml": "bcFromXml",
+      "FromXmlFile": "bcFromXmlFile",
+      "GetValue": "bcGetValue",
+      "Save": "bcSave",
+      "ToJson": "bcToJson",
+      "ToXml": "bcToXml",
+      "Update": "bcUpdate"
+    },
+    "BusinessComponentCollection": {
+      "GetByKey": "bcCollectionGetByKey",
+      "RemoveByKey": "bcCollectionRemoveByKey",
+      "Insert": "bcCollectionInsert",
+      "InsertOrUpdate": "bcCollectionInsertOrUpdate",
+      "Update": "bcCollectionUpdate",
+      "Delete": "bcCollectionDelete"
+    },
+    "Cache": {
+      "Get": "cacheGet",
+      "Set": "cacheSet"
+    },
+    "Collection": {
+      "Add": "collectionAdd",
+      "Clear": "collectionClear",
+      "Item": "collectionItem",
+      "Remove": "collectionRemove",
+      "ToXml": "collectionToXml",
+      "FromXml": "collectionFromXml",
+      "FromXmlFile": "collectionFromXmlFile",
+      "ToJson": "collectionToJson",
+      "FromJson": "collectionFromJson",
+      "FromJsonFile": "collectionFromJsonFile",
+      "Clone": "collectionClone"
+    },
+    "Directory": {
+      "Delete": "dirDelete",
+      "Exists": "dirExists"
+    },
+    "File": {
+      "Close": "fileClose",
+      "Create": "fileCreate",
+      "Delete": "fileDelete",
+      "Exists": "fileExists",
+      "GetAbsoluteName": "fileGetAbsoluteName",
+      "GetName": "fileGetName",
+      "Open": "fileOpen",
+      "Rename": "fileRename"
+    },
+    "FileCollection": {
+      "Item": "fileCollectionItem"
+    },
+    "Geography": {
+      "Distance": "geographyDistance",
+      "FromString": "geographyFromString",
+      "Intersect": "geographyIntersect",
+      "IsEmpty": "geographyIsEmpty",
+      "IsNull": "geographyIsNull",
+      "IsNullOrEmpty": "geographyIsNullOrEmpty",
+      "SetEmpty": "geographySetEmpty",
+      "SetNull": "geographySetNull",
+      "ToGeoJson": "geographyToGeoJson",
+      "ToString": "geographyToString",
+      "ToWkt": "geographyToWkt"
+    },
+    "GeoLine": {
+      "IsEmpty": "geolineIsEmpty",
+      "IsNull": "geolineIsNull",
+      "IsNullOrEmpty": "geolineIsNullOrEmpty",
+      "FromString": "geolineFromString",
+      "SetEmpty": "geolineSetEmpty",
+      "SetNull": "geolineSetNull",
+      "ToGeography": "geolineToGeography",
+      "ToGeoJson": "geolineToGeoJson",
+      "ToString": "geolineToString",
+      "ToWkt": "geolineToWkt"
+    },
+    "GeoPoint": {
+      "New": "newGeopoint",
+      "IsEmpty": "geopointIsEmpty",
+      "IsNull": "geopointIsNull",
+      "IsNullOrEmpty": "geopointIsNullOrEmpty",
+      "FromString": "geopointFromString",
+      "SetEmpty": "geopointSetEmpty",
+      "SetNull": "geopointSetNull",
+      "ToGeography": "geopointToGeography",
+      "ToGeoJson": "geopointToGeoJson",
+      "ToString": "geopointToString",
+      "ToWkt": "geopointToWkt"
+    },
+    "GeoPolygon": {
+      "Area": "geopolygonArea",
+      "IsEmpty": "geopolygonIsEmpty",
+      "IsNull": "geopolygonIsNull",
+      "IsNullOrEmpty": "geopolygonIsNullOrEmpty",
+      "FromString": "geopolygonFromString",
+      "SetEmpty": "geopolygonSetEmpty",
+      "SetNull": "geopolygonSetNull",
+      "ToGeography": "geopolygonToGeography",
+      "ToGeoJson": "geopolygonToGeoJson",
+      "ToString": "geopolygonToString",
+      "ToWkt": "geopolygonToWkt"
+    },
+    "HttpClient": {
+      "AddFile": "httpClientAddFile",
+      "AddHeader": "httpClientAddHeader",
+      "AddString": "httpClientAddString",
+      "GetHeader": "httpClientGetHeader",
+      "ToFile": "httpClientToFile",
+      "ToString": "httpClientToString"
+    },
+    "HttpRequest": {
+      "ToString": "httpRequestToString"
+    },
+    "HttpResponse": {
+      "SetCookie": "httpResponseSetCookie"
+    },
+    "Image": {
+      "IsNull": "imageIsNull",
+      "SetNull": "imageSetNull",
+      "FromString": "imageFromString",
+      "ToString": "imageToString",
+      "ToFormattedString": "imageToFormattedString",
+      "IsEmpty": "imageIsEmpty",
+      "SetEmpty": "imageSetEmpty"
+    },
+    "Properties": {
+      "Clear": "propClear",
+      "FromJson": "propFromJson",
+      "Get": "propGet",
+      "Remove": "propRemove",
+      "Set": "propSet",
+      "ToJson": "propToJson"
+    },
+    "SDT": {
+      "IsNull": "sdtIsNull"
+    },
+    "SDTItem": {
+      "ToFormattedString": "sdtItemToFormattedString"
+    },
+    "SearchResultCollection": {
+      "Item": "searchResultCollectionItem"
+    },
+    "StringCollection": {
+      "Add": "strCollectionAdd",
+      "Clear": "strCollectionClear",
+      "Item": "strCollectionItem"
+    },
     "TextSearch": {
       "Add": "textSearchadd",
       "Delete": "textSearchdelete",
       "Find": "textSearchfind",
       "Update": "textSearchupdate"
     },
+    "Video": {
+      "IsNull": "videoIsNull",
+      "SetNull": "videoSetNull",
+      "FromString": "videoFromString",
+      "ToString": "videoToString",
+      "ToFormattedString": "videoToFormattedString",
+      "IsEmpty": "videoIsEmpty",
+      "SetEmpty": "videoSetEmpty",
+      "FromURL": "videoFromURL"
+    },
+    "WebSession": {
+      "Clear": "websessionClear",
+      "Get": "websessionGet",
+      "Remove": "websessionRemove",
+      "Set": "websessionSet"
+    },
+    "Window": {
+      "Open": "windowOpen"
+    },
+    "XMLReader": {
+      "Close": "xmlrClose",
+      "Open": "xmlrOpen"
+    },
+    "XMLWriter": {
+      "Close": "xmlwClose",
+      "Open": "xmlwOpen",
+      "OpenRequest": "xmlwOpenRequest",
+      "OpenResponse": "xmlwOpenResponse"
+    },
+
+    "GeneXus.Client.Socket": {
+      "Close": "socketClose",
+      "Open": "socketOpen",
+      "Send": "socketSend"
+    },
     "GeneXus.Common.Analytics": {
       "SetUserId": "setAnalyticsUserId"
+    },
+    "GeneXus.Common.Geolocation": {
+      "GetLocation": "getGeolocation"
     },
     "GeneXus.Common.Log": {
       "Error": "logError"
@@ -814,13 +1055,33 @@
     "GeneXus.SD.Actions": {
       "Delete": "deleteAction"
     },
+    "GeneXus.SD.Interop": {
+      "Confirm": "interopConfirm",
+      "Msg": "interopMsg",
+      "Open": "interopOpen"
+    },
+    "GeneXus.SD.Media.Audio": {
+      "Stop": "audioStop"
+    },
     "GeneXus.SD.Media.PhotoLibrary": {
       "Save": "savePhoto"
+    },
+    "GeneXus.SD.Notifications.RemoteNotifications": {
+      "Add": "remoteNotificationAdd"
+    },
+    "GeneXus.SD.WebBrowser": {
+      "Open": "webBrowserOpen"
+    },
+    "GeneXus.Social.Facebook": {
+      "ShareImage": "fbShareImage"
     }
   },
   "ignored": {
     "AttributePEM": "all",
+    "Audio": ["GetOldValue"],
     "BasedOnEnumeratedDomain": "all",
+    "Blob": ["GetOldValue"],
+    "Binary": ["GetOldValue"],
     "Boolean": ["GetOldValue"],
     "Core": [
       "Default",
@@ -849,29 +1110,72 @@
       "XUse"
     ],
     "Character": ["Enable national language support", "GetOldValue"],
+    "CryptoAsymmetricEncrypt": "all",
+    "CryptoCertificate": "all",
+    "CryptoSign": "all",
+    "CryptoSignXml": "all",
+    "CryptoSymmetricEncrypt": "all",
     "Date": ["GetOldValue"],
     "DateTime": ["GetOldValue"],
     "DBConnection": "all",
     "DomainPEM": "all",
     "ExcelCells": "all",
     "ExcelDocument": "all",
+    "Geography": [
+      "Distance",
+      "FromString",
+      "FromWkt",
+      "FromGeoJson",
+      "Intersect"
+    ],
+    "GeoLine": [
+      "Distance",
+      "FromString",
+      "FromWkt",
+      "FromGeoJson",
+      "Intersect"
+    ],
+    "GeoPoint": [
+      "Distance",
+      "FromString",
+      "FromWkt",
+      "FromGeoJson",
+      "Intersect"
+    ],
+    "GeoPolygon": [
+      "Area",
+      "Distance",
+      "FromString",
+      "FromWkt",
+      "FromGeoJson",
+      "Intersect"
+    ],
     "GUID": ["AutogenerateGuid", "IsMatch"],
+    "GXDataSelector": "all",
     "GxImage": "all",
+    "GXProgram": "all",
+    "GXProgramMetadata": "all",
+    "Image": ["GetOldValue"],
+    "ImagePEMs": "all",
     "LDAPClient": "all",
     "LongVarchar": ["Enable national language support", "GetOldValue"],
     "MailMessage": "all",
     "MailRecipient": "all",
     "MAPISession": "all",
+    "Meta_collection": "all",
     "Numeric": ["Autonumber", "GetOldValue"],
     "OutlookSession": "all",
+    "OutputGroup": "all",
     "POP3Session": "all",
     "Queue": "all",
     "QueueMessage": "all",
     "RecipientCollection": "all",
+    "SDObject": "all",
     "Synchronization": "all",
     "SMTPSession": "all",
     "Varchar": ["Enable national language support", "GetOldValue"],
     "VariablePEM": "all",
+    "Video": ["GetOldValue"],
     "Void": "all",
     "WApiActionPerformedEvent": "all",
     "WApiActivity": "all",
