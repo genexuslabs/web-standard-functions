@@ -925,8 +925,7 @@
       "ToFormattedString": "dtToFormattedString",
       "SetEmpty": "dtSetEmpty",
       "New": "dtNew",
-      "Set": "dtSet",
-      "ToDate": "dtTodate"
+      "Set": "dtSet"
     },
     "Boolean": {
       "IsNull": "bIsNull",
