@@ -1,4 +1,4 @@
-import { time, time_format } from "../time";
+import { timeImpl, time_format } from "../time";
 
 export const testCases: Array<[time_format, Date, String]> = [
   [time_format.format_12, new Date(1891, 8, 28, 13, 10, 10, 10), "1:10:10 PM"],
@@ -12,7 +12,7 @@ describe("time operation", () => {
     it(`time for ${t[1]} with format ${t[0]} should be equal to "${
       t[2]
     }"`, () => {
-      expect(time(t[0], t[1])).toEqual(t[2]);
+      expect(timeImpl(t[0], t[1])).toEqual(t[2]);
     });
   }
 });
