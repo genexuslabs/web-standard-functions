@@ -852,6 +852,27 @@
           "path": "./datetime/time",
           "name": "time",
           "alias": "dttime"
+        },
+        "AddMilliseconds": {
+          "path": "./datetime/addMilliseconds",
+          "name": "addMilliseconds"
+        },
+        "AddSeconds": {
+          "path": "./datetime/addSeconds",
+          "name": "addSeconds"
+        },
+        "AddMinutes": {
+          "path": "./datetime/addMinutes",
+          "name": "addMinutes"
+        },
+        "AddHours": {
+          "path": "./datetime/addHours",
+          "name": "addHours"
+        },
+        "ToDate": {
+          "path": "./datetime/toDate",
+          "name": "toDate",
+          "alias": "dttoDate"
         }
       }
     }
@@ -896,8 +917,7 @@
       "ToFormattedString": "dtToFormattedString",
       "SetEmpty": "dtSetEmpty",
       "New": "dtNew",
-      "Set": "dtSet",
-      "ToDate": "dtTodate"
+      "Set": "dtSet"
     },
     "Boolean": {
       "IsNull": "bIsNull",
