@@ -41,6 +41,10 @@
           "path": "./web/getCookie",
           "name": "getCookie"
         },
+        "GetLanguage": {
+          "path": "./misc/getLanguage",
+          "name": "getLanguage"
+        },
         "HTMLClean": {
           "path": "./text/htmlClean",
           "name": "htmlClean"
@@ -101,6 +105,10 @@
         "SetCookie": {
           "path": "./web/setCookie",
           "name": "setCookie"
+        },
+        "SetLanguage": {
+          "path": "./misc/setLanguage",
+          "name": "setLanguage"
         },
         "Str": {
           "path": "./numeric/toString",
@@ -754,11 +762,59 @@
     },
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
       "path": "./gxcore/sd/synchronization/synchronizationEvents"
+    },
+    "XMLReader": {
+      "path": "./types/xmlreader"
+    },
+    "XMLWriter": {
+      "path": "./types/xmlwriter"
     }
   },
   "disambiguated": {
     "Core": {
       "Null": "isNullValue"
+    },
+    "Character": {
+      "IsNull": "cIsNull",
+      "SetNull": "cSetNull",
+      "ToFormattedString": "cToFormattedString",
+      "SetEmpty": "cSetEmpty"
+    },
+    "Varchar": {
+      "IsNull": "vIsNull",
+      "SetNull": "vSetNull",
+      "ToFormattedString": "vToFormattedString",
+      "SetEmpty": "vSetEmpty"
+    },
+    "LongVarchar": {
+      "IsNull": "lIsNull",
+      "SetNull": "lSetNull",
+      "ToFormattedString": "lToFormattedString",
+      "SetEmpty": "lSetEmpty"
+    },
+    "Numeric": {
+      "IsNull": "nIsNull",
+      "SetNull": "nSetNull",
+      "ToFormattedString": "nToFormattedString",
+      "SetEmpty": "nSetEmpty"
+    },
+    "Date": {
+      "IsNull": "dIsNull",
+      "SetNull": "dSetNull",
+      "ToFormattedString": "dToFormattedString",
+      "SetEmpty": "dSetEmpty"
+    },
+    "DateTime": {
+      "IsNull": "dtIsNull",
+      "SetNull": "dtSetNull",
+      "ToFormattedString": "dtToFormattedString",
+      "SetEmpty": "dtSetEmpty"
+    },
+    "Boolean": {
+      "IsNull": "bIsNull",
+      "SetNull": "bSetNull",
+      "ToFormattedString": "bToFormattedString",
+      "SetEmpty": "bSetEmpty"
     },
     "TextSearch": {
       "Add": "textSearchadd",
@@ -782,6 +838,7 @@
   "ignored": {
     "AttributePEM": "all",
     "BasedOnEnumeratedDomain": "all",
+    "Boolean": ["GetOldValue"],
     "Core": [
       "Default",
       "Average",
@@ -808,7 +865,9 @@
       "XOrder",
       "XUse"
     ],
-    "Character": ["Enable national language support"],
+    "Character": ["Enable national language support", "GetOldValue"],
+    "Date": ["GetOldValue"],
+    "DateTime": ["GetOldValue"],
     "DBConnection": "all",
     "DomainPEM": "all",
     "ExcelCells": "all",
@@ -816,11 +875,11 @@
     "GUID": ["AutogenerateGuid", "IsMatch"],
     "GxImage": "all",
     "LDAPClient": "all",
-    "LongVarchar": ["Enable national language support"],
+    "LongVarchar": ["Enable national language support", "GetOldValue"],
     "MailMessage": "all",
     "MailRecipient": "all",
     "MAPISession": "all",
-    "Numeric": ["Autonumber"],
+    "Numeric": ["Autonumber", "GetOldValue"],
     "OutlookSession": "all",
     "POP3Session": "all",
     "Queue": "all",
@@ -828,7 +887,7 @@
     "RecipientCollection": "all",
     "Synchronization": "all",
     "SMTPSession": "all",
-    "Varchar": ["Enable national language support"],
+    "Varchar": ["Enable national language support", "GetOldValue"],
     "VariablePEM": "all",
     "Void": "all",
     "WApiActionPerformedEvent": "all",
