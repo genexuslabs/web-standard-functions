@@ -34,4 +34,15 @@ describe("ConfigurationState date type", () => {
     let lang = ConfigurationState.getInstance().getLanguage();
     expect(lang).toBe("French");
   });
+
+  it("unknown dynamic property should return empty string", () => {
+    let result = ConfigurationState.getInstance().getProperty("NotSet");
+    expect(result).toBe("");
+  });
+
+  it("known dynamic property should return 'value'", () => {
+    ConfigurationState.getInstance().setProperty("dynproperty", "value");
+    let result = ConfigurationState.getInstance().getProperty("dynproperty");
+    expect(result).toBe("value");
+  });
 });

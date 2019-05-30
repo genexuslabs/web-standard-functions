@@ -1,4 +1,5 @@
 const keyPrefix: string = "gx.config.configurationstate";
+const keyDynPtyPrefix: string = "gx.config.configurationstate.dynpty";
 const languageKey: string = "language";
 const validLanguagesKey: string = "languages";
 
@@ -22,7 +23,6 @@ export class ConfigurationState {
    * Loads properties from the environment
    */
   loadProperties(props: { [key: string]: string }) {
-    console.log(`Props: ${props}`);
     let instance = ConfigurationState.getInstance();
     instance.setStoredValue(validLanguagesKey, props[validLanguagesKey]);
     instance.setLanguage(props[languageKey]);
@@ -56,17 +56,58 @@ export class ConfigurationState {
     return languages ? languages.split(",") : [];
   }
 
+  // Generic Properties
+
+  /**
+   * Returns generic property value as String
+   */
+  getProperty(pty: string): string {
+    return this.getDynStoredValue(pty) || "";
+  }
+
+  /**
+   * Sets a generic property
+   * @param ptyName
+   * @param ptyValue
+   */
+  setProperty(ptyName: string, ptyValue: string) {
+    this.setDynStoredValue(ptyName, ptyValue);
+  }
+
   // Local storage
+  private getStoredValueWithKey(storagekey: string): string {
+    return window.localStorage.getItem(storagekey);
+  }
+
+  private setStoredValueWithKey(storagekey: string, value: string) {
+    window.localStorage.setItem(storagekey, value);
+  }
+
+  // Static storage
 
   private storageKey(key: string): string {
     return `${keyPrefix}.${key}`;
   }
 
   private getStoredValue(key: string): string {
-    return window.localStorage.getItem(this.storageKey(key));
+    return this.getStoredValueWithKey(this.storageKey(key));
   }
 
   private setStoredValue(key: string, value: string) {
-    window.localStorage.setItem(this.storageKey(key), value);
+    this.setStoredValueWithKey(this.storageKey(key), value);
+  }
+
+  // Dynamic storage
+
+  private storageDynamicKey(key: string): string {
+    return `${keyDynPtyPrefix}.${key}`;
+  }
+
+  private getDynStoredValue(key: string): string {
+    return this.getStoredValueWithKey(this.storageDynamicKey(key));
+  }
+
+  private setDynStoredValue(key: string, value: string) {
+    this.setStoredValueWithKey(this.storageDynamicKey(key), value);
   }
 }
