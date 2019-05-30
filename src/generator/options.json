@@ -883,6 +883,15 @@
           "alias": "dttoDate"
         }
       }
+    },
+    "GeneXus.SD.Synchronization.SynchronizationEvents": {
+      "path": "./gxcore/sd/synchronization/synchronizationEvents"
+    },
+    "XMLReader": {
+      "path": "./types/xmlreader"
+    },
+    "XMLWriter": {
+      "path": "./types/xmlwriter"
     }
   },
   "disambiguated": {
