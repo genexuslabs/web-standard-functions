@@ -44,10 +44,6 @@
           "path": "./web/getCookie",
           "name": "getCookie"
         },
-        "HTMLClean": {
-          "path": "./text/htmlClean",
-          "name": "htmlClean"
-        },
         "Iif": {
           "path": "./misc/iif",
           "name": "iif"
@@ -185,11 +181,6 @@
           "name": "fromString",
           "alias": "cFromString"
         },
-        "HTMLClean": {
-          "path": "./text/htmlClean",
-          "name": "htmlClean",
-          "alias": "cHtmlClean"
-        },
         "IndexOf": {
           "path": "./text/indexOf",
           "name": "indexOf",
@@ -324,11 +315,6 @@
           "name": "fromString",
           "alias": "vFromString"
         },
-        "HTMLClean": {
-          "path": "./text/htmlClean",
-          "name": "htmlClean",
-          "alias": "vHtmlClean"
-        },
         "IndexOf": {
           "path": "./text/indexOf",
           "name": "indexOf",
@@ -462,11 +448,6 @@
           "path": "./text/fromString",
           "name": "fromString",
           "alias": "lFromString"
-        },
-        "HTMLClean": {
-          "path": "./text/htmlClean",
-          "name": "htmlClean",
-          "alias": "lHtmlClean"
         },
         "IndexOf": {
           "path": "./text/indexOf",
@@ -764,19 +745,22 @@
       "IsNull": "cIsNull",
       "SetNull": "cSetNull",
       "ToFormattedString": "cToFormattedString",
-      "SetEmpty": "cSetEmpty"
+      "SetEmpty": "cSetEmpty",
+      "HTMLClean": "cHtmlClean"
     },
     "Varchar": {
       "IsNull": "vIsNull",
       "SetNull": "vSetNull",
       "ToFormattedString": "vToFormattedString",
-      "SetEmpty": "vSetEmpty"
+      "SetEmpty": "vSetEmpty",
+      "HTMLClean": "vHtmlClean"
     },
     "LongVarchar": {
       "IsNull": "lIsNull",
       "SetNull": "lSetNull",
       "ToFormattedString": "lToFormattedString",
-      "SetEmpty": "lSetEmpty"
+      "SetEmpty": "lSetEmpty",
+      "HTMLClean": "lHtmlClean"
     },
     "Numeric": {
       "IsNull": "nIsNull",
@@ -901,7 +885,8 @@
       "GetAbsoluteName": "fileGetAbsoluteName",
       "GetName": "fileGetName",
       "Open": "fileOpen",
-      "Rename": "fileRename"
+      "Rename": "fileRename",
+      "HTMLClean": "fileHtmlClean"
     },
     "FileCollection": {
       "Item": "fileCollectionItem"
