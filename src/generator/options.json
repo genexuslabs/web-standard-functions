@@ -933,21 +933,8 @@
       "FromString": "dtFromString",
       "ToString": "dtToString",
       "ToFormattedString": "dtToFormattedString",
-      "IsEmpty": "dtIsEmpty",
-      "SetEmpty": "dtSetEmpty",
-      "Age": "dtAge",
-      "Day": "dtDay",
-      "Month": "dtMonth",
-      "Year": "dtYear",
-      "Hour": "dtHour",
-      "Minute": "dtMinute",
-      "Seconds": "dtSeconds",
-      "Now": "dtNow",
-      "Second": "dtSecond",
-      "Time": "dtTime",
       "Set": "dtSet",
-      "New": "dtNew",
-      "ToDate": "dtToDate"
+      "New": "dtNew"
     },
     "Boolean": {
       "IsNull": "bIsNull",
