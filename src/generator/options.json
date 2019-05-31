@@ -44,6 +44,10 @@
           "path": "./web/getCookie",
           "name": "getCookie"
         },
+        "GetLanguage": {
+          "path": "./misc/getLanguage",
+          "name": "getLanguage"
+        },
         "Iif": {
           "path": "./misc/iif",
           "name": "iif"
@@ -100,6 +104,10 @@
         "SetCookie": {
           "path": "./web/setCookie",
           "name": "setCookie"
+        },
+        "SetLanguage": {
+          "path": "./misc/setLanguage",
+          "name": "setLanguage"
         },
         "Str": {
           "path": "./numeric/toString",
@@ -735,6 +743,15 @@
     },
     "GeneXus.Client.ClientInformation": {
       "path": "./gxcore/client/client-information"
+    },
+    "GeneXus.SD.Synchronization.SynchronizationEvents": {
+      "path": "./gxcore/sd/synchronization/synchronizationEvents"
+    },
+    "XMLReader": {
+      "path": "./types/xmlreader"
+    },
+    "XMLWriter": {
+      "path": "./types/xmlwriter"
     }
   },
   "disambiguated": {
