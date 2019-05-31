@@ -3,6 +3,11 @@ const keyDynPtyPrefix: string = "gx.config.configurationstate.dynpty";
 const languageKey: string = "language";
 const validLanguagesKey: string = "languages";
 
+import {
+  detect as timezoneDetect,
+  storageKey as timezoneStorageKey
+} from "../datetime/timezone";
+
 export class ConfigurationState {
   // Singleton
 
@@ -11,6 +16,10 @@ export class ConfigurationState {
   static getInstance() {
     if (!ConfigurationState.instance) {
       ConfigurationState.instance = new ConfigurationState();
+      ConfigurationState.instance.setDynStoredValue(
+        timezoneStorageKey,
+        timezoneDetect()
+      );
     }
     return ConfigurationState.instance;
   }
@@ -103,11 +112,11 @@ export class ConfigurationState {
     return `${keyDynPtyPrefix}.${key}`;
   }
 
-  private getDynStoredValue(key: string): string {
+  public getDynStoredValue(key: string): string {
     return this.getStoredValueWithKey(this.storageDynamicKey(key));
   }
 
-  private setDynStoredValue(key: string, value: string) {
+  public setDynStoredValue(key: string, value: string) {
     this.setStoredValueWithKey(this.storageDynamicKey(key), value);
   }
 }
