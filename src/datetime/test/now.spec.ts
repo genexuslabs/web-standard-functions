@@ -6,6 +6,8 @@ describe("now operation", () => {
     let nowValue = now();
     let nowRaw = new Date();
 
+    console.log(nowValue, nowRaw);
+
     expect(difference(nowValue, nowRaw) < 2).toBeTruthy();
   });
 });

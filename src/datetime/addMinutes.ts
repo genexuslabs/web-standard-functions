@@ -5,8 +5,8 @@
  * @return Date
  */
 
+import { minutesToMilliseconds } from "./core";
+
 export const addMinutes = (dateFrom: Date, minutes: number): Date => {
-  let ret = new Date();
-  ret.setTime(dateFrom.getTime() + minutes * 60000);
-  return ret;
+  return new Date(dateFrom.getTime() + minutesToMilliseconds(minutes));
 };

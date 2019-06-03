@@ -7,13 +7,13 @@
 
 import { DateTime } from "luxon";
 import { getTimezone } from "./getTimezone";
-import { minuteToMiliseconds } from "./core";
+import { minutesToMilliseconds } from "./core";
 import { timezones } from "./timezone";
 
 export const fromTimezone = (fromDate: Date, timezoneFrom: timezones): Date => {
   let offsetFrom = DateTime.fromJSDate(fromDate).setZone(timezoneFrom).offset;
   let offsetTo = DateTime.fromJSDate(fromDate).setZone(getTimezone()).offset;
   return new Date(
-    fromDate.getTime() + minuteToMiliseconds(offsetTo - offsetFrom)
+    fromDate.getTime() + minutesToMilliseconds(offsetTo - offsetFrom)
   );
 };

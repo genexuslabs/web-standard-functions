@@ -6,11 +6,11 @@
 
 import { DateTime, fromJSDate } from "luxon";
 import { getTimezone } from "./getTimezone";
-import { minuteToMiliseconds } from "./core";
+import { minutesToMilliseconds } from "./core";
 
 export const toUniversalTime = (fromDate: Date): Date => {
   let offset = DateTime.fromJSDate(fromDate).setZone(getTimezone()).offset;
   let ret = new Date();
-  ret.setTime(fromDate.getTime() - minuteToMiliseconds(offset));
+  ret.setTime(fromDate.getTime() - minutesToMilliseconds(offset));
   return ret;
 };

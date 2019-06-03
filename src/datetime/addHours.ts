@@ -5,8 +5,8 @@
  * @return Date
  */
 
+import { hoursToMilliseconds } from "./core";
+
 export const addHours = (dateFrom: Date, hours: number): Date => {
-  let ret = new Date();
-  ret.setTime(dateFrom.getTime() + hours * 3600000);
-  return ret;
+  return new Date(dateFrom.getTime() + hoursToMilliseconds(hours));
 };

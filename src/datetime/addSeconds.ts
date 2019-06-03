@@ -5,8 +5,8 @@
  * @return Date
  */
 
+import { secondsToMilliseconds } from "./core";
+
 export const addSeconds = (dateFrom: Date, seconds: number): Date => {
-  let ret = new Date();
-  ret.setTime(dateFrom.getTime() + seconds * 1000);
-  return ret;
+  return new Date(dateFrom.getTime() + secondsToMilliseconds(seconds));
 };
