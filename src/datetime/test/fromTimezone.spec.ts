@@ -1,6 +1,7 @@
 import { fromTimezone } from "../fromTimezone";
 import { timezones } from "../timezone";
 import { getTimezone } from "../getTimezone";
+import { setTimezone } from "../setTimezone";
 
 export const testCases: Array<[timezones, Date, Date]> = [
   [
@@ -31,6 +32,7 @@ export const testCases: Array<[timezones, Date, Date]> = [
 ];
 
 describe("fromTimezone operation", () => {
+  setTimezone(timezones.Montevideo);
   for (const t of testCases) {
     it(`fromTimezone for timezone ${t[0]} of ${
       t[1]
