@@ -12,8 +12,8 @@ import { timezones } from "./timezone";
 
 export const fromTimezone = (fromDate: Date, timezoneFrom: timezones): Date => {
   let offsetFrom = DateTime.fromJSDate(fromDate).setZone(timezoneFrom).offset;
-  let ret = new Date(fromDate.getTime());
-  let offsetTo = -ret.getTimezoneOffset();
-  ret.setTime(fromDate.getTime() + minuteToMiliseconds(offsetTo - offsetFrom));
-  return ret;
+  let offsetTo = DateTime.fromJSDate(fromDate).setZone(getTimezone()).offset;
+  return new Date(
+    fromDate.getTime() + minuteToMiliseconds(offsetTo - offsetFrom)
+  );
 };
