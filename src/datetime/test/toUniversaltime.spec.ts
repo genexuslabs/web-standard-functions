@@ -1,4 +1,4 @@
-import { toUniversalTime } from "../toUniversaltime";
+import { toUniversalTime } from "../toUniversalTime";
 import { timezones } from "../timezone";
 import { setTimezone } from "../setTimezone";
 
@@ -30,9 +30,9 @@ export const testCases: Array<[timezones, Date, Date]> = [
   ]
 ];
 
-describe("toUniversaltime operation", () => {
+describe("toUniversalTime operation", () => {
   for (const t of testCases) {
-    it(`toUniversaltime for timezone ${t[0]} of ${t[1]} should be equal to ${
+    it(`toUniversalTime for timezone ${t[0]} of ${t[1]} should be equal to ${
       t[2]
     }`, () => {
       setTimezone(t[0]);

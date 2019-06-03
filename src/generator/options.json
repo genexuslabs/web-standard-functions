@@ -879,7 +879,7 @@
           "name": "currentOffset"
         },
         "ToUniversalTime": {
-          "path": "./datetime/toUniversaltime",
+          "path": "./datetime/toUniversalTime",
           "name": "toUniversalTime"
         },
         "FromTimeZone": {
