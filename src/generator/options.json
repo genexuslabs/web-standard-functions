@@ -880,7 +880,7 @@
         },
         "ToUniversalTime": {
           "path": "./datetime/toUniversaltime",
-          "name": "toUniversaltime"
+          "name": "toUniversalTime"
         },
         "FromTimeZone": {
           "path": "./datetime/fromTimezone",
