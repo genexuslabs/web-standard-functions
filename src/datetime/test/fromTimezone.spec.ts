@@ -5,6 +5,18 @@ import { setTimezone } from "../setTimezone";
 
 export const testCases: Array<[timezones, Date, Date]> = [
   [
+    //Montevideo 2012 in DST
+    timezones.Buenos_Aires,
+    new Date(2012, 11, 28, 2, 0, 0, 0),
+    new Date(2012, 11, 28, 3, 0, 0, 0)
+  ],
+  [
+    //Montevideo 2018 No DST
+    timezones.Buenos_Aires,
+    new Date(2018, 11, 28, 2, 0, 0, 0),
+    new Date(2018, 11, 28, 2, 0, 0, 0)
+  ],
+  [
     timezones.Buenos_Aires,
     new Date(2019, 8, 28, 2, 0, 0, 0),
     new Date(2019, 8, 28, 2, 0, 0, 0)
