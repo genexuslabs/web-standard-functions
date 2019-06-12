@@ -1,5 +1,6 @@
 import { GUID } from "../../../types/guid";
 
+/* tslint:disable:no-empty */
 export class GeneXusSDSynchronizationSynchronizationEvents {
   /**
    * Checks if there are any pending changes to submit to the server.

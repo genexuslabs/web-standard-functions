@@ -1,6 +1,6 @@
 {
   "name": "@genexus/web-standard-functions",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "GeneXus JavaScript standard functions library for web generators",
   "main": "dist/web-standard-functions.js",
   "module": "dist/lib-esm/index.js",
@@ -45,9 +45,11 @@
   "devDependencies": {
     "@types/bignumber.js": "^5.0.0",
     "@types/jest": "^23.3.14",
+    "@types/pubsub-js": "^1.5.18",
     "env-cmd": "^8.0.2",
     "husky": "^2.4.0",
     "jest": "^24.8.0",
+    "wait-for-expect": "^1.2.0",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0",
     "shx": "^0.3.2",
@@ -64,6 +66,7 @@
     "jdu": "^1.0.0",
     "jstz": "^2.1.1",
     "luxon": "^1.12.0",
+    "pubsub-js": "^1.7.0",
     "tidy-html5": "^0.1.1",
     "unicode-substring": "^1.0.0",
     "uuid": "^3.3.2",
