@@ -80,6 +80,11 @@
           "path": "./math/mod",
           "name": "mod"
         },
+        "Msg": {
+          "path": "./misc/msg",
+          "name": "msg",
+          "notifiesGenerator": true
+        },
         "NewLine": {
           "path": "./text/newline",
           "name": "newLine"
