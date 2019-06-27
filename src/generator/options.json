@@ -32,6 +32,11 @@
           "path": "./text/concat",
           "name": "concat"
         },
+        "Confirm": {
+          "path": "./misc/confirm",
+          "name": "confirm",
+          "notifiesGenerator": true
+        },
         "Format": {
           "path": "./text/format",
           "name": "format"
