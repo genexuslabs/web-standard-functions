@@ -1,5 +1,6 @@
-import { publish, subscribe } from "../pubSub/pubSub";
+import { publish, subscribe, cancelSubscription } from "../pubSub/pubSub";
 import { stdToGeneratorPublishedMessage as prefix } from "./helpers";
+import { unSubscribe } from "../web/globalEvents";
 
 /**
  * Displays a message that allows capturing end user confirmation
@@ -8,12 +9,18 @@ import { stdToGeneratorPublishedMessage as prefix } from "./helpers";
  */
 export const confirm = async (str: string): Promise<boolean> => {
   return new Promise<boolean>(resolve => {
-    subscribe(`${prefix}.confirm.ok`, () => {
+    let sOk = subscribe(`${prefix}.confirm.ok`, () => {
+      unsubscribe();
       resolve(true);
     });
-    subscribe(`${prefix}.confirm.cancel`, () => {
+    let sCancel = subscribe(`${prefix}.confirm.cancel`, () => {
+      unsubscribe();
       resolve(false);
     });
+    let unsubscribe = () => {
+      cancelSubscription(sOk);
+      cancelSubscription(sCancel);
+    };
     publish(`${prefix}.confirm`, str);
   });
 };
