@@ -1,5 +1,5 @@
 import { confirm } from "../confirm";
-import { publish } from "../../pubSub/pubSub";
+import { publish, subscribe, cancelSubscription } from "../../pubSub/pubSub";
 import { stdToGeneratorPublishedMessage as prefix } from "../helpers";
 
 describe("confirm test", () => {
@@ -7,6 +7,12 @@ describe("confirm test", () => {
     setTimeout(() => {
       publish(`${prefix}.confirm.ok`);
     }, 1000);
+
+    let confSubscription = subscribe(`${prefix}.confirm`, (...data: any[]) => {
+      expect(data.length).toBe(1);
+      expect(data[0]).toEqual("Confirm?");
+      cancelSubscription(confSubscription);
+    });
 
     let result = await confirm("Confirm?");
     expect(result).toBe(true);
@@ -16,7 +22,13 @@ describe("confirm test", () => {
       publish(`${prefix}.confirm.cancel`);
     }, 1000);
 
-    let result = await confirm("Confrim?");
+    let confSubscription = subscribe(`${prefix}.confirm`, (...data: any[]) => {
+      expect(data.length).toBe(1);
+      expect(data[0]).toEqual("Confirm?");
+      cancelSubscription(confSubscription);
+    });
+
+    let result = await confirm("Confirm?");
     expect(result).toBe(false);
   });
 });
