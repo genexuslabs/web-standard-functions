@@ -9,7 +9,7 @@ describe("confirm test", () => {
     }, 1000);
 
     let result = await confirm("Confirm?");
-    expect(result).toBeTruthy();
+    expect(result).toBe(true);
   });
   it("should return false when canceled", async () => {
     setTimeout(() => {
@@ -17,6 +17,6 @@ describe("confirm test", () => {
     }, 1000);
 
     let result = await confirm("Confrim?");
-    expect(result).toBeFalsy();
+    expect(result).toBe(false);
   });
 });
