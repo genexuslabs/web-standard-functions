@@ -8,7 +8,7 @@ describe("confirm test", () => {
       publish(`${prefix}.confirm.ok`);
     }, 1000);
 
-    let result = await confirm("Confrim?");
+    let result = await confirm("Confirm?");
     expect(result).toBeTruthy();
   });
   it("should return false when canceled", async () => {
