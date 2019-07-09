@@ -29,6 +29,15 @@ export class ConfigurationState {
   // Loading model properties
 
   /**
+   * Loads settings from a JSON object
+   * @param props The JSON object containing the settings to load
+   */
+  loadApplicationSettings(props: { [key: string]: any }) {
+    let instance = ConfigurationState.getInstance();
+    // TODO
+  }
+
+  /**
    * Loads properties from the environment
    */
   loadProperties(props: { [key: string]: string }) {
