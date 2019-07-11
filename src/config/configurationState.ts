@@ -32,7 +32,7 @@ export class ConfigurationState {
    * Loads settings from a JSON object
    * @param props The JSON object containing the settings to load
    */
-  loadApplicationSettings(props: { [key: string]: any }) {
+  static loadApplicationSettings(props: { [key: string]: any }) {
     let instance = ConfigurationState.getInstance();
     // TODO
   }
