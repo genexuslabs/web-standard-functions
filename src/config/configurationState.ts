@@ -52,9 +52,8 @@ export class ConfigurationState {
    * Loads properties from the environment
    */
   loadProperties(props: { [key: string]: string }) {
-    let instance = ConfigurationState.getInstance();
-    instance.setStoredValue(validLanguagesKey, props[validLanguagesKey]);
-    instance.setLanguage(props[languageKey]);
+    this.setStoredValue(validLanguagesKey, props[validLanguagesKey]);
+    this.setLanguage(props[languageKey]);
   }
 
   // Language
