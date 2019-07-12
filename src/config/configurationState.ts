@@ -2,6 +2,7 @@ const keyPrefix: string = "gx.config.configurationstate";
 const keyDynPtyPrefix: string = "gx.config.configurationstate.dynpty";
 const languageKey: string = "language";
 const validLanguagesKey: string = "languages";
+const defaultLanguageKey: string = "DEFAULT_LANGUAGE";
 
 import {
   detect as timezoneDetect,
@@ -30,11 +31,21 @@ export class ConfigurationState {
 
   /**
    * Loads settings from a JSON object
-   * @param props The JSON object containing the settings to load
+   * @param appSettings The JSON object containing the settings to load
    */
-  static loadApplicationSettings(props: { [key: string]: any }) {
+  static loadApplicationSettings(appSettings: { [key: string]: any }) {
     let instance = ConfigurationState.getInstance();
-    // TODO
+    for (let key in appSettings) {
+      instance.setDynStoredValue(key, appSettings[key]);
+    }
+
+    if (instance.getLanguage() == null) {
+      let defaultLanguage = instance.getDynStoredValue(defaultLanguageKey);
+      if (defaultLanguage != null) {
+        instance.setStoredValue(validLanguagesKey, defaultLanguage);
+        instance.setLanguage(defaultLanguage);
+      }
+    }
   }
 
   /**
