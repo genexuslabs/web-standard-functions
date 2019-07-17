@@ -903,11 +903,13 @@
         "Confirm": {
           "path": "./misc/confirm",
           "name": "confirm",
+          "alias": "interopConfirm",
           "notifiesGenerator": true
         },
         "Msg": {
           "path": "./misc/msg",
           "name": "msg",
+          "alias": "interopMsg",
           "notifiesGenerator": true
         }
       }
