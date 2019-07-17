@@ -898,6 +898,20 @@
         }
       }
     },
+    "GeneXus.SD.Interop": {
+      "members": {
+        "Confirm": {
+          "path": "./misc/confirm",
+          "name": "confirm",
+          "notifiesGenerator": true
+        },
+        "Msg": {
+          "path": "./misc/msg",
+          "name": "msg",
+          "notifiesGenerator": true
+        }
+      }
+    },
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
       "path": "./gxcore/sd/synchronization/synchronizationEvents"
     },
@@ -1199,8 +1213,6 @@
       "Delete": "deleteAction"
     },
     "GeneXus.SD.Interop": {
-      "Confirm": "interopConfirm",
-      "Msg": "interopMsg",
       "Open": "interopOpen"
     },
     "GeneXus.SD.Media.Audio": {
