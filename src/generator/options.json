@@ -914,6 +914,9 @@
         }
       }
     },
+    "GeneXus.SD.Network": {
+      "path": "./gxcore/sd/network"
+    },
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
       "path": "./gxcore/sd/synchronization/synchronizationEvents"
     },
