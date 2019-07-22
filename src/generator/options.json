@@ -900,6 +900,10 @@
     },
     "GeneXus.SD.Interop": {
       "members": {
+        "CanOpen": {
+          "path": "./gxcore/sd/interop",
+          "name": "canOpen"
+        },
         "Confirm": {
           "path": "./misc/confirm",
           "name": "confirm",
@@ -911,6 +915,15 @@
           "name": "msg",
           "alias": "interopMsg",
           "notifiesGenerator": true
+        },
+        "Open": {
+          "path": "./gxcore/sd/interop",
+          "name": "openInBrowser",
+          "alias": "interopOpen"
+        },
+        "OpenInBrowser": {
+          "path": "./gxcore/sd/interop",
+          "name": "openInBrowser"
         }
       }
     },
@@ -1213,9 +1226,6 @@
     },
     "GeneXus.SD.Actions": {
       "Delete": "deleteAction"
-    },
-    "GeneXus.SD.Interop": {
-      "Open": "interopOpen"
     },
     "GeneXus.SD.Media.Audio": {
       "Stop": "audioStop"
