@@ -3,12 +3,13 @@ import { ConfigurationState } from "../../../config/configurationState";
 
 describe("Network external object", () => {
   it("should return the application's server URL", () => {
-    // TODO: load application settings
-    // ConfigurationState.loadApplicationSettings({
-    //     SERVICE_HOSTNAME: "http://localhost/TestAngular/",
-    //     SERVICE_BASE_PATH: "",
-    //   });
-    //expect(GeneXusSDNetwork.applicationServerURL).toBe("http://localhost/TestAngular/");
+    ConfigurationState.loadApplicationSettings({
+      SERVICE_HOSTNAME: "http://localhost/",
+      SERVICE_BASE_PATH: "TestAngular/"
+    });
+    expect(GeneXusSDNetwork.applicationServerURL).toBe(
+      "http://localhost/TestAngular/"
+    );
   });
 
   it("should be able to call IsServerAvailable without parameters", () => {
