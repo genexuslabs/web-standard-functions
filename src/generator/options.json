@@ -258,6 +258,11 @@
           "name": "replaceRegExp",
           "alias": "cReplaceRegExp"
         },
+        "SetEmpty": {
+          "path": "./text/setEmpty",
+          "name": "setEmpty",
+          "alias": "cSetEmpty"
+        },
         "SplitRegEx": {
           "path": "./text/splitRegExp",
           "name": "splitRegExp",
@@ -392,6 +397,11 @@
           "name": "replaceRegExp",
           "alias": "vReplaceRegExp"
         },
+        "SetEmpty": {
+          "path": "./text/setEmpty",
+          "name": "setEmpty",
+          "alias": "vSetEmpty"
+        },
         "SplitRegEx": {
           "path": "./text/splitRegExp",
           "name": "splitRegExp",
@@ -525,6 +535,11 @@
           "path": "./text/replaceRegExp",
           "name": "replaceRegExp",
           "alias": "lReplaceRegExp"
+        },
+        "SetEmpty": {
+          "path": "./text/setEmpty",
+          "name": "setEmpty",
+          "alias": "lSetEmpty"
         },
         "SplitRegEx": {
           "path": "./text/splitRegExp",
@@ -955,6 +970,11 @@
           "path": "./text/isEmpty",
           "name": "isEmpty",
           "alias": "imageIsEmpty"
+        },
+        "SetEmpty": {
+          "path": "./text/setEmpty",
+          "name": "setEmpty",
+          "alias": "imageSetEmpty"
         }
       }
     },
@@ -1176,8 +1196,7 @@
       "SetNull": "imageSetNull",
       "FromString": "imageFromString",
       "ToString": "imageToString",
-      "ToFormattedString": "imageToFormattedString",
-      "SetEmpty": "imageSetEmpty"
+      "ToFormattedString": "imageToFormattedString"
     },
     "Properties": {
       "Clear": "propClear",
