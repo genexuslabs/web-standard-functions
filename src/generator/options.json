@@ -731,33 +731,6 @@
         }
       }
     },
-    "GeneXus.Client.ClientStorage": {
-      "members": {
-        "Set": {
-          "path": "./gxcore/client/client-storage/set",
-          "name": "set",
-          "alias": "clientStorageSet"
-        },
-        "Get": {
-          "path": "./gxcore/client/client-storage/get",
-          "name": "get",
-          "alias": "clientStorageGet"
-        },
-        "Remove": {
-          "path": "./gxcore/client/client-storage/remove",
-          "name": "remove",
-          "alias": "clientStorageRemove"
-        },
-        "Clear": {
-          "path": "./gxcore/client/client-storage/clear",
-          "name": "clear",
-          "alias": "clientStorageClear"
-        }
-      }
-    },
-    "GeneXus.Client.ClientInformation": {
-      "path": "./gxcore/client/client-information"
-    },
     "DateTime": {
       "members": {
         "AddDays": {
@@ -898,6 +871,33 @@
         }
       }
     },
+    "GeneXus.Client.ClientStorage": {
+      "members": {
+        "Set": {
+          "path": "./gxcore/client/client-storage/set",
+          "name": "set",
+          "alias": "clientStorageSet"
+        },
+        "Get": {
+          "path": "./gxcore/client/client-storage/get",
+          "name": "get",
+          "alias": "clientStorageGet"
+        },
+        "Remove": {
+          "path": "./gxcore/client/client-storage/remove",
+          "name": "remove",
+          "alias": "clientStorageRemove"
+        },
+        "Clear": {
+          "path": "./gxcore/client/client-storage/clear",
+          "name": "clear",
+          "alias": "clientStorageClear"
+        }
+      }
+    },
+    "GeneXus.Client.ClientInformation": {
+      "path": "./gxcore/client/client-information"
+    },
     "GeneXus.SD.Interop": {
       "members": {
         "CanOpen": {
@@ -948,6 +948,15 @@
     },
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
       "path": "./gxcore/sd/synchronization/synchronizationEvents"
+    },
+    "Image": {
+      "members": {
+        "IsEmpty": {
+          "path": "./text/isEmpty",
+          "name": "isEmpty",
+          "alias": "imageIsEmpty"
+        }
+      }
     },
     "XMLReader": {
       "path": "./types/xmlreader"
@@ -1168,7 +1177,6 @@
       "FromString": "imageFromString",
       "ToString": "imageToString",
       "ToFormattedString": "imageToFormattedString",
-      "IsEmpty": "imageIsEmpty",
       "SetEmpty": "imageSetEmpty"
     },
     "Properties": {
