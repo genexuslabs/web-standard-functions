@@ -927,6 +927,14 @@
         }
       }
     },
+    "GeneXus.SD.Media.Camera": {
+      "members": {
+        "TakePhoto": {
+          "path": "./gxcore/sd/media/photoLibrary/takePhoto",
+          "name": "takePhoto"
+        }
+      }
+    },
     "GeneXus.SD.Media.PhotoLibrary": {
       "members": {
         "ChoosImage": {
