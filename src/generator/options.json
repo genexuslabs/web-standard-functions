@@ -927,6 +927,14 @@
         }
       }
     },
+    "GeneXus.SD.Media.PhotoLibrary": {
+      "members": {
+        "ChoosImage": {
+          "path": "./gxcore/sd/media/photoLibrary/chooseImage",
+          "name": "chooseImage"
+        }
+      }
+    },
     "GeneXus.SD.Network": {
       "path": "./gxcore/sd/network"
     },
