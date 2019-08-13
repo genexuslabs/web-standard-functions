@@ -1,6 +1,4 @@
-import { publish, subscribe, cancelSubscription } from "../pubSub/pubSub";
-import { stdToGeneratorPublishedMessage as prefix } from "./helpers";
-import { GUID } from "../types/guid";
+import { ResolverFunc, publishCall } from "./publishCall";
 
 /**
  * Displays a message that allows capturing end user confirmation
@@ -8,20 +6,12 @@ import { GUID } from "../types/guid";
  * @return boolean
  */
 export const confirm = async (str: string): Promise<boolean> => {
-  return new Promise<boolean>(resolve => {
-    let guid = GUID.newGuid().toString();
-    let sOk = subscribe(`${prefix}.confirm.${guid}.ok`, () => {
-      unsubscribe();
-      resolve(true);
-    });
-    let sCancel = subscribe(`${prefix}.confirm.${guid}.cancel`, () => {
-      unsubscribe();
-      resolve(false);
-    });
-    let unsubscribe = () => {
-      cancelSubscription(sOk);
-      cancelSubscription(sCancel);
-    };
-    publish(`${prefix}.confirm`, guid, str);
-  });
+  let resolver = (
+    option: string,
+    _: boolean,
+    resolve: ResolverFunc<boolean>
+  ) => {
+    resolve(option === "ok");
+  };
+  return publishCall<boolean>("confirm", ["ok", "cancel"], resolver, str);
 };

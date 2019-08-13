@@ -1,30 +1,20 @@
-import {
-  publish,
-  subscribe,
-  cancelSubscription
-} from "../../../../pubSub/pubSub";
-import { stdToGeneratorPublishedMessage as prefix } from "../../../../misc/helpers";
-import { GUID } from "../../../../types/guid";
+import { ResolverFunc, publishCall } from "../../../../misc/publishCall";
 
 /**
  * Chooses an image from the photo library
  * @return {string} image
  */
 export const chooseImage = async (): Promise<string> => {
-  return new Promise<string>(resolve => {
-    let guid = GUID.newGuid().toString();
-    let sOk = subscribe(`${prefix}.chooseImage.${guid}.ok`, (image: string) => {
-      unsubscribe();
+  let resolver = (
+    opt: string,
+    image: string,
+    resolve: ResolverFunc<string>
+  ) => {
+    if (opt === "ok") {
       resolve(image);
-    });
-    let sCancel = subscribe(`${prefix}.chooseImage.${guid}.cancel`, () => {
-      unsubscribe();
+    } else {
       resolve(null);
-    });
-    let unsubscribe = () => {
-      cancelSubscription(sOk);
-      cancelSubscription(sCancel);
-    };
-    publish(`${prefix}.chooseImage`, guid);
-  });
+    }
+  };
+  return publishCall<string>("chooseImage", ["ok", "cancel"], resolver);
 };
