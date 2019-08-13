@@ -930,7 +930,7 @@
     "GeneXus.SD.Media.Camera": {
       "members": {
         "TakePhoto": {
-          "path": "./gxcore/sd/media/photoLibrary/takePhoto",
+          "path": "./gxcore/sd/media/camera/takePhoto",
           "name": "takePhoto"
         }
       }

@@ -8,33 +8,27 @@ import { stdToGeneratorPublishedMessage as prefix } from "../../../../../misc/he
 
 describe("pickMultimedia test", () => {
   it("should return the image path when confirmed", async () => {
-    let subscription = subscribe(
-      `${prefix}.pickMultimedia`,
-      (...data: any[]) => {
-        expect(data.length).toBe(1);
-        cancelSubscription(subscription);
+    let subscription = subscribe(`${prefix}.chooseImage`, (...data: any[]) => {
+      expect(data.length).toBe(1);
+      cancelSubscription(subscription);
 
-        let guid = data[0];
-        publish(`${prefix}.pickMultimedia.${guid}.ok`, "/path/to/image");
-      }
-    );
+      let guid = data[0];
+      publish(`${prefix}.chooseImage.${guid}.ok`, "/path/to/image");
+    });
 
-    let result = await pickMultimedia();
+    let result = await pickMultimedia("chooseImage");
     expect(result).toBe("/path/to/image");
   });
   it("should return null when canceled", async () => {
-    let subscription = subscribe(
-      `${prefix}.pickMultimedia`,
-      (...data: any[]) => {
-        expect(data.length).toBe(1);
-        cancelSubscription(subscription);
+    let subscription = subscribe(`${prefix}.chooseImage`, (...data: any[]) => {
+      expect(data.length).toBe(1);
+      cancelSubscription(subscription);
 
-        let guid = data[0];
-        publish(`${prefix}.pickMultimedia.${guid}.cancel`);
-      }
-    );
+      let guid = data[0];
+      publish(`${prefix}.chooseImage.${guid}.cancel`);
+    });
 
-    let result = await pickMultimedia();
+    let result = await pickMultimedia("chooseImage");
     expect(result).toBeNull();
   });
 });
