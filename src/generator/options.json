@@ -946,7 +946,8 @@
       "members": {
         "TakePhoto": {
           "path": "./gxcore/sd/media/camera/takePhoto",
-          "name": "takePhoto"
+          "name": "takePhoto",
+          "notifiesGenerator": true
         }
       }
     },
@@ -954,7 +955,8 @@
       "members": {
         "ChoosImage": {
           "path": "./gxcore/sd/media/photoLibrary/chooseImage",
-          "name": "chooseImage"
+          "name": "chooseImage",
+          "notifiesGenerator": true
         }
       }
     },
