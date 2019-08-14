@@ -916,7 +916,7 @@
     "GeneXus.SD.Interop": {
       "members": {
         "CanOpen": {
-          "path": "./gxcore/sd/interop",
+          "path": "./gxcore/sd/interop/canOpen",
           "name": "canOpen"
         },
         "Confirm": {
@@ -932,12 +932,12 @@
           "notifiesGenerator": true
         },
         "Open": {
-          "path": "./gxcore/sd/interop",
+          "path": "./gxcore/sd/interop/openInBrowser",
           "name": "openInBrowser",
           "alias": "interopOpen"
         },
         "OpenInBrowser": {
-          "path": "./gxcore/sd/interop",
+          "path": "./gxcore/sd/interop/openInBrowser",
           "name": "openInBrowser"
         }
       }
@@ -993,21 +993,18 @@
       "IsNull": "cIsNull",
       "SetNull": "cSetNull",
       "ToFormattedString": "cToFormattedString",
-      "SetEmpty": "cSetEmpty",
       "HTMLClean": "cHtmlClean"
     },
     "Varchar": {
       "IsNull": "vIsNull",
       "SetNull": "vSetNull",
       "ToFormattedString": "vToFormattedString",
-      "SetEmpty": "vSetEmpty",
       "HTMLClean": "vHtmlClean"
     },
     "LongVarchar": {
       "IsNull": "lIsNull",
       "SetNull": "lSetNull",
       "ToFormattedString": "lToFormattedString",
-      "SetEmpty": "lSetEmpty",
       "HTMLClean": "lHtmlClean"
     },
     "Numeric": {
