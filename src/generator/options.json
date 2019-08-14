@@ -898,6 +898,14 @@
         }
       }
     },
+    "GeneXus.SD.Calendar": {
+      "members": {
+        "Schedule": {
+          "path": "./gxcore/sd/calendar/schedule",
+          "name": "schedule"
+        }
+      }
+    },
     "GeneXus.SD.Interop": {
       "members": {
         "CanOpen": {
