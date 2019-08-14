@@ -647,6 +647,11 @@
           "name": "roundToEven",
           "alias": "nRoundToEven"
         },
+        "ToFormattedString": {
+          "path": "./numeric/toString",
+          "name": "toString",
+          "alias": "nToFormattedString"
+        },
         "ToString": {
           "path": "./numeric/toString",
           "name": "toString",
@@ -1041,7 +1046,6 @@
     "Numeric": {
       "IsNull": "nIsNull",
       "SetNull": "nSetNull",
-      "ToFormattedString": "nToFormattedString",
       "SetEmpty": "nSetEmpty"
     },
     "Date": {
