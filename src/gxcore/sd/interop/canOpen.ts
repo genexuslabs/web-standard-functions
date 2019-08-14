@@ -4,5 +4,10 @@
  * @param url
  */
 export const canOpen = (url: string): boolean => {
-  return url.startsWith("http://") || url.startsWith("https://");
+  return (
+    url.startsWith("http://") ||
+    url.startsWith("https://") ||
+    url.startsWith("tel:") ||
+    url.startsWith("mailto:")
+  );
 };

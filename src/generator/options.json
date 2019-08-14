@@ -973,6 +973,14 @@
         "OpenInBrowser": {
           "path": "./gxcore/sd/interop/openInBrowser",
           "name": "openInBrowser"
+        },
+        "PlaceCall": {
+          "path": "./gxcore/sd/interop/placeCall",
+          "name": "placeCall"
+        },
+        "SendEmail": {
+          "path": "./gxcore/sd/interop/sendEmail",
+          "name": "sendEmail"
         }
       }
     },
