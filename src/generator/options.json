@@ -913,6 +913,30 @@
     "GeneXus.Client.ClientInformation": {
       "path": "./gxcore/client/client-information"
     },
+    "GeneXus.Common.UI.Navigation": {
+      "members": {
+        "CollapseTarget": {
+          "path": "./gxcore/common/ui/navigation",
+          "name": "collapseTarget",
+          "notifiesGenerator": true
+        },
+        "ExpandTarget": {
+          "path": "./gxcore/common/ui/navigation",
+          "name": "expandTarget",
+          "notifiesGenerator": true
+        },
+        "HideTarget": {
+          "path": "./gxcore/common/ui/navigation",
+          "name": "hideTarget",
+          "notifiesGenerator": true
+        },
+        "ShowTarget": {
+          "path": "./gxcore/common/ui/navigation",
+          "name": "showTarget",
+          "notifiesGenerator": true
+        }
+      }
+    },
     "GeneXus.SD.Interop": {
       "members": {
         "CanOpen": {
