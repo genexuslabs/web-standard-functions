@@ -925,6 +925,11 @@
           "alias": "interopConfirm",
           "notifiesGenerator": true
         },
+        "iOSSetBadgeTextToTabIndex": {
+          "path": "./gxcore/sd/interop/setBadgeText",
+          "name": "setBadgeText",
+          "notifiesGenerator": true
+        },
         "Msg": {
           "path": "./misc/msg",
           "name": "msg",
