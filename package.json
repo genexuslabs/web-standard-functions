@@ -45,7 +45,6 @@
   "devDependencies": {
     "@types/bignumber.js": "^5.0.0",
     "@types/jest": "^23.3.14",
-    "@types/node": "^12.7.1",
     "@types/pubsub-js": "^1.5.18",
     "env-cmd": "^8.0.2",
     "husky": "^2.4.0",
@@ -67,7 +66,6 @@
     "@types/websocket": "0.0.40",
     "bignumber.js": "^7.2.1",
     "full-icu": "^1.2.1",
-    "ical-generator": "^1.7.2",
     "jdu": "^1.0.0",
     "jstz": "^2.1.1",
     "loglevel": "^1.6.3",
