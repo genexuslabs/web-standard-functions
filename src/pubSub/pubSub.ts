@@ -9,7 +9,7 @@ import PubSubscriptionOptions from "./pubSubscribeOptions";
  * @return Returns true if there are subscribers to the topic
  */
 export const publish = (topicName: string, ...data: any[]): Boolean => {
-  return PubSubJs.publish(topicName, data);
+  return PubSubJs.publish(normalizeTopicName(topicName), data);
 };
 
 /**
@@ -29,7 +29,7 @@ export const subscribe = (
       handler.apply(this, data);
     };
   };
-
+  topicName = normalizeTopicName(topicName);
   let token;
   if (options && options.once) {
     // @ts-ignore
@@ -46,7 +46,7 @@ export const subscribe = (
  * @param suscription The suscription object
  */
 export const cancelTopic = (topicName: string) => {
-  PubSubJs.unsubscribe(topicName);
+  PubSubJs.unsubscribe(normalizeTopicName(topicName));
 };
 
 /**
@@ -62,4 +62,8 @@ export const cancelSubscription = (subscription: EventSubscription) => {
  */
 export const cancelAllSubscriptions = () => {
   PubSubJs.clearAllSubscriptions();
+};
+
+const normalizeTopicName = (name: string) => {
+  return name.toLocaleLowerCase();
 };

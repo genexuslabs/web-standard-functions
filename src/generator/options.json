@@ -898,6 +898,9 @@
         }
       }
     },
+    "GeneXus.Client.Socket": {
+      "path": "./gxcore/client/client-socket"
+    },
     "GeneXus.SD.Interop": {
       "members": {
         "CanOpen": {
@@ -1211,12 +1214,6 @@
       "Open": "xmlwOpen",
       "OpenRequest": "xmlwOpenRequest",
       "OpenResponse": "xmlwOpenResponse"
-    },
-
-    "GeneXus.Client.Socket": {
-      "Close": "socketClose",
-      "Open": "socketOpen",
-      "Send": "socketSend"
     },
     "GeneXus.Common.Analytics": {
       "SetUserId": "setAnalyticsUserId"
