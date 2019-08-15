@@ -5,6 +5,5 @@
  */
 
 export const setEmpty = (target: string): string => {
-  target = "";
-  return target;
+  return "";
 };
