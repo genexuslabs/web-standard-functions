@@ -108,8 +108,6 @@ function getGUIDString(): string {
 }
 
 function downloadCalendar(calendarStr: string) {
-  // window.location.href = "data:text/plain;charset=utf-8," + encodeURIComponent(calendarStr)
-
   let guidStr = getGUIDString();
   let fileName = guidStr + ".ics";
 
