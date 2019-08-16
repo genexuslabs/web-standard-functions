@@ -1,6 +1,4 @@
-import { publish, subscribe, cancelSubscription } from "../pubSub/pubSub";
-import { stdToGeneratorPublishedMessage as prefix } from "./helpers";
-import { GUID } from "../types/guid";
+import { ResolverFunc, publishCall } from "./publishCall";
 
 /**
  * Displays a message to the user
@@ -8,15 +6,8 @@ import { GUID } from "../types/guid";
  * @param {string} mode Optional parameter. There are two modes to display the message: `nowait` and `status`
  */
 export const msg = (str: string, mode: string = ""): Promise<void> => {
-  return new Promise<void>(resolve => {
-    let guid = GUID.newGuid().toString();
-    let sOk = subscribe(`${prefix}.msg.${guid}.ok`, () => {
-      unsubscribe();
-      resolve();
-    });
-    let unsubscribe = () => {
-      cancelSubscription(sOk);
-    };
-    publish(`${prefix}.msg`, guid, str, mode);
-  });
+  let resolver = (option: string, _: void, resolve: ResolverFunc<void>) => {
+    resolve();
+  };
+  return publishCall<void>("msg", ["ok"], resolver, str, mode);
 };

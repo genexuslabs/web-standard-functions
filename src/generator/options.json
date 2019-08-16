@@ -258,6 +258,11 @@
           "name": "replaceRegExp",
           "alias": "cReplaceRegExp"
         },
+        "SetEmpty": {
+          "path": "./text/setEmpty",
+          "name": "setEmpty",
+          "alias": "cSetEmpty"
+        },
         "SplitRegEx": {
           "path": "./text/splitRegExp",
           "name": "splitRegExp",
@@ -391,6 +396,11 @@
           "path": "./text/replaceRegExp",
           "name": "replaceRegExp",
           "alias": "vReplaceRegExp"
+        },
+        "SetEmpty": {
+          "path": "./text/setEmpty",
+          "name": "setEmpty",
+          "alias": "vSetEmpty"
         },
         "SplitRegEx": {
           "path": "./text/splitRegExp",
@@ -526,6 +536,11 @@
           "name": "replaceRegExp",
           "alias": "lReplaceRegExp"
         },
+        "SetEmpty": {
+          "path": "./text/setEmpty",
+          "name": "setEmpty",
+          "alias": "lSetEmpty"
+        },
         "SplitRegEx": {
           "path": "./text/splitRegExp",
           "name": "splitRegExp",
@@ -632,6 +647,11 @@
           "name": "roundToEven",
           "alias": "nRoundToEven"
         },
+        "ToFormattedString": {
+          "path": "./numeric/toString",
+          "name": "toString",
+          "alias": "nToFormattedString"
+        },
         "ToString": {
           "path": "./numeric/toString",
           "name": "toString",
@@ -730,33 +750,6 @@
           "alias": "dYear"
         }
       }
-    },
-    "GeneXus.Client.ClientStorage": {
-      "members": {
-        "Set": {
-          "path": "./gxcore/client/client-storage/set",
-          "name": "set",
-          "alias": "clientStorageSet"
-        },
-        "Get": {
-          "path": "./gxcore/client/client-storage/get",
-          "name": "get",
-          "alias": "clientStorageGet"
-        },
-        "Remove": {
-          "path": "./gxcore/client/client-storage/remove",
-          "name": "remove",
-          "alias": "clientStorageRemove"
-        },
-        "Clear": {
-          "path": "./gxcore/client/client-storage/clear",
-          "name": "clear",
-          "alias": "clientStorageClear"
-        }
-      }
-    },
-    "GeneXus.Client.ClientInformation": {
-      "path": "./gxcore/client/client-information"
     },
     "DateTime": {
       "members": {
@@ -906,19 +899,75 @@
         }
       }
     },
+    "GeneXus.Client.ClientStorage": {
+      "members": {
+        "Set": {
+          "path": "./gxcore/client/client-storage/set",
+          "name": "set",
+          "alias": "clientStorageSet"
+        },
+        "Get": {
+          "path": "./gxcore/client/client-storage/get",
+          "name": "get",
+          "alias": "clientStorageGet"
+        },
+        "Remove": {
+          "path": "./gxcore/client/client-storage/remove",
+          "name": "remove",
+          "alias": "clientStorageRemove"
+        },
+        "Clear": {
+          "path": "./gxcore/client/client-storage/clear",
+          "name": "clear",
+          "alias": "clientStorageClear"
+        }
+      }
+    },
+    "GeneXus.Client.ClientInformation": {
+      "path": "./gxcore/client/client-information"
+    },
+    "GeneXus.Common.UI.Navigation": {
+      "members": {
+        "CollapseTarget": {
+          "path": "./gxcore/common/ui/navigation",
+          "name": "collapseTarget",
+          "notifiesGenerator": true
+        },
+        "ExpandTarget": {
+          "path": "./gxcore/common/ui/navigation",
+          "name": "expandTarget",
+          "notifiesGenerator": true
+        },
+        "HideTarget": {
+          "path": "./gxcore/common/ui/navigation",
+          "name": "hideTarget",
+          "notifiesGenerator": true
+        },
+        "ShowTarget": {
+          "path": "./gxcore/common/ui/navigation",
+          "name": "showTarget",
+          "notifiesGenerator": true
+        }
+      }
+    },
     "GeneXus.Client.Socket": {
       "path": "./gxcore/client/client-socket"
     },
     "GeneXus.SD.Interop": {
       "members": {
         "CanOpen": {
-          "path": "./gxcore/sd/interop",
+          "path": "./gxcore/sd/interop/canOpen",
           "name": "canOpen"
         },
         "Confirm": {
           "path": "./misc/confirm",
           "name": "confirm",
           "alias": "interopConfirm",
+          "notifiesGenerator": true
+        },
+        "IOSSetBadgeTextToTabIndex": {
+          "path": "./gxcore/sd/interop/setBadgeText",
+          "name": "setBadgeText",
           "notifiesGenerator": true
         },
         "Msg": {
@@ -928,13 +977,39 @@
           "notifiesGenerator": true
         },
         "Open": {
-          "path": "./gxcore/sd/interop",
+          "path": "./gxcore/sd/interop/openInBrowser",
           "name": "openInBrowser",
           "alias": "interopOpen"
         },
         "OpenInBrowser": {
-          "path": "./gxcore/sd/interop",
+          "path": "./gxcore/sd/interop/openInBrowser",
           "name": "openInBrowser"
+        },
+        "PlaceCall": {
+          "path": "./gxcore/sd/interop/placeCall",
+          "name": "placeCall"
+        },
+        "SendEmail": {
+          "path": "./gxcore/sd/interop/sendEmail",
+          "name": "sendEmail"
+        }
+      }
+    },
+    "GeneXus.SD.Media.Camera": {
+      "members": {
+        "TakePhoto": {
+          "path": "./gxcore/sd/media/camera/takePhoto",
+          "name": "takePhoto",
+          "notifiesGenerator": true
+        }
+      }
+    },
+    "GeneXus.SD.Media.PhotoLibrary": {
+      "members": {
+        "ChoosImage": {
+          "path": "./gxcore/sd/media/photoLibrary/chooseImage",
+          "name": "chooseImage",
+          "notifiesGenerator": true
         }
       }
     },
@@ -943,6 +1018,20 @@
     },
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
       "path": "./gxcore/sd/synchronization/synchronizationEvents"
+    },
+    "Image": {
+      "members": {
+        "IsEmpty": {
+          "path": "./text/isEmpty",
+          "name": "isEmpty",
+          "alias": "imageIsEmpty"
+        },
+        "SetEmpty": {
+          "path": "./text/setEmpty",
+          "name": "setEmpty",
+          "alias": "imageSetEmpty"
+        }
+      }
     },
     "XMLReader": {
       "path": "./types/xmlreader"
@@ -959,27 +1048,23 @@
       "IsNull": "cIsNull",
       "SetNull": "cSetNull",
       "ToFormattedString": "cToFormattedString",
-      "SetEmpty": "cSetEmpty",
       "HTMLClean": "cHtmlClean"
     },
     "Varchar": {
       "IsNull": "vIsNull",
       "SetNull": "vSetNull",
       "ToFormattedString": "vToFormattedString",
-      "SetEmpty": "vSetEmpty",
       "HTMLClean": "vHtmlClean"
     },
     "LongVarchar": {
       "IsNull": "lIsNull",
       "SetNull": "lSetNull",
       "ToFormattedString": "lToFormattedString",
-      "SetEmpty": "lSetEmpty",
       "HTMLClean": "lHtmlClean"
     },
     "Numeric": {
       "IsNull": "nIsNull",
       "SetNull": "nSetNull",
-      "ToFormattedString": "nToFormattedString",
       "SetEmpty": "nSetEmpty"
     },
     "Date": {
@@ -1162,9 +1247,7 @@
       "SetNull": "imageSetNull",
       "FromString": "imageFromString",
       "ToString": "imageToString",
-      "ToFormattedString": "imageToFormattedString",
-      "IsEmpty": "imageIsEmpty",
-      "SetEmpty": "imageSetEmpty"
+      "ToFormattedString": "imageToFormattedString"
     },
     "Properties": {
       "Clear": "propClear",
