@@ -891,14 +891,6 @@
         }
       }
     },
-    "GeneXus.SD.Calendar": {
-      "members": {
-        "Schedule": {
-          "path": "./gxcore/sd/calendar/schedule",
-          "name": "schedule"
-        }
-      }
-    },
     "GeneXus.Client.ClientStorage": {
       "members": {
         "Set": {
@@ -926,6 +918,9 @@
     "GeneXus.Client.ClientInformation": {
       "path": "./gxcore/client/client-information"
     },
+    "GeneXus.Client.Socket": {
+      "path": "./gxcore/client/client-socket"
+    },
     "GeneXus.Common.UI.Navigation": {
       "members": {
         "CollapseTarget": {
@@ -950,8 +945,13 @@
         }
       }
     },
-    "GeneXus.Client.Socket": {
-      "path": "./gxcore/client/client-socket"
+    "GeneXus.SD.Calendar": {
+      "members": {
+        "Schedule": {
+          "path": "./gxcore/sd/calendar/schedule",
+          "name": "schedule"
+        }
+      }
     },
     "GeneXus.SD.Interop": {
       "members": {
