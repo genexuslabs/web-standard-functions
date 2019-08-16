@@ -1011,6 +1011,14 @@
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
       "path": "./gxcore/sd/synchronization/synchronizationEvents"
     },
+    "GeneXus.Social.Share": {
+      "members": {
+        "ShareText": {
+          "path": "./gxcore/social/share/shareText",
+          "name": "shareText"
+        }
+      }
+    },
     "Image": {
       "members": {
         "IsEmpty": {
