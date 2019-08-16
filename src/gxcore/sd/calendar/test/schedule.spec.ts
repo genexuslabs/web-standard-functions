@@ -14,13 +14,13 @@ describe("Calendar external object", () => {
     eDate.setUTCHours(16, 30);
     let ical = createCalendarEvent(sDate, eDate, "Test Event", "Somewhere");
 
-    let lines = ical.toString().split("\r\n");
+    let lines = ical.split("\n");
     expect(lines[0]).toBe("BEGIN:VCALENDAR");
-    expect(lines[3]).toBe("BEGIN:VEVENT");
-    expect(lines[11]).toBe("END:VEVENT");
-    expect(lines[12]).toBe("END:VCALENDAR");
+    expect(lines[2]).toBe("BEGIN:VEVENT");
+    expect(lines[10]).toBe("END:VEVENT");
+    expect(lines[11]).toBe("END:VCALENDAR");
 
-    lines = lines.slice(4, 11);
+    lines = lines.slice(3, 10);
     expect(lines).toContain("DTSTART:20190814T160000Z");
     expect(lines).toContain("DTEND:20190814T163000Z");
     expect(lines).toContain("SUMMARY:Test Event");

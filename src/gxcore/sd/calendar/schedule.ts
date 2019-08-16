@@ -2,8 +2,6 @@ import { notImplemented } from "../../../misc/helpers";
 import { addHours } from "../../../datetime/addHours";
 import { GUID } from "../../../types/guid";
 
-const ical = require("ical-generator");
-
 /**
  * Allows scheduling some task on the end user's calendar. Every parameter is optional except for `title` and `startDate`.
  * @param {string} title
@@ -24,15 +22,28 @@ export const schedule = (
   let sDateTime = getDateTime(startDate, startTime);
   let eDateTime = getDateTime(endDate, endTime, addHours(sDateTime, 1));
 
-  let cal = createCalendarEvent(
-    sDateTime,
-    eDateTime,
-    title,
-    place ? place : ""
-  );
+  let calStr = createCalendarEvent(sDateTime, eDateTime, title, place);
 
-  downloadCalendar(cal.toString());
+  downloadCalendar(calStr);
 };
+
+function convertDateTimeToString(dt: Date): string {
+  // 20190814T160000Z
+  return (
+    dt.getUTCFullYear().toString() +
+    stringFromTimeNumber(dt.getUTCMonth() + 1) +
+    stringFromTimeNumber(dt.getUTCDate()) +
+    "T" +
+    stringFromTimeNumber(dt.getUTCHours()) +
+    stringFromTimeNumber(dt.getUTCMinutes()) +
+    stringFromTimeNumber(dt.getUTCSeconds()) +
+    "Z"
+  );
+}
+
+function stringFromTimeNumber(num: number): string {
+  return (num < 10 ? "0" : "") + num.toString();
+}
 
 function getDateTime(
   datePart: Date,
@@ -57,21 +68,49 @@ export function createCalendarEvent(
   end: Date,
   title: string,
   place: string
-): any {
-  let cal = ical();
+): string {
+  return (
+    "BEGIN:VCALENDAR" +
+    "\n" +
+    "VERSION:2.0" +
+    "\n" +
+    // + "PRODID:-//sebbo.net//ical-generator//EN" + "\n"
+    "BEGIN:VEVENT" +
+    "\n" +
+    "UID:" +
+    getGUIDString() +
+    "\n" +
+    "SEQUENCE:0" +
+    "\n" +
+    "DTSTAMP:" +
+    convertDateTimeToString(new Date()) +
+    "\n" +
+    "DTSTART:" +
+    convertDateTimeToString(start) +
+    "\n" +
+    "DTEND:" +
+    convertDateTimeToString(end) +
+    "\n" +
+    "SUMMARY:" +
+    title +
+    "\n" +
+    "LOCATION:" +
+    place +
+    "\n" +
+    "END:VEVENT" +
+    "\n" +
+    "END:VCALENDAR"
+  );
+}
 
-  let event = cal.createEvent({
-    start: start,
-    end: end,
-    summary: title,
-    location: place
-  });
-
-  return cal;
+function getGUIDString(): string {
+  return GUID.newGuid().toString();
 }
 
 function downloadCalendar(calendarStr: string) {
-  let guidStr = GUID.newGuid().toString;
+  // window.location.href = "data:text/plain;charset=utf-8," + encodeURIComponent(calendarStr)
+
+  let guidStr = getGUIDString();
   let fileName = guidStr + ".ics";
 
   var element = document.createElement("a");
