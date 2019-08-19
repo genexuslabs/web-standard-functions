@@ -13,7 +13,7 @@ export async function publishCall<T>(
   return new Promise<T>(resolve => {
     let guid = GUID.newGuid().toString();
     let suscriptions = options.map(opt => {
-      let s = subscribe(`${prefix}.${fnName}.${guid}.${opt}`, (result: T) => {
+      let s = subscribe(`${prefix}_${fnName}_${guid}_${opt}`, (result: T) => {
         unsubscribe();
         resolver(opt, result, resolve);
       });
@@ -23,6 +23,6 @@ export async function publishCall<T>(
       suscriptions.map(cancelSubscription);
     };
 
-    publish(`${prefix}.${fnName}`, guid, ...params);
+    publish(`${prefix}_${fnName}`, guid, ...params);
   });
 }

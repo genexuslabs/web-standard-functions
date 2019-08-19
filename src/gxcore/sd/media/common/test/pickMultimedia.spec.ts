@@ -8,24 +8,24 @@ import { stdToGeneratorPublishedMessage as prefix } from "../../../../../misc/he
 
 describe("pickMultimedia test", () => {
   it("should return the image path when confirmed", async () => {
-    let subscription = subscribe(`${prefix}.chooseImage`, (...data: any[]) => {
+    let subscription = subscribe(`${prefix}_chooseImage`, (...data: any[]) => {
       expect(data.length).toBe(1);
       cancelSubscription(subscription);
 
       let guid = data[0];
-      publish(`${prefix}.chooseImage.${guid}.ok`, "/path/to/image");
+      publish(`${prefix}_chooseImage_${guid}_ok`, "/path/to/image");
     });
 
     let result = await pickMultimedia("chooseImage");
     expect(result).toBe("/path/to/image");
   });
   it("should return null when canceled", async () => {
-    let subscription = subscribe(`${prefix}.chooseImage`, (...data: any[]) => {
+    let subscription = subscribe(`${prefix}_chooseImage`, (...data: any[]) => {
       expect(data.length).toBe(1);
       cancelSubscription(subscription);
 
       let guid = data[0];
-      publish(`${prefix}.chooseImage.${guid}.cancel`);
+      publish(`${prefix}_chooseImage_${guid}_cancel`);
     });
 
     let result = await pickMultimedia("chooseImage");
