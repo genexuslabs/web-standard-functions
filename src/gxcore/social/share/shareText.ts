@@ -5,20 +5,19 @@ import { msg } from "../../../misc/msg";
  * @param url
  * @param title
  */
-export const shareText = (text: string, url: string, title: string) => {
+export const shareText = (
+  text: string,
+  url: string,
+  title: string
+): Promise<void> => {
   const nav: any = window.navigator;
   if (nav && nav.share) {
-    nav
-      .share({
-        title: title,
-        url: url,
-        text: text
-      })
-      .then(() => {
-        console.log("Thanks for sharing!");
-      })
-      .catch(console.error);
+    return nav.share({
+      title: title,
+      url: url,
+      text: text
+    });
   } else {
-    msg("Share API not available in this browser", "status");
+    return msg("Share API not available in this browser", "status");
   }
 };
