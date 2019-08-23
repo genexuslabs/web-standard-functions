@@ -968,6 +968,7 @@
         "IOSSetBadgeTextToTabIndex": {
           "path": "./gxcore/sd/interop/setBadgeText",
           "name": "setBadgeText",
+          "alias": "setBadgeText",
           "notifiesGenerator": true
         },
         "Msg": {
