@@ -8,7 +8,7 @@
   },
   "angularMappings": {
     "defaultModulesPath": "./generator/out/not_implemented",
-    "angularIndexPath": "@genexus/web-standard-functions/dist/lib-esm/index"
+    "angularIndexPath": "@genexus/web-standard-functions"
   },
   "implemented": {
     "Cookie": {
