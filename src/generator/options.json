@@ -53,6 +53,10 @@
           "path": "./misc/getLanguage",
           "name": "getLanguage"
         },
+        "GetMessageText": {
+          "path": "./misc/getMessageText",
+          "name": "getMessageText"
+        },
         "Iif": {
           "path": "./misc/iif",
           "name": "iif"
