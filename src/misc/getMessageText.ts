@@ -8,7 +8,7 @@ import { TranslationService } from "../config/translationService";
  */
 export const getMessageText = (str: string, languageName: string): string => {
   const translator = TranslationService.getInstance();
-  if (!languageName || languageName.length === 0) {
+  if (!languageName) {
     return translator.translate(str);
   } else {
     return translator.translate(str, languageName);
