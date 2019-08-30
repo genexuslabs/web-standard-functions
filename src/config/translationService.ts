@@ -19,7 +19,6 @@ export class TranslationService {
 
   private constructor() {}
 
-  //
 
   private translations: LanguageTranslations = {};
   private images: LanguageTranslations = {};
