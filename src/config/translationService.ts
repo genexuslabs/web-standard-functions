@@ -62,18 +62,27 @@ export class TranslationService {
   }
 
   getImageSource(name: string, language: string, theme: string): string {
-    const lang = language !== undefined ? language : getLanguage();
+    const lang = language ? language : getLanguage();
     let imageUrl = name;
     if (this.images[lang] !== undefined) {
       const imgTranslations = this.images[lang];
-      if (imgTranslations[name] !== undefined) {
-        imageUrl = imgTranslations[this.resolveImageKey(name, theme)];
+      let key = this.resolveImageKey(name, theme);
+      if (imgTranslations[key] !== undefined) {
+        imageUrl = imgTranslations[key];
       }
     }
-    return (
-      ConfigurationState.getInstance().getDynStoredValue("SERVICE_HOSTNAME") +
-      imageUrl
+    return this.getHostName() + imageUrl;
+  }
+
+  private getHostName() {
+    const hostName = ConfigurationState.getInstance().getDynStoredValue(
+      "SERVICE_HOSTNAME"
     );
+    if (hostName) {
+      return hostName;
+    } else {
+      return "";
+    }
   }
 
   private resolveImageKey(name: string, theme: string) {
