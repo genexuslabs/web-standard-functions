@@ -7,7 +7,7 @@ export class GeneXusSDSynchronizationSynchronizationEvents {
    * @param {number} eventStatus
    * @return {boolean} Current implementation returns always `false`.
    */
-  hasEvents(eventStatus: number): boolean {
+  static hasEvents(eventStatus: number): boolean {
     return false;
   }
 
@@ -16,7 +16,7 @@ export class GeneXusSDSynchronizationSynchronizationEvents {
    * @param {number} eventStatus
    * @return {any[]} Current implementation returns an empty array.
    */
-  getEvents(eventStatus: number): any[] {
+  static getEvents(eventStatus: number): any[] {
     return [];
   }
 
@@ -26,7 +26,7 @@ export class GeneXusSDSynchronizationSynchronizationEvents {
    * Current implementation does nothing.
    * @param {GUID} eventGUID
    */
-  markEventAsPending(eventGUID: GUID) {
+  static markEventAsPending(eventGUID: GUID) {
     // Empty implemetation
   }
 
@@ -36,7 +36,7 @@ export class GeneXusSDSynchronizationSynchronizationEvents {
    * Current implementation does nothing.
    * @param {GUID} eventGUID
    */
-  removeEvent(eventGUID: GUID) {
+  static removeEvent(eventGUID: GUID) {
     // Empty implemetation
   }
 }
