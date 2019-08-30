@@ -1,17 +1,13 @@
-import {
-  TranslationService,
-  TranslationsData,
-  TranslationsItemData
-} from "../translationService";
+import { TranslationService, TranslationsData } from "../translationService";
 
 describe("Translation service without loding translations", () => {
   it("should return the received string if no language specified", () => {
-    const ts = new TranslationService();
+    const ts = TranslationService.getInstance();
     let msg = "Hello";
     expect(ts.translate(msg)).toBe(msg);
   });
   it("should return the received string if a language specified", () => {
-    const ts = new TranslationService();
+    const ts = TranslationService.getInstance();
     let msg = "Hello";
     expect(ts.translate(msg, "English")).toBe(msg);
   });
@@ -19,7 +15,7 @@ describe("Translation service without loding translations", () => {
 
 describe("Loading translations", () => {
   it("should be able to load translations", () => {
-    const ts = new TranslationService();
+    const ts = TranslationService.getInstance();
     const data = new TranslationsData();
     data.Translations = [{ M: "Hello", T: "Hola" }, { M: "world", T: "mundo" }];
     ts.loadTranslations("Spanish", data);
@@ -27,7 +23,7 @@ describe("Loading translations", () => {
 });
 
 describe("Translation service with one loaded language", () => {
-  const ts = new TranslationService();
+  const ts = TranslationService.getInstance();
   beforeAll(() => {
     const spa = new TranslationsData();
     spa.Translations = [{ M: "Hello", T: "Hola" }, { M: "world", T: "mundo" }];
@@ -45,7 +41,7 @@ describe("Translation service with one loaded language", () => {
 });
 
 describe("Translation service with more than one loaded language", () => {
-  const ts = new TranslationService();
+  const ts = TranslationService.getInstance();
   beforeAll(() => {
     const spa = new TranslationsData();
     spa.Translations = [{ M: "Hello", T: "Hola" }, { M: "world", T: "mundo" }];

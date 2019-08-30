@@ -6,6 +6,21 @@ type LanguageTranslations = { [lang: string]: MessagesTranslations };
 type LanguageTanslationFlags = { [id: string]: boolean };
 
 export class TranslationService {
+  // Singleton
+
+  private static instance: TranslationService;
+
+  static getInstance() {
+    if (!TranslationService.instance) {
+      TranslationService.instance = new TranslationService();
+    }
+    return TranslationService.instance;
+  }
+
+  private constructor() {}
+
+  //
+
   private translations: LanguageTranslations = {};
   private images: LanguageTranslations = {};
   private loadedTranslations: LanguageTanslationFlags = {};
