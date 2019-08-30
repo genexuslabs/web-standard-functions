@@ -7,6 +7,10 @@ import { TranslationService } from "../config/translationService";
  * @return {string} The translation of the given message in the specified language or the current language
  */
 export const getMessageText = (str: string, languageName: string): string => {
-  const translator = new TranslationService();
-  return translator.translate(str, languageName);
+  const translator = TranslationService.getInstance();
+  if (!languageName || languageName.length === 0) {
+    return translator.translate(str);
+  } else {
+    return translator.translate(str, languageName);
+  }
 };
