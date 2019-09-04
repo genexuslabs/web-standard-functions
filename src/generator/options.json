@@ -292,6 +292,11 @@
           "name": "toNumeric",
           "alias": "cToNumeric"
         },
+        "ToFormattedString": {
+          "path": "./text/toString",
+          "name": "toString",
+          "alias": "cToFormattedString"
+        },
         "ToString": {
           "path": "./text/toString",
           "name": "toString",
@@ -430,6 +435,11 @@
           "path": "./text/toNumeric",
           "name": "toNumeric",
           "alias": "vToNumeric"
+        },
+        "ToFormattedString": {
+          "path": "./text/toString",
+          "name": "toString",
+          "alias": "vToFormattedString"
         },
         "ToString": {
           "path": "./text/toString",
@@ -570,6 +580,11 @@
           "name": "toNumeric",
           "alias": "lToNumeric"
         },
+        "ToFormattedString": {
+          "path": "./text/toString",
+          "name": "toString",
+          "alias": "lToFormattedString"
+        },
         "ToString": {
           "path": "./text/toString",
           "name": "toString",
@@ -613,6 +628,11 @@
           "path": "./bool/fromString",
           "name": "fromString",
           "alias": "bFromString"
+        },
+        "ToFormattedString": {
+          "path": "./bool/toString",
+          "name": "toString",
+          "alias": "bToFormattedString"
         },
         "ToString": {
           "path": "./bool/toString",
@@ -743,6 +763,11 @@
           "path": "./date/toDate",
           "name": "toDate"
         },
+        "ToFormattedString": {
+          "path": "./date/toString",
+          "name": "toString",
+          "alias": "dToFormattedString"
+        },
         "ToString": {
           "path": "./date/toString",
           "name": "toString",
@@ -762,10 +787,26 @@
           "name": "addDays",
           "alias": "dtAddDays"
         },
+        "AddHours": {
+          "path": "./datetime/addHours",
+          "name": "addHours"
+        },
+        "AddMilliseconds": {
+          "path": "./datetime/addMilliseconds",
+          "name": "addMilliseconds"
+        },
+        "AddMinutes": {
+          "path": "./datetime/addMinutes",
+          "name": "addMinutes"
+        },
         "AddMonths": {
           "path": "./date/addMonths",
           "name": "addMonths",
           "alias": "dtAddMonths"
+        },
+        "AddSeconds": {
+          "path": "./datetime/addSeconds",
+          "name": "addSeconds"
         },
         "AddYears": {
           "path": "./date/addYears",
@@ -776,6 +817,10 @@
           "path": "./date/age",
           "name": "age",
           "alias": "dtAge"
+        },
+        "CurrentOffset": {
+          "path": "./datetime/currentOffset",
+          "name": "currentOffset"
         },
         "Day": {
           "path": "./date/day",
@@ -792,15 +837,43 @@
           "name": "dayOfWeekName",
           "alias": "dtDayOfWeekName"
         },
+        "Difference": {
+          "path": "./datetime/difference",
+          "name": "difference",
+          "alias": "dtDifference"
+        },
         "EndOfMonth": {
           "path": "./date/endOfMonth",
           "name": "endOfMonth",
           "alias": "dtEndOfMonth"
         },
+        "FromTimeZone": {
+          "path": "./datetime/fromTimezone",
+          "name": "fromTimezone"
+        },
+        "GetTimeZone": {
+          "path": "./datetime/getTimezone",
+          "name": "getTimezone"
+        },
+        "Hour": {
+          "path": "./datetime/hour",
+          "name": "hour",
+          "alias": "dtHour"
+        },
         "IsEmpty": {
           "path": "./date/isEmpty",
           "name": "isEmpty",
           "alias": "dtIsEmpty"
+        },
+        "Millisecond": {
+          "path": "./datetime/millisecond",
+          "name": "millisecond",
+          "alias": "dtMillisecond"
+        },
+        "Minute": {
+          "path": "./datetime/minute",
+          "name": "minute",
+          "alias": "dtMinute"
         },
         "Month": {
           "path": "./date/month",
@@ -812,86 +885,48 @@
           "name": "monthName",
           "alias": "dtMonthName"
         },
-        "Year": {
-          "path": "./date/year",
-          "name": "year",
-          "alias": "dtYear"
-        },
-        "Hour": {
-          "path": "./datetime/hour",
-          "name": "hour",
-          "alias": "dtHour"
-        },
-        "Minute": {
-          "path": "./datetime/minute",
-          "name": "minute",
-          "alias": "dtMinute"
+        "Now": {
+          "path": "./datetime/now",
+          "name": "now",
+          "alias": "dtNow"
         },
         "Second": {
           "path": "./datetime/second",
           "name": "second",
           "alias": "dtSecond"
         },
-        "Millisecond": {
-          "path": "./datetime/millisecond",
-          "name": "millisecond",
-          "alias": "dtMillisecond"
-        },
-        "Difference": {
-          "path": "./datetime/difference",
-          "name": "difference",
-          "alias": "dtDifference"
-        },
-        "Now": {
-          "path": "./datetime/now",
-          "name": "now",
-          "alias": "dtNow"
+        "SetTimeZone": {
+          "path": "./datetime/setTimezone",
+          "name": "setTimezone"
         },
         "Time": {
           "path": "./datetime/time",
           "name": "time",
           "alias": "dttime"
         },
-        "AddMilliseconds": {
-          "path": "./datetime/addMilliseconds",
-          "name": "addMilliseconds"
-        },
-        "AddSeconds": {
-          "path": "./datetime/addSeconds",
-          "name": "addSeconds"
-        },
-        "AddMinutes": {
-          "path": "./datetime/addMinutes",
-          "name": "addMinutes"
-        },
-        "AddHours": {
-          "path": "./datetime/addHours",
-          "name": "addHours"
-        },
         "ToDate": {
           "path": "./datetime/toDate",
           "name": "toDate",
           "alias": "dttoDate"
         },
-        "GetTimeZone": {
-          "path": "./datetime/getTimezone",
-          "name": "getTimezone"
+        "ToFormattedString": {
+          "path": "./datetime/toString",
+          "name": "toString",
+          "alias": "dtToFormattedString"
         },
-        "SetTimeZone": {
-          "path": "./datetime/setTimezone",
-          "name": "setTimezone"
-        },
-        "CurrentOffset": {
-          "path": "./datetime/currentOffset",
-          "name": "currentOffset"
+        "ToString": {
+          "path": "./datetime/toString",
+          "name": "toString",
+          "alias": "dtToString"
         },
         "ToUniversalTime": {
           "path": "./datetime/toUniversalTime",
           "name": "toUniversalTime"
         },
-        "FromTimeZone": {
-          "path": "./datetime/fromTimezone",
-          "name": "fromTimezone"
+        "Year": {
+          "path": "./date/year",
+          "name": "year",
+          "alias": "dtYear"
         }
       }
     },
@@ -1060,19 +1095,16 @@
     "Character": {
       "IsNull": "cIsNull",
       "SetNull": "cSetNull",
-      "ToFormattedString": "cToFormattedString",
       "HTMLClean": "cHtmlClean"
     },
     "Varchar": {
       "IsNull": "vIsNull",
       "SetNull": "vSetNull",
-      "ToFormattedString": "vToFormattedString",
       "HTMLClean": "vHtmlClean"
     },
     "LongVarchar": {
       "IsNull": "lIsNull",
       "SetNull": "lSetNull",
-      "ToFormattedString": "lToFormattedString",
       "HTMLClean": "lHtmlClean"
     },
     "Numeric": {
@@ -1083,7 +1115,6 @@
     "Date": {
       "IsNull": "dIsNull",
       "SetNull": "dSetNull",
-      "ToFormattedString": "dToFormattedString",
       "SetEmpty": "dSetEmpty"
     },
     "DateTime": {
@@ -1091,17 +1122,14 @@
       "SetNull": "dtSetNull",
       "FromString": "dtFromString",
       "ToString": "dtToString",
-      "ToFormattedString": "dtToFormattedString",
       "Set": "dtSet",
       "New": "dtNew"
     },
     "Boolean": {
       "IsNull": "bIsNull",
       "SetNull": "bSetNull",
-      "ToFormattedString": "bToFormattedString",
       "SetEmpty": "bSetEmpty"
     },
-
     "Audio": {
       "IsNull": "audioIsNull",
       "SetNull": "audioSetNull",
