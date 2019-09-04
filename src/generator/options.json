@@ -1121,7 +1121,6 @@
       "IsNull": "dtIsNull",
       "SetNull": "dtSetNull",
       "FromString": "dtFromString",
-      "ToString": "dtToString",
       "Set": "dtSet",
       "New": "dtNew"
     },
