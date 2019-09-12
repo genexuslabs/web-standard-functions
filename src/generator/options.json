@@ -930,6 +930,16 @@
         }
       }
     },
+    "Collection": {
+      "members": {
+        "Count": {
+          "available": true
+        },
+        "CurrentItem": {
+          "available": true
+        }
+      }
+    },
     "GeneXus.Client.ClientStorage": {
       "members": {
         "Set": {
