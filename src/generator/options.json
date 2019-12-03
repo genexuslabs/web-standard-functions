@@ -2,185 +2,170 @@
   "metadataFilePath": "../../src/generator/metadata.json",
   "notImplementedOutputFilePath": "../../src/generator/out/not_implemented.ts",
   "angularMappingsOutputFilePath": "../../src/generator/out/angular_metadata.json",
-  "angularIndexOutputFilePath": "../../src/index.ts",
   "notImplementedSettings": {
     "doNotGenerateClasses": true
   },
   "angularMappings": {
-    "defaultModulesPath": "./generator/out/not_implemented",
-    "angularIndexPath": "@genexus/web-standard-functions"
+    "defaultModulesPath": "@genexus/web-standard-functions/dist/lib-esm/generator/out/not_implemented"
   },
   "implemented": {
     "Cookie": {
-      "path": "./types/cookie"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/cookie"
     },
     "Core": {
       "members": {
         "Asc": {
-          "path": "./text/asc",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/asc",
           "name": "asc"
         },
         "Chr": {
-          "path": "./text/chr",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/chr",
           "name": "chr"
         },
         "Compare": {
-          "path": "./misc/compare",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
           "name": "compare"
         },
         "Concat": {
-          "path": "./text/concat",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/concat",
           "name": "concat"
         },
         "Confirm": {
-          "path": "./misc/confirm",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/confirm",
           "name": "confirm",
           "notifiesGenerator": true
         },
         "Format": {
-          "path": "./text/format",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
           "name": "format"
         },
         "FromBase64": {
-          "path": "./text/fromBase64",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromBase64",
           "name": "fromBase64"
         },
         "GetCookie": {
-          "path": "./web/getCookie",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/getCookie",
           "name": "getCookie"
         },
         "GetLanguage": {
-          "path": "./misc/getLanguage",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/getLanguage",
           "name": "getLanguage"
         },
         "GetMessageText": {
-          "path": "./misc/getMessageText",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/getMessageText",
           "name": "getMessageText"
         },
-        "Iif": {
-          "path": "./misc/iif",
+        "iif": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
           "name": "iif"
         },
         "Int": {
-          "path": "./numeric/integer",
-          "name": "integer",
-          "alias": "int"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
+          "name": "integer"
         },
         "Len": {
-          "path": "./text/length",
-          "name": "length",
-          "alias": "len"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
         },
         "Lower": {
-          "path": "./text/toLower",
-          "name": "toLower",
-          "alias": "lower"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
+          "name": "toLower"
         },
         "LTrim": {
-          "path": "./text/lTrim",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
           "name": "ltrim"
         },
         "Mod": {
-          "path": "./math/mod",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/math/mod",
           "name": "mod"
         },
         "Msg": {
-          "path": "./misc/msg",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/msg",
           "name": "msg",
           "notifiesGenerator": true
         },
         "NewLine": {
-          "path": "./text/newline",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/newline",
           "name": "newLine"
         },
         "PadL": {
-          "path": "./text/padLeft",
-          "name": "padLeft",
-          "alias": "padL"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
         },
         "PadR": {
-          "path": "./text/padRight",
-          "name": "padRight",
-          "alias": "padR"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
         },
         "Round": {
-          "path": "./numeric/round",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
           "name": "round"
         },
         "RoundToEven": {
-          "path": "./numeric/roundToEven",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
           "name": "roundToEven"
         },
         "RTrim": {
-          "path": "./text/rTrim",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rTrim"
         },
         "SetCookie": {
-          "path": "./web/setCookie",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/setCookie",
           "name": "setCookie"
         },
         "SetLanguage": {
-          "path": "./misc/setLanguage",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/setLanguage",
           "name": "setLanguage"
         },
         "Str": {
-          "path": "./numeric/toString",
-          "name": "toString",
-          "alias": "str"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
         },
         "StrReplace": {
-          "path": "./text/replace",
-          "name": "replace",
-          "alias": "strReplace"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
+          "name": "replace"
         },
         "StrSearch": {
-          "path": "./text/indexOf",
-          "name": "indexOf",
-          "alias": "strSearch"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+          "name": "indexOf"
         },
         "StrSearchRev": {
-          "path": "./text/lastIndexOf",
-          "name": "lastIndexOf",
-          "alias": "strSearchRev"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
         },
         "Substr": {
-          "path": "./text/subString",
-          "name": "subString",
-          "alias": "substr"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
+          "name": "subString"
         },
         "ToBase64": {
-          "path": "./text/toBase64",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
           "name": "toBase64"
         },
         "Today": {
-          "path": "./date/today",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "name": "today"
         },
         "Now": {
-          "path": "./datetime/now",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
           "name": "now"
         },
         "Trim": {
-          "path": "./text/trim",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
           "name": "trim"
         },
         "Trunc": {
-          "path": "./numeric/truncate",
-          "name": "truncate",
-          "alias": "trunc"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
+          "name": "truncate"
         },
         "Val": {
-          "path": "./text/toNumeric",
-          "name": "toNumeric",
-          "alias": "val"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
+          "name": "toNumeric"
         },
         "Upper": {
-          "path": "./text/toUpper",
-          "name": "toUpper",
-          "alias": "upper"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
         },
         "XSLTApply": {
-          "path": "./text/xsltApply",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
           "name": "xsltApply"
         }
       }
@@ -188,745 +173,611 @@
     "Character": {
       "members": {
         "CharAt": {
-          "path": "./text/charAt",
-          "name": "charAt",
-          "alias": "cCharAt"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
+          "name": "charAt"
         },
         "Contains": {
-          "path": "./text/contains",
-          "name": "contains",
-          "alias": "cContains"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
+          "name": "contains"
         },
         "EndsWith": {
-          "path": "./text/endsWith",
-          "name": "endsWith",
-          "alias": "cEndsWith"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+          "name": "endsWith"
         },
         "FromString": {
-          "path": "./text/fromString",
-          "name": "fromString",
-          "alias": "cFromString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
         },
         "IndexOf": {
-          "path": "./text/indexOf",
-          "name": "indexOf",
-          "alias": "cIndexOf"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+          "name": "indexOf"
         },
         "IsEmpty": {
-          "path": "./text/isEmpty",
-          "name": "isEmpty",
-          "alias": "cIsEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty"
         },
         "IsMatch": {
-          "path": "./text/isMatch",
-          "name": "isMatch",
-          "alias": "cIsMatch"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
+          "name": "isMatch"
         },
         "LastIndexOf": {
-          "path": "./text/lastIndexOf",
-          "name": "lastIndexOf",
-          "alias": "cLastIndexOf"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
         },
         "Length": {
-          "path": "./text/length",
-          "name": "length",
-          "alias": "cLength"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
         },
         "Matches": {
-          "path": "./text/matches",
-          "name": "matches",
-          "alias": "cMatches"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
+          "name": "matches"
         },
         "PadLeft": {
-          "path": "./text/padLeft",
-          "name": "padLeft",
-          "alias": "cPadLeft"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
         },
         "PadRight": {
-          "path": "./text/padRight",
-          "name": "padRight",
-          "alias": "cPadRight"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
         },
         "RemoveDiacritics": {
-          "path": "./text/removeDiacritics",
-          "name": "removeDiacritics",
-          "alias": "cRemoveDiacritics"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
+          "name": "removeDiacritics"
         },
         "Replace": {
-          "path": "./text/replace",
-          "name": "replace",
-          "alias": "cReplace"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
+          "name": "replace"
         },
         "ReplaceRegEx": {
-          "path": "./text/replaceRegExp",
-          "name": "replaceRegExp",
-          "alias": "cReplaceRegExp"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replaceRegExp",
+          "name": "replaceRegExp"
         },
         "SetEmpty": {
-          "path": "./text/setEmpty",
-          "name": "setEmpty",
-          "alias": "cSetEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty"
         },
         "SplitRegEx": {
-          "path": "./text/splitRegExp",
-          "name": "splitRegExp",
-          "alias": "cSplitRegExp"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
+          "name": "splitRegExp"
         },
         "StartsWith": {
-          "path": "./text/startsWith",
-          "name": "startsWith",
-          "alias": "cStarsWith"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/startsWith",
+          "name": "startsWith"
         },
         "Substring": {
-          "path": "./text/subString",
-          "name": "subString",
-          "alias": "cSubString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
+          "name": "subString"
         },
         "ToLower": {
-          "path": "./text/toLower",
-          "name": "toLower",
-          "alias": "cToLower"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
+          "name": "toLower"
         },
         "ToNumeric": {
-          "path": "./text/toNumeric",
-          "name": "toNumeric",
-          "alias": "cToNumeric"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
+          "name": "toNumeric"
         },
         "ToFormattedString": {
-          "path": "./text/toString",
-          "name": "toString",
-          "alias": "cToFormattedString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString"
         },
         "ToString": {
-          "path": "./text/toString",
-          "name": "toString",
-          "alias": "cToString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString"
         },
         "ToUpper": {
-          "path": "./text/toUpper",
-          "name": "toUpper",
-          "alias": "cToUpper"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
         },
         "Trim": {
-          "path": "./text/trim",
-          "name": "trim",
-          "alias": "cTrim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
         },
         "TrimEnd": {
-          "path": "./text/rTrim",
-          "name": "rTrim",
-          "alias": "cRTrim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rTrim"
         },
         "TrimStart": {
-          "path": "./text/lTrim",
-          "name": "ltrim",
-          "alias": "cLTrim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "ltrim"
         },
         "XSLTApply": {
-          "path": "./text/xsltApply",
-          "name": "xsltApply",
-          "alias": "cXsltApply"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
+          "name": "xsltApply"
         }
       }
     },
     "Varchar": {
       "members": {
         "CharAt": {
-          "path": "./text/charAt",
-          "name": "charAt",
-          "alias": "vCharAt"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
+          "name": "charAt"
         },
         "Contains": {
-          "path": "./text/contains",
-          "name": "contains",
-          "alias": "vContains"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
+          "name": "contains"
         },
         "EndsWith": {
-          "path": "./text/endsWith",
-          "name": "endsWith",
-          "alias": "vEndsWith"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+          "name": "endsWith"
         },
         "FromString": {
-          "path": "./text/fromString",
-          "name": "fromString",
-          "alias": "vFromString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
         },
         "IndexOf": {
-          "path": "./text/indexOf",
-          "name": "indexOf",
-          "alias": "vIndexOf"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+          "name": "indexOf"
         },
         "IsEmpty": {
-          "path": "./text/isEmpty",
-          "name": "isEmpty",
-          "alias": "vIsEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty"
         },
         "IsMatch": {
-          "path": "./text/isMatch",
-          "name": "isMatch",
-          "alias": "vIsMatch"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
+          "name": "isMatch"
         },
         "LastIndexOf": {
-          "path": "./text/lastIndexOf",
-          "name": "lastIndexOf",
-          "alias": "vLastIndexOf"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
         },
         "Length": {
-          "path": "./text/length",
-          "name": "length",
-          "alias": "vLength"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
         },
         "Matches": {
-          "path": "./text/matches",
-          "name": "matches",
-          "alias": "vMatches"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
+          "name": "matches"
         },
         "PadLeft": {
-          "path": "./text/padLeft",
-          "name": "padLeft",
-          "alias": "vPadLeft"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
         },
         "PadRight": {
-          "path": "./text/padRight",
-          "name": "padRight",
-          "alias": "vPadRight"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
         },
         "RemoveDiacritics": {
-          "path": "./text/removeDiacritics",
-          "name": "removeDiacritics",
-          "alias": "vRemoveDiacritics"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
+          "name": "removeDiacritics"
         },
         "Replace": {
-          "path": "./text/replace",
-          "name": "replace",
-          "alias": "vReplace"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
+          "name": "replace"
         },
         "ReplaceRegEx": {
-          "path": "./text/replaceRegExp",
-          "name": "replaceRegExp",
-          "alias": "vReplaceRegExp"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replaceRegExp",
+          "name": "replaceRegExp"
         },
         "SetEmpty": {
-          "path": "./text/setEmpty",
-          "name": "setEmpty",
-          "alias": "vSetEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty"
         },
         "SplitRegEx": {
-          "path": "./text/splitRegExp",
-          "name": "splitRegExp",
-          "alias": "vSplitRegExp"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
+          "name": "splitRegExp"
         },
         "StartsWith": {
-          "path": "./text/startsWith",
-          "name": "startsWith",
-          "alias": "vStartsWith"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/startsWith",
+          "name": "startsWith"
         },
         "Substring": {
-          "path": "./text/subString",
-          "name": "subString",
-          "alias": "vSubString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
+          "name": "subString"
         },
         "ToLower": {
-          "path": "./text/toLower",
-          "name": "toLower",
-          "alias": "vToLower"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
+          "name": "toLower"
         },
         "ToNumeric": {
-          "path": "./text/toNumeric",
-          "name": "toNumeric",
-          "alias": "vToNumeric"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
+          "name": "toNumeric"
         },
         "ToFormattedString": {
-          "path": "./text/toString",
-          "name": "toString",
-          "alias": "vToFormattedString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString"
         },
         "ToString": {
-          "path": "./text/toString",
-          "name": "toString",
-          "alias": "vToString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString"
         },
         "ToUpper": {
-          "path": "./text/toUpper",
-          "name": "toUpper",
-          "alias": "vToUpper"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
         },
         "Trim": {
-          "path": "./text/trim",
-          "name": "trim",
-          "alias": "vTrim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
         },
         "TrimEnd": {
-          "path": "./text/rTrim",
-          "name": "rTrim",
-          "alias": "vRTrim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rTrim"
         },
         "TrimStart": {
-          "path": "./text/lTrim",
-          "name": "ltrim",
-          "alias": "vLTrim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "ltrim"
         },
         "XSLTApply": {
-          "path": "./text/xsltApply",
-          "name": "xsltApply",
-          "alias": "vXsltApply"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
+          "name": "xsltApply"
         }
       }
     },
     "LongVarchar": {
       "members": {
         "CharAt": {
-          "path": "./text/charAt",
-          "name": "charAt",
-          "alias": "lCharAt"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/charAt",
+          "name": "charAt"
         },
         "Contains": {
-          "path": "./text/contains",
-          "name": "contains",
-          "alias": "lContains"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/contains",
+          "name": "contains"
         },
         "EndsWith": {
-          "path": "./text/endsWith",
-          "name": "endsWith",
-          "alias": "lEndsWith"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/endsWith",
+          "name": "endsWith"
         },
         "FromString": {
-          "path": "./text/fromString",
-          "name": "fromString",
-          "alias": "lFromString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString"
         },
         "IndexOf": {
-          "path": "./text/indexOf",
-          "name": "indexOf",
-          "alias": "lIndexOf"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
+          "name": "indexOf"
         },
         "IsEmpty": {
-          "path": "./text/isEmpty",
-          "name": "isEmpty",
-          "alias": "lIsEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty"
         },
         "IsMatch": {
-          "path": "./text/isMatch",
-          "name": "isMatch",
-          "alias": "lIsMatch"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
+          "name": "isMatch"
         },
         "LastIndexOf": {
-          "path": "./text/lastIndexOf",
-          "name": "lastIndexOf",
-          "alias": "lLastIndexOf"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
+          "name": "lastIndexOf"
         },
         "Length": {
-          "path": "./text/length",
-          "name": "length",
-          "alias": "lLength"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
+          "name": "length"
         },
         "Matches": {
-          "path": "./text/matches",
-          "name": "matches",
-          "alias": "lMatches"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/matches",
+          "name": "matches"
         },
         "PadLeft": {
-          "path": "./text/padLeft",
-          "name": "padLeft",
-          "alias": "lPadLeft"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
+          "name": "padLeft"
         },
         "PadRight": {
-          "path": "./text/padRight",
-          "name": "padRight",
-          "alias": "lPadRight"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
+          "name": "padRight"
         },
         "RemoveDiacritics": {
-          "path": "./text/removeDiacritics",
-          "name": "removeDiacritics",
-          "alias": "lRemoveDiacritics"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/removeDiacritics",
+          "name": "removeDiacritics"
         },
         "Replace": {
-          "path": "./text/replace",
-          "name": "replace",
-          "alias": "lReplace"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
+          "name": "replace"
         },
         "ReplaceRegEx": {
-          "path": "./text/replaceRegExp",
-          "name": "replaceRegExp",
-          "alias": "lReplaceRegExp"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/replaceRegExp",
+          "name": "replaceRegExp"
         },
         "SetEmpty": {
-          "path": "./text/setEmpty",
-          "name": "setEmpty",
-          "alias": "lSetEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty"
         },
         "SplitRegEx": {
-          "path": "./text/splitRegExp",
-          "name": "splitRegExp",
-          "alias": "lSplitRegExp"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
+          "name": "splitRegExp"
         },
         "StartsWith": {
-          "path": "./text/startsWith",
-          "name": "startsWith",
-          "alias": "lStartsWith"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/startsWith",
+          "name": "startsWith"
         },
         "Substring": {
-          "path": "./text/subString",
-          "name": "subString",
-          "alias": "lSubString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
+          "name": "subString"
         },
         "ToLower": {
-          "path": "./text/toLower",
-          "name": "toLower",
-          "alias": "lToLower"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
+          "name": "toLower"
         },
         "ToNumeric": {
-          "path": "./text/toNumeric",
-          "name": "toNumeric",
-          "alias": "lToNumeric"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
+          "name": "toNumeric"
         },
         "ToFormattedString": {
-          "path": "./text/toString",
-          "name": "toString",
-          "alias": "lToFormattedString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString"
         },
         "ToString": {
-          "path": "./text/toString",
-          "name": "toString",
-          "alias": "lToString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString"
         },
         "ToUpper": {
-          "path": "./text/toUpper",
-          "name": "toUpper",
-          "alias": "lToUpper"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
+          "name": "toUpper"
         },
         "Trim": {
-          "path": "./text/trim",
-          "name": "trim",
-          "alias": "longvarchar_trim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
+          "name": "trim"
         },
         "TrimEnd": {
-          "path": "./text/rTrim",
-          "name": "rTrim",
-          "alias": "lRTrim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
+          "name": "rTrim"
         },
         "TrimStart": {
-          "path": "./text/lTrim",
-          "name": "ltrim",
-          "alias": "lLTrim"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
+          "name": "ltrim"
         },
         "XSLTApply": {
-          "path": "./text/xsltApply",
-          "name": "xsltApply",
-          "alias": "lXsltApply"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
+          "name": "xsltApply"
         }
       }
     },
     "Boolean": {
       "members": {
         "IsEmpty": {
-          "path": "./bool/isEmpty",
-          "name": "isEmpty",
-          "alias": "bIsEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/isEmpty",
+          "name": "isEmpty"
         },
         "FromString": {
-          "path": "./bool/fromString",
-          "name": "fromString",
-          "alias": "bFromString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/fromString",
+          "name": "fromString"
         },
         "ToFormattedString": {
-          "path": "./bool/toString",
-          "name": "toString",
-          "alias": "bToFormattedString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
+          "name": "toString"
         },
         "ToString": {
-          "path": "./bool/toString",
-          "name": "toString",
-          "alias": "bToString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
+          "name": "toString"
         }
       }
     },
     "GUID": {
-      "path": "./types/guid"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/guid"
     },
     "Numeric": {
       "members": {
         "FromString": {
-          "path": "./numeric/fromString",
-          "name": "fromString",
-          "alias": "nFromString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
+          "name": "fromString"
         },
         "Integer": {
-          "path": "./numeric/integer",
-          "name": "integer",
-          "alias": "nInteger"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
+          "name": "integer"
         },
         "IsEmpty": {
-          "path": "./numeric/isEmpty",
-          "name": "isEmpty",
-          "alias": "nIsEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty",
+          "name": "isEmpty"
         },
         "Round": {
-          "path": "./numeric/round",
-          "name": "round",
-          "alias": "nRound"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
+          "name": "round"
         },
         "RoundToEven": {
-          "path": "./numeric/roundToEven",
-          "name": "roundToEven",
-          "alias": "nRoundToEven"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
+          "name": "roundToEven"
         },
         "ToFormattedString": {
-          "path": "./numeric/toString",
-          "name": "toString",
-          "alias": "nToFormattedString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
         },
         "ToString": {
-          "path": "./numeric/toString",
-          "name": "toString",
-          "alias": "nToString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
+          "name": "toString"
         },
         "Truncate": {
-          "path": "./numeric/truncate",
-          "name": "truncate",
-          "alias": "nTruncate"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
+          "name": "truncate"
         }
       }
     },
     "Date": {
       "members": {
         "AddDays": {
-          "path": "./date/addDays",
-          "name": "addDays",
-          "alias": "dAddDays"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addDays",
+          "name": "addDays"
         },
         "AddMonths": {
-          "path": "./date/addMonths",
-          "name": "addMonths",
-          "alias": "dAddMonths"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addMonths",
+          "name": "addMonths"
         },
         "AddYears": {
-          "path": "./date/addYears",
-          "name": "addYears",
-          "alias": "dAddYears"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addYears",
+          "name": "addYears"
         },
         "Age": {
-          "path": "./date/age",
-          "name": "age",
-          "alias": "dAge"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/age",
+          "name": "age"
         },
         "Day": {
-          "path": "./date/day",
-          "name": "day",
-          "alias": "dDay"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/day",
+          "name": "day"
         },
         "DayOfWeek": {
-          "path": "./date/dayOfWeek",
-          "name": "dayOfWeek",
-          "alias": "dDayOfWeek"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeek",
+          "name": "dayOfWeek"
         },
         "DayOfWeekName": {
-          "path": "./date/dayOfWeekName",
-          "name": "dayOfWeekName",
-          "alias": "dDayOfWeekName"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName",
+          "name": "dayOfWeekName"
         },
         "EndOfMonth": {
-          "path": "./date/endOfMonth",
-          "name": "endOfMonth",
-          "alias": "dEndOfMonth"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
+          "name": "endOfMonth"
         },
         "FromString": {
-          "path": "./date/fromString",
-          "name": "fromString",
-          "alias": "dFromString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "name": "fromString"
         },
         "IsEmpty": {
-          "path": "./date/isEmpty",
-          "name": "isEmpty",
-          "alias": "dIsEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
+          "name": "isEmpty"
         },
         "Month": {
-          "path": "./date/month",
-          "name": "month",
-          "alias": "dMonth"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
+          "name": "month"
         },
         "MonthName": {
-          "path": "./date/monthName",
-          "name": "monthName",
-          "alias": "dMonthName"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
+          "name": "monthName"
         },
         "New": {
-          "path": "./date/newInstance",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
           "name": "newInstance"
         },
         "Set": {
-          "path": "./date/set",
-          "name": "set",
-          "alias": "dSet"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/set",
+          "name": "set"
         },
         "ToDate": {
-          "path": "./date/toDate",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
           "name": "toDate"
         },
         "ToFormattedString": {
-          "path": "./date/toString",
-          "name": "toString",
-          "alias": "dToFormattedString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
+          "name": "toString"
         },
         "ToString": {
-          "path": "./date/toString",
-          "name": "toString",
-          "alias": "dToString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
+          "name": "toString"
         },
         "Year": {
-          "path": "./date/year",
-          "name": "year",
-          "alias": "dYear"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/year",
+          "name": "year"
         }
       }
     },
     "DateTime": {
       "members": {
         "AddDays": {
-          "path": "./date/addDays",
-          "name": "addDays",
-          "alias": "dtAddDays"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addDays",
+          "name": "addDays"
         },
         "AddHours": {
-          "path": "./datetime/addHours",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/addHours",
           "name": "addHours"
         },
         "AddMilliseconds": {
-          "path": "./datetime/addMilliseconds",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/addMilliseconds",
           "name": "addMilliseconds"
         },
         "AddMinutes": {
-          "path": "./datetime/addMinutes",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/addMinutes",
           "name": "addMinutes"
         },
         "AddMonths": {
-          "path": "./date/addMonths",
-          "name": "addMonths",
-          "alias": "dtAddMonths"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addMonths",
+          "name": "addMonths"
         },
         "AddSeconds": {
-          "path": "./datetime/addSeconds",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/addSeconds",
           "name": "addSeconds"
         },
         "AddYears": {
-          "path": "./date/addYears",
-          "name": "addYears",
-          "alias": "dtAddYears"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addYears",
+          "name": "addYears"
         },
         "Age": {
-          "path": "./date/age",
-          "name": "age",
-          "alias": "dtAge"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/age",
+          "name": "age"
         },
         "CurrentOffset": {
-          "path": "./datetime/currentOffset",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/currentOffset",
           "name": "currentOffset"
         },
         "Day": {
-          "path": "./date/day",
-          "name": "day",
-          "alias": "dtDay"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/day",
+          "name": "day"
         },
         "DayOfWeek": {
-          "path": "./date/dayOfWeek",
-          "name": "dayOfWeek",
-          "alias": "dtDayOfWeek"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeek",
+          "name": "dayOfWeek"
         },
         "DayOfWeekName": {
-          "path": "./date/dayOfWeekName",
-          "name": "dayOfWeekName",
-          "alias": "dtDayOfWeekName"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName",
+          "name": "dayOfWeekName"
         },
         "Difference": {
-          "path": "./datetime/difference",
-          "name": "difference",
-          "alias": "dtDifference"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/difference",
+          "name": "difference"
         },
         "EndOfMonth": {
-          "path": "./date/endOfMonth",
-          "name": "endOfMonth",
-          "alias": "dtEndOfMonth"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
+          "name": "endOfMonth"
         },
         "FromTimeZone": {
-          "path": "./datetime/fromTimezone",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/fromTimezone",
           "name": "fromTimezone"
         },
         "GetTimeZone": {
-          "path": "./datetime/getTimezone",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/getTimezone",
           "name": "getTimezone"
         },
         "Hour": {
-          "path": "./datetime/hour",
-          "name": "hour",
-          "alias": "dtHour"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/hour",
+          "name": "hour"
         },
         "IsEmpty": {
-          "path": "./date/isEmpty",
-          "name": "isEmpty",
-          "alias": "dtIsEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
+          "name": "isEmpty"
         },
         "Millisecond": {
-          "path": "./datetime/millisecond",
-          "name": "millisecond",
-          "alias": "dtMillisecond"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/millisecond",
+          "name": "millisecond"
         },
         "Minute": {
-          "path": "./datetime/minute",
-          "name": "minute",
-          "alias": "dtMinute"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/minute",
+          "name": "minute"
         },
         "Month": {
-          "path": "./date/month",
-          "name": "month",
-          "alias": "dtMonth"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
+          "name": "month"
         },
         "MonthName": {
-          "path": "./date/monthName",
-          "name": "monthName",
-          "alias": "dtMonthName"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
+          "name": "monthName"
         },
         "Now": {
-          "path": "./datetime/now",
-          "name": "now",
-          "alias": "dtNow"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
+          "name": "now"
         },
         "Second": {
-          "path": "./datetime/second",
-          "name": "second",
-          "alias": "dtSecond"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/second",
+          "name": "second"
         },
         "SetTimeZone": {
-          "path": "./datetime/setTimezone",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setTimezone",
           "name": "setTimezone"
         },
         "Time": {
-          "path": "./datetime/time",
-          "name": "time",
-          "alias": "dttime"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/time",
+          "name": "time"
         },
         "ToDate": {
-          "path": "./datetime/toDate",
-          "name": "toDate",
-          "alias": "dttoDate"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toDate",
+          "name": "toDate"
         },
         "ToFormattedString": {
-          "path": "./datetime/toString",
-          "name": "toString",
-          "alias": "dtToFormattedString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toString",
+          "name": "toString"
         },
         "ToString": {
-          "path": "./datetime/toString",
-          "name": "toString",
-          "alias": "dtToString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toString",
+          "name": "toString"
         },
         "ToUniversalTime": {
-          "path": "./datetime/toUniversalTime",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toUniversalTime",
           "name": "toUniversalTime"
         },
         "Year": {
-          "path": "./date/year",
-          "name": "year",
-          "alias": "dtYear"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/year",
+          "name": "year"
         }
       }
     },
@@ -943,52 +794,48 @@
     "GeneXus.Client.ClientStorage": {
       "members": {
         "Set": {
-          "path": "./gxcore/client/client-storage/set",
-          "name": "set",
-          "alias": "clientStorageSet"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-storage/set",
+          "name": "set"
         },
         "Get": {
-          "path": "./gxcore/client/client-storage/get",
-          "name": "get",
-          "alias": "clientStorageGet"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-storage/get",
+          "name": "get"
         },
         "Remove": {
-          "path": "./gxcore/client/client-storage/remove",
-          "name": "remove",
-          "alias": "clientStorageRemove"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-storage/remove",
+          "name": "remove"
         },
         "Clear": {
-          "path": "./gxcore/client/client-storage/clear",
-          "name": "clear",
-          "alias": "clientStorageClear"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-storage/clear",
+          "name": "clear"
         }
       }
     },
     "GeneXus.Client.ClientInformation": {
-      "path": "./gxcore/client/client-information"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-information"
     },
     "GeneXus.Client.Socket": {
-      "path": "./gxcore/client/client-socket"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-socket"
     },
     "GeneXus.Common.UI.Navigation": {
       "members": {
         "CollapseTarget": {
-          "path": "./gxcore/common/ui/navigation",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/navigation",
           "name": "collapseTarget",
           "notifiesGenerator": true
         },
         "ExpandTarget": {
-          "path": "./gxcore/common/ui/navigation",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/navigation",
           "name": "expandTarget",
           "notifiesGenerator": true
         },
         "HideTarget": {
-          "path": "./gxcore/common/ui/navigation",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/navigation",
           "name": "hideTarget",
           "notifiesGenerator": true
         },
         "ShowTarget": {
-          "path": "./gxcore/common/ui/navigation",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/navigation",
           "name": "showTarget",
           "notifiesGenerator": true
         }
@@ -997,7 +844,7 @@
     "GeneXus.SD.Calendar": {
       "members": {
         "Schedule": {
-          "path": "./gxcore/sd/calendar/schedule",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/calendar/schedule",
           "name": "schedule"
         }
       }
@@ -1005,42 +852,38 @@
     "GeneXus.SD.Interop": {
       "members": {
         "CanOpen": {
-          "path": "./gxcore/sd/interop/canOpen",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/interop/canOpen",
           "name": "canOpen"
         },
         "Confirm": {
-          "path": "./misc/confirm",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/confirm",
           "name": "confirm",
-          "alias": "interopConfirm",
           "notifiesGenerator": true
         },
         "IOSSetBadgeTextToTabIndex": {
-          "path": "./gxcore/sd/interop/setBadgeText",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/interop/setBadgeText",
           "name": "setBadgeText",
-          "alias": "setBadgeText",
           "notifiesGenerator": true
         },
         "Msg": {
-          "path": "./misc/msg",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/msg",
           "name": "msg",
-          "alias": "interopMsg",
           "notifiesGenerator": true
         },
         "Open": {
-          "path": "./gxcore/sd/interop/openInBrowser",
-          "name": "openInBrowser",
-          "alias": "interopOpen"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/interop/openInBrowser",
+          "name": "openInBrowser"
         },
         "OpenInBrowser": {
-          "path": "./gxcore/sd/interop/openInBrowser",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/interop/openInBrowser",
           "name": "openInBrowser"
         },
         "PlaceCall": {
-          "path": "./gxcore/sd/interop/placeCall",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/interop/placeCall",
           "name": "placeCall"
         },
         "SendEmail": {
-          "path": "./gxcore/sd/interop/sendEmail",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/interop/sendEmail",
           "name": "sendEmail"
         }
       }
@@ -1048,7 +891,7 @@
     "GeneXus.SD.Media.Camera": {
       "members": {
         "TakePhoto": {
-          "path": "./gxcore/sd/media/camera/takePhoto",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/takePhoto",
           "name": "takePhoto",
           "notifiesGenerator": true
         }
@@ -1057,22 +900,22 @@
     "GeneXus.SD.Media.PhotoLibrary": {
       "members": {
         "ChoosImage": {
-          "path": "./gxcore/sd/media/photoLibrary/chooseImage",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/photoLibrary/chooseImage",
           "name": "chooseImage",
           "notifiesGenerator": true
         }
       }
     },
     "GeneXus.SD.Network": {
-      "path": "./gxcore/sd/network"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/network"
     },
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
-      "path": "./gxcore/sd/synchronization/synchronizationEvents"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/synchronization/synchronizationEvents"
     },
     "GeneXus.Social.Share": {
       "members": {
         "ShareText": {
-          "path": "./gxcore/social/share/shareText",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/social/share/shareText",
           "name": "shareText"
         }
       }
@@ -1080,22 +923,20 @@
     "Image": {
       "members": {
         "IsEmpty": {
-          "path": "./text/isEmpty",
-          "name": "isEmpty",
-          "alias": "imageIsEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty"
         },
         "SetEmpty": {
-          "path": "./text/setEmpty",
-          "name": "setEmpty",
-          "alias": "imageSetEmpty"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty"
         }
       }
     },
     "XMLReader": {
-      "path": "./types/xmlreader"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/xmlreader"
     },
     "XMLWriter": {
-      "path": "./types/xmlwriter"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/xmlwriter"
     }
   },
   "disambiguated": {
