@@ -18,9 +18,29 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/asc",
           "name": "asc"
         },
+        "AddMth": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addMonths",
+          "name": "addMonths"
+        },
+        "AddYr": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/addYears",
+          "name": "addYears"
+        },
+        "Age": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/age",
+          "name": "age"
+        },
+        "CDoW": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName",
+          "name": "dayOfWeekName"
+        },
         "Chr": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/chr",
           "name": "chr"
+        },
+        "CMonth": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
+          "name": "monthName"
         },
         "Compare": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/compare",
@@ -34,6 +54,30 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/confirm",
           "name": "confirm",
           "notifiesGenerator": true
+        },
+        "CtoD": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "name": "fromString"
+        },
+        "CtoT": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "name": "fromString"
+        },
+        "Day": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/day",
+          "name": "day"
+        },
+        "DoW": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeek",
+          "name": "dayOfWeek"
+        },
+        "DtoC": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
+          "name": "toString"
+        },
+        "EoM": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
+          "name": "endOfMonth"
         },
         "Format": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
@@ -55,6 +99,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/getMessageText",
           "name": "getMessageText"
         },
+        "Hour": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/hour",
+          "name": "hour"
+        },
         "iif": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/iif",
           "name": "iif"
@@ -75,9 +123,17 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lTrim",
           "name": "ltrim"
         },
+        "Minute": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/minute",
+          "name": "minute"
+        },
         "Mod": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/math/mod",
           "name": "mod"
+        },
+        "Month": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
+          "name": "month"
         },
         "Msg": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/msg",
@@ -87,6 +143,10 @@
         "NewLine": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/newline",
           "name": "newLine"
+        },
+        "Now": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
+          "name": "now"
         },
         "PadL": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
@@ -107,6 +167,10 @@
         "RTrim": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/rTrim",
           "name": "rTrim"
+        },
+        "Second": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/second",
+          "name": "second"
         },
         "SetCookie": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/web/setCookie",
@@ -132,9 +196,17 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
           "name": "lastIndexOf"
         },
-        "Substr": {
+        "SubStr": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/subString",
           "name": "subString"
+        },
+        "TAdd": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/addSeconds",
+          "name": "addSeconds"
+        },
+        "TDiff": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/difference",
+          "name": "difference"
         },
         "ToBase64": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
@@ -144,10 +216,6 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/today",
           "name": "today"
         },
-        "Now": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
-          "name": "now"
-        },
         "Trim": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/trim",
           "name": "trim"
@@ -156,17 +224,29 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/truncate",
           "name": "truncate"
         },
-        "Val": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
-          "name": "toNumeric"
+        "TtoC": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toString",
+          "name": "toString"
         },
         "Upper": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
           "name": "toUpper"
         },
+        "Val": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
+          "name": "toNumeric"
+        },
         "XSLTApply": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/xsltApply",
           "name": "xsltApply"
+        },
+        "Year": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/year",
+          "name": "year"
+        },
+        "YMDtoD": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
+          "name": "newInstance"
         }
       }
     },

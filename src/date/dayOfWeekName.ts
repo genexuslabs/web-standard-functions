@@ -1,6 +1,7 @@
 /**
  * Returns the weekday for a given date in the selected language.
  * @param {Date} dateFrom
+ * @param {string} language
  * @return string
  */
 
