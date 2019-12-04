@@ -1,7 +1,7 @@
 import { padLeft } from "../text/padLeft";
 
 /**
- * Converts the give number to string
+ * Converts the given number to string
  * @param {number} value
  * @param {number} length
  * @param {number} decimals
