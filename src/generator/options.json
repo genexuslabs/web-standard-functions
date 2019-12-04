@@ -117,8 +117,8 @@
           "name": "setLanguage"
         },
         "Str": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
-          "name": "toString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/str",
+          "name": "str"
         },
         "StrReplace": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/replace",
