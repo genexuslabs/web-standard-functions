@@ -30,6 +30,14 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/age",
           "name": "age"
         },
+        "BrowserID": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/browserId",
+          "name": "browserId"
+        },
+        "BrowserVersion": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/browserVersion",
+          "name": "browserVersion"
+        },
         "CDoW": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/dayOfWeekName",
           "name": "dayOfWeekName"
