@@ -188,6 +188,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/setLanguage",
           "name": "setLanguage"
         },
+        "Space": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/space",
+          "name": "space"
+        },
         "Str": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/str",
           "name": "str"
