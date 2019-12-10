@@ -11,7 +11,7 @@ import { length } from "./length";
 export const indexOf = (
   target: string,
   pattern: string,
-  from: number
+  from: number = 1
 ): number => {
   if (from < 1 || from > length(target)) return 0;
   return target.indexOf(pattern, from - 1) + 1;
