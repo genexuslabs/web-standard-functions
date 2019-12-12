@@ -220,6 +220,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/difference",
           "name": "difference"
         },
+        "Time": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/time",
+          "name": "time"
+        },
         "ToBase64": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toBase64",
           "name": "toBase64"
