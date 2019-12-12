@@ -263,6 +263,10 @@
         "YMDtoD": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/newInstance",
           "name": "newInstance"
+        },
+        "YMDHMStoT": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/newInstance",
+          "name": "newInstance"
         }
       }
     },
