@@ -9,7 +9,6 @@
  * @return Date
  */
 
-import { DateTime } from "luxon";
 import { EMPTY_DATE_VALUE } from "../date/core";
 
 export const newInstance = (
