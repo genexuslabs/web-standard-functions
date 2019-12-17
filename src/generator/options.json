@@ -866,6 +866,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/monthName",
           "name": "monthName"
         },
+        "New": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/newInstance",
+          "name": "newInstance"
+        },
         "Now": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
           "name": "now"
@@ -1263,8 +1267,7 @@
     "DateTime": {
       "IsNull": "dtIsNull",
       "SetNull": "dtSetNull",
-      "Set": "dtSet",
-      "New": "dtNew"
+      "Set": "dtSet"
     },
     "Boolean": {
       "IsNull": "bIsNull",
