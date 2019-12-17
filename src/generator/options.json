@@ -1031,15 +1031,183 @@
         }
       }
     },
-    "Image": {
+    "Audio": {
       "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "audioFromString",
+          "modifiesInstance": true
+        },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
-          "name": "isEmpty"
+          "name": "isEmpty",
+          "alias": "audioIsEmpty"
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "alias": "audioSetEmpty"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "audioToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "audioToString"
+        }
+      }
+    },
+    "Binary": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "binaryFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "binaryIsEmpty"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "binarySetEmpty"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "binaryToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "binaryToString"
+        }
+      }
+    },
+    "BinaryFile": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "binaryFileFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "binaryFileIsEmpty"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "binaryFileSetEmpty"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "binaryFileToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "binaryFileToString"
+        }
+      }
+    },
+    "Blob": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "blobFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "blobIsEmpty"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "blobSetEmpty"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "blobToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "blobToString"
+        }
+      }
+    },
+    "Image": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "imageFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "imageIsEmpty"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "imageSetEmpty"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "imageToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "imageToString"
+        }
+      }
+    },
+    "Video": {
+      "members": {
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
+          "name": "fromString",
+          "alias": "videoFromString",
+          "modifiesInstance": true
+        },
+        "IsEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
+          "name": "isEmpty",
+          "alias": "videoIsEmpty"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
+          "name": "setEmpty",
+          "alias": "videoSetEmpty"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "videoToFormattedString"
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
+          "name": "toString",
+          "alias": "videoToString"
         }
       }
     },
@@ -1092,35 +1260,19 @@
     },
     "Audio": {
       "IsNull": "audioIsNull",
-      "SetNull": "audioSetNull",
-      "FromString": "audioFromString",
-      "ToString": "audioToString",
-      "ToFormattedString": "audioToFormattedString",
-      "IsEmpty": "audioIsEmpty",
-      "SetEmpty": "audioSetEmpty"
+      "SetNull": "audioSetNull"
     },
     "Binary": {
       "IsNull": "binaryIsNull",
       "SetNull": "binarySetNull",
-      "FromString": "binaryFromString",
-      "ToString": "binaryToString",
-      "ToFormattedString": "binaryToFormattedString",
-      "IsEmpty": "binaryIsEmpty",
-      "SetEmpty": "binarySetEmpty",
       "FromBase64String": "binaryFromBase64String"
     },
     "BinaryFile": {
-      "FromURL": "binaryFileFromURL",
-      "IsEmpty": "binaryFileIsEmpty"
+      "FromURL": "binaryFileFromURL"
     },
     "Blob": {
       "IsNull": "blobIsNull",
-      "SetNull": "blobSetNull",
-      "FromString": "blobFromString",
-      "ToString": "blobToString",
-      "ToFormattedString": "blobToFormattedString",
-      "IsEmpty": "blobIsEmpty",
-      "SetEmpty": "blobSetEmpty"
+      "SetNull": "blobSetNull"
     },
     "BusinessComponent": {
       "Clone": "bcClone",
@@ -1245,10 +1397,7 @@
     },
     "Image": {
       "IsNull": "imageIsNull",
-      "SetNull": "imageSetNull",
-      "FromString": "imageFromString",
-      "ToString": "imageToString",
-      "ToFormattedString": "imageToFormattedString"
+      "SetNull": "imageSetNull"
     },
     "Properties": {
       "Clear": "propClear",
@@ -1281,11 +1430,6 @@
     "Video": {
       "IsNull": "videoIsNull",
       "SetNull": "videoSetNull",
-      "FromString": "videoFromString",
-      "ToString": "videoToString",
-      "ToFormattedString": "videoToFormattedString",
-      "IsEmpty": "videoIsEmpty",
-      "SetEmpty": "videoSetEmpty",
       "FromURL": "videoFromURL"
     },
     "WebSession": {
