@@ -286,7 +286,8 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
@@ -402,7 +403,8 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
@@ -518,7 +520,8 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "IndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/indexOf",
@@ -626,7 +629,8 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/bool/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
@@ -645,7 +649,8 @@
       "members": {
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "Integer": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
@@ -713,7 +718,8 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
-          "name": "fromString"
+          "name": "fromString",
+          "modifiesInstance": true
         },
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
