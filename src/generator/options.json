@@ -160,6 +160,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
           "name": "now"
         },
+        "Null": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isEmpty",
+          "name": "isEmpty"
+        },
         "PadL": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
           "name": "padLeft"
@@ -1223,9 +1227,6 @@
     }
   },
   "disambiguated": {
-    "Core": {
-      "Null": "isNullValue"
-    },
     "Character": {
       "IsNull": "cIsNull",
       "SetNull": "cSetNull",
