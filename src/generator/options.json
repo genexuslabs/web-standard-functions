@@ -749,6 +749,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/set",
           "name": "set"
         },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setEmpty",
+          "name": "setEmpty"
+        },
         "ToDate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
           "name": "toDate"
@@ -869,6 +873,10 @@
         "Second": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/second",
           "name": "second"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setEmpty",
+          "name": "setEmpty"
         },
         "SetTimeZone": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setTimezone",
