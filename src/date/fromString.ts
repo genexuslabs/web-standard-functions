@@ -4,7 +4,6 @@
  * @return Date
  */
 
-import { DateTime } from "luxon";
 import { EMPTY_DATE_VALUE } from "./core";
 
 export const fromString = (dateFrom: string): Date => {

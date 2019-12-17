@@ -12,7 +12,7 @@ export const testCases: Array<[string, Date]> = [
 
 describe("fromString operation", () => {
   for (const t of testCases) {
-    it(`fromString of ${t[1]} should be equal to "${t[1]}"`, () => {
+    it(`fromString of ${t[0]} should be equal to "${t[1]}"`, () => {
       expect(fromString(t[0])).toEqual(t[1]);
     });
   }
