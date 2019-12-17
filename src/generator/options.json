@@ -164,6 +164,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isEmpty",
           "name": "isEmpty"
         },
+        "NullValue": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/emptyValue",
+          "name": "emptyValue"
+        },
         "PadL": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/padLeft",
           "name": "padLeft"
@@ -343,7 +347,8 @@
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "SplitRegEx": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
@@ -460,7 +465,8 @@
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "SplitRegEx": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
@@ -577,7 +583,8 @@
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "SplitRegEx": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/splitRegExp",
@@ -640,6 +647,10 @@
           "name": "fromString",
           "modifiesInstance": true
         },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/bool/setEmpty",
+          "name": "setEmpty"
+        },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/bool/toString",
           "name": "toString"
@@ -675,6 +686,10 @@
         "RoundToEven": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/roundToEven",
           "name": "roundToEven"
+        },
+        "SetEmpty": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/setEmpty",
+          "name": "setEmpty"
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
@@ -751,7 +766,8 @@
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "ToDate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toDate",
@@ -880,7 +896,8 @@
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setEmpty",
-          "name": "setEmpty"
+          "name": "setEmpty",
+          "modifiesInstance": true
         },
         "SetTimeZone": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/setTimezone",
@@ -1067,7 +1084,8 @@
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
-          "alias": "audioSetEmpty"
+          "alias": "audioSetEmpty",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
@@ -1097,7 +1115,8 @@
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
-          "alias": "binarySetEmpty"
+          "alias": "binarySetEmpty",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
@@ -1127,7 +1146,8 @@
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
-          "alias": "binaryFileSetEmpty"
+          "alias": "binaryFileSetEmpty",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
@@ -1157,7 +1177,8 @@
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
-          "alias": "blobSetEmpty"
+          "alias": "blobSetEmpty",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
@@ -1187,7 +1208,8 @@
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
-          "alias": "imageSetEmpty"
+          "alias": "imageSetEmpty",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
@@ -1217,7 +1239,8 @@
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
-          "alias": "videoSetEmpty"
+          "alias": "videoSetEmpty",
+          "modifiesInstance": true
         },
         "ToFormattedString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toString",
@@ -1256,13 +1279,11 @@
     },
     "Numeric": {
       "IsNull": "nIsNull",
-      "SetNull": "nSetNull",
-      "SetEmpty": "nSetEmpty"
+      "SetNull": "nSetNull"
     },
     "Date": {
       "IsNull": "dIsNull",
-      "SetNull": "dSetNull",
-      "SetEmpty": "dSetEmpty"
+      "SetNull": "dSetNull"
     },
     "DateTime": {
       "IsNull": "dtIsNull",
@@ -1271,8 +1292,7 @@
     },
     "Boolean": {
       "IsNull": "bIsNull",
-      "SetNull": "bSetNull",
-      "SetEmpty": "bSetEmpty"
+      "SetNull": "bSetNull"
     },
     "Audio": {
       "IsNull": "audioIsNull",
