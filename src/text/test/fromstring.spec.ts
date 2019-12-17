@@ -3,8 +3,8 @@ import { testCases } from "./fromstring-cases";
 
 describe("fromString operation", () => {
   for (const t of testCases) {
-    it(`fromString in "${t[0]}" to equal "${t[1]}"`, () => {
-      expect(fromString(t[0], t[1])).toBe(t[1]);
+    it(`fromString in "${t[0]}" to equal "${t[0]}"`, () => {
+      expect(fromString(t[0])).toBe(t[0]);
     });
   }
 });
