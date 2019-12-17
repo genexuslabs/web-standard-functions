@@ -313,6 +313,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "cIsNull"
+        },
         "LastIndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
           "name": "lastIndexOf"
@@ -430,6 +435,11 @@
         "IsMatch": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "vIsNull"
         },
         "LastIndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
@@ -549,6 +559,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isMatch",
           "name": "isMatch"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "lIsNull"
+        },
         "LastIndexOf": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/lastIndexOf",
           "name": "lastIndexOf"
@@ -647,6 +662,11 @@
           "name": "fromString",
           "modifiesInstance": true
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "bIsNull"
+        },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/bool/setEmpty",
           "name": "setEmpty"
@@ -678,6 +698,11 @@
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/isEmpty",
           "name": "isEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "nIsNull"
         },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
@@ -747,6 +772,11 @@
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
           "name": "isEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "dIsNull"
         },
         "Month": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/month",
@@ -865,6 +895,11 @@
         "IsEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/isEmpty",
           "name": "isEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "dtIsNull"
         },
         "Millisecond": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/millisecond",
@@ -1081,6 +1116,11 @@
           "name": "isEmpty",
           "alias": "audioIsEmpty"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "audioIsNull"
+        },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
@@ -1111,6 +1151,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
           "name": "isEmpty",
           "alias": "binaryIsEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "binaryIsNull"
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
@@ -1143,6 +1188,11 @@
           "name": "isEmpty",
           "alias": "binaryFileIsEmpty"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "binaryFileIsNull"
+        },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
@@ -1173,6 +1223,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/isEmpty",
           "name": "isEmpty",
           "alias": "blobIsEmpty"
+        },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "blobIsNull"
         },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
@@ -1205,6 +1260,11 @@
           "name": "isEmpty",
           "alias": "imageIsEmpty"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "imageIsNull"
+        },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
@@ -1236,6 +1296,11 @@
           "name": "isEmpty",
           "alias": "videoIsEmpty"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull",
+          "alias": "videoIsNull"
+        },
         "SetEmpty": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/setEmpty",
           "name": "setEmpty",
@@ -1263,43 +1328,34 @@
   },
   "disambiguated": {
     "Character": {
-      "IsNull": "cIsNull",
       "SetNull": "cSetNull",
       "HTMLClean": "cHtmlClean"
     },
     "Varchar": {
-      "IsNull": "vIsNull",
       "SetNull": "vSetNull",
       "HTMLClean": "vHtmlClean"
     },
     "LongVarchar": {
-      "IsNull": "lIsNull",
       "SetNull": "lSetNull",
       "HTMLClean": "lHtmlClean"
     },
     "Numeric": {
-      "IsNull": "nIsNull",
       "SetNull": "nSetNull"
     },
     "Date": {
-      "IsNull": "dIsNull",
       "SetNull": "dSetNull"
     },
     "DateTime": {
-      "IsNull": "dtIsNull",
       "SetNull": "dtSetNull",
       "Set": "dtSet"
     },
     "Boolean": {
-      "IsNull": "bIsNull",
       "SetNull": "bSetNull"
     },
     "Audio": {
-      "IsNull": "audioIsNull",
       "SetNull": "audioSetNull"
     },
     "Binary": {
-      "IsNull": "binaryIsNull",
       "SetNull": "binarySetNull",
       "FromBase64String": "binaryFromBase64String"
     },
@@ -1307,7 +1363,6 @@
       "FromURL": "binaryFileFromURL"
     },
     "Blob": {
-      "IsNull": "blobIsNull",
       "SetNull": "blobSetNull"
     },
     "BusinessComponent": {
@@ -1432,7 +1487,6 @@
       "SetCookie": "httpResponseSetCookie"
     },
     "Image": {
-      "IsNull": "imageIsNull",
       "SetNull": "imageSetNull"
     },
     "Properties": {
@@ -1464,7 +1518,6 @@
       "Update": "textSearchupdate"
     },
     "Video": {
-      "IsNull": "videoIsNull",
       "SetNull": "videoSetNull",
       "FromURL": "videoFromURL"
     },
