@@ -817,6 +817,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
           "name": "endOfMonth"
         },
+        "FromString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/fromString",
+          "name": "dtFromString",
+          "modifiesInstance": true
+        },
         "FromTimeZone": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/fromTimezone",
           "name": "fromTimezone"
@@ -1077,7 +1082,6 @@
     "DateTime": {
       "IsNull": "dtIsNull",
       "SetNull": "dtSetNull",
-      "FromString": "dtFromString",
       "Set": "dtSet",
       "New": "dtNew"
     },
