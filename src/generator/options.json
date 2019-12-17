@@ -119,6 +119,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/integer",
           "name": "integer"
         },
+        "IsNull": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isNull",
+          "name": "isNull"
+        },
         "Len": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
           "name": "length"
