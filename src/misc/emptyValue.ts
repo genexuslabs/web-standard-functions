@@ -7,7 +7,7 @@ import { setEmpty as bSetEmpty } from "../bool/setEmpty";
  * @param value
  * @return any
  */
-export const emptyValue = (value: any): any => {
+export const emptyValue = (value: boolean | number | string | Date | null | undefined): any => {
   if (value instanceof Date) {
     return dSetEmpty(value);
   } else if (typeof value === "string") {
