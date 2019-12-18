@@ -7,11 +7,13 @@ import { isEmpty as bIsEmpty } from "../bool/isEmpty";
  * @param value
  * @return boolean
  */
-export const isEmpty = (value: any): boolean => {
+export const isEmpty = (
+  value: boolean | number | string | Date | null | undefined
+): boolean => {
   if (value === null || value === undefined) {
     return true;
   }
-  if (typeof value === "object" && value instanceof Date) {
+  if (value instanceof Date) {
     return dIsEmpty(value);
   } else if (typeof value === "string") {
     return sIsEmpty(value);

@@ -8,7 +8,7 @@ import { setEmpty as bSetEmpty } from "../bool/setEmpty";
  * @return any
  */
 export const emptyValue = (value: any): any => {
-  if (typeof value === "object" && value instanceof Date) {
+  if (value instanceof Date) {
     return dSetEmpty(value);
   } else if (typeof value === "string") {
     return sSetEmpty(value);
