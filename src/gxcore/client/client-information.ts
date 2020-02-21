@@ -9,7 +9,7 @@ function notImplemented() {
 
 function findOSInUserAgent(clientStrings): string {
   let nAgt = navigator.userAgent;
-  let os = clientStrings.find( (cs) => cs.r.test(nAgt));
+  let os = clientStrings.find(cs => cs.r.test(nAgt));
   return os ? os.s : "Unknown";
 }
 
@@ -20,7 +20,8 @@ export class GeneXusClientClientInformation {
    *  - Universally unique
    *  - Stable
    */
-  static get id(): string {
+
+  public static id = (): string => {
     let id = getCookie("GX_CLIENT_ID");
     if (!id) {
       id = GUID.newGuid().toString();
@@ -28,12 +29,12 @@ export class GeneXusClientClientInformation {
       setCookie("GX_CLIENT_ID", id, "/", expiration);
     }
     return id;
-  }
+  };
 
   /**
    * Returns the operating system name
    */
-  static get oSName(): string {
+  public static oSName = (): string => {
     return findOSInUserAgent([
       { s: "Windows", r: /(Windows|win32|win64)/ },
       { s: "Android", r: /Android/ },
@@ -52,12 +53,12 @@ export class GeneXusClientClientInformation {
         r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
       }
     ]);
-  }
+  };
 
   /**
    * Returns the version of the operating system
    */
-  static get oSVersion(): string {
+  public static oSVersion = (): string => {
     let os = findOSInUserAgent([
       { s: "Windows 10", r: /(Windows 10.0|Windows NT 10.0)/ },
       { s: "Windows 8.1", r: /(Windows 8.1|Windows NT 6.3)/ },
@@ -119,64 +120,62 @@ export class GeneXusClientClientInformation {
         break;
     }
     return osVersion;
-  }
+  };
 
   /**
    * Returns a unique identifier for the device
    * Current implementation returns the same as the `id` property
    */
-  static get networkID(): string {
-    return this.id;
-  }
+  public static networkID = GeneXusClientClientInformation.id;
 
   /**
    * A character string is returned with the device language
    */
-  static get language(): string {
+  public static language = (): string => {
     let lang = navigator.languages
       ? navigator.languages[0]
       : navigator.language;
     return lang;
-  }
+  };
 
   /**
    * Returns an enumerated value representing the device type
    */
-  static get deviceType(): number {
+  public static deviceType = (): number => {
     return 4; // SmartDeviceType.Web
-  }
+  };
 
   /**
    * Returns the platform name of the device as much specific as possible
    */
-  static get platformName(): string {
+  public static platformName = (): string => {
     let nVer = navigator.appVersion;
     let mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
 
     return "Web" + mobile ? " Mobile" : "";
-  }
+  };
 
   /**
    * Returns the version number of the application which it was set by the developer
    */
-  static get appVersionCode(): string {
+  public static appVersionCode = (): string => {
     notImplemented();
     return null;
-  }
+  };
 
   /**
    * Returns the version name of the application which it was set by the developer
    */
-  static get appVersionName(): string {
+  public static appVersionName = (): string => {
     notImplemented();
     return null;
-  }
+  };
 
   /**
    * Returns the application identifier
    */
-  static get applicationId(): string {
+  public static applicationId = (): string => {
     notImplemented();
     return null;
-  }
+  };
 }
