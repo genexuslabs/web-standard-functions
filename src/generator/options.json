@@ -1032,7 +1032,49 @@
       }
     },
     "GeneXus.Client.ClientInformation": {
-      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-information"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-information",
+      "members": {
+        "Id": {
+          "asMethod": true,
+          "available": true
+        },
+        "OSName": {
+          "asMethod": true,
+          "available": true
+        },
+        "OSVersion": {
+          "asMethod": true,
+          "available": true
+        },
+        "NetworkID": {
+          "asMethod": true,
+          "available": true
+        },
+        "Language": {
+          "asMethod": true,
+          "available": true
+        },
+        "DeviceType": {
+          "asMethod": true,
+          "available": true
+        },
+        "PlatformName": {
+          "asMethod": true,
+          "available": true
+        },
+        "AppVersionCode": {
+          "asMethod": true,
+          "available": true
+        },
+        "AppVersionName": {
+          "asMethod": true,
+          "available": true
+        },
+        "ApplicationId": {
+          "asMethod": true,
+          "available": true
+        }
+      }
     },
     "GeneXus.Client.Socket": {
       "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-socket"
