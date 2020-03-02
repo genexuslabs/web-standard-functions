@@ -1169,7 +1169,13 @@
       }
     },
     "GeneXus.SD.Network": {
-      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/network"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/network",
+      "members": {
+        "ApplicationServerURL": {
+          "asMethod": true,
+          "available": true
+        }
+      }
     },
     "GeneXus.SD.Synchronization.SynchronizationEvents": {
       "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/synchronization/synchronizationEvents"

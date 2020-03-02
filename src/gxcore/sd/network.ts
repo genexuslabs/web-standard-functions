@@ -4,7 +4,7 @@ export class GeneXusSDNetwork {
   /**
    * Returns the application's services URL
    */
-  static get applicationServerURL(): string {
+  static applicationServerURL(): string {
     let config = ConfigurationState.getInstance();
     let hostName = config.getDynStoredValue("SERVICE_HOSTNAME");
     let basePath = config.getDynStoredValue("SERVICE_BASE_PATH");

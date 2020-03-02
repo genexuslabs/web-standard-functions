@@ -46,7 +46,7 @@ const resolveUrl = (url?: string): string => {
   let wsUrl = url;
   if (!wsUrl) {
     wsUrl =
-      GeneXusSDNetwork.applicationServerURL
+      GeneXusSDNetwork.applicationServerURL()
         .replace("http://", "ws://")
         .replace("https://", "ws://") + "gxwebsocket.svc";
     wsUrl =

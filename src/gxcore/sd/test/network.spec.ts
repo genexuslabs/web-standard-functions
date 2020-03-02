@@ -7,7 +7,7 @@ describe("Network external object", () => {
       SERVICE_HOSTNAME: "http://localhost/",
       SERVICE_BASE_PATH: "TestAngular/"
     });
-    expect(GeneXusSDNetwork.applicationServerURL).toBe(
+    expect(GeneXusSDNetwork.applicationServerURL()).toBe(
       "http://localhost/TestAngular/"
     );
   });
