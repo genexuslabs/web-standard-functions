@@ -4,6 +4,6 @@
  * @return string
  */
 
-export const fromString = (source: string): string => {
+export const fromString = (target: string, source: string): string => {
   return source;
 };

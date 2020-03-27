@@ -3,6 +3,6 @@
  * @param {string} value
  * @returns number
  */
-export const fromString = (value: string): number => {
+export const fromString = (target: number, value: string): number => {
   return Number.parseFloat(value);
 };

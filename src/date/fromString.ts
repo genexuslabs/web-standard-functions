@@ -6,7 +6,7 @@
 
 import { EMPTY_DATE_VALUE } from "./core";
 
-export const fromString = (dateFrom: string): Date => {
+export const fromString = (target: Date, dateFrom: string): Date => {
   const dateParts = dateFrom.match(
     /([0-9]?[0-9])\/?([0-9]?[0-9])\/?([0-9][0-9][0-9][0-9])/
   );

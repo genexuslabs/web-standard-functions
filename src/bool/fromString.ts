@@ -3,6 +3,6 @@
  * @param str Input string
  */
 
-export const fromString = (str: string): boolean => {
+export const fromString = (target: boolean, str: string): boolean => {
   return str.toLowerCase() === "true";
 };
