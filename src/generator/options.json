@@ -1445,6 +1445,9 @@
     },
     "XMLWriter": {
       "path": "@genexus/web-standard-functions/dist/lib-esm/types/xmlwriter"
+    },
+    "GeneXus.Common.Log": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/log"
     }
   },
   "disambiguated": {
