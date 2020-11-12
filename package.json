@@ -55,7 +55,7 @@
     "pretty-quick": "^1.11.1",
     "shx": "^0.3.2",
     "standard-api-generator": "git+https://github.com/genexuslabs/standard-api-generator.git",
-    "ts-jest": "^24.3.0",
+    "ts-jest": "^26.4.4",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
