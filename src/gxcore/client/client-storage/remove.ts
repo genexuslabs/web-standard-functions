@@ -5,6 +5,9 @@ import { prefixKey, storage } from "./common";
  * @param {string} key
  */
 export function remove(key: any) {
-  let pKey = prefixKey(key);
+  if (!storage) {
+    return;
+  }
+  const pKey = prefixKey(key);
   storage.removeItem(pKey);
 }

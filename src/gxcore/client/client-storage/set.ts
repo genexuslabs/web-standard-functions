@@ -7,6 +7,9 @@ import { prefixKey, storage } from "./common";
  * @param {string} value
  */
 export function set(key: string, value: string) {
-  let pKey = prefixKey(key);
+  if (!storage) {
+    return;
+  }
+  const pKey = prefixKey(key);
   storage.setItem(pKey, value);
 }

@@ -104,11 +104,15 @@ export class ConfigurationState {
 
   // Local storage
   private getStoredValueWithKey(storagekey: string): string {
-    return window.localStorage.getItem(storagekey);
+    if (global) {
+      return global.localStorage?.getItem(storagekey);
+    }
   }
 
   private setStoredValueWithKey(storagekey: string, value: string) {
-    window.localStorage.setItem(storagekey, value);
+    if (global) {
+      global.localStorage?.setItem(storagekey, value);
+    }
   }
 
   // Static storage
