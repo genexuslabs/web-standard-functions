@@ -1,13 +1,14 @@
+import {
+  detect as timezoneDetect,
+  storageKey as timezoneStorageKey
+} from "../datetime/timezone";
+import { storage } from "../common/storage";
+
 const keyPrefix: string = "gx.config.configurationstate";
 const keyDynPtyPrefix: string = "gx.config.configurationstate.dynpty";
 const languageKey: string = "language";
 const validLanguagesKey: string = "languages";
 const defaultLanguageKey: string = "DEFAULT_LANGUAGE";
-
-import {
-  detect as timezoneDetect,
-  storageKey as timezoneStorageKey
-} from "../datetime/timezone";
 
 export class ConfigurationState {
   // Singleton
@@ -104,15 +105,11 @@ export class ConfigurationState {
 
   // Local storage
   private getStoredValueWithKey(storagekey: string): string {
-    if (global) {
-      return global.localStorage?.getItem(storagekey);
-    }
+    return storage?.getItem(storagekey);
   }
 
   private setStoredValueWithKey(storagekey: string, value: string) {
-    if (global) {
-      global.localStorage?.setItem(storagekey, value);
-    }
+    storage?.setItem(storagekey, value);
   }
 
   // Static storage

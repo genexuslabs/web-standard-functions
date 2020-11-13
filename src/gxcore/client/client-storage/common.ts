@@ -1,6 +1,6 @@
 export const keyPrefix: string = "gx.client.clientstorage";
 
-export const storage = global.localStorage;
+export { storage } from "../../../common/storage";
 
 export function prefixKey(key: string) {
   return `${keyPrefix}.${key}`;
