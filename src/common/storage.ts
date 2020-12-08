@@ -1,3 +1,1 @@
-const globalAny = global as any;
-
-export const storage = globalAny.localStorage;
+export const storage = globalThis.localStorage;
