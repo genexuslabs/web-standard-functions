@@ -1156,6 +1156,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/takePhoto",
           "name": "takePhoto",
           "notifiesGenerator": true
+        },
+        "RecordVideo": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/recordVideo",
+          "name": "recordVideo",
+          "notifiesGenerator": true
         }
       }
     },
@@ -1450,7 +1455,31 @@
       "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/log"
     },
     "GeneXus.Common.Geolocation": {
-      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/geolocation"
+      "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/geolocation",
+      "members": {
+        "GetMyLocation": {
+          "name": "getMyLocation",
+          "isAsync": true
+        },
+        "GetLocation": {
+          "name": "getGeolocation",
+          "alias": "getGeolocation"
+        }
+      }
+    },
+    "GeneXus.SD.Scanner": {
+      "members": {
+        "ScanBarcode": {
+          "name": "scanBarcode",
+          "alias": "scanBarcode",
+          "isAsync": true
+        },
+        "ScanInLoop": {
+          "name": "scanInLoop",
+          "alias": "scanInLoop",
+          "isAsync": true
+        }
+      }
     }
   },
   "disambiguated": {
@@ -1645,9 +1674,6 @@
     },
     "GeneXus.Common.Analytics": {
       "SetUserId": "setAnalyticsUserId"
-    },
-    "GeneXus.Common.Geolocation": {
-      "GetLocation": "getGeolocation"
     },
     "GeneXus.Common.Log": {
       "Error": "logError"
