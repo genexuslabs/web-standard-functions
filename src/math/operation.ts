@@ -6,11 +6,9 @@ import BigNumber from "bignumber.js";
  */
 export function defineBinaryOperation(
   operationName: string
-): (operand1: string | number, operand2: string | number) => string | number {
-  return (
-    operand1: string | number,
-    operand2: string | number
-  ): string | number => binaryOperation(operationName, operand1, operand2);
+): (operand1: string | number, operand2: string | number) => number {
+  return (operand1: string | number, operand2: string | number): number =>
+    binaryOperation(operationName, operand1, operand2);
 }
 
 /**
@@ -34,13 +32,13 @@ function binaryOperation(
   operationName: string,
   operand1: string | number,
   operand2: string | number
-): string | number {
+): number {
   intiBigNumberConfig();
 
   const operand1BigN = new BigNumber(operand1);
   const operand2BigN = new BigNumber(operand2);
 
-  return operand1BigN[operationName](operand2BigN).toFormat();
+  return operand1BigN[operationName](operand2BigN).toNumber();
 }
 
 /**
