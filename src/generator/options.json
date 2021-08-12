@@ -176,6 +176,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/padRight",
           "name": "padRight"
         },
+        "Random": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/math/random",
+          "name": "random"
+        },
         "Round": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/round",
           "name": "round"
