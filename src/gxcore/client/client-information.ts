@@ -152,7 +152,7 @@ export class GeneXusClientClientInformation {
     let nVer = navigator.appVersion;
     let mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
 
-    return "Web" + mobile ? " Mobile" : "";
+    return "Web" + (mobile ? " Mobile" : "");
   }
 
   /**
