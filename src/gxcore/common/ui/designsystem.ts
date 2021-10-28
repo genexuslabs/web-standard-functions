@@ -1,5 +1,14 @@
 /**
- * Sets the value of the DesignSystem option.
+ * Get the value of the DesignSystem option.
+ * @param {string} name
+ * @return {string}
+ */
+export const getOption = (name: string): string => {
+  return document.documentElement.getAttribute(`data-gx-ds-opt-${name}`) || "";
+};
+
+/**
+ * Set the value of the DesignSystem option.
  * @param {string} name
  * @param {string} value
  */
