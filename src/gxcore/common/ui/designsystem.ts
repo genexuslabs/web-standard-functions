@@ -1,3 +1,5 @@
+import { ResolverFunc, publishCall } from "../../../misc/publishCall";
+
 /**
  * Get the value of the DesignSystem option.
  * @param {string} name
@@ -31,6 +33,10 @@ export const getOptions = (): { name: string; value: string }[] => {
  */
 export const setOption = (name: string, value: string) => {
   document.documentElement.setAttribute(`data-gx-ds-opt-${name}`, value);
+
+  let resolver = (opt: string, val: void, resolve: ResolverFunc<void>) =>
+    resolve();
+  return publishCall("dsSetOption", ["ok"], resolver, name, value);
 };
 
 /**
@@ -39,4 +45,8 @@ export const setOption = (name: string, value: string) => {
  */
 export const clearOption = (name: string) => {
   document.documentElement.removeAttribute(`data-gx-ds-opt-${name}`);
+
+  let resolver = (opt: string, val: void, resolve: ResolverFunc<void>) =>
+    resolve();
+  return publishCall("dsSetOption", ["ok"], resolver, name, null);
 };
