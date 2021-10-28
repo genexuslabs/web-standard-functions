@@ -8,6 +8,23 @@ export const getOption = (name: string): string => {
 };
 
 /**
+ * Get list of DesignSystem options.
+ * @return {name: string, value: string}[]
+ */
+export const getOptions = (): { name: string; value: string }[] => {
+  const attrs = document.documentElement.attributes;
+  let list = [];
+
+  for (let i = attrs.length - 1; i >= 0; i--) {
+    if (attrs[i].name.startsWith("data-gx-ds-opt-")) {
+      list.push({ name: attrs[i].name.slice(15), value: attrs[i].value });
+    }
+  }
+
+  return list;
+};
+
+/**
  * Set the value of the DesignSystem option.
  * @param {string} name
  * @param {string} value
