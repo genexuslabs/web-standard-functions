@@ -1107,6 +1107,28 @@
         }
       }
     },
+    "GeneXus.Common.UI.DesignSystem": {
+      "members": {
+        "GetOption": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/designsystem",
+          "name": "getOption"
+        },
+        "GetOptions": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/designsystem",
+          "name": "getOptions"
+        },
+        "SetOption": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/designsystem",
+          "name": "setOption",
+          "notifiesGenerator": true
+        },
+        "ClearOption": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/ui/designsystem",
+          "name": "clearOption",
+          "notifiesGenerator": true
+        }
+      }
+    },
     "GeneXus.SD.Calendar": {
       "members": {
         "Schedule": {
