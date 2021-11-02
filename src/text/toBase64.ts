@@ -1,3 +1,4 @@
+const btoa = require("btoa");
 /**
  * Converts the given string to base64 representation
  * @param {string} str Input string
