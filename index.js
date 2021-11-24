@@ -136,6 +136,7 @@ import { GeneXusSDScanner } from "./dist/lib-esm/generator/out/not_implemented";
 //**********************//
 //***NOT IMPLEMENTED***//
 //********************//
+
 //**********************//
 //****Core****//
 import { ask } from "./dist/lib-esm/generator/out/not_implemented";
@@ -964,6 +965,7 @@ export {
   //**********************//
   //***NOT IMPLEMENTED***//
   //********************//
+
   ask,
   byteCount,
   cols,
