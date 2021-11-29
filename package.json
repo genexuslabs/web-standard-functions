@@ -5,6 +5,7 @@
   "main": "dist/web-standard-functions.js",
   "module": "dist/lib-esm/index.js",
   "typings": "dist/types/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "npm run clean && npm run generate-api && npm run build.commonjs && npm run build.es6",
     "build.commonjs": "tsc",
@@ -18,7 +19,7 @@
     "test": "env-cmd ./test/.env jest --no-cache --maxWorkers 2",
     "test.prod": "npm run lint && npm run test -- --coverage --no-cache",
     "test.watch": "jest --watch --no-cache",
-    "validate": "npm run lint && npm run test && npm run build"
+    "validate": "npm run lint && npm run test && npm run build && cd ./node_modules/web-standard-functions-test && npm run test:tree-shaking && cd ../.."
   },
   "files": [
     "dist",
