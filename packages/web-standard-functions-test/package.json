@@ -1,0 +1,28 @@
+{
+  "name": "web-standard-functions-test",
+  "version": "1.0.0",
+  "description": "Test web-standard-functions-test",
+  "main": "index.js",
+  "scripts": {
+    "test:tree-shaking": "webpack --config webpack.config.js && jest -i webpack-tree-shaking.spec.js -t \"webpack tree-shaking\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genexuslabs/web-standard-functions.git"
+  },
+  "keywords": [
+    "Test"
+  ],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/genexuslabs/web-standard-functions/issues"
+  },
+  "homepage": "https://github.com/genexuslabs/web-standard-functions#readme",
+  "devDependencies": {
+    "jest": "^27.0.5",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1"
+  }
+}

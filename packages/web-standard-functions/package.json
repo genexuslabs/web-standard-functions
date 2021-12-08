@@ -1,0 +1,109 @@
+{
+  "name": "@genexus/web-standard-functions",
+  "version": "0.19.0",
+  "description": "GeneXus JavaScript standard functions library for web generators",
+  "main": "dist/web-standard-functions.js",
+  "module": "dist/lib-esm/index.js",
+  "typings": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run clean && npm run generate-api && npm run build.commonjs && npm run build.es6",
+    "build.commonjs": "tsc",
+    "build.es6": "tsc -m es6 --outDir ./dist/lib-esm",
+    "clean": "shx rm -rf ./dist && shx rm -f ./src/index.ts && shx rm -rf ./src/generator/out",
+    "generate-api": "cd ./node_modules/standard-api-generator && node ./index.js -o ../../src/generator/options.json && cd ../..",
+    "lint": "tslint  --project tsconfig.json -t codeFrame src/**/*.ts test/**/*.ts",
+    "precommit": "pretty-quick --staged && npm run lint",
+    "pretty-quick": "pretty-quick",
+    "start": "npm run generate-api && tsc --watch",
+    "test": "env-cmd ./test/.env jest --no-cache --maxWorkers 2",
+    "test.prod": "npm run lint && npm run test -- --coverage --no-cache",
+    "test.watch": "jest --watch --no-cache",
+    "validate": "npm run lint && npm run test && npm run build && cd ../../node_modules/web-standard-functions-test && npm run test:tree-shaking && cd ../.."
+  },
+  "files": [
+    "dist",
+    "src/generator/out/angular_metadata.json"
+  ],
+  "engines": {
+    "node": ">=8.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genexuslabs/web-standard-functions.git"
+  },
+  "keywords": [
+    "genexus",
+    "javascript",
+    "library"
+  ],
+  "author": "GeneXus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/genexuslabs/web-standard-functions/issues"
+  },
+  "homepage": "https://github.com/genexuslabs/web-standard-functions#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/pubsub-js": "^1.5.18",
+    "atob": "^2.1.2",
+    "btoa": "^1.2.1",
+    "env-cmd": "^8.0.2",
+    "husky": "^2.7.0",
+    "jest": "^27.0.5",
+    "jest-websocket-mock": "^1.5.1",
+    "mock-socket": "~8.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^1.11.1",
+    "shx": "^0.3.2",
+    "standard-api-generator": "git+https://github.com/genexuslabs/standard-api-generator.git",
+    "ts-jest": "^27.0.5",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.8.2",
+    "wait-for-expect": "^3.0.2"
+  },
+  "dependencies": {
+    "@types/websocket": "1.0.4",
+    "bignumber.js": "^7.2.1",
+    "full-icu": "^1.3.0",
+    "jdu": "^1.0.0",
+    "jstz": "^2.1.1",
+    "loglevel": "^1.6.7",
+    "luxon": "^1.22.0",
+    "pubsub-js": "^1.8.0",
+    "tidy-html5": "^0.1.1",
+    "unicode-substring": "^1.0.0",
+    "uuid": "^8.3.2",
+    "xslt-processor": "^0.11.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testEnvironment": "jsdom"
+  },
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "/test/"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 90,
+      "functions": 95,
+      "lines": 95,
+      "statements": 95
+    }
+  },
+  "collectCoverage": true
+}

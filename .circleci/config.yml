@@ -15,11 +15,11 @@ jobs:
           keys:
             - v4-dependencies-{{ checksum "package.json" }}
 
-      - run: npm install
+      - run: yarn
 
       - run:
           name: Run validate
-          command: npm run validate
+          command: yarn validate
 
       - save_cache:
           paths:
@@ -41,7 +41,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
       - run:
           name: Publish package
-          command: npm publish --access=public
+          command: cd packages/web-standard-functions && yarn publish --access=public
 
   build:
     <<: *defaults
@@ -53,14 +53,14 @@ jobs:
           keys:
             - v4-dependencies-{{ checksum "package.json" }}
 
-      - run: npm install
+      - run: yarn
 
       - save_cache:
           paths:
             - node_modules
           key: v4-dependencies-{{ checksum "package.json" }}
 
-      - run: npm run validate
+      - run: yarn validate
 
       - store_artifacts:
           path: dist
