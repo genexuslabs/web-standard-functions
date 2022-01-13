@@ -10,8 +10,11 @@ import { length } from "../text/length";
 export const lastIndexOf = (
   target: string,
   pattern: string,
-  from: number
+  from?: number
 ): number => {
+  if (from === undefined) {
+    from = target.length;
+  }
   if (from < 1 || from > length(target)) return 0;
   return target.lastIndexOf(pattern, from - 1) + 1;
 };
