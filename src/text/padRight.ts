@@ -8,7 +8,7 @@
 export const padRight = (
   target: string,
   length: number,
-  fillChar: string
+  fillChar?: string
 ): string => {
   return target.padEnd(length, fillChar);
 };

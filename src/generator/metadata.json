@@ -6032,6 +6032,13 @@
           "returns": "String",
           "scopes": null,
           "name": "HTMLClean"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "String",
+          "scopes": null,
+          "name": "RemoveDiacritics"
         }
       ],
       "properties": [
@@ -6810,6 +6817,13 @@
           "returns": "String",
           "scopes": null,
           "name": "HTMLClean"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "String",
+          "scopes": null,
+          "name": "RemoveDiacritics"
         }
       ],
       "properties": [

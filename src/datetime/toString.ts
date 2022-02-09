@@ -6,17 +6,104 @@ import { toString as str } from "../numeric/toString";
  * Returns a string represantation of a date-time. dd[/]mm[/]yyyy HH:mm:ss
  * @return Date
  */
-export const toString = (targetDate: Date): string => {
+export const toString = (
+  targetDate: Date,
+  dateDigit?: Number,
+  hourDigit?: Number
+): string => {
+  let datePart: String = "";
+  let timePart: String = "";
+
   if (isEmpty(targetDate)) {
     return "";
   } else {
-    const datePart = `${targetDate.getDate()}/${targetDate.getMonth() +
-      1}/${targetDate.getFullYear()}`;
-    const timePart = `${padLeft(str(targetDate.getHours()), 2, "0")}:${padLeft(
-      str(targetDate.getMinutes()),
-      2,
-      "0"
-    )}:${padLeft(str(targetDate.getSeconds()), 2, "0")}`;
-    return `${datePart} ${timePart}`;
+    switch (dateDigit) {
+      case 0:
+        datePart = "";
+        break;
+      case 8:
+        datePart = `${padLeft(str(targetDate.getDate()), 2, "0")}/${padLeft(
+          str(targetDate.getMonth() + 1),
+          2,
+          "0"
+        )}/${targetDate
+          .getFullYear()
+          .toString()
+          .substr(-2)}`;
+        break;
+      case 10:
+        datePart = `${padLeft(str(targetDate.getDate()), 2, "0")}/${padLeft(
+          str(targetDate.getMonth() + 1),
+          2,
+          "0"
+        )}/${targetDate.getFullYear()}`;
+        break;
+
+      default:
+        datePart = `${padLeft(str(targetDate.getDate()), 2, "0")}/${padLeft(
+          str(targetDate.getMonth() + 1),
+          2,
+          "0"
+        )}/${targetDate.getFullYear()}`;
+        break;
+    }
+
+    switch (hourDigit) {
+      case 0:
+        timePart = "";
+        break;
+      case 2:
+        datePart = "";
+        timePart = `${padLeft(str(targetDate.getHours()), 2, "0")}:${padLeft(
+          str(targetDate.getMinutes()),
+          2,
+          "0"
+        )}`;
+        break;
+      case 5:
+        timePart = `${padLeft(str(targetDate.getHours()), 2, "0")}:${padLeft(
+          str(targetDate.getMinutes()),
+          2,
+          "0"
+        )}`;
+        break;
+      case 8:
+        timePart = `${padLeft(str(targetDate.getHours()), 2, "0")}:${padLeft(
+          str(targetDate.getMinutes()),
+          2,
+          "0"
+        )}:${padLeft(str(targetDate.getSeconds()), 2, "0")}`;
+        break;
+
+      case 12:
+        timePart = `${padLeft(str(targetDate.getHours()), 2, "0")}:${padLeft(
+          str(targetDate.getMinutes()),
+          2,
+          "0"
+        )}:${padLeft(str(targetDate.getSeconds()), 2, "0")}.${padLeft(
+          str(targetDate.getMilliseconds()),
+          3,
+          "0"
+        )}`;
+        break;
+
+      default:
+        timePart = `${padLeft(str(targetDate.getHours()), 2, "0")}:${padLeft(
+          str(targetDate.getMinutes()),
+          2,
+          "0"
+        )}:${padLeft(str(targetDate.getSeconds()), 2, "0")}`;
+        break;
+    }
+
+    if (datePart !== "" && timePart !== "") {
+      return `${datePart} ${timePart}`;
+    }
+    if (datePart === "" && timePart !== "") {
+      return `${timePart}`;
+    }
+    if (timePart === "" && datePart !== "") {
+      return `${datePart}`;
+    }
   }
 };

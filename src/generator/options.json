@@ -64,11 +64,11 @@
           "notifiesGenerator": true
         },
         "CtoD": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/CtoD",
           "name": "fromString"
         },
         "CtoT": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/CtoT",
           "name": "fromString"
         },
         "Day": {
@@ -913,7 +913,7 @@
         },
         "FromString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/fromString",
-          "name": "dtFromString",
+          "name": "fromString",
           "modifiesInstance": true
         },
         "FromTimeZone": {
