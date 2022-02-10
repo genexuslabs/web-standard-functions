@@ -6,6 +6,7 @@
  * @param {number} hour
  * @param {number} minutes
  * @param {number} seconds
+ *  * @param {number} milliseconds
  * @return Date
  */
 
@@ -17,15 +18,28 @@ export const newInstance = (
   day: number,
   hour: number,
   minutes: number,
-  seconds: number
+  seconds: number,
+  milliseconds?: number
 ): Date => {
-  const ret = new Date(year, month - 1, day, hour, minutes, seconds, 0);
+  if (!milliseconds) {
+    milliseconds = Number("000");
+  }
+  const ret = new Date(
+    year,
+    month - 1,
+    day,
+    hour,
+    minutes,
+    seconds,
+    milliseconds
+  );
   return ret.getFullYear() === year &&
     ret.getMonth() === month - 1 &&
     ret.getDate() === day &&
     ret.getHours() === hour &&
     ret.getMinutes() === minutes &&
-    ret.getSeconds() === seconds
+    ret.getSeconds() === seconds &&
+    ret.getMilliseconds() === milliseconds
     ? ret
     : EMPTY_DATE_VALUE;
 };
