@@ -68,7 +68,7 @@
           "name": "fromString"
         },
         "CtoT": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/CtoT",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/CtoT",
           "name": "fromString"
         },
         "Day": {
