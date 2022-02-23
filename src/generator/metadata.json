@@ -21418,6 +21418,33 @@
           "scopes": null,
           "static": true,
           "name": "ShareImage"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "fileURI"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "text"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "title"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ShareFile"
         }
       ],
       "name": "GeneXus.Social.Share"

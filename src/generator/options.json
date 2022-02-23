@@ -1216,6 +1216,16 @@
         "ShareText": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/social/share/shareText",
           "name": "shareText"
+        },
+        "ShareImage": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/social/share/shareImage",
+          "name": "shareImage",
+          "isAsync": true
+        },
+        "ShareFile": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/social/share/shareFile",
+          "name": "shareFile",
+          "isAsync": true
         }
       }
     },
