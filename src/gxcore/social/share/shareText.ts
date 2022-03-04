@@ -7,8 +7,8 @@ import { msg } from "../../../misc/msg";
  */
 export const shareText = (
   text: string,
-  url: string,
-  title: string
+  url?: string,
+  title?: string
 ): Promise<void> => {
   const nav: any = window.navigator;
   if (nav && nav.share) {
