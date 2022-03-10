@@ -1,8 +1,16 @@
-import { defineBinaryOperation } from "./operation";
-
 /**
- * Return the result of `operand1` modulo `operand2` operation
- * @param operand1 First operand
- * @param operand2 Second operand
+ * @param {number} dividend
+ * @param {number} divisor
+ * @returns number
  */
-export const mod = defineBinaryOperation("mod");
+export const mod = (dividend: number, divisor: number): number => {
+  if (dividend === 0) {
+    return undefined;
+  } else {
+    if (dividend > 0) {
+      return Math.trunc(Math.abs(dividend) % Math.abs(divisor));
+    } else {
+      return -Math.trunc(Math.abs(dividend) % Math.abs(divisor));
+    }
+  }
+};
