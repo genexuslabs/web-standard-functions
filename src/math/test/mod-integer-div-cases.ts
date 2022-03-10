@@ -1,5 +1,4 @@
 // test[0] div test[1] = test[2] + test[3]
-// test[0] mod test[1] = test[3]
 
 // idiv and mod test cases
 export const testCases = [
