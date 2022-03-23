@@ -10,5 +10,12 @@ export const padLeft = (
   length: number,
   fillChar?: string
 ): string => {
-  return target.padStart(length, fillChar);
+  let res = "";
+
+  if (length === 0) {
+    res = "";
+  } else {
+    res = target.padStart(length, fillChar);
+  }
+  return res;
 };

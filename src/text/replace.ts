@@ -9,5 +9,5 @@ export const replace = (
   substr: string,
   repstr: string
 ): string => {
-  return target.replace(substr, repstr);
+  return target.replace(new RegExp(substr, "g"), repstr);
 };
