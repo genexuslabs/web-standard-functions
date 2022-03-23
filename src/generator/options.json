@@ -283,6 +283,10 @@
         "YMDHMStoT": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/newInstance",
           "name": "newInstance"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toFormattedString",
+          "name": "toFormattedString"
         }
       }
     },
