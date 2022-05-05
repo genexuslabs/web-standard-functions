@@ -2,6 +2,7 @@ import { getCookie } from "../../web/getCookie";
 import { setCookie } from "../../web/setCookie";
 import { GUID } from "../../types/guid";
 import { addYears } from "../../date/addYears";
+import { ConfigurationState } from "../../config/configurationState";
 
 function notImplemented() {
   console.log("Not yet implemented");
@@ -29,7 +30,7 @@ export class GeneXusClientClientInformation {
       setCookie("GX_CLIENT_ID", id, "/", expiration);
     }
     return id;
-  }
+  };
 
   /**
    * Returns the operating system name
@@ -53,7 +54,7 @@ export class GeneXusClientClientInformation {
         r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
       }
     ]);
-  }
+  };
 
   /**
    * Returns the version of the operating system
@@ -120,7 +121,7 @@ export class GeneXusClientClientInformation {
         break;
     }
     return osVersion;
-  }
+  };
 
   /**
    * Returns a unique identifier for the device
@@ -136,14 +137,14 @@ export class GeneXusClientClientInformation {
       ? navigator.languages[0]
       : navigator.language;
     return lang;
-  }
+  };
 
   /**
    * Returns an enumerated value representing the device type
    */
   public static deviceType = (): number => {
     return 4; // SmartDeviceType.Web
-  }
+  };
 
   /**
    * Returns the platform name of the device as much specific as possible
@@ -153,23 +154,25 @@ export class GeneXusClientClientInformation {
     let mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
 
     return "Web" + (mobile ? " Mobile" : "");
-  }
+  };
 
   /**
    * Returns the version number of the application which it was set by the developer
    */
   public static appVersionCode = (): string => {
-    notImplemented();
-    return null;
-  }
+    return ConfigurationState.getInstance().getProperty(
+      "APPLICATION_VERSION_CODE"
+    );
+  };
 
   /**
    * Returns the version name of the application which it was set by the developer
    */
   public static appVersionName = (): string => {
-    notImplemented();
-    return null;
-  }
+    return ConfigurationState.getInstance().getProperty(
+      "APPLICATION_VERSION_NAME"
+    );
+  };
 
   /**
    * Returns the application identifier
@@ -177,5 +180,5 @@ export class GeneXusClientClientInformation {
   public static applicationId = (): string => {
     notImplemented();
     return null;
-  }
+  };
 }
