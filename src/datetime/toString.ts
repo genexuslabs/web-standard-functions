@@ -1,6 +1,5 @@
 import { isEmpty } from "../date/isEmpty";
 import { padLeft } from "../text/padLeft";
-import { toString as str } from "../numeric/toString";
 
 /**
  * Returns a string represantation of a date-time. dd[/]mm[/]yyyy HH:mm:ss

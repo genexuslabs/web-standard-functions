@@ -287,6 +287,10 @@
         "YMDHMStoT": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/newInstance",
           "name": "newInstance"
+        },
+        "ToFormattedString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toFormattedString",
+          "name": "toFormattedString"
         }
       }
     },
@@ -752,8 +756,8 @@
           "modifiesInstance": true
         },
         "ToFormattedString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
-          "name": "toString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toFormattedString",
+          "name": "toFormattedString"
         },
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/numeric/toString",
