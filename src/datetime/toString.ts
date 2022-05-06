@@ -23,13 +23,17 @@ export const toString = (
     picture = "99/99/99 99:99";
   }
 
-  let day: String = padLeft(str(targetDate.getDate()), 2, "0");
-  let month: String = padLeft(str(targetDate.getMonth() + 1), 2, "0");
+  let day: String = padLeft(String(targetDate.getDate()), 2, "0");
+  let month: String = padLeft(String(targetDate.getMonth() + 1), 2, "0");
   let year: String = targetDate.getFullYear().toString();
-  let hours: String = padLeft(str(targetDate.getHours()), 2, "0");
-  let minutes: String = padLeft(str(targetDate.getMinutes()), 2, "0");
-  let seconds: String = padLeft(str(targetDate.getSeconds()), 2, "0");
-  let milliseconds: String = padLeft(str(targetDate.getMilliseconds()), 3, "0");
+  let hours: String = padLeft(String(targetDate.getHours()), 2, "0");
+  let minutes: String = padLeft(String(targetDate.getMinutes()), 2, "0");
+  let seconds: String = padLeft(String(targetDate.getSeconds()), 2, "0");
+  let milliseconds: String = padLeft(
+    String(targetDate.getMilliseconds()),
+    3,
+    "0"
+  );
   let type: String = "";
   let datePart: String = "";
   let timePart: String = "";
