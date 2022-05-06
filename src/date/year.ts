@@ -5,7 +5,10 @@
  */
 
 import { DateTime } from "luxon";
+import { EMPTY_DATE_VALUE } from "../date/core";
 
 export const year = (dateFrom: Date): number => {
-  return DateTime.fromJSDate(dateFrom).year;
+  return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
+    ? 0
+    : DateTime.fromJSDate(dateFrom).year;
 };

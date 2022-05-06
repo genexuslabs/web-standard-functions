@@ -4,15 +4,15 @@ export const testCases: Array<[Date, string, string]> = [
   [new Date(1891, 8, 28), "eng", "September"],
   [new Date(1968, 7, 9), "eng", "August"],
   [new Date(2019, 3, 3), "eng", "April"],
-  [new Date(1891, 8, 28), "spa", "septiembre"],
-  [new Date(1968, 7, 9), "spa", "agosto"],
-  [new Date(2019, 3, 3), "spa", "abril"],
-  [new Date(1891, 8, 28), "por", "setembro"],
-  [new Date(1968, 7, 9), "por", "agosto"],
-  [new Date(2019, 3, 3), "por", "abril"],
-  [new Date(1891, 8, 28), "ita", "settembre"],
-  [new Date(1968, 7, 9), "ita", "agosto"],
-  [new Date(2019, 3, 3), "ita", "aprile"],
+  [new Date(1891, 8, 28), "spa", "Septiembre"],
+  [new Date(1968, 7, 9), "spa", "Agosto"],
+  [new Date(2019, 3, 3), "spa", "Abril"],
+  [new Date(1891, 8, 28), "por", "Setembro"],
+  [new Date(1968, 7, 9), "por", "Agosto"],
+  [new Date(2019, 3, 3), "por", "Abril"],
+  [new Date(1891, 8, 28), "ita", "Settembre"],
+  [new Date(1968, 7, 9), "ita", "Agosto"],
+  [new Date(2019, 3, 3), "ita", "Aprile"],
   [new Date(1891, 8, 28), "chs", "九月"],
   [new Date(1968, 7, 9), "chs", "八月"],
   [new Date(2019, 3, 3), "chs", "四月"],
@@ -26,9 +26,7 @@ export const testCases: Array<[Date, string, string]> = [
 
 describe("monthName operation", () => {
   for (const t of testCases) {
-    it(`monthName for "${t[0]}" with lang "${t[1]}" should be equal to "${
-      t[2]
-    }"`, () => {
+    it(`monthName for "${t[0]}" with lang "${t[1]}" should be equal to "${t[2]}"`, () => {
       expect(monthName(t[0], t[1])).toEqual(t[2]);
     });
   }

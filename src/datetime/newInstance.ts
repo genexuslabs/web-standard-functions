@@ -21,19 +21,101 @@ export const newInstance = (
   seconds: number,
   milliseconds?: number
 ): Date => {
-  if (!milliseconds) {
+  if (!milliseconds || milliseconds === 0) {
     milliseconds = Number("000");
   }
-  const ret = new Date(
-    year,
-    month - 1,
-    day,
-    hour,
-    minutes,
-    seconds,
-    milliseconds
+
+  let ret;
+  let yearAux = 0;
+  let yearNow = Number(
+    new Date()
+      .getFullYear()
+      .toString()
+      .slice(-2)
   );
-  return ret.getFullYear() === year &&
+
+  switch (year.toString().length) {
+    case 2:
+      if (year === 0) {
+        yearAux = 2000;
+      }
+      if (0 < year && year < yearNow) {
+        yearAux = Number("20" + year.toString());
+      }
+      if (yearNow <= year && year < 100) {
+        yearAux = Number("19" + year.toString());
+      }
+
+      if (0 >= hour || hour > 23) {
+        hour = 0;
+        minutes = 0;
+        seconds = 0;
+        milliseconds = 0;
+        ret = new Date(yearAux, month - 1, day, 0, 0, 0, 0);
+      } else {
+        ret = new Date(
+          yearAux,
+          month - 1,
+          day,
+          hour,
+          minutes,
+          seconds,
+          milliseconds
+        );
+      }
+
+      break;
+
+    case 1:
+      if (0 <= year && year <= yearNow) {
+        yearAux = Number("200" + year.toString());
+
+        if (0 >= hour || hour > 23) {
+          hour = 0;
+          minutes = 0;
+          seconds = 0;
+          milliseconds = 0;
+          ret = new Date(yearAux, month - 1, day, 0, 0, 0, 0);
+        } else {
+          ret = new Date(
+            yearAux,
+            month - 1,
+            day,
+            hour,
+            minutes,
+            seconds,
+            milliseconds
+          );
+        }
+      }
+      break;
+
+    case 4:
+      yearAux = year;
+      if (0 > hour || hour > 23) {
+        hour = 0;
+        minutes = 0;
+        seconds = 0;
+        milliseconds = 0;
+        ret = new Date(yearAux, month - 1, day, 0, 0, 0, 0);
+      } else {
+        ret = new Date(
+          yearAux,
+          month - 1,
+          day,
+          hour,
+          minutes,
+          seconds,
+          milliseconds
+        );
+      }
+      break;
+
+    default:
+      break;
+  }
+
+  return ret.getFullYear() === yearAux &&
     ret.getMonth() === month - 1 &&
     ret.getDate() === day &&
     ret.getHours() === hour &&

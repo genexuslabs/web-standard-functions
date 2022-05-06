@@ -5,11 +5,11 @@ import { setTimezone } from "../setTimezone";
 import { addMinutes } from "../addMinutes";
 
 export const testCases: Array<[timezones, number]> = [
-  [timezones.Buenos_Aires, -180 * 60],
-  [timezones.Darwin, 570 * 60],
-  [timezones.Cape_Verde, -60 * 60],
-  [timezones.Caracas, -240 * 60],
-  [timezones.Kabul, 270 * 60]
+  [timezones.Buenos_Aires, 180 * 60],
+  [timezones.Darwin, -570 * 60],
+  [timezones.Cape_Verde, 60 * 60],
+  [timezones.Caracas, 240 * 60],
+  [timezones.Kabul, -270 * 60]
 ];
 
 describe("now operation", () => {
@@ -19,11 +19,13 @@ describe("now operation", () => {
     let nowAtUTC = now();
     setTimezone(t[0]);
     let nowLocal = now();
+
     it(`now at "${
       t[0]
     }" is ${nowLocal.toISOString()}\t at UTC is ${nowAtUTC.toISOString()}\t difference should be ${t[1] /
       100} minutes (+/- ${execElapseTolerance} secs)`, () => {
-      let dif = difference(nowAtUTC, nowLocal) - t[1];
+      let dif = Math.abs(difference(nowAtUTC, nowLocal) - t[1]);
+
       expect(dif >= 0 && dif < execElapseTolerance).toBeTruthy();
     });
   }

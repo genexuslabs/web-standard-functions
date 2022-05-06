@@ -5,5 +5,5 @@
  */
 
 export const difference = (dateTo: Date, dateFrom: Date): number => {
-  return (dateFrom.getTime() - dateTo.getTime()) / 1000;
+  return (dateTo.getTime() - dateFrom.getTime()) / 1000;
 };
