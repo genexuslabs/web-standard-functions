@@ -11,7 +11,7 @@
     "build.es6": "tsc -m es6 --outDir ./dist/lib-esm",
     "clean": "shx rm -rf ./dist && shx rm -f ./src/index.ts && shx rm -rf ./src/generator/out",
     "generate-api": "cd ./node_modules/standard-api-generator && node ./index.js -o ../../src/generator/options.json && cd ../..",
-    "lint": "eslint -c .eslintrc.js --ext .ts src/**/*",
+    "lint": "eslint -c .eslintrc.js --ext .ts src/**/*.ts",
     "precommit": "pretty-quick --staged && npm run lint",
     "pretty-quick": "pretty-quick",
     "start": "npm run generate-api && tsc --watch",
