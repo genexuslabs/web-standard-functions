@@ -1,6 +1,6 @@
 export const testCases: Array<[string, string, string]> = [
   [
-    /*from https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/Basic_Example*/
+    /* from https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor/Basic_Example*/
     `
     <?xml version="1.0"?>
     <?xml-stylesheet type="text/xsl" href="example.xsl"?>

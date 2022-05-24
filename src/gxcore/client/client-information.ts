@@ -18,8 +18,8 @@ export class GeneXusClientClientInformation {
   /**
    * This property returns a device identifier
    * The value of ClientInformation.Id is:
-   *  - Universally unique
-   *  - Stable
+   * - Universally unique
+   * - Stable
    */
 
   public static id = (): string => {
