@@ -6,7 +6,7 @@
  * @param {number} hour
  * @param {number} minutes
  * @param {number} seconds
- *  * @param {number} milliseconds
+ * @param {number} milliseconds
  * @return Date
  */
 

@@ -1,8 +1,0 @@
-{
-  "extends": ["tslint-config-standard", "tslint-config-prettier"],
-  "rules": {
-    "semicolon": {
-      "options": [true, "always", "ignore-bound-class-methods"]
-    }
-  }
-}
