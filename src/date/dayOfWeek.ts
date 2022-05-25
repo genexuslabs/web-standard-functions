@@ -5,7 +5,10 @@
  */
 
 import { DateTime } from "luxon";
+import { EMPTY_DATE_VALUE } from "../date/core";
 
 export const dayOfWeek = (dateFrom: Date): number => {
-  return (parseInt(DateTime.fromJSDate(dateFrom).toFormat("c"), 10) % 7) + 1;
+  return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
+    ? 0
+    : (parseInt(DateTime.fromJSDate(dateFrom).toFormat("c"), 10) % 7) + 1;
 };

@@ -7,9 +7,17 @@
 
 import { DateTime } from "luxon";
 import { gxToLibLangMapping } from "./core";
+import { EMPTY_DATE_VALUE } from "../date/core";
 
 export const monthName = (dateFrom: Date, language?: string): string => {
-  return DateTime.fromJSDate(dateFrom)
+  let month = DateTime.fromJSDate(dateFrom)
     .setLocale(gxToLibLangMapping(language))
     .toFormat("LLLL");
+
+  return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
+    ? ""
+    : month
+        .charAt(0)
+        .toUpperCase()
+        .concat(month.substring(1, month.length));
 };

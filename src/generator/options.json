@@ -87,6 +87,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
           "name": "endOfMonth"
         },
+        "EoMdt": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/endOfMonth",
+          "name": "endOfMonth"
+        },
         "Format": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/format",
           "name": "format"
@@ -912,7 +916,7 @@
           "name": "difference"
         },
         "EndOfMonth": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/endOfMonth",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/endOfMonth",
           "name": "endOfMonth"
         },
         "FromString": {

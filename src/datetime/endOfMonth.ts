@@ -7,12 +7,16 @@
 import { DateTime } from "luxon";
 import { EMPTY_DATE_VALUE } from "../date/core";
 
-export const endOfMonth = (dateFrom: Date): Date => {
+export const endOfMonth = (dateFrom: DateTime): DateTime => {
   return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
     ? EMPTY_DATE_VALUE
     : new Date(
         dateFrom.getFullYear(),
         dateFrom.getMonth(),
-        DateTime.fromJSDate(dateFrom).daysInMonth
+        DateTime.fromJSDate(dateFrom).daysInMonth,
+        dateFrom.getHours(),
+        dateFrom.getMinutes(),
+        dateFrom.getSeconds(),
+        dateFrom.getMilliseconds()
       );
 };

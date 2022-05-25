@@ -8,11 +8,72 @@ import { padLeft } from "../text/padLeft";
 export const toString = (
   targetDate: Date,
   dateDigit?: Number,
-  hourDigit?: Number
+  hourDigit?: Number,
+  dateFormat?: String,
+  timeFormat?: Number,
+  picture?: String
 ): string => {
+  if (!dateFormat) {
+    dateFormat = "MDY";
+  }
+  if (!timeFormat) {
+    timeFormat = 12;
+  }
+  if (!picture) {
+    picture = "99/99/99 99:99";
+  }
+
+  let day: String = padLeft(String(targetDate.getDate()), 2, "0");
+  let month: String = padLeft(String(targetDate.getMonth() + 1), 2, "0");
+  let year: String = targetDate.getFullYear().toString();
+  let hours: String = padLeft(String(targetDate.getHours()), 2, "0");
+  let minutes: String = padLeft(String(targetDate.getMinutes()), 2, "0");
+  let seconds: String = padLeft(String(targetDate.getSeconds()), 2, "0");
+  let milliseconds: String = padLeft(
+    String(targetDate.getMilliseconds()),
+    3,
+    "0"
+  );
+  let type: String = "";
   let datePart: String = "";
   let timePart: String = "";
 
+  // Date Format   dateFormat = “MDY”   dateFormat = “DMY”   dateFormat = “YMD”
+  if (dateFormat) {
+    if (dateFormat.indexOf("Y4") === 0) {
+      dateFormat =
+        dateFormat.charAt(0) +
+        dateFormat.charAt(1) +
+        "/" +
+        dateFormat.charAt(2) +
+        "/" +
+        dateFormat.charAt(3);
+    } else {
+      dateFormat =
+        dateFormat.charAt(0) +
+        "/" +
+        dateFormat.charAt(1) +
+        "/" +
+        dateFormat.charAt(2);
+    }
+  }
+
+  // Time Format  timeFormat: 12   timeFormat: 24
+  if (timeFormat === 12) {
+    if (Number(hours) < 12) {
+      type = "AM";
+    } else {
+      type = "PM";
+    }
+
+    hours = String(Number(hours) % 12 || 12);
+
+    if (hours.toString().length === 1) {
+      hours = "0" + hours;
+    }
+  }
+
+  // Date Part
   if (isEmpty(targetDate)) {
     return "";
   } else {
@@ -20,101 +81,121 @@ export const toString = (
       case 0:
         datePart = "";
         break;
+
       case 8:
-        datePart = `${padLeft(
-          targetDate.getDate().toString(),
-          2,
-          "0"
-        )}/${padLeft(
-          (targetDate.getMonth() + 1).toString(),
-          2,
-          "0"
-        )}/${targetDate
-          .getFullYear()
-          .toString()
-          .substr(-2)}`;
+        if (dateFormat) {
+          year = year.substr(-2);
+          if (dateFormat.indexOf("Y4") === 0) {
+            datePart = dateFormat
+              .replace("D", day.toString())
+              .replace("M", month.toString())
+              .replace("Y4", year.toString());
+          } else {
+            datePart = dateFormat
+              .replace("D", day.toString())
+              .replace("M", month.toString())
+              .replace("Y", year.toString());
+          }
+        } else {
+          datePart = `${day}/${month}/${year.substr(-2)}`;
+        }
         break;
+
       case 10:
-        datePart = `${padLeft(
-          targetDate.getDate().toString(),
-          2,
-          "0"
-        )}/${padLeft(
-          (targetDate.getMonth() + 1).toString(),
-          2,
-          "0"
-        )}/${targetDate.getFullYear()}`;
+        if (dateFormat) {
+          if (dateFormat.indexOf("Y4") === 0) {
+            datePart = dateFormat
+              .replace("D", day.toString())
+              .replace("M", month.toString())
+              .replace("Y4", year.toString());
+          } else {
+            datePart = dateFormat
+              .replace("D", day.toString())
+              .replace("M", month.toString())
+              .replace("Y", year.toString());
+          }
+        } else {
+          datePart = `${day}/${month}/${year}`;
+        }
         break;
 
       default:
-        datePart = `${padLeft(
-          targetDate.getDate().toString(),
-          2,
-          "0"
-        )}/${padLeft(
-          (targetDate.getMonth() + 1).toString(),
-          2,
-          "0"
-        )}/${targetDate.getFullYear()}`;
+        if (dateFormat) {
+          // Picture
+          if (picture) {
+            let datePart = picture.split(" ")[0];
+            let yearPart = datePart.split("/")[2];
+            if (yearPart.length === 2) {
+              year = year.toString().substr(-2);
+            }
+          }
+
+          if (dateFormat.indexOf("Y4") === 0) {
+            datePart = dateFormat
+              .replace("D", day.toString())
+              .replace("M", month.toString())
+              .replace("Y4", year.toString());
+          } else {
+            datePart = dateFormat
+              .replace("D", day.toString())
+              .replace("M", month.toString())
+              .replace("Y", year.toString());
+          }
+        } else {
+          datePart = `${day}/${month}/${year}`;
+        }
         break;
     }
 
+    // Time Part
     switch (hourDigit) {
       case 0:
         timePart = "";
         break;
+
       case 2:
         datePart = "";
-        timePart = `${padLeft(
-          targetDate.getHours().toString(),
-          2,
-          "0"
-        )}:${padLeft(targetDate.getMinutes().toString(), 2, "0")}`;
+        if (timeFormat === 12) {
+          timePart = `${hours} ${type}`;
+        } else {
+          timePart = `${hours}`;
+        }
         break;
+
       case 5:
-        timePart = `${padLeft(
-          targetDate.getHours().toString(),
-          2,
-          "0"
-        )}:${padLeft(targetDate.getMinutes().toString(), 2, "0")}`;
+        if (timeFormat === 12) {
+          timePart = `${hours}:${minutes} ${type}`;
+        } else {
+          timePart = `${hours}:${minutes}`;
+        }
         break;
+
       case 8:
-        timePart = `${padLeft(
-          targetDate.getHours().toString(),
-          2,
-          "0"
-        )}:${padLeft(targetDate.getMinutes().toString(), 2, "0")}:${padLeft(
-          targetDate.getSeconds().toString(),
-          2,
-          "0"
-        )}`;
+        if (timeFormat === 12) {
+          timePart = `${hours}:${minutes}:${seconds} ${type}`;
+        } else {
+          timePart = `${hours}:${minutes}:${seconds}`;
+        }
         break;
 
       case 12:
-        timePart = `${padLeft(
-          targetDate.getHours().toString(),
-          2,
-          "0"
-        )}:${padLeft(targetDate.getMinutes().toString(), 2, "0")}:${padLeft(
-          targetDate.getSeconds().toString(),
-          2,
-          "0"
-        )}.${padLeft(targetDate.getMilliseconds().toString(), 3, "0")}`;
+        if (timeFormat === 12) {
+          timePart = `${hours}:${minutes}:${seconds}.${milliseconds} ${type}`;
+        } else {
+          timePart = `${hours}:${minutes}:${seconds}.${milliseconds}`;
+        }
         break;
 
       default:
-        timePart = `${padLeft(
-          targetDate.getHours().toString(),
-          2,
-          "0"
-        )}:${padLeft(targetDate.getMinutes().toString(), 2, "0")}:${padLeft(
-          targetDate.getSeconds().toString(),
-          2,
-          "0"
-        )}`;
+        if (timeFormat === 12) {
+          timePart = `${hours}:${minutes}:${seconds} ${type}`;
+        } else {
+          timePart = `${hours}:${minutes}:${seconds}`;
+        }
         break;
     }
 
+    // Return
     if (datePart !== "" && timePart !== "") {
       return `${datePart} ${timePart}`;
     }
