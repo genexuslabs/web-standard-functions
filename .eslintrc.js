@@ -16,7 +16,7 @@ module.exports = {
     "@typescript-eslint/tslint"
   ],
   root: true,
-  ignorePatterns: ["node_modules", "src/**/**/*.spec.ts", "**/generator"],
+  ignorePatterns: ["node_modules", "src/**/**/*.spec.ts"],
   rules: {
     "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
