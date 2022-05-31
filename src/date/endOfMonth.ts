@@ -13,6 +13,10 @@ export const endOfMonth = (dateFrom: Date): Date => {
     : new Date(
         dateFrom.getFullYear(),
         dateFrom.getMonth(),
-        DateTime.fromJSDate(dateFrom).daysInMonth
+        DateTime.fromJSDate(dateFrom).daysInMonth,
+        dateFrom.getHours(),
+        dateFrom.getMinutes(),
+        dateFrom.getSeconds(),
+        dateFrom.getMilliseconds()
       );
 };
