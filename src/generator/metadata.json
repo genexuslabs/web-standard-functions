@@ -1217,37 +1217,6 @@
             {
               "accesstype": "in",
               "description": "",
-              "type": "DateTime",
-              "name": "Value"
-            }
-          ],
-          "returns": "DateTime",
-          "scopes": [
-            "DPrv.Source.Functions",
-            "Frm.Functions",
-            "Functions",
-            "Prc.Rules.Functions",
-            "Prc.Source.Functions",
-            "SD.Conditions.Functions",
-            "SD.Source.Functions",
-            "Trn.Rules.Functions",
-            "Trn.Source.Functions",
-            "Wbp.Conditions.Functions",
-            "Wbp.Rules.Functions",
-            "Wbp.Source.Functions",
-            "Wrk.Conditions.Functions",
-            "Wrk.Rules.Functions",
-            "Wrk.Source.Functions"
-          ],
-          "static": true,
-          "name": "EoMdt"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
               "type": "Any",
               "name": "Attribute"
             }
