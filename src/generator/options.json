@@ -800,7 +800,7 @@
           "name": "endOfMonth"
         },
         "FromString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/CtoD",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/fromString",
           "name": "fromString",
           "modifiesInstance": true
         },
@@ -916,7 +916,7 @@
           "name": "endOfMonth"
         },
         "FromString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/CtoT",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/fromString",
           "name": "fromString",
           "modifiesInstance": true
         },
