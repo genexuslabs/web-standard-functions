@@ -80,7 +80,7 @@
           "name": "dayOfWeek"
         },
         "DtoC": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/DtoC",
           "name": "toString"
         },
         "EoM": {
@@ -257,8 +257,8 @@
           "name": "truncate"
         },
         "TtoC": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toString",
-          "name": "toString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/TtoC",
+          "name": "TtoC"
         },
         "Upper": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
@@ -844,8 +844,8 @@
           "name": "toDate"
         },
         "ToFormattedString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
-          "name": "toString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/date/toFormattedString",
+          "name": "toFormattedString"
         },
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/date/toString",
@@ -992,8 +992,8 @@
           "name": "toDate"
         },
         "ToFormattedString": {
-          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toString",
-          "name": "toString"
+          "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toFormattedString",
+          "name": "toFormattedString"
         },
         "ToString": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/toString",

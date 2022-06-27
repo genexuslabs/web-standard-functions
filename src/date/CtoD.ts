@@ -1,14 +1,25 @@
 /**
  * Returns a Date from string value format espected format dd[/]mm[/]yyyy
  * @param {string} dateFrom
+ * @param {string} dateFormat
+ * @param {string} fy20c
  * @return Date
  */
 
 import { EMPTY_DATE_VALUE } from "./core";
+import { newInstance } from "./newInstance";
 
-export const fromString = (dateFrom: string, dateFormat?: String): Date => {
+export const fromString = (
+  dateFrom: string,
+  dateFormat?: String,
+  fy20c?: number
+): Date => {
   if (!dateFormat) {
     dateFormat = "MDY";
+  }
+
+  if (!fy20c) {
+    fy20c = 40;
   }
 
   // Date Format   dateFormat = “MDY”   dateFormat = “DMY”   dateFormat = “YMD”  o Y4
@@ -23,14 +34,11 @@ export const fromString = (dateFrom: string, dateFormat?: String): Date => {
   }
 
   return dateParts && dateParts.length > 2
-    ? new Date(
+    ? newInstance(
         Number(dateParts[year]),
-        Number(dateParts[month]) - 1,
+        Number(dateParts[month]),
         Number(dateParts[day]),
-        0,
-        0,
-        0,
-        0
+        fy20c
       )
     : EMPTY_DATE_VALUE;
 };
