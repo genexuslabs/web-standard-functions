@@ -4,7 +4,7 @@ export const fromString = (
   target: Date,
   dateFrom: string,
   dateFormat?: String,
-  timeFormat?: Number
+  fy20c?: number
 ): Date => {
-  return CtoT(dateFrom, dateFormat, timeFormat);
+  return CtoT(dateFrom, dateFormat, fy20c);
 };

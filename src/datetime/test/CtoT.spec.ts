@@ -101,6 +101,7 @@ export const testCases5: Array<[string, Date]> = [
   ["2019/2/17 11:15 PM", new Date(2019, 1, 17, 23, 15)],
   ["2019/12/17 11:15:37 AM", new Date(2019, 11, 17, 11, 15, 37)],
   ["2019/12/17 11:15:37 PM", new Date(2019, 11, 17, 23, 15, 37)],
+  ["2019/12/17 12:15:37 PM", new Date(2019, 11, 17, 0, 15, 37)],
   ["2019/12/17 11:15:37.000 AM", new Date(2019, 11, 17, 11, 15, 37, 0)],
   ["2019/12/17 11:15:37.000 PM", new Date(2019, 11, 17, 23, 15, 37, 0)],
   ["20191217 11:15 AM", EMPTY_DATE_VALUE],
@@ -143,56 +144,56 @@ describe("fromString operation", () => {
   }
 
   for (const t of testCases1) {
-    it(`fromString with parameter dateFormat y timeFormat,MDY y 12 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "MDY", 12)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat y timeFormat,MDY of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "MDY")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases2) {
-    it(`fromString with parameter dateFormat y timeFormat,default MDY y 24 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "MDY", 24)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat y timeFormat,default MDY of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "MDY")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases3) {
-    it(`fromString with parameter dateFormat y timeFormat,default MDY y 24 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "DMY", 12)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat,default MDY of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "DMY")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases4) {
-    it(`fromString with parameter dateFormat y timeFormat,default MDY y 24 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "DMY", 24)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat,default MDY of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "DMY")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases5) {
-    it(`fromString with parameter dateFormat y timeFormat,default YMD y 24 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "YMD", 12)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat,default YMD of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "YMD")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases6) {
-    it(`fromString with parameter dateFormat y timeFormat,default YMD y 24 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "YMD", 24)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat ,default YMD of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "YMD")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases4) {
-    it(`fromString with parameter dateFormat y timeFormat,default DMY4 y 24 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "DMY4", 24)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat,default DMY4 of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "DMY4")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases2) {
-    it(`fromString with parameter dateFormat y timeFormat,default MDY4 y 24 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "MDY4", 24)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat,default MDY4 of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "MDY4")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases6) {
-    it(`fromString with parameter dateFormat y timeFormat,default Y4MD y 24 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(fromString(t[0], "Y4MD", 24)).toEqual(t[1]);
+    it(`fromString with parameter dateFormat,default Y4MD of "${t[0]}" should be equal to "${t[1]}"`, () => {
+      expect(fromString(t[0], "Y4MD")).toEqual(t[1]);
     });
   }
 });

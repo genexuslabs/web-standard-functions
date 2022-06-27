@@ -5,20 +5,29 @@
  */
 
 import { EMPTY_DATE_VALUE } from "../date/core";
-import { year } from "../date/year";
 import { newInstance } from "./newInstance";
 
 export const fromString = (
   dateFrom: String,
   dateFormat?: String,
-  timeFormat?: Number
+  fy20c?: number
 ): Date => {
   if (!dateFormat) {
     dateFormat = "MDY";
   }
 
-  if (!timeFormat) {
+  if (!fy20c) {
+    fy20c = 40;
+  }
+
+  let timeFormat;
+  if (
+    dateFrom.toUpperCase().indexOf("AM") !== -1 ||
+    dateFrom.toUpperCase().indexOf("PM") !== -1
+  ) {
     timeFormat = 12;
+  } else {
+    timeFormat = 24;
   }
 
   // Date Format   dateFormat = “MDY”   dateFormat = “DMY”   dateFormat = “YMD”  o Y4
@@ -66,7 +75,7 @@ export const fromString = (
 
     if (timeFormat === 12) {
       if (Number(hour) <= 12) {
-        if (dateFrom.indexOf("PM") !== -1) {
+        if (dateFrom.toUpperCase().indexOf("PM") !== -1) {
           if (hour < 12) {
             hour = hour + 12;
           } else {
@@ -76,7 +85,16 @@ export const fromString = (
       }
     }
 
-    return newInstance(year, month, day, hour, minutes, seconds, milliseconds);
+    return newInstance(
+      year,
+      month,
+      day,
+      hour,
+      minutes,
+      seconds,
+      milliseconds,
+      fy20c
+    );
   } else {
     return EMPTY_DATE_VALUE;
   }
