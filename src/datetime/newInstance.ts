@@ -42,7 +42,7 @@ export const newInstance = (
         yearAux = Number("19" + year.toString());
       }
 
-      if (0 >= hour || hour > 23) {
+      if (0 > hour || hour > 23) {
         hour = 0;
         minutes = 0;
         seconds = 0;
@@ -69,7 +69,7 @@ export const newInstance = (
         yearAux = Number("200" + year.toString());
       }
 
-      if (0 >= hour || hour > 23) {
+      if (0 > hour || hour > 23) {
         hour = 0;
         minutes = 0;
         seconds = 0;
