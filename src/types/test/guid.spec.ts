@@ -14,6 +14,24 @@ const fromStringTestCases: Array<[string, string]> = [
   ["xyz", emptyGuidStr]
 ];
 
+const compareTestCase: Array<[string, string, boolean]> = [
+  [
+    "xyxyxyxy-f67d-46a6-b68b-db6795244394",
+    "xyxyxyxy-f67d-46a6-b68b-db6795244394",
+    true
+  ],
+  [
+    "9bcc27fb-c1ec-43a2-81b9-df01ed477f5d",
+    "9bcc27fb-c1ec-43a2-81b9-df01ed477f5d",
+    true
+  ],
+  [
+    "9bcc27fb-c1ec-43a2-81b9-df01ed477f5d",
+    "9baa27fb-c1ec-43a2-81b9-df01ed477f5b",
+    false
+  ]
+];
+
 describe("create new GUID", () => {
   it(`should have the correct format`, () => {
     const guid = GUID.newGuid();
@@ -76,6 +94,17 @@ describe("load a GUID value from string", () => {
       const guidStrAfter = guid.toString();
       expect(guidStrAfter).toBe(t[1]);
       expect(guidStrAfter).not.toBe(guidStrBefore);
+    });
+  }
+});
+
+describe("compare GUID", () => {
+  for (const t of compareTestCase) {
+    it(`should be "${t[2]}" if compare "${t[0]}" and "${t[1]}"`, () => {
+      const guid1 = GUID.fromString(t[0]);
+      const guid2 = GUID.fromString(t[1]);
+      const compare = GUID.compare(guid1, guid2);
+      expect(compare).toBe(t[2]);
     });
   }
 });

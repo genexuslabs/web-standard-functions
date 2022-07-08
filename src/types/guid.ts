@@ -85,4 +85,14 @@ export class GUID {
   static newGuid(): GUID {
     return new GUID(uuid_v4());
   }
+
+  static compare(guid1: GUID, guid2: GUID): boolean {
+    let res: boolean;
+    if (guid1.value === guid2.value) {
+      res = true;
+    } else {
+      res = false;
+    }
+    return res;
+  }
 }
