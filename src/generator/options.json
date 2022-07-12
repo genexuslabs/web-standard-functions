@@ -1196,7 +1196,7 @@
     },
     "GeneXus.SD.Media.PhotoLibrary": {
       "members": {
-        "ChoosImage": {
+        "ChooseImage": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/photoLibrary/chooseImage",
           "name": "chooseImage",
           "async": true
