@@ -1199,13 +1199,11 @@
         "ChoosImage": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/photoLibrary/chooseImage",
           "name": "chooseImage",
-          "notifiesGenerator": true,
           "async": true
         },
         "ChooseImages": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/photoLibrary/chooseImages",
           "name": "chooseImages",
-          "notifiesGenerator": true,
           "async": true
         }
       }
