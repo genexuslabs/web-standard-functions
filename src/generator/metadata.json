@@ -5645,6 +5645,104 @@
           "returns": "Boolean",
           "scopes": null,
           "name": "IsEmpty"
+        },
+        {
+          "description": "Resize",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "width"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "height"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Boolean",
+              "name": "keepAspect"
+            }
+          ],
+          "returns": "Image",
+          "scopes": null,
+          "name": "Resize"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "percentage"
+            }
+          ],
+          "returns": "Image",
+          "scopes": null,
+          "name": "Scale"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "angle"
+            }
+          ],
+          "returns": "Image",
+          "scopes": null,
+          "name": "Rotate"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "left"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "top"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "width"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "height"
+            }
+          ],
+          "returns": "Image",
+          "scopes": null,
+          "name": "Crop"
+        },
+        {
+          "description": "",
+          "returns": "Image",
+          "scopes": null,
+          "name": "FlipHorizontally"
+        },
+        {
+          "description": "",
+          "returns": "Image",
+          "scopes": null,
+          "name": "FlipVertically"
         }
       ],
       "properties": [
