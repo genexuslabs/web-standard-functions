@@ -10,78 +10,84 @@ export const resize = async (
   keepAspect
 ): Promise<File> => {
   const img = new Image();
-  img.src = image.uri;
 
-  const canvas = document.createElement("canvas");
-  const context = canvas.getContext("2d");
-  canvas.height = height;
-  canvas.width = width;
+  return new Promise<any>((resolve, reject) => {
+    img.onload = async function() {
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+      canvas.height = height;
+      canvas.width = width;
 
-  if (keepAspect === false) {
-    context.drawImage(img, 0, 0, canvas.width, canvas.height);
-  } else {
-    const imageRatio = img.width / img.height;
-    const imageNewRatio = width / height;
+      if (keepAspect === false) {
+        context.drawImage(img, 0, 0, canvas.width, canvas.height);
+      } else {
+        const imageRatio = img.width / img.height;
+        const imageNewRatio = width / height;
 
-    if (imageRatio < imageNewRatio) {
-      const heightScale = width / imageRatio;
-      const scalePercentage = (heightScale * 100) / img.height;
-      const startCrop = (heightScale - height) / 2;
+        if (imageRatio < imageNewRatio) {
+          const heightScale = width / imageRatio;
+          const scalePercentage = (heightScale * 100) / img.height;
+          const startCrop = (heightScale - height) / 2;
 
-      let imgScaled = scaledImageResize(img, scalePercentage);
+          let imgScaled = scaledImageResize(img, scalePercentage);
 
-      context.drawImage(
-        imgScaled,
-        0,
-        startCrop,
-        width,
-        height,
-        0,
-        0,
-        width,
-        height
-      );
-    }
+          context.drawImage(
+            imgScaled,
+            0,
+            startCrop,
+            width,
+            height,
+            0,
+            0,
+            width,
+            height
+          );
+        }
 
-    if (imageRatio > imageNewRatio) {
-      const widthScale = height * imageRatio;
-      const scalePercentage = (widthScale * 100) / img.width;
-      const startCrop = (widthScale - width) / 2;
+        if (imageRatio > imageNewRatio) {
+          const widthScale = height * imageRatio;
+          const scalePercentage = (widthScale * 100) / img.width;
+          const startCrop = (widthScale - width) / 2;
 
-      let imgScaled = scaledImageResize(img, scalePercentage);
+          let imgScaled = scaledImageResize(img, scalePercentage);
 
-      context.drawImage(
-        imgScaled,
-        startCrop,
-        0,
-        width,
-        height,
-        0,
-        0,
-        width,
-        height
-      );
-    }
+          context.drawImage(
+            imgScaled,
+            startCrop,
+            0,
+            width,
+            height,
+            0,
+            0,
+            width,
+            height
+          );
+        }
 
-    if (imageRatio === imageNewRatio) {
-      const widthScale = height * imageRatio;
-      const scalePercentage = (widthScale * 100) / img.width;
-      let imgScaled = scaledImageResize(img, scalePercentage);
-      context.drawImage(imgScaled, 0, 0, canvas.width, canvas.height);
-    }
-  }
+        if (imageRatio === imageNewRatio) {
+          const widthScale = height * imageRatio;
+          const scalePercentage = (widthScale * 100) / img.width;
+          let imgScaled = scaledImageResize(img, scalePercentage);
+          context.drawImage(imgScaled, 0, 0, canvas.width, canvas.height);
+        }
+      }
 
-  const src = context.canvas.toDataURL();
+      const src = context.canvas.toDataURL();
 
-  try {
-    const response = await fetch(src);
-    const blob = await response.blob();
+      try {
+        const response = await fetch(src);
+        const blob = await response.blob();
 
-    const file = new File([blob], "resize", { type: blob.type });
-    return file;
-  } catch (err) {
-    console.log(err.name, err.message);
-  }
+        const file = new File([blob], "resize", { type: blob.type });
+
+        resolve(file);
+      } catch (err) {
+        console.log(err.name, err.message);
+      }
+    };
+
+    img.src = image.uri;
+  });
 };
 
 const scaledImageResize = (img, percentage) => {

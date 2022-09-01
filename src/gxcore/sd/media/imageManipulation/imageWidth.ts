@@ -3,8 +3,14 @@ interface GxImage {
   uri: string;
 }
 
-export const imageWidth = (image: GxImage): Number => {
+export const imageWidth = (image: GxImage): Promise<Number> => {
   const img = new Image();
-  img.src = image.uri;
-  return img.width;
+
+  return new Promise<any>((resolve, reject) => {
+    img.onload = function() {
+      resolve(img.width);
+    };
+
+    img.src = image.uri;
+  });
 };
