@@ -1473,12 +1473,14 @@
         "ImageHeight": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/imageHeight",
           "name": "imageHeight",
-          "alias": "imageHeight"
+          "alias": "imageHeight",
+          "async": true
         },
         "ImageWidth": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/imageWidth",
           "name": "imageWidth",
-          "alias": "imageWidth"
+          "alias": "imageWidth",
+          "async": true
         },
         "Resize": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/resize",
