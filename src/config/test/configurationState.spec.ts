@@ -60,8 +60,7 @@ describe("ConfigurationState date type", () => {
   it("shuld load application settings", () => {
     ConfigurationState.loadApplicationSettings({
       SERVICE_DEBUG: true,
-      SERVICE_HOSTNAME: "http://localhost/TestAngular/",
-      SERVICE_BASE_PATH: "",
+      SERVICE_URL: "/TestAngular/",
       SERVICE_REST_PATH: "rest/",
       SERVICE_OAUTH_PATH: "oauth/",
       WEB_RELATIVE_PATH: "servlet/",
@@ -74,8 +73,8 @@ describe("ConfigurationState date type", () => {
       DEFAULT_LANGUAGE: "English"
     });
     let conf = ConfigurationState.getInstance();
-    let hostName = conf.getDynStoredValue("SERVICE_HOSTNAME");
-    expect(hostName).toBe("http://localhost/TestAngular/");
+    let hostName = conf.getDynStoredValue("SERVICE_URL");
+    expect(hostName).toBe("/TestAngular/");
     let debug = conf.getDynStoredValue("SERVICE_DEBUG");
     expect(debug).toBeTruthy(); // values are stored as strings, .toBe(true) fails then
   });

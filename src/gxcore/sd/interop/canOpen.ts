@@ -1,4 +1,5 @@
 import { ConfigurationState } from "../../../config/configurationState";
+import { GeneXusSDNetwork } from "../network";
 
 const knownProtocols = ["http:", "https:", "mailto:", "tel:"];
 
@@ -7,9 +8,8 @@ const knownProtocols = ["http:", "https:", "mailto:", "tel:"];
  * @param {string} urlStr
  */
 export const canOpen = (urlStr: string): boolean => {
-  let baseURL = ConfigurationState.getInstance().getDynStoredValue(
-    "SERVICE_HOSTNAME"
-  );
+  let baseURL = GeneXusSDNetwork.applicationServerURL();
+
   try {
     let url = baseURL ? new URL(urlStr, baseURL) : new URL(urlStr);
     return knownProtocols.includes(url.protocol);

@@ -4,8 +4,7 @@ import { ConfigurationState } from "../../../config/configurationState";
 describe("Network external object", () => {
   it("should return the application's server URL", () => {
     ConfigurationState.loadApplicationSettings({
-      SERVICE_HOSTNAME: "http://localhost/",
-      SERVICE_BASE_PATH: "TestAngular/"
+      SERVICE_URL: "/TestAngular/"
     });
     expect(GeneXusSDNetwork.applicationServerURL()).toBe(
       "http://localhost/TestAngular/"
