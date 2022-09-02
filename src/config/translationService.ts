@@ -1,5 +1,6 @@
 import { ConfigurationState } from "./configurationState";
 import { getLanguage } from "../misc/getLanguage";
+import { GeneXusSDNetwork } from "../gxcore/sd/network";
 
 type MessagesTranslations = { [id: string]: string };
 type LanguageTranslations = { [lang: string]: MessagesTranslations };
@@ -18,7 +19,6 @@ export class TranslationService {
   }
 
   private constructor() {}
-
 
   private translations: LanguageTranslations = {};
   private images: LanguageTranslations = {};
@@ -39,9 +39,9 @@ export class TranslationService {
       const imgTranslations: MessagesTranslations = {};
       data.images.forEach(
         t =>
-          (imgTranslations[this.resolveImageKey(t.name, theme)] = `resources/${
-            t.location
-          }`)
+          (imgTranslations[
+            this.resolveImageKey(t.name, theme)
+          ] = `resources/${t.location}`)
       );
       this.images[language] = imgTranslations;
       this.loadedImages[language + theme] = true;
@@ -74,11 +74,10 @@ export class TranslationService {
   }
 
   private getHostName() {
-    const hostName = ConfigurationState.getInstance().getDynStoredValue(
-      "SERVICE_HOSTNAME"
-    );
-    if (hostName) {
-      return hostName;
+    let config = ConfigurationState.getInstance();
+    let serviceUrl = config.getDynStoredValue("SERVICE_URL");
+    if (serviceUrl) {
+      return GeneXusSDNetwork.applicationServerURL();
     } else {
       return "";
     }

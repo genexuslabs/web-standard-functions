@@ -4,7 +4,7 @@ import { ConfigurationState } from "../../../../config/configurationState";
 describe("Interop.CanOpen method", () => {
   beforeEach(() => {
     ConfigurationState.loadApplicationSettings({
-      SERVICE_HOSTNAME: "http://localhost/TestAngular/"
+      SERVICE_URL: "/TestAngular/"
     });
   });
   it("should return true for URIs starting with http://", () => {

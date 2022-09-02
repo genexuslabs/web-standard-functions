@@ -6,13 +6,18 @@ export class GeneXusSDNetwork {
    */
   static applicationServerURL(): string {
     let config = ConfigurationState.getInstance();
-    let hostName = config.getDynStoredValue("SERVICE_HOSTNAME");
-    let basePath = config.getDynStoredValue("SERVICE_BASE_PATH");
+    let serviceUrl = config.getDynStoredValue("SERVICE_URL");
 
-    if (hostName !== undefined) {
-      return hostName + basePath;
+    let serviceUrlLower = serviceUrl.toLowerCase();
+    if (
+      serviceUrlLower.startsWith("http://") ||
+      serviceUrlLower.startsWith("https://")
+    ) {
+      return serviceUrl;
     } else {
-      return location.protocol.concat("//").concat(window.location.hostname);
+      const protocol = window.location.protocol;
+      const host = window.location.host;
+      return `${protocol}//${host}${serviceUrl}`;
     }
   }
 
