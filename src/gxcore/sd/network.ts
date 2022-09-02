@@ -8,7 +8,11 @@ export class GeneXusSDNetwork {
     let config = ConfigurationState.getInstance();
     let serviceUrl = config.getDynStoredValue("SERVICE_URL");
 
-    if (serviceUrl.indexOf("http") !== -1) {
+    let serviceUrlLower = serviceUrl.toLowerCase();
+    if (
+      serviceUrlLower.startsWith("http://") ||
+      serviceUrlLower.startsWith("https://")
+    ) {
       return serviceUrl;
     } else {
       const protocol = window.location.protocol;
