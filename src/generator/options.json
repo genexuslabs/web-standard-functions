@@ -1185,7 +1185,7 @@
         "TakePhoto": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/takePhoto",
           "name": "takePhoto",
-          "notifiesGenerator": true
+          "async": true
         },
         "RecordVideo": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/recordVideo",

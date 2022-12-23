@@ -1,9 +1,18 @@
-import { pickMultimedia } from "../common/pickMultimedia";
+export const takePhoto = async (): Promise<File> => {
+  return new Promise<any>((resolve, reject) => {
+    const newInput = document.createElement("input");
+    newInput.type = "file";
+    newInput.accept = "image/*";
+    newInput.capture = "camera";
+    newInput.multiple = false;
+    newInput.hidden = true;
+    document.body.appendChild(newInput);
 
-/**
- * Takes a picture with the device's camera
- * @return {string} image
- */
-export const takePhoto = async (): Promise<string> => {
-  return pickMultimedia("takePhoto");
+    newInput.onchange = async eventInfo => {
+      document.body.removeChild(newInput);
+      resolve(newInput.files[0]);
+    };
+
+    newInput.click();
+  });
 };
