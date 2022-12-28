@@ -1,9 +1,18 @@
-import { pickMultimedia } from "../common/pickMultimedia";
+export const recordVideo = async (): Promise<File> => {
+  return new Promise<any>((resolve, reject) => {
+    const newInput = document.createElement("input");
+    newInput.type = "file";
+    newInput.accept = "video/*";
+    newInput.capture = "camcorder";
+    newInput.multiple = false;
+    newInput.hidden = true;
+    document.body.appendChild(newInput);
 
-/**
- * Record a video with the device's camera
- * @return {string} video
- */
-export const recordVideo = async (): Promise<string> => {
-  return pickMultimedia("recordVideo");
+    newInput.onchange = async eventInfo => {
+      document.body.removeChild(newInput);
+      resolve(newInput.files[0]);
+    };
+
+    newInput.click();
+  });
 };

@@ -1190,7 +1190,7 @@
         "RecordVideo": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/recordVideo",
           "name": "recordVideo",
-          "notifiesGenerator": true
+          "async": true
         }
       }
     },
