@@ -74,7 +74,7 @@
     "jdu": "^1.0.0",
     "jstz": "^2.1.1",
     "loglevel": "^1.6.7",
-    "luxon": "^1.22.0",
+    "luxon": "^2.5.2",
     "pubsub-js": "^1.8.0",
     "tidy-html5": "^0.1.1",
     "unicode-substring": "^1.0.0",
