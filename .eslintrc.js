@@ -12,8 +12,7 @@ module.exports = {
     "eslint-plugin-import",
     "eslint-plugin-jsdoc",
     "eslint-plugin-react",
-    "@typescript-eslint",
-    "@typescript-eslint/tslint"
+    "@typescript-eslint"
   ],
   root: true,
   ignorePatterns: ["node_modules", "src/**/**/*.spec.ts"],
@@ -157,14 +156,6 @@ module.exports = {
         markers: ["/"]
       }
     ],
-    "use-isnan": "error",
-    "@typescript-eslint/tslint/config": [
-      "error",
-      {
-        rules: {
-          "strict-type-predicates": true
-        }
-      }
-    ]
+    "use-isnan": "error"
   }
 };
