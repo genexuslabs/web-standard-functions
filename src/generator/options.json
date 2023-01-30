@@ -127,6 +127,10 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/length",
           "name": "length"
         },
+        "Link": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/link",
+          "name": "link"
+        },
         "Lower": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toLower",
           "name": "toLower"
@@ -1180,6 +1184,14 @@
         }
       }
     },
+    "GeneXus.SD.WebBrowser": {
+      "members": {
+        "Open": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/interop/openInBrowser",
+          "name": "openInBrowser"
+        }
+      }
+    },
     "GeneXus.SD.Media.Camera": {
       "members": {
         "TakePhoto": {
@@ -1788,9 +1800,6 @@
     },
     "GeneXus.SD.Notifications.RemoteNotifications": {
       "Add": "remoteNotificationAdd"
-    },
-    "GeneXus.SD.WebBrowser": {
-      "Open": "webBrowserOpen"
     },
     "GeneXus.Social.Facebook": {
       "ShareImage": "fbShareImage"
