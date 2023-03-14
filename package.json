@@ -1,6 +1,6 @@
 {
   "name": "@genexus/web-standard-functions",
-  "version": "0.46.0",
+  "version": "0.47.0",
   "description": "GeneXus JavaScript standard functions library for web generators",
   "main": "dist/web-standard-functions.js",
   "module": "dist/lib-esm/index.js",
