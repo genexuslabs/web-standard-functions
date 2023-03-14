@@ -1220,6 +1220,26 @@
         }
       }
     },
+    "GeneXus.Common.Analytics": {
+      "members": {
+        "TrackView": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/Analytics/trackView",
+          "name": "trackView"
+        },
+        "TrackEvent": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/Analytics/trackEvent",
+          "name": "trackEvent"
+        },
+        "TrackPurchase": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/Analytics/trackPurchase",
+          "name": "trackPurchase"
+        },
+        "SetUserId": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/Analytics/setUserId",
+          "name": "setUserId"
+        }
+      }
+    },
     "GeneXus.SD.Network": {
       "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/network",
       "members": {
