@@ -78,7 +78,9 @@ export const fromString = (
         if (dateFrom.toUpperCase().indexOf("PM") !== -1) {
           if (hour < 12) {
             hour = hour + 12;
-          } else {
+          }
+        } else {
+          if (hour === 12) {
             hour = 0;
           }
         }
