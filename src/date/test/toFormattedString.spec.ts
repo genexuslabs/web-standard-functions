@@ -1,27 +1,58 @@
 import { toFormattedString } from "../toFormattedString";
 import { EMPTY_DATE_VALUE } from "../../date/core";
+import { GxDate } from "../../types/gxdate";
 
-export const testCases1: Array<[Date, string, string, string]> = [
+export const testCases1: Array<[GxDate, string, string, string]> = [
   //format dateFormat = “MDY”   dateFormat = “DMY”   dateFormat = “YMD”
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "01/02/18", "DMY", "99/99/99"],
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "18/02/01", "YMD", "99/99/99"],
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "01/02/18", "DMY4", "99/99/99"],
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "18/02/01", "Y4MD", "99/99/99"],
+  [new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)), "01/02/18", "DMY", "99/99/99"],
+  [new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)), "18/02/01", "YMD", "99/99/99"],
+  [
+    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
+    "01/02/18",
+    "DMY4",
+    "99/99/99"
+  ],
+  [
+    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
+    "18/02/01",
+    "Y4MD",
+    "99/99/99"
+  ],
 
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "01/02/2018", "DMY", "99/99/9999"],
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "2018/02/01", "YMD", "9999/99/99"],
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "01/02/2018", "DMY4", "99/99/9999"],
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "2018/02/01", "Y4MD", "9999/99/99"],
+  [
+    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
+    "01/02/2018",
+    "DMY",
+    "99/99/9999"
+  ],
+  [
+    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
+    "2018/02/01",
+    "YMD",
+    "9999/99/99"
+  ],
+  [
+    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
+    "01/02/2018",
+    "DMY4",
+    "99/99/9999"
+  ],
+  [
+    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
+    "2018/02/01",
+    "Y4MD",
+    "9999/99/99"
+  ],
 
-  [EMPTY_DATE_VALUE, "  /  /  ", "YMD", "99/99/99"],
-  [EMPTY_DATE_VALUE, "  /  /  ", "YMD", "9999/99/99"],
-  [EMPTY_DATE_VALUE, "  /  /  ", "DMY", "99/99/9999"],
-  [EMPTY_DATE_VALUE, "  /  /  ", "“MDY”", "99/99/9999"]
+  [new GxDate(EMPTY_DATE_VALUE), "  /  /  ", "YMD", "99/99/99"],
+  [new GxDate(EMPTY_DATE_VALUE), "  /  /  ", "YMD", "9999/99/99"],
+  [new GxDate(EMPTY_DATE_VALUE), "  /  /  ", "DMY", "99/99/9999"],
+  [new GxDate(EMPTY_DATE_VALUE), "  /  /  ", "“MDY”", "99/99/9999"]
 ];
 
-export const testCases2: Array<[Date, string]> = [
-  [new Date(2018, 1, 1, 0, 0, 0, 0), "02/01/18"],
-  [EMPTY_DATE_VALUE, "  /  /  "]
+export const testCases2: Array<[GxDate, string]> = [
+  [new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)), "02/01/18"],
+  [new GxDate(EMPTY_DATE_VALUE), "  /  /  "]
 ];
 
 describe("toFormattedString operation", () => {

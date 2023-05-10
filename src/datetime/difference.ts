@@ -1,9 +1,14 @@
 /**
  * Returns the seconds elapsed between two DateTime data type values.
- * @param {Date} dateFrom
+ * @param {GxDatetime} dateFrom
  * @return number
  */
 
-export const difference = (dateTo: Date, dateFrom: Date): number => {
+import { GxDatetime } from "../types/gxdatetime";
+
+export const difference = (
+  dateTo: GxDatetime,
+  dateFrom: GxDatetime
+): number => {
   return (dateTo.getTime() - dateFrom.getTime()) / 1000;
 };

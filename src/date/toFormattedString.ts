@@ -1,7 +1,9 @@
+import { GxDate } from "../types/gxdate";
+import { GxDatetime } from "../types/gxdatetime";
 import { isEmpty } from "./isEmpty";
 
 export const toFormattedString = (
-  dateFrom: Date,
+  dateFrom: GxDate | GxDatetime,
   dateFormat?: String,
   picture?: String
 ): string => {

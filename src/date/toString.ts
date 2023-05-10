@@ -1,13 +1,14 @@
 /**
  * Returns a string represantation of a date. dd[/]mm[/]yyyy
- * @return Date
+ * @return string
  */
 
 import { TtoC } from "../datetime/TtoC";
+import { GxDate } from "../types/gxdate";
 
 export const toString = (
-  target: Date,
-  targetDate: Date,
+  target: GxDate,
+  targetDate: GxDate,
   dateFormat?: String
 ): string => {
   if (!dateFormat) {

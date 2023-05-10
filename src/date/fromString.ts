@@ -1,10 +1,11 @@
+import { GxDate } from "../types/gxdate";
 import { fromString as CtoD } from "./CtoD";
 
 export const fromString = (
-  target: Date,
+  target: GxDate,
   dateFrom: string,
   dateFormat?: String,
   fy20c?: number
-): Date => {
+): GxDate => {
   return CtoD(dateFrom, dateFormat, fy20c);
 };

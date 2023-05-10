@@ -1,9 +1,11 @@
 /**
  * Returns minute for datetime
- * @param {Date} dateFrom
+ * @param {GxDatetime} dateFrom
  * @return number
  */
 
-export const minute = (dateFrom: Date): number => {
+import { GxDatetime } from "../types/gxdatetime";
+
+export const minute = (dateFrom: GxDatetime): number => {
   return dateFrom.getMinutes();
 };

@@ -1,5 +1,6 @@
 import { Cookie } from "../cookie";
 import { addDays } from "../../date/addDays";
+import { GxDate } from "../gxdate";
 
 describe("Cookie data type", () => {
   let c: Cookie;
@@ -30,7 +31,7 @@ describe("Cookie data type", () => {
   });
 
   it("should have a 'expirationDate' property", () => {
-    const expDate = addDays(new Date(), 1);
+    const expDate = addDays(new GxDate(), 1);
     c.expirationDate = expDate;
     const result = c.expirationDate;
     expect(result).toBe(expDate);

@@ -1,8 +1,9 @@
 import { padLeft } from "../text/padLeft";
 import { toFormattedString as dateToFormattedString } from "../date/toFormattedString";
+import { GxDatetime } from "../types/gxdatetime";
 
 export const toFormattedString = (
-  dateFrom: Date,
+  dateFrom: GxDatetime,
   dateFormat?: string,
   timeFormat?: number,
   picture?: string

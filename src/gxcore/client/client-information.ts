@@ -3,6 +3,7 @@ import { setCookie } from "../../web/setCookie";
 import { GUID } from "../../types/guid";
 import { addYears } from "../../date/addYears";
 import { ConfigurationState } from "../../config/configurationState";
+import { GxDate } from "../../types/gxdate";
 
 function notImplemented() {
   console.log("Not yet implemented");
@@ -26,7 +27,7 @@ export class GeneXusClientClientInformation {
     let id = getCookie("GX_CLIENT_ID");
     if (!id) {
       id = GUID.newGuid().toString();
-      let expiration = addYears(new Date(), 100);
+      let expiration = addYears(new GxDate(), 100);
       setCookie("GX_CLIENT_ID", id, "/", expiration);
     }
     return id;

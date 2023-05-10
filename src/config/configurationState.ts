@@ -47,6 +47,11 @@ export class ConfigurationState {
         instance.setLanguage(defaultLanguage);
       }
     }
+
+    let timeFromUTC = appSettings["convertTimeFromUTC"];
+    if (timeFromUTC !== null) {
+      instance.setStoredValue("convertTimeFromUTC", timeFromUTC);
+    }
   }
 
   /**
@@ -78,6 +83,10 @@ export class ConfigurationState {
     } else {
       return 1;
     }
+  }
+
+  getConvertTimeFromUTC(): boolean {
+    return Boolean(this.getStoredValue("convertTimeFromUTC"));
   }
 
   private supportedLanguages(): string[] {
