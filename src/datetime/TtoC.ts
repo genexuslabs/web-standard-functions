@@ -1,12 +1,14 @@
 import { isEmpty } from "../date/isEmpty";
 import { padLeft } from "../text/padLeft";
+import { GxDate } from "../types/gxdate";
+import { GxDatetime } from "../types/gxdatetime";
 
 /**
  * Returns a string represantation of a date-time. dd[/]mm[/]yyyy HH:mm:ss
- * @return Date
+ * @return string
  */
 export const TtoC = (
-  targetDate: Date,
+  targetDate: GxDate | GxDatetime,
   dateDigit?: Number,
   hourDigit?: Number,
   dateFormat?: String,

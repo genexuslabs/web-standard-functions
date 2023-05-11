@@ -1,12 +1,17 @@
 /**
  * Returns a DateTime value corresponding to adding milliseconds to a DateTime data type value.
- * @param {Date} dateFrom
+ * @param {GxDatetime} dateFrom
  * @param {number} millisecconds
- * @return Date
+ * @return GxDatetime
  */
 
-export const addMilliseconds = (dateFrom: Date, milliseconds: number): Date => {
-  let ret = new Date();
+import { GxDatetime } from "../types/gxdatetime";
+
+export const addMilliseconds = (
+  dateFrom: GxDatetime,
+  milliseconds: number
+): GxDatetime => {
+  let ret = new GxDatetime();
   ret.setTime(dateFrom.getTime() + milliseconds);
   return ret;
 };

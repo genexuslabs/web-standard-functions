@@ -1,8 +1,12 @@
+import { GxDate } from "../../types/gxdate";
+import { GxDatetime } from "../../types/gxdatetime";
 import { isEmpty } from "../isEmpty";
 
-export const testCases: Array<[Date, boolean]> = [
-  [new Date(1891, 8, 28), false],
-  [new Date(0, 0, 0), true]
+export const testCases: Array<[GxDate | GxDatetime, boolean]> = [
+  [new GxDate(1891, 8, 28), false],
+  [new GxDate(0, 0, 0), true],
+  [new GxDatetime(1891, 8, 28, 4, 2, 1, 3), false],
+  [new GxDatetime(0, 0, 0), true]
 ];
 
 describe("isEmpty operation", () => {

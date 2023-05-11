@@ -3,9 +3,10 @@
  * @param {string} dateFrom
  * @param {string} dateFormat
  * @param {string} fy20c
- * @return Date
+ * @return GxDate
  */
 
+import { GxDate } from "../types/gxdate";
 import { EMPTY_DATE_VALUE } from "./core";
 import { newInstance } from "./newInstance";
 
@@ -13,7 +14,7 @@ export const fromString = (
   dateFrom: string,
   dateFormat?: String,
   fy20c?: number
-): Date => {
+): GxDate => {
   if (!dateFormat) {
     dateFormat = "MDY";
   }
@@ -40,5 +41,5 @@ export const fromString = (
         Number(dateParts[day]),
         fy20c
       )
-    : EMPTY_DATE_VALUE;
+    : new GxDate(EMPTY_DATE_VALUE);
 };

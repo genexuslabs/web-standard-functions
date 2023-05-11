@@ -1,9 +1,11 @@
 /**
  * Returns milliseconds for datetime
- * @param {Date} dateFrom
+ * @param {GxDatetime} dateFrom
  * @return number
  */
 
-export const millisecond = (dateFrom: Date): number => {
+import { GxDatetime } from "../types/gxdatetime";
+
+export const millisecond = (dateFrom: GxDatetime): number => {
   return dateFrom.getMilliseconds();
 };

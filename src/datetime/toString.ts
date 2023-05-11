@@ -1,13 +1,15 @@
+import { GxDate } from "../types/gxdate";
+import { GxDatetime } from "../types/gxdatetime";
 import { TtoC } from "./TtoC";
 
 /**
  * Returns a string represantation of a date-time. dd[/]mm[/]yyyy HH:mm:ss
- * @return Date
+ * @return string
  */
 
 export const toString = (
-  target: Date,
-  targetDate: Date,
+  target: GxDate | GxDatetime,
+  targetDate: GxDate | GxDatetime,
   dateDigit?: Number,
   hourDigit?: Number,
   dateFormat?: String,

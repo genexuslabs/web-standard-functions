@@ -1,7 +1,8 @@
 import { TtoC } from "../datetime/TtoC";
+import { GxDate } from "../types/gxdate";
 import { isEmpty } from "./isEmpty";
 
-export const toString = (targetDate: Date, dateFormat?: String): string => {
+export const toString = (targetDate: GxDate, dateFormat?: String): string => {
   if (!dateFormat) {
     dateFormat = "MDY";
   }

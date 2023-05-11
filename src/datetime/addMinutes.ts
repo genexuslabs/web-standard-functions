@@ -1,12 +1,16 @@
 /**
  * To add minutes to a datetime.
- * @param {Date} dateFrom
+ * @param {GxDatetime} dateFrom
  * @param {number} minutes
- * @return Date
+ * @return GxDatetime
  */
 
+import { GxDatetime } from "../types/gxdatetime";
 import { minutesToMilliseconds } from "./core";
 
-export const addMinutes = (dateFrom: Date, minutes: number): Date => {
-  return new Date(dateFrom.getTime() + minutesToMilliseconds(minutes));
+export const addMinutes = (
+  dateFrom: GxDatetime,
+  minutes: number
+): GxDatetime => {
+  return new GxDatetime(dateFrom.getTime() + minutesToMilliseconds(minutes));
 };

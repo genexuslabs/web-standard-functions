@@ -1,10 +1,12 @@
 /**
  * Returns the current date.
- * @return Date
+ * @return GxDate
  */
 
-export const today = (): Date => {
-  let todayDate = new Date();
+import { GxDate } from "../types/gxdate";
+
+export const today = (): GxDate => {
+  let todayDate = new GxDate();
   todayDate.setHours(0, 0, 0, 0);
   return todayDate;
 };

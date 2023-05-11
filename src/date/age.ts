@@ -1,15 +1,20 @@
 /**
  * Returns the difference, in years, between the two parameters.
  * If the second parameter, which is optional, is omitted, then the default value is the value returned by the function Today()
- * @param {Date} dateFrom
- * @param {Date} dateTo
+ * @param {GxDate | GxDatetime} dateFrom
+ * @param {GxDate | GxDatetime} dateTo
  * @return number
  */
 
 import { DateTime } from "luxon";
 import { today } from "../date/today";
+import { GxDate } from "../types/gxdate";
+import { GxDatetime } from "../types/gxdatetime";
 
-export const age = (dateFrom: Date, dateTo?: Date): number => {
+export const age = (
+  dateFrom: GxDate | GxDatetime,
+  dateTo?: GxDate | GxDatetime
+): number => {
   if (dateTo === undefined) {
     dateTo = today();
   }

@@ -1,16 +1,19 @@
 /**
  * Returns a datetime value corresponding to adding seconds to a datetime value.
- * @param {Date} dateFrom
+ * @param {GxDatetime} dateFrom
  * @param {number} seconds
- * @return Date
+ * @return GxDatetime
  */
 
-import { DateTime } from "luxon";
 import { secondsToMilliseconds } from "./core";
 import { EMPTY_DATE_VALUE } from "../date/core";
+import { GxDatetime } from "../types/gxdatetime";
 
-export const addSeconds = (dateFrom: Date, seconds: number): Date => {
+export const addSeconds = (
+  dateFrom: GxDatetime,
+  seconds: number
+): GxDatetime => {
   return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
-    ? EMPTY_DATE_VALUE
-    : new Date(dateFrom.getTime() + secondsToMilliseconds(seconds));
+    ? new GxDatetime(EMPTY_DATE_VALUE)
+    : new GxDatetime(dateFrom.getTime() + secondsToMilliseconds(seconds));
 };

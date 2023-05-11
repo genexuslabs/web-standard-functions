@@ -1,9 +1,10 @@
 import { setEmpty } from "../setEmpty";
 import { EMPTY_DATE_VALUE } from "../../date/core";
+import { GxDatetime } from "../../types/gxdatetime";
 
-export const testCases: Array<[Date, Date]> = [
-  [new Date(2019, 8, 28, 2, 1, 1, 0), EMPTY_DATE_VALUE],
-  [new Date(2019, 8, 28, 9, 9, 9, 9), EMPTY_DATE_VALUE]
+export const testCases: Array<[GxDatetime, GxDatetime]> = [
+  [new GxDatetime(2019, 8, 28, 2, 1, 1, 0), new GxDatetime(EMPTY_DATE_VALUE)],
+  [new GxDatetime(2019, 8, 28, 9, 9, 9, 9), new GxDatetime(EMPTY_DATE_VALUE)]
 ];
 
 describe("setEmpty operation", () => {

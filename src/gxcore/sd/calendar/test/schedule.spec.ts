@@ -1,17 +1,20 @@
 import { createCalendarEvent, schedule } from "../schedule";
 import { addMinutes } from "../../../../datetime/addMinutes";
 import { newInstance as newDate } from "../../../../date/newInstance";
+import { GxDatetime } from "../../../../types/gxdatetime";
 
 describe("Calendar external object", () => {
   it("should be able to call the public Schedule method", () => {
-    let d = new Date();
+    let d = new GxDatetime();
     schedule("", d, d, d, d, "");
   });
   it("should be able to create an event", () => {
-    let sDate = new Date(2019, 7, 14);
+    let sDate = new GxDatetime(2019, 7, 14);
     sDate.setUTCHours(16);
-    let eDate = new Date(2019, 7, 14);
+
+    let eDate = new GxDatetime(2019, 7, 14);
     eDate.setUTCHours(16, 30);
+
     let ical = createCalendarEvent(sDate, eDate, "Test Event", "Somewhere");
 
     let lines = ical.split("\n");

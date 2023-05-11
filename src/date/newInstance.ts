@@ -7,6 +7,7 @@
  * @return Date
  */
 
+import { GxDate } from "../types/gxdate";
 import { EMPTY_DATE_VALUE } from "./core";
 
 export const newInstance = (
@@ -14,8 +15,8 @@ export const newInstance = (
   month: number,
   day: number,
   fy20c?: number
-): Date => {
-  let ret = new Date(year, month - 1, day, 0, 0, 0, 0);
+): GxDate => {
+  let ret = new GxDate(year, month - 1, day, 0, 0, 0, 0);
   let yearAux = 0;
   if (!fy20c) {
     fy20c = 40;
@@ -48,11 +49,11 @@ export const newInstance = (
       break;
   }
 
-  ret = new Date(yearAux, month - 1, day, 0, 0, 0, 0);
+  ret = new GxDate(yearAux, month - 1, day, 0, 0, 0, 0);
 
   return ret.getFullYear() === yearAux &&
     ret.getMonth() === month - 1 &&
     ret.getDate() === day
     ? ret
-    : EMPTY_DATE_VALUE;
+    : new GxDate(EMPTY_DATE_VALUE);
 };

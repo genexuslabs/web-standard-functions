@@ -1,64 +1,65 @@
+import { GxDate } from "../../types/gxdate";
 import { fromString } from "../CtoD";
 import { EMPTY_DATE_VALUE } from "../core";
 
 /* Default MDY */
-export const testCases1: Array<[string, Date]> = [
-  ["092891", EMPTY_DATE_VALUE],
-  ["92891", EMPTY_DATE_VALUE],
-  ["09/28/91", new Date(1991, 8, 28, 0, 0, 0)],
-  ["9/28/91", new Date(1991, 8, 28, 0, 0, 0)],
-  ["9-28-91", EMPTY_DATE_VALUE],
-  ["TEXTO", EMPTY_DATE_VALUE]
+export const testCases1: Array<[string, GxDate]> = [
+  ["092891", new GxDate(EMPTY_DATE_VALUE)],
+  ["92891", new GxDate(EMPTY_DATE_VALUE)],
+  ["09/28/91", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["9/28/91", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["9-28-91", new GxDate(EMPTY_DATE_VALUE)],
+  ["TEXTO", new GxDate(EMPTY_DATE_VALUE)]
 ];
 
 /* DMY */
-export const testCases2: Array<[string, Date]> = [
-  ["280991", EMPTY_DATE_VALUE],
-  ["28991", EMPTY_DATE_VALUE],
-  ["28/09/91", new Date(1991, 8, 28, 0, 0, 0)],
-  ["28/9/91", new Date(1991, 8, 28, 0, 0, 0)],
-  ["28-9-91", EMPTY_DATE_VALUE],
-  ["TEXTO", EMPTY_DATE_VALUE]
+export const testCases2: Array<[string, GxDate]> = [
+  ["280991", new GxDate(EMPTY_DATE_VALUE)],
+  ["28991", new GxDate(EMPTY_DATE_VALUE)],
+  ["28/09/91", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["28/9/91", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["28-9-91", new GxDate(EMPTY_DATE_VALUE)],
+  ["TEXTO", new GxDate(EMPTY_DATE_VALUE)]
 ];
 
 /* YMD */
-export const testCases3: Array<[string, Date]> = [
-  ["910928", EMPTY_DATE_VALUE],
-  ["91928", EMPTY_DATE_VALUE],
-  ["91/09/28", new Date(1991, 8, 28, 0, 0, 0)],
-  ["91/9/28", new Date(1991, 8, 28, 0, 0, 0)],
-  ["91-9-28", EMPTY_DATE_VALUE],
-  ["TEXTO", EMPTY_DATE_VALUE]
+export const testCases3: Array<[string, GxDate]> = [
+  ["910928", new GxDate(EMPTY_DATE_VALUE)],
+  ["91928", new GxDate(EMPTY_DATE_VALUE)],
+  ["91/09/28", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["91/9/28", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["91-9-28", new GxDate(EMPTY_DATE_VALUE)],
+  ["TEXTO", new GxDate(EMPTY_DATE_VALUE)]
 ];
 
 /* MDY4 */
-export const testCases4: Array<[string, Date]> = [
-  ["09281991", EMPTY_DATE_VALUE],
-  ["9281991", EMPTY_DATE_VALUE],
-  ["09/28/1991", new Date(1991, 8, 28, 0, 0, 0)],
-  ["9/28/1991", new Date(1991, 8, 28, 0, 0, 0)],
-  ["9-28-1991", EMPTY_DATE_VALUE],
-  ["TEXTO", EMPTY_DATE_VALUE]
+export const testCases4: Array<[string, GxDate]> = [
+  ["09281991", new GxDate(EMPTY_DATE_VALUE)],
+  ["9281991", new GxDate(EMPTY_DATE_VALUE)],
+  ["09/28/1991", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["9/28/1991", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["9-28-1991", new GxDate(EMPTY_DATE_VALUE)],
+  ["TEXTO", new GxDate(EMPTY_DATE_VALUE)]
 ];
 
 /* DMY4 */
-export const testCases5: Array<[string, Date]> = [
-  ["28091991", EMPTY_DATE_VALUE],
-  ["2891991", EMPTY_DATE_VALUE],
-  ["28/09/1991", new Date(1991, 8, 28, 0, 0, 0)],
-  ["28/9/1991", new Date(1991, 8, 28, 0, 0, 0)],
-  ["28-9-1991", EMPTY_DATE_VALUE],
-  ["TEXTO", EMPTY_DATE_VALUE]
+export const testCases5: Array<[string, GxDate]> = [
+  ["28091991", new GxDate(EMPTY_DATE_VALUE)],
+  ["2891991", new GxDate(EMPTY_DATE_VALUE)],
+  ["28/09/1991", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["28/9/1991", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["28-9-1991", new GxDate(EMPTY_DATE_VALUE)],
+  ["TEXTO", new GxDate(EMPTY_DATE_VALUE)]
 ];
 
 /* Y4MD */
-export const testCases6: Array<[string, Date]> = [
-  ["19910928", EMPTY_DATE_VALUE],
-  ["1991928", EMPTY_DATE_VALUE],
-  ["1991/09/28", new Date(1991, 8, 28, 0, 0, 0)],
-  ["1991/9/28", new Date(1991, 8, 28, 0, 0, 0)],
-  ["1991-9-28", EMPTY_DATE_VALUE],
-  ["TEXTO", EMPTY_DATE_VALUE]
+export const testCases6: Array<[string, GxDate]> = [
+  ["19910928", new GxDate(EMPTY_DATE_VALUE)],
+  ["1991928", new GxDate(EMPTY_DATE_VALUE)],
+  ["1991/09/28", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["1991/9/28", new GxDate(1991, 8, 28, 0, 0, 0)],
+  ["1991-9-28", new GxDate(EMPTY_DATE_VALUE)],
+  ["TEXTO", new GxDate(EMPTY_DATE_VALUE)]
 ];
 
 describe("fromString operation", () => {

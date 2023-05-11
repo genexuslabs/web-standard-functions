@@ -1,11 +1,11 @@
 /**
  * Returns a native type date
- * @param {Date} dateFrom
- * @return Date
+ * @param {GxDate} dateFrom
+ * @return GxDate
  */
 
-import { DateTime } from "luxon";
+import { GxDate } from "../types/gxdate";
 
-export const toDate = (dateFrom: Date): Date => {
+export const toDate = (dateFrom: GxDate): GxDate => {
   return dateFrom;
 };
