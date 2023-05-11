@@ -25,9 +25,7 @@ export const testCases: Array<[
 describe("addYears operation", () => {
   for (const t of testCases) {
     it(`addYears add ${t[1]} years to "${t[0]}" should be equal to "${t[2]}"`, () => {
-      expect(JSON.stringify(addYears(t[0], t[1]))).toEqual(
-        JSON.stringify(t[2])
-      );
+      expect(addYears(t[0], t[1])).toEqual(t[2]);
     });
   }
 });

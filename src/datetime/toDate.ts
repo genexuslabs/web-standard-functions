@@ -9,6 +9,8 @@ import { GxDatetime } from "../types/gxdatetime";
 
 export const toDate = (dateFrom: GxDatetime): GxDate => {
   return new GxDate(
-    new Date(dateFrom.getFullYear(), dateFrom.getMonth(), dateFrom.getDate())
+    dateFrom.getFullYear(),
+    dateFrom.getMonth(),
+    dateFrom.getDate()
   );
 };

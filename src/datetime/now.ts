@@ -9,10 +9,7 @@ import { minutesToMilliseconds } from "./core";
 import { GxDatetime } from "../types/gxdatetime";
 
 export const now = (): GxDatetime => {
-  let date = new GxDatetime(new Date());
+  let date = new GxDatetime();
   let offset = minutesToMilliseconds(date.getTimezoneOffset());
-  return fromTimezone(
-    new GxDatetime(new Date(date.getTime() + offset)),
-    timezones.UTC
-  );
+  return fromTimezone(new GxDatetime(date.getTime() + offset), timezones.UTC);
 };

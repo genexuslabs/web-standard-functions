@@ -13,7 +13,7 @@ export const testCases: Array<[GxDatetime, GxDate]> = [
 describe("toDate operation", () => {
   for (const t of testCases) {
     it(`toDate for ${t[0]} should be equal to ${t[1]}`, () => {
-      expect(JSON.stringify(toDate(t[0]))).toEqual(JSON.stringify(t[1]));
+      expect(toDate(t[0])).toEqual(t[1]);
     });
   }
 });

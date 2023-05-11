@@ -73,9 +73,9 @@ export const newInstance = (
         minutes = 0;
         seconds = 0;
         milliseconds = 0;
-        ret = new Date(yearAux, month - 1, day, 0, 0, 0, 0);
+        ret = new GxDatetime(yearAux, month - 1, day, 0, 0, 0, 0);
       } else {
-        ret = new Date(
+        ret = new GxDatetime(
           yearAux,
           month - 1,
           day,
@@ -102,15 +102,15 @@ export const newInstance = (
         milliseconds = 0;
 
         if (year === 0 && month === 0 && day === 0) {
-          ret = new Date(0, 0, 0, 0, 0, 0, 0);
+          ret = new GxDatetime(0, 0, 0, 0, 0, 0, 0);
         } else {
-          ret = new Date(yearAux, month - 1, day, 0, 0, 0, 0);
+          ret = new GxDatetime(yearAux, month - 1, day, 0, 0, 0, 0);
         }
       } else {
         if (year === 0 && month === 0 && day === 0) {
-          ret = new Date(0, 0, 0, hour, minutes, seconds, milliseconds);
+          ret = new GxDatetime(0, 0, 0, hour, minutes, seconds, milliseconds);
         } else {
-          ret = new Date(
+          ret = new GxDatetime(
             yearAux,
             month - 1,
             day,
@@ -130,9 +130,9 @@ export const newInstance = (
         minutes = 0;
         seconds = 0;
         milliseconds = 0;
-        ret = new Date(yearAux, month - 1, day, 0, 0, 0, 0);
+        ret = new GxDatetime(yearAux, month - 1, day, 0, 0, 0, 0);
       } else {
-        ret = new Date(
+        ret = new GxDatetime(
           yearAux,
           month - 1,
           day,
@@ -162,6 +162,6 @@ export const newInstance = (
       ret.getMinutes() === minutes &&
       ret.getSeconds() === seconds &&
       ret.getMilliseconds() === milliseconds)
-    ? new GxDatetime(ret)
+    ? ret
     : new GxDatetime(EMPTY_DATE_VALUE);
 };

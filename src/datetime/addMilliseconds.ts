@@ -11,7 +11,7 @@ export const addMilliseconds = (
   dateFrom: GxDatetime,
   milliseconds: number
 ): GxDatetime => {
-  let ret = new Date();
+  let ret = new GxDatetime();
   ret.setTime(dateFrom.getTime() + milliseconds);
-  return new GxDatetime(ret);
+  return ret;
 };

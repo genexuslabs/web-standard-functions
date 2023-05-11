@@ -4,21 +4,21 @@ import { GxDate } from "../../types/gxdate";
 
 export const testCases: Array<[GxDate, number, number, number, GxDate]> = [
   [
-    new GxDate(new Date(2015, 3, 2, 0, 0, 0, 0)),
+    new GxDate(2015, 3, 2, 0, 0, 0, 0),
     1891,
     9,
     28,
-    new GxDate(new Date(1891, 8, 28, 0, 0, 0, 0))
+    new GxDate(1891, 8, 28, 0, 0, 0, 0)
   ],
   [
-    new GxDate(new Date(2015, 3, 2, 0, 0, 0, 0)),
+    new GxDate(2015, 3, 2, 0, 0, 0, 0),
     1891,
     13,
     1,
     new GxDate(EMPTY_DATE_VALUE)
   ],
   [
-    new GxDate(new Date(2015, 3, 2, 0, 0, 0, 0)),
+    new GxDate(2015, 3, 2, 0, 0, 0, 0),
     1891,
     1891,
     1891,

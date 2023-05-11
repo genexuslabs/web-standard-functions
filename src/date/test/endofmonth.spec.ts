@@ -14,7 +14,7 @@ export const testCases: Array<[GxDate | GxDatetime, GxDate | GxDatetime]> = [
 describe("endOfMonth operation", () => {
   for (const t of testCases) {
     it(`endOfMonth of ${t[1]} should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(endOfMonth(t[0]))).toEqual(JSON.stringify(t[1]));
+      expect(endOfMonth(t[0])).toEqual(t[1]);
     });
   }
 });

@@ -12,7 +12,5 @@ export const addMinutes = (
   dateFrom: GxDatetime,
   minutes: number
 ): GxDatetime => {
-  return new GxDatetime(
-    new Date(dateFrom.getTime() + minutesToMilliseconds(minutes))
-  );
+  return new GxDatetime(dateFrom.getTime() + minutesToMilliseconds(minutes));
 };

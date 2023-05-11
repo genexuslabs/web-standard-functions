@@ -69,7 +69,6 @@ export const fromString = (
     timeBool = true;
   }
 
-  // si tiene / es una fecha ==> sigo como antes
   if (dateFrom.indexOf("/") !== -1) {
     dateParts = dateFrom.split(" ")[0].split("/");
     timeParts = dateFrom.match(

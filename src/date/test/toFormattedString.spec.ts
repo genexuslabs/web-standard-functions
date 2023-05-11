@@ -4,45 +4,15 @@ import { GxDate } from "../../types/gxdate";
 
 export const testCases1: Array<[GxDate, string, string, string]> = [
   //format dateFormat = “MDY”   dateFormat = “DMY”   dateFormat = “YMD”
-  [new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)), "01/02/18", "DMY", "99/99/99"],
-  [new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)), "18/02/01", "YMD", "99/99/99"],
-  [
-    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
-    "01/02/18",
-    "DMY4",
-    "99/99/99"
-  ],
-  [
-    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
-    "18/02/01",
-    "Y4MD",
-    "99/99/99"
-  ],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "01/02/18", "DMY", "99/99/99"],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "18/02/01", "YMD", "99/99/99"],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "01/02/18", "DMY4", "99/99/99"],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "18/02/01", "Y4MD", "99/99/99"],
 
-  [
-    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
-    "01/02/2018",
-    "DMY",
-    "99/99/9999"
-  ],
-  [
-    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
-    "2018/02/01",
-    "YMD",
-    "9999/99/99"
-  ],
-  [
-    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
-    "01/02/2018",
-    "DMY4",
-    "99/99/9999"
-  ],
-  [
-    new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)),
-    "2018/02/01",
-    "Y4MD",
-    "9999/99/99"
-  ],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "01/02/2018", "DMY", "99/99/9999"],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "2018/02/01", "YMD", "9999/99/99"],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "01/02/2018", "DMY4", "99/99/9999"],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "2018/02/01", "Y4MD", "9999/99/99"],
 
   [new GxDate(EMPTY_DATE_VALUE), "  /  /  ", "YMD", "99/99/99"],
   [new GxDate(EMPTY_DATE_VALUE), "  /  /  ", "YMD", "9999/99/99"],
@@ -51,7 +21,7 @@ export const testCases1: Array<[GxDate, string, string, string]> = [
 ];
 
 export const testCases2: Array<[GxDate, string]> = [
-  [new GxDate(new Date(2018, 1, 1, 0, 0, 0, 0)), "02/01/18"],
+  [new GxDate(2018, 1, 1, 0, 0, 0, 0), "02/01/18"],
   [new GxDate(EMPTY_DATE_VALUE), "  /  /  "]
 ];
 

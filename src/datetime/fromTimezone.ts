@@ -18,6 +18,6 @@ export const fromTimezone = (
   let offsetFrom = DateTime.fromJSDate(fromDate).setZone(timezoneFrom).offset;
   let offsetTo = DateTime.fromJSDate(fromDate).setZone(getTimezone()).offset;
   return new GxDatetime(
-    new Date(fromDate.getTime() + minutesToMilliseconds(offsetTo - offsetFrom))
+    fromDate.getTime() + minutesToMilliseconds(offsetTo - offsetFrom)
   );
 };

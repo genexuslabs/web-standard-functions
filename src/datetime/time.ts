@@ -11,10 +11,10 @@ import { GxDatetime } from "../types/gxdatetime";
 
 export const timeImpl = (tf: time_format, date?: GxDatetime): String => {
   let format = tf === time_format.format_12 ? "en-US" : "en-GB";
-  return (date || new GxDatetime(new Date())).toLocaleTimeString(format);
+  return (date || new GxDatetime()).toLocaleTimeString(format);
 };
 
 export const time = (): String => {
   // TODO get timeformat from app  preferences
-  return timeImpl(time_format.format_12, new GxDatetime(new Date()));
+  return timeImpl(time_format.format_12, new GxDatetime());
 };

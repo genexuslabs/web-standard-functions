@@ -50,9 +50,7 @@ describe("fromTimezone operation", () => {
     it(`fromTimezone for timezone ${t[0]} of ${
       t[1]
     } at CTZ "${getTimezone()}" should be equal to ${t[2]}`, () => {
-      expect(JSON.stringify(fromTimezone(t[1], t[0]))).toEqual(
-        JSON.stringify(t[2])
-      );
+      expect(fromTimezone(t[1], t[0])).toEqual(t[2]);
     });
   }
 });

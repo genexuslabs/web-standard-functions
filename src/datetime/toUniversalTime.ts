@@ -11,7 +11,7 @@ import { GxDatetime } from "../types/gxdatetime";
 
 export const toUniversalTime = (fromDate: GxDatetime): GxDatetime => {
   let offset = DateTime.fromJSDate(fromDate).setZone(getTimezone()).offset;
-  let ret = new Date();
+  let ret = new GxDatetime();
   ret.setTime(fromDate.getTime() - minutesToMilliseconds(offset));
-  return new GxDatetime(ret);
+  return ret;
 };

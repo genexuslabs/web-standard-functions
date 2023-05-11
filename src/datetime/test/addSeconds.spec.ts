@@ -27,9 +27,7 @@ export const testCases: Array<[GxDatetime, number, GxDatetime]> = [
 describe("addSeconds operation", () => {
   for (const t of testCases) {
     it(`addSeconds for ${t[0]} add ${t[1]} should be equal to ${t[2]}`, () => {
-      expect(JSON.stringify(addSeconds(t[0], t[1]))).toEqual(
-        JSON.stringify(t[2])
-      );
+      expect(addSeconds(t[0], t[1])).toEqual(t[2]);
     });
   }
 });

@@ -15,7 +15,5 @@ export const addSeconds = (
 ): GxDatetime => {
   return dateFrom.getTime() === EMPTY_DATE_VALUE.getTime()
     ? new GxDatetime(EMPTY_DATE_VALUE)
-    : new GxDatetime(
-        new Date(dateFrom.getTime() + secondsToMilliseconds(seconds))
-      );
+    : new GxDatetime(dateFrom.getTime() + secondsToMilliseconds(seconds));
 };

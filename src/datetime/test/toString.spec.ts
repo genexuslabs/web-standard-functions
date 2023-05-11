@@ -452,72 +452,70 @@ export const testCases12: Array<[
 describe("toString operation", () => {
   for (const t of testCases11) {
     it(`toString without parameters, default MDY 12 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(toString(new GxDatetime(new Date()), t[0], t[2], t[3])).toEqual(
-        t[1]
-      );
+      expect(toString(new GxDatetime(), t[0], t[2], t[3])).toEqual(t[1]);
     });
   }
 
   for (const t of testCases12) {
     it(`toString of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], t[2], t[3], t[4], t[5])
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], t[2], t[3], t[4], t[5])).toEqual(
+        t[1]
+      );
     });
   }
 
   /* -----------------DATE FROMAT--------------------- */
   for (const t of testCases1) {
     it(`toString without parameters, default MDY of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(toString(new GxDatetime(new Date()), t[0])).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0])).toEqual(t[1]);
     });
   }
 
   for (const t of testCases1) {
     it(`toString with parameters, MDY 12 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "MDY", 12)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "MDY", 12)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases2) {
     it(`toString with parameters, default DMY 12 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "DMY", 12)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "DMY", 12)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases3) {
     it(`toString with parameters, default YMD 12 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "YMD", 12)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "YMD", 12)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases1) {
     it(`toString without parameters, default MDY4 12 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "MDY4", 12)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "MDY4", 12)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases3) {
     it(`toString without parameters, default Y4MD 12 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "Y4MD", 12)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "Y4MD", 12)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases2) {
     it(`toString without parameters, default DMY4 12 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "DMY4", 12)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "DMY4", 12)).toEqual(
+        t[1]
+      );
     });
   }
 
@@ -526,49 +524,49 @@ describe("toString operation", () => {
   /* -----------------TIME FROMAT--------------------- */
   for (const t of testCases5) {
     it(`toString with parameters, MDY 24 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "MDY", 24)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "MDY", 24)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases6) {
     it(`toString with parameters, default DMY 24 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "DMY", 24)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "DMY", 24)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases7) {
     it(`toString with parameters, default YMD 24 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "YMD", 24)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "YMD", 24)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases5) {
     it(`toString without parameters, default MDY4 24 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "MDY4", 24)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "MDY4", 24)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases7) {
     it(`toString without parameters, default Y4MD 24 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "Y4MD", 24)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "Y4MD", 24)).toEqual(
+        t[1]
+      );
     });
   }
 
   for (const t of testCases6) {
     it(`toString without parameters, default DMY4 24 of ${t[0]} should be equal to "${t[1]}"`, () => {
-      expect(
-        toString(new GxDatetime(new Date()), t[0], null, null, "DMY4", 24)
-      ).toEqual(t[1]);
+      expect(toString(new GxDatetime(), t[0], null, null, "DMY4", 24)).toEqual(
+        t[1]
+      );
     });
   }
 

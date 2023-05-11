@@ -35,9 +35,7 @@ describe("toUniversalTime operation", () => {
   for (const t of testCases) {
     it(`toUniversalTime for timezone ${t[0]} of ${t[1]} should be equal to ${t[2]}`, () => {
       setTimezone(t[0]);
-      expect(JSON.stringify(toUniversalTime(t[1]))).toEqual(
-        JSON.stringify(t[2])
-      );
+      expect(toUniversalTime(t[1])).toEqual(t[2]);
     });
   }
 });

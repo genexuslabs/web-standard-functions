@@ -2,7 +2,7 @@ import { fromString } from "../CtoT";
 import { EMPTY_DATE_VALUE } from "../../date/core";
 import { GxDatetime } from "../../types/gxdatetime";
 
-/* 11 es el mes 12 */
+/* 11 is month 12 */
 
 /* Default - MDY y 12 */
 export const testCases1: Array<[string, GxDatetime]> = [
@@ -153,79 +153,61 @@ export const testCases6: Array<[string, GxDatetime]> = [
 describe("fromString operation", () => {
   for (const t of testCases1) {
     it(`fromString without parameter dateFormat y timeFormat,default MDY y 12 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0]))).toEqual(JSON.stringify(t[1]));
+      expect(fromString(t[0])).toEqual(t[1]);
     });
   }
 
   for (const t of testCases1) {
     it(`fromString with parameter dateFormat y timeFormat,MDY of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "MDY"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "MDY")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases2) {
     it(`fromString with parameter dateFormat y timeFormat,default MDY of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "MDY"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "MDY")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases3) {
     it(`fromString with parameter dateFormat,default MDY of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "DMY"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "DMY")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases4) {
     it(`fromString with parameter dateFormat,default MDY of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "DMY"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "DMY")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases5) {
     it(`fromString with parameter dateFormat,default YMD of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "YMD"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "YMD")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases6) {
     it(`fromString with parameter dateFormat ,default YMD of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "YMD"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "YMD")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases4) {
     it(`fromString with parameter dateFormat,default DMY4 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "DMY4"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "DMY4")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases2) {
     it(`fromString with parameter dateFormat,default MDY4 of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "MDY4"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "MDY4")).toEqual(t[1]);
     });
   }
 
   for (const t of testCases6) {
     it(`fromString with parameter dateFormat,default Y4MD of "${t[0]}" should be equal to "${t[1]}"`, () => {
-      expect(JSON.stringify(fromString(t[0], "Y4MD"))).toEqual(
-        JSON.stringify(t[1])
-      );
+      expect(fromString(t[0], "Y4MD")).toEqual(t[1]);
     });
   }
 });
