@@ -99,7 +99,7 @@ export class Std_TypeConversions {
     if (datetimeS.length > 1) {
       const dateS = datetimeS[0].split("-");
       const timeS = datetimeS[1].split(":");
-      let dt_sec = timeS[2];
+      let dt_sec = timeS[2] || 0 ;
       let dt_millis = "0";
       if (timeS.length === 3 && timeS[2].indexOf(".") > -1) {
         const sec_millis = timeS[2].split(".");
