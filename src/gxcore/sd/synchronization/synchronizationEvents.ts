@@ -1,4 +1,4 @@
-import { GUID } from "../../../types/guid";
+import { GxGuid } from "../../../types/gxguid";
 
 /* tslint:disable:no-empty */
 export class GeneXusSDSynchronizationSynchronizationEvents {
@@ -24,9 +24,9 @@ export class GeneXusSDSynchronizationSynchronizationEvents {
    * Marks as pending an events in order to try sending it again later
    *
    * Current implementation does nothing.
-   * @param {GUID} eventGUID
+   * @param {GxGuid} eventGUID
    */
-  static markEventAsPending(eventGUID: GUID) {
+  static markEventAsPending(eventGUID: GxGuid) {
     // Empty implemetation
   }
 
@@ -34,9 +34,9 @@ export class GeneXusSDSynchronizationSynchronizationEvents {
    * Removes some registry of the GXPendingEvents table.
    *
    * Current implementation does nothing.
-   * @param {GUID} eventGUID
+   * @param {GxGuid} eventGUID
    */
-  static removeEvent(eventGUID: GUID) {
+  static removeEvent(eventGUID: GxGuid) {
     // Empty implemetation
   }
 }

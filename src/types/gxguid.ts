@@ -1,13 +1,24 @@
 import { v4 as uuid_v4 } from "uuid";
+import { ISerializable } from "./type-serialization";
 
-export class GUID {
+export class GxGuid implements ISerializable {
   private value: string;
 
   private static emptyValue = "00000000-0000-0000-0000-000000000000";
-  private static emptyGUID = new GUID(GUID.emptyValue);
+  private static emptyGUID = new GxGuid(GxGuid.emptyValue);
 
-  private constructor(val: string) {
+  constructor(val: string = GxGuid.emptyValue) {
     this.value = this.normalizeValue(val);
+  }
+
+  _gxSerializable = () => true;
+
+  serialize() {
+    return this.toString();
+  }
+
+  deserialize(x) {
+    return new GxGuid(x);
   }
 
   private normalizeValue(str: string): string {
@@ -31,7 +42,7 @@ export class GUID {
         lStr.substr(20, 12)
       );
     } else {
-      return GUID.emptyValue;
+      return GxGuid.emptyValue;
     }
   }
 
@@ -40,7 +51,7 @@ export class GUID {
    * @returns boolean
    */
   isEmpty(): boolean {
-    return this.value === GUID.emptyValue;
+    return this.value === GxGuid.emptyValue;
   }
 
   /**
@@ -63,30 +74,30 @@ export class GUID {
 
   /**
    * Returns the empty GUID
-   * @returns {GUID} The empty GUID
+   * @returns {GxGuid} The empty GUID
    */
-  static empty(): GUID {
-    return GUID.emptyGUID;
+  static empty(): GxGuid {
+    return this.emptyGUID;
   }
 
   /**
    * Creates a new GUID object from the given string
    * @param {string} str The string representing the GUID object to be created
-   * @returns {GUID} The GUID object with representing the given string
+   * @returns {GxGuid} The GUID object with representing the given string
    */
-  static fromString(str: string): GUID {
-    return new GUID(str);
+  static fromString(str: string): GxGuid {
+    return new GxGuid(str);
   }
 
   /**
    * Creates a new GUID object with a randomly-generated value
-   * @returns {GUID} The newly created GUID object
+   * @returns {GxGuid} The newly created GUID object
    */
-  static newGuid(): GUID {
-    return new GUID(uuid_v4());
+  static newGuid(): GxGuid {
+    return new GxGuid(uuid_v4());
   }
 
-  static compare(guid1: GUID, guid2: GUID): boolean {
+  static compare(guid1: GxGuid, guid2: GxGuid): boolean {
     let res: boolean;
     if (guid1.value === guid2.value) {
       res = true;

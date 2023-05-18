@@ -1,6 +1,6 @@
 import { publish, subscribe, cancelSubscription } from "../pubSub/pubSub";
 import { stdToGeneratorPublishedMessage as prefix } from "./helpers";
-import { GUID } from "../types/guid";
+import { GxGuid } from "../types/gxguid";
 
 export type ResolverFunc<T> = (value: T | PromiseLike<T>) => void;
 
@@ -11,7 +11,7 @@ export async function publishCall<T>(
   ...params: any[]
 ): Promise<T> {
   return new Promise<T>(resolve => {
-    let guid = GUID.newGuid().toString();
+    let guid = GxGuid.newGuid().toString();
     let suscriptions = options.map(opt => {
       let s = subscribe(`${prefix}_${fnName}_${guid}_${opt}`, (result: T) => {
         unsubscribe();

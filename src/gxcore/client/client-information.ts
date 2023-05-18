@@ -1,6 +1,6 @@
 import { getCookie } from "../../web/getCookie";
 import { setCookie } from "../../web/setCookie";
-import { GUID } from "../../types/guid";
+import { GxGuid } from "../../types/gxguid";
 import { addYears } from "../../date/addYears";
 import { ConfigurationState } from "../../config/configurationState";
 import { GxDate } from "../../types/gxdate";
@@ -26,7 +26,7 @@ export class GeneXusClientClientInformation {
   public static id = (): string => {
     let id = getCookie("GX_CLIENT_ID");
     if (!id) {
-      id = GUID.newGuid().toString();
+      id = GxGuid.newGuid().toString();
       let expiration = addYears(new GxDate(), 100);
       setCookie("GX_CLIENT_ID", id, "/", expiration);
     }
