@@ -1,5 +1,5 @@
 import { addHours } from "../../../datetime/addHours";
-import { GUID } from "../../../types/guid";
+import { GxGuid } from "../../../types/gxguid";
 import { GxDatetime } from "../../../types/gxdatetime";
 
 /**
@@ -83,7 +83,7 @@ END:VEVENT
 END:VCALENDAR`;
 
 function getGUIDString(): string {
-  return GUID.newGuid().toString();
+  return GxGuid.newGuid().toString();
 }
 
 function downloadCalendar(calendarStr: string) {
