@@ -119,7 +119,7 @@ module.exports = {
     "no-return-await": "error",
     "no-throw-literal": "error",
     "no-trailing-spaces": "off",
-    "no-underscore-dangle": "error",
+    "no-underscore-dangle": "off",
     "no-unused-expressions": "error",
     "no-unused-labels": "error",
     "no-var": "error",
