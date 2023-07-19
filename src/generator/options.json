@@ -1611,6 +1611,58 @@
           "isAsync": true
         }
       }
+    },
+    "HttpClient": {
+      "members": {
+        "AddHeader": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "addHeader",
+          "alias": "addHeader"
+        },
+        "Execute": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "execute",
+          "alias": "execute",
+          "isAsync": true
+        },
+        "ToString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "toString",
+          "alias": "toString",
+          "isAsync": true
+        },
+        "AddString": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "addString",
+          "alias": "addString"
+        },
+        "ReadChunk": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "readChunk",
+          "alias": "readChunk",
+          "isAsync": true
+        },
+        "GetHeader": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "getHeader",
+          "alias": "getHeader"
+        },
+        "AddVariable": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "addVariable",
+          "alias": "addVariable"
+        },
+        "AddFile": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "addFile",
+          "alias": "addFile"
+        },
+        "AddAuthentication": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "addAuthentication",
+          "alias": "addAuthentication"
+        }
+      }
     }
   },
   "disambiguated": {
@@ -1828,6 +1880,7 @@
   "ignored": {
     "AttributePEM": "all",
     "Audio": ["GetOldValue"],
+    "HttpClient": ["GetOldValue"],
     "BasedOnEnumeratedDomain": "all",
     "Blob": ["GetOldValue"],
     "Binary": ["GetOldValue"],
