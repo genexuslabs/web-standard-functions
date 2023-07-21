@@ -28,6 +28,7 @@ export class GxHttpClient {
   decoder = new TextDecoder("utf-8");
   error: string = "";
   bodyAux = {};
+  objHeaders = {};
 
   constructor() {
     this.Host = "localhost";
@@ -81,7 +82,7 @@ export class GxHttpClient {
       urlAux = url;
     }
 
-    let contType = this.getHeader("Content-Type");
+    let contType = this.Headers["Content-Type"];
 
     if (this.Files) {
       for (let i = 0; i < this.Files.length; i++) {
@@ -213,7 +214,13 @@ export class GxHttpClient {
   }
 
   getHeader(name) {
-    return this.Headers[name];
+    if (JSON.stringify(this.objHeaders) === "{}") {
+      for (const [key, value] of this.response.headers.entries()) {
+        this.objHeaders[key.toLowerCase()] = value;
+      }
+    }
+
+    return this.objHeaders[name.toLowerCase()];
   }
 
   async toString() {
