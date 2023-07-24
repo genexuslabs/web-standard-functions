@@ -229,6 +229,17 @@ export class GxHttpClient {
     }
   }
 
+  async toFile(nameFile) {
+    const res = await this.response.text();
+    const link = document.createElement("a");
+    link.href = "data:text/plain;charset=utf-8," + encodeURIComponent(res);
+    link.download = `${nameFile}`;
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   async readChunk() {
     if (!this.reader) {
       this.reader = this.response.body.getReader();

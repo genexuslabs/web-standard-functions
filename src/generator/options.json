@@ -1661,6 +1661,12 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
           "name": "addAuthentication",
           "alias": "addAuthentication"
+        },
+        "ToFile": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/http/httpClient",
+          "name": "toFile",
+          "alias": "toFile",
+          "isAsync": true
         }
       }
     }
