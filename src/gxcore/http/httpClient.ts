@@ -157,6 +157,8 @@ export class GxHttpClient {
       this.error = "";
       this.setErrorCode();
       this.setErrDescription();
+      this.reader = "";
+      this.EOF = false;
 
       return this.response;
     } catch (error) {
