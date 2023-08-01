@@ -22,13 +22,21 @@ export const shareImage = async (
 
   const file = await convertImageToFile(image);
 
+  const data = {};
+  data["files"] = [file];
+
+  if (text !== "") {
+    data["text"] = text;
+  }
+  if (url !== "") {
+    data["url"] = url;
+  }
+  if (title !== "") {
+    data["title"] = title;
+  }
+
   if (nav.canShare && nav.canShare({ files: [file] })) {
-    return nav.share({
-      url: url,
-      title: title,
-      text: text,
-      files: [file]
-    });
+    return nav.share(data);
   } else {
     return msg("Share API not available in this browser", "status");
   }

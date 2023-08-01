@@ -1,3 +1,5 @@
+import { jsonFileExtensions } from "./fileExtensions";
+
 export const convertUriToFile = async (uri: string): Promise<File> => {
   try {
     const response = await fetch(uri);
@@ -8,7 +10,8 @@ export const convertUriToFile = async (uri: string): Promise<File> => {
       response.url.length
     );
 
-    const file = new File([blob], name, { type: blob.type });
+    const extension = jsonFileExtensions[blob.type];
+    const file = new File([blob], `${name}.${extension}`, { type: blob.type });
 
     return file;
   } catch (err) {

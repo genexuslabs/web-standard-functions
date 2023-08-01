@@ -15,12 +15,18 @@ export const shareFile = async (
   const nav: any = window.navigator;
   const file = await convertUriToFile(uri);
 
+  const data = {};
+  data["files"] = [file];
+
+  if (text !== "") {
+    data["text"] = text;
+  }
+  if (title !== "") {
+    data["title"] = title;
+  }
+
   if (nav.canShare && nav.canShare({ files: [file] })) {
-    return nav.share({
-      files: [file],
-      text: text,
-      title: title
-    });
+    return nav.share(data);
   } else {
     return msg("Share API not available in this browser", "status");
   }

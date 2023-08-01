@@ -11,8 +11,19 @@ export const shareText = (
   title?: string
 ): Promise<void> => {
   const nav: any = window.navigator;
+
+  const data = {};
+  data["text"] = text;
+
+  if (url !== "") {
+    data["url"] = url;
+  }
+  if (title !== "") {
+    data["title"] = title;
+  }
+
   if (nav && nav.share) {
-    return nav.share({ title, url, text });
+    return nav.share(data);
   } else {
     return msg("Share API not available in this browser", "status");
   }

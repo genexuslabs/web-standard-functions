@@ -1,3 +1,5 @@
+import { jsonFileExtensions } from "./fileExtensions";
+
 interface GxImage {
   id: string;
   uri: string;
@@ -13,7 +15,8 @@ export const convertImageToFile = async (image: GxImage): Promise<File> => {
       response.url.length
     );
 
-    const file = new File([blob], name, { type: blob.type });
+    const extension = jsonFileExtensions[blob.type];
+    const file = new File([blob], `${name}.${extension}`, { type: blob.type });
 
     return file;
   } catch (err) {
