@@ -1,7 +1,7 @@
 export class GxHttpClient {
   /* In */
   Host: string;
-  Port: number;
+  _Port: number;
   Secure: number;
   BaseUrl: string;
   Timeout: number;
@@ -30,9 +30,9 @@ export class GxHttpClient {
   bodyAux = {};
   objHeaders = {};
 
-  constructor() {
+  constructor(Port: number = 0) {
     this.Host = "localhost";
-    this.Port = 0;
+    this._Port = Port;
     this.Secure = 0;
     this.BaseUrl = "/";
     this.Timeout = 30;
@@ -46,25 +46,17 @@ export class GxHttpClient {
     let urlAux = "";
 
     if (!url.startsWith("http")) {
-      if (this.Port === 0) {
-        if (this.Secure === 1) {
-          this.Port = 443;
-        } else if (this.Secure === 0) {
-          this.Port = 80;
-        }
-      }
-
+      const port = this.Port;
       if (!this.Host.endsWith("/") && !this.BaseUrl.startsWith("/")) {
-        urlAux = this.Host + ":" + this.Port + "/" + this.BaseUrl;
+        urlAux = this.Host + ":" + port + "/" + this.BaseUrl;
       } else if (this.Host.endsWith("/") && this.BaseUrl.startsWith("/")) {
-        urlAux = this.Host.slice(0, -1) + ":" + this.Port + this.BaseUrl;
+        urlAux = this.Host.slice(0, -1) + ":" + port + this.BaseUrl;
         urlAux = urlAux.replace(/\/\//g, "/");
       } else {
         if (this.Host.endsWith("/")) {
-          urlAux =
-            this.Host.slice(0, -1) + ":" + this.Port + "/" + this.BaseUrl;
+          urlAux = this.Host.slice(0, -1) + ":" + port + "/" + this.BaseUrl;
         } else if (this.BaseUrl.startsWith("/")) {
-          urlAux = this.Host + ":" + this.Port + this.BaseUrl;
+          urlAux = this.Host + ":" + port + this.BaseUrl;
         }
       }
 
@@ -223,6 +215,22 @@ export class GxHttpClient {
     }
 
     return this.objHeaders[name.toLowerCase()];
+  }
+
+  get Port() {
+    if (this._Port === 0) {
+      if (this.Secure === 1) {
+        return 443;
+      } else if (this.Secure === 0) {
+        return 80;
+      }
+    } else {
+      return this._Port;
+    }
+  }
+
+  set Port(Port) {
+    this._Port = Port;
   }
 
   async toString() {
