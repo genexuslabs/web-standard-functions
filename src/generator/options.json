@@ -162,7 +162,8 @@
         },
         "Now": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/datetime/now",
-          "name": "now"
+          "name": "now",
+          "returns": "DateTime"
         },
         "Null": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/isEmpty",
