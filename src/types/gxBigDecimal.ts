@@ -76,11 +76,59 @@ export class GxBigDecimal {
   }
 
   static multiply(num1, num2) {
-    return new GxBigDecimal(num1 * num2);
+    let a;
+    let b;
+    let d = 0;
+    if (!(num1 instanceof GxBigDecimal)) {
+      a = new GxBigDecimal(num1);
+      d = d + a.decimals;
+    } else {
+      a = num1;
+      d = d + num1.decimals;
+    }
+    if (!(num2 instanceof GxBigDecimal)) {
+      b = new GxBigDecimal(num2);
+      d = d + b.decimals;
+    } else {
+      b = num2;
+      d = d + num2.decimals;
+    }
+
+    return GxBigDecimal.fromBigInt(a.intNumberAll * b.intNumberAll, d);
   }
 
   static divide(num1, num2) {
-    return new GxBigDecimal(num1 / num2);
+    let intNumber = "";
+    let decimalNumber = "";
+    let d = 0;
+    let r;
+
+    intNumber = (num1 / num2)
+      .toString()
+      .split(".")
+      .concat("")[0];
+    decimalNumber = (num1 / num2)
+      .toString()
+      .split(".")
+      .concat("")[1];
+    d = (num1 / num2)
+      .toString()
+      .split(".")
+      .concat("")[1].length;
+
+    if (intNumber.charAt(0) === "0") {
+      if (decimalNumber.charAt(0) === "0") {
+        decimalNumber = decimalNumber.slice(1);
+        while (decimalNumber.charAt(0) === "0") {
+          decimalNumber = decimalNumber.slice(1);
+        }
+      }
+      r = decimalNumber;
+    } else {
+      r = intNumber + decimalNumber;
+    }
+
+    return GxBigDecimal.fromBigInt(r, d);
   }
 
   getintNumberAll(bigDecimal: GxBigDecimal) {
