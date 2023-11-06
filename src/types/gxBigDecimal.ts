@@ -138,25 +138,17 @@ export class GxBigDecimal {
   normalizeDecimals(num) {
     if (num instanceof GxBigDecimal) {
       if (this.decimals < num.decimals) {
-        this.decimals = num.decimals;
         this.intNumberAll = BigInt(
-          this.intNumberAll + "0".repeat(this.decimals)
+          this.intNumberAll + "0".repeat(num.decimals - this.decimals)
         );
+        this.decimals = num.decimals;
       } else if (num.decimals < this.decimals) {
+        num.intNumberAll = BigInt(
+          num.intNumberAll + "0".repeat(this.decimals - num.decimals)
+        );
         num.decimals = this.decimals;
-        num.intNumberAll = BigInt(num.intNumberAll + "0".repeat(num.decimals));
       }
       return this.getintNumberAll(num);
-    } else {
-      let b = new GxBigDecimal(num);
-      if (this.decimals < b.decimals) {
-        this.decimals = b.decimals;
-        this.intNumberAll = BigInt(this.intNumberAll + "0".repeat(b.decimals));
-      } else if (b.decimals < this.decimals) {
-        b.decimals = this.decimals;
-        b.intNumberAll = BigInt(b.intNumberAll + "0".repeat(this.decimals));
-      }
-      return b.intNumberAll;
     }
   }
 
