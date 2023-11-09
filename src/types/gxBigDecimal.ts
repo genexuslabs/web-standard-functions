@@ -21,14 +21,18 @@ export class GxBigDecimal {
   }
 
   toString() {
-    const result = this.intNumberAll
-      .toString()
-      .padStart(this.decimals + 1, "0");
-    return (
-      result.slice(0, -this.decimals) +
-      "." +
-      result.slice(-this.decimals).replace(/\.?0+$/, "")
-    );
+    if (this.decimals === 0) {
+      return this.intNumberAll.toString();
+    } else {
+      const result = this.intNumberAll
+        .toString()
+        .padStart(this.decimals + 1, "0");
+      return (
+        result.slice(0, -this.decimals) +
+        "." +
+        result.slice(-this.decimals).replace(/\.?0+$/, "")
+      );
+    }
   }
 
   static fromBigInt(bigInt, decimals) {
