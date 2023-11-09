@@ -20,12 +20,15 @@ export class GxBigDecimal {
       ) + BigInt(GxBigDecimal.round && decimals[this.decimals] >= "5");
   }
 
-  // Cuando hace el toString ahi es cuando lo convierte a "decimal" le agrega el punto decimal
   toString() {
     const result = this.intNumberAll
       .toString()
       .padStart(this.decimals + 1, "0");
-    return result.slice(0, -this.decimals) + "." + result.slice(-this.decimals);
+    return (
+      result.slice(0, -this.decimals) +
+      "." +
+      result.slice(-this.decimals).replace(/\.?0+$/, "")
+    );
   }
 
   static fromBigInt(bigInt, decimals) {
@@ -98,35 +101,44 @@ export class GxBigDecimal {
   }
 
   static divide(num1, num2) {
-    let intNumber = "";
-    let decimalNumber = "";
+    let a;
+    let b;
     let d = 0;
-    let r;
 
-    intNumber = (num1 / num2)
-      .toString()
-      .split(".")
-      .concat("")[0];
-    decimalNumber = (num1 / num2)
-      .toString()
-      .split(".")
-      .concat("")[1];
-    d = (num1 / num2)
-      .toString()
-      .split(".")
-      .concat("")[1].length;
-
-    if (intNumber.charAt(0) === "0") {
-      if (decimalNumber.charAt(0) === "0") {
-        decimalNumber = decimalNumber.slice(1);
-        while (decimalNumber.charAt(0) === "0") {
-          decimalNumber = decimalNumber.slice(1);
-        }
-      }
-      r = decimalNumber;
+    if (!(num1 instanceof GxBigDecimal)) {
+      a = new GxBigDecimal(num1);
     } else {
-      r = intNumber + decimalNumber;
+      a = num1;
     }
+    if (!(num2 instanceof GxBigDecimal)) {
+      b = new GxBigDecimal(num2);
+    } else {
+      b = num2;
+    }
+
+    let rep;
+    if (a.decimals === 0) {
+      if (b.intNumberAll.toString().length > 18) {
+        rep = b.intNumberAll.toString().length * 2 + 1;
+        d = rep - b.decimals;
+      } else {
+        rep = 18;
+        d = rep - b.decimals;
+      }
+    } else {
+      if (b.intNumberAll.toString().length > 18) {
+        rep = b.intNumberAll.toString().length * 2 + 1;
+        d = rep + a.decimals - b.decimals;
+      } else {
+        rep = 18;
+        d = rep + a.decimals - b.decimals;
+      }
+    }
+
+    let d1 = a.intNumberAll * BigInt("1" + "0".repeat(rep));
+    let d2 = b.intNumberAll;
+
+    let r = d1 / d2;
 
     return GxBigDecimal.fromBigInt(r, d);
   }
