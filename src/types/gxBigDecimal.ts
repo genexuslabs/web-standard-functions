@@ -12,21 +12,40 @@ export class GxBigDecimal {
       .toString()
       .split(".")
       .concat("");
-    this.decimals = decimals.length;
-    GxBigDecimal.d = BigInt("1" + "0".repeat(this.decimals));
+    if (decimals === "") {
+      this.decimals = 0;
+    } else {
+      this.decimals = decimals.length;
+    }
     this.intNumberAll =
       BigInt(
         ints + decimals.padEnd(this.decimals, "0").slice(0, this.decimals)
       ) + BigInt(GxBigDecimal.round && decimals[this.decimals] >= "5");
+    GxBigDecimal.d = BigInt("1" + "0".repeat(this.decimals));
   }
 
   toString() {
     if (this.decimals === 0) {
       return this.intNumberAll.toString();
+    } else if (
+      this.intNumberAll
+        .toString()
+        .slice(-this.decimals)
+        .replace(/0/g, "") === ""
+    ) {
+      return this.intNumberAll
+        .toString()
+        .padStart(this.decimals + 1, "0")
+        .slice(0, -this.decimals);
     } else {
-      const result = this.intNumberAll
+      let result = this.intNumberAll
         .toString()
         .padStart(this.decimals + 1, "0");
+
+      if (result.toString().includes("-")) {
+        result = "-" + result.toString().replace("-", "");
+      }
+
       return (
         result.slice(0, -this.decimals) +
         "." +
@@ -104,10 +123,14 @@ export class GxBigDecimal {
     return GxBigDecimal.fromBigInt(a.intNumberAll * b.intNumberAll, d);
   }
 
-  static divide(num1, num2) {
+  static divide(num1, num2, decimal?) {
     let a;
     let b;
     let d = 0;
+
+    if (!decimal) {
+      decimal = 18;
+    }
 
     if (!(num1 instanceof GxBigDecimal)) {
       a = new GxBigDecimal(num1);
@@ -118,6 +141,9 @@ export class GxBigDecimal {
       b = new GxBigDecimal(num2);
     } else {
       b = num2;
+    }
+    if (a.decimals === 0 && b.decimals === 0) {
+      decimal = 0;
     }
 
     let rep;
@@ -134,7 +160,7 @@ export class GxBigDecimal {
         rep = b.intNumberAll.toString().length * 2 + 1;
         d = rep + a.decimals - b.decimals;
       } else {
-        rep = 18;
+        rep = 18 * 2 + 1;
         d = rep + a.decimals - b.decimals;
       }
     }
@@ -143,8 +169,12 @@ export class GxBigDecimal {
     let d2 = b.intNumberAll;
 
     let r = d1 / d2;
-
-    return GxBigDecimal.fromBigInt(r, d);
+    if (decimal !== 0) {
+      r = BigInt(r.toString().slice(0, -d + decimal));
+    } else {
+      decimal = d;
+    }
+    return GxBigDecimal.fromBigInt(r, decimal);
   }
 
   getintNumberAll(bigDecimal: GxBigDecimal) {
@@ -169,16 +199,51 @@ export class GxBigDecimal {
   }
 
   static convertToDecimal(value) {
+    if (!(value instanceof GxBigDecimal)) {
+      value = new GxBigDecimal(value);
+    }
     let str = value.toString().substring(0, 15);
     return Number(str);
   }
 
   static convertToInt(value) {
+    if (!(value instanceof GxBigDecimal)) {
+      value = new GxBigDecimal(value);
+    }
     let str = value.toString().split(".")[0];
     return Number(str);
   }
 
   static convertToBigDecimal(value) {
     return new GxBigDecimal(value);
+  }
+
+  static compare(num1, num2) {
+    let a;
+    let b;
+
+    if (!(num1 instanceof GxBigDecimal)) {
+      a = new GxBigDecimal(num1);
+    } else {
+      a = num1;
+    }
+    if (!(num2 instanceof GxBigDecimal)) {
+      b = new GxBigDecimal(num2);
+    } else {
+      b = num2;
+    }
+
+    if (
+      a.toString().replace(/\.(?=[^.0]*$)/, "") ===
+      b.toString().replace(/\.(?=[^.0]*$)/, "")
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  static negate(num) {
+    return -num;
   }
 }
