@@ -4,6 +4,14 @@
  * @return number
  */
 
-export const setEmpty = (target: number): number => {
-  return 0;
+import { GxBigDecimal } from "../types/gxBigDecimal";
+
+export const setEmpty = (
+  target: number | GxBigDecimal
+): number | GxBigDecimal => {
+  if (target instanceof GxBigDecimal) {
+    return GxBigDecimal.setEmpty();
+  } else {
+    return 0;
+  }
 };

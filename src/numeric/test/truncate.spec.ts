@@ -1,3 +1,4 @@
+import { GxBigDecimal } from "../../types/gxBigDecimal";
 import { truncate } from "../truncate";
 
 const testCases: Array<[number, number, number]> = [
@@ -12,6 +13,14 @@ describe("Numeric::truncate", () => {
   for (const t of testCases) {
     it(`truncate(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
       expect(truncate(t[0], t[1])).toBe(t[2]);
+    });
+  }
+});
+
+describe("Numeric::truncateBD", () => {
+  for (const t of testCases) {
+    it(`truncate(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
+      expect(truncate(new GxBigDecimal(t[0]), t[1])).toBe(t[2]);
     });
   }
 });

@@ -1,3 +1,4 @@
+import { GxBigDecimal } from "../../types/gxBigDecimal";
 import { isEmpty } from "../isEmpty";
 
 const testCases: Array<[number, boolean]> = [
@@ -11,6 +12,14 @@ describe("Numeric::isEmtpy", () => {
   for (const t of testCases) {
     it(`isEmpty(${t[0]}) should be equal to ${t[1]}`, () => {
       expect(isEmpty(t[0])).toBe(t[1]);
+    });
+  }
+});
+
+describe("Numeric::isEmtpy", () => {
+  for (const t of testCases) {
+    it(`isEmpty(${t[0]}) should be equal to ${t[1]}`, () => {
+      expect(GxBigDecimal.isEmpty(new GxBigDecimal(t[0]))).toBe(t[1]);
     });
   }
 });

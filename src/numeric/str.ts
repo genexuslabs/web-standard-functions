@@ -1,4 +1,5 @@
 import { padLeft } from "../text/padLeft";
+import { GxBigDecimal } from "../types/gxBigDecimal";
 
 /**
  * Converts the given number to string
@@ -8,18 +9,22 @@ import { padLeft } from "../text/padLeft";
  * @returns string
  */
 export const str = (
-  value: number,
+  value: number | GxBigDecimal,
   length: number = 10,
   decimals: number = 0
 ): string => {
-  let result = value.toFixed(decimals);
-  if (result.length > length) {
-    if (decimals === 0) {
-      return padLeft("", length, "*");
-    } else {
-      return str(value, length, 0);
-    }
+  if (value instanceof GxBigDecimal) {
+    return GxBigDecimal.str(value, length, decimals);
   } else {
-    return padLeft(result, length, " ");
+    let result = value.toFixed(decimals);
+    if (result.length > length) {
+      if (decimals === 0) {
+        return padLeft("", length, "*");
+      } else {
+        return str(value, length, 0);
+      }
+    } else {
+      return padLeft(result, length, " ");
+    }
   }
 };

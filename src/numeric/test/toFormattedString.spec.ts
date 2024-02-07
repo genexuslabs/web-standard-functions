@@ -1,3 +1,4 @@
+import { GxBigDecimal } from "../../types/gxBigDecimal";
 import { toFormattedString } from "../toFormattedString";
 
 const testCases: Array<[number, string, string]> = [
@@ -55,6 +56,14 @@ describe("Numeric::toFormattedString", () => {
   for (const t of testCases) {
     it(`toFormattedString(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
       expect(toFormattedString(t[0], t[1])).toBe(t[2]);
+    });
+  }
+});
+
+describe("Numeric::toFormattedString", () => {
+  for (const t of testCases) {
+    it(`toFormattedString(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
+      expect(toFormattedString(new GxBigDecimal(t[0]), t[1])).toBe(t[2]);
     });
   }
 });

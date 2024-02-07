@@ -1,3 +1,4 @@
+import { GxBigDecimal } from "../types/gxBigDecimal";
 import { integer } from "./integer";
 
 /**
@@ -6,13 +7,22 @@ import { integer } from "./integer";
  * @param {number} digits
  * @returns number
  */
-export const roundToEven = (value: number, digits: number): number => {
-  const multiplier = Math.pow(10, digits || 0);
-  const valToRound = value * multiplier;
-  const decimalPart = valToRound - integer(valToRound);
-  let rounded = Math.round(valToRound);
-  if (decimalPart === 0.5 && rounded % 2 !== 0) {
-    rounded = rounded - 1;
+export const roundToEven = (
+  value: number | GxBigDecimal,
+  digits: number
+): number | GxBigDecimal => {
+  let result;
+  if (value instanceof GxBigDecimal) {
+    result = GxBigDecimal.roundToEven(value, digits);
+  } else {
+    const multiplier = Math.pow(10, digits || 0);
+    const valToRound = value * multiplier;
+    const decimalPart = valToRound - Math.trunc(valToRound);
+    let rounded = Math.round(valToRound);
+    if (decimalPart === 0.5 && rounded % 2 !== 0) {
+      rounded = rounded - 1;
+    }
+    result = rounded / multiplier;
   }
-  return rounded / multiplier;
+  return result;
 };
