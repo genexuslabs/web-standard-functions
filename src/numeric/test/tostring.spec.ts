@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../../types/gxBigDecimal";
+import { GxBigNumber } from "../../types/gxBigNumber";
 import { toString } from "../toString";
 
 const testCases: Array<[number, number, number, string]> = [
@@ -27,7 +27,7 @@ describe("Numeric::toString", () => {
 describe("Numeric::toString", () => {
   for (const t of testCases) {
     it(`toString(${t[0]}) should be equal to ${t[3]}`, () => {
-      expect(GxBigDecimal.toStringGx(new GxBigDecimal(t[0]), t[1], t[2])).toBe(
+      expect(GxBigNumber.toStringGx(new GxBigNumber(t[0]), t[1], t[2])).toBe(
         t[3]
       );
     });

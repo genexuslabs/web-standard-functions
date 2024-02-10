@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../types/gxBigDecimal";
+import { GxBigNumber } from "../types/gxBigNumber";
 import { integer } from "./integer";
 
 /**
@@ -8,12 +8,12 @@ import { integer } from "./integer";
  * @returns number
  */
 export const roundToEven = (
-  value: number | GxBigDecimal,
+  value: number | GxBigNumber,
   digits: number
-): number | GxBigDecimal => {
+): number | GxBigNumber => {
   let result;
-  if (value instanceof GxBigDecimal) {
-    result = GxBigDecimal.roundToEven(value, digits);
+  if (value instanceof GxBigNumber) {
+    result = GxBigNumber.roundToEven(value, digits);
   } else {
     const multiplier = Math.pow(10, digits || 0);
     const valToRound = value * multiplier;

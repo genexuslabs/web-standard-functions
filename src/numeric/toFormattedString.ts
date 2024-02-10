@@ -4,16 +4,16 @@
  * @return string
  */
 
-import { GxBigDecimal } from "../types/gxBigDecimal";
+import { GxBigNumber } from "../types/gxBigNumber";
 
 export const toFormattedString = (
-  value: number | GxBigDecimal,
+  value: number | GxBigNumber,
   picture: string
 ): string => {
   let result: string = "";
 
-  if (value instanceof GxBigDecimal) {
-    result = GxBigDecimal.toFormattedString(value, picture);
+  if (value instanceof GxBigNumber) {
+    result = GxBigNumber.toFormattedString(value, picture);
   } else {
     // *****Decimals******* //
     let decimalValue = value.toString().split(".")[1];

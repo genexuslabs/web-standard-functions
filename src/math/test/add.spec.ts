@@ -1,6 +1,6 @@
 import { add } from "../add";
 import { testCases } from "./add-subtract-cases";
-import { GxBigDecimal } from "../../types/gxBigDecimal";
+import { GxBigNumber } from "../../types/gxBigNumber";
 
 describe("add operation", () => {
   for (const t of testCases) {
@@ -13,7 +13,7 @@ describe("add operation", () => {
 describe("add operation", () => {
   for (const t of testCases) {
     it(`should add ${t[0]} + ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigDecimal.add(t[0], t[1]).toString()).toBe(t[2].toString());
+      expect(GxBigNumber.add(t[0], t[1]).toString()).toBe(t[2].toString());
     });
   }
 });

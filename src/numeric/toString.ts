@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../types/gxBigDecimal";
+import { GxBigNumber } from "../types/gxBigNumber";
 
 /**
  * Converts the give number to string
@@ -8,12 +8,12 @@ import { GxBigDecimal } from "../types/gxBigDecimal";
  * @returns string
  */
 export const toString = (
-  value: number | GxBigDecimal,
+  value: number | GxBigNumber,
   characters: number,
   decimals: number
 ): string => {
-  if (value instanceof GxBigDecimal) {
-    return GxBigDecimal.toStringGx(value, characters, decimals);
+  if (value instanceof GxBigNumber) {
+    return GxBigNumber.toStringGx(value, characters, decimals);
   } else {
     return value.toFixed(decimals).padStart(characters);
   }

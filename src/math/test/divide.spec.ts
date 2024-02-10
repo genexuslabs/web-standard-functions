@@ -1,6 +1,6 @@
 import { divide } from "../divide";
 import { testCases } from "./multiply-divide-cases";
-import { GxBigDecimal } from "../../types/gxBigDecimal";
+import { GxBigNumber } from "../../types/gxBigNumber";
 
 describe("divide operation", () => {
   for (const t of testCases) {
@@ -13,7 +13,7 @@ describe("divide operation", () => {
 describe("divide operation", () => {
   for (const t of testCases) {
     it(`should divide ${t[2]} * ${t[1]} to equal ${t[0]}`, () => {
-      expect(GxBigDecimal.divide(t[2], t[1]).toString()).toBe(t[0].toString());
+      expect(GxBigNumber.divide(t[2], t[1]).toString()).toBe(t[0].toString());
     });
   }
 });

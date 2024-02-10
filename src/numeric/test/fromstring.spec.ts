@@ -17,3 +17,17 @@ describe("Numeric::fromString", () => {
     });
   }
 });
+
+const testCases2: Array<[string, string]> = [
+  ["111111111111111111", "111111111111111111"],
+  ["123456789123456789", "123456789123456789"],
+  ["123456789123456789123", "123456789123456789123"]
+];
+
+describe("Numeric::fromString", () => {
+  for (const t of testCases2) {
+    it(`fromString(${t[0]}) should be equal to ${t[1]}`, () => {
+      expect(fromString(0, t[0]).toString()).toBe(t[1]);
+    });
+  }
+});

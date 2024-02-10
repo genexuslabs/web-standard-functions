@@ -4,13 +4,13 @@
  * @return number
  */
 
-import { GxBigDecimal } from "../types/gxBigDecimal";
+import { GxBigNumber } from "../types/gxBigNumber";
 
 export const setEmpty = (
-  target: number | GxBigDecimal
-): number | GxBigDecimal => {
-  if (target instanceof GxBigDecimal) {
-    return GxBigDecimal.setEmpty();
+  target: number | GxBigNumber
+): number | GxBigNumber => {
+  if (target instanceof GxBigNumber) {
+    return GxBigNumber.setEmpty();
   } else {
     return 0;
   }

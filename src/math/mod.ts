@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../types/gxBigDecimal";
+import { GxBigNumber } from "../types/gxBigNumber";
 
 /**
  * @param {number} dividend
@@ -6,13 +6,13 @@ import { GxBigDecimal } from "../types/gxBigDecimal";
  * @returns number
  */
 export const mod = (
-  dividend: number | GxBigDecimal,
-  divisor: number | GxBigDecimal
+  dividend: number | GxBigNumber,
+  divisor: number | GxBigNumber
 ): number => {
-  if (dividend instanceof GxBigDecimal) {
+  if (dividend instanceof GxBigNumber) {
     dividend = Number(dividend.toString());
   }
-  if (divisor instanceof GxBigDecimal) {
+  if (divisor instanceof GxBigNumber) {
     divisor = Number(divisor.toString());
   }
 

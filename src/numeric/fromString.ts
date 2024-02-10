@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../types/gxBigDecimal";
+import { GxBigNumber } from "../types/gxBigNumber";
 
 /**
  * Converts the give string value to a numeric
@@ -6,11 +6,11 @@ import { GxBigDecimal } from "../types/gxBigDecimal";
  * @returns number
  */
 export const fromString = (
-  target: number | GxBigDecimal,
+  target: number | GxBigNumber,
   value: string
 ): any => {
-  if (value.length >= 16 && value.split(".")[1].length > 0) {
-    return new GxBigDecimal(value);
+  if (value.length >= 16) {
+    return new GxBigNumber(value);
   } else {
     return Number(Number.parseFloat(value));
   }

@@ -1,7 +1,7 @@
 import { mod } from "../../math/mod";
 import { random } from "../../math/random";
 import { fromString } from "../../numeric/fromString";
-import { GxBigDecimal } from "../gxBigDecimal";
+import { GxBigNumber } from "../gxBigNumber";
 
 export const testCasesDivide = [
   // GxBigDecimal / GxBigDecimal
@@ -107,7 +107,12 @@ export const testCasesDivide = [
   ["2.25", "1.1", "2.045454545454545454"],
   ["0.25", "0.1", "2.5"],
 
-  ["13", "0.1", "130"]
+  ["13", "0.1", "130"],
+
+  //BigInt
+  ["222222222222222222", "2", "111111111111111111"],
+  ["111111111111111111", "2", "55555555555555555.5"],
+  ["222222222222222222", "100000000000000000", "2.22222222222222222"]
 ];
 
 export const testCasesAdd = [
@@ -159,7 +164,11 @@ export const testCasesAdd = [
     "-123.123456789123456789",
     "-2463456687587",
     "-2463456687710.123456789123456789"
-  ]
+  ],
+
+  //BigInt
+  ["111111111111111111", "111111111111111111", "222222222222222222"],
+  ["111111111111111111", "111", "111111111111111222"]
 ];
 
 export const testCasesSubtract = [
@@ -266,7 +275,11 @@ export const testCasesSubtract = [
     "-123.123456789123456789",
     "-2463456687587",
     "2463456687463.876543210876543211"
-  ]
+  ],
+  //BigInt
+  ["111111111111111111", "111111111111111111", "0"],
+  ["222222222222222222", "111111111111111111", "111111111111111111"],
+  ["111111111111111111", "111", "111111111111111000"]
 ];
 
 export const testCasesMultiply = [
@@ -326,7 +339,20 @@ export const testCasesMultiply = [
     "-123.123456789123456789",
     "-2463456687587",
     "303309303025995.197630633067178143"
-  ]
+  ],
+  //BigInt
+  [
+    "111111111111111111",
+    "111111111111111111",
+    "12345679012345678987654320987654321"
+  ],
+  [
+    "222222222222222222",
+    "111111111111111111",
+    "24691358024691357975308641975308642"
+  ],
+  ["111111111111111111", "111", "12333333333333333321"],
+  ["111111111111111111", "2", "222222222222222222"]
 ];
 
 export const testConvertToDecimal = [
@@ -347,7 +373,7 @@ export const testCasesPow = [
 describe("divide operation", () => {
   for (const t of testCasesDivide) {
     it(`should divide ${t[0]} / ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigDecimal.divide(t[0], t[1]).toString()).toBe(t[2]);
+      expect(GxBigNumber.divide(t[0], t[1]).toString()).toBe(t[2]);
     });
   }
 });
@@ -355,7 +381,7 @@ describe("divide operation", () => {
 describe("add operation", () => {
   for (const t of testCasesAdd) {
     it(`should add ${t[0]} + ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigDecimal.add(t[0], t[1]).toString()).toBe(t[2]);
+      expect(GxBigNumber.add(t[0], t[1]).toString()).toBe(t[2]);
     });
   }
 });
@@ -363,7 +389,7 @@ describe("add operation", () => {
 describe("subtract operation", () => {
   for (const t of testCasesSubtract) {
     it(`should subtract ${t[0]} - ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigDecimal.subtract(t[0], t[1]).toString()).toBe(t[2]);
+      expect(GxBigNumber.subtract(t[0], t[1]).toString()).toBe(t[2]);
     });
   }
 });
@@ -371,7 +397,7 @@ describe("subtract operation", () => {
 describe("multiply operation", () => {
   for (const t of testCasesMultiply) {
     it(`should multiply ${t[0]} * ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigDecimal.multiply(t[0], t[1]).toString()).toBe(t[2]);
+      expect(GxBigNumber.multiply(t[0], t[1]).toString()).toBe(t[2]);
     });
   }
 });
@@ -379,7 +405,7 @@ describe("multiply operation", () => {
 describe("convertToDecimal operation", () => {
   for (const t of testConvertToDecimal) {
     it(`should convertToDecimal ${t[0]} to equal ${t[1]}`, () => {
-      expect(GxBigDecimal.convertToDecimal(t[0]).toString()).toBe(t[1]);
+      expect(GxBigNumber.convertToDecimal(t[0]).toString()).toBe(t[1]);
     });
   }
 });
@@ -387,7 +413,7 @@ describe("convertToDecimal operation", () => {
 describe("convertToInt operation", () => {
   for (const t of testConvertToInt) {
     it(`should convertToInt ${t[0]} to equal ${t[1]}`, () => {
-      expect(GxBigDecimal.convertToInt(t[0]).toString()).toBe(t[1]);
+      expect(GxBigNumber.convertToInt(t[0]).toString()).toBe(t[1]);
     });
   }
 });
@@ -395,7 +421,7 @@ describe("convertToInt operation", () => {
 describe("convertToBigDecimal operation", () => {
   for (const t of testConvertToBigDecimal) {
     it(`should convertToBigDecimal ${t[0]} to equal ${t[1]}`, () => {
-      expect(GxBigDecimal.convertToBigDecimal(t[0]).toString()).toBe(t[1]);
+      expect(GxBigNumber.convertToBigDecimal(t[0]).toString()).toBe(t[1]);
     });
   }
 });
@@ -409,13 +435,16 @@ export const testToString: Array<[string, number, number, string]> = [
   ["-123.123456789123456789", 25, 17, "   -123.12345678912345678"],
   ["-123.123456789123456789", 28, 20, "   -123.12345678912345678900"],
   ["-0.123456789123456789", 28, 20, "     -0.12345678912345678900"],
-  ["123.123456789123456789", 18, 17, "123.12345678912345678"]
+  ["123.123456789123456789", 18, 17, "123.12345678912345678"],
+  ["111111111111111111", 18, 2, "111111111111111111.00"],
+  ["11111111111111", 18, 0, "    11111111111111"],
+  ["1111111111111111", 18, 0, "  1111111111111111"]
 ];
 
 describe("toString function", () => {
   for (const t of testToString) {
     it(`should toString ${t[0]} to equal ${t[3]}`, () => {
-      expect(GxBigDecimal.toStringGx(new GxBigDecimal(t[0]), t[1], t[2])).toBe(
+      expect(GxBigNumber.toStringGx(new GxBigNumber(t[0]), t[1], t[2])).toBe(
         t[3]
       );
     });
@@ -431,14 +460,14 @@ export const testMod: Array<[string, string, number]> = [
 describe("mod function", () => {
   for (const t of testMod) {
     it(`should mod ${t[0]} to equal ${t[2]}`, () => {
-      expect(mod(new GxBigDecimal(t[0]), new GxBigDecimal(t[1]))).toBe(t[2]);
+      expect(mod(new GxBigNumber(t[0]), new GxBigNumber(t[1]))).toBe(t[2]);
     });
   }
 });
 
 describe("random function", () => {
   it("should return a random number", () => {
-    let number = new GxBigDecimal(random());
+    let number = new GxBigNumber(random());
     expect(number).not.toBeNull();
     expect(number).not.toBeUndefined();
   });
@@ -459,7 +488,7 @@ export const testInteger: Array<[string, number]> = [
 describe("Integer function", () => {
   for (const t of testInteger) {
     it(`should integer ${t[0]} to equal ${t[1]}`, () => {
-      expect(GxBigDecimal.integer(new GxBigDecimal(t[0]))).toBe(t[1]);
+      expect(GxBigNumber.integer(new GxBigNumber(t[0]))).toBe(t[1]);
     });
   }
 });
@@ -468,9 +497,10 @@ export const testFromString: Array<[string, string]> = [
   ["123.123456789123456789", "123.123456789123456789"],
   ["323.123456789123456789", "323.123456789123456789"],
   ["0.123456789123456789", "0.123456789123456789"],
-  ["-123.123456789123456789", "-123.123456789123456789"]
+  ["-123.123456789123456789", "-123.123456789123456789"],
+  ["111111111111111111", "111111111111111111"]
 ];
-
+//aca el fromString me da mal, pero pienso es el tema de que pierde presicion como habiamos comentado, revisar en la kb si pasa
 describe("FromString function", () => {
   for (const t of testFromString) {
     it(`should fromString ${t[0]} to equal ${t[1]}`, () => {
@@ -490,7 +520,7 @@ export const testIsEmpty: Array<[string, boolean]> = [
 describe("IsEmpty function", () => {
   for (const t of testIsEmpty) {
     it(`isEmpty(${t[0]}) should be equal to ${t[1]}`, () => {
-      expect(GxBigDecimal.isEmpty(new GxBigDecimal(t[0]))).toBe(t[1]);
+      expect(GxBigNumber.isEmpty(new GxBigNumber(t[0]))).toBe(t[1]);
     });
   }
 });
@@ -508,13 +538,14 @@ export const testRound: Array<[string, number, string]> = [
   ["127.123456789123456789", -2, "100"],
   ["177.123456789123456789", -2, "200"],
   ["-117.123456789123456789", -2, "-100"],
-  ["-177.123456789123456789", -2, "-200"]
+  ["-177.123456789123456789", -2, "-200"],
+  ["123456789123456788.9", 0, "123456789123456789"]
 ];
 
 describe("Round function", () => {
   for (const t of testRound) {
     it(`Round(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(GxBigDecimal.round(new GxBigDecimal(t[0]), t[1]).toString()).toBe(
+      expect(GxBigNumber.round(new GxBigNumber(t[0]), t[1]).toString()).toBe(
         t[2]
       );
     });
@@ -541,7 +572,7 @@ describe("RoundToEven function", () => {
   for (const t of testRoundToEven) {
     it(`RoundToEven(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
       expect(
-        GxBigDecimal.roundToEven(new GxBigDecimal(t[0]), t[1]).toString()
+        GxBigNumber.roundToEven(new GxBigNumber(t[0]), t[1]).toString()
       ).toBe(t[2]);
     });
   }
@@ -570,12 +601,12 @@ const testStr2: Array<[string, number, number, string]> = [
 describe("Str function", () => {
   for (const t of testStr1) {
     it(`str(${t[0]}) should be equal to ${t[1]}`, () => {
-      expect(GxBigDecimal.str(new GxBigDecimal(t[0])).toString()).toBe(t[1]);
+      expect(GxBigNumber.str(new GxBigNumber(t[0])).toString()).toBe(t[1]);
     });
   }
   for (const t of testStr2) {
     it(`str(${t[0]}) should be equal to ${t[3]}`, () => {
-      expect(GxBigDecimal.str(new GxBigDecimal(t[0]), t[1], t[2])).toBe(t[3]);
+      expect(GxBigNumber.str(new GxBigNumber(t[0]), t[1], t[2])).toBe(t[3]);
     });
   }
 });
@@ -635,7 +666,7 @@ const testToFormattedString: Array<[string, string, string]> = [
 describe("toFormattedString", () => {
   for (const t of testToFormattedString) {
     it(`toFormattedString(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(GxBigDecimal.toFormattedString(new GxBigDecimal(t[0]), t[1])).toBe(
+      expect(GxBigNumber.toFormattedString(new GxBigNumber(t[0]), t[1])).toBe(
         t[2]
       );
     });
@@ -657,13 +688,11 @@ const testTruncate: Array<[string, number, string]> = [
 describe("Truncate", () => {
   for (const t of testTruncate) {
     it(`truncate(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
-      console.log(
-        GxBigDecimal.truncate(new GxBigDecimal(t[0]), t[1]).toString()
-      );
+      console.log(GxBigNumber.truncate(new GxBigNumber(t[0]), t[1]).toString());
       console.log(t[2].toString());
-      expect(
-        GxBigDecimal.truncate(new GxBigDecimal(t[0]), t[1]).toString()
-      ).toBe(t[2].toString());
+      expect(GxBigNumber.truncate(new GxBigNumber(t[0]), t[1]).toString()).toBe(
+        t[2].toString()
+      );
     });
   }
 });

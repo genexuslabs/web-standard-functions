@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../../types/gxBigDecimal";
+import { GxBigNumber } from "../../types/gxBigNumber";
 import { setEmpty } from "../setEmpty";
 
 describe("setEmpty operation", () => {
@@ -9,6 +9,6 @@ describe("setEmpty operation", () => {
 
 describe("setEmpty operation", () => {
   it("should always return 0", () => {
-    expect(GxBigDecimal.setEmpty().toString()).toBe("0");
+    expect(GxBigNumber.setEmpty().toString()).toBe("0");
   });
 });

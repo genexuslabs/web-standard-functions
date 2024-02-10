@@ -1,8 +1,8 @@
-import { GxBigDecimal } from "../types/gxBigDecimal";
+import { GxBigNumber } from "../types/gxBigNumber";
 
-export const negate = (num: number | GxBigDecimal): number => {
-  if (num instanceof GxBigDecimal) {
-    return GxBigDecimal.negate(num);
+export const negate = (num: number | GxBigNumber): number => {
+  if (num instanceof GxBigNumber) {
+    return GxBigNumber.negate(num);
   } else {
     return -num;
   }

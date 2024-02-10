@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../types/gxBigDecimal";
+import { GxBigNumber } from "../types/gxBigNumber";
 /**
  * Rounds the given number to the specified number of decimal digits
  * @param {number} value
@@ -6,13 +6,13 @@ import { GxBigDecimal } from "../types/gxBigDecimal";
  * @returns number
  */
 export const round = (
-  value: number | GxBigDecimal,
+  value: number | GxBigNumber,
   digits: number
-): number | GxBigDecimal => {
-  let result: number | GxBigDecimal;
+): number | GxBigNumber => {
+  let result: number | GxBigNumber;
 
-  if (value instanceof GxBigDecimal) {
-    result = GxBigDecimal.round(value, digits);
+  if (value instanceof GxBigNumber) {
+    result = GxBigNumber.round(value, digits);
   } else {
     if (digits === 0) {
       result = Number(value.toFixed(0));

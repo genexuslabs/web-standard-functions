@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../../types/gxBigDecimal";
+import { GxBigNumber } from "../../types/gxBigNumber";
 import { negate } from "../negate";
 import { testCases } from "./negate-cases";
 
@@ -13,7 +13,7 @@ describe("negate operation", () => {
 describe("negate operation", () => {
   for (const t of testCases) {
     it(`should negate ${t[0]} to equal ${t[1]}`, () => {
-      expect(GxBigDecimal.negate(t[0]).toString()).toBe(t[1].toString());
+      expect(GxBigNumber.negate(t[0]).toString()).toBe(t[1].toString());
     });
   }
 });

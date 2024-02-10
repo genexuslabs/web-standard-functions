@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../../types/gxBigDecimal";
+import { GxBigNumber } from "../../types/gxBigNumber";
 import { round } from "../round";
 
 const testCases: Array<[number, number, number]> = [
@@ -22,7 +22,7 @@ describe("Numeric::round", () => {
 describe("Numeric::round", () => {
   for (const t of testCases) {
     it(`round(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(GxBigDecimal.round(new GxBigDecimal(t[0]), t[1]).toString()).toBe(
+      expect(GxBigNumber.round(new GxBigNumber(t[0]), t[1]).toString()).toBe(
         t[2].toString()
       );
     });

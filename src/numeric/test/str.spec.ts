@@ -1,4 +1,4 @@
-import { GxBigDecimal } from "../../types/gxBigDecimal";
+import { GxBigNumber } from "../../types/gxBigNumber";
 import { str } from "../str";
 
 const testCases1: Array<[number, string]> = [
@@ -22,7 +22,7 @@ describe("Core::str without optional parameters", () => {
 describe("Core::str without optional parameters", () => {
   for (const t of testCases1) {
     it(`str(${t[0]}) should be equal to ${t[1]}`, () => {
-      expect(GxBigDecimal.str(new GxBigDecimal(t[0]))).toBe(t[1]);
+      expect(GxBigNumber.str(new GxBigNumber(t[0]))).toBe(t[1]);
     });
   }
 });
@@ -47,7 +47,7 @@ describe("Core::str with length and decimals", () => {
 describe("Core::str with length and decimals", () => {
   for (const t of testCases2) {
     it(`str(${t[0]}, ${t[1]}, ${t[2]}) should be equal to ${t[3]}`, () => {
-      expect(GxBigDecimal.str(new GxBigDecimal(t[0]), t[1], t[2])).toBe(t[3]);
+      expect(GxBigNumber.str(new GxBigNumber(t[0]), t[1], t[2])).toBe(t[3]);
     });
   }
 });
