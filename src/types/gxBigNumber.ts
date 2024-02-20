@@ -7,7 +7,7 @@ export class GxBigNumber {
   intNumberAll;
   static d: bigint;
 
-  constructor(bigDecimal) {
+  constructor(bigDecimal: string | GxBigNumber | number = 0) {
     if (bigDecimal instanceof GxBigNumber) {
       return bigDecimal;
     }
