@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../../types/gxBigNumber";
+import { GxBigNumber } from "../../types/gxbignumber";
 import { integer } from "../integer";
 
 const testCases: Array<[number, number]> = [

@@ -1,7 +1,7 @@
 import { mod } from "../../math/mod";
 import { random } from "../../math/random";
 import { fromString } from "../../numeric/fromString";
-import { GxBigNumber } from "../gxBigNumber";
+import { GxBigNumber } from "../gxbignumber";
 
 export const testCasesDivide = [
   // GxBigDecimal / GxBigDecimal

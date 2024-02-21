@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../../types/gxBigNumber";
+import { GxBigNumber } from "../../types/gxbignumber";
 import { isEmpty } from "../isEmpty";
 
 const testCases: Array<[number, boolean]> = [

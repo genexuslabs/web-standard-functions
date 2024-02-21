@@ -1,6 +1,6 @@
 import { divide } from "../divide";
 import { testCases } from "./multiply-divide-cases";
-import { GxBigNumber } from "../../types/gxBigNumber";
+import { GxBigNumber } from "../../types/gxbignumber";
 
 describe("divide operation", () => {
   for (const t of testCases) {

@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../../types/gxBigNumber";
+import { GxBigNumber } from "../../types/gxbignumber";
 import { toString } from "../toString";
 
 const testCases: Array<[number, number, number, string]> = [

@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../../types/gxBigNumber";
+import { GxBigNumber } from "../../types/gxbignumber";
 import { multiply } from "../multiply";
 import { testCases } from "./multiply-divide-cases";
 

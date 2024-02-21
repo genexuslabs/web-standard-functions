@@ -1,6 +1,6 @@
 import { add } from "../add";
 import { testCases } from "./add-subtract-cases";
-import { GxBigNumber } from "../../types/gxBigNumber";
+import { GxBigNumber } from "../../types/gxbignumber";
 
 describe("add operation", () => {
   for (const t of testCases) {
