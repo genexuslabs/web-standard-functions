@@ -3,8 +3,6 @@ import { ISerializable } from "./type-serialization";
 import { ConfigurationState } from "../config/configurationState";
 
 export class GxDatetime extends Date implements ISerializable {
-  _gxSerializable = () => true;
-
   serialize() {
     let utc = ConfigurationState.getInstance().getConvertTimeFromUTC();
     return Std_TypeConversions.SerializeDatetimeToISOString(this, utc);

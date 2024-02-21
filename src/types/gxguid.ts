@@ -11,8 +11,6 @@ export class GxGuid implements ISerializable {
     this.value = this.normalizeValue(val);
   }
 
-  _gxSerializable = () => true;
-
   serialize() {
     return this.toString();
   }

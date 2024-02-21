@@ -3,11 +3,10 @@
 export interface ISerializable {
   serialize();
   deserialize(x: any);
-  _gxSerializable(): boolean;
 }
 
 export const isSerializable = (obj: any) => {
-  return typeof obj == "object" && "_gxSerializable" in obj;
+  return typeof obj == "object" && "serialize" in obj && "deserialize" in obj;
 };
 
 // Decorators to control serialization of SDTs

@@ -80,8 +80,6 @@ export class GxBigNumber {
     }
   }
 
-  _gxSerializable = () => true;
-
   serialize() {
     return this.toString();
   }
