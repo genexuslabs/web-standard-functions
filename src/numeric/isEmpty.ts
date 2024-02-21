@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../types/gxBigNumber";
+import { GxBigNumber } from "../types/gxbignumber";
 /**
  * Returns true if the received number represents the empty value (i.e., zero).
  * @param {number} target

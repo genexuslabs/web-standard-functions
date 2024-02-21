@@ -4,7 +4,7 @@
  * @return number
  */
 
-import { GxBigNumber } from "../types/gxBigNumber";
+import { GxBigNumber } from "../types/gxbignumber";
 
 export const setEmpty = (
   target: number | GxBigNumber

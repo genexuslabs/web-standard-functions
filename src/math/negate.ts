@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../types/gxBigNumber";
+import { GxBigNumber } from "../types/gxbignumber";
 
 export const negate = (num: number | GxBigNumber): number => {
   if (num instanceof GxBigNumber) {

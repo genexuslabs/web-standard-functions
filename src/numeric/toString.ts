@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../types/gxBigNumber";
+import { GxBigNumber } from "../types/gxbignumber";
 
 /**
  * Converts the give number to string

@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../types/gxBigNumber";
+import { GxBigNumber } from "../types/gxbignumber";
 
 /**
  * Returns an integer value representing the integer part of the received parameter.

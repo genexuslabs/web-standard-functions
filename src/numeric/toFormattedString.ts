@@ -4,7 +4,7 @@
  * @return string
  */
 
-import { GxBigNumber } from "../types/gxBigNumber";
+import { GxBigNumber } from "../types/gxbignumber";
 
 export const toFormattedString = (
   value: number | GxBigNumber,

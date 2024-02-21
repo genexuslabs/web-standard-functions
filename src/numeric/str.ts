@@ -1,5 +1,5 @@
 import { padLeft } from "../text/padLeft";
-import { GxBigNumber } from "../types/gxBigNumber";
+import { GxBigNumber } from "../types/gxbignumber";
 
 /**
  * Converts the given number to string

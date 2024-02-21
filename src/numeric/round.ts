@@ -1,4 +1,4 @@
-import { GxBigNumber } from "../types/gxBigNumber";
+import { GxBigNumber } from "../types/gxbignumber";
 /**
  * Rounds the given number to the specified number of decimal digits
  * @param {number} value
