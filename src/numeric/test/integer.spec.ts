@@ -23,7 +23,7 @@ describe("Numeric::integer", () => {
 describe("Numeric::integer", () => {
   for (const t of testCases) {
     it(`integer(${t[0]}) should be equal to ${t[1]}`, () => {
-      expect(GxBigNumber.integer(new GxBigNumber(t[0])).toString()).toBe(
+      expect(GxBigNumber.convertToInt(new GxBigNumber(t[0])).toString()).toBe(
         t[1].toString()
       );
     });

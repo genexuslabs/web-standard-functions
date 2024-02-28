@@ -6,9 +6,7 @@
 
 import { GxBigNumber } from "../types/gxbignumber";
 
-export const setEmpty = (
-  target: number | GxBigNumber
-): number | GxBigNumber => {
+export const setEmpty = (target: number | GxBigNumber): any => {
   if (target instanceof GxBigNumber) {
     return GxBigNumber.setEmpty();
   } else {

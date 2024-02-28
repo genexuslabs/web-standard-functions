@@ -1,4 +1,7 @@
+import { divide } from "../math/divide";
 import { mod } from "../math/mod";
+import { multiply } from "../math/multiply";
+import { subtract } from "../math/subtract";
 import { padLeft } from "../text/padLeft";
 
 export class GxBigNumber {
@@ -150,170 +153,6 @@ export class GxBigNumber {
     bd.intNumberAll = bigInt;
     bd.decimals = decimals;
     return bd;
-  }
-
-  static add(num1, num2) {
-    let a;
-    let b;
-    if (!(num1 instanceof GxBigNumber)) {
-      a = new GxBigNumber(num1);
-    } else {
-      a = num1;
-    }
-    if (!(num2 instanceof GxBigNumber)) {
-      b = new GxBigNumber(num2);
-    } else {
-      b = num2;
-    }
-
-    return GxBigNumber.fromBigInt(
-      b.normalizeDecimals(a) + a.normalizeDecimals(b),
-      a.decimals
-    );
-  }
-
-  static subtract(num1, num2) {
-    let a;
-    let b;
-    if (!(num1 instanceof GxBigNumber)) {
-      a = new GxBigNumber(num1);
-    } else {
-      a = num1;
-    }
-    if (!(num2 instanceof GxBigNumber)) {
-      b = new GxBigNumber(num2);
-    } else {
-      b = num2;
-    }
-
-    return GxBigNumber.fromBigInt(
-      b.normalizeDecimals(a) - a.normalizeDecimals(b),
-      a.decimals
-    );
-  }
-
-  static multiply(num1, num2) {
-    let a;
-    let b;
-    let d = 0;
-    if (!(num1 instanceof GxBigNumber)) {
-      a = new GxBigNumber(num1);
-      d = d + a.decimals;
-    } else {
-      a = num1;
-      d = d + num1.decimals;
-    }
-    if (!(num2 instanceof GxBigNumber)) {
-      b = new GxBigNumber(num2);
-      d = d + b.decimals;
-    } else {
-      b = num2;
-      d = d + num2.decimals;
-    }
-
-    return GxBigNumber.fromBigInt(a.intNumberAll * b.intNumberAll, d);
-  }
-
-  static divide(num1, num2, decimal?) {
-    let a;
-    let b;
-    let d = 0;
-
-    if (!decimal) {
-      decimal = 18;
-    }
-
-    if (!(num1 instanceof GxBigNumber)) {
-      a = new GxBigNumber(num1);
-    } else {
-      a = num1;
-    }
-    if (!(num2 instanceof GxBigNumber)) {
-      b = new GxBigNumber(num2);
-    } else {
-      b = num2;
-    }
-
-    let rep;
-    if (a.decimals === 0) {
-      if (b.intNumberAll.toString().length > 18) {
-        rep = b.intNumberAll.toString().length * 2 + 1;
-        d = rep - b.decimals;
-      } else {
-        rep = 18 * 2 + 1;
-        d = rep - b.decimals;
-      }
-    } else {
-      if (b.intNumberAll.toString().length > 18) {
-        rep = b.intNumberAll.toString().length * 2 + 1;
-        d = rep + a.decimals - b.decimals;
-      } else {
-        rep = 18 * 2 + 1;
-        d = rep + a.decimals - b.decimals;
-      }
-    }
-
-    let d1 = a.intNumberAll * BigInt("1" + "0".repeat(rep));
-    let d2 = b.intNumberAll;
-
-    let r = d1 / d2;
-    if (decimal !== 0) {
-      r = BigInt(r.toString().slice(0, -d + decimal));
-    } else {
-      decimal = d;
-    }
-    return GxBigNumber.fromBigInt(r, decimal);
-  }
-
-  static pow(operand1, operand2) {
-    let num1 = Number(operand1.toString());
-    let num2 = Number(operand2.toString());
-    return new GxBigNumber(num1 ** num2);
-  }
-
-  static integer(value: GxBigNumber): number {
-    let int = value.toString().split(".")[0];
-    let res;
-
-    res = Number(int);
-    return res;
-  }
-
-  stringExponent() {
-    let b;
-    let e;
-    let d = 0;
-    let aux;
-    let digits;
-    let dec;
-
-    if (Number.isNaN(this.intNumberAll)) {
-      return "";
-    }
-
-    if (this.exponent > 0) {
-      dec = this.intNumberAll
-        .toString()
-        .slice(-Math.abs(this.decimals))
-        .replace(/\.?0+$/, "");
-      digits =
-        this.intNumberAll.toString().slice(0, -Math.abs(this.decimals)) +
-        "." +
-        dec;
-
-      aux = digits + "e+" + this.exponent.toString();
-    } else if (this.exponent < 0) {
-      dec = this.intNumberAll.toString().slice(-Math.abs(this.decimals));
-      digits =
-        this.intNumberAll.toString().slice(0, -Math.abs(this.decimals)) +
-        "." +
-        dec;
-
-      aux = digits + "e" + this.exponent.toString();
-    } else if (this.exponent === 0) {
-      aux = this.toString();
-    }
-    return aux;
   }
 
   static toStringGx(
@@ -578,11 +417,11 @@ export class GxBigNumber {
   static roundToEven = (value: GxBigNumber, digits: number): GxBigNumber => {
     const multiplier = Math.pow(10, digits || 0);
 
-    const valToRound = GxBigNumber.multiply(value, multiplier);
+    const valToRound = multiply(value, multiplier);
 
     let int = new GxBigNumber(valToRound.toString().split(".")[0]);
 
-    const decimalPart = GxBigNumber.subtract(valToRound, int);
+    const decimalPart = subtract(valToRound, int);
 
     let rounded = GxBigNumber.round(valToRound, 0);
 
@@ -590,10 +429,10 @@ export class GxBigNumber {
       GxBigNumber.compare(decimalPart, new GxBigNumber(0.5)) &&
       mod(rounded, 2) !== 0
     ) {
-      rounded = GxBigNumber.subtract(rounded, 1);
+      rounded = subtract(rounded, 1);
     }
 
-    return GxBigNumber.divide(rounded, multiplier);
+    return divide(rounded, multiplier);
   };
 
   static abs = (value: GxBigNumber): GxBigNumber => {

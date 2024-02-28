@@ -1,8 +1,23 @@
-import { defineBinaryOperation } from "./operation";
+import { GxBigNumber } from "../types/gxbignumber";
 
-/**
- * Multiply two operands
- * @param operand1 First operand
- * @param operand2 Second operand
- */
-export const multiply = defineBinaryOperation("multipliedBy");
+export const multiply = (num1, num2): GxBigNumber => {
+  let a;
+  let b;
+  let d = 0;
+  if (!(num1 instanceof GxBigNumber)) {
+    a = new GxBigNumber(num1);
+    d = d + a.decimals;
+  } else {
+    a = num1;
+    d = d + num1.decimals;
+  }
+  if (!(num2 instanceof GxBigNumber)) {
+    b = new GxBigNumber(num2);
+    d = d + b.decimals;
+  } else {
+    b = num2;
+    d = d + num2.decimals;
+  }
+
+  return GxBigNumber.fromBigInt(a.intNumberAll * b.intNumberAll, d);
+};

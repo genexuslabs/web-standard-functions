@@ -1,8 +1,7 @@
-import { defineBinaryOperation } from "./operation";
+import { GxBigNumber } from "../types/gxbignumber";
 
-/**
- * Returns `operand1` raised to the power `operand2`
- * @param operand1 First operand
- * @param operand2 Second operand
- */
-export const pow = defineBinaryOperation("pow");
+export const pow = (operand1, operand2): GxBigNumber => {
+  let num1 = Number(operand1.toString());
+  let num2 = Number(operand2.toString());
+  return new GxBigNumber(num1 ** num2);
+};

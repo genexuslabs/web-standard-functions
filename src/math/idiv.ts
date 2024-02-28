@@ -1,8 +1,6 @@
-import { defineBinaryOperation } from "./operation";
+import { GxBigNumber } from "../types/gxbignumber";
+import { divide } from "./divide";
 
-/**
- * Return the integer part of dividing `operand1` by `operand2` operation
- * @param operand1 First operand
- * @param operand2 Second operand
- */
-export const idiv = defineBinaryOperation("idiv");
+export const idiv = (num1, num2) => {
+  return GxBigNumber.convertToInt(divide(num1, num2));
+};

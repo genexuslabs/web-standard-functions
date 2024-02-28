@@ -7,7 +7,7 @@ import { GxBigNumber } from "../types/gxbignumber";
  */
 export const integer = (target: number | GxBigNumber): number => {
   if (target instanceof GxBigNumber) {
-    return GxBigNumber.integer(target);
+    return GxBigNumber.convertToInt(target);
   } else {
     return Number(Math.trunc(target));
   }

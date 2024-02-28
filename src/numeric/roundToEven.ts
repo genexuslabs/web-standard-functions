@@ -1,5 +1,4 @@
 import { GxBigNumber } from "../types/gxbignumber";
-import { integer } from "./integer";
 
 /**
  * Rounds to even the given number to the specified number of decimal digits
@@ -10,7 +9,7 @@ import { integer } from "./integer";
 export const roundToEven = (
   value: number | GxBigNumber,
   digits: number
-): number | GxBigNumber => {
+): any => {
   let result;
   if (value instanceof GxBigNumber) {
     result = GxBigNumber.roundToEven(value, digits);

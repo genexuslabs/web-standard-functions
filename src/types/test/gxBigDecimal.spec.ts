@@ -1,5 +1,9 @@
+import { add } from "../../math/add";
+import { divide } from "../../math/divide";
 import { mod } from "../../math/mod";
+import { multiply } from "../../math/multiply";
 import { random } from "../../math/random";
+import { subtract } from "../../math/subtract";
 import { fromString } from "../../numeric/fromString";
 import { GxBigNumber } from "../gxbignumber";
 
@@ -373,7 +377,7 @@ export const testCasesPow = [
 describe("divide operation", () => {
   for (const t of testCasesDivide) {
     it(`should divide ${t[0]} / ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigNumber.divide(t[0], t[1]).toString()).toBe(t[2]);
+      expect(divide(t[0], t[1]).toString()).toBe(t[2]);
     });
   }
 });
@@ -381,7 +385,7 @@ describe("divide operation", () => {
 describe("add operation", () => {
   for (const t of testCasesAdd) {
     it(`should add ${t[0]} + ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigNumber.add(t[0], t[1]).toString()).toBe(t[2]);
+      expect(add(t[0], t[1]).toString()).toBe(t[2]);
     });
   }
 });
@@ -389,7 +393,7 @@ describe("add operation", () => {
 describe("subtract operation", () => {
   for (const t of testCasesSubtract) {
     it(`should subtract ${t[0]} - ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigNumber.subtract(t[0], t[1]).toString()).toBe(t[2]);
+      expect(subtract(t[0], t[1]).toString()).toBe(t[2]);
     });
   }
 });
@@ -397,7 +401,7 @@ describe("subtract operation", () => {
 describe("multiply operation", () => {
   for (const t of testCasesMultiply) {
     it(`should multiply ${t[0]} * ${t[1]} to equal ${t[2]}`, () => {
-      expect(GxBigNumber.multiply(t[0], t[1]).toString()).toBe(t[2]);
+      expect(multiply(t[0], t[1]).toString()).toBe(t[2]);
     });
   }
 });
@@ -488,7 +492,7 @@ export const testInteger: Array<[string, number]> = [
 describe("Integer function", () => {
   for (const t of testInteger) {
     it(`should integer ${t[0]} to equal ${t[1]}`, () => {
-      expect(GxBigNumber.integer(new GxBigNumber(t[0]))).toBe(t[1]);
+      expect(GxBigNumber.convertToInt(new GxBigNumber(t[0]))).toBe(t[1]);
     });
   }
 });

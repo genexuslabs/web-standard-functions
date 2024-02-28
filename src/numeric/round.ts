@@ -5,10 +5,7 @@ import { GxBigNumber } from "../types/gxbignumber";
  * @param {number} digits
  * @returns number
  */
-export const round = (
-  value: number | GxBigNumber,
-  digits: number
-): number | GxBigNumber => {
+export const round = (value: number | GxBigNumber, digits: number): any => {
   let result: number | GxBigNumber;
 
   if (value instanceof GxBigNumber) {
