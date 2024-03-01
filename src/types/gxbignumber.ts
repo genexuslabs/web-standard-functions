@@ -122,7 +122,6 @@ export class GxBigNumber {
       }
 
       if (this.exponent !== 0) {
-        console.log("entro a exponent");
         if (this.exponent < 0) {
           result = result.slice(0, this.decimals + 1);
           result =
@@ -289,13 +288,36 @@ export class GxBigNumber {
       b = num2;
     }
 
+    let aDecimals;
+    let bDecimals;
+    if (a.decimals > 0) {
+      aDecimals = a
+        .toString()
+        .split(".")[1]
+        .replace(/\.?0+$/, "").length;
+    } else {
+      aDecimals = 0;
+    }
+
+    if (b.decimals > 0) {
+      bDecimals = b
+        .toString()
+        .split(".")[1]
+        .replace(/\.?0+$/, "").length;
+    } else {
+      bDecimals = 0;
+    }
+
     if (
       a.toString().replace(/\.(?=[^.0]*$)/, "") ===
-      b.toString().replace(/\.(?=[^.0]*$)/, "")
+        b.toString().replace(/\.(?=[^.0]*$)/, "") &&
+      aDecimals === bDecimals
     ) {
-      return true;
+      return 0;
+    } else if (GxBigNumber.aMayorb(num1, num2)) {
+      return 1;
     } else {
-      return false;
+      return -1;
     }
   }
 
@@ -369,8 +391,6 @@ export class GxBigNumber {
         let num;
         if (ints.indexOf("-") !== -1) {
           ints = ints.replace("-", "");
-          console.log(ints);
-          console.log(decimals.padEnd(digits, "0").slice(0, digits));
           num =
             "-" +
             (BigInt(ints + decimals.padEnd(digits, "0").slice(0, digits)) +
@@ -424,9 +444,8 @@ export class GxBigNumber {
     const decimalPart = subtract(valToRound, int);
 
     let rounded = GxBigNumber.round(valToRound, 0);
-
     if (
-      GxBigNumber.compare(decimalPart, new GxBigNumber(0.5)) &&
+      GxBigNumber.compare(decimalPart, new GxBigNumber(0.5)) === 0 &&
       mod(rounded, 2) !== 0
     ) {
       rounded = subtract(rounded, 1);
