@@ -290,29 +290,33 @@ export class GxBigNumber {
 
     let aDecimals;
     let bDecimals;
-    if (a.decimals > 0) {
+    let aNumber;
+    let bNumber;
+    if (a.toString().indexOf(".") !== -1) {
       aDecimals = a
         .toString()
         .split(".")[1]
         .replace(/\.?0+$/, "").length;
+
+      aNumber = a.toString().replace(/\.(?=[^.0]*$)/, "");
     } else {
       aDecimals = 0;
+      aNumber = a.toString();
     }
 
-    if (b.decimals > 0) {
+    if (b.toString().indexOf(".") !== -1) {
       bDecimals = b
         .toString()
         .split(".")[1]
         .replace(/\.?0+$/, "").length;
+
+      bNumber = b.toString().replace(/\.(?=[^.0]*$)/, "");
     } else {
       bDecimals = 0;
+      bNumber = b.toString();
     }
 
-    if (
-      a.toString().replace(/\.(?=[^.0]*$)/, "") ===
-        b.toString().replace(/\.(?=[^.0]*$)/, "") &&
-      aDecimals === bDecimals
-    ) {
+    if (aNumber === bNumber && aDecimals === bDecimals) {
       return 0;
     } else if (GxBigNumber.aMayorb(num1, num2)) {
       return 1;
