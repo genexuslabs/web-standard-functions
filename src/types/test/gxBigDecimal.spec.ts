@@ -1,10 +1,18 @@
 import { add } from "../../math/add";
 import { divide } from "../../math/divide";
-import { mod } from "../../math/mod";
+import { modBigNumber } from "../../bigNumber/mod";
 import { multiply } from "../../math/multiply";
-import { random } from "../../math/random";
+import { randomBigNumber } from "../../bigNumber/random";
 import { subtract } from "../../math/subtract";
-import { fromString } from "../../numeric/fromString";
+import { fromStringBigNumber } from "../../bigNumber/fromString";
+import { toStringBigNumber } from "../../bigNumber/toString";
+import { isEmptyBigNumber } from "../../bigNumber/isEmpty";
+import { roundBigNumber } from "../../bigNumber/round";
+import { roundToEvenBigNumber } from "../../bigNumber/roundToEven";
+import { strBigNumber } from "../../bigNumber/str";
+import { toFormattedStringBigNumber } from "../../bigNumber/toFormattedString";
+import { truncateBigNumber } from "../../bigNumber/truncate";
+import { setEmptyBigNumber } from "../../bigNumber/setEmpty";
 import { GxBigNumber } from "../gxbignumber";
 
 export const testCasesDivide = [
@@ -406,14 +414,6 @@ describe("multiply operation", () => {
   }
 });
 
-describe("convertToDecimal operation", () => {
-  for (const t of testConvertToDecimal) {
-    it(`should convertToDecimal ${t[0]} to equal ${t[1]}`, () => {
-      expect(GxBigNumber.convertToDecimal(t[0]).toString()).toBe(t[1]);
-    });
-  }
-});
-
 describe("convertToInt operation", () => {
   for (const t of testConvertToInt) {
     it(`should convertToInt ${t[0]} to equal ${t[1]}`, () => {
@@ -448,51 +448,59 @@ export const testToString: Array<[string, number, number, string]> = [
 describe("toString function", () => {
   for (const t of testToString) {
     it(`should toString ${t[0]} to equal ${t[3]}`, () => {
-      expect(GxBigNumber.toStringGx(new GxBigNumber(t[0]), t[1], t[2])).toBe(
-        t[3]
-      );
+      expect(
+        toStringBigNumber(
+          new GxBigNumber(t[0]),
+          new GxBigNumber(t[1]),
+          new GxBigNumber(t[2])
+        )
+      ).toBe(t[3]);
     });
   }
 });
 
-export const testMod: Array<[string, string, number]> = [
-  ["123.123456789123456789", "123.12345678912345678", 0],
-  ["123.123456789123456789", "0.123456789123456789", 0],
-  ["323.123456789123456789", "223.12345678912345678", 100]
+export const testMod: Array<[string, string, string]> = [
+  ["123.123456789123456789", "123.12345678912345678", "0"],
+  ["123.123456789123456789", "0.123456789123456789", "0"],
+  ["323.123456789123456789", "223.12345678912345678", "100"]
 ];
 
 describe("mod function", () => {
   for (const t of testMod) {
     it(`should mod ${t[0]} to equal ${t[2]}`, () => {
-      expect(mod(new GxBigNumber(t[0]), new GxBigNumber(t[1]))).toBe(t[2]);
+      expect(
+        modBigNumber(new GxBigNumber(t[0]), new GxBigNumber(t[1])).toString()
+      ).toBe(t[2]);
     });
   }
 });
 
 describe("random function", () => {
   it("should return a random number", () => {
-    let number = new GxBigNumber(random());
+    let number = randomBigNumber();
     expect(number).not.toBeNull();
     expect(number).not.toBeUndefined();
   });
 });
 
-export const testInteger: Array<[string, number]> = [
-  ["123.123456789123456789", 123],
-  ["323.123456789123456789", 323],
-  ["0.123456789123456789", 0],
-  ["-123.123456789123456789", -123],
-  ["123123456789123.456789", 123123456789123],
-  ["1231234567891234.56789", 1231234567891234],
-  ["12312345678912345.6789", 12312345678912345],
-  ["123123456789123456.789", 123123456789123456],
-  ["1231234567891234567.89", 1231234567891234567]
+export const testInteger: Array<[string, string]> = [
+  ["123.123456789123456789", "123"],
+  ["323.123456789123456789", "323"],
+  ["0.123456789123456789", "0"],
+  ["-123.123456789123456789", "-123"],
+  ["123123456789123.456789", "123123456789123"],
+  ["1231234567891234.56789", "1231234567891234"],
+  ["12312345678912345.6789", "12312345678912345"],
+  ["123123456789123456.789", "123123456789123456"],
+  ["1231234567891234567.89", "1231234567891234567"]
 ];
 
 describe("Integer function", () => {
   for (const t of testInteger) {
     it(`should integer ${t[0]} to equal ${t[1]}`, () => {
-      expect(GxBigNumber.convertToInt(new GxBigNumber(t[0]))).toBe(t[1]);
+      expect(GxBigNumber.convertToInt(new GxBigNumber(t[0])).toString()).toBe(
+        t[1]
+      );
     });
   }
 });
@@ -504,11 +512,11 @@ export const testFromString: Array<[string, string]> = [
   ["-123.123456789123456789", "-123.123456789123456789"],
   ["111111111111111111", "111111111111111111"]
 ];
-//aca el fromString me da mal, pero pienso es el tema de que pierde presicion como habiamos comentado, revisar en la kb si pasa
+
 describe("FromString function", () => {
   for (const t of testFromString) {
     it(`should fromString ${t[0]} to equal ${t[1]}`, () => {
-      expect(fromString(0, t[0]).toString()).toBe(t[1]);
+      expect(fromStringBigNumber(0, t[0]).toString()).toBe(t[1]);
     });
   }
 });
@@ -524,7 +532,7 @@ export const testIsEmpty: Array<[string, boolean]> = [
 describe("IsEmpty function", () => {
   for (const t of testIsEmpty) {
     it(`isEmpty(${t[0]}) should be equal to ${t[1]}`, () => {
-      expect(GxBigNumber.isEmpty(new GxBigNumber(t[0]))).toBe(t[1]);
+      expect(isEmptyBigNumber(new GxBigNumber(t[0]))).toBe(t[1]);
     });
   }
 });
@@ -549,9 +557,9 @@ export const testRound: Array<[string, number, string]> = [
 describe("Round function", () => {
   for (const t of testRound) {
     it(`Round(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(GxBigNumber.round(new GxBigNumber(t[0]), t[1]).toString()).toBe(
-        t[2]
-      );
+      expect(
+        roundBigNumber(new GxBigNumber(t[0]), new GxBigNumber(t[1])).toString()
+      ).toBe(t[2]);
     });
   }
 });
@@ -576,7 +584,10 @@ describe("RoundToEven function", () => {
   for (const t of testRoundToEven) {
     it(`RoundToEven(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
       expect(
-        GxBigNumber.roundToEven(new GxBigNumber(t[0]), t[1]).toString()
+        roundToEvenBigNumber(
+          new GxBigNumber(t[0]),
+          new GxBigNumber(t[1])
+        ).toString()
       ).toBe(t[2]);
     });
   }
@@ -605,12 +616,18 @@ const testStr2: Array<[string, number, number, string]> = [
 describe("Str function", () => {
   for (const t of testStr1) {
     it(`str(${t[0]}) should be equal to ${t[1]}`, () => {
-      expect(GxBigNumber.str(new GxBigNumber(t[0])).toString()).toBe(t[1]);
+      expect(strBigNumber(new GxBigNumber(t[0])).toString()).toBe(t[1]);
     });
   }
   for (const t of testStr2) {
     it(`str(${t[0]}) should be equal to ${t[3]}`, () => {
-      expect(GxBigNumber.str(new GxBigNumber(t[0]), t[1], t[2])).toBe(t[3]);
+      expect(
+        strBigNumber(
+          new GxBigNumber(t[0]),
+          new GxBigNumber(t[1]),
+          new GxBigNumber(t[2])
+        ).toString()
+      ).toBe(t[3]);
     });
   }
 });
@@ -670,9 +687,9 @@ const testToFormattedString: Array<[string, string, string]> = [
 describe("toFormattedString", () => {
   for (const t of testToFormattedString) {
     it(`toFormattedString(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(GxBigNumber.toFormattedString(new GxBigNumber(t[0]), t[1])).toBe(
-        t[2]
-      );
+      expect(
+        toFormattedStringBigNumber(new GxBigNumber(t[0]), t[1]).toString()
+      ).toBe(t[2]);
     });
   }
 });
@@ -692,9 +709,12 @@ const testTruncate: Array<[string, number, string]> = [
 describe("Truncate", () => {
   for (const t of testTruncate) {
     it(`truncate(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(GxBigNumber.truncate(new GxBigNumber(t[0]), t[1]).toString()).toBe(
-        t[2].toString()
-      );
+      expect(
+        truncateBigNumber(
+          new GxBigNumber(t[0]),
+          new GxBigNumber(t[1])
+        ).toString()
+      ).toBe(t[2]);
     });
   }
 });
@@ -748,6 +768,26 @@ describe("Compare", () => {
   for (const t of testCompare) {
     it(`compare(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
       expect(GxBigNumber.compare(t[0], t[1])).toBe(t[2]);
+    });
+  }
+});
+
+describe("setEmpty operation", () => {
+  it("should always return 0", () => {
+    expect(setEmptyBigNumber(new GxBigNumber(0)).toString()).toBe("0");
+  });
+});
+
+const testCases2: Array<[string, string]> = [
+  ["111111111111111111", "111111111111111111"],
+  ["123456789123456789", "123456789123456789"],
+  ["123456789123456789123", "123456789123456789123"]
+];
+
+describe("Numeric::fromString", () => {
+  for (const t of testCases2) {
+    it(`fromString(${t[0]}) should be equal to ${t[1]}`, () => {
+      expect(fromStringBigNumber(0, t[0]).toString()).toBe(t[1]);
     });
   }
 });

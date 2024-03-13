@@ -1,5 +1,6 @@
 import { GxBigNumber } from "../../types/gxbignumber";
 import { roundToEven } from "../roundToEven";
+import { roundToEvenBigNumber } from "../../bigNumber/roundToEven";
 
 const testCases: Array<[number, number, number]> = [
   [1.5, 0, 2],
@@ -27,7 +28,10 @@ describe("Numeric::roundToEven", () => {
   for (const t of testCases) {
     it(`roundToEven(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
       expect(
-        GxBigNumber.roundToEven(new GxBigNumber(t[0]), t[1]).toString()
+        roundToEvenBigNumber(
+          new GxBigNumber(t[0]),
+          new GxBigNumber(t[1])
+        ).toString()
       ).toBe(t[2].toString());
     });
   }

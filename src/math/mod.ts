@@ -5,17 +5,7 @@ import { GxBigNumber } from "../types/gxbignumber";
  * @param {number} divisor
  * @returns number
  */
-export const mod = (
-  dividend: number | GxBigNumber,
-  divisor: number | GxBigNumber
-): number => {
-  if (dividend instanceof GxBigNumber) {
-    dividend = Number(dividend.toString());
-  }
-  if (divisor instanceof GxBigNumber) {
-    divisor = Number(divisor.toString());
-  }
-
+export const mod = (dividend: number, divisor: number): number => {
   if (dividend === 0) {
     return undefined;
   } else {

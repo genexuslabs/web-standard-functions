@@ -1,5 +1,6 @@
 import { GxBigNumber } from "../../types/gxbignumber";
 import { toFormattedString } from "../toFormattedString";
+import { toFormattedStringBigNumber } from "../../bigNumber/toFormattedString";
 
 const testCases: Array<[number, string, string]> = [
   [1, "99", "01"],
@@ -63,7 +64,9 @@ describe("Numeric::toFormattedString", () => {
 describe("Numeric::toFormattedString", () => {
   for (const t of testCases) {
     it(`toFormattedString(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(toFormattedString(new GxBigNumber(t[0]), t[1])).toBe(t[2]);
+      expect(toFormattedStringBigNumber(new GxBigNumber(t[0]), t[1])).toBe(
+        t[2]
+      );
     });
   }
 });

@@ -4,12 +4,6 @@
  * @return number
  */
 
-import { GxBigNumber } from "../types/gxbignumber";
-
-export const setEmpty = (target: number | GxBigNumber): any => {
-  if (target instanceof GxBigNumber) {
-    return GxBigNumber.setEmpty();
-  } else {
-    return 0;
-  }
+export const setEmpty = (target: number): number => {
+  return 0;
 };

@@ -1,4 +1,5 @@
 import { GxBigNumber } from "../../types/gxbignumber";
+import { integerBigNumber } from "../../bigNumber/integer";
 import { integer } from "../integer";
 
 const testCases: Array<[number, number]> = [
@@ -23,7 +24,7 @@ describe("Numeric::integer", () => {
 describe("Numeric::integer", () => {
   for (const t of testCases) {
     it(`integer(${t[0]}) should be equal to ${t[1]}`, () => {
-      expect(GxBigNumber.convertToInt(new GxBigNumber(t[0])).toString()).toBe(
+      expect(integerBigNumber(new GxBigNumber(t[0])).toString()).toBe(
         t[1].toString()
       );
     });

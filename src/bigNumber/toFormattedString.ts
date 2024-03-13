@@ -1,10 +1,16 @@
 /**
- * @param {number} value
+ * @param {GxBigNumber} value
  * @param {string} picture
  * @return string
  */
 
-export const toFormattedString = (value: number, picture: string): string => {
+import { GxBigNumber } from "../types/gxbignumber";
+import { absBigNumber } from "./abs";
+
+export const toFormattedStringBigNumber = (
+  value: GxBigNumber,
+  picture: string
+): string => {
   let result: string = "";
 
   // *****Decimals******* //
@@ -30,7 +36,7 @@ export const toFormattedString = (value: number, picture: string): string => {
   }
 
   // *****Integers***** //
-  let integerValue = Math.abs(value)
+  let integerValue = absBigNumber(value)
     .toString()
     .split(".")[0];
   let integerPicture =
