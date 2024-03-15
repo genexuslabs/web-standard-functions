@@ -3,7 +3,7 @@ import { GxBigNumber } from "../types/gxbignumber";
 /**
  * @param {GxBigNumber} dividend
  * @param {GxBigNumber} divisor
- * @returns number
+ * @returns GxBigNumber
  */
 export const modBigNumber = (
   dividend: GxBigNumber,

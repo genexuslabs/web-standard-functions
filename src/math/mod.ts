@@ -1,5 +1,3 @@
-import { GxBigNumber } from "../types/gxbignumber";
-
 /**
  * @param {number} dividend
  * @param {number} divisor

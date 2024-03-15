@@ -189,7 +189,8 @@ export class GxBigNumber {
   }
 
   static convertBigNumberToNumber(value): number {
-    return Number(value.toString());
+    let strNumber = value.toString().slice(0, 15);
+    return Number(strNumber);
   }
 
   static compare(num1, num2) {
