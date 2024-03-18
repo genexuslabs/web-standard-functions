@@ -238,14 +238,14 @@ export class GxBigNumber {
 
     if (aNumber === bNumber && aDecimals === bDecimals) {
       return 0;
-    } else if (GxBigNumber.aMayorb(num1, num2)) {
+    } else if (GxBigNumber.greaterThan(num1, num2)) {
       return 1;
     } else {
       return -1;
     }
   }
 
-  static aMayorb(a, b): boolean {
+  static greaterThan(a, b): boolean {
     let [aInts, aDecimals] = a.toString().split(".");
     let [bInts, bDecimals] = b.toString().split(".");
 
