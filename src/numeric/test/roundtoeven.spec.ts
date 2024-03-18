@@ -1,4 +1,6 @@
+import { GxBigNumber } from "../../types/gxbignumber";
 import { roundToEven } from "../roundToEven";
+import { roundToEvenBigNumber } from "../../bigNumber/roundToEven";
 
 const testCases: Array<[number, number, number]> = [
   [1.5, 0, 2],
@@ -10,13 +12,27 @@ const testCases: Array<[number, number, number]> = [
   [125, -1, 120],
   [135, -1, 140],
   [125.11, -1, 130],
-  [135.11, -1, 140]
+  [135.11, -1, 140],
+  [0.123456789123, 8, 0.12345679]
 ];
 
 describe("Numeric::roundToEven", () => {
   for (const t of testCases) {
     it(`roundToEven(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
       expect(roundToEven(t[0], t[1])).toBe(t[2]);
+    });
+  }
+});
+
+describe("Numeric::roundToEven", () => {
+  for (const t of testCases) {
+    it(`roundToEven(${t[0]}, ${t[1]}) should be equal to ${t[2]}`, () => {
+      expect(
+        roundToEvenBigNumber(
+          new GxBigNumber(t[0]),
+          new GxBigNumber(t[1])
+        ).toString()
+      ).toBe(t[2].toString());
     });
   }
 });

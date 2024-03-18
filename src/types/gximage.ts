@@ -20,8 +20,6 @@ export class GxImage implements IBlob, ISerializable {
     return this.getInternalUri();
   }
 
-  _gxSerializable = () => true;
-
   deserialize(imgString: string) {
     return GxImage.createFromValue(imgString);
   }

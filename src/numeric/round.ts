@@ -4,11 +4,11 @@
  * @param {number} digits
  * @returns number
  */
-export const round = (value: number, digits: number): number => {
+export const round = (value: number, digits: number): any => {
   let result: number;
 
   if (digits === 0) {
-    result = Number(value.toPrecision(1));
+    result = Number(value.toFixed(0));
   } else {
     if (digits > 0) {
       result = Number(Math.round(Number(value + "e" + digits)) + "e-" + digits);

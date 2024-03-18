@@ -2,8 +2,6 @@ import { Std_TypeConversions } from "./std-type-conversion";
 import { ISerializable } from "./type-serialization";
 
 export class GxDate extends Date implements ISerializable {
-  _gxSerializable = () => true;
-
   serialize() {
     return Std_TypeConversions.SerializeDateToISOString(this);
   }

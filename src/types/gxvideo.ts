@@ -15,8 +15,6 @@ export class GxVideo implements ISerializable {
     return GxVideo.createVideo(x);
   }
 
-  _gxSerializable = () => true;
-
   isEmpty() {
     return this.uri === "" || this.uri === null;
   }

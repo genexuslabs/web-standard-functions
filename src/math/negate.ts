@@ -1,7 +1,11 @@
-import { defineUnaryOperation } from "./operation";
+import { GxBigNumber } from "../types/gxbignumber";
 
-/**
- * Returns `operand` negated
- * @param operand First operand
- */
-export const negate = defineUnaryOperation("negated");
+export const negate = (num: GxBigNumber): GxBigNumber => {
+  let res;
+  if (num.intNumberAll.toString().indexOf("-") !== -1) {
+    res = num.toString().replace("-", "");
+  } else {
+    res = "-" + num.toString();
+  }
+  return new GxBigNumber(res);
+};

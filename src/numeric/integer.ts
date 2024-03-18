@@ -4,5 +4,5 @@
  * @returns number
  */
 export const integer = (target: number): number => {
-  return Math.trunc(target);
+  return Number(Math.trunc(target));
 };

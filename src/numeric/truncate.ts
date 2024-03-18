@@ -6,5 +6,5 @@
  */
 export const truncate = (value: number, digits: number): number => {
   const multiplier = Math.pow(10, digits || 0);
-  return Math.trunc(value * multiplier) / multiplier;
+  return Number(Math.trunc(value * multiplier) / multiplier);
 };

@@ -16,10 +16,6 @@ export class GxBinary implements IBlob, ISerializable {
     return GxBinary.createBinary(x);
   }
 
-  _gxSerializable(): boolean {
-    throw new Error("Method not implemented.");
-  }
-
   toString() {
     return this.uri;
   }

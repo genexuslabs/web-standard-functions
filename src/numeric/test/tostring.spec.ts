@@ -1,4 +1,6 @@
+import { GxBigNumber } from "../../types/gxbignumber";
 import { toString } from "../toString";
+import { toStringBigNumber } from "../../bigNumber/toString";
 
 const testCases: Array<[number, number, number, string]> = [
   [0, 10, 2, "      0.00"],
@@ -19,6 +21,20 @@ describe("Numeric::toString", () => {
   for (const t of testCases) {
     it(`toString(${t[0]}) should be equal to ${t[3]}`, () => {
       expect(toString(t[0], t[1], t[2])).toBe(t[3]);
+    });
+  }
+});
+
+describe("Numeric::toString", () => {
+  for (const t of testCases) {
+    it(`toString(${t[0]}) should be equal to ${t[3]}`, () => {
+      expect(
+        toStringBigNumber(
+          new GxBigNumber(t[0]),
+          new GxBigNumber(t[1]),
+          new GxBigNumber(t[2])
+        )
+      ).toBe(t[3]);
     });
   }
 });

@@ -68,7 +68,6 @@
   },
   "dependencies": {
     "@types/websocket": "^1.0.4",
-    "bignumber.js": "^7.2.1",
     "full-icu": "^1.3.0",
     "jdu": "^1.0.0",
     "jstz": "^2.1.1",
