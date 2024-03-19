@@ -53,7 +53,22 @@ export const strBigNumber = (
       res = strBigNumber(value, length, new GxBigNumber(0));
     }
   } else {
-    res = padLeft(result, lengthAux, " ");
+    if (decimalsAux !== 0) {
+      int = result.split(".").concat("")[0];
+      decimal = result.split(".").concat("")[1];
+
+      if (decimal !== "") {
+        res = padLeft(
+          int + "." + decimal.padEnd(decimalsAux, "0"),
+          lengthAux,
+          " "
+        );
+      } else {
+        res = padLeft(result, lengthAux, " ");
+      }
+    } else {
+      res = padLeft(result, lengthAux, " ");
+    }
   }
 
   return res;

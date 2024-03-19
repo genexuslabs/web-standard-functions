@@ -1,4 +1,6 @@
+import { add } from "../math/add";
 import { GxBigNumber } from "../types/gxbignumber";
+import { roundBigNumber } from "./round";
 
 /**
  * Converts the give number to string
@@ -23,15 +25,41 @@ export const toStringBigNumber = (
     return value.toString().padStart(charactersAux);
   }
 
-  let strNum = value.toString();
-  let int = strNum.split(".").concat("")[0];
-  let decimal = strNum.split(".").concat("")[1];
+  let int = value
+    .toString()
+    .split(".")
+    .concat("")[0];
+  let decimal = value
+    .toString()
+    .split(".")
+    .concat("")[1]
+    .slice(0, add(decimals, new GxBigNumber(1)));
 
-  strNum = (
-    int +
-    "." +
-    decimal.slice(0, decimalsAux).padEnd(decimalsAux, "0")
-  ).padStart(charactersAux);
+  let strNum;
+  if (decimal !== "") {
+    strNum = roundBigNumber(value, decimals).toString();
+  } else {
+    strNum = int;
+  }
+
+  if (decimalsAux !== 0) {
+    let strNumint = strNum.split(".").concat("")[0];
+    let strNumdecimal = strNum.split(".").concat("")[1];
+
+    if (strNumdecimal !== "") {
+      strNum = (
+        strNumint +
+        "." +
+        strNumdecimal.padEnd(decimalsAux, "0")
+      ).padStart(charactersAux);
+    } else {
+      strNum = (strNumint + "." + "".padEnd(decimalsAux, "0")).padStart(
+        charactersAux
+      );
+    }
+  } else {
+    strNum = strNum.padStart(charactersAux);
+  }
 
   return strNum;
 };

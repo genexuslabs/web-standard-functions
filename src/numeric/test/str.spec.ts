@@ -34,10 +34,15 @@ const testCases2: Array<[number, number, number, string]> = [
   [-1.25, 5, 1, " -1.3"],
   [-1.25, 5, 2, "-1.25"],
   [123456.12, 5, 2, "*****"],
-  [1234.4, 5, 1, " 1234"]
+  [1234.4, 5, 1, " 1234"],
+  [1234.399, 8, 2, " 1234.40"],
+  [-1234.399, 8, 2, "-1234.40"],
+  [1.23456789, 12, 5, "     1.23457"],
+  [111111, 6, 2, "111111"],
+  [111111, 8, 2, "  111111"]
 ];
 
-describe("Core::str with length and decimals", () => {
+describe("Core::str Numeric with length and decimals", () => {
   for (const t of testCases2) {
     it(`str(${t[0]}, ${t[1]}, ${t[2]}) should be equal to ${t[3]}`, () => {
       expect(str(t[0], t[1], t[2])).toBe(t[3]);
@@ -45,7 +50,7 @@ describe("Core::str with length and decimals", () => {
   }
 });
 
-describe("Core::str with length and decimals", () => {
+describe("Core::str BigNumber with length and decimals", () => {
   for (const t of testCases2) {
     it(`str(${t[0]}, ${t[1]}, ${t[2]}) should be equal to ${t[3]}`, () => {
       expect(

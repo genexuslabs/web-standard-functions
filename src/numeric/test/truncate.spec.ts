@@ -7,7 +7,9 @@ const testCases: Array<[number, number, number]> = [
   [1.4, 0, 1],
   [1.25, 1, 1.2],
   [1.24, 1, 1.2],
-  [125.11, -1, 120]
+  [125.11, -1, 120],
+  [0, 0, 0],
+  [123, 0, 123]
 ];
 
 describe("Numeric::truncate", () => {
@@ -23,7 +25,9 @@ const testCases2: Array<[string, string, string]> = [
   ["1.4", "0", "1"],
   ["1.25", "1", "1.2"],
   ["1.24", "1", "1.2"],
-  ["125.11", "-1", "120"]
+  ["125.11", "-1", "120"],
+  ["0", "0", "0"],
+  ["123", "0", "123"]
 ];
 describe("Numeric::truncateBD", () => {
   for (const t of testCases2) {
