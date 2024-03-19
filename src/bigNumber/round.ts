@@ -43,12 +43,15 @@ export const roundBigNumber = (
         ints = ints.replace("-", "");
         num =
           "-" +
-          (BigInt(ints + decimals.padEnd(digitsAux, "0").slice(0, digitsAux)) +
-            BigInt(decimals[digitsAux] >= "5"));
+          BigInt(
+            BigInt(ints + decimals.padEnd(digitsAux, "0").slice(0, digitsAux)) +
+              BigInt(decimals[digitsAux] >= "5")
+          ).toString();
       } else {
-        num =
+        num = BigInt(
           BigInt(ints + decimals.padEnd(digitsAux, "0").slice(0, digitsAux)) +
-          BigInt(decimals[digitsAux] >= "5");
+            BigInt(decimals[digitsAux] >= "5")
+        ).toString();
       }
 
       result = GxBigNumber.fromBigInt(num, digits);
