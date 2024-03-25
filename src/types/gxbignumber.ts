@@ -1,6 +1,7 @@
+export const BIG_NUMBER_PRECISION = 28;
+
 export class GxBigNumber {
-  decimals = 18;
-  exponent = 0;
+  decimals = BIG_NUMBER_PRECISION;
   intNumberAll;
   round = false;
   static d: bigint;
@@ -13,67 +14,39 @@ export class GxBigNumber {
     if (Number.isNaN(bigDecimal)) {
       this.intNumberAll = NaN;
       this.decimals = NaN;
-      this.exponent = NaN;
       return;
     }
 
     if (bigDecimal.toString().indexOf("e") === -1) {
-      let [ints, decimals] = bigDecimal
+      const [ints, decimals] = bigDecimal
         .toString()
         .split(".")
         .concat("");
-      if (decimals === "") {
-        this.decimals = 0;
-      } else {
-        this.decimals = decimals.length;
-      }
+
+      this.decimals = decimals ? decimals.length : 0;
+
       this.intNumberAll = BigInt(
         ints + decimals.padEnd(this.decimals, "0").slice(0, this.decimals)
       );
-      GxBigNumber.d = BigInt("1" + "0".repeat(this.decimals));
     } else {
-      let [ints, decimals] = bigDecimal
-        .toString()
-        .split(".")
-        .concat("");
+      const [coefficient, exponent] = bigDecimal.toString().split("e");
 
-      if (Number(decimals.split("e").concat("")[1]) < 0) {
-        this.decimals = decimals.split("e").concat("")[0].length;
-        this.exponent = Number(decimals.split("e").concat("")[1]);
-      } else {
-        this.decimals = decimals.split("e").concat("")[0].length;
-        this.exponent = Number(decimals.split("e").concat("")[1]);
-      }
+      const [coefficient_i, coefficient_d] = coefficient.toString().split(".");
 
-      if (this.decimals > 0) {
-        this.intNumberAll =
-          BigInt(
-            ints +
-              decimals
-                .split("e")
-                .concat("")[0]
-                .padEnd(this.decimals, "0")
-                .slice(0, this.decimals)
-          ) +
-          BigInt(
-            this.round &&
-              decimals.split("e").concat("")[0][this.decimals] >= "5"
-          );
-        GxBigNumber.d = BigInt("1" + "0".repeat(this.decimals));
+      const decimals = Number(exponent);
+
+      if (decimals > 0) {
+        // Very big
+        this.intNumberAll = BigInt(
+          coefficient_i +
+            (coefficient_d ?? "") +
+            "0".repeat(decimals - Number(coefficient_d ?? 0))
+        );
+        this.decimals = 0;
       } else {
-        this.intNumberAll =
-          BigInt(
-            ints +
-              decimals
-                .split("e")
-                .concat("")[0]
-                .padEnd(this.decimals, "0")
-          ) +
-          BigInt(
-            this.round &&
-              decimals.split("e").concat("")[0][this.decimals] >= "5"
-          );
-        GxBigNumber.d = BigInt("1" + "0".repeat(Math.abs(this.decimals)));
+        // Very small
+        this.intNumberAll = BigInt(coefficient_i + (coefficient_d ?? ""));
+        this.decimals = Math.abs(decimals);
       }
     }
   }
@@ -116,27 +89,11 @@ export class GxBigNumber {
         result = this.intNumberAll.toString().padStart(this.decimals + 1, "0");
       }
 
-      if (this.exponent !== 0) {
-        if (this.exponent < 0) {
-          result = result.slice(0, this.decimals + 1);
-          result =
-            "0" +
-            "." +
-            result
-              .padStart(Math.abs(this.exponent) + this.decimals, "0")
-              .replace(/\.?0+$/, "");
-        } else {
-          result =
-            result.slice(0, -this.decimals) +
-            "." +
-            result.slice(-this.decimals).replace(/\.?0+$/, "");
-        }
-      } else {
-        result =
-          result.slice(0, -this.decimals) +
-          "." +
-          result.slice(-this.decimals).replace(/\.?0+$/, "");
-      }
+      result =
+        result.slice(0, -this.decimals) +
+        "." +
+        result.slice(-this.decimals).replace(/\.?0+$/, "");
+
       str = str + result;
       return str;
     }
