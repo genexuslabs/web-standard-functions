@@ -14,8 +14,8 @@ export const toStringBigNumber = (
   characters: GxBigNumber,
   decimals: GxBigNumber
 ): string => {
-  let decimalsAux = Number(decimals.intNumberAll);
-  let charactersAux = Number(characters.intNumberAll);
+  let decimalsAux = Number(decimals.toString());
+  let charactersAux = Number(characters.toString());
 
   if (Number.isNaN(value.intNumberAll)) {
     return "";

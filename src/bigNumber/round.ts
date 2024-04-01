@@ -73,7 +73,7 @@ export const roundBigNumber = (
         }
       }
 
-      result = GxBigNumber.fromBigInt(num, digits);
+      result = GxBigNumber.fromBigInt(num, digitsAux);
     } else {
       let ints = value.toString().split(".")[0];
 

@@ -1,3 +1,4 @@
+import { castToBigNumber } from "../bigNumber/cast";
 export const BIG_NUMBER_PRECISION = 28;
 
 export class GxBigNumber {
@@ -133,37 +134,51 @@ export class GxBigNumber {
     }
   }
 
-  static convertToInt(value): GxBigNumber {
-    if (!(value instanceof GxBigNumber)) {
-      value = new GxBigNumber(value);
+  static normalizePrecision(num: GxBigNumber): GxBigNumber {
+    let precision = BIG_NUMBER_PRECISION * 2 + 1;
+    let r;
+
+    if (num.toString().indexOf(".") === -1) {
+      return num;
+    } else {
+      if (num.decimals === precision) {
+        return num;
+      }
+      if (num.decimals < precision) {
+        let [int, decimal] = num.toString().split(".");
+        r = int + "." + decimal.padEnd(precision - num.decimals, "0");
+        return new GxBigNumber(r);
+      } else {
+        r = num.intNumberAll.toString().slice(0, -num.decimals + precision);
+        return GxBigNumber.fromBigInt(BigInt(r), precision);
+      }
     }
+  }
+
+  static convertToInt(value): GxBigNumber {
+    value = castToBigNumber(new GxBigNumber(value));
     let str = value.toString().split(".")[0];
     return new GxBigNumber(str);
   }
 
   static convertToBigDecimal(value) {
-    return new GxBigNumber(value);
+    return castToBigNumber(new GxBigNumber(value));
   }
 
   static convertBigNumberToNumber(value): number {
-    let strNumber = value.toString().slice(0, 15);
+    let strNumber = castToBigNumber(value)
+      .toString()
+      .slice(0, 15);
     return Number(strNumber);
   }
 
-  static compare(num1, num2) {
-    let a;
-    let b;
+  static convertBigNumberToString(value) {
+    return castToBigNumber(value).toString();
+  }
 
-    if (!(num1 instanceof GxBigNumber)) {
-      a = new GxBigNumber(num1);
-    } else {
-      a = num1;
-    }
-    if (!(num2 instanceof GxBigNumber)) {
-      b = new GxBigNumber(num2);
-    } else {
-      b = num2;
-    }
+  static compare(num1, num2) {
+    let a = castToBigNumber(new GxBigNumber(num1));
+    let b = castToBigNumber(new GxBigNumber(num2));
 
     let aDecimals;
     let bDecimals;

@@ -38,12 +38,5 @@ export const divide = (
   let d1 = a.intNumberAll * BigInt("1" + "0".repeat(rep));
   let d2 = b.intNumberAll;
 
-  let r = d1 / d2;
-  if (decimal !== 0) {
-    r = BigInt(r.toString().slice(0, -d + decimal));
-  } else {
-    decimal = d;
-  }
-
-  return GxBigNumber.fromBigInt(r, decimal);
+  return GxBigNumber.normalizePrecision(GxBigNumber.fromBigInt(d1 / d2, d));
 };

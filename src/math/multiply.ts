@@ -8,5 +8,7 @@ export const multiply = (
   const b = new GxBigNumber(num2);
   const d = a.decimals + b.decimals;
 
-  return GxBigNumber.fromBigInt(a.intNumberAll * b.intNumberAll, d);
+  return GxBigNumber.normalizePrecision(
+    GxBigNumber.fromBigInt(a.intNumberAll * b.intNumberAll, d)
+  );
 };

@@ -11,18 +11,17 @@ export const truncateBigNumber = (
 ): GxBigNumber => {
   let [ints, decimals] = value.toString().split(".");
   let num;
+  let digitsAux = Number(digits.toString());
 
   if (Number(digits.intNumberAll) === 0) {
     return ints;
   }
 
-  if (Number(digits.intNumberAll) < 0) {
-    num = BigInt(ints.slice(0, digits.toString()).padEnd(ints.length, "0"));
-    digits = new GxBigNumber(0);
+  if (digitsAux < 0) {
+    num = BigInt(ints.slice(0, digitsAux).padEnd(ints.length, "0"));
+    digitsAux = 0;
   } else {
-    num = BigInt(
-      ints + decimals.padEnd(digits.toString(), "0").slice(0, digits.toString())
-    );
+    num = BigInt(ints + decimals.padEnd(digitsAux, "0").slice(0, digitsAux));
   }
-  return GxBigNumber.fromBigInt(num, digits);
+  return GxBigNumber.fromBigInt(num, digitsAux);
 };

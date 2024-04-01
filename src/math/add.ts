@@ -7,8 +7,10 @@ export const add = (
   let a = new GxBigNumber(num1);
   let b = new GxBigNumber(num2);
 
-  return GxBigNumber.fromBigInt(
-    b.normalizeDecimals(a) + a.normalizeDecimals(b),
-    a.decimals
+  return GxBigNumber.normalizePrecision(
+    GxBigNumber.fromBigInt(
+      b.normalizeDecimals(a) + a.normalizeDecimals(b),
+      a.decimals
+    )
   );
 };
