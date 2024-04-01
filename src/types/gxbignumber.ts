@@ -1,6 +1,8 @@
+import { castToBigNumber } from "../bigNumber/cast";
+export const BIG_NUMBER_PRECISION = 28;
+
 export class GxBigNumber {
-  decimals = 18;
-  exponent = 0;
+  decimals = BIG_NUMBER_PRECISION;
   intNumberAll;
   round = false;
   static d: bigint;
@@ -13,67 +15,39 @@ export class GxBigNumber {
     if (Number.isNaN(bigDecimal)) {
       this.intNumberAll = NaN;
       this.decimals = NaN;
-      this.exponent = NaN;
       return;
     }
 
     if (bigDecimal.toString().indexOf("e") === -1) {
-      let [ints, decimals] = bigDecimal
+      const [ints, decimals] = bigDecimal
         .toString()
         .split(".")
         .concat("");
-      if (decimals === "") {
-        this.decimals = 0;
-      } else {
-        this.decimals = decimals.length;
-      }
+
+      this.decimals = decimals ? decimals.length : 0;
+
       this.intNumberAll = BigInt(
         ints + decimals.padEnd(this.decimals, "0").slice(0, this.decimals)
       );
-      GxBigNumber.d = BigInt("1" + "0".repeat(this.decimals));
     } else {
-      let [ints, decimals] = bigDecimal
-        .toString()
-        .split(".")
-        .concat("");
+      const [coefficient, exponent] = bigDecimal.toString().split("e");
 
-      if (Number(decimals.split("e").concat("")[1]) < 0) {
-        this.decimals = decimals.split("e").concat("")[0].length;
-        this.exponent = Number(decimals.split("e").concat("")[1]);
-      } else {
-        this.decimals = decimals.split("e").concat("")[0].length;
-        this.exponent = Number(decimals.split("e").concat("")[1]);
-      }
+      const [coefficient_i, coefficient_d] = coefficient.toString().split(".");
 
-      if (this.decimals > 0) {
-        this.intNumberAll =
-          BigInt(
-            ints +
-              decimals
-                .split("e")
-                .concat("")[0]
-                .padEnd(this.decimals, "0")
-                .slice(0, this.decimals)
-          ) +
-          BigInt(
-            this.round &&
-              decimals.split("e").concat("")[0][this.decimals] >= "5"
-          );
-        GxBigNumber.d = BigInt("1" + "0".repeat(this.decimals));
+      const decimals = Number(exponent);
+
+      if (decimals > 0) {
+        // Very big
+        this.intNumberAll = BigInt(
+          coefficient_i +
+            (coefficient_d ?? "") +
+            "0".repeat(decimals - Number(coefficient_d ?? 0))
+        );
+        this.decimals = 0;
       } else {
-        this.intNumberAll =
-          BigInt(
-            ints +
-              decimals
-                .split("e")
-                .concat("")[0]
-                .padEnd(this.decimals, "0")
-          ) +
-          BigInt(
-            this.round &&
-              decimals.split("e").concat("")[0][this.decimals] >= "5"
-          );
-        GxBigNumber.d = BigInt("1" + "0".repeat(Math.abs(this.decimals)));
+        // Very small
+        this.intNumberAll = BigInt(coefficient_i + (coefficient_d ?? ""));
+        this.decimals = Math.abs(decimals);
       }
     }
   }
@@ -116,27 +90,11 @@ export class GxBigNumber {
         result = this.intNumberAll.toString().padStart(this.decimals + 1, "0");
       }
 
-      if (this.exponent !== 0) {
-        if (this.exponent < 0) {
-          result = result.slice(0, this.decimals + 1);
-          result =
-            "0" +
-            "." +
-            result
-              .padStart(Math.abs(this.exponent) + this.decimals, "0")
-              .replace(/\.?0+$/, "");
-        } else {
-          result =
-            result.slice(0, -this.decimals) +
-            "." +
-            result.slice(-this.decimals).replace(/\.?0+$/, "");
-        }
-      } else {
-        result =
-          result.slice(0, -this.decimals) +
-          "." +
-          result.slice(-this.decimals).replace(/\.?0+$/, "");
-      }
+      result =
+        result.slice(0, -this.decimals) +
+        "." +
+        result.slice(-this.decimals).replace(/\.?0+$/, "");
+
       str = str + result;
       return str;
     }
@@ -176,37 +134,51 @@ export class GxBigNumber {
     }
   }
 
-  static convertToInt(value): GxBigNumber {
-    if (!(value instanceof GxBigNumber)) {
-      value = new GxBigNumber(value);
+  static normalizePrecision(num: GxBigNumber): GxBigNumber {
+    let precision = BIG_NUMBER_PRECISION * 2 + 1;
+    let r;
+
+    if (num.toString().indexOf(".") === -1) {
+      return num;
+    } else {
+      if (num.decimals === precision) {
+        return num;
+      }
+      if (num.decimals < precision) {
+        let [int, decimal] = num.toString().split(".");
+        r = int + "." + decimal.padEnd(precision - num.decimals, "0");
+        return new GxBigNumber(r);
+      } else {
+        r = num.intNumberAll.toString().slice(0, -num.decimals + precision);
+        return GxBigNumber.fromBigInt(BigInt(r), precision);
+      }
     }
+  }
+
+  static convertToInt(value): GxBigNumber {
+    value = castToBigNumber(new GxBigNumber(value));
     let str = value.toString().split(".")[0];
     return new GxBigNumber(str);
   }
 
   static convertToBigDecimal(value) {
-    return new GxBigNumber(value);
+    return castToBigNumber(new GxBigNumber(value));
   }
 
   static convertBigNumberToNumber(value): number {
-    let strNumber = value.toString().slice(0, 15);
+    let strNumber = castToBigNumber(value)
+      .toString()
+      .slice(0, 15);
     return Number(strNumber);
   }
 
-  static compare(num1, num2) {
-    let a;
-    let b;
+  static convertBigNumberToString(value) {
+    return castToBigNumber(value).toString();
+  }
 
-    if (!(num1 instanceof GxBigNumber)) {
-      a = new GxBigNumber(num1);
-    } else {
-      a = num1;
-    }
-    if (!(num2 instanceof GxBigNumber)) {
-      b = new GxBigNumber(num2);
-    } else {
-      b = num2;
-    }
+  static compare(num1, num2) {
+    let a = castToBigNumber(new GxBigNumber(num1));
+    let b = castToBigNumber(new GxBigNumber(num2));
 
     let aDecimals;
     let bDecimals;

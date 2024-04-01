@@ -22,14 +22,22 @@ export const roundBigNumber = (
       if (ints === "0") {
         num2 = BigInt(decimals[0] >= "5").toString();
       } else {
-        num2 =
-          "-" + BigInt(BigInt(ints) + BigInt(decimals[0] >= "5")).toString();
+        if (decimals) {
+          num2 =
+            "-" + BigInt(BigInt(ints) + BigInt(decimals[0] >= "5")).toString();
+        } else {
+          num2 = "-" + BigInt(ints).toString();
+        }
       }
     } else {
       if (ints === "0") {
         num2 = BigInt(decimals[0] >= "5").toString();
       } else {
-        num2 = BigInt(BigInt(ints) + BigInt(decimals[0] >= "5")).toString();
+        if (decimals) {
+          num2 = BigInt(BigInt(ints) + BigInt(decimals[0] >= "5")).toString();
+        } else {
+          num2 = BigInt(ints).toString();
+        }
       }
     }
 
@@ -41,43 +49,55 @@ export const roundBigNumber = (
       let num;
       if (ints.indexOf("-") !== -1) {
         ints = ints.replace("-", "");
-        num =
-          "-" +
-          BigInt(
+
+        if (decimals) {
+          num = BigInt(
+            "-" +
+              BigInt(
+                BigInt(
+                  ints + decimals.padEnd(digitsAux, "0").slice(0, digitsAux)
+                ) + BigInt(decimals[digitsAux] >= "5")
+              )
+          );
+        } else {
+          num = BigInt("-" + BigInt(ints.padEnd(digitsAux + ints.length, "0")));
+        }
+      } else {
+        if (decimals) {
+          num = BigInt(
             BigInt(ints + decimals.padEnd(digitsAux, "0").slice(0, digitsAux)) +
               BigInt(decimals[digitsAux] >= "5")
-          ).toString();
-      } else {
-        num = BigInt(
-          BigInt(ints + decimals.padEnd(digitsAux, "0").slice(0, digitsAux)) +
-            BigInt(decimals[digitsAux] >= "5")
-        ).toString();
+          );
+        } else {
+          num = BigInt(ints.padEnd(digitsAux + ints.length, "0"));
+        }
       }
 
-      result = GxBigNumber.fromBigInt(num, digits);
+      result = GxBigNumber.fromBigInt(num, digitsAux);
     } else {
       let ints = value.toString().split(".")[0];
-      let aux1 = ints.slice(0, digitsAux);
-      let aux2 = BigInt(ints[ints.length + digitsAux] >= "5");
 
       let num;
       if (ints.indexOf("-") !== -1) {
         ints = ints.replace("-", "");
-        num =
+        num = BigInt(
           "-" +
+            BigInt(
+              BigInt(ints.slice(0, digitsAux)) +
+                BigInt(ints[ints.length + digitsAux] >= "5")
+            )
+              .toString()
+              .padEnd(value.toString().split(".")[0].length - 1, "0")
+        );
+      } else {
+        num = BigInt(
           BigInt(
             BigInt(ints.slice(0, digitsAux)) +
               BigInt(ints[ints.length + digitsAux] >= "5")
           )
             .toString()
-            .padEnd(value.toString().split(".")[0].length - 1, "0");
-      } else {
-        num = BigInt(
-          BigInt(ints.slice(0, digitsAux)) +
-            BigInt(ints[ints.length + digitsAux] >= "5")
-        )
-          .toString()
-          .padEnd(value.toString().split(".")[0].length, "0");
+            .padEnd(value.toString().split(".")[0].length, "0")
+        );
       }
 
       result = GxBigNumber.fromBigInt(num, 0);
