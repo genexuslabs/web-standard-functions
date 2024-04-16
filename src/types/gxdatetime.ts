@@ -18,6 +18,14 @@ export class GxDatetime extends Date implements ISerializable {
     return new GxDatetime(d);
   }
 
+  fromISOString(isoDate: string): GxDatetime {
+    const dt = Std_TypeConversions.DeserializeISOStringToDatetime(
+      isoDate,
+      false
+    );
+    return new GxDatetime(dt);
+  }
+
   static compare(GxDatetime1: GxDatetime, GxDatetime2: GxDatetime): boolean {
     let res: boolean;
     if (GxDatetime1.getTime() === GxDatetime2.getTime()) {
