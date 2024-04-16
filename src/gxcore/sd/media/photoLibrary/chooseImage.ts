@@ -4,8 +4,11 @@ export const chooseImage = async (): Promise<File> => {
     newInput.type = "file";
     newInput.accept = "image/*";
     newInput.multiple = false;
+    newInput.hidden = true;
+    document.body.appendChild(newInput);
 
     newInput.onchange = async eventInfo => {
+      document.body.removeChild(newInput);
       resolve(newInput.files[0]);
     };
 
