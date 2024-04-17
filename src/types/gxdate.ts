@@ -11,6 +11,11 @@ export class GxDate extends Date implements ISerializable {
     return new GxDate(dt);
   }
 
+  fromISOString(isoDate: string): GxDate {
+    const dt = Std_TypeConversions.DeserializeISOStringToDate(isoDate);
+    return new GxDate(dt);
+  }
+
   static createFromDate(d: Date): GxDate {
     return new GxDate(d);
   }
