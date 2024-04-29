@@ -9,6 +9,37 @@
             {
               "accesstype": "in",
               "description": "",
+              "type": "Numeric",
+              "name": "Value"
+            }
+          ],
+          "returns": "Numeric",
+          "scopes": [
+            "DPrv.Source.Functions",
+            "Frm.Functions",
+            "Functions",
+            "Prc.Rules.Functions",
+            "Prc.Source.Functions",
+            "SD.Conditions.Functions",
+            "SD.Source.Functions",
+            "Trn.Rules.Functions",
+            "Trn.Source.Functions",
+            "Wbp.Conditions.Functions",
+            "Wbp.Rules.Functions",
+            "Wbp.Source.Functions",
+            "Wrk.Conditions.Functions",
+            "Wrk.Rules.Functions",
+            "Wrk.Source.Functions"
+          ],
+          "static": true,
+          "name": "Abs"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
               "type": "Date",
               "name": "Value"
             },
@@ -1286,7 +1317,7 @@
               "accesstype": "in",
               "description": "",
               "optional": true,
-              "type": "Any",
+              "type": "Constant value",
               "name": "DefaultValue"
             }
           ],
@@ -1724,6 +1755,30 @@
             "DPrv.Source.Functions",
             "Functions",
             "Prc.Source.Functions",
+            "SD.Source.Functions",
+            "Trn.Source.Functions",
+            "Wbp.Source.Functions",
+            "Wrk.Source.Functions"
+          ],
+          "static": true,
+          "name": "UrlDecode"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "UrlString"
+            }
+          ],
+          "returns": "String",
+          "scopes": [
+            "DPrv.Source.Functions",
+            "Functions",
+            "Prc.Source.Functions",
+            "SD.Source.Functions",
             "Trn.Source.Functions",
             "Wbp.Source.Functions",
             "Wrk.Source.Functions"
@@ -2002,7 +2057,7 @@
               "accesstype": "in",
               "description": "",
               "optional": true,
-              "type": "Any",
+              "type": "Constant value",
               "name": "DefaultValue"
             },
             {
@@ -2049,7 +2104,7 @@
               "accesstype": "in",
               "description": "",
               "optional": true,
-              "type": "Any",
+              "type": "Constant value",
               "name": "DefaultValue"
             },
             {
@@ -3027,6 +3082,13 @@
               "description": "",
               "type": "Numeric",
               "name": "Modal"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "optional": true,
+              "type": "Numeric",
+              "name": "RedirectOutput"
             }
           ],
           "returns": "Numeric",
@@ -4297,6 +4359,21 @@
           ],
           "static": true,
           "name": "Error_handler"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "SubroutineName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": ["Prc.Rules", "Sync.Rules", "Trn.Rules", "Wbp.Rules"],
+          "static": true,
+          "name": "Exception_handler"
         },
         {
           "description": "",
@@ -5645,104 +5722,6 @@
           "returns": "Boolean",
           "scopes": null,
           "name": "IsEmpty"
-        },
-        {
-          "description": "Resize",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "width"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "height"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Boolean",
-              "name": "keepAspect"
-            }
-          ],
-          "returns": "Image",
-          "scopes": null,
-          "name": "Resize"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "percentage"
-            }
-          ],
-          "returns": "Image",
-          "scopes": null,
-          "name": "Scale"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "angle"
-            }
-          ],
-          "returns": "Image",
-          "scopes": null,
-          "name": "Rotate"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "left"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "top"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "width"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "height"
-            }
-          ],
-          "returns": "Image",
-          "scopes": null,
-          "name": "Crop"
-        },
-        {
-          "description": "",
-          "returns": "Image",
-          "scopes": null,
-          "name": "FlipHorizontally"
-        },
-        {
-          "description": "",
-          "returns": "Image",
-          "scopes": null,
-          "name": "FlipVertically"
         }
       ],
       "properties": [
@@ -5911,6 +5890,13 @@
           "returns": "RegExMatchCollection",
           "scopes": null,
           "name": "Matches"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "String",
+          "scopes": null,
+          "name": "RemoveDiacritics"
         },
         {
           "description": "",
@@ -6130,13 +6116,6 @@
           "returns": "String",
           "scopes": null,
           "name": "HTMLClean"
-        },
-        {
-          "description": "",
-          "parameters": [],
-          "returns": "String",
-          "scopes": null,
-          "name": "RemoveDiacritics"
         }
       ],
       "properties": [
@@ -6699,6 +6678,13 @@
         },
         {
           "description": "",
+          "parameters": [],
+          "returns": "String",
+          "scopes": null,
+          "name": "RemoveDiacritics"
+        },
+        {
+          "description": "",
           "parameters": [
             {
               "accesstype": "in",
@@ -6915,13 +6901,6 @@
           "returns": "String",
           "scopes": null,
           "name": "HTMLClean"
-        },
-        {
-          "description": "",
-          "parameters": [],
-          "returns": "String",
-          "scopes": null,
-          "name": "RemoveDiacritics"
         }
       ],
       "properties": [
@@ -8252,6 +8231,12 @@
         {
           "description": "",
           "readonly": false,
+          "type": "Boolean",
+          "name": "IncludeCookies"
+        },
+        {
+          "description": "",
+          "readonly": false,
           "type": "Numeric",
           "name": "Port"
         },
@@ -8725,6 +8710,12 @@
         {
           "description": "",
           "readonly": false,
+          "type": "String",
+          "name": "AuthenticationMethod"
+        },
+        {
+          "description": "",
+          "readonly": false,
           "type": "Numeric",
           "name": "Secure"
         },
@@ -8852,6 +8843,12 @@
           "readonly": false,
           "type": "Numeric",
           "name": "Port"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "AuthenticationMethod"
         },
         {
           "description": "",
@@ -9623,6 +9620,13 @@
         },
         {
           "description": "",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "name": "Renew"
+        },
+        {
+          "description": "",
           "parameters": [
             {
               "accesstype": "in",
@@ -9735,6 +9739,12 @@
           "readonly": false,
           "type": "Numeric",
           "name": "Color"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "Numeric",
+          "name": "BackColor"
         },
         {
           "description": "",
@@ -9901,6 +9911,12 @@
           "readonly": false,
           "type": "Numeric",
           "name": "Secure"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "WSDLUrl"
         },
         {
           "description": "",
@@ -15300,6 +15316,13 @@
           "readonly": true,
           "static": true,
           "type": "String",
+          "name": "ApplicationStartupPath"
+        },
+        {
+          "description": "",
+          "readonly": true,
+          "static": true,
+          "type": "String",
           "name": "ExternalFilesPath"
         },
         {
@@ -15523,6 +15546,14 @@
           "name": "FromJson"
         }
       ],
+      "properties": [
+        {
+          "description": "",
+          "readonly": false,
+          "type": "Numeric",
+          "name": "Count"
+        }
+      ],
       "name": "Properties"
     },
     {
@@ -15539,6 +15570,24 @@
           "readonly": false,
           "type": "Numeric",
           "name": "Priority"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "CorrelationId"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "MessageId"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "Properties",
+          "name": "Properties"
         }
       ],
       "name": "QueueMessage"
@@ -15549,7 +15598,7 @@
         {
           "description": "",
           "parameters": [],
-          "returns": "Numeric",
+          "returns": "Boolean",
           "scopes": null,
           "name": "Connect"
         },
@@ -15618,8 +15667,20 @@
         {
           "description": "",
           "readonly": false,
-          "type": "Numeric",
+          "type": "Boolean",
           "name": "Browse"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "Numeric",
+          "name": "ErrCode"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "ErrDescription"
         }
       ],
       "name": "Queue"
@@ -18545,6 +18606,12 @@
         },
         {
           "description": "",
+          "readonly": false,
+          "type": "Numeric",
+          "name": "ExpirationTimeout"
+        },
+        {
+          "description": "",
           "readonly": true,
           "static": true,
           "type": "Numeric",
@@ -18608,6 +18675,24 @@
           "readonly": false,
           "type": "Numeric",
           "name": "keyIdentifierType"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "CanonicalizationAlgorithm"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "Digest"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "SignatureAlgorithm"
         }
       ],
       "name": "WSSignature"
@@ -19070,7 +19155,7 @@
         {
           "description": "",
           "parameters": [],
-          "returns": "Any",
+          "returns": "String",
           "scopes": null,
           "name": "ToFormattedString"
         }
@@ -19328,6 +19413,12 @@
           "readonly": false,
           "type": "CallOptions",
           "name": "CallOptions"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "Location",
+          "name": "Location"
         }
       ],
       "name": "GXProgram"
@@ -19361,6 +19452,13 @@
           "returns": "String",
           "scopes": null,
           "name": "Link"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "String",
+          "scopes": null,
+          "name": "GetInternalURI"
         }
       ],
       "name": "ImagePEMs"
@@ -19698,7 +19796,7 @@
         {
           "description": "",
           "parameters": [],
-          "returns": "Any",
+          "returns": "Boolean",
           "scopes": null,
           "name": "IsNull"
         },
@@ -19719,7 +19817,7 @@
         {
           "description": "",
           "parameters": [],
-          "returns": "Any",
+          "returns": "String",
           "scopes": null,
           "name": "ToFormattedString"
         }
@@ -19893,7 +19991,7 @@
         {
           "description": "",
           "parameters": [],
-          "returns": "Any",
+          "returns": "String",
           "scopes": null,
           "name": "ToFormattedString"
         }
@@ -19980,419 +20078,6 @@
       "name": "DipOrPercentage"
     },
     {
-      "description": "Progress",
-      "methods": [
-        {
-          "description": "",
-          "parameters": [],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "Show"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "title"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "ShowWithTitle"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "title"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "description"
-            }
-          ],
-          "returns": "None",
-          "scopes": null,
-          "static": true,
-          "name": "ShowWithTitleAndDescription"
-        },
-        {
-          "description": "",
-          "parameters": [],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "Hide"
-        }
-      ],
-      "properties": [
-        {
-          "description": "",
-          "readonly": false,
-          "static": true,
-          "type": "String",
-          "name": "Class"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "static": true,
-          "type": "Any",
-          "name": "Type"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "static": true,
-          "type": "String",
-          "name": "Title"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "static": true,
-          "type": "String",
-          "name": "Description"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "static": true,
-          "type": "Any",
-          "name": "MaxValue"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "static": true,
-          "type": "Any",
-          "name": "Value"
-        }
-      ],
-      "name": "GeneXus.Common.UI.Progress"
-    },
-    {
-      "description": "Navigation",
-      "events": [
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "TargetName"
-            }
-          ],
-          "static": true,
-          "name": "TargetShown"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "TargetName"
-            }
-          ],
-          "static": true,
-          "name": "TargetHidden"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "TargetName"
-            }
-          ],
-          "static": true,
-          "name": "TargetExpanded"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "TargetName"
-            }
-          ],
-          "static": true,
-          "name": "TargetCollapsed"
-        }
-      ],
-      "methods": [
-        {
-          "description": "Makes a target visible. For example, ShowTarget(\"Left\") opens the Drawer in an app with Slide Navigation.",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "TargetName"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "ShowTarget"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "TargetName"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "HideTarget"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "TargetName"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "ExpandTarget"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "TargetName"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "CollapseTarget"
-        }
-      ],
-      "name": "GeneXus.Common.UI.Navigation"
-    },
-    {
-      "description": "Configuration Manager",
-      "methods": [
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "propName"
-            }
-          ],
-          "returns": "String",
-          "scopes": null,
-          "static": true,
-          "name": "GetValue"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "propName"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "fileName"
-            }
-          ],
-          "returns": "String",
-          "scopes": null,
-          "static": true,
-          "name": "GetValue"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "propName"
-            }
-          ],
-          "returns": "Boolean",
-          "scopes": null,
-          "static": true,
-          "name": "HasValue"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "propName"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "fileName"
-            }
-          ],
-          "returns": "Boolean",
-          "scopes": null,
-          "static": true,
-          "name": "HasValue"
-        }
-      ],
-      "name": "GeneXus.Common.Configuration.ConfigurationManager"
-    },
-    {
-      "description": "Clipboard",
-      "methods": [
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "data"
-            }
-          ],
-          "returns": "None",
-          "scopes": null,
-          "static": true,
-          "name": "SetText"
-        },
-        {
-          "description": "",
-          "parameters": [],
-          "returns": "String",
-          "scopes": null,
-          "static": true,
-          "name": "GetText"
-        }
-      ],
-      "name": "GeneXus.Common.Clipboard"
-    },
-    {
-      "description": "Analytics",
-      "methods": [
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "viewName"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "TrackView"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "category"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "action"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "label"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "value"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "TrackEvent"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "GeneXus.Common.AnalyticsPurchase",
-              "name": "purchaseInfo"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "static": true,
-          "name": "TrackPurchase"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "userId"
-            }
-          ],
-          "returns": "None",
-          "scopes": null,
-          "static": true,
-          "name": "SetUserId"
-        }
-      ],
-      "name": "GeneXus.Common.Analytics"
-    },
-    {
       "description": "Geolocation",
       "methods": [
         {
@@ -20470,6 +20155,21 @@
           "scopes": null,
           "static": true,
           "name": "ServiceEnabled"
+        },
+        {
+          "description": "Starts generating tracking information",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.Common.TrackingParameters",
+              "name": "TrackingParameters"
+            }
+          ],
+          "returns": "None",
+          "scopes": null,
+          "static": true,
+          "name": "StartTracking"
         },
         {
           "description": "Starts generating tracking information",
@@ -20722,6 +20422,623 @@
       "name": "GeneXus.Common.Geolocation"
     },
     {
+      "description": "Dynamic Call Old",
+      "methods": [
+        {
+          "description": "Sets the given CallOption's value to the given object name",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Qualified object name or link",
+              "type": "String",
+              "name": "ObjectName"
+            },
+            {
+              "accesstype": "in",
+              "description": "Call option to assign",
+              "type": "Any",
+              "name": "CallOption"
+            },
+            {
+              "accesstype": "in",
+              "description": "CallOption's value to assign",
+              "type": "String",
+              "name": "Value"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "SetOption"
+        }
+      ],
+      "name": "GeneXus.Common.DynamicCallOld"
+    },
+    {
+      "description": "Progress",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "Show"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "title"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ShowWithTitle"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "title"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "description"
+            }
+          ],
+          "returns": "None",
+          "scopes": null,
+          "static": true,
+          "name": "ShowWithTitleAndDescription"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "Hide"
+        }
+      ],
+      "properties": [
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "String",
+          "name": "Class"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "Any",
+          "name": "Type"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "String",
+          "name": "Title"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "String",
+          "name": "Description"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "Any",
+          "name": "MaxValue"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "Any",
+          "name": "Value"
+        }
+      ],
+      "name": "GeneXus.Common.UI.Progress"
+    },
+    {
+      "description": "Navigation",
+      "events": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "TargetName"
+            }
+          ],
+          "static": true,
+          "name": "TargetShown"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "TargetName"
+            }
+          ],
+          "static": true,
+          "name": "TargetHidden"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "TargetName"
+            }
+          ],
+          "static": true,
+          "name": "TargetExpanded"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "TargetName"
+            }
+          ],
+          "static": true,
+          "name": "TargetCollapsed"
+        }
+      ],
+      "methods": [
+        {
+          "description": "Makes a target visible. For example, ShowTarget(\"Left\") opens the Drawer in an app with Slide Navigation.",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "TargetName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ShowTarget"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "TargetName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "HideTarget"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "TargetName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ExpandTarget"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "TargetName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "CollapseTarget"
+        }
+      ],
+      "name": "GeneXus.Common.UI.Navigation"
+    },
+    {
+      "description": "Appearance",
+      "events": [
+        {
+          "description": "",
+          "parameters": [],
+          "name": "PreferredColorSchemeChanged"
+        }
+      ],
+      "properties": [
+        {
+          "description": "",
+          "readonly": true,
+          "static": true,
+          "type": "Any",
+          "name": "PreferredColorScheme"
+        }
+      ],
+      "name": "GeneXus.Common.UI.Appearance"
+    },
+    {
+      "description": "Design System",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Name"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Value"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "SetOption"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Name"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ClearOption"
+        }
+      ],
+      "name": "GeneXus.Common.UI.DesignSystem"
+    },
+    {
+      "description": "Configuration Manager",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "propName"
+            }
+          ],
+          "returns": "String",
+          "scopes": null,
+          "static": true,
+          "name": "GetValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "propName"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "fileName"
+            }
+          ],
+          "returns": "String",
+          "scopes": null,
+          "static": true,
+          "name": "GetValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "propName"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "HasValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "propName"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "fileName"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "HasValue"
+        }
+      ],
+      "name": "GeneXus.Common.Configuration.ConfigurationManager"
+    },
+    {
+      "description": "External Storage",
+      "methods": [
+        {
+          "description": "Instances a StorageProvider data type for a specific provider with a set of properties",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "StorageType"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "ext:Properties",
+              "name": "Properties"
+            },
+            {
+              "accesstype": "inout",
+              "description": "",
+              "type": "ext:StorageProvider",
+              "name": "OutStorageProvider"
+            },
+            {
+              "accesstype": "inout",
+              "description": "",
+              "type": "GeneXus.Common.Messages",
+              "name": "OutMessages"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "name": "Create"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "ProfileName"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "ext:Properties",
+              "name": "Properties"
+            },
+            {
+              "accesstype": "inout",
+              "description": "",
+              "type": "ext:StorageProvider",
+              "name": "OutStorageProvider"
+            },
+            {
+              "accesstype": "inout",
+              "description": "",
+              "type": "GeneXus.Common.Messages",
+              "name": "OutMessages"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "name": "Connect"
+        }
+      ],
+      "name": "GeneXus.Common.Configuration.ExternalStorage"
+    },
+    {
+      "description": "Clipboard",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "data"
+            }
+          ],
+          "returns": "None",
+          "scopes": null,
+          "static": true,
+          "name": "SetText"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "String",
+          "scopes": null,
+          "static": true,
+          "name": "GetText"
+        }
+      ],
+      "name": "GeneXus.Common.Clipboard"
+    },
+    {
+      "description": "Analytics",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "viewName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "TrackView"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "category"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "action"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "label"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "value"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "TrackEvent"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "category"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "action"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "label"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "value"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.Common.AnalyticsKeyValue",
+              "name": "customParameters"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "TrackEvent"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.Common.AnalyticsPurchase",
+              "name": "purchaseInfo"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "TrackPurchase"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "userId"
+            }
+          ],
+          "returns": "None",
+          "scopes": null,
+          "static": true,
+          "name": "SetUserId"
+        }
+      ],
+      "name": "GeneXus.Common.Analytics"
+    },
+    {
       "description": "Server",
       "methods": [
         {
@@ -20737,6 +21054,46 @@
     },
     {
       "description": "Runtime",
+      "methods": [
+        {
+          "description": "Returns the value of the environment variable. If it doesn't exist, it returns null.",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Environment variable name",
+              "type": "String",
+              "name": "varName"
+            }
+          ],
+          "returns": "String",
+          "scopes": null,
+          "static": true,
+          "name": "GetEnvironmentVariable"
+        },
+        {
+          "description": "Returns TRUE if the environment variable exists.",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Environment variable name",
+              "type": "String",
+              "name": "varName"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "HasEnvironmentVariable"
+        },
+        {
+          "description": "Retrieves all environment variable names and their values from the current process.",
+          "parameters": [],
+          "returns": "ext:Properties",
+          "scopes": null,
+          "static": true,
+          "name": "GetEnvironmentVariables"
+        }
+      ],
       "properties": [
         {
           "description": "",
@@ -20744,6 +21101,13 @@
           "static": true,
           "type": "Any",
           "name": "Environment"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "Numeric",
+          "name": "ExitCode"
         }
       ],
       "name": "GeneXus.Common.Runtime"
@@ -21000,25 +21364,311 @@
       ],
       "methods": [
         {
-          "description": "",
+          "description": "Calculates directions between the source and destination locations",
           "parameters": [
             {
               "accesstype": "in",
-              "description": "",
+              "description": "The source location for the route",
               "type": "GeoPoint",
               "name": "sourceLocation"
             },
             {
               "accesstype": "in",
-              "description": "",
+              "description": "The destination location for the route",
               "type": "GeoPoint",
               "name": "destinationLocation"
+            }
+          ],
+          "returns": "GeneXus.Common.Directions",
+          "scopes": null,
+          "static": true,
+          "name": "CalculateDirections"
+        },
+        {
+          "description": "Calculates directions between the source and destination locations with additional parameters",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "The source location for the route",
+              "type": "GeoPoint",
+              "name": "sourceLocation"
+            },
+            {
+              "accesstype": "in",
+              "description": "The destination location for the route",
+              "type": "GeoPoint",
+              "name": "destinationLocation"
+            },
+            {
+              "accesstype": "in",
+              "description": "The transport type to use when calculating the route",
+              "type": "Any",
+              "name": "transportType"
+            },
+            {
+              "accesstype": "in",
+              "description": "Whether the service will serve multiple alternative routes",
+              "type": "Boolean",
+              "name": "requestAlternateRoutes"
+            }
+          ],
+          "returns": "GeneXus.Common.Directions",
+          "scopes": null,
+          "static": true,
+          "name": "CalculateDirections"
+        },
+        {
+          "description": "Calculates directions between the source and destination locations with additional parameters",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.Common.DirectionsRequestParameters",
+              "name": "DirectionsParameters"
+            }
+          ],
+          "returns": "GeneXus.Common.Directions",
+          "scopes": null,
+          "static": true,
+          "name": "CalculateDirections"
+        },
+        {
+          "description": "Same as GetLocation(int, int, bool, bool), passing false to the last parameter",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Minimum precision required to obtain the location, in meters",
+              "type": "Any",
+              "name": "minAccuracy"
+            },
+            {
+              "accesstype": "in",
+              "description": "Maximum time to wait in seconds, to obtain the desired accuracy",
+              "type": "Any",
+              "name": "timeout"
+            },
+            {
+              "accesstype": "in",
+              "description": "Indicates if it is necessary to include the heading and speed information",
+              "type": "Boolean",
+              "name": "includeHeadingAndSpeed"
+            }
+          ],
+          "returns": "GeneXus.Common.LocationInfo",
+          "scopes": null,
+          "static": true,
+          "name": "GetLocation"
+        },
+        {
+          "description": "Starts generating tracking information",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.Common.TrackingParameters",
+              "name": "TrackingParameters"
             }
           ],
           "returns": "Any",
           "scopes": null,
           "static": true,
-          "name": "CalculateDirections"
+          "name": "StartTracking"
+        },
+        {
+          "description": "Returns the current location for the device",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Minimum precision required to obtain the location, in meters",
+              "type": "Any",
+              "name": "minAccuracy"
+            },
+            {
+              "accesstype": "in",
+              "description": "Maximum time to wait in seconds, to obtain the desired accuracy",
+              "type": "Any",
+              "name": "timeout"
+            },
+            {
+              "accesstype": "in",
+              "description": "Indicates if it is necessary to include the heading and speed information",
+              "type": "Boolean",
+              "name": "includeHeadingAndSpeed"
+            },
+            {
+              "accesstype": "in",
+              "description": "If set to true, following actions in a composite block will be executed, regardless of the execution status of this method",
+              "type": "Boolean",
+              "name": "ignoreErrors"
+            }
+          ],
+          "returns": "GeneXus.Common.LocationInfo",
+          "scopes": null,
+          "static": true,
+          "name": "GetLocation"
+        },
+        {
+          "description": "Starts generating tracking information",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Minimum time in seconds to generate new tracking information",
+              "type": "Any",
+              "name": "changesInterval"
+            },
+            {
+              "accesstype": "in",
+              "description": "Minimum distance in meters to generate new tracking information",
+              "type": "Any",
+              "name": "distance"
+            },
+            {
+              "accesstype": "in",
+              "description": "The name of the action from the parent object to be called where there is new tracking information available",
+              "type": "String",
+              "name": "action"
+            },
+            {
+              "accesstype": "in",
+              "description": "The minimum interval in seconds between invocations to the action. Must be greater than changesInterval.",
+              "type": "Any",
+              "name": "actionTimeInterval"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "StartTracking"
+        },
+        {
+          "description": "Starts generating tracking information",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Minimum time in seconds to generate new tracking information",
+              "type": "Any",
+              "name": "changesInterval"
+            },
+            {
+              "accesstype": "in",
+              "description": "Minimum distance in meters to generate new tracking information",
+              "type": "Any",
+              "name": "distance"
+            },
+            {
+              "accesstype": "in",
+              "description": "The name of the action from the parent object to be called where there is new tracking information available",
+              "type": "String",
+              "name": "action"
+            },
+            {
+              "accesstype": "in",
+              "description": "The minimum interval in seconds between invocations to the action. Must be greater than changesInterval.",
+              "type": "Any",
+              "name": "actionTimeInterval"
+            },
+            {
+              "accesstype": "in",
+              "description": "Precision to obtain the locations, in meters",
+              "type": "Any",
+              "name": "accuracy"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "StartTracking"
+        },
+        {
+          "description": "Stops the generation of tracking information",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "EndTracking"
+        },
+        {
+          "description": "Returns a collection of location information generated by the tracking methods",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "The initial time",
+              "type": "DateTime",
+              "name": "startTime"
+            }
+          ],
+          "returns": "GeneXus.Common.LocationInfo",
+          "scopes": null,
+          "static": true,
+          "name": "GetLocationHistory"
+        },
+        {
+          "description": "Removes all previous location information generated by the tracking methods",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ClearLocationHistory"
+        },
+        {
+          "description": "Returns the latitude of the given location",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeoPoint",
+              "name": "location"
+            }
+          ],
+          "returns": "Numeric",
+          "scopes": null,
+          "static": true,
+          "name": "GetLatitude"
+        },
+        {
+          "description": "Returns the longitude of the given location",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeoPoint",
+              "name": "location"
+            }
+          ],
+          "returns": "Numeric",
+          "scopes": null,
+          "static": true,
+          "name": "GetLongitude"
+        },
+        {
+          "description": "Returns a collection of addresses for the given location",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeoPoint",
+              "name": "location"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ReverseGeocode"
+        },
+        {
+          "description": "Returns a collection of locations for the given address",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "address"
+            }
+          ],
+          "returns": "GeoPoint",
+          "scopes": null,
+          "static": true,
+          "name": "GeocodeAddress"
         },
         {
           "description": "",
@@ -21026,35 +21676,402 @@
             {
               "accesstype": "in",
               "description": "",
+              "type": "GeneXus.Common.LocationProximityAlert",
+              "name": "proximityAlerts"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "SetProximityAlerts"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "GeneXus.Common.LocationProximityAlert",
+          "scopes": null,
+          "static": true,
+          "name": "GetProximityAlerts"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "GeneXus.Common.LocationProximityAlert",
+          "scopes": null,
+          "static": true,
+          "name": "GetCurrentProximityAlert"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ClearProximityAlerts"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.Common.LocationPickerParameters",
+              "name": "geoLocationPickerParameters"
+            }
+          ],
+          "returns": "GeoPoint",
+          "scopes": null,
+          "static": true,
+          "name": "PickLocation"
+        },
+        {
+          "description": "Returns the distance between the two locations given",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
               "type": "GeoPoint",
-              "name": "sourceLocation"
+              "name": "fromLocation"
             },
             {
               "accesstype": "in",
               "description": "",
               "type": "GeoPoint",
-              "name": "destinationLocation"
+              "name": "toLocation"
+            }
+          ],
+          "returns": "Numeric",
+          "scopes": null,
+          "static": true,
+          "name": "GetDistance"
+        },
+        {
+          "description": "Requests the user’s permission to temporarily use location services with full accuracy",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "The purpose for using full accuracy. This value could be showed to the user by the OS.",
+              "type": "String",
+              "name": "purpose"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "RequestTemporaryFullAccuracy"
+        }
+      ],
+      "properties": [
+        {
+          "description": "Returns the current authorization status.",
+          "readonly": true,
+          "static": true,
+          "type": "Any",
+          "name": "AuthorizationStatus"
+        },
+        {
+          "description": "Indicates whether the application has been given permission to use location services",
+          "readonly": true,
+          "static": true,
+          "type": "Boolean",
+          "name": "Authorized"
+        },
+        {
+          "description": "Indicates whether location services are enable in the device",
+          "readonly": true,
+          "static": true,
+          "type": "Boolean",
+          "name": "ServiceEnabled"
+        },
+        {
+          "description": "Indicates the level of location accuracy the user has granted permission to use",
+          "readonly": true,
+          "static": true,
+          "type": "Any",
+          "name": "AuthorizedAccuracy"
+        }
+      ],
+      "name": "GeneXus.Common.Maps"
+    },
+    {
+      "description": "Dynamic Call ",
+      "methods": [
+        {
+          "description": "Execute the default static method ",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Collection of parameters",
+              "type": "GeneXus.Common.AnyObject",
+              "name": "Parameters"
+            },
+            {
+              "accesstype": "out",
+              "description": "Collection of errors",
+              "type": "GeneXus.Common.Messages",
+              "name": "Errors"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "name": "Execute"
+        },
+        {
+          "description": "Execute a specific method",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Collection of parameters",
+              "type": "GeneXus.Common.AnyObject",
+              "name": "Parameters"
             },
             {
               "accesstype": "in",
-              "description": "",
+              "description": "Method information",
+              "type": "GeneXus.Common.DynamicCallMethodProperties",
+              "name": "MethodInfo"
+            },
+            {
+              "accesstype": "out",
+              "description": "Collection of errors",
+              "type": "GeneXus.Common.Messages",
+              "name": "Errors"
+            }
+          ],
+          "returns": "GeneXus.Common.AnyObject",
+          "scopes": null,
+          "name": "Execute"
+        },
+        {
+          "description": "Invoke the contructor of the object",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Collection of parameters",
+              "type": "GeneXus.Common.AnyObject",
+              "name": "Parameters"
+            },
+            {
+              "accesstype": "out",
+              "description": "Collection of errors",
+              "type": "GeneXus.Common.Messages",
+              "name": "Errors"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "name": "Create"
+        },
+        {
+          "description": "Sets the given CallOption's value to the given object name",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Qualified object name or link",
+              "type": "String",
+              "name": "ObjectName"
+            },
+            {
+              "accesstype": "in",
+              "description": "Call option to assign",
               "type": "Any",
-              "name": "transportType"
+              "name": "CallOption"
+            },
+            {
+              "accesstype": "in",
+              "description": "CallOption's value to assign",
+              "type": "String",
+              "name": "Value"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "name": "SetOption"
+        }
+      ],
+      "properties": [
+        {
+          "description": "Object to invoke",
+          "readonly": false,
+          "type": "String",
+          "name": "ObjectName"
+        },
+        {
+          "description": "Java Properties",
+          "readonly": false,
+          "type": "GeneXus.Common.DynamicCallPropertiesJava",
+          "name": "Java"
+        },
+        {
+          "description": "Net Properties",
+          "readonly": false,
+          "type": "GeneXus.Common.DynamicCallPropertiesNet",
+          "name": "Net"
+        }
+      ],
+      "name": "GeneXus.Common.DynamicCall"
+    },
+    {
+      "description": "Dynamic Call Properties Java",
+      "properties": [
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "ExternalName"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "PackageName"
+        }
+      ],
+      "name": "GeneXus.Common.DynamicCallPropertiesJava"
+    },
+    {
+      "description": "Dynamic Call Properties Net",
+      "properties": [
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "ExternalName"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "AssemblyName"
+        }
+      ],
+      "name": "GeneXus.Common.DynamicCallPropertiesNet"
+    },
+    {
+      "description": "Any Object",
+      "name": "GeneXus.Common.AnyObject"
+    },
+    {
+      "description": "Dynamic Call Method Properties",
+      "properties": [
+        {
+          "description": "",
+          "readonly": false,
+          "type": "Boolean",
+          "name": "IsStatic"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "type": "String",
+          "name": "MethodName"
+        }
+      ],
+      "name": "GeneXus.Common.DynamicCallMethodProperties"
+    },
+    {
+      "description": "Crash Analytics",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "DidCrashOnPreviousExecution"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Key"
             },
             {
               "accesstype": "in",
               "description": "",
-              "type": "Boolean",
-              "name": "requestAlternateRoutes"
+              "type": "String",
+              "name": "Value"
             }
           ],
           "returns": "Any",
           "scopes": null,
           "static": true,
-          "name": "CalculateDirections"
+          "name": "SetCustomKey"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.Common.CrashAnalyticsKeyValue",
+              "name": "CustomKeysAndValues"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "SetCustomKeys"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Key"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "RemoveCustomKey"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "UserId"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "SetUserId"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Message"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "Log"
         }
       ],
-      "name": "GeneXus.Common.Maps"
+      "properties": [
+        {
+          "description": "",
+          "readonly": true,
+          "static": true,
+          "type": "Boolean",
+          "name": "Enabled"
+        }
+      ],
+      "name": "GeneXus.Common.CrashAnalytics"
     },
     {
       "description": "Client Information",
@@ -21079,13 +22096,6 @@
           "static": true,
           "type": "String",
           "name": "OSVersion"
-        },
-        {
-          "description": "",
-          "readonly": true,
-          "static": true,
-          "type": "String",
-          "name": "NetworkID"
         },
         {
           "description": "",
@@ -21290,7 +22300,7 @@
       "properties": [
         {
           "description": "",
-          "readonly": false,
+          "readonly": true,
           "static": true,
           "type": "Any",
           "name": "Status"
@@ -21523,8 +22533,8 @@
             {
               "accesstype": "in",
               "description": "",
-              "type": "String",
-              "name": "fileURI"
+              "type": "Any",
+              "name": "uri"
             },
             {
               "accesstype": "in",
@@ -21543,9 +22553,37 @@
           "scopes": null,
           "static": true,
           "name": "ShareFile"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "uri"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ShareFile"
         }
       ],
       "name": "GeneXus.Social.Share"
+    },
+    {
+      "description": "WeChat",
+      "properties": [
+        {
+          "description": "Whether WeChat is installed on the device and can be used by the app",
+          "readonly": true,
+          "static": true,
+          "type": "Boolean",
+          "name": "IsAvailable"
+        }
+      ],
+      "name": "GeneXus.Social.WeChat"
     },
     {
       "description": "Socket",
@@ -21773,6 +22811,23 @@
           "scopes": null,
           "static": true,
           "name": "RequestRemoteNotificationsPermission"
+        },
+        {
+          "description": "Requests permission to access app-related data that can be used for tracking the user or the device.",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "RequestUserTrackingPermission"
+        }
+      ],
+      "properties": [
+        {
+          "description": "The tracking authorization status that is current for the application.",
+          "readonly": true,
+          "static": true,
+          "type": "Any",
+          "name": "UserTrackingPermissionStatus"
         }
       ],
       "name": "GeneXus.SD.iOS.Permissions"
@@ -21901,311 +22956,18 @@
       "name": "GeneXus.SD.Store.StoreManager"
     },
     {
-      "description": "Notifications Configuration",
-      "properties": [
-        {
-          "description": "",
-          "readonly": false,
-          "type": "String",
-          "name": "iOScertificate"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "type": "String",
-          "name": "iOScertificatePassword"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "type": "Boolean",
-          "name": "iOSuseSandboxServer"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "type": "String",
-          "name": "androidSenderId"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "type": "String",
-          "name": "androidSenderAPIKey"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "type": "String",
-          "name": "WNSPackageSecurityIdentifier"
-        },
-        {
-          "description": "",
-          "readonly": false,
-          "type": "String",
-          "name": "WNSClientSecret"
-        }
-      ],
-      "name": "GeneXus.SD.Notifications.NotificationsConfiguration"
-    },
-    {
-      "description": "Remote Notification Result",
-      "properties": [
-        {
-          "description": "",
-          "readonly": true,
-          "type": "Numeric",
-          "name": "ErrorCode"
-        },
-        {
-          "description": "",
-          "readonly": true,
-          "type": "String",
-          "name": "ErrorDescription"
-        },
-        {
-          "description": "",
-          "readonly": true,
-          "type": "Any",
-          "name": "DeviceType"
-        },
-        {
-          "description": "",
-          "readonly": true,
-          "type": "String",
-          "name": "DeviceToken"
-        }
-      ],
-      "name": "GeneXus.SD.Notifications.RemoteNotificationResult"
-    },
-    {
-      "description": "Notification Parameters",
+      "description": "Store Interop",
       "methods": [
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "name"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "value"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "name": "SetParameter"
-        }
-      ],
-      "name": "GeneXus.SD.Notifications.NotificationParameters"
-    },
-    {
-      "description": "Remote Notifications",
-      "methods": [
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "ApplicationId"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Any",
-              "name": "DeviceType"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "DeviceToken"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "AlertMessage"
-            }
-          ],
-          "returns": "Numeric",
-          "scopes": null,
-          "name": "Call"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "ApplicationId"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "DeviceToken"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Numeric",
-              "name": "BadgeNumber"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "Sound"
-            }
-          ],
-          "returns": "Numeric",
-          "scopes": null,
-          "name": "IOSSetBadge"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "ApplicationId"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "DeviceToken"
-            }
-          ],
-          "returns": "Numeric",
-          "scopes": null,
-          "name": "IOSResetBadge"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "ApplicationId"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "Any",
-              "name": "DeviceType"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "DeviceToken"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "AlertMessage"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "ActionName"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "GeneXus.SD.Notifications.NotificationParameters",
-              "name": "Parameters"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "name": "CallAction"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "ApplicationId"
-            }
-          ],
-          "returns": "Numeric",
-          "scopes": null,
-          "name": "OpenSession"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "GeneXus.SD.Notifications.RemoteNotification",
-              "name": "RemoteNotification"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "name": "Add"
-        },
         {
           "description": "",
           "parameters": [],
-          "returns": "GeneXus.SD.Notifications.RemoteNotificationResult",
+          "returns": "Boolean",
           "scopes": null,
-          "name": "Send"
-        },
-        {
-          "description": "",
-          "parameters": [
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "String",
-              "name": "ApplicationId"
-            },
-            {
-              "accesstype": "in",
-              "description": "",
-              "type": "GeneXus.SD.Notifications.NotificationsConfiguration",
-              "name": "Configuration"
-            }
-          ],
-          "returns": "Any",
-          "scopes": null,
-          "name": "SetConfiguration"
+          "static": true,
+          "name": "AskForReview"
         }
       ],
-      "properties": [
-        {
-          "description": "",
-          "readonly": true,
-          "type": "Numeric",
-          "name": "ErrorCode"
-        },
-        {
-          "description": "",
-          "readonly": true,
-          "type": "String",
-          "name": "ErrorDescription"
-        }
-      ],
-      "name": "GeneXus.SD.Notifications.RemoteNotifications"
+      "name": "GeneXus.SD.Store.StoreInterop"
     },
     {
       "description": "Local Notifications",
@@ -22667,6 +23429,226 @@
       "name": "GeneXus.SD.Media.AudioRecorder"
     },
     {
+      "description": "Files",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "acceptedTypes"
+            }
+          ],
+          "returns": "BlobFile",
+          "scopes": null,
+          "static": true,
+          "name": "ChooseFile"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "BlobFile",
+          "scopes": null,
+          "static": true,
+          "name": "ChooseFile"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "fileUri"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "destination"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "SaveToFolder"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "fileUri"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "destination"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "saveMode"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "SaveToFolder"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "destination"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "IsDeviceFolderAvailable"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "acceptedTypes"
+            }
+          ],
+          "returns": "BlobFile",
+          "scopes": null,
+          "static": true,
+          "name": "ChooseFiles"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "BlobFile",
+          "scopes": null,
+          "static": true,
+          "name": "ChooseFiles"
+        }
+      ],
+      "name": "GeneXus.SD.Media.Files"
+    },
+    {
+      "description": "Video Operations",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Video",
+              "name": "video"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.SD.Media.VideoConversionParameters",
+              "name": "convertions"
+            }
+          ],
+          "returns": "Video",
+          "scopes": null,
+          "static": true,
+          "name": "ApplyConversions"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Video",
+              "name": "video"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "format"
+            }
+          ],
+          "returns": "Video",
+          "scopes": null,
+          "static": true,
+          "name": "ConvertFormat"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Video",
+              "name": "video"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "quality"
+            }
+          ],
+          "returns": "Video",
+          "scopes": null,
+          "static": true,
+          "name": "ReduceQuality"
+        }
+      ],
+      "name": "GeneXus.SD.Media.VideoOperations"
+    },
+    {
+      "description": "Data Base",
+      "methods": [
+        {
+          "description": "Call this method to execute the backup of the appplication offline database.",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Path Uri of the backup file",
+              "type": "Any",
+              "name": "Path"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "Backup"
+        },
+        {
+          "description": "Call this method to execute the restore of the appplication offline database from previous backup.",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Path Uri of the backup file",
+              "type": "Any",
+              "name": "Path"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "Restore"
+        }
+      ],
+      "name": "GeneXus.SD.Offline.DataBase"
+    },
+    {
       "description": "Actions",
       "methods": [
         {
@@ -22825,6 +23807,21 @@
           "name": "Cancel"
         },
         {
+          "description": "Returns to the object specified in the parameter, like ReturnTo method, but with the behavior of Cancel method.",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "Object to return to.",
+              "type": "Any",
+              "name": "ObjectName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "CancelTo"
+        },
+        {
           "description": "Call this action to execute the standard delete in the edit form in the device.",
           "parameters": [],
           "returns": "Any",
@@ -22976,6 +23973,22 @@
           "scopes": null,
           "static": true,
           "name": "GetAllContacts"
+        },
+        {
+          "description": "Pick contact from the device's Address Book",
+          "parameters": [],
+          "returns": "GeneXus.SD.ContactInfo",
+          "scopes": null,
+          "static": true,
+          "name": "PickContact"
+        },
+        {
+          "description": "Pick a collection of contacts from the device's Address Book",
+          "parameters": [],
+          "returns": "GeneXus.SD.ContactInfo",
+          "scopes": null,
+          "static": true,
+          "name": "PickContacts"
         }
       ],
       "name": "GeneXus.SD.Contacts"
@@ -23178,6 +24191,51 @@
             {
               "accesstype": "in",
               "description": "",
+              "type": "Any",
+              "name": "Cc"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Bcc"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Subject"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Message"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "BlobFile",
+              "name": "Attachment"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "SendEmailAdvanced"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "To"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
               "type": "String",
               "name": "Message"
             }
@@ -23210,6 +24268,54 @@
               "description": "",
               "type": "String",
               "name": "Message"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "OkButtonText"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "Msg"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Message"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "Confirm"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Message"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "OkButtonText"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "CancelButtonText"
             }
           ],
           "returns": "Boolean",
@@ -23262,6 +24368,57 @@
           "scopes": null,
           "static": true,
           "name": "Open"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Screen"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "OpenSettings"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Screen"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Option"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "OpenSettings"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Url"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "OpenSettingsUrl"
         },
         {
           "description": "",
@@ -23337,6 +24494,14 @@
           "scopes": null,
           "static": true,
           "name": "IOSSetSelectedTabIndex"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Numeric",
+          "scopes": null,
+          "static": true,
+          "name": "ShowError"
         }
       ],
       "properties": [
@@ -23347,6 +24512,13 @@
           "static": true,
           "type": "Any",
           "name": "ApplicationState"
+        },
+        {
+          "description": "Get or set the Brightness of the device Screen",
+          "readonly": false,
+          "static": true,
+          "type": "Numeric",
+          "name": "ScreenBrightness"
         }
       ],
       "name": "GeneXus.SD.Interop"
@@ -23412,6 +24584,42 @@
           "scopes": null,
           "static": true,
           "name": "ScanInLoop"
+        },
+        {
+          "description": "Allows scanning a barcode from an image",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "The image to scan",
+              "type": "Image",
+              "name": "Image"
+            }
+          ],
+          "returns": "GeneXus.SD.ScannedBarcodes",
+          "scopes": null,
+          "static": true,
+          "name": "ScanFromImage"
+        },
+        {
+          "description": "Allows scanning a barcode from an image",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "The image to scan",
+              "type": "Image",
+              "name": "Image"
+            },
+            {
+              "accesstype": "in",
+              "description": "A collection of the barcode types to detect",
+              "type": "Any",
+              "name": "BarcodeTypes"
+            }
+          ],
+          "returns": "GeneXus.SD.ScannedBarcodes",
+          "scopes": null,
+          "static": true,
+          "name": "ScanFromImage"
         }
       ],
       "name": "GeneXus.SD.Scanner"
@@ -24069,6 +25277,647 @@
         }
       ],
       "name": "GeneXus.SD.CardScanner"
+    },
+    {
+      "description": "Printer",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "String",
+          "scopes": null,
+          "static": true,
+          "name": "GetDevices"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Path"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "Print"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Path"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Rotation"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "Print"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "CutPaper"
+        }
+      ],
+      "properties": [
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "String",
+          "name": "PrinterName"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "Numeric",
+          "name": "Dpi"
+        },
+        {
+          "description": "",
+          "readonly": false,
+          "static": true,
+          "type": "Numeric",
+          "name": "Width"
+        }
+      ],
+      "name": "GeneXus.SD.Printer"
+    },
+    {
+      "description": "Document Scanner",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Image",
+          "scopes": null,
+          "static": true,
+          "name": "ScanOne"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.SD.ScanDocumentSettings",
+              "name": "Settings"
+            }
+          ],
+          "returns": "Image",
+          "scopes": null,
+          "static": true,
+          "name": "ScanOne"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Image",
+          "scopes": null,
+          "static": true,
+          "name": "ScanMany"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.SD.ScanDocumentSettings",
+              "name": "Settings"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "MaximumScans"
+            }
+          ],
+          "returns": "Image",
+          "scopes": null,
+          "static": true,
+          "name": "ScanMany"
+        }
+      ],
+      "name": "GeneXus.SD.DocumentScanner"
+    },
+    {
+      "description": "Augmented Reality Preview",
+      "methods": [
+        {
+          "description": "Previews the given 3D object model in Augmented Reality.",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "The 3D object model file to preview.",
+              "type": "Any",
+              "name": "Object3D"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "PreviewObject"
+        }
+      ],
+      "properties": [
+        {
+          "description": "Determines if 3D objects models can be displayed in Augmented Reality.",
+          "readonly": true,
+          "static": true,
+          "type": "Boolean",
+          "name": "IsAvailable"
+        }
+      ],
+      "name": "GeneXus.SD.ARPreview"
+    },
+    {
+      "description": "Ads",
+      "events": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "adUnitID"
+            }
+          ],
+          "name": "InterstitialLoaded"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "adUnitID"
+            }
+          ],
+          "name": "InterstitialFailedToLoad"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "adUnitID"
+            }
+          ],
+          "name": "InterstitialClicked"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "adUnitID"
+            }
+          ],
+          "name": "InterstitialClosed"
+        }
+      ],
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "adUnitID"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "RequestInterstitial"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "adUnitID"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "IsInterstitialReady"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "adUnitID"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "ShowInterstitial"
+        }
+      ],
+      "name": "GeneXus.SD.Ads"
+    },
+    {
+      "description": "Maps Offline",
+      "events": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "RegionName"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeneXus.Common.Messages",
+              "name": "Messages"
+            }
+          ],
+          "name": "RegionDownloadEnded"
+        }
+      ],
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "RegionName"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeoPoint",
+              "name": "NorthEast"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "GeoPoint",
+              "name": "SouthWest"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "MinZoom"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Numeric",
+              "name": "MaxZoom"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "DownloadRegion"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "RegionName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ClearRegion"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "ClearRegions"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "RegionName"
+            }
+          ],
+          "returns": "GeneXus.SD.MapRegion",
+          "scopes": null,
+          "static": true,
+          "name": "GetRegionStatus"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "RegionName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "CancelRegionDownload"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "RegionName"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "PauseRegionDownload"
+        }
+      ],
+      "properties": [
+        {
+          "description": "",
+          "readonly": true,
+          "static": true,
+          "type": "Boolean",
+          "name": "IsOfflineGeographicDataSupported"
+        },
+        {
+          "description": "",
+          "readonly": true,
+          "static": true,
+          "type": "String",
+          "name": "DownloadedRegions"
+        },
+        {
+          "description": "",
+          "readonly": true,
+          "static": true,
+          "type": "Numeric",
+          "name": "Size"
+        }
+      ],
+      "name": "GeneXus.SD.MapsOffline"
+    },
+    {
+      "description": "Remote Config",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "key"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "HasValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "key"
+            }
+          ],
+          "returns": "String",
+          "scopes": null,
+          "static": true,
+          "name": "GetStringValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "key"
+            }
+          ],
+          "returns": "Numeric",
+          "scopes": null,
+          "static": true,
+          "name": "GetIntegerValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "key"
+            }
+          ],
+          "returns": "Numeric",
+          "scopes": null,
+          "static": true,
+          "name": "GetDecimalValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "key"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "GetBooleanValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "key"
+            }
+          ],
+          "returns": "Date",
+          "scopes": null,
+          "static": true,
+          "name": "GetDateValue"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "key"
+            }
+          ],
+          "returns": "DateTime",
+          "scopes": null,
+          "static": true,
+          "name": "GetDateTimeValue"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "Fetch"
+        },
+        {
+          "description": "",
+          "parameters": [],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "Apply"
+        }
+      ],
+      "properties": [
+        {
+          "description": "",
+          "readonly": true,
+          "static": true,
+          "type": "DateTime",
+          "name": "LastSuccessfulFetch"
+        },
+        {
+          "description": "",
+          "readonly": true,
+          "static": true,
+          "type": "Any",
+          "name": "LastFetchStatus"
+        }
+      ],
+      "name": "GeneXus.SD.RemoteConfig"
+    },
+    {
+      "description": "Permissions",
+      "methods": [
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Permission"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "Request"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Permission"
+            },
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "String",
+              "name": "Rationale"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "Request"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Permission"
+            }
+          ],
+          "returns": "Boolean",
+          "scopes": null,
+          "static": true,
+          "name": "RequestMany"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "accesstype": "in",
+              "description": "",
+              "type": "Any",
+              "name": "Permission"
+            }
+          ],
+          "returns": "Any",
+          "scopes": null,
+          "static": true,
+          "name": "GetStatus"
+        }
+      ],
+      "name": "GeneXus.SD.Permissions"
     },
     {
       "description": "",
