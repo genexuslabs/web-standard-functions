@@ -14,6 +14,10 @@
     },
     "Core": {
       "members": {
+        "Abs": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/math/abs",
+          "name": "abs"
+        },
         "Asc": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/asc",
           "name": "asc"
@@ -268,6 +272,14 @@
         "Upper": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toUpper",
           "name": "toUpper"
+        },
+        "UrlDecode": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/urlDecode",
+          "name": "urlDecode"
+        },
+        "UrlEncode": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/web/urlEncode",
+          "name": "urlEncode"
         },
         "Val": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/toNumeric",
@@ -1729,9 +1741,14 @@
       "FromJsonFile": "collectionFromJsonFile",
       "Clone": "collectionClone"
     },
+    "Core": {
+      "SetUserId": "setCoreUserId",
+      "GetLocation": "getCoreLocation"
+    },
     "Directory": {
       "Delete": "dirDelete",
-      "Exists": "dirExists"
+      "Exists": "dirExists",
+      "Create": "dirCreate"
     },
     "File": {
       "Close": "fileClose",
@@ -1865,6 +1882,26 @@
     "GeneXus.Common.Analytics": {
       "SetUserId": "setAnalyticsUserId"
     },
+    "GeneXus.Common.CrashAnalytics": {
+      "SetUserId": "setCrashAnalyticsUserId"
+    },
+    "GeneXus.Common.Configuration.ExternalStorage": {
+      "Create": "ExternalStorageCreate"
+    },
+
+    "GeneXus.Common.Configuration.ConfigurationManager": {
+      "HasValue": "ConfigurationManagerHasValue"
+    },
+    "GeneXus.Common.DynamicCall": {
+      "Create": "DynamicCallCreate",
+      "SetOption": "DynamicCallSetOption"
+    },
+    "GeneXus.Common.DynamicCallOld": {
+      "SetOption": "DynamicCallOldSetOption"
+    },
+    "GeneXus.Common.Maps": {
+      "GetLocation": "getMapsLocation"
+    },
     "GeneXus.Common.Log": {
       "Error": "logError"
     },
@@ -1880,8 +1917,17 @@
     "GeneXus.SD.Notifications.RemoteNotifications": {
       "Add": "remoteNotificationAdd"
     },
+    "GeneXus.SD.RemoteConfig": {
+      "HasValue": "RemoteConfigHasValue"
+    },
     "GeneXus.Social.Facebook": {
       "ShareImage": "fbShareImage"
+    },
+    "GXProgram": {
+      "Create": "GXProgramCreate"
+    },
+    "SDObject": {
+      "Create": "SDObjectCreate"
     }
   },
   "ignored": {
