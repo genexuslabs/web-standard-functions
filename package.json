@@ -43,6 +43,13 @@
   },
   "homepage": "https://github.com/genexuslabs/web-standard-functions#readme",
   "devDependencies": {
+    "@microsoft/applicationinsights-web": "^3.2.0",
+    "@opentelemetry/auto-instrumentations-web": "^0.38.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.50.0",
+    "@opentelemetry/instrumentation": "^0.50.0",
+    "@opentelemetry/resources": "^1.23.0",
+    "@opentelemetry/sdk-trace-web": "^1.23.0",
+    "@opentelemetry/semantic-conventions": "^1.23.0",
     "@types/jest": "^27.0.2",
     "@types/pubsub-js": "^1.5.18",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
