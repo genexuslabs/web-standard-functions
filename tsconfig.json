@@ -3,7 +3,7 @@
     "moduleResolution": "node",
     "module": "commonjs",
     "target": "es2017",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2021", "dom"],
     "outDir": "./dist/lib",
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
