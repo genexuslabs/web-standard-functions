@@ -12,8 +12,6 @@
 
 import { padRight } from "../text/padRight";
 import { replace } from "../text/replace";
-import { GxBigNumber } from "../types/gxbignumber";
-import { formatNumber_helper } from "./formatNumber_helper";
 
 const numericLenDec = (picture: string) => {
   let decPicturePart = picture.split(".");
@@ -23,12 +21,6 @@ const numericLenDec = (picture: string) => {
   let integers = (integerPicturePart.match(/9|Z|#|\?|\\/g) || []).length;
   let decimals = (str_decPicturePart.match(/9|Z|#|\?|\\/g) || []).length;
   return { Integers: integers, Decimals: decimals };
-};
-
-type t_isBigDecimal = (value: any) => boolean;
-
-const isBigDecimal: t_isBigDecimal = (value: any) => {
-  return false;
 };
 
 const checkPictureCharacter = (char: string, isDecimal: boolean) => {

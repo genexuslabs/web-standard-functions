@@ -1,5 +1,6 @@
 import { GxBigNumber } from "../../types/gxbignumber";
-import { formatNumber_helper } from "../formatNumber_helper";
+import { formatNumericField } from "../formatNumericField";
+import { formatNumericFieldBigNumber } from "../../bigNumber/formatNumericField";
 
 const testCases: Array<[number, string, string]> = [
   [1, "99", "01"],
@@ -40,6 +41,7 @@ const testCases: Array<[number, string, string]> = [
   [3456.97, "ZZ9,999.99", "3,456.97"],
   [34234.55, "ZZ99,999.99", "34,234.55"],
   [395.35, "ZZ9,999.99", "0,395.35"],
+  [-123.4, "ZZZ9.99", "-123.40"],
   [-123.4, "(9,999.99)", "(0,123.40)"],
   [123.4, "(9,999.99)", "0,123.40"],
   [-123.4, "DB9,999.99", "-DB0,123.40"],
@@ -52,18 +54,20 @@ const testCases: Array<[number, string, string]> = [
   [13.2, "ZZZZZZ9.99", "13.20"]
 ];
 
-describe("Numeric::formatNumber", () => {
+describe("Numeric::formatNumericField", () => {
   for (const t of testCases) {
     it(`toFormattedString(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(formatNumber_helper(t[0], t[1])).toBe(t[2]);
+      expect(formatNumericField(t[0], t[1])).toBe(t[2]);
     });
   }
 });
 
-describe("Numeric::formatNumber", () => {
+describe("Numeric::formatNumericFieldBigNumber", () => {
   for (const t of testCases) {
     it(`toFormattedString(${t[0]},${t[1]}) should be equal to ${t[2]}`, () => {
-      expect(formatNumber_helper(new GxBigNumber(t[0]), t[1])).toBe(t[2]);
+      expect(formatNumericFieldBigNumber(new GxBigNumber(t[0]), t[1])).toBe(
+        t[2]
+      );
     });
   }
 });
