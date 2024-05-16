@@ -8,7 +8,11 @@ import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
 import { Resource } from "@opentelemetry/resources";
 import { SEMRESATTRS_SERVICE_NAME } from "@opentelemetry/semantic-conventions";
 
-export const activeLightstep = (serviceName: string, token: string) => {
+export const activeLightstep = (
+  serviceName: string,
+  token: string,
+  endpoint: string
+) => {
   const provider = new WebTracerProvider({
     resource: new Resource({
       [SEMRESATTRS_SERVICE_NAME]: serviceName
@@ -18,7 +22,7 @@ export const activeLightstep = (serviceName: string, token: string) => {
   provider.addSpanProcessor(
     new BatchSpanProcessor(
       new OTLPTraceExporter({
-        url: "https://ingest.lightstep.com:443/v1/traces",
+        url: endpoint,
         headers: {
           "lightstep-access-token": token
         }
