@@ -8,7 +8,7 @@ import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
 import { Resource } from "@opentelemetry/resources";
 import { SEMRESATTRS_SERVICE_NAME } from "@opentelemetry/semantic-conventions";
 
-export const activeLightstep = (
+export const activeOpenTelemetry = (
   serviceName: string,
   token: string,
   endpoint: string
@@ -19,13 +19,26 @@ export const activeLightstep = (
     })
   });
 
+  let headers = {};
+  if (endpoint.toLowerCase().includes("lightstep")) {
+    headers = {
+      "lightstep-access-token": token
+    };
+  } else if (endpoint.toLowerCase().includes("signoz")) {
+    headers = {
+      "signoz-access-token": token
+    };
+  } else {
+    headers = {
+      "access-token": token
+    };
+  }
+
   provider.addSpanProcessor(
     new BatchSpanProcessor(
       new OTLPTraceExporter({
         url: endpoint,
-        headers: {
-          "lightstep-access-token": token
-        }
+        headers: headers
       })
     )
   );
