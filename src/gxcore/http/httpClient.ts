@@ -27,8 +27,10 @@ export class GxHttpClient {
   reader;
   decoder = new TextDecoder("utf-8");
   error: string = "";
-  bodyAux = {};
+  bodyObject = {};
+  bodyString = "";
   objHeaders = {};
+  contType = "";
 
   constructor(Port: number = 0) {
     this.Host = "localhost";
@@ -74,31 +76,72 @@ export class GxHttpClient {
       urlAux = url;
     }
 
-    let contType = this.Headers["Content-Type"];
-
-    if (this.Files) {
+    if (this.Files.length > 0) {
       for (let i = 0; i < this.Files.length; i++) {
-        if (contType) {
-          if (contType === "application/json") {
-            const objectData = await this.uploadGXobject(
-              urlAux,
-              this.Files[i]["path"]
-            );
-            this.bodyAux[`${this.Files[i]["name"]}`] = objectData["object_id"];
-          } else if (contType === "multipart/form-data") {
+        if (this.contType) {
+          if (this.contType.toLowerCase() === "multipart/form-data") {
             const response = await fetch(this.Files[i]["path"]);
             const blob = await response.blob();
-            this.bodyAux[`${this.Files[i]["name"]}`] = blob;
+            this.bodyObject[`${this.Files[i]["name"]}`] = blob;
+          } else {
+            const response = await fetch(this.Files[i]["path"]);
+            const blob = await response.blob();
+            this.Body = blob;
           }
+        } else {
+          const response = await fetch(this.Files[i]["path"]);
+          const blob = await response.blob();
+          this.Body = blob;
         }
       }
     }
 
-    if (contType) {
-      if (contType === "application/json") {
-        this.Body = this.objectToJson(this.bodyAux);
-      } else if (contType === "multipart/form-data") {
-        this.Body = this.objectToFormData(this.bodyAux);
+    let auxVariables = "";
+    if (Object.keys(this.Variables).length !== 0) {
+      if (this.contType.toLowerCase() === "multipart/form-data") {
+        const keys = Object.keys(this.Variables);
+        for (let i = 0; i < keys.length; i++) {
+          const name = keys[i];
+          const value = this.Variables[name];
+          this.bodyObject[name] = value;
+        }
+      } else {
+        const keys = Object.keys(this.Variables);
+
+        for (let i = 0; i < keys.length; i++) {
+          const name = keys[i];
+          const value = this.Variables[name];
+
+          if (i === keys.length - 1) {
+            auxVariables += `${encodeURI(name)}=${encodeURI(value)}`;
+          } else {
+            auxVariables += `${encodeURI(name)}=${encodeURI(value)}&`;
+          }
+        }
+        urlAux = urlAux + "?" + auxVariables;
+      }
+    }
+
+    if (!this.Body) {
+      if (this.contType) {
+        if (this.contType.toLowerCase() === "multipart/form-data") {
+          if (this.bodyString !== "") {
+            this.Body = this.objectToFormData({
+              ...this.bodyObject,
+              ...JSON.parse(this.bodyString)
+            });
+          } else {
+            this.Body = this.objectToFormData(this.bodyObject);
+          }
+        } else {
+          if (this.bodyString !== "") {
+            this.Body = this.bodyString;
+          }
+        }
+      } else {
+        if (this.bodyString !== "") {
+          this.Body = this.bodyString;
+        }
       }
     }
 
@@ -107,23 +150,6 @@ export class GxHttpClient {
       headers: this.Headers,
       body: this.Body
     };
-
-    let auxVariables = "";
-    if (Object.keys(this.Variables).length !== 0) {
-      const keys = Object.keys(this.Variables);
-
-      for (let i = 0; i < keys.length; i++) {
-        const name = keys[i];
-        const value = this.Variables[name];
-
-        if (i === keys.length - 1) {
-          auxVariables += `${name}=${value}`;
-        } else {
-          auxVariables += `${name}=${value}&`;
-        }
-      }
-      urlAux = urlAux + "?" + auxVariables;
-    }
 
     if (this.IncludeCookies === true) {
       options["credentials"] = "same-origin";
@@ -152,6 +178,17 @@ export class GxHttpClient {
       this.reader = "";
       this.EOF = false;
 
+      // Reset
+      this.Headers = {};
+      this.Body = null;
+      this.Variables = {};
+      this.Files = [];
+
+      this.bodyObject = {};
+      this.bodyString = "";
+      this.objHeaders = {};
+      this.contType = "";
+
       return this.response;
     } catch (error) {
       this.error = error.message;
@@ -160,11 +197,34 @@ export class GxHttpClient {
       this.setStatusCode();
       this.setReasonLine();
       this.setErrorCode();
+
+      // Reset
+      this.Headers = {};
+      this.Body = null;
+      this.Variables = {};
+      this.Files = [];
+
+      this.bodyObject = {};
+      this.bodyString = "";
+      this.objHeaders = {};
+      this.contType = "";
     }
   }
 
   addHeader(name: string, value: string) {
-    this.Headers[name] = value;
+    if (name.toLowerCase() !== "content-type") {
+      this.Headers[name] = value;
+    } else {
+      if (
+        name.toLowerCase() === "content-type" &&
+        value.toLowerCase() !== "multipart/form-data"
+      ) {
+        this.Headers[name] = value;
+        this.contType = value;
+      } else {
+        this.contType = value;
+      }
+    }
   }
 
   addAuthentication(method: number, user: string, password: string) {
@@ -188,10 +248,10 @@ export class GxHttpClient {
   }
 
   addString(stringText: string) {
-    if (!this.bodyAux) {
-      this.bodyAux = JSON.parse(stringText);
+    if (this.bodyString !== "") {
+      this.bodyString += stringText;
     } else {
-      this.bodyAux = { ...this.bodyAux, ...JSON.parse(stringText) };
+      this.bodyString = stringText;
     }
   }
 
@@ -199,8 +259,11 @@ export class GxHttpClient {
     this.Variables[name] = value;
   }
 
-  addFile(name: string, path: string) {
+  addFile(path: string, name?: string) {
     let fileInformation = {};
+    if (!name) {
+      name = "";
+    }
     fileInformation["name"] = name;
     fileInformation["path"] = path;
 
@@ -307,43 +370,6 @@ export class GxHttpClient {
     }
   }
 
-  private async uploadGXobject(url, path) {
-    const response = await fetch(path);
-    const blob = await response.blob();
-
-    return new Promise<any>((resolve, reject) => {
-      let contentType = "image";
-      if (blob.type) {
-        contentType = blob.type;
-      }
-
-      const options = {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": `${contentType}`
-        },
-        withCredentials: true,
-        body: blob
-      };
-
-      fetch(`${url}/gxobject`, options)
-        .then(res => {
-          if (res.ok) {
-            return res.json();
-          } else {
-            throw new Error("Error en la solicitud.");
-          }
-        })
-        .then(data => {
-          resolve(data);
-        })
-        .catch(error => {
-          reject(error);
-        });
-    });
-  }
-
   private objectToFormData(object) {
     const formData = new FormData();
 
@@ -352,10 +378,5 @@ export class GxHttpClient {
     });
 
     return formData;
-  }
-
-  private objectToJson(object) {
-    const json = JSON.stringify(object);
-    return json;
   }
 }
