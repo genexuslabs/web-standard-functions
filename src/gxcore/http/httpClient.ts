@@ -78,16 +78,15 @@ export class GxHttpClient {
 
     if (this.Files.length > 0) {
       for (let i = 0; i < this.Files.length; i++) {
-        if (this.contType) {
-          if (this.contType.toLowerCase() === "multipart/form-data") {
-            const response = await fetch(this.Files[i]["path"]);
-            const blob = await response.blob();
-            this.bodyObject[`${this.Files[i]["name"]}`] = blob;
-          } else {
-            const response = await fetch(this.Files[i]["path"]);
-            const blob = await response.blob();
-            this.Body = blob;
-          }
+        if (
+          this.bodyString !== "" ||
+          this.Files.length > 1 ||
+          this.contType.toLowerCase() === "multipart/form-data" ||
+            this.contType.toLowerCase() === "application/json"
+        ) {
+          const response = await fetch(this.Files[i]["path"]);
+          const blob = await response.blob();
+          this.bodyObject[`${this.Files[i]["name"]}`] = blob;
         } else {
           const response = await fetch(this.Files[i]["path"]);
           const blob = await response.blob();
@@ -133,14 +132,40 @@ export class GxHttpClient {
           } else {
             this.Body = this.objectToFormData(this.bodyObject);
           }
+        } else if (this.contType.toLowerCase() === "application/json") {
+          if (JSON.stringify(this.bodyObject) !== "{}") {
+            if (this.bodyString !== "") {
+              this.Body = this.objectToJson({
+                ...this.bodyObject,
+                ...JSON.parse(this.bodyString)
+              });
+            } else {
+              this.Body = this.objectToJson(this.bodyObject);
+            }
+          } else {
+            if (this.bodyString !== "") {
+              this.Body = this.bodyString;
+            }
+          }
         } else {
           if (this.bodyString !== "") {
             this.Body = this.bodyString;
           }
         }
       } else {
-        if (this.bodyString !== "") {
-          this.Body = this.bodyString;
+        if (JSON.stringify(this.bodyObject) !== "{}") {
+          if (this.bodyString !== "") {
+            this.Body = this.objectToFormData({
+              ...this.bodyObject,
+              ...JSON.parse(this.bodyString)
+            });
+          } else {
+            this.Body = this.objectToFormData(this.bodyObject);
+          }
+        } else {
+          if (this.bodyString !== "") {
+            this.Body = this.bodyString;
+          }
         }
       }
     }
@@ -175,7 +200,7 @@ export class GxHttpClient {
       this.error = "";
       this.setErrorCode();
       this.setErrDescription();
-      this.reader = "";
+      this.reader = null;
       this.EOF = false;
 
       // Reset
@@ -378,5 +403,10 @@ export class GxHttpClient {
     });
 
     return formData;
+  }
+
+  private objectToJson(object) {
+    const json = JSON.stringify(object);
+    return json;
   }
 }
