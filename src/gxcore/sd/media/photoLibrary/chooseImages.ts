@@ -12,6 +12,8 @@ export const chooseImages = async (): Promise<Array<File>> => {
       resolve(newInput.files);
     };
 
-    newInput.click();
+    requestAnimationFrame(() => {
+      newInput.click();
+    });
   });
 };
