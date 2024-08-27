@@ -1210,12 +1210,12 @@
         "TakePhoto": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/takePhoto",
           "name": "takePhoto",
-          "async": true
+          "isAsync": true
         },
         "RecordVideo": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/camera/recordVideo",
           "name": "recordVideo",
-          "async": true
+          "isAsync": true
         }
       }
     },
@@ -1224,12 +1224,12 @@
         "ChooseImage": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/photoLibrary/chooseImage",
           "name": "chooseImage",
-          "async": true
+          "isAsync": true
         },
         "ChooseImages": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/photoLibrary/chooseImages",
           "name": "chooseImages",
-          "async": true
+          "isAsync": true
         }
       }
     },
