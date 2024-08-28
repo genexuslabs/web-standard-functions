@@ -96,6 +96,14 @@ export const formatNumber = (
   let signChar = "";
   let preSignChar = "";
   let postSignChar = "";
+
+  let dolarSign = picture.indexOf("$") !== -1;
+  let dolarSignChar = "";
+  if (dolarSign) {
+    picture = picture.slice(1);
+    dolarSignChar = "$";
+  }
+
   let hasNegativeParentheses =
     picture.charAt(0) === "(" && picture.charAt(picture.length - 1) === ")";
   let hasDebitCreditPrefix =
@@ -227,8 +235,8 @@ export const formatNumber = (
     }
   }
 
-  if (thSep && intPart.length > 3) {
-    let h = intPart;
+  if (thSep && intPart.replace("(", "").trim().length > 3) {
+    let h = intPart.replace("(", "").trim();
     intPart = "";
     for (let j = 3; j < h.length; j += 3) {
       let i = h.slice(h.length - j, h.length - j + 3);
@@ -246,6 +254,7 @@ export const formatNumber = (
     result = "";
   } else {
     result =
+      dolarSignChar +
       preSignChar +
       signChar +
       intPart +

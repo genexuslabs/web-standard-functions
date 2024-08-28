@@ -51,7 +51,11 @@ const testCases: Array<[number, string, string]> = [
   [0.12, "ZZ9,999.99", "0,000.12"],
   [20, "ZZZ9", "20"],
   [1.2, "ZZZZZZ9.99", "1.20"],
-  [13.2, "ZZZZZZ9.99", "13.20"]
+  [13.2, "ZZZZZZ9.99", "13.20"],
+  [111, "$ Z,ZZZ,ZZ9.99", "$ 111.00"],
+  [111, "$ (Z,ZZZ,ZZ9.99)", "$ (111.00)"],
+  [111, "$Z,ZZZ,ZZ9.99", "$111.00"],
+  [111, "$(Z,ZZZ,ZZ9.99)", "$(111.00)"]
 ];
 
 describe("Numeric::formatNumericField", () => {
