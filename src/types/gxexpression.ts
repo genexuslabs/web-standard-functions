@@ -2,23 +2,32 @@ import { GxBigNumber } from "../types/gxbignumber";
 
 export class GxExpression {
   Expression: string;
-  Variables: object;
   ErrCode: number;
   ErrDescription: string;
 
+  Variables: {
+    set: (name: string, value: string | number | GxBigNumber) => void;
+    get: (name: string) => string | number | GxBigNumber;
+    [key: string]: any;
+  };
+
   constructor() {
     this.Expression = "";
-    this.Variables = {};
     this.ErrCode = 0;
     this.ErrDescription = "";
+
+    this.Variables = {
+      set: (name: string, value: string | number | GxBigNumber) => {
+        this.Variables[name] = value;
+      },
+      get: (name: string) => {
+        return this.Variables[name];
+      }
+    };
   }
 
   setExpression(expr) {
     this.Expression = expr;
-  }
-
-  setVariables(name, value) {
-    this.Variables[name] = value;
   }
 
   setErrCode(num) {
@@ -29,13 +38,13 @@ export class GxExpression {
     this.ErrDescription = text;
   }
 
-  public static evaluate(exp: GxExpression) {
-    let expr = exp.Expression;
+  evaluate() {
+    let expr = this.Expression;
 
     if (expr.trim() !== "") {
-      for (let name in exp.Variables) {
+      for (let name in this.Variables) {
         const regex = new RegExp(`\\b${name}\\b`, "gi");
-        expr = expr.replace(regex, exp.Variables[name]);
+        expr = expr.replace(regex, this.Variables[name]);
       }
 
       let safe = expr;
@@ -71,9 +80,9 @@ export class GxExpression {
           }
         }
 
-        expr = replaceOperations(exp, expr);
+        expr = replaceOperations(this, expr);
 
-        if (exp.ErrCode === 0) {
+        if (this.ErrCode === 0) {
           const regexFunciones = /\b(\w+)\s*\(/g;
 
           const funcAux = [...expr.matchAll(regexFunciones)].map(match => {
@@ -140,29 +149,29 @@ export class GxExpression {
 
             return res;
           } else {
-            exp.setErrCode(4);
-            exp.setErrDescription(
+            this.setErrCode(4);
+            this.setErrDescription(
               "Error occurred during execution (EVALUATION_ERROR)"
             );
             return "Error occurred during execution (EVALUATION_ERROR)";
           }
         } else {
-          return exp.ErrDescription;
+          return this.ErrDescription;
         }
       } catch (err) {
         if (err.message === "Division by zero") {
-          exp.setErrCode(4);
-          exp.setErrDescription(err.message);
+          this.setErrCode(4);
+          this.setErrDescription(err.message);
           return err.message;
         } else {
-          exp.setErrCode(1);
-          exp.setErrDescription(err.message);
+          this.setErrCode(1);
+          this.setErrDescription(err.message);
           return `Error: ${err.message}`;
         }
       }
     } else {
-      exp.setErrCode(3);
-      exp.setErrDescription(
+      this.setErrCode(3);
+      this.setErrDescription(
         "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
       );
       return `Expression to be evaluated is not well formed (EXPRESSION_ERROR)`;
@@ -468,14 +477,14 @@ const replaceOperations = (exp, expr) => {
           leftPart === "<=" ||
           leftPart === "<>" ||
           rightPart === "+" ||
-            rightPart === "-" ||
-            rightPart === "/" ||
-            rightPart === "*" ||
-            rightPart === ">" ||
-            rightPart === "<" ||
-            rightPart === ">=" ||
-            rightPart === "<=" ||
-            rightPart === "<>"
+          rightPart === "-" ||
+          rightPart === "/" ||
+          rightPart === "*" ||
+          rightPart === ">" ||
+          rightPart === "<" ||
+          rightPart === ">=" ||
+          rightPart === "<=" ||
+          rightPart === "<>"
         ) {
           throw new Error(
             "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
@@ -506,14 +515,14 @@ const replaceOperations = (exp, expr) => {
         leftPart === "<=" ||
         leftPart === "<>" ||
         rightPart === "+" ||
-          rightPart === "-" ||
-          rightPart === "/" ||
-          rightPart === "*" ||
-          rightPart === ">" ||
-          rightPart === "<" ||
-          rightPart === ">=" ||
-          rightPart === "<=" ||
-          rightPart === "<>"
+        rightPart === "-" ||
+        rightPart === "/" ||
+        rightPart === "*" ||
+        rightPart === ">" ||
+        rightPart === "<" ||
+        rightPart === ">=" ||
+        rightPart === "<=" ||
+        rightPart === "<>"
       ) {
         throw new Error(
           "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
@@ -544,14 +553,14 @@ const replaceOperations = (exp, expr) => {
           leftPart === "<=" ||
           leftPart === "<>" ||
           rightPart === "+" ||
-            rightPart === "-" ||
-            rightPart === "/" ||
-            rightPart === "*" ||
-            rightPart === ">" ||
-            rightPart === "<" ||
-            rightPart === ">=" ||
-            rightPart === "<=" ||
-            rightPart === "<>"
+          rightPart === "-" ||
+          rightPart === "/" ||
+          rightPart === "*" ||
+          rightPart === ">" ||
+          rightPart === "<" ||
+          rightPart === ">=" ||
+          rightPart === "<=" ||
+          rightPart === "<>"
         ) {
           throw new Error(
             "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
@@ -583,14 +592,14 @@ const replaceOperations = (exp, expr) => {
           leftPart === "<=" ||
           leftPart === "<>" ||
           rightPart === "+" ||
-            rightPart === "-" ||
-            rightPart === "/" ||
-            rightPart === "*" ||
-            rightPart === ">" ||
-            rightPart === "<" ||
-            rightPart === ">=" ||
-            rightPart === "<=" ||
-            rightPart === "<>"
+          rightPart === "-" ||
+          rightPart === "/" ||
+          rightPart === "*" ||
+          rightPart === ">" ||
+          rightPart === "<" ||
+          rightPart === ">=" ||
+          rightPart === "<=" ||
+          rightPart === "<>"
         ) {
           throw new Error(
             "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
@@ -626,14 +635,14 @@ const replaceOperations = (exp, expr) => {
           leftPart === "<=" ||
           leftPart === "<>" ||
           rightPart === "+" ||
-            rightPart === "-" ||
-            rightPart === "/" ||
-            rightPart === "*" ||
-            rightPart === ">" ||
-            rightPart === "<" ||
-            rightPart === ">=" ||
-            rightPart === "<=" ||
-            rightPart === "<>"
+          rightPart === "-" ||
+          rightPart === "/" ||
+          rightPart === "*" ||
+          rightPart === ">" ||
+          rightPart === "<" ||
+          rightPart === ">=" ||
+          rightPart === "<=" ||
+          rightPart === "<>"
         ) {
           exp.setErrCode(4);
           exp.setErrDescription(
@@ -675,14 +684,14 @@ const replaceOperations = (exp, expr) => {
           leftPart === "<=" ||
           leftPart === "<>" ||
           rightPart === "+" ||
-            rightPart === "-" ||
-            rightPart === "/" ||
-            rightPart === "*" ||
-            rightPart === ">" ||
-            rightPart === "<" ||
-            rightPart === ">=" ||
-            rightPart === "<=" ||
-            rightPart === "<>"
+          rightPart === "-" ||
+          rightPart === "/" ||
+          rightPart === "*" ||
+          rightPart === ">" ||
+          rightPart === "<" ||
+          rightPart === ">=" ||
+          rightPart === "<=" ||
+          rightPart === "<>"
         ) {
           exp.setErrCode(4);
           exp.setErrDescription(
@@ -724,14 +733,14 @@ const replaceOperations = (exp, expr) => {
           leftPart === "<=" ||
           leftPart === "<>" ||
           rightPart === "+" ||
-            rightPart === "-" ||
-            rightPart === "/" ||
-            rightPart === "*" ||
-            rightPart === ">" ||
-            rightPart === "<" ||
-            rightPart === ">=" ||
-            rightPart === "<=" ||
-            rightPart === "<>"
+          rightPart === "-" ||
+          rightPart === "/" ||
+          rightPart === "*" ||
+          rightPart === ">" ||
+          rightPart === "<" ||
+          rightPart === ">=" ||
+          rightPart === "<=" ||
+          rightPart === "<>"
         ) {
           exp.setErrCode(4);
           exp.setErrDescription(
@@ -780,14 +789,14 @@ const replaceOperations = (exp, expr) => {
           leftPart === "<=" ||
           leftPart === "<>" ||
           rightPart === "+" ||
-            rightPart === "-" ||
-            rightPart === "/" ||
-            rightPart === "*" ||
-            rightPart === ">" ||
-            rightPart === "<" ||
-            rightPart === ">=" ||
-            rightPart === "<=" ||
-            rightPart === "<>"
+          rightPart === "-" ||
+          rightPart === "/" ||
+          rightPart === "*" ||
+          rightPart === ">" ||
+          rightPart === "<" ||
+          rightPart === ">=" ||
+          rightPart === "<=" ||
+          rightPart === "<>"
         ) {
           exp.setErrCode(4);
           exp.setErrDescription(
@@ -829,14 +838,14 @@ const replaceOperations = (exp, expr) => {
           leftPart === "<=" ||
           leftPart === "<>" ||
           rightPart === "+" ||
-            rightPart === "-" ||
-            rightPart === "/" ||
-            rightPart === "*" ||
-            rightPart === ">" ||
-            rightPart === "<" ||
-            rightPart === ">=" ||
-            rightPart === "<=" ||
-            rightPart === "<>"
+          rightPart === "-" ||
+          rightPart === "/" ||
+          rightPart === "*" ||
+          rightPart === ">" ||
+          rightPart === "<" ||
+          rightPart === ">=" ||
+          rightPart === "<=" ||
+          rightPart === "<>"
         ) {
           exp.setErrCode(4);
           exp.setErrDescription(

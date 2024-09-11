@@ -706,9 +706,9 @@ describe("testExpressionErrores1", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
-      let res = GxExpression.evaluate(Expression);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
+      let res = Expression.evaluate();
 
       expect(res.toString()).toBe(t[3]);
     });
@@ -720,9 +720,9 @@ describe("testExpressionErrores2", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
-      let res = GxExpression.evaluate(Expression);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
+      let res = Expression.evaluate();
 
       expect(res.toString()).toBe(t[3]);
     });
@@ -734,10 +734,10 @@ describe("testExpressionErrorCode1", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
 
-      GxExpression.evaluate(Expression);
+      Expression.evaluate();
       let res = Expression.ErrCode;
 
       expect(res).toBe(t[3]);
@@ -750,10 +750,10 @@ describe("testExpressionErrorCode2", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
 
-      GxExpression.evaluate(Expression);
+      Expression.evaluate();
       let res = Expression.ErrCode;
 
       expect(res).toBe(t[3]);
@@ -766,9 +766,9 @@ describe("Expression", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
-      let res = GxExpression.evaluate(Expression);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
+      let res = Expression.evaluate();
 
       expect(res.toString()).toBe(t[3]);
     });
@@ -780,9 +780,9 @@ describe("Expression 2", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
+      Expression.Variables.set("a", t[1]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
       expect(res.toString()).toBe(t[2]);
     });
   }
@@ -793,11 +793,11 @@ describe("Expression 3", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
-      Expression.setVariables("c", t[3]);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
+      Expression.Variables.set("c", t[3]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
       expect(res.toString()).toBe(t[4]);
     });
   }
@@ -808,10 +808,10 @@ describe("Expression 4", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
       console.log("res");
       console.log(res);
       expect(res).toBe(t[3]);
@@ -824,9 +824,9 @@ describe("Expression 5", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
+      Expression.Variables.set("a", t[1]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
       console.log("res");
       console.log(res);
       expect(res.toString()).toBe(t[2]);
@@ -839,10 +839,10 @@ describe("Expression 6", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
       console.log("res");
       console.log(res);
       expect(res.toString()).toBe(t[3]);
@@ -855,11 +855,11 @@ describe("Expression 7", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
-      Expression.setVariables("c", t[3]);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
+      Expression.Variables.set("c", t[3]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
       console.log("res");
       console.log(res);
       expect(res.toString()).toBe(t[4]);
@@ -872,11 +872,11 @@ describe("testExpression8", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("operator01", t[1]);
-      Expression.setVariables("a", t[2]);
-      Expression.setVariables("b", t[3]);
+      Expression.Variables.set("operator01", t[1]);
+      Expression.Variables.set("a", t[2]);
+      Expression.Variables.set("b", t[3]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
 
       expect(res.toString()).toBe(t[4]);
     });
@@ -888,11 +888,11 @@ describe("testExpression9", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a1", t[1]);
-      Expression.setVariables("b1", t[2]);
-      Expression.setVariables("c1", t[3]);
+      Expression.Variables.set("a1", t[1]);
+      Expression.Variables.set("b1", t[2]);
+      Expression.Variables.set("c1", t[3]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
 
       expect(res.toString()).toBe(t[4]);
     });
@@ -904,10 +904,10 @@ describe("testExpression10", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("A", t[1]);
-      Expression.setVariables("B", t[2]);
+      Expression.Variables.set("A", t[1]);
+      Expression.Variables.set("B", t[2]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
 
       expect(res.toString()).toBe(t[3]);
     });
@@ -919,10 +919,10 @@ describe("testExpression11", () => {
     it(` ==> ${t[0]}`, () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
-      Expression.setVariables("a", t[1]);
-      Expression.setVariables("b", t[2]);
+      Expression.Variables.set("a", t[1]);
+      Expression.Variables.set("b", t[2]);
 
-      let res = GxExpression.evaluate(Expression);
+      let res = Expression.evaluate();
 
       expect(res.toString()).toBe(t[3]);
     });
