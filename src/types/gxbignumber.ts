@@ -230,4 +230,63 @@ export class GxBigNumber {
       return false;
     }
   }
+
+  static greaterThanEqualTo(a, b): boolean {
+    let [aInts, aDecimals] = a.toString().split(".");
+    let [bInts, bDecimals] = b.toString().split(".");
+
+    if (
+      Number(aInts) >= Number(bInts) ||
+      (Number(aInts) === Number(bInts) &&
+        Number(aDecimals) >= Number(bDecimals))
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  static lessThan(a, b): boolean {
+    let [aInts, aDecimals] = a.toString().split(".");
+    let [bInts, bDecimals] = b.toString().split(".");
+
+    if (
+      Number(aInts) < Number(bInts) ||
+      (Number(aInts) === Number(bInts) && Number(aDecimals) < Number(bDecimals))
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  static lessThanEqualTo(a, b): boolean {
+    let [aInts, aDecimals] = a.toString().split(".");
+    let [bInts, bDecimals] = b.toString().split(".");
+
+    if (
+      Number(aInts) <= Number(bInts) ||
+      (Number(aInts) === Number(bInts) &&
+        Number(aDecimals) <= Number(bDecimals))
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  static differentThan(a, b): boolean {
+    let [aInts, aDecimals] = a.toString().split(".");
+    let [bInts, bDecimals] = b.toString().split(".");
+
+    if (
+      Number(aInts) !== Number(bInts) ||
+      (Number(aInts) === Number(bInts) &&
+        Number(aDecimals) !== Number(bDecimals))
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
