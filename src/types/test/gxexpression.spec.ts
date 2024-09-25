@@ -520,6 +520,13 @@ export const testExpression7: Array<[string, string, string, string, any]> = [
     "3",
     absBigNumber(add(multiply(1, 2), 3)).toString()
   ],
+  [
+    "integer( a * b + c)",
+    "1",
+    "2",
+    "3",
+    integerBigNumber(add(multiply(1, 2), 3)).toString()
+  ],
   ["iif( a < b , a , c)", "1", "2", "3", iif(1 < 2, 1, 3).toString()],
   [
     "sqrt( a * b + c )",
@@ -694,7 +701,766 @@ export const testExpression9: Array<[string, number, number, string, any]> = [
 ];
 
 export const testExpression10: Array<[string, number, number, any]> = [
-  ["a+b", 1, 2, add(1, 2).toString()]
+  ["a+b", 1, 2, add(1, 2).toString()],
+  [
+    "+",
+    1,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+
+  [
+    "abs()",
+    1,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["abs(a)", -1, 2, absBigNumber(-1).toString()],
+  [
+    "abs(    )",
+    1,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["abs(  a  )", -1, 2, absBigNumber(-1).toString()],
+  ["abs(cos(a))", 90, 2, absBigNumber(Math.cos(90)).toString()],
+  ["abs(cos(a))", -90, 2, absBigNumber(Math.cos(-90)).toString()],
+  ["abs(-cos(a))", 90, 2, absBigNumber(-Math.cos(90)).toString()],
+  [
+    "abs(-cos(a)+cos(a))",
+    90,
+    2,
+    absBigNumber(add(-Math.cos(90), Math.cos(90))).toString()
+  ],
+  [
+    "abs(-cos(a)-sin(a))",
+    90,
+    2,
+    absBigNumber(subtract(-Math.cos(90), Math.sin(90))).toString()
+  ],
+  [
+    "abs(-cos(a)+sin(a))",
+    90,
+    2,
+    absBigNumber(add(-Math.cos(90), Math.sin(90))).toString()
+  ],
+  [
+    "abs(a,b)",
+    -1,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "abs(a,b,4)",
+    -1,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["abs(abs(a))", 90, 2, absBigNumber(absBigNumber(90)).toString()],
+  ["abs(integer(a))", 90, 2, absBigNumber(integerBigNumber(90)).toString()],
+  ["abs(frac(a))", 90, 2, absBigNumber(fracBigNumber(90)).toString()],
+  [
+    "abs(round(a,1))",
+    90.47,
+    2,
+    absBigNumber(roundBigNumber(90.47, 1)).toString()
+  ],
+  [
+    "abs(round(a))",
+    90.47,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "abs(round(,b))",
+    90.47,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "abs(round(b))",
+    90.47,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+
+  [
+    "abs(round(,))",
+    90.47,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(a,)",
+    90.47,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(,)",
+    90.47,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+
+  [
+    "integer()",
+    1.2,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["integer(a)", -1.2, 2, integerBigNumber(-1.2).toString()],
+  [
+    "integer(    )",
+    1.2,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["integer(  a  )", -1.2, 2, integerBigNumber(-1.2).toString()],
+  ["integer(cos(a))", 90.6, 2, integerBigNumber(Math.cos(90.6)).toString()],
+  ["integer(cos(a))", -90.6, 2, integerBigNumber(Math.cos(-90.6)).toString()],
+  ["integer(-cos(a))", 90.6, 2, integerBigNumber(-Math.cos(90.6)).toString()],
+  [
+    "integer(-cos(a)+cos(a))",
+    90.6,
+    2,
+    integerBigNumber(add(-Math.cos(90.6), Math.cos(90.6))).toString()
+  ],
+  [
+    "integer(-cos(a)-sin(a))",
+    90.6,
+    2,
+    integerBigNumber(subtract(-Math.cos(90.6), Math.sin(90.6))).toString()
+  ],
+  [
+    "integer(-cos(a)+sin(a))",
+    90.6,
+    2,
+    integerBigNumber(add(-Math.cos(90.6), Math.sin(90.6))).toString()
+  ],
+  [
+    "integer(a,b)",
+    -90.6,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "integer(a,b,4)",
+    -90.6,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "integer(integer(a))",
+    90.6,
+    2,
+    integerBigNumber(integerBigNumber(90.6)).toString()
+  ],
+  ["integer(abs(a))", 90.6, 2, integerBigNumber(absBigNumber(90.6)).toString()],
+  [
+    "integer(frac(a))",
+    90.6,
+    2,
+    integerBigNumber(fracBigNumber(90.6)).toString()
+  ],
+  [
+    "integer(round(a,1))",
+    90.69,
+    2,
+    integerBigNumber(roundBigNumber(90.69, 1)).toString()
+  ],
+  [
+    "integer(round(a,1,3))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "integer(round(a))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "integer(round())",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "integer(round(      ))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "integer(round(c))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+
+  [
+    "frac()",
+    1.2,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["frac(a)", -1.2, 2, fracBigNumber(-1.2).toString()],
+  [
+    "frac(    )",
+    1.2,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["frac(  a  )", -1.2, 2, fracBigNumber(-1.2).toString()],
+  ["frac(cos(a))", 90.6, 2, fracBigNumber(Math.cos(90.6)).toString()],
+  ["frac(cos(a))", -90.6, 2, fracBigNumber(Math.cos(-90.6)).toString()],
+  ["frac(-cos(a))", 90.6, 2, fracBigNumber(-Math.cos(90.6)).toString()],
+  [
+    "frac(-cos(a)+cos(a))",
+    90.6,
+    2,
+    fracBigNumber(add(-Math.cos(90.6), Math.cos(90.6))).toString()
+  ],
+  [
+    "frac(-cos(a)-sin(a))",
+    90.6,
+    2,
+    fracBigNumber(subtract(-Math.cos(90.6), Math.sin(90.6))).toString()
+  ],
+  [
+    "frac(-cos(a)+sin(a))",
+    90.6,
+    2,
+    fracBigNumber(add(-Math.cos(90.6), Math.sin(90.6))).toString()
+  ],
+  [
+    "frac(a,b)",
+    -90.6,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "frac(a,b,4)",
+    -90.6,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["frac(frac(a))", 90.6, 2, fracBigNumber(fracBigNumber(90.6)).toString()],
+  ["frac(abs(a))", 90.6, 2, fracBigNumber(absBigNumber(90.6)).toString()],
+  [
+    "frac(integer(a))",
+    90.6,
+    2,
+    fracBigNumber(integerBigNumber(90.6)).toString()
+  ],
+  [
+    "frac(round(a,1))",
+    90.64,
+    2,
+    fracBigNumber(roundBigNumber(90.64, 1)).toString()
+  ],
+  [
+    "frac(round(a,1,3))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "frac(round(a))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "frac(round())",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "frac(round(      ))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "frac(round(c))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+
+  [
+    "round()",
+    1.2,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(a)",
+    -1.2,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(    )",
+    1.2,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(  a  )",
+    -1.2,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["round(a,b)", 90.68, 1, roundBigNumber(90.68, 1).toString()],
+  ["round(   a,b   )", 90.68, 1, roundBigNumber(90.68, 1).toString()],
+  ["round(   a  ,  b   )", 90.68, 1, roundBigNumber(90.68, 1).toString()],
+  ["round(cos(a),1)", 150, 1, roundBigNumber(Math.cos(150), 1).toString()],
+  ["round(cos(a),1)", -150, 1, roundBigNumber(Math.cos(-150), 1).toString()],
+  [
+    "round(cos(a)+sin(a),1)",
+    150,
+    1,
+    roundBigNumber(add(Math.cos(150), Math.sin(150)), 1).toString()
+  ],
+  [
+    "round(cos(a)-sin(a),1)",
+    150,
+    1,
+    roundBigNumber(subtract(Math.cos(150), Math.sin(150)), 1).toString()
+  ],
+  [
+    "round(-cos(a)+sin(a),1)",
+    150,
+    1,
+    roundBigNumber(add(-Math.cos(150), Math.sin(150)), 1).toString()
+  ],
+  [
+    "round(-cos(a)-sin(a),1)",
+    150,
+    1,
+    roundBigNumber(subtract(-Math.cos(150), Math.sin(150)), 1).toString()
+  ],
+  [
+    "round(a+1.5,1+b)",
+    150,
+    1,
+    roundBigNumber(add(150, 1.5), add(1, 1)).toString()
+  ],
+  [
+    "round(cos(a),1+b)",
+    150,
+    1,
+    roundBigNumber(Math.cos(150), add(1, 1)).toString()
+  ],
+  [
+    "(round(cos(a),1+b))",
+    150,
+    1,
+    roundBigNumber(Math.cos(150), add(1, 1)).toString()
+  ],
+  [
+    "(round(cos(a),1+b)) + integer(6)",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  [
+    "(round(cos(a),1+b)) + (integer(6))",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  [
+    "((round(cos(a),1+b)) + (integer(6)))",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  [
+    "round(cos(a),1+b) + (integer(6))",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  [
+    "round(cos(a),(1+b)) + (integer(6))",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  [
+    "round((cos(a)),(1+b)) + (integer(6))",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  [
+    "(round((cos(a)),(1+b))) + (integer(6))",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  ["integer((6))", 150, 1, integerBigNumber(6).toString()],
+  [
+    "(round((cos(a)),(1+b))) + (integer((6)))",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  [
+    "((round((cos(a)),(1+b))) + (integer((6))))",
+    150,
+    1,
+    add(
+      roundBigNumber(Math.cos(150), add(1, 1)),
+      integerBigNumber(6)
+    ).toString()
+  ],
+  [
+    "1+round(cos(a),1+b)",
+    150,
+    1,
+    add(1, roundBigNumber(Math.cos(150), add(1, 1))).toString()
+  ],
+  [
+    "round(cos(a)+sin(a),1+b)",
+    150,
+    1,
+    roundBigNumber(add(Math.cos(150), Math.sin(150)), add(1, 1)).toString()
+  ],
+  [
+    "round(a,b,3)",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(a,b,3,4)",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["round(b,b)", 90.68, 1, roundBigNumber(1, 1).toString()],
+  [
+    "round(cos(a)+sin(a),integer(1.2+b))",
+    150,
+    1,
+    roundBigNumber(
+      add(Math.cos(150), Math.sin(150)),
+      integerBigNumber(add(1.2, 1))
+    ).toString()
+  ],
+  [
+    "round(cos(a)+sin(a),integer(1.2))",
+    150,
+    1,
+    roundBigNumber(
+      add(Math.cos(150), Math.sin(150)),
+      integerBigNumber(1.2)
+    ).toString()
+  ],
+  [
+    "round(cos(a)+sin(a),integer(1.2))",
+    150,
+    1,
+    roundBigNumber(
+      add(Math.cos(150), Math.sin(150)),
+      integerBigNumber(1.2)
+    ).toString()
+  ],
+  [
+    "round(abs(a),1)",
+    90.68,
+    1,
+    roundBigNumber(absBigNumber(90.68), 1).toString()
+  ],
+  [
+    "round(abs(a),abs(1))",
+    90.68,
+    1,
+    roundBigNumber(absBigNumber(90.68), absBigNumber(1)).toString()
+  ],
+  [
+    "round(abs(a),integer(1))",
+    90.68,
+    1,
+    roundBigNumber(absBigNumber(90.68), integerBigNumber(1)).toString()
+  ],
+  [
+    "round(integer(a),1)",
+    90.68,
+    1,
+    roundBigNumber(integerBigNumber(90.68), 1).toString()
+  ],
+  [
+    "round(integer(a),integer(1))",
+    90.68,
+    1,
+    roundBigNumber(integerBigNumber(90.68), integerBigNumber(1)).toString()
+  ],
+  [
+    "round(integer(a),frac(1))",
+    90.68,
+    1,
+    roundBigNumber(integerBigNumber(90.68), fracBigNumber(1)).toString()
+  ],
+  [
+    "round(frac(a),1)",
+    90.68,
+    1,
+    roundBigNumber(fracBigNumber(90.68), 1).toString()
+  ],
+  [
+    "round(frac(a),frac(1))",
+    90.68,
+    1,
+    roundBigNumber(fracBigNumber(90.68), fracBigNumber(1)).toString()
+  ],
+  [
+    "round(frac(a),round(1.5,0))",
+    90.68,
+    1,
+    roundBigNumber(fracBigNumber(90.68), roundBigNumber(1.5, 0)).toString()
+  ],
+  [
+    "round(round(a,1),round(1.5,0))",
+    90.68,
+    1,
+    roundBigNumber(roundBigNumber(90.68, 1), roundBigNumber(1.5, 0)).toString()
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(0.5))),round(frac(1.5),0))",
+    90.68,
+    1,
+    roundBigNumber(
+      roundBigNumber(
+        absBigNumber(roundBigNumber(90.68, 1)),
+        integerBigNumber(add(1, absBigNumber(0.5)))
+      ),
+      roundBigNumber(fracBigNumber(1.5), 0)
+    ).toString()
+  ],
+  [
+    "round(round(abs(round(a,1)),),round(frac(1.5),0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(a,1,3))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(a))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round())",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(      ))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(c))",
+    90.69,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer()),round(frac(1.5),0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs())),round(frac(1.5),0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(-0.5))),round(frac(1.5,7),0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs())),round(frac(1.5),0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs())),round())",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs())),abs())",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+
+  [
+    "abs(round(a,))",
+    90.47,
+    2,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(,integer(1+abs(0.5))),round(frac(1.5),0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(,round(frac(1.5),0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(5,round(frac(1.5),0))",
+    90.68,
+    1,
+    roundBigNumber(5, roundBigNumber(fracBigNumber(1.5), 0)).toString()
+  ],
+  [
+    "round(round(abs(round(a,)),integer(1+abs(0.5))),round(frac(1.5),0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(0.5))),)",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(0.5))),round(frac(1.5)))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(0.5))),round(,0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(0.5))),round(frac(1.5),))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(0.5))),round(,0))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(-0.5))),round(frac(1.5)))",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "round(round(abs(round(a,1)),integer(1+abs(0.5))),integer())",
+    90.68,
+    1,
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+
+  [
+    "integer(round(a,1))",
+    90.69,
+    2,
+    integerBigNumber(roundBigNumber(90.69, 1)).toString()
+  ],
+  ["PI", 90.69, 2, Math.PI.toString()],
+  ["pi", 90.69, 2, Math.PI.toString()],
+  ["PI+PI", 90.69, 2, add(Math.PI, Math.PI).toString()],
+  ["pi+pi", 90.69, 2, add(Math.PI, Math.PI).toString()],
+  ["round(pi,2)", 90.68, 1, roundBigNumber(Math.PI, 2).toString()],
+  [
+    "round(round(pi,5),2)",
+    90.68,
+    1,
+    roundBigNumber(roundBigNumber(Math.PI, 5), 2).toString()
+  ],
+  [
+    "integer(round(round(pi,5),2))",
+    90.68,
+    1,
+    integerBigNumber(roundBigNumber(roundBigNumber(Math.PI, 5), 2)).toString()
+  ],
+  [
+    "round(pi,b)+integer(pi)",
+    90.69,
+    2,
+    add(roundBigNumber(Math.PI, 2), integerBigNumber(Math.PI)).toString()
+  ],
+  [
+    "abs(round(pi,b)+integer(pi))",
+    90.69,
+    2,
+    absBigNumber(
+      add(roundBigNumber(Math.PI, 2), integerBigNumber(Math.PI))
+    ).toString()
+  ],
+  [
+    "round(round(pi,b)+integer(pi),b)",
+    90.69,
+    2,
+    roundBigNumber(
+      add(roundBigNumber(Math.PI, 2), integerBigNumber(Math.PI)),
+      2
+    ).toString()
+  ]
 ];
 
 export const testExpression11: Array<[string, number, number, any]> = [
@@ -812,8 +1578,6 @@ describe("Expression 4", () => {
       Expression.Variables.set("b", t[2]);
 
       let res = Expression.evaluate();
-      console.log("res");
-      console.log(res);
       expect(res).toBe(t[3]);
     });
   }
@@ -827,8 +1591,6 @@ describe("Expression 5", () => {
       Expression.Variables.set("a", t[1]);
 
       let res = Expression.evaluate();
-      console.log("res");
-      console.log(res);
       expect(res.toString()).toBe(t[2]);
     });
   }
@@ -843,8 +1605,6 @@ describe("Expression 6", () => {
       Expression.Variables.set("b", t[2]);
 
       let res = Expression.evaluate();
-      console.log("res");
-      console.log(res);
       expect(res.toString()).toBe(t[3]);
     });
   }
@@ -860,8 +1620,6 @@ describe("Expression 7", () => {
       Expression.Variables.set("c", t[3]);
 
       let res = Expression.evaluate();
-      console.log("res");
-      console.log(res);
       expect(res.toString()).toBe(t[4]);
     });
   }
@@ -916,13 +1674,13 @@ describe("testExpression10", () => {
 
 describe("testExpression11", () => {
   for (const t of testExpression11) {
-    it(` ==> ${t[0]}`, () => {
+    it(` ==> ${t[0]}`, async () => {
       let Expression = new GxExpression();
       Expression.setExpression(t[0]);
       Expression.Variables.set("a", t[1]);
       Expression.Variables.set("b", t[2]);
 
-      let res = Expression.evaluate();
+      let res = await Expression.evaluate();
 
       expect(res.toString()).toBe(t[3]);
     });
