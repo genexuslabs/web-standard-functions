@@ -48,7 +48,7 @@ export class GxExpression {
     this.ErrDescription = text;
   }
 
-  evaluate() {
+  evaluate(): GxBigNumber {
     let expr = this.Expression;
 
     if (expr.trim() !== "") {
@@ -124,7 +124,7 @@ export class GxExpression {
                   this.setErrDescription(
                     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
                   );
-                  return `Expression to be evaluated is not well formed (EXPRESSION_ERROR)`;
+                  return 0;
                 }
               }
             } else {
@@ -148,30 +148,37 @@ export class GxExpression {
                 ...Object.keys(functionGlobal),
                 `return ${expr}`
               );
-              let res: GxBigNumber = funAux(...Object.values(functionGlobal));
+              let res = funAux(...Object.values(functionGlobal));
+
+              if (typeof res === "boolean") {
+                res = new GxBigNumber(Number(res));
+              } else {
+                res = new GxBigNumber(res);
+              }
+
               return res;
             } else {
               this.setErrCode(4);
               this.setErrDescription(
                 "Error occurred during execution (EVALUATION_ERROR)"
               );
-              return "Error occurred during execution (EVALUATION_ERROR)";
+              return new GxBigNumber(0);
             }
           } else {
-            return this.ErrDescription;
+            return new GxBigNumber(0);
           }
         } else {
-          return this.ErrDescription;
+          return new GxBigNumber(0);
         }
       } catch (err) {
         if (err.message === "Division by zero") {
           this.setErrCode(4);
           this.setErrDescription(err.message);
-          return err.message;
+          return new GxBigNumber(0);
         } else {
           this.setErrCode(1);
           this.setErrDescription(err.message);
-          return `Error: ${err.message}`;
+          return new GxBigNumber(0);
         }
       }
     } else {
@@ -179,7 +186,7 @@ export class GxExpression {
       this.setErrDescription(
         "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
       );
-      return `Expression to be evaluated is not well formed (EXPRESSION_ERROR)`;
+      return new GxBigNumber(0);
     }
   }
 }
@@ -480,16 +487,32 @@ const replaceOperations = (exp, expr) => {
 };
 
 const checkOperationWellFormed = (leftPart, rightPart, exp, op) => {
+  let isString = part => {
+    const matchString = /^["'].*["']$/;
+    return matchString.test(String(part));
+  };
+
+  let isInBracket = part => {
+    return String(part).match(/^\((.*)\)$/);
+  };
+
+  let isStringInBracket = part => {
+    let inBracket = isInBracket(part);
+    if (inBracket) {
+      return isString(inBracket[1]);
+    }
+  };
+
   if (leftPart === undefined && rightPart === undefined) {
     exp.setErrCode(3);
     exp.setErrDescription(
       "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
     );
-    return `Expression to be evaluated is not well formed (EXPRESSION_ERROR)`;
+    return new GxBigNumber(0);
   } else if (leftPart === undefined && op !== "-" && op !== "+") {
     exp.setErrCode(4);
     exp.setErrDescription("Error occurred during execution (EVALUATION_ERROR)");
-    return "Error occurred during execution (EVALUATION_ERROR)";
+    return new GxBigNumber(0);
   } else if (
     leftPart === "+" ||
     leftPart === "-" ||
@@ -512,9 +535,24 @@ const checkOperationWellFormed = (leftPart, rightPart, exp, op) => {
   ) {
     exp.setErrCode(4);
     exp.setErrDescription("Error occurred during execution (EVALUATION_ERROR)");
-    return "Error occurred during execution (EVALUATION_ERROR)";
+    return new GxBigNumber(0);
+  }
+
+  if (
+    leftPart !== undefined &&
+    rightPart !== undefined &&
+    (isString(leftPart) ||
+      isStringInBracket(leftPart) ||
+      isString(rightPart) ||
+      isStringInBracket(rightPart)) &&
+    (op === "<=" || op === "<" || op === ">=" || op === ">")
+  ) {
+    exp.setErrCode(5);
+    exp.setErrDescription("Execute Method not found");
+    return new GxBigNumber(0);
   } else {
     exp.setErrCode(0);
+    exp.setErrDescription("");
   }
 };
 
@@ -715,12 +753,12 @@ const iifSafe = expr => {
   let safe = expr;
 
   if (expr.toLowerCase().indexOf("iif") !== -1) {
-    let regexIif = /iif\(/gi;
+    let regexIif = /iif\s*\(/gi;
     let res = [];
     let matchIf;
 
     while ((matchIf = regexIif.exec(expr)) !== null) {
-      let start = matchIf.index + 4;
+      let start = matchIf.index + matchIf[0].length;
       let openBrackets = 1;
       let finish = start;
 
