@@ -1682,6 +1682,15 @@
           "isAsync": true
         }
       }
+    },
+    "Expression": {
+      "members": {
+        "Evaluate": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/types/gxexpression",
+          "name": "Evaluate",
+          "alias": "evaluate"
+        }
+      }
     }
   },
   "disambiguated": {

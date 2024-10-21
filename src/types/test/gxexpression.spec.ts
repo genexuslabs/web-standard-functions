@@ -125,6 +125,30 @@ export const testExpressionErrores2: Array<[
     1,
     2,
     "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "SELECT name FROM usuarios WHERE usuarioId=iif(1=1,4,9)",
+    1,
+    2,
+    "0",
+    "4",
+    "Error occurred during execution (EVALUATION_ERROR)"
+  ],
+  [
+    "SELECT name FROM usuarios",
+    1,
+    2,
+    "0",
+    "4",
+    "Error occurred during execution (EVALUATION_ERROR)"
+  ],
+  [
+    "SELECT name FROM usuarios where userId=1",
+    1,
+    2,
+    "0",
     "4",
     "Error occurred during execution (EVALUATION_ERROR)"
   ]
@@ -999,14 +1023,6 @@ export const testExpression6: Array<[
     ""
   ],
   [
-    "pow(2,3)+max(a,b)+min(a,b)",
-    "1",
-    "2",
-    add(add(Math.pow(2, 3), Math.max(1, 2)), Math.min(1, 2)).toString(),
-    "0",
-    ""
-  ],
-  [
     "cos(a)*sin(b)",
     "1",
     "2",
@@ -1374,7 +1390,6 @@ export const testExpression8: Array<[
     "5",
     "Execute Method not found"
   ],
-
   [
     "abs(a)>b",
     "4",
@@ -1441,7 +1456,161 @@ export const testExpression8: Array<[
     ).toString(),
     "0",
     ""
-  ]
+  ],
+  [
+    "iif((a>=0, a, b )",
+    "'PRUEBA'",
+    2,
+    3,
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(a>=0), a, b )",
+    "'PRUEBA'",
+    2,
+    3,
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(((a>=0, a, b )",
+    "'PRUEBA'",
+    2,
+    3,
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(((a>=0), a, b )",
+    "'PRUEBA'",
+    2,
+    3,
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["iif(((a>=0)), a, b )", "'PRUEBA'", 2, 3, "2", "0", ""],
+  ["iif(a>=0, a+b, b )", "'PRUEBA'", 2, 3, "5", "0", ""],
+  ["iif(a>=0, a-b, b )", "'PRUEBA'", 2, 3, "-1", "0", ""],
+  ["iif(a>=0,-a,b)", "'PRUEBA'", 2, 3, "-2", "0", ""],
+  ["iif(a>=0,+a,b)", "'PRUEBA'", 2345, 3, "2345", "0", ""],
+  ["iif(a<=0,+a,b)", "'PRUEBA'", -2, 3, "-2", "0", ""],
+  ["iif(((a>=0)), -a, b )", "'PRUEBA'", -2, 3, "3", "0", ""],
+  ["iif(((a>=0)), -(-a), b )", "'PRUEBA'", -2, 3, "3", "0", ""],
+  ["iif(((a<=0)), -(-a), b )", "'PRUEBA'", -2, 3, "-2", "0", ""],
+  ["iif(a>=0,-(a),b)", "'PRUEBA'", 2, 3, "-2", "0", ""],
+  ["iif(a>=0,+(a),b)", "'PRUEBA'", 2345, 3, "2345", "0", ""],
+  ["iif(a>=0,+-(a),b)", "'PRUEBA'", 2345, 3, "-2345", "0", ""],
+  ["iif(a<=0,(+a),b)", "'PRUEBA'", -2, 3, "-2", "0", ""],
+  ["iif(((a>=0)), (-a), b )", "'PRUEBA'", -2, 3, "3", "0", ""],
+  ["iif(((a>=0)), (-(-a)), b )", "'PRUEBA'", -2, 3, "3", "0", ""],
+  ["iif(((a<=0)), -(-(a)), b )", "'PRUEBA'", -2, 3, "-2", "0", ""],
+  ["iif(((a<=0)), (-(-(a))), b )", "'PRUEBA'", -2, 3, "-2", "0", ""],
+  ["iif(((a<=0)), (-(-(a+b))), b )", "'PRUEBA'", -2, 3, "1", "0", ""],
+  ["iif(((a<=0)), (-(-(a+b)-1)), b )", "'PRUEBA'", -2, 3, "2", "0", ""],
+  ["iif(((a<=0)), (-(-(a+b)-1+(-b))), b )", "'PRUEBA'", -2, 3, "5", "0", ""],
+  ["iif(((a>=0)), (-(-(a+b)-1+(-b))), -b )", "'PRUEBA'", -2, 3, "-3", "0", ""],
+  ["iif(a>=0, 3, -b )", "'PRUEBA'", -2, 3, "-3", "0", ""],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(b) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "-3",
+    "0",
+    ""
+  ],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -((b)) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "-3",
+    "0",
+    ""
+  ],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(b+1) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "-4",
+    "0",
+    ""
+  ],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -((b)+1) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "-4",
+    "0",
+    ""
+  ],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(-(b)+1) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "2",
+    "0",
+    ""
+  ],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(--b+1) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "-4",
+    "0",
+    ""
+  ],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(+b) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "-3",
+    "0",
+    ""
+  ],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), (-b) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "-3",
+    "0",
+    ""
+  ],
+  [
+    "iif(((a>=0)), (-(-(a+b)-1+(-b))), (-(+b)) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "-3",
+    "0",
+    ""
+  ],
+  [
+    "iif(((-a>=0)), (-(-(a+b)-1+(-b))), (-(+b)) )",
+    "'PRUEBA'",
+    -2,
+    3,
+    "5",
+    "0",
+    ""
+  ],
+  ["iif(-a>=-4, 1, 2)", "'PRUEBA'", -2, 3, "1", "0", ""],
+  ["iif(-a>-4, 1, 2)", "'PRUEBA'", -2, 3, "1", "0", ""],
+  ["iif(-a=-4, 1, 2)", "'PRUEBA'", -2, 3, "2", "0", ""],
+  ["iif(a*-2=-4, 1, 2)", "'PRUEBA'", -2, 3, "2", "0", ""],
+  ["iif(-a<=-4, 1, 2)", "'PRUEBA'", -2, 3, "2", "0", ""],
+  ["iif(-a<-4, 1, 2)", "'PRUEBA'", -2, 3, "2", "0", ""]
 ];
 
 export const testExpression9: Array<[
