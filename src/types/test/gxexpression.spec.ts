@@ -23,8 +23,8 @@ export const testExpressionErrores1: Array<[
     "1",
     "{id:1,name:'name1'}",
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ]
 ];
 
@@ -108,16 +108,16 @@ export const testExpressionErrores2: Array<[
     1,
     2,
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
     "SELECT * FROM usuarios",
     1,
     2,
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   ["a/b", 1, 0, "0", "4", "Division by zero"],
   [
@@ -133,24 +133,24 @@ export const testExpressionErrores2: Array<[
     1,
     2,
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
     "SELECT name FROM usuarios",
     1,
     2,
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
     "SELECT name FROM usuarios where userId=1",
     1,
     2,
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ]
 ];
 
@@ -167,8 +167,8 @@ export const testExpressionErrorCode1: Array<[
     "1",
     "{id:1,name:'name1'}",
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ]
 ];
 
@@ -245,25 +245,25 @@ export const testExpressionErrorCode2: Array<[
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
-
-  // ERROR 4 Error occurred during execution (EVALUATION_ERROR)
-  [
-    "a+b+C",
-    1,
-    2,
-    "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
-  ],
   [
     "SELECT * FROM usuarios",
     1,
     2,
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "a+b+C",
+    1,
+    2,
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   ["a/b", 1, 0, "0", "4", "Division by zero"]
+
+  // ERROR 4 Error occurred during execution (EVALUATION_ERROR)
 ];
 
 // a b
@@ -946,6 +946,30 @@ export const testExpression4: Array<[
     ""
   ], // 1<2 and 2<2 ==> 0
   [
+    "iif( a < b and a+1 <b and  a+1 <b, a , 0)",
+    1,
+    2,
+    iif(1 < 2 && 2 < 2 && 2 < 2, 1, 0).toString(),
+    "0",
+    ""
+  ], // 1<2 and 2<2 ==> 0
+  [
+    "iif( a < b and b+1 >b , a , 0)",
+    1,
+    2,
+    iif(1 < 2 && 3 > 2, 1, 0).toString(),
+    "0",
+    ""
+  ], // 1<2 and 2<2 ==> 0
+  [
+    "iif( a < b and b+1 >b and a>b, a , 0)",
+    1,
+    2,
+    iif(1 < 2 && 3 > 2 && 1 > 2, 1, 0).toString(),
+    "0",
+    ""
+  ], // 1<2 and 2<2 ==> 0
+  [
     "iif( a < b or a+1 <b , a , 0)",
     1,
     2,
@@ -1216,26 +1240,18 @@ export const testExpression8: Array<[
     "'TEST'",
     2,
     3,
-    iif(
-      (Number(2) !== Number(3)).toString() !== "TEST",
-      2 + 3,
-      2 * 3
-    ).toString(),
     "0",
-    ""
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
     "iif('TEST'<>(a<>b),a+b,a*b)",
     "'TEST'",
     2,
     3,
-    iif(
-      "TEST" !== (Number(2) !== Number(3)).toString(),
-      2 + 3,
-      2 * 3
-    ).toString(),
     "0",
-    ""
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
 
   [
@@ -1243,19 +1259,9 @@ export const testExpression8: Array<[
     "'TEST'",
     2,
     3,
-    iif(
-      "TEST" !== GxBigNumber.greaterThan(2, 3).toString() &&
-        GxBigNumber.greaterThan(2, 3).toString() !== "TEST" &&
-        "TEST" !== "TEST" &&
-        GxBigNumber.greaterThan(2, 3).toString() !== "TEST" &&
-        GxBigNumber.greaterThan(2, 3) !== GxBigNumber.greaterThan(2, 3) &&
-        GxBigNumber.greaterThan(2, 3) &&
-        GxBigNumber.greaterThan(2, 3),
-      2 + 3,
-      2 * 3
-    ).toString(),
     "0",
-    ""
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
 
   [
@@ -1263,9 +1269,9 @@ export const testExpression8: Array<[
     "'TEST'",
     2,
     3,
-    iif("TEST" === "TEST", 2 + 3, 2 * 3).toString(),
     "0",
-    ""
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
 
   [
@@ -1629,8 +1635,8 @@ export const testExpression9: Array<[
     2,
     "'+'",
     "0",
-    "4",
-    "Error occurred during execution (EVALUATION_ERROR)"
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ]
 ];
 
@@ -2721,6 +2727,199 @@ export const testExpression11: Array<[
   string
 ]> = [["A+B", 1, 2, add(1, 2).toString(), "0", ""]];
 
+export const testExpression12: Array<[string, string, string, string]> = [
+  [
+    "alert('Inyeccion de codigo')",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "console.log('Prueba')",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "document.body.innerHTML = '<h1>Test</h1>'",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "window.location = 'https://www.genexus.com/'",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "console.log(document.cookie)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "while(true) {}",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["abs(-1)", "1", "0", ""],
+  [
+    "abs(alert('Inyeccion de codigo'))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "abs('alert('Inyeccion de codigo')')",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(1=1,alert('Inyeccion de codigo'),1)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(1=1,console.log('Prueba'),1)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(1=1,document.body.innerHTML = '<h1>Test</h1>',1)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(1=1,window.location = 'https://www.genexus.com/',1)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(1=1,console.log(document.cookie),1)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(1=1,while(true) {},1)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif('A'='B',1,window.location = 'https://www.genexus.com/')",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["iif('A'='B',1,4)", "4", "0", ""],
+  [
+    "iif(A=B,1,4)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["iif(1 ='B',1,4)", "4", "0", ""],
+  ["iif(12345 ='B',1,4)", "4", "0", ""],
+  ["iif(1.2345 ='B',1,4)", "4", "0", ""],
+  [
+    "iif(123A45 ='B',1,4)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["iif('A' = 12345,1,4)", "4", "0", ""],
+  ["iif('A'=1.2345,1,4)", "4", "0", ""],
+  [
+    "iif('A'=123A45,1,4)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["iif(1='B',1,4)", "4", "0", ""],
+  ["iif('A'=2,1,4)", "4", "0", ""],
+  ["iif(1=2,1,4)", "4", "0", ""],
+  [
+    "iif(1=,1,4)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(=1,1,4)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  ["iif(abs(-2),1,4)", "1", "0", ""],
+  ["iif(abs(-2)=2,1,4)", "1", "0", ""],
+  ["iif(abs(-2)=6,1,4)", "4", "0", ""],
+  ["abs(-2)", "2", "0", ""],
+  ["abs(integer(-2.5))", "2", "0", ""],
+  ["iif(abs(-2),abs(-2),abs(-2))", "2", "0", ""],
+  [
+    "iif(abs(alert('Inyeccion de codigo')),abs(-2),abs(-2))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(abs(round(alert('Inyeccion de codigo'),1)),abs(-2),abs(-2))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(integer(3.15),abs(alert('Inyeccion de codigo')),abs(-2))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(integer(3.15),abs(-6),abs(alert('Inyeccion de codigo')))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(integer(3.15),abs(-6),abs(integer(alert('Inyeccion de codigo'))))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "iif(integer(3.15),abs(-6),abs(integer(iif(alert('Inyeccion de codigo'),1,2))))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "abs(-6+alert('Inyeccion de codigo'))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "abs(alert('Inyeccion de codigo')+6)",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ],
+  [
+    "cos(alert('Inyeccion de codigo'))",
+    "0",
+    "3",
+    "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ]
+];
+
 describe("testExpressionErrores1", () => {
   for (const t of testExpressionErrores1) {
     it(` ==> ${t[0]}`, () => {
@@ -3004,6 +3203,23 @@ describe("testExpression11", () => {
       expect(res.toString()).toBe(t[3]);
       expect(errorCode.toString()).toBe(t[4]);
       expect(errorDescr.toString()).toBe(t[5]);
+    });
+  }
+});
+
+describe("testExpression12", () => {
+  for (const t of testExpression12) {
+    it(` ==> ${t[0]}`, async () => {
+      let Expression = new GxExpression();
+      Expression.setExpression(t[0]);
+      let res = Expression.evaluate();
+
+      let errorCode = Expression.ErrCode;
+      let errorDescr = Expression.ErrDescription;
+
+      expect(res.toString()).toBe(t[1]);
+      expect(errorCode.toString()).toBe(t[2]);
+      expect(errorDescr.toString()).toBe(t[3]);
     });
   }
 });

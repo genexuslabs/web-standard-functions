@@ -72,15 +72,16 @@ export class GxExpression {
         if (this.ErrCode === 0) {
           if (valid) {
             safe = iifSafe(safe);
-            const regexFunciones = /\b(\w+)\s*\(/g;
+            const regexFunctions = /\b(\w+)\s*\(/g;
 
-            const funcAux = [...expr.matchAll(regexFunciones)].map(match => {
+            const funcAux = [...expr.matchAll(regexFunctions)].map(match => {
               if (
                 match[1] === "greaterThan" ||
                 match[1] === "lessThan" ||
                 match[1] === "greaterThanEqualTo" ||
                 match[1] === "lessThanEqualTo" ||
-                match[1] === "differentThan"
+                match[1] === "differentThan" ||
+                match[1] === "compare"
               ) {
                 return "GxBigNumber";
               } else {
@@ -527,6 +528,9 @@ const replaceOperations = (exp, expr) => {
       );
     }
     if (exp.ErrCode === 0) {
+      replaceOperationWithFunction(parts, "===", "GxBigNumber.compare", exp);
+    }
+    if (exp.ErrCode === 0) {
       replaceOperationWithFunction(
         parts,
         "<>",
@@ -548,24 +552,6 @@ const replaceOperations = (exp, expr) => {
 };
 
 const checkOperationWellFormed = (leftPart, rightPart, exp, op) => {
-  let isString = part => {
-    const matchString = /^["'].*["']$/;
-    return matchString.test(String(part));
-  };
-
-  let isInBracket = part => {
-    return String(part).match(/^\((.*)\)$/);
-  };
-
-  let isStringInBracket = part => {
-    let inBracket = isInBracket(part);
-    if (inBracket) {
-      return isString(inBracket[1]);
-    } else {
-      return false;
-    }
-  };
-
   if (leftPart === undefined && rightPart === undefined) {
     exp.setErrCode(3);
     exp.setErrDescription(
@@ -573,8 +559,10 @@ const checkOperationWellFormed = (leftPart, rightPart, exp, op) => {
     );
     return exp;
   } else if (leftPart === undefined && op !== "-" && op !== "+") {
-    exp.setErrCode(4);
-    exp.setErrDescription("Error occurred during execution (EVALUATION_ERROR)");
+    exp.setErrCode(3);
+    exp.setErrDescription(
+      "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+    );
     return exp;
   } else if (
     op !== "+" &&
@@ -606,9 +594,7 @@ const checkOperationWellFormed = (leftPart, rightPart, exp, op) => {
     exp.setErrCode(4);
     exp.setErrDescription("Error occurred during execution (EVALUATION_ERROR)");
     return exp;
-  }
-
-  if (
+  } else if (
     leftPart !== undefined &&
     rightPart !== undefined &&
     (isString(leftPart) ||
@@ -645,10 +631,10 @@ const replaceOperationWithFunction = (parts, op, opFn, exp) => {
       if (
         (leftPart === undefined ||
           leftPart === "===" ||
-            leftPart === ">=" ||
-            leftPart === "<=" ||
-            leftPart === ">" ||
-            leftPart === "<") &&
+          leftPart === ">=" ||
+          leftPart === "<=" ||
+          leftPart === ">" ||
+          leftPart === "<") &&
         rightPart !== undefined &&
         op === "-"
       ) {
@@ -656,10 +642,10 @@ const replaceOperationWithFunction = (parts, op, opFn, exp) => {
       } else if (
         (leftPart === undefined ||
           leftPart === "===" ||
-            leftPart === ">=" ||
-            leftPart === "<=" ||
-            leftPart === ">" ||
-            leftPart === "<") &&
+          leftPart === ">=" ||
+          leftPart === "<=" ||
+          leftPart === ">" ||
+          leftPart === "<") &&
         rightPart !== undefined &&
         op === "+"
       ) {
@@ -682,6 +668,11 @@ const replaceOperationWithFunction = (parts, op, opFn, exp) => {
         op === "<>"
       ) {
         parts.splice(index - 1, 3, `${leftPart} !== ${rightPart}`);
+      } else if (
+        (/^["'].*["']$/.test(leftPart) || /^["'].*["']$/.test(rightPart)) &&
+        op === "==="
+      ) {
+        parts.splice(index - 1, 3, `${leftPart} === ${rightPart}`);
       } else {
         parts.splice(index - 1, 3, `${opFn}(${leftPart},${rightPart})`);
       }
@@ -693,12 +684,11 @@ const replaceOperationWithFunction = (parts, op, opFn, exp) => {
 
 const validateExpression = expr => {
   const validateFunction = expr => {
-    let funcNameMatch = /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|gxbignumber.greaterthanequalto|gxbignumber.lessthanequalto|gxbignumber.differentthan|gxbignumber.greaterthan|gxbignumber.lessthan)\s*\(/.exec(
+    let funcNameMatch = /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|gxbignumber.greaterthanequalto|gxbignumber.lessthanequalto|gxbignumber.differentthan|gxbignumber.greaterthan|gxbignumber.lessthan|gxbignumber.compare)\s*\(/.exec(
       expr.toLowerCase()
     );
 
     let bracketMatch = /^[-+]?\((.*)\)$|pi/.exec(expr.toLowerCase());
-
     if (!funcNameMatch && !bracketMatch) {
       return validateParms(expr.trim());
     }
@@ -736,7 +726,8 @@ const validateExpression = expr => {
       funcName === "gxbignumber.lessthanequalto" ||
       funcName === "gxbignumber.differentthan" ||
       funcName === "gxbignumber.greaterthan" ||
-      funcName === "gxbignumber.lessthan"
+      funcName === "gxbignumber.lessthan" ||
+      funcName === "gxbignumber.compare"
     ) {
       if (
         parms.length !== 2 ||
@@ -753,8 +744,17 @@ const validateExpression = expr => {
         parms[2].trim() === ""
       ) {
         return false;
-      } else {
-        return true;
+      } else if (
+        parms.join(" ").indexOf("&&") !== -1 ||
+        parms.join(" ").indexOf("||") !== -1
+      ) {
+        parms.forEach((parm, index) => {
+          if (parm.indexOf("&&") !== -1) {
+            parms.splice(index, 1, ...parm.split(" && "));
+          } else if (parm.indexOf("||") !== -1) {
+            parms.splice(index, 1, ...parm.split(" || "));
+          }
+        });
       }
     } else {
       if (parms.length !== 1 || parms[0].trim() === "") {
@@ -788,6 +788,7 @@ const validateExpression = expr => {
 
       if (char === "'" || char === '"') {
         charOpen = !charOpen;
+        currentParms += "'";
       } else if (
         char === "," &&
         openBrackets === 1 &&
@@ -812,12 +813,12 @@ const validateExpression = expr => {
   const validateParms = parms => {
     if (parms === "") return false;
 
-    const numberPattern = /^s*-?\d*\.?\d*([+\-*/]?\s*-?\d*\.?\d*)|pi*\s*$/;
+    const numberPattern = /^s*-?\d*\.?\d*([+\-*/]?\s*-?\d*\.?\d*|pi)*\s*$/;
     const operationPattern = /^[\d+\-*/().\s]+$/;
     const numberBracketPattern = /\((\d+)\)/;
 
     if (
-      /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|gxbignumber.greaterthanequalto|gxbignumber.lessthanequalto|gxbignumber.differentthan|gxbignumber.greaterthan|gxbignumber.lessthan)\s*\(/.test(
+      /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|gxbignumber.greaterthanequalto|gxbignumber.lessthanequalto|gxbignumber.differentthan|gxbignumber.greaterthan|gxbignumber.lessthan|gxbignumber.compare)\s*\(/.test(
         parms.toLowerCase()
       )
     ) {
@@ -837,14 +838,65 @@ const validateExpression = expr => {
     }
 
     let funcBracketMatch = /^[-+]?\((.*)\)$/.exec(parms);
-
     if (funcBracketMatch) {
       return validateFunction(funcBracketMatch[1]);
     }
+
+    let comparationMatch = parms.match(
+      /(["'][^"']*["'])\s*(===|!==)\s*(["'][^"']*["'])/
+    );
+    if (comparationMatch) {
+      if (
+        comparationMatch[1] !== undefined &&
+        comparationMatch[3] !== undefined &&
+        (isString(comparationMatch[1]) ||
+          isStringInBracket(comparationMatch[1]) ||
+          isString(comparationMatch[3]) ||
+          isStringInBracket(comparationMatch[3])) &&
+        (comparationMatch[2] === "===" || comparationMatch[2] === "!==")
+      ) {
+        return true;
+      }
+    }
+
+    if (parms.match(/(\d+(?:\.\d+)?|pi)\s*(===|!==)\s*(["'][^"']*["'])/)) {
+      if (parms.match(/[0-9]+[a-zA-Z]+[0-9]*\s*(===|!==)\s*(["'][^"']*["'])/)) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    if (parms.match(/(["'][^"']*["'])\s*(===|!==)\s*(\d+(?:\.\d+)?|pi)/)) {
+      if (parms.match(/(["'][^"']*["'])\s*(===|!==)\s*[0-9]+[a-zA-Z]+[0-9]*/)) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+
     return false;
   };
 
   return validateFunction(expr);
+};
+
+let isString = part => {
+  const matchString = /^["'].*["']$/;
+  return matchString.test(String(part));
+};
+
+let isInBracket = part => {
+  return String(part).match(/^\((.*)\)$/);
+};
+
+let isStringInBracket = part => {
+  let inBracket = isInBracket(part);
+  if (inBracket) {
+    return isString(inBracket[1]);
+  } else {
+    return false;
+  }
 };
 
 const iifSafe = expr => {
