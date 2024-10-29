@@ -946,6 +946,14 @@ export const testExpression4: Array<[
     ""
   ], // 1<2 and 2<2 ==> 0
   [
+    "iif( a < b or a+1 <b , a , 0)",
+    1,
+    2,
+    iif(1 < 2 || 2 < 2, 1, 0).toString(),
+    "0",
+    ""
+  ], // 1<2 and 2<2 ==> 0
+  [
     "iif( a < b and a+1 <b and  a+1 <b, a , 0)",
     1,
     2,
@@ -1352,8 +1360,8 @@ export const testExpression8: Array<[
     "Execute Method not found"
   ],
   [
-    "iif(operator01<='PRUEBA',a+b,0)",
-    "'PRUEBA'",
+    "iif(operator01<='TEST',a+b,0)",
+    "'TEST'",
     2,
     3,
     "0",
@@ -1370,8 +1378,8 @@ export const testExpression8: Array<[
     ""
   ],
   [
-    "iif(operator01<'PRUEBA',a+b,0)",
-    "'PRUEBA'",
+    "iif(operator01<'TEST',a+b,0)",
+    "'TEST'",
     2,
     3,
     "0",
@@ -1388,8 +1396,8 @@ export const testExpression8: Array<[
     ""
   ],
   [
-    "iif(operator01>='PRUEBA',a+b,0)",
-    "'PRUEBA'",
+    "iif(operator01>='TEST',a+b,0)",
+    "'TEST'",
     2,
     3,
     "0",
@@ -1415,8 +1423,8 @@ export const testExpression8: Array<[
     ""
   ],
   [
-    "iif(operator01>'PRUEBA',a+b,0)",
-    "'PRUEBA'",
+    "iif(operator01>'TEST',a+b,0)",
+    "'TEST'",
     2,
     3,
     "0",
@@ -1425,7 +1433,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif ( ( a >= 0 ) AND ( b > a ), a, b )",
-    "'PRUEBA'",
+    "'TEST'",
     2,
     3,
     iif(
@@ -1438,7 +1446,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif((a>=0) AND (b>a), a, b )",
-    "'PRUEBA'",
+    "'TEST'",
     2,
     3,
     iif(
@@ -1451,7 +1459,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif ( ( ( a + 1 ) / 2 >= 0 ) AND ( cos(b) > a ), a, b )",
-    "'PRUEBA'",
+    "'TEST'",
     2,
     3,
     iif(
@@ -1465,7 +1473,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif((a>=0, a, b )",
-    "'PRUEBA'",
+    "'TEST'",
     2,
     3,
     "0",
@@ -1474,7 +1482,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif(a>=0), a, b )",
-    "'PRUEBA'",
+    "'TEST'",
     2,
     3,
     "0",
@@ -1483,7 +1491,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif(((a>=0, a, b )",
-    "'PRUEBA'",
+    "'TEST'",
     2,
     3,
     "0",
@@ -1492,47 +1500,39 @@ export const testExpression8: Array<[
   ],
   [
     "iif(((a>=0), a, b )",
-    "'PRUEBA'",
+    "'TEST'",
     2,
     3,
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
-  ["iif(((a>=0)), a, b )", "'PRUEBA'", 2, 3, "2", "0", ""],
-  ["iif(a>=0, a+b, b )", "'PRUEBA'", 2, 3, "5", "0", ""],
-  ["iif(a>=0, a-b, b )", "'PRUEBA'", 2, 3, "-1", "0", ""],
-  ["iif(a>=0,-a,b)", "'PRUEBA'", 2, 3, "-2", "0", ""],
-  ["iif(a>=0,+a,b)", "'PRUEBA'", 2345, 3, "2345", "0", ""],
-  ["iif(a<=0,+a,b)", "'PRUEBA'", -2, 3, "-2", "0", ""],
-  ["iif(((a>=0)), -a, b )", "'PRUEBA'", -2, 3, "3", "0", ""],
-  ["iif(((a>=0)), -(-a), b )", "'PRUEBA'", -2, 3, "3", "0", ""],
-  ["iif(((a<=0)), -(-a), b )", "'PRUEBA'", -2, 3, "-2", "0", ""],
-  ["iif(a>=0,-(a),b)", "'PRUEBA'", 2, 3, "-2", "0", ""],
-  ["iif(a>=0,+(a),b)", "'PRUEBA'", 2345, 3, "2345", "0", ""],
-  ["iif(a>=0,+-(a),b)", "'PRUEBA'", 2345, 3, "-2345", "0", ""],
-  ["iif(a<=0,(+a),b)", "'PRUEBA'", -2, 3, "-2", "0", ""],
-  ["iif(((a>=0)), (-a), b )", "'PRUEBA'", -2, 3, "3", "0", ""],
-  ["iif(((a>=0)), (-(-a)), b )", "'PRUEBA'", -2, 3, "3", "0", ""],
-  ["iif(((a<=0)), -(-(a)), b )", "'PRUEBA'", -2, 3, "-2", "0", ""],
-  ["iif(((a<=0)), (-(-(a))), b )", "'PRUEBA'", -2, 3, "-2", "0", ""],
-  ["iif(((a<=0)), (-(-(a+b))), b )", "'PRUEBA'", -2, 3, "1", "0", ""],
-  ["iif(((a<=0)), (-(-(a+b)-1)), b )", "'PRUEBA'", -2, 3, "2", "0", ""],
-  ["iif(((a<=0)), (-(-(a+b)-1+(-b))), b )", "'PRUEBA'", -2, 3, "5", "0", ""],
-  ["iif(((a>=0)), (-(-(a+b)-1+(-b))), -b )", "'PRUEBA'", -2, 3, "-3", "0", ""],
-  ["iif(a>=0, 3, -b )", "'PRUEBA'", -2, 3, "-3", "0", ""],
-  [
-    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(b) )",
-    "'PRUEBA'",
-    -2,
-    3,
-    "-3",
-    "0",
-    ""
-  ],
+  ["iif(((a>=0)), a, b )", "'TEST'", 2, 3, "2", "0", ""],
+  ["iif(a>=0, a+b, b )", "'TEST'", 2, 3, "5", "0", ""],
+  ["iif(a>=0, a-b, b )", "'TEST'", 2, 3, "-1", "0", ""],
+  ["iif(a>=0,-a,b)", "'TEST'", 2, 3, "-2", "0", ""],
+  ["iif(a>=0,+a,b)", "'TEST'", 2345, 3, "2345", "0", ""],
+  ["iif(a<=0,+a,b)", "'TEST'", -2, 3, "-2", "0", ""],
+  ["iif(((a>=0)), -a, b )", "'TEST'", -2, 3, "3", "0", ""],
+  ["iif(((a>=0)), -(-a), b )", "'TEST'", -2, 3, "3", "0", ""],
+  ["iif(((a<=0)), -(-a), b )", "'TEST'", -2, 3, "-2", "0", ""],
+  ["iif(a>=0,-(a),b)", "'TEST'", 2, 3, "-2", "0", ""],
+  ["iif(a>=0,+(a),b)", "'TEST'", 2345, 3, "2345", "0", ""],
+  ["iif(a>=0,+-(a),b)", "'TEST'", 2345, 3, "-2345", "0", ""],
+  ["iif(a<=0,(+a),b)", "'TEST'", -2, 3, "-2", "0", ""],
+  ["iif(((a>=0)), (-a), b )", "'TEST'", -2, 3, "3", "0", ""],
+  ["iif(((a>=0)), (-(-a)), b )", "'TEST'", -2, 3, "3", "0", ""],
+  ["iif(((a<=0)), -(-(a)), b )", "'TEST'", -2, 3, "-2", "0", ""],
+  ["iif(((a<=0)), (-(-(a))), b )", "'TEST'", -2, 3, "-2", "0", ""],
+  ["iif(((a<=0)), (-(-(a+b))), b )", "'TEST'", -2, 3, "1", "0", ""],
+  ["iif(((a<=0)), (-(-(a+b)-1)), b )", "'TEST'", -2, 3, "2", "0", ""],
+  ["iif(((a<=0)), (-(-(a+b)-1+(-b))), b )", "'TEST'", -2, 3, "5", "0", ""],
+  ["iif(((a>=0)), (-(-(a+b)-1+(-b))), -b )", "'TEST'", -2, 3, "-3", "0", ""],
+  ["iif(a>=0, 3, -b )", "'TEST'", -2, 3, "-3", "0", ""],
+  ["iif(((a>=0)), (-(-(a+b)-1+(-b))), -(b) )", "'TEST'", -2, 3, "-3", "0", ""],
   [
     "iif(((a>=0)), (-(-(a+b)-1+(-b))), -((b)) )",
-    "'PRUEBA'",
+    "'TEST'",
     -2,
     3,
     "-3",
@@ -1541,7 +1541,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(b+1) )",
-    "'PRUEBA'",
+    "'TEST'",
     -2,
     3,
     "-4",
@@ -1550,7 +1550,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif(((a>=0)), (-(-(a+b)-1+(-b))), -((b)+1) )",
-    "'PRUEBA'",
+    "'TEST'",
     -2,
     3,
     "-4",
@@ -1559,7 +1559,7 @@ export const testExpression8: Array<[
   ],
   [
     "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(-(b)+1) )",
-    "'PRUEBA'",
+    "'TEST'",
     -2,
     3,
     "2",
@@ -1568,34 +1568,18 @@ export const testExpression8: Array<[
   ],
   [
     "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(--b+1) )",
-    "'PRUEBA'",
+    "'TEST'",
     -2,
     3,
     "-4",
     "0",
     ""
   ],
-  [
-    "iif(((a>=0)), (-(-(a+b)-1+(-b))), -(+b) )",
-    "'PRUEBA'",
-    -2,
-    3,
-    "-3",
-    "0",
-    ""
-  ],
-  [
-    "iif(((a>=0)), (-(-(a+b)-1+(-b))), (-b) )",
-    "'PRUEBA'",
-    -2,
-    3,
-    "-3",
-    "0",
-    ""
-  ],
+  ["iif(((a>=0)), (-(-(a+b)-1+(-b))), -(+b) )", "'TEST'", -2, 3, "-3", "0", ""],
+  ["iif(((a>=0)), (-(-(a+b)-1+(-b))), (-b) )", "'TEST'", -2, 3, "-3", "0", ""],
   [
     "iif(((a>=0)), (-(-(a+b)-1+(-b))), (-(+b)) )",
-    "'PRUEBA'",
+    "'TEST'",
     -2,
     3,
     "-3",
@@ -1604,19 +1588,19 @@ export const testExpression8: Array<[
   ],
   [
     "iif(((-a>=0)), (-(-(a+b)-1+(-b))), (-(+b)) )",
-    "'PRUEBA'",
+    "'TEST'",
     -2,
     3,
     "5",
     "0",
     ""
   ],
-  ["iif(-a>=-4, 1, 2)", "'PRUEBA'", -2, 3, "1", "0", ""],
-  ["iif(-a>-4, 1, 2)", "'PRUEBA'", -2, 3, "1", "0", ""],
-  ["iif(-a=-4, 1, 2)", "'PRUEBA'", -2, 3, "2", "0", ""],
-  ["iif(a*-2=-4, 1, 2)", "'PRUEBA'", -2, 3, "2", "0", ""],
-  ["iif(-a<=-4, 1, 2)", "'PRUEBA'", -2, 3, "2", "0", ""],
-  ["iif(-a<-4, 1, 2)", "'PRUEBA'", -2, 3, "2", "0", ""]
+  ["iif(-a>=-4, 1, 2)", "'TEST'", -2, 3, "1", "0", ""],
+  ["iif(-a>-4, 1, 2)", "'TEST'", -2, 3, "1", "0", ""],
+  ["iif(-a=-4, 1, 2)", "'TEST'", -2, 3, "2", "0", ""],
+  ["iif(a*-2=-4, 1, 2)", "'TEST'", -2, 3, "2", "0", ""],
+  ["iif(-a<=-4, 1, 2)", "'TEST'", -2, 3, "2", "0", ""],
+  ["iif(-a<-4, 1, 2)", "'TEST'", -2, 3, "2", "0", ""]
 ];
 
 export const testExpression9: Array<[
@@ -2729,13 +2713,13 @@ export const testExpression11: Array<[
 
 export const testExpression12: Array<[string, string, string, string]> = [
   [
-    "alert('Inyeccion de codigo')",
+    "alert('Test')",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "console.log('Prueba')",
+    "console.log('Test')",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
@@ -2766,25 +2750,25 @@ export const testExpression12: Array<[string, string, string, string]> = [
   ],
   ["abs(-1)", "1", "0", ""],
   [
-    "abs(alert('Inyeccion de codigo'))",
+    "abs(alert('Test'))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "abs('alert('Inyeccion de codigo')')",
+    "abs('alert('Test')')",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "iif(1=1,alert('Inyeccion de codigo'),1)",
+    "iif(1=1,alert('Test'),1)",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "iif(1=1,console.log('Prueba'),1)",
+    "iif(1=1,console.log('Test'),1)",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
@@ -2865,58 +2849,138 @@ export const testExpression12: Array<[string, string, string, string]> = [
   ["abs(integer(-2.5))", "2", "0", ""],
   ["iif(abs(-2),abs(-2),abs(-2))", "2", "0", ""],
   [
-    "iif(abs(alert('Inyeccion de codigo')),abs(-2),abs(-2))",
+    "iif(abs(alert('Test')),abs(-2),abs(-2))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "iif(abs(round(alert('Inyeccion de codigo'),1)),abs(-2),abs(-2))",
+    "iif(abs(round(alert('Test'),1)),abs(-2),abs(-2))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "iif(integer(3.15),abs(alert('Inyeccion de codigo')),abs(-2))",
+    "iif(integer(3.15),abs(alert('Test')),abs(-2))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "iif(integer(3.15),abs(-6),abs(alert('Inyeccion de codigo')))",
+    "iif(integer(3.15),abs(-6),abs(alert('Test')))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "iif(integer(3.15),abs(-6),abs(integer(alert('Inyeccion de codigo'))))",
+    "iif(integer(3.15),abs(-6),abs(integer(alert('Test'))))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "iif(integer(3.15),abs(-6),abs(integer(iif(alert('Inyeccion de codigo'),1,2))))",
+    "iif(integer(3.15),abs(-6),abs(integer(iif(alert('Test'),1,2))))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "abs(-6+alert('Inyeccion de codigo'))",
+    "abs(-6+alert('Test'))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "abs(alert('Inyeccion de codigo')+6)",
+    "abs(alert('Test')+6)",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
   ],
   [
-    "cos(alert('Inyeccion de codigo'))",
+    "cos(alert('Test'))",
     "0",
     "3",
     "Expression to be evaluated is not well formed (EXPRESSION_ERROR)"
+  ]
+];
+
+export const testExpression13: Array<[
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string
+]> = [
+  ["((L-X-239+iif((D=2) or (D=5),9,0))/4)", "2000", "50", "2", "430", "0", ""],
+  ["iif((D=2) or (D=5),9,6)", "2000", "50", "2", "9", "0", ""],
+  [
+    "((L-X-239+iif((D=2) and (D=5),9,0))/4)",
+    "2000",
+    "50",
+    "2",
+    "427.75",
+    "0",
+    ""
+  ],
+  ["iif((D=2) and (D=5),9,6)", "2000", "50", "2", "6", "0", ""]
+];
+
+export const testExpression14: Array<[
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string
+]> = [
+  [
+    "IIF(G=1,H-Y-25,  H  - IIF( (CMM=1) and (I>1), 12,0 )  )",
+    "3.00",
+    "2.00",
+    "3000",
+    "3.00",
+    "0",
+    "3000",
+    "0",
+    ""
+  ],
+  [
+    "IIF(G=1,H-Y-25,  H  - IIF( (CMM=1) and (I>1), ((29=40) and (50>34)),0 )  )",
+    "3.00",
+    "2.00",
+    "3000",
+    "3.00",
+    "0",
+    "3000",
+    "0",
+    ""
+  ],
+  [
+    "IIF(G=1,H-Y-25,  H  - IIF( (CMM=1) or (I>1), 12,0 )  )",
+    "3.00",
+    "2.00",
+    "3000",
+    "3.00",
+    "0",
+    "2988",
+    "0",
+    ""
+  ],
+  [
+    "IIF(G=1,H-Y-25,  H  - IIF( (CMM=1) or (I<1), ((29=40) or (50>34)),0 )  )",
+    "3.00",
+    "2.00",
+    "3000",
+    "3.00",
+    "0",
+    "3000",
+    "0",
+    ""
   ]
 ];
 
@@ -3220,6 +3284,50 @@ describe("testExpression12", () => {
       expect(res.toString()).toBe(t[1]);
       expect(errorCode.toString()).toBe(t[2]);
       expect(errorDescr.toString()).toBe(t[3]);
+    });
+  }
+});
+
+describe("testExpression13", () => {
+  for (const t of testExpression13) {
+    it(` ==> ${t[0]}`, async () => {
+      let Expression = new GxExpression();
+      Expression.setExpression(t[0]);
+      Expression.Variables.set("l", t[1]);
+      Expression.Variables.set("x", t[2]);
+      Expression.Variables.set("d", t[3]);
+
+      let res = Expression.evaluate();
+
+      let errorCode = Expression.ErrCode;
+      let errorDescr = Expression.ErrDescription;
+
+      expect(res.toString()).toBe(t[4]);
+      expect(errorCode.toString()).toBe(t[5]);
+      expect(errorDescr.toString()).toBe(t[6]);
+    });
+  }
+});
+
+describe("testExpression14", () => {
+  for (const t of testExpression14) {
+    it(` ==> ${t[0]}`, async () => {
+      let Expression = new GxExpression();
+      Expression.setExpression(t[0]);
+      Expression.Variables.set("I", t[1]);
+      Expression.Variables.set("G", t[2]);
+      Expression.Variables.set("H", t[3]);
+      Expression.Variables.set("Y", t[4]);
+      Expression.Variables.set("CMM", t[5]);
+
+      let res = Expression.evaluate();
+
+      let errorCode = Expression.ErrCode;
+      let errorDescr = Expression.ErrDescription;
+
+      expect(res.toString()).toBe(t[6]);
+      expect(errorCode.toString()).toBe(t[7]);
+      expect(errorDescr.toString()).toBe(t[8]);
     });
   }
 });

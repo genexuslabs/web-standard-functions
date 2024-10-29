@@ -528,7 +528,12 @@ const replaceOperations = (exp, expr) => {
       );
     }
     if (exp.ErrCode === 0) {
-      replaceOperationWithFunction(parts, "===", "GxBigNumber.compare", exp);
+      replaceOperationWithFunction(
+        parts,
+        "===",
+        "0 === GxBigNumber.compare",
+        exp
+      );
     }
     if (exp.ErrCode === 0) {
       replaceOperationWithFunction(
@@ -749,10 +754,68 @@ const validateExpression = expr => {
         parms.join(" ").indexOf("||") !== -1
       ) {
         parms.forEach((parm, index) => {
+          let funcNameParm = /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|gxbignumber.greaterthanequalto|gxbignumber.lessthanequalto|gxbignumber.differentthan|gxbignumber.greaterthan|gxbignumber.lessthan|gxbignumber.compare)\s*\(/.exec(
+            parm.toLowerCase()
+          );
+
           if (parm.indexOf("&&") !== -1) {
-            parms.splice(index, 1, ...parm.split(" && "));
-          } else if (parm.indexOf("||") !== -1) {
-            parms.splice(index, 1, ...parm.split(" || "));
+            if (funcNameParm) {
+              if (
+                parm.split(" && ")[0].split("(").length - 1 ===
+                parm.split(" && ")[0].split(")").length - 1
+              ) {
+                parms.splice(index, 1, ...parm.split(" && "));
+              }
+            } else {
+              let parmAux = parm.split(" && ");
+              if (
+                parmAux[0].startsWith("(") &&
+                parmAux[0].split("(").length - 1 >
+                  parmAux[0].split(")").length - 1
+              ) {
+                parmAux[0] = parmAux[0].substring(1);
+              }
+
+              if (
+                parmAux[1].endsWith(")") &&
+                parmAux[1].split("(").length - 1 <
+                  parmAux[1].split(")").length - 1
+              ) {
+                parmAux[1] = parmAux[1].slice(0, -1);
+              }
+
+              parms.splice(index, 1, ...parmAux);
+            }
+          }
+
+          if (parm.indexOf("||") !== -1) {
+            if (funcNameParm) {
+              if (
+                parm.split(" || ")[0].split("(").length - 1 ===
+                parm.split(" || ")[0].split(")").length - 1
+              ) {
+                parms.splice(index, 1, ...parm.split(" || "));
+              }
+            } else {
+              let parmAux = parm.split(" || ");
+              if (
+                parmAux[0].startsWith("(") &&
+                parmAux[0].split("(").length - 1 >
+                  parmAux[0].split(")").length - 1
+              ) {
+                parmAux[0] = parmAux[0].substring(1);
+              }
+
+              if (
+                parmAux[1].endsWith(")") &&
+                parmAux[1].split("(").length - 1 <
+                  parmAux[1].split(")").length - 1
+              ) {
+                parmAux[1] = parmAux[1].slice(0, -1);
+              }
+
+              parms.splice(index, 1, ...parmAux);
+            }
           }
         });
       }
@@ -857,6 +920,16 @@ const validateExpression = expr => {
       ) {
         return true;
       }
+    }
+
+    if (
+      parms.toLowerCase().match(/^0\s*===\s*(gxbignumber\.compare\(\s*.+\s*\))/)
+    ) {
+      return validateFunction(
+        parms
+          .toLowerCase()
+          .match(/^0\s*===\s*(gxbignumber\.compare\(\s*.+\s*\))/)[1]
+      );
     }
 
     if (parms.match(/(\d+(?:\.\d+)?|pi)\s*(===|!==)\s*(["'][^"']*["'])/)) {
