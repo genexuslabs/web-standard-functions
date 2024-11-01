@@ -1682,6 +1682,9 @@
           "isAsync": true
         }
       }
+    },
+    "RegEx": {
+      "path": "@genexus/web-standard-functions/dist/lib-esm/types/gxRegEx"
     }
   },
   "disambiguated": {
