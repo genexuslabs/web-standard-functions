@@ -74,3 +74,14 @@ export const testCases: Array<[
     ""
   ]
 ];
+
+export const testCases1: Array<[
+  string,
+  string | RegExp,
+  string,
+  string,
+  number,
+  string
+]> = [
+  ["texto", "/[abc/g", "nuevo", "", 1, "Invalid regular expression: //[abc/g/"]
+];
