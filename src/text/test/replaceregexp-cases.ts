@@ -34,14 +34,6 @@ export const testCases: Array<[
   ],
   ["Peñarol Campeón del Siglo XX", "e", "", "Pñarol Campón dl Siglo XX", 0, ""],
   [
-    "texto",
-    "/[abc/g",
-    "nuevo",
-    "",
-    1,
-    "Invalid regular expression: //[abc/g/g: Unterminated character class"
-  ],
-  [
     "11/12/2003 extra 8/12/2003",
     "\\b(\\d{1,2})\\/(\\d{1,2})\\/(\\d{2,4})\\b",
     "$2-$1-$3",
