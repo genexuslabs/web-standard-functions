@@ -6,7 +6,6 @@
     "lib": ["es2021", "dom"],
     "outDir": "./dist/lib",
     "allowSyntheticDefaultImports": true,
-    "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "declaration": true,
