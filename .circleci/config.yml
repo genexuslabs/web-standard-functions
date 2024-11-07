@@ -3,20 +3,13 @@ version: 2
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:latest-browsers
+    - image: cimg/node:lts
 
 jobs:
   validate:
     <<: *defaults
     steps:
       - checkout
-
-      - run:
-          name: Install Node.js 20.15.1
-          command: |
-            npm install -g n
-            n 20.15.1
-            node -v
 
       - restore_cache:
           keys:
