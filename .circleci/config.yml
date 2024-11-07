@@ -3,7 +3,7 @@ version: 2
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:20.15.1-browsers
+    - image: circleci/node:latest-browsers
 
 jobs:
   validate:
