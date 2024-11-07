@@ -11,6 +11,13 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Install Node.js 20.15.1
+          command: |
+            npm install -g n
+            n 20.15.1
+            node -v
+
       - restore_cache:
           keys:
             - v4-dependencies-{{ checksum "package.json" }}
