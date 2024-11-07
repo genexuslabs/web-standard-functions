@@ -5,6 +5,7 @@
   "main": "dist/web-standard-functions.js",
   "module": "dist/lib-esm/index.js",
   "typings": "dist/types/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "npm run clean && npm run generate-api && npm run build.commonjs && npm run build.es6",
     "build.commonjs": "tsc",
