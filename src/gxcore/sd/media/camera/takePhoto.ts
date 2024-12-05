@@ -13,6 +13,8 @@ export const takePhoto = async (): Promise<File> => {
       resolve(newInput.files[0]);
     };
 
-    newInput.click();
+    requestAnimationFrame(() => {
+      newInput.click();
+    });
   });
 };
