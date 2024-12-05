@@ -6,9 +6,15 @@
  * @return any Either valueIfTrue or valueIfFalse depending on the condition
  */
 export const iif = (
-  condition: boolean,
+  condition: boolean | Number,
   valueIfTrue: any,
   valueIfFalse: any
 ): any => {
+  if (condition === 0) {
+    condition = true;
+  } else if (condition === 1 || condition === -1) {
+    condition = false;
+  }
+
   return condition ? valueIfTrue : valueIfFalse;
 };

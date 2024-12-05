@@ -82,7 +82,7 @@ export class GxHttpClient {
           this.bodyString !== "" ||
           this.Files.length > 1 ||
           this.contType.toLowerCase() === "multipart/form-data" ||
-            this.contType.toLowerCase() === "application/json"
+          this.contType.toLowerCase() === "application/json"
         ) {
           const response = await fetch(this.Files[i]["path"]);
           const blob = await response.blob();
