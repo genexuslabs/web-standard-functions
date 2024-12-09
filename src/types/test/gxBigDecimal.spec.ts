@@ -14,6 +14,7 @@ import { toFormattedStringBigNumber } from "../../bigNumber/toFormattedString";
 import { truncateBigNumber } from "../../bigNumber/truncate";
 import { setEmptyBigNumber } from "../../bigNumber/setEmpty";
 import { GxBigNumber } from "../gxbignumber";
+import { fracBigNumber } from "../../bigNumber/frac";
 
 //Operation precision -> 57  Cast precision -> 28
 export const testCasesDivide = [
@@ -1023,6 +1024,20 @@ describe("Numeric::fromString", () => {
   for (const t of testCases2) {
     it(`fromString(${t[0]}) should be equal to ${t[1]}`, () => {
       expect(fromStringBigNumber(0, t[0]).toString()).toBe(t[1]);
+    });
+  }
+});
+
+const testFrac: Array<[string, string]> = [
+  ["5.2", "0.2"],
+  ["5.7", "0.7"],
+  ["123456789.123456789123456789", "0.123456789123456789"]
+];
+
+describe("Frac", () => {
+  for (const t of testFrac) {
+    it(`fracBigNumber(${t[0]}) should be equal to ${t[1]}`, () => {
+      expect(fracBigNumber(t[0]).toString()).toBe(t[1]);
     });
   }
 });

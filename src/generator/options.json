@@ -213,6 +213,11 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/misc/setLanguage",
           "name": "setLanguage"
         },
+        "Sleep": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/sleep",
+          "name": "sleep",
+          "isAsync": true
+        },
         "Space": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/text/space",
           "name": "space"
@@ -1104,6 +1109,19 @@
     "GeneXus.Client.Socket": {
       "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/client/client-socket"
     },
+    "GeneXus.Common.Clipboard": {
+      "members": {
+        "SetText": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/clipboard/setText",
+          "name": "setText"
+        },
+        "GetText": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/common/clipboard/getText",
+          "name": "getText",
+          "isAsync": true
+        }
+      }
+    },
     "GeneXus.Common.UI.Navigation": {
       "members": {
         "CollapseTarget": {
@@ -1495,55 +1513,55 @@
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/crop",
           "name": "crop",
           "alias": "crop",
-          "async": true
+          "isAsync": true
         },
         "FileSize": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/fileSize",
           "name": "fileSize",
           "alias": "fileSize",
-          "async": true
+          "isAsync": true
         },
         "FlipHorizontally": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/flipHorizontally",
           "name": "flipHorizontally",
           "alias": "flipHorizontally",
-          "async": true
+          "isAsync": true
         },
         "FlipVertically": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/flipVertically",
           "name": "flipVertically",
           "alias": "flipVertically",
-          "async": true
+          "isAsync": true
         },
         "ImageHeight": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/imageHeight",
           "name": "imageHeight",
           "alias": "imageHeight",
-          "async": true
+          "isAsync": true
         },
         "ImageWidth": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/imageWidth",
           "name": "imageWidth",
           "alias": "imageWidth",
-          "async": true
+          "isAsync": true
         },
         "Resize": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/resize",
           "name": "resize",
           "alias": "resize",
-          "async": true
+          "isAsync": true
         },
         "Rotate": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/rotate",
           "name": "rotate",
           "alias": "rotate",
-          "async": true
+          "isAsync": true
         },
         "Scale": {
           "path": "@genexus/web-standard-functions/dist/lib-esm/gxcore/sd/media/imageManipulation/scale",
           "name": "scale",
           "alias": "scale",
-          "async": true
+          "isAsync": true
         }
       }
     },
@@ -1680,6 +1698,15 @@
           "name": "toFile",
           "alias": "toFile",
           "isAsync": true
+        }
+      }
+    },
+    "Expression": {
+      "members": {
+        "Evaluate": {
+          "path": "@genexus/web-standard-functions/dist/lib-esm/types/gxexpression",
+          "name": "Evaluate",
+          "alias": "evaluate"
         }
       }
     },
