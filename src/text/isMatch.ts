@@ -5,7 +5,15 @@
  * @return boolean
  */
 
+import { GxRegEx } from "../types/gxRegEx";
+
 export const isMatch = (target: string, regExp: string | RegExp): boolean => {
-  let rex = typeof regExp === "string" ? new RegExp(regExp) : regExp;
-  return rex.exec(target) !== null;
+  try {
+    new GxRegEx(0, "");
+    let rex = typeof regExp === "string" ? new RegExp(regExp) : regExp;
+    return rex.exec(target) !== null;
+  } catch (err) {
+    new GxRegEx(1, err.message);
+    return null;
+  }
 };
