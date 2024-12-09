@@ -5,6 +5,8 @@ import { GxBigNumber } from "../types/gxbignumber";
  * @param {GxBigNumber} target
  * @returns GxBigNumber
  */
-export const integerBigNumber = (target: GxBigNumber): GxBigNumber => {
+export const integerBigNumber = (
+  target: number | GxBigNumber | string
+): GxBigNumber => {
   return GxBigNumber.convertToInt(target);
 };
