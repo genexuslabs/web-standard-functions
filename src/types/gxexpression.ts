@@ -9,6 +9,11 @@ import { absBigNumber } from "../bigNumber/abs";
 import { integerBigNumber } from "../bigNumber/integer";
 import { fracBigNumber } from "../bigNumber/frac";
 import { roundBigNumber } from "../bigNumber/round";
+import { greaterThan } from "../bigNumber/greaterThan";
+import { greaterThanEqualTo } from "../bigNumber/greaterThanEqualTo";
+import { lessThan } from "../bigNumber/lessThan";
+import { lessThanEqualTo } from "../bigNumber/lessThanEqualTo";
+import { differentThan } from "../bigNumber/differentThan";
 
 export class GxExpression {
   Expression: string;
@@ -75,14 +80,7 @@ export class GxExpression {
             const regexFunctions = /\b(\w+)\s*\(/g;
 
             const funcAux = [...expr.matchAll(regexFunctions)].map(match => {
-              if (
-                match[1] === "greaterThan" ||
-                match[1] === "lessThan" ||
-                match[1] === "greaterThanEqualTo" ||
-                match[1] === "lessThanEqualTo" ||
-                match[1] === "differentThan" ||
-                match[1] === "compare"
-              ) {
+              if (match[1] === "compare") {
                 return "GxBigNumber";
               } else {
                 return match[1];
@@ -124,6 +122,16 @@ export class GxExpression {
                     functionGlobal[element] = integerBigNumber;
                   } else if (element.toLowerCase() === "frac") {
                     functionGlobal[element] = fracBigNumber;
+                  } else if (element.toLowerCase() === "greaterthan") {
+                    functionGlobal[element] = greaterThan;
+                  } else if (element.toLowerCase() === "greaterthanequalto") {
+                    functionGlobal[element] = greaterThanEqualTo;
+                  } else if (element.toLowerCase() === "lessthan") {
+                    functionGlobal[element] = lessThan;
+                  } else if (element.toLowerCase() === "lessthanequalto") {
+                    functionGlobal[element] = lessThanEqualTo;
+                  } else if (element.toLowerCase() === "differentthan") {
+                    functionGlobal[element] = differentThan;
                   }
 
                   safe = safe.replace(regex, "");
@@ -512,20 +520,10 @@ const replaceOperations = (exp, expr) => {
       replaceOperationWithFunction(parts, "+", "add", exp);
     }
     if (exp.ErrCode === 0) {
-      replaceOperationWithFunction(
-        parts,
-        ">=",
-        "GxBigNumber.greaterThanEqualTo",
-        exp
-      );
+      replaceOperationWithFunction(parts, ">=", "greaterThanEqualTo", exp);
     }
     if (exp.ErrCode === 0) {
-      replaceOperationWithFunction(
-        parts,
-        "<=",
-        "GxBigNumber.lessThanEqualTo",
-        exp
-      );
+      replaceOperationWithFunction(parts, "<=", "lessThanEqualTo", exp);
     }
     if (exp.ErrCode === 0) {
       replaceOperationWithFunction(
@@ -536,18 +534,13 @@ const replaceOperations = (exp, expr) => {
       );
     }
     if (exp.ErrCode === 0) {
-      replaceOperationWithFunction(
-        parts,
-        "<>",
-        "GxBigNumber.differentThan",
-        exp
-      );
+      replaceOperationWithFunction(parts, "<>", "differentThan", exp);
     }
     if (exp.ErrCode === 0) {
-      replaceOperationWithFunction(parts, ">", "GxBigNumber.greaterThan", exp);
+      replaceOperationWithFunction(parts, ">", "greaterThan", exp);
     }
     if (exp.ErrCode === 0) {
-      replaceOperationWithFunction(parts, "<", "GxBigNumber.lessThan", exp);
+      replaceOperationWithFunction(parts, "<", "lessThan", exp);
     }
 
     return parts.join("");
@@ -689,7 +682,7 @@ const replaceOperationWithFunction = (parts, op, opFn, exp) => {
 
 const validateExpression = expr => {
   const validateFunction = expr => {
-    let funcNameMatch = /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|gxbignumber.greaterthanequalto|gxbignumber.lessthanequalto|gxbignumber.differentthan|gxbignumber.greaterthan|gxbignumber.lessthan|gxbignumber.compare)\s*\(/.exec(
+    let funcNameMatch = /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|greaterthanequalto|lessthanequalto|differentthan|greaterthan|lessthan|gxbignumber.compare)\s*\(/.exec(
       expr.toLowerCase()
     );
 
@@ -727,11 +720,11 @@ const validateExpression = expr => {
       funcName === "multiply" ||
       funcName === "divide" ||
       funcName === "pow" ||
-      funcName === "gxbignumber.greaterthanequalto" ||
-      funcName === "gxbignumber.lessthanequalto" ||
-      funcName === "gxbignumber.differentthan" ||
-      funcName === "gxbignumber.greaterthan" ||
-      funcName === "gxbignumber.lessthan" ||
+      funcName === "greaterthanequalto" ||
+      funcName === "lessthanequalto" ||
+      funcName === "differentthan" ||
+      funcName === "greaterthan" ||
+      funcName === "lessthan" ||
       funcName === "gxbignumber.compare"
     ) {
       if (
@@ -754,7 +747,7 @@ const validateExpression = expr => {
         parms.join(" ").indexOf("||") !== -1
       ) {
         parms.forEach((parm, index) => {
-          let funcNameParm = /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|gxbignumber.greaterthanequalto|gxbignumber.lessthanequalto|gxbignumber.differentthan|gxbignumber.greaterthan|gxbignumber.lessthan|gxbignumber.compare)\s*\(/.exec(
+          let funcNameParm = /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|greaterthanequalto|lessthanequalto|differentthan|greaterthan|lessthan|gxbignumber.compare)\s*\(/.exec(
             parm.toLowerCase()
           );
 
@@ -881,7 +874,7 @@ const validateExpression = expr => {
     const numberBracketPattern = /\((\d+)\)/;
 
     if (
-      /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|gxbignumber.greaterthanequalto|gxbignumber.lessthanequalto|gxbignumber.differentthan|gxbignumber.greaterthan|gxbignumber.lessthan|gxbignumber.compare)\s*\(/.test(
+      /^[-+]?\s*(abs|integer|frac|round|sin|asin|cos|acos|tan|atan|floor|ln|log|exp|sqrt|pow|max|min|iif|add|subtract|multiply|divide|greaterthanequalto|lessthanequalto|differentthan|greaterthan|lessthan|gxbignumber.compare)\s*\(/.test(
         parms.toLowerCase()
       )
     ) {
@@ -1032,5 +1025,10 @@ const functionStandard = {
   subtract: "../math/subtract",
   multiply: "../math/multiply",
   divide: "../math/divide",
-  GxBigNumber: "../types/gxbignumber"
+  GxBigNumber: "../types/gxbignumber",
+  greaterThan: "../bigNumber/greaterThan",
+  greaterThanEqualTo: "../bigNumber/greaterThanEqualTo",
+  lessThan: "../bigNumber/lessThan",
+  lessThanEqualTo: "../bigNumber/lessThanEqualTo",
+  differentThan: "../bigNumber/differentThan"
 };

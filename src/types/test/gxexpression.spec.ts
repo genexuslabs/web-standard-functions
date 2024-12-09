@@ -9,6 +9,11 @@ import { absBigNumber } from "../../bigNumber/abs";
 import { subtract } from "../../math/subtract";
 import { iif } from "../../misc/iif";
 import { fracBigNumber } from "../../bigNumber/frac";
+import { greaterThan } from "../../bigNumber/greaterThan";
+import { greaterThanEqualTo } from "../../bigNumber/greaterThanEqualTo";
+import { lessThan } from "../../bigNumber/lessThan";
+import { lessThanEqualTo } from "../../bigNumber/lessThanEqualTo";
+import { differentThan } from "../../bigNumber/differentThan";
 
 export const testExpressionErrores1: Array<[
   string,
@@ -624,155 +629,43 @@ export const testExpression4: Array<[
   string,
   string
 ]> = [
-  ["a>b", 1, 2, Number(GxBigNumber.greaterThan(1, 2)).toString(), "0", ""],
-  [
-    "abs(a*b)>1",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThan(2, 1)).toString(),
-    "0",
-    ""
-  ],
-  ["a*b>1", 1, -2, Number(GxBigNumber.greaterThan(-2, 1)).toString(), "0", ""],
-  [
-    "(a*b)>1",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
+  ["a>b", 1, 2, Number(greaterThan(1, 2)).toString(), "0", ""],
+  ["abs(a*b)>1", 1, -2, Number(greaterThan(2, 1)).toString(), "0", ""],
+  ["a*b>1", 1, -2, Number(greaterThan(-2, 1)).toString(), "0", ""],
+  ["(a*b)>1", 1, -2, Number(greaterThan(-2, 1)).toString(), "0", ""],
   ["(a*b)>'H'", 1, -2, "0", "5", "Execute Method not found"],
   ["('HOLA')>1", 1, -2, "0", "5", "Execute Method not found"],
   ["('HOLA')>'HOLA'", 1, -2, "0", "5", "Execute Method not found"],
   ["('1')>'1'", 1, -2, "0", "5", "Execute Method not found"],
-  [
-    "(a*b)>(1)",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "a*b>(1)",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a)*(b)>(1)",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "abs(a*b)>abs(a*-5)",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThan(2, 5)).toString(),
-    "0",
-    ""
-  ],
-  ["a>b", 2, 2, Number(GxBigNumber.greaterThan(2, 2)).toString(), "0", ""],
-  [
-    "abs(a*b)>abs(a*-2)",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThan(2, 2)).toString(),
-    "0",
-    ""
-  ],
+  ["(a*b)>(1)", 1, -2, Number(greaterThan(-2, 1)).toString(), "0", ""],
+  ["a*b>(1)", 1, -2, Number(greaterThan(-2, 1)).toString(), "0", ""],
+  ["(a)*(b)>(1)", 1, -2, Number(greaterThan(-2, 1)).toString(), "0", ""],
+  ["abs(a*b)>abs(a*-5)", 1, -2, Number(greaterThan(2, 5)).toString(), "0", ""],
+  ["a>b", 2, 2, Number(greaterThan(2, 2)).toString(), "0", ""],
+  ["abs(a*b)>abs(a*-2)", 1, -2, Number(greaterThan(2, 2)).toString(), "0", ""],
 
-  ["a<b", 1, 2, Number(GxBigNumber.lessThan(1, 2)).toString(), "0", ""],
-  ["abs(a*b)<1", 1, -2, Number(GxBigNumber.lessThan(2, 1)).toString(), "0", ""],
-  ["a*b<1", 1, -2, Number(GxBigNumber.lessThan(-2, 1)).toString(), "0", ""],
-  ["(a*b)<1", 1, -2, Number(GxBigNumber.lessThan(-2, 1)).toString(), "0", ""],
-  ["(a*b)<(1)", 1, -2, Number(GxBigNumber.lessThan(-2, 1)).toString(), "0", ""],
-  ["a*b<(1)", 1, -2, Number(GxBigNumber.lessThan(-2, 1)).toString(), "0", ""],
-  [
-    "(a)*(b)<(1)",
-    1,
-    -2,
-    Number(GxBigNumber.lessThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "abs(a*b)<abs(a*-5)",
-    1,
-    -2,
-    Number(GxBigNumber.lessThan(2, 5)).toString(),
-    "0",
-    ""
-  ],
-  ["a<b", 2, 2, Number(GxBigNumber.lessThan(2, 2)).toString(), "0", ""],
-  [
-    "abs(a*b)<abs(a*-2)",
-    1,
-    -2,
-    Number(GxBigNumber.lessThan(2, 2)).toString(),
-    "0",
-    ""
-  ],
+  ["a<b", 1, 2, Number(lessThan(1, 2)).toString(), "0", ""],
+  ["abs(a*b)<1", 1, -2, Number(lessThan(2, 1)).toString(), "0", ""],
+  ["a*b<1", 1, -2, Number(lessThan(-2, 1)).toString(), "0", ""],
+  ["(a*b)<1", 1, -2, Number(lessThan(-2, 1)).toString(), "0", ""],
+  ["(a*b)<(1)", 1, -2, Number(lessThan(-2, 1)).toString(), "0", ""],
+  ["a*b<(1)", 1, -2, Number(lessThan(-2, 1)).toString(), "0", ""],
+  ["(a)*(b)<(1)", 1, -2, Number(lessThan(-2, 1)).toString(), "0", ""],
+  ["abs(a*b)<abs(a*-5)", 1, -2, Number(lessThan(2, 5)).toString(), "0", ""],
+  ["a<b", 2, 2, Number(lessThan(2, 2)).toString(), "0", ""],
+  ["abs(a*b)<abs(a*-2)", 1, -2, Number(lessThan(2, 2)).toString(), "0", ""],
 
-  [
-    "a>=b",
-    1,
-    2,
-    Number(GxBigNumber.greaterThanEqualTo(1, 2)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "abs(a*b)>=1",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThanEqualTo(2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "a*b>=1",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a*b)>=1",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a*b)>=(1)",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "a*b>=(1)",
-    1,
-    -2,
-    Number(GxBigNumber.greaterThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
+  ["a>=b", 1, 2, Number(greaterThanEqualTo(1, 2)).toString(), "0", ""],
+  ["abs(a*b)>=1", 1, -2, Number(greaterThanEqualTo(2, 1)).toString(), "0", ""],
+  ["a*b>=1", 1, -2, Number(greaterThanEqualTo(-2, 1)).toString(), "0", ""],
+  ["(a*b)>=1", 1, -2, Number(greaterThanEqualTo(-2, 1)).toString(), "0", ""],
+  ["(a*b)>=(1)", 1, -2, Number(greaterThanEqualTo(-2, 1)).toString(), "0", ""],
+  ["a*b>=(1)", 1, -2, Number(greaterThanEqualTo(-2, 1)).toString(), "0", ""],
   [
     "(a)*(b)>=(1)",
     1,
     -2,
-    Number(GxBigNumber.greaterThanEqualTo(-2, 1)).toString(),
+    Number(greaterThanEqualTo(-2, 1)).toString(),
     "0",
     ""
   ],
@@ -780,161 +673,70 @@ export const testExpression4: Array<[
     "abs(a*b)>=abs(a*-5)",
     1,
     -2,
-    Number(GxBigNumber.greaterThanEqualTo(2, 5)).toString(),
+    Number(greaterThanEqualTo(2, 5)).toString(),
     "0",
     ""
   ],
-  [
-    "a>=b",
-    2,
-    2,
-    Number(GxBigNumber.greaterThanEqualTo(2, 2)).toString(),
-    "0",
-    ""
-  ],
+  ["a>=b", 2, 2, Number(greaterThanEqualTo(2, 2)).toString(), "0", ""],
   [
     "abs(a*b)>=abs(a*-2)",
     1,
     -2,
-    Number(GxBigNumber.greaterThanEqualTo(2, 2)).toString(),
+    Number(greaterThanEqualTo(2, 2)).toString(),
     "0",
     ""
   ],
 
-  ["a<=b", 1, 2, Number(GxBigNumber.lessThanEqualTo(1, 2)).toString(), "0", ""],
-  [
-    "abs(a*b)<=1",
-    1,
-    -2,
-    Number(GxBigNumber.lessThanEqualTo(2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "a*b<=1",
-    1,
-    -2,
-    Number(GxBigNumber.lessThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a*b)<=1",
-    1,
-    -2,
-    Number(GxBigNumber.lessThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a*b)<=(1)",
-    1,
-    -2,
-    Number(GxBigNumber.lessThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "a*b<=(1)",
-    1,
-    -2,
-    Number(GxBigNumber.lessThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a)*(b)<=(1)",
-    1,
-    -2,
-    Number(GxBigNumber.lessThanEqualTo(-2, 1)).toString(),
-    "0",
-    ""
-  ],
+  ["a<=b", 1, 2, Number(lessThanEqualTo(1, 2)).toString(), "0", ""],
+  ["abs(a*b)<=1", 1, -2, Number(lessThanEqualTo(2, 1)).toString(), "0", ""],
+  ["a*b<=1", 1, -2, Number(lessThanEqualTo(-2, 1)).toString(), "0", ""],
+  ["(a*b)<=1", 1, -2, Number(lessThanEqualTo(-2, 1)).toString(), "0", ""],
+  ["(a*b)<=(1)", 1, -2, Number(lessThanEqualTo(-2, 1)).toString(), "0", ""],
+  ["a*b<=(1)", 1, -2, Number(lessThanEqualTo(-2, 1)).toString(), "0", ""],
+  ["(a)*(b)<=(1)", 1, -2, Number(lessThanEqualTo(-2, 1)).toString(), "0", ""],
   [
     "abs(a*b)<=abs(a*-5)",
     1,
     -2,
-    Number(GxBigNumber.lessThanEqualTo(2, 5)).toString(),
+    Number(lessThanEqualTo(2, 5)).toString(),
     "0",
     ""
   ],
-  ["a<=b", 2, 2, Number(GxBigNumber.lessThanEqualTo(2, 2)).toString(), "0", ""],
+  ["a<=b", 2, 2, Number(lessThanEqualTo(2, 2)).toString(), "0", ""],
   [
     "abs(a*b)<=abs(a*-2)",
     1,
     -2,
-    Number(GxBigNumber.lessThanEqualTo(2, 2)).toString(),
+    Number(lessThanEqualTo(2, 2)).toString(),
     "0",
     ""
   ],
 
-  ["a<>b", 1, 2, Number(GxBigNumber.differentThan(1, 2)).toString(), "0", ""],
-  [
-    "abs(a*b)<>1",
-    1,
-    -2,
-    Number(GxBigNumber.differentThan(2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "a*b<>1",
-    1,
-    -2,
-    Number(GxBigNumber.differentThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a*b)<>1",
-    1,
-    -2,
-    Number(GxBigNumber.differentThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a*b)<>(1)",
-    1,
-    -2,
-    Number(GxBigNumber.differentThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "a*b<>(1)",
-    1,
-    -2,
-    Number(GxBigNumber.differentThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
-  [
-    "(a)*(b)<>(1)",
-    1,
-    -2,
-    Number(GxBigNumber.differentThan(-2, 1)).toString(),
-    "0",
-    ""
-  ],
+  ["a<>b", 1, 2, Number(differentThan(1, 2)).toString(), "0", ""],
+  ["abs(a*b)<>1", 1, -2, Number(differentThan(2, 1)).toString(), "0", ""],
+  ["a*b<>1", 1, -2, Number(differentThan(-2, 1)).toString(), "0", ""],
+  ["(a*b)<>1", 1, -2, Number(differentThan(-2, 1)).toString(), "0", ""],
+  ["(a*b)<>(1)", 1, -2, Number(differentThan(-2, 1)).toString(), "0", ""],
+  ["a*b<>(1)", 1, -2, Number(differentThan(-2, 1)).toString(), "0", ""],
+  ["(a)*(b)<>(1)", 1, -2, Number(differentThan(-2, 1)).toString(), "0", ""],
   [
     "abs(a*b)<>abs(a*-5)",
     1,
     -2,
-    Number(GxBigNumber.differentThan(2, 5)).toString(),
+    Number(differentThan(2, 5)).toString(),
     "0",
     ""
   ],
-  ["a<>b", 2, 2, Number(GxBigNumber.differentThan(2, 2)).toString(), "0", ""],
+  ["a<>b", 2, 2, Number(differentThan(2, 2)).toString(), "0", ""],
   [
     "abs(a*b)<>abs(a*-2)",
     1,
     -2,
-    Number(GxBigNumber.differentThan(2, 2)).toString(),
+    Number(differentThan(2, 2)).toString(),
     "0",
     ""
   ],
-  ["(a<>b)", 1, 2, Number(GxBigNumber.differentThan(1, 2)).toString(), "0", ""],
+  ["(a<>b)", 1, 2, Number(differentThan(1, 2)).toString(), "0", ""],
 
   //AND O OR
   [
@@ -1404,15 +1206,7 @@ export const testExpression8: Array<[
     "5",
     "Execute Method not found"
   ],
-  [
-    "abs(a)>b",
-    "4",
-    2,
-    1,
-    Number(GxBigNumber.greaterThan(2, 1)).toString(),
-    "0",
-    ""
-  ],
+  ["abs(a)>b", "4", 2, 1, Number(greaterThan(2, 1)).toString(), "0", ""],
   [
     "iif(operator01>6,a+b,0)",
     "4",
@@ -1436,11 +1230,7 @@ export const testExpression8: Array<[
     "'TEST'",
     2,
     3,
-    iif(
-      GxBigNumber.greaterThanEqualTo(2, 0) && GxBigNumber.greaterThan(3, 2),
-      2,
-      3
-    ).toString(),
+    iif(greaterThanEqualTo(2, 0) && greaterThan(3, 2), 2, 3).toString(),
     "0",
     ""
   ],
@@ -1449,11 +1239,7 @@ export const testExpression8: Array<[
     "'TEST'",
     2,
     3,
-    iif(
-      GxBigNumber.greaterThanEqualTo(2, 0) && GxBigNumber.greaterThan(3, 2),
-      2,
-      3
-    ).toString(),
+    iif(greaterThanEqualTo(2, 0) && greaterThan(3, 2), 2, 3).toString(),
     "0",
     ""
   ],
@@ -1463,8 +1249,8 @@ export const testExpression8: Array<[
     2,
     3,
     iif(
-      GxBigNumber.greaterThanEqualTo(divide(add(2, 1), 2), 0) &&
-        GxBigNumber.greaterThan(Math.cos(3), 2),
+      greaterThanEqualTo(divide(add(2, 1), 2), 0) &&
+        greaterThan(Math.cos(3), 2),
       2,
       3
     ).toString(),

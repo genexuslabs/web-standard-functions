@@ -1,4 +1,5 @@
 import { castToBigNumber } from "../bigNumber/cast";
+import { greaterThan } from "../bigNumber/greaterThan";
 export const BIG_NUMBER_PRECISION = 28;
 
 export class GxBigNumber {
@@ -210,83 +211,10 @@ export class GxBigNumber {
 
     if (aNumber === bNumber && aDecimals === bDecimals) {
       return 0;
-    } else if (GxBigNumber.greaterThan(num1, num2)) {
+    } else if (greaterThan(num1, num2)) {
       return 1;
     } else {
       return -1;
-    }
-  }
-
-  static greaterThan(a, b): boolean {
-    let [aInts, aDecimals] = a.toString().split(".");
-    let [bInts, bDecimals] = b.toString().split(".");
-
-    if (
-      Number(aInts) > Number(bInts) ||
-      (Number(aInts) === Number(bInts) && Number(aDecimals) > Number(bDecimals))
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  static greaterThanEqualTo(a, b): boolean {
-    let [aInts, aDecimals] = a.toString().split(".");
-    let [bInts, bDecimals] = b.toString().split(".");
-
-    if (
-      Number(aInts) >= Number(bInts) ||
-      (Number(aInts) === Number(bInts) &&
-        Number(aDecimals) >= Number(bDecimals))
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  static lessThan(a, b): boolean {
-    let [aInts, aDecimals] = a.toString().split(".");
-    let [bInts, bDecimals] = b.toString().split(".");
-
-    if (
-      Number(aInts) < Number(bInts) ||
-      (Number(aInts) === Number(bInts) && Number(aDecimals) < Number(bDecimals))
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  static lessThanEqualTo(a, b): boolean {
-    let [aInts, aDecimals] = a.toString().split(".");
-    let [bInts, bDecimals] = b.toString().split(".");
-
-    if (
-      Number(aInts) <= Number(bInts) ||
-      (Number(aInts) === Number(bInts) &&
-        Number(aDecimals) <= Number(bDecimals))
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  static differentThan(a, b): boolean {
-    let [aInts, aDecimals] = a.toString().split(".");
-    let [bInts, bDecimals] = b.toString().split(".");
-
-    if (
-      Number(aInts) !== Number(bInts) ||
-      (Number(aInts) === Number(bInts) &&
-        Number(aDecimals) !== Number(bDecimals))
-    ) {
-      return true;
-    } else {
-      return false;
     }
   }
 }
