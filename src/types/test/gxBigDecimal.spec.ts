@@ -565,14 +565,28 @@ export const testCasesMultiply = [
   ]
 ];
 
-export const testConvertToDecimal = [
-  ["123.123456789123456789", "123.12345678912"]
+export const testConvertToInt = [
+  ["123.123456789123456789", "123"],
+  [NaN, ""],
+  ["NaN", ""]
 ];
 
-export const testConvertToInt = [["123.123456789123456789", "123"]];
-
 export const testConvertToBigDecimal = [
-  ["123.123456789123456789", "123.123456789123456789"]
+  ["123.123456789123456789", "123.123456789123456789"],
+  [NaN, ""],
+  ["NaN", ""]
+];
+
+export const testConvertBigNumberToNumber = [
+  ["123.123456789123456789", "123.12345678912"],
+  [NaN, "NaN"],
+  ["NaN", "NaN"]
+];
+
+export const testBigNumberIsNaN = [
+  ["123.123456789123456789", "false"],
+  [NaN, "true"],
+  ["NaN", "true"]
 ];
 
 export const testCasesPow = [
@@ -616,6 +630,9 @@ describe("convertToInt operation", () => {
   for (const t of testConvertToInt) {
     it(`should convertToInt ${t[0]} to equal ${t[1]}`, () => {
       expect(GxBigNumber.convertToInt(t[0]).toString()).toBe(t[1]);
+      expect(GxBigNumber.convertToInt(new GxBigNumber(t[0])).toString()).toBe(
+        t[1]
+      );
     });
   }
 });
@@ -624,6 +641,31 @@ describe("convertToBigDecimal operation", () => {
   for (const t of testConvertToBigDecimal) {
     it(`should convertToBigDecimal ${t[0]} to equal ${t[1]}`, () => {
       expect(GxBigNumber.convertToBigDecimal(t[0]).toString()).toBe(t[1]);
+      expect(
+        GxBigNumber.convertToBigDecimal(new GxBigNumber(t[0])).toString()
+      ).toBe(t[1]);
+    });
+  }
+});
+
+describe("convertBigNumberToNumber operation", () => {
+  for (const t of testConvertBigNumberToNumber) {
+    it(`should convertBigNumberToNumber ${t[0]} to equal ${t[1]}`, () => {
+      expect(GxBigNumber.convertBigNumberToNumber(t[0]).toString()).toBe(t[1]);
+      expect(
+        GxBigNumber.convertBigNumberToNumber(new GxBigNumber(t[0])).toString()
+      ).toBe(t[1]);
+    });
+  }
+});
+
+describe("bigNumberIsNaN operation", () => {
+  for (const t of testBigNumberIsNaN) {
+    it(`should BigNumberIsNaN ${t[0]} to equal ${t[1]}`, () => {
+      expect(GxBigNumber.bigNumberIsNaN(t[0]).toString()).toBe(t[1]);
+      expect(GxBigNumber.bigNumberIsNaN(new GxBigNumber(t[0])).toString()).toBe(
+        t[1]
+      );
     });
   }
 });
