@@ -4,10 +4,10 @@
  * @returns number
  */
 export const mod = (dividend: number, divisor: number): number => {
-  if (dividend === 0) {
-    return undefined;
+  if (divisor === 0) {
+    return NaN;
   } else {
-    if (dividend > 0) {
+    if (dividend >= 0) {
       return Math.trunc(Math.abs(dividend) % Math.abs(divisor));
     } else {
       return -Math.trunc(Math.abs(dividend) % Math.abs(divisor));

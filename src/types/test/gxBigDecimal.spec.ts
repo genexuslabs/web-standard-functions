@@ -14,6 +14,7 @@ import { toFormattedStringBigNumber } from "../../bigNumber/toFormattedString";
 import { truncateBigNumber } from "../../bigNumber/truncate";
 import { setEmptyBigNumber } from "../../bigNumber/setEmpty";
 import { GxBigNumber } from "../gxbignumber";
+import { fracBigNumber } from "../../bigNumber/frac";
 
 //Operation precision -> 57  Cast precision -> 28
 export const testCasesDivide = [
@@ -564,14 +565,28 @@ export const testCasesMultiply = [
   ]
 ];
 
-export const testConvertToDecimal = [
-  ["123.123456789123456789", "123.12345678912"]
+export const testConvertToInt = [
+  ["123.123456789123456789", "123"],
+  [NaN, ""],
+  ["NaN", ""]
 ];
 
-export const testConvertToInt = [["123.123456789123456789", "123"]];
-
 export const testConvertToBigDecimal = [
-  ["123.123456789123456789", "123.123456789123456789"]
+  ["123.123456789123456789", "123.123456789123456789"],
+  [NaN, ""],
+  ["NaN", ""]
+];
+
+export const testConvertBigNumberToNumber = [
+  ["123.123456789123456789", "123.12345678912"],
+  [NaN, "NaN"],
+  ["NaN", "NaN"]
+];
+
+export const testBigNumberIsNaN = [
+  ["123.123456789123456789", "false"],
+  [NaN, "true"],
+  ["NaN", "true"]
 ];
 
 export const testCasesPow = [
@@ -615,6 +630,9 @@ describe("convertToInt operation", () => {
   for (const t of testConvertToInt) {
     it(`should convertToInt ${t[0]} to equal ${t[1]}`, () => {
       expect(GxBigNumber.convertToInt(t[0]).toString()).toBe(t[1]);
+      expect(GxBigNumber.convertToInt(new GxBigNumber(t[0])).toString()).toBe(
+        t[1]
+      );
     });
   }
 });
@@ -623,6 +641,31 @@ describe("convertToBigDecimal operation", () => {
   for (const t of testConvertToBigDecimal) {
     it(`should convertToBigDecimal ${t[0]} to equal ${t[1]}`, () => {
       expect(GxBigNumber.convertToBigDecimal(t[0]).toString()).toBe(t[1]);
+      expect(
+        GxBigNumber.convertToBigDecimal(new GxBigNumber(t[0])).toString()
+      ).toBe(t[1]);
+    });
+  }
+});
+
+describe("convertBigNumberToNumber operation", () => {
+  for (const t of testConvertBigNumberToNumber) {
+    it(`should convertBigNumberToNumber ${t[0]} to equal ${t[1]}`, () => {
+      expect(GxBigNumber.convertBigNumberToNumber(t[0]).toString()).toBe(t[1]);
+      expect(
+        GxBigNumber.convertBigNumberToNumber(new GxBigNumber(t[0])).toString()
+      ).toBe(t[1]);
+    });
+  }
+});
+
+describe("bigNumberIsNaN operation", () => {
+  for (const t of testBigNumberIsNaN) {
+    it(`should BigNumberIsNaN ${t[0]} to equal ${t[1]}`, () => {
+      expect(GxBigNumber.bigNumberIsNaN(t[0]).toString()).toBe(t[1]);
+      expect(GxBigNumber.bigNumberIsNaN(new GxBigNumber(t[0])).toString()).toBe(
+        t[1]
+      );
     });
   }
 });
@@ -1023,6 +1066,20 @@ describe("Numeric::fromString", () => {
   for (const t of testCases2) {
     it(`fromString(${t[0]}) should be equal to ${t[1]}`, () => {
       expect(fromStringBigNumber(0, t[0]).toString()).toBe(t[1]);
+    });
+  }
+});
+
+const testFrac: Array<[string, string]> = [
+  ["5.2", "0.2"],
+  ["5.7", "0.7"],
+  ["123456789.123456789123456789", "0.123456789123456789"]
+];
+
+describe("Frac", () => {
+  for (const t of testFrac) {
+    it(`fracBigNumber(${t[0]}) should be equal to ${t[1]}`, () => {
+      expect(fracBigNumber(t[0]).toString()).toBe(t[1]);
     });
   }
 });

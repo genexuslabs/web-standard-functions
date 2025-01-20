@@ -6,7 +6,7 @@ import {
 import { getWebAutoInstrumentations } from "@opentelemetry/auto-instrumentations-web";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
 import { Resource } from "@opentelemetry/resources";
-import { ATTR_SERVICE_NAME } from "@opentelemetry/semantic-conventions"; // Change SEMRESATTRS_SERVICE_NAME to ATTR_SERVICE_NAME because 'SEMRESATTRS_SERVICE_NAME' is deprecated.ts(6385)
+import { ATTR_SERVICE_NAME } from "@opentelemetry/semantic-conventions";
 
 export const activeOpenTelemetry = (
   serviceName: string,

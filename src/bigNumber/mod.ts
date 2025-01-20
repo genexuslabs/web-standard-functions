@@ -18,10 +18,10 @@ export const modBigNumber = (
     divisorAux = Number(divisor.toString());
   }
 
-  if (dividendAux === 0) {
-    return undefined;
+  if (divisorAux === 0) {
+    return new GxBigNumber(NaN);
   } else {
-    if (dividendAux > 0) {
+    if (dividendAux >= 0) {
       return new GxBigNumber(
         Math.trunc(Math.abs(dividendAux) % Math.abs(divisorAux))
       );

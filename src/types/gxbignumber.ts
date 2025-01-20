@@ -1,4 +1,5 @@
 import { castToBigNumber } from "../bigNumber/cast";
+import { greaterThan } from "../bigNumber/greaterThan";
 export const BIG_NUMBER_PRECISION = 28;
 
 export class GxBigNumber {
@@ -12,7 +13,7 @@ export class GxBigNumber {
       return bigDecimal;
     }
 
-    if (Number.isNaN(bigDecimal)) {
+    if (Number.isNaN(Number(bigDecimal))) {
       this.intNumberAll = NaN;
       this.decimals = NaN;
       return;
@@ -156,24 +157,52 @@ export class GxBigNumber {
   }
 
   static convertToInt(value): GxBigNumber {
-    value = castToBigNumber(new GxBigNumber(value));
-    let str = value.toString().split(".")[0];
-    return new GxBigNumber(str);
+    if (GxBigNumber.bigNumberIsNaN(value)) {
+      return new GxBigNumber(value);
+    } else {
+      value = castToBigNumber(new GxBigNumber(value));
+      let str = value.toString().split(".")[0];
+      return new GxBigNumber(str);
+    }
   }
 
   static convertToBigDecimal(value) {
-    return castToBigNumber(new GxBigNumber(value));
+    if (GxBigNumber.bigNumberIsNaN(value)) {
+      return new GxBigNumber(value);
+    } else {
+      return castToBigNumber(new GxBigNumber(value));
+    }
   }
 
   static convertBigNumberToNumber(value): number {
-    let strNumber = castToBigNumber(value)
-      .toString()
-      .slice(0, 15);
-    return Number(strNumber);
+    if (GxBigNumber.bigNumberIsNaN(value)) {
+      if (value instanceof GxBigNumber) {
+        return Number(value.intNumberAll);
+      } else {
+        return Number(value);
+      }
+    } else {
+      let strNumber = castToBigNumber(value)
+        .toString()
+        .slice(0, 15);
+      return Number(strNumber);
+    }
   }
 
   static convertBigNumberToString(value) {
     return castToBigNumber(value).toString();
+  }
+
+  static bigNumberIsNaN(value): boolean {
+    if (value instanceof GxBigNumber) {
+      if (Number.isNaN(value.intNumberAll) && Number.isNaN(value.decimals)) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return Number.isNaN(Number(value));
+    }
   }
 
   static compare(num1, num2) {
@@ -210,24 +239,10 @@ export class GxBigNumber {
 
     if (aNumber === bNumber && aDecimals === bDecimals) {
       return 0;
-    } else if (GxBigNumber.greaterThan(num1, num2)) {
+    } else if (greaterThan(num1, num2)) {
       return 1;
     } else {
       return -1;
-    }
-  }
-
-  static greaterThan(a, b): boolean {
-    let [aInts, aDecimals] = a.toString().split(".");
-    let [bInts, bDecimals] = b.toString().split(".");
-
-    if (
-      Number(aInts) > Number(bInts) ||
-      (Number(aInts) === Number(bInts) && Number(aDecimals) > Number(bDecimals))
-    ) {
-      return true;
-    } else {
-      return false;
     }
   }
 }
