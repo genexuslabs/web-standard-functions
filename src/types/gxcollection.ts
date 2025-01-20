@@ -128,6 +128,7 @@ export class GxCollectionData<T> extends Array<T> implements ISerializable {
 
   deserialize(items) {
     const collection = new GxCollectionData<T>().setType(
+      this.__itemType,
       this.__serializationType
     );
     if (items) {

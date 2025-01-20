@@ -31,8 +31,8 @@ export class GxDictionaryData<K, V> implements ISerializable {
   }
 
   setType(
-    keyType: { new (): K },
-    valueType: { new (): V },
+    keyType: { new (): K } | any,
+    valueType: { new (): V } | any,
     serializationType?: any
   ): GxDictionaryData<K, V> {
     this.__keyType = keyType;
@@ -63,7 +63,6 @@ export class GxDictionaryData<K, V> implements ISerializable {
     for (const k of d.Keys) {
       delete this.dictionary[this.toKey(k)];
     }
-    this.dictionary = {};
   }
 
   clear() {
@@ -83,13 +82,16 @@ export class GxDictionaryData<K, V> implements ISerializable {
   }
 
   fromJson(json: string) {
-    this.setDictionary(this.deserialize(JSON.parse(json)));
+    this.dictionary = JSON.parse(json);
   }
 
   serialize() {
     const obj = {};
     for (const k in this.dictionary) {
-      obj[k] = this.dictionary[k];
+      obj[k] = Std_TypeConversions.classToObject<V>(
+        this.dictionary[k],
+        this.__valueType
+      );
     }
     return obj;
   }
