@@ -476,7 +476,7 @@ export class Std_TypeConversions {
       } else if (typeof inst[pty] === "object") {
         let ptyType = inst[pty].constructor;
         if (inst[pty] instanceof GxCollectionData) {
-          const itemType = (inst[pty] as GxCollectionData<any>).itemClass;
+          const itemType = inst[pty].itemClass;
           ptyType = itemType;
         }
         obj[pty] = Std_TypeConversions.classToObject(inst[pty], ptyType);
