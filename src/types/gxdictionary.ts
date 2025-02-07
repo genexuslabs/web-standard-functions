@@ -1,4 +1,6 @@
 import { GxCollectionData } from "./gxcollection";
+import { GxDate } from "./gxdate";
+import { GxDatetime } from "./gxdatetime";
 import { Std_TypeConversions } from "./std-type-conversion";
 import { ISerializable } from "./type-serialization";
 
@@ -9,7 +11,16 @@ export class GxDictionaryData<K, V> implements ISerializable {
   dictionary: { [Key: string]: V } = {};
 
   private toKey(k: K): string {
-    return k.toString();
+    let key = "";
+    if (k instanceof GxDate) {
+      key = k.serialize();
+    } else if (k instanceof GxDatetime) {
+      key = k.serialize();
+    } else {
+      key = k.toString();
+    }
+
+    return key;
   }
 
   private fromKey(k: string): K {
