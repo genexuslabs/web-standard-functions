@@ -5,8 +5,6 @@
  * @return string
  */
 
-import * as unicodeSubstring from "unicode-substring";
-
 export const subString = (
   target: string,
   startPosition: number,
@@ -15,7 +13,12 @@ export const subString = (
   if (length === undefined) {
     length = -1;
   }
+
   return length < 0
-    ? unicodeSubstring(target, startPosition - 1)
-    : unicodeSubstring(target, startPosition - 1, startPosition - 1 + length);
+    ? Array.from(target)
+        .slice(startPosition - 1)
+        .join("")
+    : Array.from(target)
+        .slice(startPosition - 1, startPosition - 1 + length)
+        .join("");
 };
