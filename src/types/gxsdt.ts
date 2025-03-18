@@ -1,4 +1,5 @@
-import { Std_TypeConversions } from "./std-type-conversion";
+import { sweepClassToObject } from "./type-conversions/sweepClassToObject";
+import { sweepObjectToClass } from "./type-conversions/sweepObjectToClass";
 import { ISerializable } from "./type-serialization";
 
 export class GxSdtData implements ISerializable {
@@ -16,12 +17,12 @@ export class GxSdtData implements ISerializable {
   }
 
   serialize() {
-    return Std_TypeConversions.sweepClassToObject(this);
+    return sweepClassToObject(this);
   }
 
   deserialize(obj) {
     if (obj) {
-      return Std_TypeConversions.sweepObjectToClass(obj, this);
+      return sweepObjectToClass(obj, this);
     }
   }
 }

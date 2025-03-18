@@ -1,7 +1,8 @@
 import { GxCollectionData } from "./gxcollection";
 import { GxDate } from "./gxdate";
 import { GxDatetime } from "./gxdatetime";
-import { Std_TypeConversions } from "./std-type-conversion";
+import { classToObject } from "./type-conversions/classToObject";
+import { objectToClass } from "./type-conversions/objectToClass";
 import { ISerializable } from "./type-serialization";
 
 export class GxDictionaryData<K, V> implements ISerializable {
@@ -99,10 +100,7 @@ export class GxDictionaryData<K, V> implements ISerializable {
   serialize() {
     const obj = {};
     for (const k in this.dictionary) {
-      obj[k] = Std_TypeConversions.classToObject<V>(
-        this.dictionary[k],
-        this.__valueType
-      );
+      obj[k] = classToObject<V>(this.dictionary[k], this.__valueType);
     }
     return obj;
   }
@@ -117,7 +115,7 @@ export class GxDictionaryData<K, V> implements ISerializable {
       for (const k in obj) {
         dictionary.set(
           this.fromKey(k),
-          Std_TypeConversions.objectToClass<V>(obj[k], this.__valueType)
+          objectToClass<V>(obj[k], this.__valueType)
         );
       }
     }

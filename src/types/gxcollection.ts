@@ -1,4 +1,5 @@
-import { Std_TypeConversions } from "./std-type-conversion";
+import { classToObject } from "./type-conversions/classToObject";
+import { objectToClass } from "./type-conversions/objectToClass";
 import { ISerializable } from "./type-serialization";
 
 export const gxRowNumberId = "_gxIndex";
@@ -117,10 +118,7 @@ export class GxCollectionData<T> extends Array<T> implements ISerializable {
   serialize() {
     const array = new Array<T>();
     this.forEach(element => {
-      const item = Std_TypeConversions.classToObject<T>(
-        element,
-        this.__itemType
-      );
+      const item = classToObject<T>(element, this.__itemType);
       array.push(item);
     });
     return array;
@@ -134,10 +132,7 @@ export class GxCollectionData<T> extends Array<T> implements ISerializable {
     if (items) {
       let idx = 0;
       items.forEach(element => {
-        const item = Std_TypeConversions.objectToClass<T>(
-          element,
-          this.__itemType
-        );
+        const item = objectToClass<T>(element, this.__itemType);
         if (typeof item === "object") {
           item[gxRowNumberId] = idx++;
         }
