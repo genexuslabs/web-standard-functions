@@ -1,18 +1,19 @@
-import { Std_TypeConversions } from "./std-type-conversion";
+import { DeserializeISOStringToDate } from "./type-conversions/deserializeISOStringToDate";
+import { SerializeDateToISOString } from "./type-conversions/serializeDateToISOString";
 import { ISerializable } from "./type-serialization";
 
 export class GxDate extends Date implements ISerializable {
   serialize() {
-    return Std_TypeConversions.SerializeDateToISOString(this);
+    return SerializeDateToISOString(this);
   }
 
   deserialize(isoDate: string) {
-    const dt = Std_TypeConversions.DeserializeISOStringToDate(isoDate);
+    const dt = DeserializeISOStringToDate(isoDate);
     return new GxDate(dt);
   }
 
   fromISOString(isoDate: string): GxDate {
-    const dt = Std_TypeConversions.DeserializeISOStringToDate(isoDate);
+    const dt = DeserializeISOStringToDate(isoDate);
     return new GxDate(dt);
   }
 

@@ -1,16 +1,17 @@
-import { Std_TypeConversions } from "./std-type-conversion";
 import { ISerializable } from "./type-serialization";
 import { ConfigurationState } from "../config/configurationState";
+import { SerializeDatetimeToISOString } from "./type-conversions/serializeDatetimeToISOString";
+import { DeserializeISOStringToDatetime } from "./type-conversions/deserializeISOStringToDatetime";
 
 export class GxDatetime extends Date implements ISerializable {
   serialize() {
     let utc = ConfigurationState.getInstance().getConvertTimeFromUTC();
-    return Std_TypeConversions.SerializeDatetimeToISOString(this, utc);
+    return SerializeDatetimeToISOString(this, utc);
   }
 
   deserialize(isoDate: string) {
     let utc = ConfigurationState.getInstance().getConvertTimeFromUTC();
-    const dt = Std_TypeConversions.DeserializeISOStringToDatetime(isoDate, utc);
+    const dt = DeserializeISOStringToDatetime(isoDate, utc);
     return new GxDatetime(dt);
   }
 
@@ -19,10 +20,7 @@ export class GxDatetime extends Date implements ISerializable {
   }
 
   fromISOString(isoDate: string): GxDatetime {
-    const dt = Std_TypeConversions.DeserializeISOStringToDatetime(
-      isoDate,
-      false
-    );
+    const dt = DeserializeISOStringToDatetime(isoDate, false);
     return new GxDatetime(dt);
   }
 

@@ -108,3 +108,14 @@ describe("compare GUID", () => {
     });
   }
 });
+
+describe("GxGuid", () => {
+  it(`GxGuid`, () => {
+    let g = new GxGuid();
+    g = GxGuid.fromString("9bcc27fb-c1ec-43a2-81b9-df01ed477f5d");
+
+    let gAux = new GxGuid();
+    expect(gAux.deserialize("9bcc27fb-c1ec-43a2-81b9-df01ed477f5d")).toEqual(g);
+    expect(g.serialize()).toEqual("9bcc27fb-c1ec-43a2-81b9-df01ed477f5d");
+  });
+});

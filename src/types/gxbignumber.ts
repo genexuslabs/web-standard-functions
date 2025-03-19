@@ -166,6 +166,11 @@ export class GxBigNumber {
     }
   }
 
+  static convertToIntNumber(value): number {
+    value = GxBigNumber.convertToInt(value);
+    return Number(value.toString());
+  }
+
   static convertToBigDecimal(value) {
     if (GxBigNumber.bigNumberIsNaN(value)) {
       return new GxBigNumber(value);
