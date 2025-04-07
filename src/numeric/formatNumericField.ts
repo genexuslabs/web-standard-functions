@@ -1,7 +1,7 @@
 import { formatNumber } from "./formatNumber";
 import { pictureToFormat } from "./pictureToFormat";
 
-export const formatNumericField = (value: number, picture: string) => {
+export const formatNumericField = (value: number | string, picture: string) => {
   const format = pictureToFormat(picture);
   return formatNumber(
     value.toString(),
