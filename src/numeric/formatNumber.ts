@@ -28,13 +28,21 @@ const checkPictureCharacter = (char: string, isDecimal: boolean) => {
     case "9":
       return "0";
     case "Z":
-      return isDecimal ? "0" : "";
+      return isDecimal ? "0" : " ";
     case "#":
       return "";
     case "?":
       return " ";
   }
   return "";
+};
+
+const checkOverflow = (intL, intPictL) => {
+  if (intL > intPictL) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
 export const formatNumber = (
@@ -66,6 +74,20 @@ export const formatNumber = (
   f[0] = f[0] || "0";
   f[1] = f[1] || "";
 
+  // checkOverflow
+  let integerLength = f[0]
+    .toString()
+    .split(".")[0]
+    .replace(/\D/g, "").length;
+
+  if (checkOverflow(integerLength, integers) === false) {
+    return picture
+      .replaceAll("9", "*")
+      .replaceAll("Z", "*")
+      .replaceAll("?", "*")
+      .replaceAll("#", "*");
+  }
+
   if (errorOnBadNumber) {
     if (f[1].length > decimals && f[1].replace(/0*$/, "").length > decimals) {
       throw new Error("InvalidNumber");
@@ -84,13 +106,7 @@ export const formatNumber = (
   let integerInput = f[0].substring(0, integers);
   if (Number(value) < 0) {
     sign = true;
-  }
-  if (f[1].length < decimals) {
-    let g = f[1];
-    for (let i = f[1].length + 1; i <= decimals; i++) {
-      g += "0";
-    }
-    f[1] = g;
+    integerInput = f[0].substring(0, integers + 1);
   }
 
   let signChar = "";
@@ -107,11 +123,28 @@ export const formatNumber = (
   let hasNegativeParentheses =
     picture.charAt(0) === "(" && picture.charAt(picture.length - 1) === ")";
   let hasDebitCreditPrefix =
-    picture.indexOf("DB") === 0 || picture.indexOf("CR") === 0;
+    picture.indexOf("DB") !== -1 || picture.indexOf("CR") !== -1;
+
   if (sign) {
     if (integerInput.charAt(0) === "-" && !hasNegativeParentheses) {
       signChar = "-";
       integerInput = integerInput.substring(1);
+
+      if (hasDebitCreditPrefix) {
+        picture = picture.slice(2);
+        preSignChar = Number(value) < 0 ? "DB" : "CR";
+
+        if (signChar === "-") {
+          if (preSignChar === "CR") {
+            preSignChar = "DB";
+          }
+          signChar = "";
+        } else if (signChar === "+") {
+          signChar = "";
+        } else if (signChar === "") {
+          preSignChar = "CR";
+        }
+      }
     } else {
       if (picture.charAt(0) === "+") {
         if (Number(value) !== 0) {
@@ -121,6 +154,7 @@ export const formatNumber = (
           integerInput = integerInput.substring(1);
         }
       }
+
       if (hasNegativeParentheses) {
         picture = picture.substring(1, picture.length - 1);
         if (Number(value) < 0) {
@@ -129,13 +163,24 @@ export const formatNumber = (
           postSignChar = ")";
         }
       }
+
       if (hasDebitCreditPrefix) {
         picture = picture.slice(2);
         preSignChar = Number(value) < 0 ? "DB" : "CR";
+
+        if (signChar === "-") {
+          if (preSignChar === "CR") {
+            preSignChar = "DB";
+          }
+          signChar = "";
+        } else if (signChar === "+") {
+          signChar = "";
+        } else if (signChar === "") {
+          preSignChar = "CR";
+        }
       }
     }
   }
-  decSep = !f[1] ? "" : decSep;
 
   let picture_split = [];
   if (decimals > 0) {
@@ -156,12 +201,15 @@ export const formatNumber = (
   // parte decimal
   let n_idx = 0;
   let decPart = "";
-  let decValue = f[1].replace(/0*$/, "");
+  let decValue = f[1];
+
   if (picture_split.length > 1) {
     let decimal_pic = picture_split[1];
     let isEscapedCharacter = false;
+
     for (let i = 0; i < decimal_pic.length; i++) {
       let chd = decimal_pic.charAt(i);
+
       if (isEscapedCharacter) {
         decPart = decPart + decimal_pic.charAt(i);
       } else if (
@@ -169,10 +217,32 @@ export const formatNumber = (
         !isEscapedCharacter
       ) {
         if (decValue.length > n_idx) {
-          decPart = decPart + decValue.charAt(n_idx);
+          if (chd === "?" || chd === "#") {
+            if (
+              decValue.charAt(n_idx) === "0" &&
+              Number(decValue.substring(n_idx, decValue.length)) === 0
+            ) {
+              if (!(decValue.charAt(n_idx) === "0" && Number(decValue) === 0)) {
+                decPart = decPart + checkPictureCharacter(chd, true);
+              }
+            } else {
+              if (decPart.charAt(decPart.length - 1) !== " ") {
+                decPart = decPart + decValue.charAt(n_idx);
+              }
+            }
+          } else {
+            if (decPart.charAt(decPart.length - 1) !== " ") {
+              decPart = decPart + decValue.charAt(n_idx);
+            }
+          }
           n_idx++;
         } else {
-          decPart = decPart + checkPictureCharacter(chd, true);
+          if (chd === "Z" || chd === "9") {
+            if (decPart.charAt(decPart.length - 1) !== " ") {
+              decPart = decPart + checkPictureCharacter(chd, true);
+            }
+          }
+          n_idx++;
         }
       } else if (chd === "\\" && isEscapedCharacter) {
         decPart = decPart + chd;
@@ -188,9 +258,10 @@ export const formatNumber = (
   // parte entera
   let intPart = "";
   let epic = picture_split[0];
-  n_idx = integerInput.length - 1;
+  n_idx = integerInput.replace("-", "").length - 1;
   let first_nine = epic.indexOf("9");
   first_nine = first_nine === -1 ? epic.length : first_nine;
+
   for (let i = epic.length - 1; i >= 0; i--) {
     let ch = epic.charAt(i);
     let isEscapedCharacter = false;
@@ -198,12 +269,14 @@ export const formatNumber = (
       // Ignoring trailing Zs
       ch = "9";
     }
+
     if (i > 1) {
       isEscapedCharacter =
         epic.charAt(i - 1) === "\\" && epic.charAt(i - 2) !== "\\";
     } else if (i > 0) {
       isEscapedCharacter = epic.charAt(i - 1) === "\\";
     }
+
     if (isEscapedCharacter) {
       intPart = ch + intPart;
       i--;
@@ -212,21 +285,46 @@ export const formatNumber = (
       !isEscapedCharacter
     ) {
       if (n_idx >= 0) {
-        if (
-          !(
-            (ch === "Z" || ch === "#" || ch === "?") &&
+        if (ch === "?" || ch === "#" || ch === "Z") {
+          if (
+            integerInput.charAt(n_idx) === "0" &&
             Number(integerInput.substring(0, n_idx + 1)) === 0
-          )
-        ) {
-          intPart = integerInput.charAt(n_idx) + intPart;
+          ) {
+            if (
+              !(
+                integerInput.charAt(n_idx) === "0" && Number(integerInput) === 0
+              )
+            ) {
+              intPart = checkPictureCharacter(ch, false) + intPart;
+            } else {
+              if (ch === "?" || ch === "Z") {
+                intPart = checkPictureCharacter(ch, false) + intPart;
+              }
+            }
+          } else {
+            if (intPart.charAt(0) !== " ") {
+              intPart = integerInput.charAt(n_idx) + intPart;
+            }
+          }
+        } else {
+          if (intPart.charAt(0) !== " ") {
+            intPart = integerInput.charAt(n_idx) + intPart;
+          }
         }
         n_idx--;
       } else {
-        intPart = checkPictureCharacter(ch, false) + intPart;
+        if (ch === "9") {
+          if (intPart.charAt(0) !== " ") {
+            intPart = checkPictureCharacter(ch, false) + intPart;
+          }
+        }
+        n_idx--;
       }
     } else if (ch === "\\" && isEscapedCharacter) {
       intPart = ch + intPart;
       continue;
+    } else if (ch === " ") {
+      intPart = " " + intPart;
     } else if (ch !== "," && ch !== "+") {
       intPart = ch + intPart;
     } else if (ch === "," && integerInput.charAt(n_idx) === thSep) {
@@ -254,9 +352,9 @@ export const formatNumber = (
     result = "";
   } else {
     result =
+      signChar +
       dolarSignChar +
       preSignChar +
-      signChar +
       intPart +
       (!decPart ? "" : decSep + decPart) +
       postSignChar;
