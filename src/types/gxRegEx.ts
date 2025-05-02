@@ -1,9 +1,9 @@
 export class GxRegEx {
   errCode: number = 0;
-  errDescription: String = "";
+  errDescription: string = "";
   private static currentInstance = null;
 
-  constructor(errCode: number, errDescription: String) {
+  constructor(errCode: number, errDescription: string) {
     this.errCode = errCode;
     this.errDescription = errDescription;
     GxRegEx.currentInstance = this;
@@ -13,7 +13,7 @@ export class GxRegEx {
     return GxRegEx.currentInstance.errCode;
   }
 
-  static getLastErrDescription(): String {
+  static getLastErrDescription(): string {
     return GxRegEx.currentInstance.errDescription;
   }
 }
