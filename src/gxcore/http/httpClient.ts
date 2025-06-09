@@ -32,6 +32,10 @@ export class GxHttpClient {
   objHeaders = {};
   contType = "";
 
+  decodedChunk = "";
+  done = false;
+  stream = false;
+
   constructor(Port: number = 0) {
     this.Host = "localhost";
     this._Port = Port;
@@ -182,6 +186,12 @@ export class GxHttpClient {
       options["credentials"] = "omit";
     }
 
+    if (this.Headers["accept"] === "text/event-stream") {
+      this.stream = true;
+    } else {
+      this.stream = false;
+    }
+
     try {
       this.response = null;
       this.response = await Promise.race([
@@ -238,13 +248,13 @@ export class GxHttpClient {
 
   addHeader(name: string, value: string) {
     if (name.toLowerCase() !== "content-type") {
-      this.Headers[name] = value;
+      this.Headers[name.toLowerCase()] = value;
     } else {
       if (
         name.toLowerCase() === "content-type" &&
         value.toLowerCase() !== "multipart/form-data"
       ) {
-        this.Headers[name] = value;
+        this.Headers[name.toLowerCase()] = value;
         this.contType = value;
       } else {
         this.contType = value;
@@ -343,16 +353,50 @@ export class GxHttpClient {
       this.reader = this.response.body.getReader();
     }
 
-    const chunk = await this.reader.read();
-    const { done, value } = chunk;
-
-    const decodedChunk = this.decoder.decode(value);
-
-    if (done) {
-      this.EOF = true;
-      return "";
+    if (!this.done) {
+      const chunk = await this.reader.read();
+      const { done, value } = chunk;
+      this.done = done;
+      if (value) {
+        if (this.stream) {
+          this.decodedChunk += this.decoder.decode(value, {
+            stream: this.stream
+          });
+        } else {
+          this.decodedChunk = this.decoder.decode(value, {
+            stream: this.stream
+          });
+        }
+      }
     }
-    return decodedChunk;
+
+    while (!this.EOF) {
+      if (this.stream) {
+        let lineIndex = this.decodedChunk.indexOf("\n");
+        if (lineIndex !== -1) {
+          let line = this.decodedChunk.slice(0, lineIndex);
+          this.decodedChunk = this.decodedChunk.slice(lineIndex + 1);
+          if (line.trim() === "") {
+            continue;
+          }
+          if (this.done && this.decodedChunk.trim() === "") {
+            this.decodedChunk = "";
+            this.done = false;
+            this.EOF = true;
+            this.stream = false;
+            return line;
+          } else {
+            return line;
+          }
+        }
+      } else {
+        let line = this.decodedChunk;
+        this.decodedChunk = "";
+        this.done = false;
+        this.EOF = true;
+        return line;
+      }
+    }
   }
 
   setReasonLine() {
