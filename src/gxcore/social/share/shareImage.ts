@@ -29,7 +29,11 @@ export const shareImage = async (
     data["text"] = text;
   }
   if (url !== "") {
-    data["url"] = url;
+    if (url.indexOf("http://") === -1 || url.indexOf("https://") === -1) {
+      data["url"] = "http://" + url;
+    } else {
+      data["url"] = url;
+    }
   }
   if (title !== "") {
     data["title"] = title;
