@@ -15,9 +15,13 @@ export const convertImageToFile = async (image: GxImage): Promise<File> => {
       response.url.length
     );
 
-    const extension = jsonFileExtensions[blob.type];
-    const file = new File([blob], `${name}.${extension}`, { type: blob.type });
-
+    let file;
+    if (name.indexOf(".") !== -1) {
+      file = new File([blob], `${name}`, { type: blob.type });
+    } else {
+      const extension = jsonFileExtensions[blob.type];
+      file = new File([blob], `${name}.${extension}`, { type: blob.type });
+    }
     return file;
   } catch (err) {
     console.log(err.name, err.message);
