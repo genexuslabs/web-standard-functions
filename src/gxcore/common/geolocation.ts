@@ -1,7 +1,6 @@
 import { notImplemented } from "../../misc/helpers";
 
 export class GeneXusCommonGeolocation {
-
   /**
    * Returns the current location for the device
    * @param minAccuracy
@@ -10,40 +9,54 @@ export class GeneXusCommonGeolocation {
    * @param ignoreErrors
    * @return any
    */
-  public static getMyLocation(minAccuracy: number, timeout: number, includeHeadingAndSpeed:boolean, ignoreErrors:boolean): Promise<GeneXusCommonGeolocationInfoData> {
+  public static getMyLocation(
+    minAccuracy: number = 0,
+    timeout: number = 0,
+    includeHeadingAndSpeed: boolean = false,
+    ignoreErrors: boolean = false,
+  ): Promise<GeneXusCommonGeolocationInfoData> {
     return new Promise<GeneXusCommonGeolocationInfoData>((resolve, reject) => {
       if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position: any) => { 
-          let geoPosition = new GeneXusCommonGeolocationInfoData();
-          geoPosition.Location = position.coords.latitude.toString() + "," + position.coords.longitude.toString();
-          geoPosition.Heading = position.coords.heading;
-          geoPosition.Precision = position.coords.accuracy;
-          geoPosition.Description = "";
-          geoPosition.Speed = position.coords.speed;
-          geoPosition.Time = position.timestamp;
-          resolve(geoPosition);
-        }, 
-        (error) => {
-          if (ignoreErrors) { 
+        navigator.geolocation.getCurrentPosition(
+          (position: any) => {
             let geoPosition = new GeneXusCommonGeolocationInfoData();
-            geoPosition.Time = null;
-            resolve( geoPosition);
-          } else {
-            reject( "Could not get location information ("+error.message+")");
-          }
-        },
-        {timeout: timeout * 1000});
+            geoPosition.Location =
+              position.coords.latitude.toString() +
+              "," +
+              position.coords.longitude.toString();
+            geoPosition.Heading = position.coords.heading;
+            geoPosition.Precision = position.coords.accuracy;
+            geoPosition.Description = "";
+            geoPosition.Speed = position.coords.speed;
+            geoPosition.Time = position.timestamp;
+            resolve(geoPosition);
+          },
+          (error) => {
+            if (ignoreErrors) {
+              let geoPosition = new GeneXusCommonGeolocationInfoData();
+              geoPosition.Time = null;
+              resolve(geoPosition);
+            } else {
+              reject(
+                "Could not get location information (" + error.message + ")",
+              );
+            }
+          },
+          { timeout: timeout * 1000 },
+        );
       } else {
-        if (ignoreErrors) { 
+        if (ignoreErrors) {
           let geoPosition = new GeneXusCommonGeolocationInfoData();
           geoPosition.Time = null;
-          resolve( geoPosition);
+          resolve(geoPosition);
         } else {
-          reject( "Could not get location information (geolocation service not available)");
+          reject(
+            "Could not get location information (geolocation service not available)",
+          );
         }
       }
     });
-  }  
+  }
 
   /**
    * Indicates wether the application has been given permission to use location services
@@ -70,8 +83,14 @@ export class GeneXusCommonGeolocation {
    * @param accuracy
    * @return any
    */
-  public static startTracking(changesInterval: number, distance: number, action: string, actionTimeInterval: number, accuracy: number): any {
-    notImplemented('GeneXusCommonGeolocation.startTracking');
+  public static startTracking(
+    changesInterval: number,
+    distance: number,
+    action: string,
+    actionTimeInterval: number,
+    accuracy: number,
+  ): any {
+    notImplemented("GeneXusCommonGeolocation.startTracking");
     return null;
   }
 
@@ -80,7 +99,7 @@ export class GeneXusCommonGeolocation {
    * @return any
    */
   public static endTracking(): any {
-    notImplemented('GeneXusCommonGeolocation.endTracking');
+    notImplemented("GeneXusCommonGeolocation.endTracking");
     return null;
   }
 
@@ -90,7 +109,7 @@ export class GeneXusCommonGeolocation {
    * @return any
    */
   public static getLocationHistory(startTime: Date): any {
-    notImplemented('GeneXusCommonGeolocation.getLocationHistory');
+    notImplemented("GeneXusCommonGeolocation.getLocationHistory");
     return null;
   }
 
@@ -99,7 +118,7 @@ export class GeneXusCommonGeolocation {
    * @return any
    */
   public static clearLocationHistory(): any {
-    notImplemented('GeneXusCommonGeolocation.clearLocationHistory');
+    notImplemented("GeneXusCommonGeolocation.clearLocationHistory");
     return null;
   }
 
@@ -108,9 +127,10 @@ export class GeneXusCommonGeolocation {
    * @param location
    * @return number
    */
-  public static getLatitude(location: GeneXusCommonGeolocationInfoData ): number {
-    if (location.Location.indexOf(",") > -1)
-    {
+  public static getLatitude(
+    location: GeneXusCommonGeolocationInfoData,
+  ): number {
+    if (location.Location.indexOf(",") > -1) {
       return parseFloat(location.Location.split(",")[0]);
     }
     return 0;
@@ -122,8 +142,7 @@ export class GeneXusCommonGeolocation {
    * @return number
    */
   public static getLongitude(location: any): number {
-    if (location.Location.indexOf(",") > -1)
-    {
+    if (location.Location.indexOf(",") > -1) {
       return parseFloat(location.Location.split(",")[1]);
     }
     return 0;
@@ -135,34 +154,37 @@ export class GeneXusCommonGeolocation {
    * @param toLocation
    * @return number
    */
-  public static  getDistance(fromLocation: any, toLocation: any): number {
+  public static getDistance(fromLocation: any, toLocation: any): number {
     const R = 6371e3; // earth’s radius
-    const lat1 = this.getLatitude( fromLocation);
-    const lon1 = this.getLongitude( fromLocation);
-    const lat2 = this.getLatitude( toLocation);
-    const lon2 = this.getLongitude( toLocation); 
+    const lat1 = this.getLatitude(fromLocation);
+    const lon1 = this.getLongitude(fromLocation);
+    const lat2 = this.getLatitude(toLocation);
+    const lon2 = this.getLongitude(toLocation);
 
     const lat1radians = this.toRadians(lat1);
     const lat2radians = this.toRadians(lat2);
- 
-    const latRadians = this.toRadians(lat2-lat1);
-    const lonRadians = this.toRadians(lon2-lon1);
- 
-    const a = Math.sin(latRadians/2) * Math.sin(latRadians/2) +
-         Math.cos(lat1radians) * Math.cos(lat2radians) *
-         Math.sin(lonRadians/2) * Math.sin(lonRadians/2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
- 
+
+    const latRadians = this.toRadians(lat2 - lat1);
+    const lonRadians = this.toRadians(lon2 - lon1);
+
+    const a =
+      Math.sin(latRadians / 2) * Math.sin(latRadians / 2) +
+      Math.cos(lat1radians) *
+        Math.cos(lat2radians) *
+        Math.sin(lonRadians / 2) *
+        Math.sin(lonRadians / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
     return Math.round(R * c);
   }
- 
+
   /**
    * Returns a collection of addresses for the given location
    * @param location
    * @return any
    */
   public static getAddress(location: any): any {
-    notImplemented('GeneXusCommonGeolocation.getAddress');
+    notImplemented("GeneXusCommonGeolocation.getAddress");
     return null;
   }
 
@@ -172,7 +194,7 @@ export class GeneXusCommonGeolocation {
    * @return any
    */
   public static getGeolocation(address: any): any {
-    notImplemented('GeneXusCommonGeolocation.getGeolocation');
+    notImplemented("GeneXusCommonGeolocation.getGeolocation");
     return null;
   }
 
@@ -181,7 +203,7 @@ export class GeneXusCommonGeolocation {
    * @return boolean
    */
   public static setProximityAlerts(proximityAlerts: any): boolean {
-    notImplemented('GeneXusCommonGeolocation.setProximityAlerts');
+    notImplemented("GeneXusCommonGeolocation.setProximityAlerts");
     return false;
   }
 
@@ -189,7 +211,7 @@ export class GeneXusCommonGeolocation {
    * @return any
    */
   public static getProximityAlerts(): any {
-    notImplemented('GeneXusCommonGeolocation.getProximityAlerts');
+    notImplemented("GeneXusCommonGeolocation.getProximityAlerts");
     return null;
   }
 
@@ -197,7 +219,7 @@ export class GeneXusCommonGeolocation {
    * @return any
    */
   public static getCurrentProximityAlert(): any {
-    notImplemented('GeneXusCommonGeolocation.getCurrentProximityAlert');
+    notImplemented("GeneXusCommonGeolocation.getCurrentProximityAlert");
     return null;
   }
 
@@ -205,7 +227,7 @@ export class GeneXusCommonGeolocation {
    * @return any
    */
   public static clearProximityAlerts(): any {
-    notImplemented('GeneXusCommonGeolocation.clearProximityAlerts');
+    notImplemented("GeneXusCommonGeolocation.clearProximityAlerts");
     return null;
   }
 
@@ -214,15 +236,14 @@ export class GeneXusCommonGeolocation {
    * @return any
    */
   public static pickLocation(geoLocationPickerParameters: any): any {
-    notImplemented('GeneXusCommonGeolocation.pickLocation');
+    notImplemented("GeneXusCommonGeolocation.pickLocation");
     return null;
   }
 
-  public static toRadians( val: number): number {
+  public static toRadians(val: number): number {
     const PI = 3.1415926535;
-    return val / 180.0 * PI;
+    return (val / 180.0) * PI;
   }
-
 }
 
 export class GeneXusCommonGeolocationInfoData {
