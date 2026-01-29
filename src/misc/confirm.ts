@@ -5,13 +5,22 @@ import { ResolverFunc, publishCall } from "./publishCall";
  * @param {string} message The message to be displayed
  * @return boolean
  */
-export const confirm = async (str: string): Promise<boolean> => {
+export const confirm = async (
+  str: string,
+  okButtonText: string = "ok",
+  cancelButtonText: string = "cancel",
+): Promise<boolean> => {
   let resolver = (
     option: string,
     _: boolean,
-    resolve: ResolverFunc<boolean>
+    resolve: ResolverFunc<boolean>,
   ) => {
-    resolve(option === "ok");
+    resolve(option === okButtonText);
   };
-  return publishCall<boolean>("confirm", ["ok", "cancel"], resolver, str);
+  return publishCall<boolean>(
+    "confirm",
+    [okButtonText, cancelButtonText],
+    resolver,
+    [str, okButtonText, cancelButtonText],
+  );
 };
